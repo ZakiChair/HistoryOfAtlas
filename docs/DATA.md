@@ -1,0 +1,73 @@
+# Données, provenance et reconstruction
+
+Atlas Belli conserve les identifiants et les sources ; aucune date, coordonnée, bataille ou frontière n’est écrite de mémoire dans le jeu affiché. Les chiffres exacts figurent dans `data/reports/quality.json` et sa version publique `/data/quality.json`. Une valeur cible n’est jamais présentée comme une couverture mesurée.
+
+## Exécution
+
+Prérequis : Node.js 22+, pnpm, Python 3 et [tippecanoe](https://github.com/felt/tippecanoe). Sur macOS : `brew install tippecanoe`. Sur Linux, installer ou compiler la version récente prenant en charge PMTiles.
+
+```sh
+pnpm data:build
+```
+
+Cette commande télécharge les fonds géographiques et frontières, découvre les classes Wikidata puis les événements, enrichit les entités, normalise, déduplique par QID, calcule l’importance, valide et construit les sorties. Les acquisitions brutes sont dans `data/raw`, ignoré par Git. Les fichiers `.sparql` conservent les requêtes exactes ; les `.meta.json` conservent URL, horodatage et SHA-256. Une reconstruction utilise le cache existant ; supprimer `data/raw` provoque une acquisition entièrement neuve. Une source vivante peut évoluer entre deux acquisitions : les révisions Wikidata sont inscrites dans les liens sources des notices.
+
+```sh
+pnpm data:build --offline          # reconstruire depuis le cache complet
+pnpm data:build --events-only      # réutiliser les fonds déjà acquis
+pnpm data:build --offline --partial # contrôle explicite d'une acquisition en cours
+```
+
+Le mode partiel l’indique dans le rapport et ne fige pas la sélection éditoriale. Il sert au développement pendant une longue acquisition ; ce n’est pas une preuve de couverture complète.
+
+## Sources et licences
+
+| Source                                                                     | Usage                                              | Licence                                              |
+| -------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------- |
+| [Wikidata](https://www.wikidata.org/wiki/Wikidata:Data_access)             | événements, liens, dates, coordonnées et identités | CC0                                                  |
+| [historical-basemaps](https://github.com/aourednik/historical-basemaps)    | instantanés de frontières                          | voir `docs/GEOGRAPHY.md` et licence source conservée |
+| [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/)      | terres, côtes, fleuves et contrôle des points      | domaine public                                       |
+| [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria) | intervalles territoriaux datés                     | CC BY 4.0 ; voir documentation géographique          |
+| [Wikipédia](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use)     | résumés récupérés à l’ouverture d’une fiche        | attribution CC BY-SA, licence propre de chaque image |
+
+Le graphe Wikidata principal est interrogé via SPARQL. Les racines vérifiées sont bataille Q178561, siège Q188055, bataille navale Q1261499, guerre Q198, campagne militaire Q831663, traité de paix Q625298 et conquête Q1361229. La fermeture des sous-classes est téléchargée une seule fois ; les pages suivantes utilisent des identifiants de classe explicites pour éviter les parcours transitifs coûteux.
+
+L’API Wikibase `wbgetentities` enrichit les QID par lots de 50. Cette interface officielle permet de continuer l’enrichissement lorsque WDQS est dégradé. Un User-Agent explicite, une cadence limitée, un cache, des reprises et le respect de `Retry-After` sont appliqués. Une erreur définitive arrête la construction : aucune fausse donnée de remplacement n’est insérée.
+
+## Dates et normalisation
+
+Les dates utilisent le module `lib/histdate`, jamais `Date` de JavaScript. Les années de Wikibase JSON avant notre ère sont converties en années astronomiques (−1 historique devient 0). Les années RDF/WDQS sont déjà astronomiques : [documentation Wikidata](https://www.wikidata.org/wiki/Help:Dates#Years_BC). La précision de la déclaration et son calendrier sont conservés ; plusieurs dates concurrentes déclenchent le badge d’incertitude. Les déclarations obsolètes sont écartées ; les déclarations de rang préféré priment.
+
+Les coordonnées P625 de l’événement sont prioritaires. En leur absence, P276 peut fournir les coordonnées d’un lieu explicitement lié ; `coordinateSource.kind = "place"` le signale et la source du lieu est ajoutée. Une coordonnée héritée n’est jamais présentée comme une localisation archéologique précise.
+
+P710 ne définit pas systématiquement deux camps. Les participants sans camp sourcé restent `side: "other"` ; le pipeline ne les répartit pas arbitrairement. Les résumés Wikipédia et images sont chargés uniquement à l’ouverture des fiches. Les régions sont des catégories de navigation géographiques approximatives, pas des affirmations de souveraineté.
+
+## Validation et limites
+
+Les contrôles rejettent les coordonnées invalides, les dates incohérentes, les événements hors de la période de l’atlas et les batailles/sièges/conquêtes terrestres situés en pleine mer. La vérification des terres utilise Natural Earth 1:50m et une tolérance côtière de 25 km, nécessaire pour les petites îles et les côtes généralisées. Les batailles navales sont exemptées de cette vérification. Une guerre sans coordonnées peut subsister comme fiche de contexte, sans compter parmi les événements géolocalisés.
+
+Le rapport contient les décomptes par type, ère et région, tous les rejets avec motifs, les notices de contexte, la provenance et le contrôle de l’objectif de 20 000. Wikidata comporte des lacunes importantes, surtout pour les périodes anciennes et certaines régions ; le pipeline mesure ces lacunes au lieu de les masquer. Une provenance Wikidata rend l’assertion traçable, mais n’équivaut pas à une vérification historiographique indépendante.
+
+## Importance et sélection éditoriale
+
+L’importance 0–100 combine une échelle logarithmique du nombre de sitelinks (55 points), l’appartenance à la sélection (15), la taille documentée de la guerre parente (15), des effectifs documentés (10), et une base de 10, plafonnée à 100. Ce score règle la visibilité des marqueurs ; il n’évalue ni la souffrance, ni la légitimité des parties.
+
+`data/curated/events.json` contient une sélection versionnée de QID vérifiés. Son amorçage retient quatre événements par combinaison région/ère disponible, puis complète selon les sitelinks jusqu’à 240. Son statut explicite est « sélection éditoriale initiale vérifiée par la source », pas « canon validé par des historiens ». Toute modification éditoriale peut conserver les identifiants et changer les raisons de sélection ; aucune date ou coordonnée n’y est inventée.
+
+## Séquences et territoires
+
+Les séquences utilisent exclusivement les liens Wikidata P361 (« partie de ») et P527 (« comprend »), puis ordonnent les événements datés. Les traits de liaison ne sont pas les itinéraires empruntés par une armée. Cette distinction est inscrite dans chaque description de séquence. Une reconstruction de campagne au sens strict demanderait des tracés sourcés supplémentaires.
+
+Les changements territoriaux proviennent des intervalles et géométries des sources géographiques. Les identifiants d’événements ne sont pas attribués aux changements sur la seule base d’une proximité de date. L’affichage synchronisé fournit un contexte temporel, pas une preuve de causalité.
+
+## Sorties pour le navigateur
+
+- `public/data/manifest.json` : index léger, couverture et histogramme annuel.
+- `public/data/events.pmtiles` : événements géolocalisés, couche vectorielle `events` ; attributs `id`, `start`, `end`, `importance`, `type`, `era`, `region`, `parentWar`, `name_fr`, `name_en`.
+- `public/data/chunks/{siècle}.json` : notices légères pour les périodes demandées ; l’intervalle du manifeste tient compte des événements longs.
+- `public/data/events/{QID}.json` : une notice complète par requête.
+- `public/data/search-manifest.json` et `search/{siècle}.json` : index de recherche découpé, exploité dans un Worker.
+- `public/data/wars.json`, `wars/{QID}.json` : catalogue et événements liés d’une guerre.
+- `public/data/campaigns.json` : séquences chronologiques sourcées.
+
+Les tableaux bruts de toutes les géométries ne sont jamais importés par le code de l’interface.
