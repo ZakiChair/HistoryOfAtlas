@@ -1,0 +1,7 @@
+node_modules
+.next
+out
+data
+public/data
+public/geo
+pnpm-lock.yaml

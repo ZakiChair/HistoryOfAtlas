@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+data/raw/
+data/geography/raw/
+data/geography/build/
+.firecrawl/
+*.tsbuildinfo
+.env*
+test-results/
+playwright-report/
+.lighthouseci/
+.DS_Store
+data/geography/*.geojson
+data/geography/*.log
+**/__pycache__/
+public/geo/*.sha256
