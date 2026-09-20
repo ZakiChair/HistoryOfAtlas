@@ -1,0 +1,58 @@
+{
+  "codeCommit": "299cad7a223828f0e8d84bd61dbcdae6e14d796a",
+  "overall": "partial-acceptance",
+  "dataset": {
+    "events": 20037,
+    "target": 20000,
+    "met": true,
+    "uniqueQids": 20037,
+    "withProvenance": 20037
+  },
+  "rebuild": {
+    "command": "pnpm data:build",
+    "exitCode": 0,
+    "identicalFiles": 24352,
+    "condition": "Same acquired raw cache and tool versions"
+  },
+  "verification": {
+    "vitestPassed": 130,
+    "pythonGeographyPassed": 7,
+    "e2ePassed": 38,
+    "axeAuditsPassed": 6,
+    "nativeFrameBenchmarksPassed": 2,
+    "lighthouse": {
+      "http://localhost:18080/": {
+        "performance": 93,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "http://localhost:18080/about/": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      }
+    },
+    "lighthouseThresholdsMet": true
+  },
+  "budgets": {
+    "initialShellGzipBytes": 252011,
+    "initialShellBudgetMet": true,
+    "fullMapGzipBytes": 670543,
+    "fullMapWithin300000Bytes": false,
+    "firstRenderedTerritoriesMs": 9221.90000000596,
+    "mapReadyWithin3000Ms": false,
+    "profile": "request throttling: 1.6384 Mbps down, 750 Kbps up, 150 ms latency, CPU x4"
+  },
+  "notVerified": [
+    "Frame rate on an average laptop",
+    "Frame rate on a physical mobile device",
+    "A corpus of 50000 loaded events",
+    "Comprehensive manual assistive-technology accessibility certification"
+  ],
+  "sourceLimits": [
+    "Main territorial observations end in 2024; later years explicitly retain that sourced state.",
+    "Historical Basemaps snapshots end in 2010.",
+    "Battle locations and territorial observations do not automatically establish a causal annexation or an army march route.",
+    "Automated provenance and validation are not independent scholarly review of every historical assertion."
+  ]
+}

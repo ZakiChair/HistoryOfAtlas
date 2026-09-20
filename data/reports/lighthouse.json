@@ -1,0 +1,100 @@
+{
+  "codeCommit": "299cad7a223828f0e8d84bd61dbcdae6e14d796a",
+  "corpusEvents": 20037,
+  "corpusBuiltAt": "2026-09-20T12:41:25Z",
+  "server": "Docker Nginx, gzip level 6",
+  "graphics": "Native ANGLE/Metal on Apple M4 Max",
+  "method": "Lighthouse mobile DevTools network throttling, CPU x4, 3 runs per route. Not an independent guarantee of map-ready time.",
+  "thresholds": {
+    "performance": 85,
+    "accessibility": 95,
+    "seo": 95
+  },
+  "passed": true,
+  "medians": {
+    "http://localhost:18080/": {
+      "performance": 93,
+      "accessibility": 100,
+      "seo": 100
+    },
+    "http://localhost:18080/about/": {
+      "performance": 100,
+      "accessibility": 100,
+      "seo": 100
+    }
+  },
+  "runs": [
+    {
+      "url": "http://localhost:18080/",
+      "fetchTime": "2026-09-20T17:02:27.330Z",
+      "categories": {
+        "performance": 92,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "fcpMs": 1543.629,
+      "lcpMs": 1543.629,
+      "totalBlockingMs": 253.26200000000222
+    },
+    {
+      "url": "http://localhost:18080/",
+      "fetchTime": "2026-09-20T17:03:09.185Z",
+      "categories": {
+        "performance": 93,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "fcpMs": 1510.275,
+      "lcpMs": 1510.275,
+      "totalBlockingMs": 206.6729999694835
+    },
+    {
+      "url": "http://localhost:18080/",
+      "fetchTime": "2026-09-20T17:03:50.721Z",
+      "categories": {
+        "performance": 93,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "fcpMs": 1505.364,
+      "lcpMs": 1505.364,
+      "totalBlockingMs": 204.35599999999522
+    },
+    {
+      "url": "http://localhost:18080/about/",
+      "fetchTime": "2026-09-20T17:04:29.889Z",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "fcpMs": 1525.776,
+      "lcpMs": 1525.776,
+      "totalBlockingMs": 28.591000000000122
+    },
+    {
+      "url": "http://localhost:18080/about/",
+      "fetchTime": "2026-09-20T17:04:52.967Z",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "fcpMs": 1518.044,
+      "lcpMs": 1518.044,
+      "totalBlockingMs": 25.311999999999898
+    },
+    {
+      "url": "http://localhost:18080/about/",
+      "fetchTime": "2026-09-20T17:05:15.944Z",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "seo": 100
+      },
+      "fcpMs": 1523.671,
+      "lcpMs": 1523.671,
+      "totalBlockingMs": 32.37799999999993
+    }
+  ]
+}

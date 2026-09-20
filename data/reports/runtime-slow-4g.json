@@ -1,0 +1,102 @@
+{
+  "method": "Unique JavaScript responses through first nonempty rendered territorial view; uncompressed response bodies recompressed with gzip. Includes shell, map module, PMTiles and workers. Intro disabled by explicit year URL, reduced motion enabled.",
+  "profile": "request throttling: 1.6384 Mbps down, 750 Kbps up, 150 ms latency, CPU x4",
+  "mapReadyMs": 9221.90000000596,
+  "mapReadyAt": 1789923743461.7,
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+  "origin": "http://localhost:18080",
+  "totalEvents": 20037,
+  "corpusBuiltAt": "2026-09-20T12:41:25Z",
+  "mapReadyBudgetMs": 3000,
+  "mapReadyBudgetMet": false,
+  "gzipBytes": 670543,
+  "interactiveJsBudgetBytes": 300000,
+  "interactiveJsBudgetMet": false,
+  "completedResponseBodyBytes": 1425181,
+  "transferByKind": {
+    "document": 6968,
+    "script": 665411,
+    "stylesheet": 21678,
+    "font": 62476,
+    "fetch": 21116,
+    "pmtiles": 647532
+  },
+  "assets": [
+    {
+      "path": "/_next/static/chunks/0-z9gs4ltq9m9.js",
+      "bytes": 39837,
+      "gzipBytes": 14948
+    },
+    {
+      "path": "/_next/static/chunks/08n5wjxqki30s.js",
+      "bytes": 24591,
+      "gzipBytes": 8877
+    },
+    {
+      "path": "/_next/static/chunks/16e22x1_yf9j1.js",
+      "bytes": 8869,
+      "gzipBytes": 3595
+    },
+    {
+      "path": "/_next/static/chunks/17kclwmtrr02v.js",
+      "bytes": 229154,
+      "gzipBytes": 71645
+    },
+    {
+      "path": "/_next/static/chunks/1dsqt4ga36lpp.js",
+      "bytes": 32969,
+      "gzipBytes": 8762
+    },
+    {
+      "path": "/_next/static/chunks/1lhb8m5yrk2a5.js",
+      "bytes": 164412,
+      "gzipBytes": 56326
+    },
+    {
+      "path": "/_next/static/chunks/1r179vxsg8657.js",
+      "bytes": 1050485,
+      "gzipBytes": 281352
+    },
+    {
+      "path": "/_next/static/chunks/1sivr9ddcv5tm.js",
+      "bytes": 14383,
+      "gzipBytes": 3667
+    },
+    {
+      "path": "/_next/static/chunks/2121tb6a5vuli.js",
+      "bytes": 161329,
+      "gzipBytes": 44126
+    },
+    {
+      "path": "/_next/static/chunks/2b_t6vmk_q5tw.js",
+      "bytes": 49122,
+      "gzipBytes": 17767
+    },
+    {
+      "path": "/_next/static/chunks/3em48suk0ehbx.js",
+      "bytes": 5364,
+      "gzipBytes": 1957
+    },
+    {
+      "path": "/_next/static/chunks/3kmo7lfe31dh8.js",
+      "bytes": 987,
+      "gzipBytes": 387
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-2o_6kmwjxydu9.js",
+      "bytes": 10946,
+      "gzipBytes": 4306
+    },
+    {
+      "path": "/vendor/maplibre/6.10.0/maplibre-gl-shared.mjs",
+      "bytes": 513898,
+      "gzipBytes": 146770
+    },
+    {
+      "path": "/vendor/maplibre/6.10.0/maplibre-gl-worker.mjs",
+      "bytes": 19007,
+      "gzipBytes": 6058
+    }
+  ],
+  "codeCommit": "299cad7a223828f0e8d84bd61dbcdae6e14d796a"
+}

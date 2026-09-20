@@ -1,0 +1,95 @@
+{
+  "image": "atlas-belli:local",
+  "imageId": "sha256:2919c104d347af073d961a30139f9db3481121557920ff80629949375e0c5e67",
+  "container": "atlas-belli-verification",
+  "origin": "http://127.0.0.1:18080",
+  "user": "nginx",
+  "health": "healthy",
+  "checks": [
+    {
+      "path": "/about",
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:18080/about/",
+      "contentType": "text/html"
+    },
+    {
+      "path": "/_next/static/chunks/1dsqt4ga36lpp.js",
+      "status": 200,
+      "encoding": "gzip",
+      "compressedBytes": 8762,
+      "uncompressedBytes": 32969
+    },
+    {
+      "path": "/404",
+      "status": 404,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/404/",
+      "status": 404,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/this-route-does-not-exist/",
+      "status": 404,
+      "contentType": "text/html"
+    },
+    {
+      "path": "/data/events.pmtiles",
+      "status": 206,
+      "bytes": 127,
+      "contentRange": "bytes 0-126/10969094",
+      "encoding": null,
+      "version": 3
+    },
+    {
+      "path": "/vendor/maplibre/6.10.0/maplibre-gl-worker.mjs",
+      "status": 200,
+      "contentType": "application/javascript",
+      "bytes": 19007
+    },
+    {
+      "path": "/vendor/maplibre/6.10.0/maplibre-gl-shared.mjs",
+      "status": 200,
+      "contentType": "application/javascript",
+      "bytes": 513898
+    },
+    {
+      "path": "/opengraph-image",
+      "status": 200,
+      "contentType": "image/png",
+      "bytes": 66476
+    },
+    {
+      "check": "all_temporal_event_archives_and_basemaps",
+      "status": 206,
+      "archives": 63,
+      "rangeBytes": 127,
+      "contentEncoding": null
+    },
+    {
+      "check": "deployed_manifest_matches_final_dataset",
+      "totalEvents": 20037,
+      "eventShards": 61
+    },
+    {
+      "check": "maplibre_module_gzip",
+      "compressedBytes": 146770,
+      "uncompressedBytes": 513898,
+      "contentType": "application/javascript"
+    },
+    {
+      "check": "metadata_uses_configured_public_origin",
+      "origin": "http://localhost:18080"
+    },
+    {
+      "check": "nginx_text_compression_level",
+      "gzipCompLevel": 6
+    }
+  ],
+  "correctedNginxIssues": [
+    "Absolute directory redirects used the internal container port; redirects are now relative.",
+    "The exported /404 directory returned HTTP 200; /404 and /404/ now return HTTP 404."
+  ],
+  "codeCommit": "299cad7a223828f0e8d84bd61dbcdae6e14d796a"
+}

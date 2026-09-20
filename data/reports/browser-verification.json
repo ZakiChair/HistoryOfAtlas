@@ -1,0 +1,95 @@
+{
+  "recordedAt": "2026-09-20T17:02:50.219062+00:00",
+  "baseUrl": "http://localhost:3000",
+  "build": "Next.js static production export",
+  "dataset": {
+    "totalEvents": 20037,
+    "builtAt": "2026-09-20T12:41:25Z",
+    "eventShards": 61,
+    "campaigns": 40,
+    "stories": 10
+  },
+  "functional": {
+    "command": "PLAYWRIGHT_BASE_URL=http://localhost:3000 pnpm test:e2e --workers=1",
+    "passed": 38,
+    "failed": 0,
+    "profiles": [
+      "Desktop Chrome",
+      "Pixel 7 emulated"
+    ],
+    "renderer": "ANGLE / SwiftShader",
+    "durationReported": "3.2 minutes",
+    "axeAuditsPassed": 6,
+    "scope": [
+      "WCAG AA 2.0/2.1/2.2 and accessible visible labels",
+      "timeline/date navigation",
+      "sourced events and participant filters",
+      "source-derived war descendants",
+      "temporal PMTiles requests",
+      "globe clustering and Mercator round trip",
+      "territorial follow URL and sourced endpoint",
+      "campaign playback URL and context exit",
+      "story chapter restoration",
+      "exact camera/filter deep links",
+      "language and mobile drawer",
+      "no initial event JSON at 1440x960 and mobile; explicit accessible disclosure"
+    ],
+    "durationMs": 190941.554,
+    "startedAt": "2026-09-20T16:57:20.417000+00:00",
+    "initialEventJson": {
+      "desktopViewport": {
+        "width": 1440,
+        "height": 960
+      },
+      "mobileProfile": "Pixel 7 emulated",
+      "beforeMapReady": 0,
+      "beforeExplicitButtonClick": 0,
+      "afterButtonClick": "requested",
+      "invariant": "No /data/chunks requests during initial map loading or scrolling the disclosure button into view; clicking it mounts the event list."
+    }
+  },
+  "performance": {
+    "command": "PLAYWRIGHT_BASE_URL=http://localhost:3000 pnpm test:performance",
+    "passed": 2,
+    "failed": 0,
+    "sampleDurationSeconds": 6,
+    "minimumAverageFps": 30,
+    "maximumP95FrameMs": 33.833333333333336,
+    "measurements": [
+      {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+        "frames": 359,
+        "averageFps": 60.00233992411958,
+        "p95FrameMs": 16.700000000000728,
+        "totalEvents": 20037,
+        "corpusBuiltAt": "2026-09-20T12:41:25Z",
+        "firstYear": 1800,
+        "lastDisplayedYear": "1942",
+        "profile": "Desktop Chrome"
+      },
+      {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Max, Unspecified Version)",
+        "frames": 359,
+        "averageFps": 60.00334280461303,
+        "p95FrameMs": 16.700000000000728,
+        "totalEvents": 20037,
+        "corpusBuiltAt": "2026-09-20T12:41:25Z",
+        "firstYear": 1800,
+        "lastDisplayedYear": "1942",
+        "profile": "Pixel 7 emulated"
+      }
+    ]
+  },
+  "localEvidence": {
+    "functionalReport": "playwright-report/index.html",
+    "performanceReport": "performance-report/index.html",
+    "note": "Ignored local HTML reports embed the original Playwright frame-measurement JSON attachments."
+  },
+  "limitations": [
+    "requestAnimationFrame measures browser frame scheduling, not guaranteed GPU presentation.",
+    "Both profiles use the Apple M4 Max host GPU; Pixel 7 is emulated.",
+    "This does not certify a physical phone, an average laptop, or 50000 loaded events.",
+    "The previously documented SwiftShader performance failures remain valid for that software renderer."
+  ],
+  "codeCommit": "299cad7a223828f0e8d84bd61dbcdae6e14d796a"
+}

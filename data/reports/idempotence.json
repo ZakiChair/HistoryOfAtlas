@@ -1,0 +1,29 @@
+{
+  "status": "identical",
+  "sourceBuiltAt": "2026-09-20T12:41:25Z",
+  "files": 22582,
+  "sha256": "df2bf1eff702877fe0db992767f08f23538ddd6040948ead436ee6a4c712b360",
+  "fullCommandVerification": {
+    "command": "pnpm data:build",
+    "exitCode": 0,
+    "startedAt": "2026-09-20T16:46:30Z",
+    "finishedAt": "2026-09-20T16:47:36Z",
+    "durationSecondsObserved": 66,
+    "status": "identical",
+    "files": 24352,
+    "eventFiles": 22582,
+    "geographyFiles": 1770,
+    "eventsSha256": "df2bf1eff702877fe0db992767f08f23538ddd6040948ead436ee6a4c712b360",
+    "geographySha256": "6fd76b03b87004d89b1e5eee223efd10dfc208e1e0a192b6816749c0319f1416",
+    "eventsDownloaded": 0,
+    "linkedEntitiesDownloaded": 0,
+    "counts": {
+      "geolocatedDatedEvents": 20037,
+      "contextRecords": 378,
+      "editorialEvents": 240,
+      "campaigns": 40,
+      "stories": 10,
+      "temporalPmtiles": 61
+    }
+  }
+}
