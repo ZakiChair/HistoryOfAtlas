@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "scope": "Membership graph only; event records are retained independently when eligible.",
+  "records": [
+    {"id":"Q33761","reason":"political-wave-not-a-military-sequence","source":"https://www.wikidata.org/wiki/Q33761","evidence":"Source describes a political wave of protests and uprisings, not one military campaign."},
+    {"id":"Q17512479","reason":"political-wave-not-a-military-sequence","source":"https://www.wikidata.org/wiki/Q17512479","evidence":"Source describes violence and instability after the 2010–12 Arab Spring, not one military campaign."}
+  ]
+}

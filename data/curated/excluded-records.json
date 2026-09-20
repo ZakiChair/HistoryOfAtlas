@@ -1,0 +1,16 @@
+{
+  "purpose": "Explicit hypothetical or legendary descriptions found during review of the actual source cache, despite generic P31 classes. These are excluded until the atlas supports a distinct evidence status.",
+  "reviewedAt": "2026-09-20",
+  "records": [
+    { "id": "Q4872153", "reason": "hypothetical-event", "sourceDescription": "596 hypothetical battle", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q4872153" },
+    { "id": "Q2890406", "reason": "legendary-event", "sourceDescription": "affrontement semi-légendaire entre les Chancas et la seigneurie du Cuzco", "sourceLanguage": "fr", "source": "https://www.wikidata.org/wiki/Q2890406" },
+    { "id": "Q4870423", "reason": "legendary-event", "sourceDescription": "legendary battle in 1010 AD", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q4870423" },
+    { "id": "Q939211", "reason": "legendary-event", "sourceDescription": "legendary battle in mid-8th century", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q939211" },
+    { "id": "Q16683521", "reason": "hypothetical-event", "sourceDescription": "898 hypothetical siege", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q16683521" },
+    { "id": "Q1786470", "reason": "legendary-event", "sourceDescription": "Semi-legendary, supposed 1320s battle between Lithuania and Kiev", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q1786470" },
+    { "id": "Q3401901", "reason": "legendary-event", "sourceDescription": "bataille légendaire", "sourceLanguage": "fr", "source": "https://www.wikidata.org/wiki/Q3401901" },
+    { "id": "Q5643516", "reason": "legendary-event", "sourceDescription": "15th-century semi-legendary war", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q5643516" },
+    { "id": "Q139960958", "reason": "hypothetical-event", "sourceDescription": "7th–8th century hypothetical military expeditions", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q139960958" },
+    { "id": "Q1644792", "reason": "legendary-event", "sourceDescription": "legendary Roman victory over the Latin League and as part of a wider Latin War c. 496 BCE", "sourceLanguage": "en", "source": "https://www.wikidata.org/wiki/Q1644792" }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "archives": 90,
+  "labelsLayersVerifiedAtZoomZero": 89,
+  "sourceLabelsPreserved": 27096,
+  "bytesBefore": 51981111,
+  "bytesAfter": 56087251,
+  "deltaBytes": 4106140,
+  "cliopatria1800Bytes": 2101430,
+  "active1812AtZoomZero": 137,
+  "largest1812Labels": [
+    {
+      "id": "clio-record-10866",
+      "name": "Russian Empire",
+      "areaKm2": 17200608,
+      "fromYear": 1812,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10859",
+      "name": "Qing Dynasty",
+      "areaKm2": 12509198,
+      "fromYear": 1812,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10867",
+      "name": "(Spanish Empire)",
+      "areaKm2": 8832582,
+      "fromYear": 1812,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10849",
+      "name": "Spanish Empire",
+      "areaKm2": 8454392,
+      "fromYear": 1812,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10852",
+      "name": "(Portuguese Empire)",
+      "areaKm2": 7997674,
+      "fromYear": 1812,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10824",
+      "name": "Portuguese Empire",
+      "areaKm2": 7874271,
+      "fromYear": 1811,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10857",
+      "name": "(British Empire)",
+      "areaKm2": 3577694,
+      "fromYear": 1812,
+      "toYear": 1813
+    },
+    {
+      "id": "clio-record-10851",
+      "name": "Emirate of Diriyah",
+      "areaKm2": 2092221,
+      "fromYear": 1812,
+      "toYear": 1813
+    }
+  ],
+  "compiler": "tippecanoe v2.79.0",
+  "method": "Decode the labels layer of the z0/0/0 tile in every snapshot and temporal archive; compare numeric source-record IDs with the normalized source label layer.",
+  "temporalSource": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258",
+  "absoluteCheckoutPathsInMetadata": 0,
+  "normalizedGeometryFilesUnchanged": 94,
+  "cachedOfflineRebuild": {
+    "publicFilesCompared": 1680,
+    "changedFiles": 0
+  },
+  "forcedShardRebuild": {
+    "archive": "public/geo/cliopatria-1800-1849.pmtiles",
+    "identical": true,
+    "sha256": "b0ef011a10911c447fb984711ad7c2598880f39da02bbca30909764c041499f8"
+  },
+  "crossCheckoutUnitTest": "test_tile_bytes_are_independent_of_checkout_directory"
+}

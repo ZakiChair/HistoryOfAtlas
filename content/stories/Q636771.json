@@ -1,0 +1,272 @@
+{
+  "id": "Q636771",
+  "title": {
+    "fr": "conquête de l'empire inca",
+    "en": "Spanish conquest of the Inca Empire"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q636771",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q140160443",
+      "text": {
+        "fr": "Battle of the Mangroves — avril 1532. Lieu indiqué par la source : Tumbes Department.",
+        "en": "Battle of the Mangroves — April 1532. Place recorded by the source: Tumbes Department."
+      }
+    },
+    {
+      "eventId": "Q1425362",
+      "text": {
+        "fr": "bataille de Cajamarca — 16 novembre 1532. Lieu indiqué par la source : Cajamarca.",
+        "en": "Battle of Cajamarca — 16 November 1532. Place recorded by the source: Cajamarca."
+      }
+    },
+    {
+      "eventId": "Q137570947",
+      "text": {
+        "fr": "First Battle of Jauja — 11 octobre 1533. Lieu indiqué par la source : Jauja.",
+        "en": "First Battle of Jauja — 11 October 1533. Place recorded by the source: Jauja."
+      }
+    },
+    {
+      "eventId": "Q9173030",
+      "text": {
+        "fr": "Battle of Huaripampa — 11 octobre 1533. Lieu indiqué par la source : Huaripampa District.",
+        "en": "Battle of Huaripampa — 11 October 1533. Place recorded by the source: Huaripampa District."
+      }
+    },
+    {
+      "eventId": "Q9173676",
+      "text": {
+        "fr": "Battle of Vilcas — 29 octobre 1533. Lieu indiqué par la source : Vilcashuamán.",
+        "en": "Battle of Vilcas — 29 October 1533. Place recorded by the source: Vilcashuamán."
+      }
+    },
+    {
+      "eventId": "Q137641850",
+      "text": {
+        "fr": "Battle of Capi — novembre 1533. Lieu indiqué par la source : Cusco.",
+        "en": "Battle of Capi — November 1533. Place recorded by the source: Cusco."
+      }
+    },
+    {
+      "eventId": "Q137641848",
+      "text": {
+        "fr": "Battle of Anta — 14 novembre 1533. Lieu indiqué par la source : Cusco.",
+        "en": "Battle of Anta — 14 November 1533. Place recorded by the source: Cusco."
+      }
+    },
+    {
+      "eventId": "Q1612814",
+      "text": {
+        "fr": "prise de Cuzco — 14 novembre 1533. Lieu indiqué par la source : Cusco.",
+        "en": "Battle of Cusco — 14 November 1533. Place recorded by the source: Cusco."
+      }
+    },
+    {
+      "eventId": "Q3636270",
+      "text": {
+        "fr": "Battle of Mount Chimborazo — 1534. Lieu indiqué par la source : Guamote Canton.",
+        "en": "Battle of Mount Chimborazo — 1534. Place recorded by the source: Guamote Canton."
+      }
+    },
+    {
+      "eventId": "Q9172566",
+      "text": {
+        "fr": "Battle of the Yacus River — 1534. Lieu indiqué par la source : Jauja.",
+        "en": "Battle of the Yacus River — 1534. Place recorded by the source: Jauja."
+      }
+    },
+    {
+      "eventId": "Q137570960",
+      "text": {
+        "fr": "Second Battle of Jauja — février 1534. Lieu indiqué par la source : Jauja.",
+        "en": "Second Battle of Jauja — February 1534. Place recorded by the source: Jauja."
+      }
+    },
+    {
+      "eventId": "Q138751631",
+      "text": {
+        "fr": "Battle of Riobamba — mai 1534. Lieu indiqué par la source : Riobamba.",
+        "en": "Battle of Riobamba — May 1534. Place recorded by the source: Riobamba."
+      }
+    },
+    {
+      "eventId": "Q3636517",
+      "text": {
+        "fr": "Battle of Maraycalla — mai 1534. Lieu indiqué par la source : Maray Qalla.",
+        "en": "Battle of Maraycalla — May 1534. Place recorded by the source: Maray Qalla."
+      }
+    },
+    {
+      "eventId": "Q126080842",
+      "text": {
+        "fr": "Third Battle of Tiocajas — 3 mai 1534. Lieu indiqué par la source : Guamote Canton.",
+        "en": "Third Battle of Tiocajas — 3 May 1534. Place recorded by the source: Guamote Canton."
+      }
+    },
+    {
+      "eventId": "Q137183585",
+      "text": {
+        "fr": "Battle of Quito — juin 1534. Lieu indiqué par la source : Quito.",
+        "en": "Battle of Quito — June 1534. Place recorded by the source: Quito."
+      }
+    },
+    {
+      "eventId": "Q138573403",
+      "text": {
+        "fr": "Battle of Ambato — juin 1534. Lieu indiqué par la source : Ambato River.",
+        "en": "Battle of Ambato — June 1534. Place recorded by the source: Ambato River."
+      }
+    },
+    {
+      "eventId": "Q5055825",
+      "text": {
+        "fr": "bataille de Sacsayhuamán — avril 1536. Lieu indiqué par la source : Saqsaywaman.",
+        "en": "Battle of Sacsayhuaman — April 1536. Place recorded by the source: Saqsaywaman."
+      }
+    },
+    {
+      "eventId": "Q137637279",
+      "text": {
+        "fr": "Battle of Yucay — mai 1536. Lieu indiqué par la source : Yucay District.",
+        "en": "Battle of Yucay — May 1536. Place recorded by the source: Yucay District."
+      }
+    },
+    {
+      "eventId": "Q137672922",
+      "text": {
+        "fr": "Battle of Huaytará — mai 1536. Lieu indiqué par la source : Huaytará.",
+        "en": "Battle of Huaytará — May 1536. Place recorded by the source: Huaytará."
+      }
+    },
+    {
+      "eventId": "Q137672925",
+      "text": {
+        "fr": "Battle of Parcos — mai 1536. Lieu indiqué par la source : Cusco.",
+        "en": "Battle of Parcos — May 1536. Place recorded by the source: Cusco."
+      }
+    },
+    {
+      "eventId": "Q137780644",
+      "text": {
+        "fr": "Third Battle of Jauja — mai 1536. Lieu indiqué par la source : Jauja.",
+        "en": "Third Battle of Jauja — May 1536. Place recorded by the source: Jauja."
+      }
+    },
+    {
+      "eventId": "Q138516630",
+      "text": {
+        "fr": "Battle of Lunahuaná — mai 1536. Lieu indiqué par la source : Lunahuaná.",
+        "en": "Battle of Lunahuaná — May 1536. Place recorded by the source: Lunahuaná."
+      }
+    },
+    {
+      "eventId": "Q2398589",
+      "text": {
+        "fr": "siège de Cuzco — 6 mai 1536. Lieu indiqué par la source : Cusco.",
+        "en": "Siege of Cusco — 6 May 1536. Place recorded by the source: Cusco."
+      }
+    },
+    {
+      "eventId": "Q5762526",
+      "text": {
+        "fr": "siège de Lima — 10 août 1536. Lieu indiqué par la source : Lima.",
+        "en": "Siege of Lima — 10 August 1536. Place recorded by the source: Lima."
+      }
+    },
+    {
+      "eventId": "Q138660068",
+      "text": {
+        "fr": "Battle of Rumichaca Bridge — novembre 1536. Lieu indiqué par la source : Pampas River.",
+        "en": "Battle of Rumichaca Bridge — November 1536. Place recorded by the source: Pampas River."
+      }
+    },
+    {
+      "eventId": "Q138660062",
+      "text": {
+        "fr": "Battle of Calca — 1537. Lieu indiqué par la source : Calca.",
+        "en": "Battle of Calca — 1537. Place recorded by the source: Calca."
+      }
+    },
+    {
+      "eventId": "Q140160452",
+      "text": {
+        "fr": "Illa Tupac's campaign in Huánuco — 1537. Lieu indiqué par la source : Huanuco Department.",
+        "en": "Illa Tupac's campaign in Huánuco — 1537. Place recorded by the source: Huanuco Department."
+      }
+    },
+    {
+      "eventId": "Q2338569",
+      "text": {
+        "fr": "bataille d'Ollantaytambo — janvier 1537. Lieu indiqué par la source : Ollantaytambo.",
+        "en": "Battle of Ollantaytambo — January 1537. Place recorded by the source: Ollantaytambo."
+      }
+    },
+    {
+      "eventId": "Q9172756",
+      "text": {
+        "fr": "Battle of Urcos — 1537. Lieu indiqué par la source : Urcos.",
+        "en": "Battle of Urcos — 1537. Place recorded by the source: Urcos."
+      }
+    },
+    {
+      "eventId": "Q138660063",
+      "text": {
+        "fr": "Battle of Desaguadero — 1538. Lieu indiqué par la source : yuca guasi.",
+        "en": "Battle of Desaguadero — 1538. Place recorded by the source: yuca guasi."
+      }
+    },
+    {
+      "eventId": "Q138660066",
+      "text": {
+        "fr": "Battle of Tapacarí — 1538. Lieu indiqué par la source : Tapacarí.",
+        "en": "Battle of Tapacarí — 1538. Place recorded by the source: Tapacarí."
+      }
+    },
+    {
+      "eventId": "Q137183584",
+      "text": {
+        "fr": "Battle of Oncoy — novembre 1538. Lieu indiqué par la source : Ongoy District.",
+        "en": "Battle of Oncoy — November 1538. Place recorded by the source: Ongoy District."
+      }
+    },
+    {
+      "eventId": "Q138660067",
+      "text": {
+        "fr": "Battle of Yuramayo — novembre 1538. Lieu indiqué par la source : Jauja Province.",
+        "en": "Battle of Yuramayo — November 1538. Place recorded by the source: Jauja Province."
+      }
+    },
+    {
+      "eventId": "Q138751987",
+      "text": {
+        "fr": "Siege of Cochabamba — décembre 1538. Lieu indiqué par la source : Cochabamba.",
+        "en": "Siege of Cochabamba — December 1538. Place recorded by the source: Cochabamba."
+      }
+    },
+    {
+      "eventId": "Q138823811",
+      "text": {
+        "fr": "Gonzalo Pizarro's expedition to Vilcabamba — avril 1539. Lieu indiqué par la source : Vitcos.",
+        "en": "Gonzalo Pizarro's expedition to Vilcabamba — April 1539. Place recorded by the source: Vitcos."
+      }
+    },
+    {
+      "eventId": "Q1612597",
+      "text": {
+        "fr": "bataille de Chupas — 16 septembre 1542. Lieu indiqué par la source : Ayacucho.",
+        "en": "Battle of Chupas — 16 September 1542. Place recorded by the source: Ayacucho."
+      }
+    }
+  ]
+}

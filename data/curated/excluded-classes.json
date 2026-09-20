@@ -1,0 +1,14 @@
+{
+  "purpose": "Prevent explicit fictional, hypothetical or legendary source classifications from entering the factual atlas corpus.",
+  "verifiedBy": "Live Wikidata labels queried through WDQS, 2026-09-20",
+  "classes": [
+    { "id": "Q124042044", "label": "hypothetical war", "reason": "hypothetical-event", "source": "https://www.wikidata.org/wiki/Q124042044" },
+    { "id": "Q26913948", "label": "legendary battle", "reason": "legendary-event", "source": "https://www.wikidata.org/wiki/Q26913948" },
+    { "id": "Q17198419", "label": "fictional war", "reason": "fictional-event", "source": "https://www.wikidata.org/wiki/Q17198419" },
+    { "id": "Q15707521", "label": "fictional battle", "reason": "fictional-event", "source": "https://www.wikidata.org/wiki/Q15707521" },
+    { "id": "Q136439120", "label": "fictional event", "reason": "fictional-event", "source": "https://www.wikidata.org/wiki/Q136439120" }
+  ],
+  "properties": [
+    { "id": "P1434", "label": "takes place in fictional universe", "reason": "fictional-event", "source": "https://www.wikidata.org/wiki/Property:P1434" }
+  ]
+}

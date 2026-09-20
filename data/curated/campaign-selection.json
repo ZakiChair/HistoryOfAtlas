@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "status": "source-verified-documentary-selection",
+  "method": "Explicit review of the ingested Wikidata catalog, selecting forty dated conflicts and campaigns across regions and eras. Names and QIDs come from the catalog. Chronological relationships must pass source-date checks; this selection is not an expert historical canon. Source records and dates are not corrected by editorial judgment.",
+  "campaigns": [
+    {
+      "id": "Q551888",
+      "name": {
+        "en": "Wars of Alexander the Great",
+        "fr": "guerres d'Alexandre le Grand"
+      },
+      "source": "https://www.wikidata.org/wiki/Q551888"
+    },
+    {
+      "id": "Q124988",
+      "name": {
+        "en": "Punic Wars",
+        "fr": "guerres puniques"
+      },
+      "source": "https://www.wikidata.org/wiki/Q124988"
+    },
+    {
+      "id": "Q202161",
+      "name": {
+        "en": "Gallic War",
+        "fr": "guerre des Gaules"
+      },
+      "source": "https://www.wikidata.org/wiki/Q202161"
+    },
+    {
+      "id": "Q76026",
+      "name": {
+        "en": "Greco-Persian Wars",
+        "fr": "guerres médiques"
+      },
+      "source": "https://www.wikidata.org/wiki/Q76026"
+    },
+    {
+      "id": "Q500409",
+      "name": {
+        "en": "Roman–Persian Wars",
+        "fr": "guerres perso-romaines"
+      },
+      "source": "https://www.wikidata.org/wiki/Q500409"
+    },
+    {
+      "id": "Q11789247",
+      "name": {
+        "en": "Vandal conquest of Roman Africa",
+        "fr": "Conquête vandale de l'Afrique romaine"
+      },
+      "source": "https://www.wikidata.org/wiki/Q11789247"
+    },
+    {
+      "id": "Q18148539",
+      "name": {
+        "en": "Tikal–Calakmul wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q18148539"
+    },
+    {
+      "id": "Q248984",
+      "name": {
+        "en": "Muslim conquest of the Levant",
+        "fr": "conquête musulmane de la Syrie"
+      },
+      "source": "https://www.wikidata.org/wiki/Q248984"
+    },
+    {
+      "id": "Q887684",
+      "name": {
+        "en": "Muslim conquest of Persia",
+        "fr": "conquête musulmane de la Perse"
+      },
+      "source": "https://www.wikidata.org/wiki/Q887684"
+    },
+    {
+      "id": "Q925960",
+      "name": {
+        "en": "Muslim conquest of the Maghreb",
+        "fr": "conquête musulmane du Maghreb"
+      },
+      "source": "https://www.wikidata.org/wiki/Q925960"
+    },
+    {
+      "id": "Q1455917",
+      "name": {
+        "en": "Umayyad conquest of Hispania",
+        "fr": "conquête musulmane de la péninsule Ibérique"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1455917"
+    },
+    {
+      "id": "Q2092093",
+      "name": {
+        "en": "Mongol invasions and conquests",
+        "fr": "conquêtes mongoles"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2092093"
+    },
+    {
+      "id": "Q51649",
+      "name": {
+        "en": "First Crusade",
+        "fr": "première croisade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q51649"
+    },
+    {
+      "id": "Q12551",
+      "name": {
+        "en": "Hundred Years' War",
+        "fr": "guerre de Cent Ans"
+      },
+      "source": "https://www.wikidata.org/wiki/Q12551"
+    },
+    {
+      "id": "Q698985",
+      "name": {
+        "en": "Ottoman Wars in Europe",
+        "fr": "guerres ottomanes en Europe"
+      },
+      "source": "https://www.wikidata.org/wiki/Q698985"
+    },
+    {
+      "id": "Q828435",
+      "name": {
+        "en": "Spanish conquest of the Aztec Empire",
+        "fr": "conquête de l'Empire aztèque"
+      },
+      "source": "https://www.wikidata.org/wiki/Q828435"
+    },
+    {
+      "id": "Q636771",
+      "name": {
+        "en": "Spanish conquest of the Inca Empire",
+        "fr": "conquête de l'empire inca"
+      },
+      "source": "https://www.wikidata.org/wiki/Q636771"
+    },
+    {
+      "id": "Q2915203",
+      "name": {
+        "en": "Ethiopian–Adal War",
+        "fr": "guerre Adal-Éthiopie"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2915203"
+    },
+    {
+      "id": "Q576338",
+      "name": {
+        "en": "Japanese invasions of Korea",
+        "fr": "guerre d'Imjin"
+      },
+      "source": "https://www.wikidata.org/wiki/Q576338"
+    },
+    {
+      "id": "Q3427966",
+      "name": {
+        "en": "transition from Ming to Qing",
+        "fr": "transition des Ming aux Qing"
+      },
+      "source": "https://www.wikidata.org/wiki/Q3427966"
+    },
+    {
+      "id": "Q2487",
+      "name": {
+        "en": "Thirty Years' War",
+        "fr": "guerre de Trente Ans"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2487"
+    },
+    {
+      "id": "Q33143",
+      "name": {
+        "en": "Seven Years' War",
+        "fr": "guerre de Sept Ans"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33143"
+    },
+    {
+      "id": "Q40949",
+      "name": {
+        "en": "American Revolutionary War",
+        "fr": "guerre d'indépendance des États-Unis"
+      },
+      "source": "https://www.wikidata.org/wiki/Q40949"
+    },
+    {
+      "id": "Q1123201",
+      "name": {
+        "en": "Spanish American wars of independence",
+        "fr": "Guerres d'indépendance hispano-américaines"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1123201"
+    },
+    {
+      "id": "Q78994",
+      "name": {
+        "en": "Napoleonic Wars",
+        "fr": "guerres napoléoniennes"
+      },
+      "source": "https://www.wikidata.org/wiki/Q78994"
+    },
+    {
+      "id": "Q233642",
+      "name": {
+        "en": "Second Anglo-Maratha War",
+        "fr": "Deuxième guerre anglo-marathe"
+      },
+      "source": "https://www.wikidata.org/wiki/Q233642"
+    },
+    {
+      "id": "Q722051",
+      "name": {
+        "en": "Anglo-Ashanti wars",
+        "fr": "guerres anglo-ashanti"
+      },
+      "source": "https://www.wikidata.org/wiki/Q722051"
+    },
+    {
+      "id": "Q1545405",
+      "name": {
+        "en": "New Zealand Wars",
+        "fr": "Guerres de Nouvelle-Zélande"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1545405"
+    },
+    {
+      "id": "Q228911",
+      "name": {
+        "en": "Anglo-Zulu War",
+        "fr": "guerre anglo-zouloue"
+      },
+      "source": "https://www.wikidata.org/wiki/Q228911"
+    },
+    {
+      "id": "Q989115",
+      "name": {
+        "en": "First Italo-Ethiopian War",
+        "fr": "première guerre italo-éthiopienne"
+      },
+      "source": "https://www.wikidata.org/wiki/Q989115"
+    },
+    {
+      "id": "Q192408",
+      "name": {
+        "en": "Taiping Rebellion",
+        "fr": "révolte des Taiping"
+      },
+      "source": "https://www.wikidata.org/wiki/Q192408"
+    },
+    {
+      "id": "Q309184",
+      "name": {
+        "en": "Boshin War",
+        "fr": "guerre de Boshin"
+      },
+      "source": "https://www.wikidata.org/wiki/Q309184"
+    },
+    {
+      "id": "Q361",
+      "name": {
+        "en": "World War I",
+        "fr": "Première Guerre mondiale"
+      },
+      "source": "https://www.wikidata.org/wiki/Q361"
+    },
+    {
+      "id": "Q362",
+      "name": {
+        "en": "World War II",
+        "fr": "Seconde Guerre mondiale"
+      },
+      "source": "https://www.wikidata.org/wiki/Q362"
+    },
+    {
+      "id": "Q2276692",
+      "name": {
+        "en": "New Guinea campaign",
+        "fr": "campagne de Nouvelle-Guinée"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2276692"
+    },
+    {
+      "id": "Q1332160",
+      "name": {
+        "en": "Indonesian National Revolution",
+        "fr": "révolution nationale indonésienne"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1332160"
+    },
+    {
+      "id": "Q8663",
+      "name": {
+        "en": "Korean War",
+        "fr": "guerre de Corée"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8663"
+    },
+    {
+      "id": "Q8740",
+      "name": {
+        "en": "Vietnam War",
+        "fr": "guerre du Vietnam"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8740"
+    },
+    {
+      "id": "Q200790",
+      "name": {
+        "en": "Algerian War",
+        "fr": "guerre d'Algérie"
+      },
+      "source": "https://www.wikidata.org/wiki/Q200790"
+    },
+    {
+      "id": "Q2629782",
+      "name": {
+        "en": "French conquest of Algeria",
+        "fr": "conquête de l'Algérie par la France"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2629782"
+    }
+  ],
+  "storyIds": [
+    "Q551888",
+    "Q202161",
+    "Q248984",
+    "Q2092093",
+    "Q828435",
+    "Q636771",
+    "Q2915203",
+    "Q1545405",
+    "Q78994",
+    "Q362"
+  ]
+}

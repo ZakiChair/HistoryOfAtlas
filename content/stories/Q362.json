@@ -1,0 +1,300 @@
+{
+  "id": "Q362",
+  "title": {
+    "fr": "Seconde Guerre mondiale",
+    "en": "World War II"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q362",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q150812",
+      "text": {
+        "fr": "campagne de Pologne — 1 septembre 1939. Lieu indiqué par la source : Poland.",
+        "en": "1939 Invasion of Poland — 1 September 1939. Place recorded by the source: Poland."
+      }
+    },
+    {
+      "eventId": "Q157627",
+      "text": {
+        "fr": "bataille de l'Atlantique — 3 septembre 1939. Lieu indiqué par la source : Atlantic Ocean.",
+        "en": "Battle of the Atlantic — 3 September 1939. Place recorded by the source: Atlantic Ocean."
+      }
+    },
+    {
+      "eventId": "Q134949",
+      "text": {
+        "fr": "guerre d'Hiver — 30 novembre 1939. Lieu indiqué par la source : Finland.",
+        "en": "Winter War — 30 November 1939. Place recorded by the source: Finland."
+      }
+    },
+    {
+      "eventId": "Q150939",
+      "text": {
+        "fr": "opération Weserübung — 9 avril 1940. Localisation indiquée par Wikidata.",
+        "en": "Operation Weserübung — 9 April 1940. Location recorded by Wikidata."
+      }
+    },
+    {
+      "eventId": "Q5084679",
+      "text": {
+        "fr": "campagne de Norvège — 9 avril 1940. Lieu indiqué par la source : Norway.",
+        "en": "Norwegian Campaign — 9 April 1940. Place recorded by the source: Norway."
+      }
+    },
+    {
+      "eventId": "Q151340",
+      "text": {
+        "fr": "bataille de France — 10 mai 1940. Lieu indiqué par la source : Luxembourg.",
+        "en": "Battle of France — 10 May 1940. Place recorded by the source: Luxembourg."
+      }
+    },
+    {
+      "eventId": "Q2649081",
+      "text": {
+        "fr": "bataille des Pays-Bas — 10 mai 1940. Lieu indiqué par la source : Netherlands.",
+        "en": "German invasion of the Netherlands — 10 May 1940. Place recorded by the source: Netherlands."
+      }
+    },
+    {
+      "eventId": "Q682452",
+      "text": {
+        "fr": "siège de Malte — 11 juin 1940. Lieu indiqué par la source : Crown Colony of Malta.",
+        "en": "Siege of Malta — 11 June 1940. Place recorded by the source: Crown Colony of Malta."
+      }
+    },
+    {
+      "eventId": "Q154720",
+      "text": {
+        "fr": "bataille d'Angleterre — 10 juillet 1940. Lieu indiqué par la source : United Kingdom.",
+        "en": "Battle of Britain — 10 July 1940. Place recorded by the source: United Kingdom."
+      }
+    },
+    {
+      "eventId": "Q780845",
+      "text": {
+        "fr": "guerre franco-thaïlandaise — octobre 1940. Lieu indiqué par la source : French Indochina.",
+        "en": "Franco-Thai War — October 1940. Place recorded by the source: French Indochina."
+      }
+    },
+    {
+      "eventId": "Q162362",
+      "text": {
+        "fr": "campagne des Balkans — 28 octobre 1940. Lieu indiqué par la source : Albania.",
+        "en": "World War II in the Balkans — 28 October 1940. Place recorded by the source: Albania."
+      }
+    },
+    {
+      "eventId": "Q543255",
+      "text": {
+        "fr": "bataille de Tarente — 11 novembre 1940. Lieu indiqué par la source : Taranto.",
+        "en": "Battle of Taranto — 11 November 1940. Place recorded by the source: Taranto."
+      }
+    },
+    {
+      "eventId": "Q189266",
+      "text": {
+        "fr": "front de l'Est — 22 juin 1941. Lieu indiqué par la source : Soviet Union.",
+        "en": "Eastern Front — 22 June 1941. Place recorded by the source: Soviet Union."
+      }
+    },
+    {
+      "eventId": "Q327061",
+      "text": {
+        "fr": "bataille de Białystok-Minsk — 22 juin 1941. Lieu indiqué par la source : Belarus.",
+        "en": "Battle of Białystok–Minsk — 22 June 1941. Place recorded by the source: Belarus."
+      }
+    },
+    {
+      "eventId": "Q122100",
+      "text": {
+        "fr": "guerre de Continuation — 25 juin 1941. Lieu indiqué par la source : Finland.",
+        "en": "Continuation War — 25 June 1941. Place recorded by the source: Finland."
+      }
+    },
+    {
+      "eventId": "Q162357",
+      "text": {
+        "fr": "bataille de Smolensk — 10 juillet 1941. Lieu indiqué par la source : Smolensk.",
+        "en": "Battle of Smolensk — 10 July 1941. Place recorded by the source: Smolensk."
+      }
+    },
+    {
+      "eventId": "Q162284",
+      "text": {
+        "fr": "bataille de Kiev — 7 août 1941. Lieu indiqué par la source : Kyiv.",
+        "en": "Battle of Kiev — 7 August 1941. Place recorded by the source: Kyiv."
+      }
+    },
+    {
+      "eventId": "Q682409",
+      "text": {
+        "fr": "siège d'Odessa — 8 août 1941. Lieu indiqué par la source : Odesa.",
+        "en": "Siege of Odesa 1941 — 8 August 1941. Place recorded by the source: Odesa."
+      }
+    },
+    {
+      "eventId": "Q151860",
+      "text": {
+        "fr": "siège de Léningrad — 8 septembre 1941. Lieu indiqué par la source : Saint Petersburg.",
+        "en": "Siege of Leningrad — 8 September 1941. Place recorded by the source: Saint Petersburg."
+      }
+    },
+    {
+      "eventId": "Q151290",
+      "text": {
+        "fr": "bataille de Moscou — 30 septembre 1941. Lieu indiqué par la source : Moscow Oblast.",
+        "en": "Battle of Moscow — 30 September 1941. Place recorded by the source: Moscow Oblast."
+      }
+    },
+    {
+      "eventId": "Q697658",
+      "text": {
+        "fr": "première bataille de Kharkov — 20 octobre 1941. Lieu indiqué par la source : Kharkiv.",
+        "en": "First Battle of Kharkov — 20 October 1941. Place recorded by the source: Kharkiv."
+      }
+    },
+    {
+      "eventId": "Q154860",
+      "text": {
+        "fr": "siège de Sébastopol — 30 octobre 1941. Lieu indiqué par la source : Sevastopol.",
+        "en": "Siege of Sevastopol — 30 October 1941. Place recorded by the source: Sevastopol."
+      }
+    },
+    {
+      "eventId": "Q169436",
+      "text": {
+        "fr": "bataille de Rostov — 17 novembre 1941. Lieu indiqué par la source : Rostov-on-Don.",
+        "en": "Battle of Rostov — 17 November 1941. Place recorded by the source: Rostov-on-Don."
+      }
+    },
+    {
+      "eventId": "Q52418",
+      "text": {
+        "fr": "attaque de Pearl Harbor — 7 décembre 1941. Lieu indiqué par la source : Pearl Harbor.",
+        "en": "Attack on Pearl Harbor — 7 December 1941. Place recorded by the source: Pearl Harbor."
+      }
+    },
+    {
+      "eventId": "Q296754",
+      "text": {
+        "fr": "bataille de Singapour — 8 février 1942. Lieu indiqué par la source : Singapore in the Straits Settlements.",
+        "en": "Battle of Singapore — 8 February 1942. Place recorded by the source: Singapore in the Straits Settlements."
+      }
+    },
+    {
+      "eventId": "Q155620",
+      "text": {
+        "fr": "seconde bataille de Kharkov — 12 mai 1942. Lieu indiqué par la source : Kharkiv.",
+        "en": "Second Battle of Kharkov — 12 May 1942. Place recorded by the source: Kharkiv."
+      }
+    },
+    {
+      "eventId": "Q38789",
+      "text": {
+        "fr": "bataille de Stalingrad — 23 août 1942. Lieu indiqué par la source : Volgograd.",
+        "en": "Battle of Stalingrad — 23 August 1942. Place recorded by the source: Volgograd."
+      }
+    },
+    {
+      "eventId": "Q157873",
+      "text": {
+        "fr": "troisième bataille de Kharkov — 19 février 1943. Lieu indiqué par la source : Kharkiv.",
+        "en": "Third Battle of Kharkov — 19 February 1943. Place recorded by the source: Kharkiv."
+      }
+    },
+    {
+      "eventId": "Q130861",
+      "text": {
+        "fr": "bataille de Koursk — 5 juillet 1943. Lieu indiqué par la source : Kursk.",
+        "en": "Battle of Kursk — 5 July 1943. Place recorded by the source: Kursk."
+      }
+    },
+    {
+      "eventId": "Q217981",
+      "text": {
+        "fr": "opération Husky — 9 juillet 1943. Lieu indiqué par la source : Sicily.",
+        "en": "Allied invasion of Sicily — 9 July 1943. Place recorded by the source: Sicily."
+      }
+    },
+    {
+      "eventId": "Q162333",
+      "text": {
+        "fr": "campagne d'Italie — 10 juillet 1943. Lieu indiqué par la source : Italy.",
+        "en": "Italian Campaign — 10 July 1943. Place recorded by the source: Italy."
+      }
+    },
+    {
+      "eventId": "Q313836",
+      "text": {
+        "fr": "bataille du Dniepr — 24 août 1943. Lieu indiqué par la source : Dnieper.",
+        "en": "Battle of the Dnieper — 24 August 1943. Place recorded by the source: Dnieper."
+      }
+    },
+    {
+      "eventId": "Q250309",
+      "text": {
+        "fr": "bataille de Tarawa — 20 novembre 1943. Lieu indiqué par la source : Betio.",
+        "en": "Battle of Tarawa — 20 November 1943. Place recorded by the source: Betio."
+      }
+    },
+    {
+      "eventId": "Q16470",
+      "text": {
+        "fr": "débarquement de Normandie — 6 juin 1944. Lieu indiqué par la source : Normandy.",
+        "en": "Normandy landings — 6 June 1944. Place recorded by the source: Normandy."
+      }
+    },
+    {
+      "eventId": "Q154940",
+      "text": {
+        "fr": "guerre de Laponie — 15 septembre 1944. Lieu indiqué par la source : Lapland.",
+        "en": "Lapland War — 15 September 1944. Place recorded by the source: Lapland."
+      }
+    },
+    {
+      "eventId": "Q327052",
+      "text": {
+        "fr": "bataille d'Aix-la-Chapelle — 2 octobre 1944. Lieu indiqué par la source : Aachen.",
+        "en": "Battle of Aachen — 2 October 1944. Place recorded by the source: Aachen."
+      }
+    },
+    {
+      "eventId": "Q308999",
+      "text": {
+        "fr": "bataille du golfe de Leyte — 23 octobre 1944. Lieu indiqué par la source : Leyte Gulf.",
+        "en": "Battle of Leyte Gulf — 23 October 1944. Place recorded by the source: Leyte Gulf."
+      }
+    },
+    {
+      "eventId": "Q155103",
+      "text": {
+        "fr": "bataille de Budapest — 29 décembre 1944. Lieu indiqué par la source : Budapest.",
+        "en": "Siege of Budapest — 29 December 1944. Place recorded by the source: Budapest."
+      }
+    },
+    {
+      "eventId": "Q192660",
+      "text": {
+        "fr": "bataille d'Okinawa — 1 avril 1945. Lieu indiqué par la source : Okinawa Islands.",
+        "en": "Battle of Okinawa — 1 April 1945. Place recorded by the source: Okinawa Islands."
+      }
+    },
+    {
+      "eventId": "Q154182",
+      "text": {
+        "fr": "bataille de Berlin — 16 avril 1945. Lieu indiqué par la source : Berlin.",
+        "en": "Battle of Berlin — 16 April 1945. Place recorded by the source: Berlin."
+      }
+    }
+  ]
+}

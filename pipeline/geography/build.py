@@ -36,6 +36,7 @@ NE_FILES = {
     'relief': 'ne_50m_geography_regions_polys.geojson',
 }
 PALETTE = ['#c39a53', '#7faba0', '#c47f69', '#9c99bc', '#7c9fb2', '#b5a175', '#ad7f9a', '#8daa77', '#d4a474', '#6fa7a2', '#a993b8', '#b5ac6d']
+TILE_SCHEMA_VERSION = '3-portable-temporal-labels'
 
 def write_json(path: Path, value: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -47,6 +48,8 @@ def digest(path: Path) -> str:
 def fetch(url: str, target: Path) -> Path:
     if target.exists() and target.stat().st_size:
         return target
+    if os.environ.get('ATLAS_GEOGRAPHY_OFFLINE') == '1':
+        raise RuntimeError(f'Offline geography source is missing: {target}')
     target.parent.mkdir(parents=True, exist_ok=True)
     last = None
     for attempt in range(5):
@@ -125,16 +128,22 @@ def valid_geometry(geometry: dict | None) -> bool:
     return bool(geometry and geometry.get('type') in ('Polygon','MultiPolygon') and geometry.get('coordinates'))
 
 def tile(output: Path, layers: dict[str, Path], cache_key: str) -> None:
+    # Every caller, including Cliopatria, must rebuild when tile semantics change.
+    cache_key = hashlib.sha256((TILE_SCHEMA_VERSION + cache_key).encode()).hexdigest()
     signature = output.with_suffix('.sha256')
     if output.exists() and signature.exists() and signature.read_text().strip() == cache_key:
         return
+    # Spatial thinning cannot precede the GPU year filter: colocated labels can
+    # represent different centuries. Retain every point and let symbol collision
+    # handling run only after the selected year's features have been filtered.
     command = ['tippecanoe', '--force', '--quiet', '--minimum-zoom=0', '--maximum-zoom=5',
-               '--drop-densest-as-needed', '--simplification=2', '--no-tile-size-limit',
-               '--no-feature-limit', '--detect-shared-borders', '--output', str(output)]
+               '--base-zoom=0', '--drop-rate=1', '--simplification=2', '--no-tile-size-limit',
+               '--no-feature-limit', '--detect-shared-borders', '--name', output.stem,
+               '--output', os.path.relpath(output, ROOT)]
     for layer, path in layers.items():
-        command.extend(['-L', f'{layer}:{path}'])
+        command.extend(['-L', f'{layer}:{os.path.relpath(path, ROOT)}'])
     env = dict(os.environ, TIPPECANOE_MAX_THREADS='2')
-    result = subprocess.run(command, env=env, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    result = subprocess.run(command, cwd=ROOT, env=env, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     if result.returncode:
         raise RuntimeError(result.stderr[-5000:])
     signature.write_text(cache_key + '\n')
@@ -192,8 +201,12 @@ SCRIPT_HASH = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--fetch-only', action='store_true')
+    parser.add_argument('--offline', action='store_true', help='Require cached sources; never access the network')
     parser.add_argument('--jobs', type=int, default=2)
     options = parser.parse_args()
+    if options.offline:
+        # Also applies when cliopatria imports this module as build rather than __main__.
+        os.environ['ATLAS_GEOGRAPHY_OFFLINE'] = '1'
     for directory in (RAW, WORK, PUBLIC):
         directory.mkdir(parents=True, exist_ok=True)
     index_path = fetch(f'{HIST_BASE}/index.json', RAW / 'historical-index.json')
@@ -201,6 +214,7 @@ def main() -> None:
     selected = [x for x in index if x['year'] >= -4000]
     downloads = [(f'{HIST_BASE}/geojson/{x["filename"]}', RAW / x['filename']) for x in selected]
     downloads += [(f'{NE_BASE}/geojson/{filename}', RAW / filename) for filename in NE_FILES.values()]
+    downloads += [(f'{NE_BASE}/geojson/ne_10m_land.geojson', RAW / 'ne_10m_land.geojson')]
     downloads += [(f'{HIST_BASE}/LICENSE', RAW / 'HISTORICAL-BASEMAPS-LICENSE.txt'),
                   (f'{HIST_BASE}/README.md', RAW / 'HISTORICAL-BASEMAPS-README.md')]
     print(f'Fetch {len(downloads)} pinned source files', flush=True)
@@ -216,7 +230,7 @@ def main() -> None:
                 raise RuntimeError(f"Checksum changed for pinned source {item['filename']}")
     write_json(previous_lock, lock)
     if options.fetch_only:
-        print(f'Fetched all source files; land validation file: {RAW / NE_FILES["land"]}', flush=True)
+        print(f'Fetched all source files; land validation file: {RAW / "ne_10m_land.geojson"}', flush=True)
         return
     if not shutil.which('tippecanoe'):
         raise SystemExit('tippecanoe >= 2.17 is required (brew install tippecanoe, or see docs/GEOGRAPHY.md).')

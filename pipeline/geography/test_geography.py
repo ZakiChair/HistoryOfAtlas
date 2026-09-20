@@ -1,8 +1,13 @@
 """Date conventions, geospatial measures and generated artifact invariants."""
 import json
+import shutil
+import subprocess
+import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
-from build import astro_year, entity_id, geometry_area, label_point, point_in_ring, PUBLIC
+import build as geography_build
+from build import astro_year, entity_id, geometry_area, label_point, point_in_ring, tile, PUBLIC
 
 class GeographyUnits(unittest.TestCase):
     def test_bce_year_conversion_keeps_no_historical_year_zero(self):
@@ -30,6 +35,36 @@ class GeographyUnits(unittest.TestCase):
         x,y = label_point({'type':'Polygon','coordinates':rings})
         self.assertTrue(point_in_ring(x,y,rings[0]))
         self.assertFalse(point_in_ring(x,y,rings[1]))
+
+    @unittest.skipUnless(shutil.which('tippecanoe') and shutil.which('tippecanoe-decode'), 'Tile compiler is required')
+    def test_colocated_temporal_labels_survive_at_world_zoom(self):
+        # Synthetic geometry tests the tiler only; it is never part of atlas data.
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, archive = root/'labels.geojson', root/'labels.pmtiles'
+            features = [{'type':'Feature','properties':{'id':str(year),'fromYear':year,'toYear':year},
+                         'geometry':{'type':'Point','coordinates':[0,0]}} for year in range(100)]
+            source.write_text(json.dumps({'type':'FeatureCollection','features':features}))
+            tile(archive, {'labels':source}, 'temporal-label-regression')
+            decoded = json.loads(subprocess.check_output(['tippecanoe-decode','-l','labels',str(archive),'0','0','0'], text=True))
+            labels = [feature for layer in decoded['features'] for feature in layer['features']]
+            self.assertEqual({f['properties']['id'] for f in labels}, {str(year) for year in range(100)})
+
+    @unittest.skipUnless(shutil.which('tippecanoe'), 'Tile compiler is required')
+    def test_tile_bytes_are_independent_of_checkout_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            archives = []
+            for checkout in ('first-checkout', 'moved-checkout'):
+                root = Path(directory)/checkout
+                root.mkdir()
+                source, archive = root/'labels.geojson', root/'labels.pmtiles'
+                source.write_text(json.dumps({'type':'FeatureCollection','features':[
+                    {'type':'Feature','properties':{'id':'test'},'geometry':{'type':'Point','coordinates':[0,0]}}
+                ]}))
+                with patch.object(geography_build, 'ROOT', root):
+                    tile(archive, {'labels':source}, 'portable-tile-regression')
+                archives.append(archive.read_bytes())
+            self.assertEqual(archives[0], archives[1])
 
     def test_derived_artifacts_are_tiled_and_shards_are_contiguous(self):
         manifest_path = PUBLIC/'manifest.json'

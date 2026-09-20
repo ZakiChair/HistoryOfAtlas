@@ -1,0 +1,272 @@
+{
+  "id": "Q2092093",
+  "title": {
+    "fr": "conquêtes mongoles",
+    "en": "Mongol invasions and conquests"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q2092093",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q13650248",
+      "text": {
+        "fr": "invasion mongole des Kara-Khitans — 1216. Lieu indiqué par la source : Central Asia.",
+        "en": "Mongol conquest of the Qara Khitai — 1216. Place recorded by the source: Central Asia."
+      }
+    },
+    {
+      "eventId": "Q2330335",
+      "text": {
+        "fr": "invasion mongole de l'Asie centrale — 1216. Lieu indiqué par la source : Central Asia.",
+        "en": "Mongol invasion of Central Asia — 1216. Place recorded by the source: Central Asia."
+      }
+    },
+    {
+      "eventId": "Q431177",
+      "text": {
+        "fr": "invasion mongole de l'empire khwarezmien — 1219. Lieu indiqué par la source : Central Asia.",
+        "en": "Mongol invasion of Khwarazmian Empire and Eastern Iran — 1219. Place recorded by the source: Central Asia."
+      }
+    },
+    {
+      "eventId": "Q111943842",
+      "text": {
+        "fr": "siège d'Otrar — décembre 1219. Lieu indiqué par la source : Otrar.",
+        "en": "Otrar Catastrophe — December 1219. Place recorded by the source: Otrar."
+      }
+    },
+    {
+      "eventId": "Q132602879",
+      "text": {
+        "fr": "Siege of of Ray — 1220. Lieu indiqué par la source : Ray.",
+        "en": "Siege of of Ray — 1220. Place recorded by the source: Ray."
+      }
+    },
+    {
+      "eventId": "Q136332981",
+      "text": {
+        "fr": "Siege of Khujand — 1220. Lieu indiqué par la source : Khujand.",
+        "en": "Siege of Khujand — 1220. Place recorded by the source: Khujand."
+      }
+    },
+    {
+      "eventId": "Q7510363",
+      "text": {
+        "fr": "siège de Samarcande — 1220. Lieu indiqué par la source : Samarkand.",
+        "en": "Siege of Samarkand — 1220. Place recorded by the source: Samarkand."
+      }
+    },
+    {
+      "eventId": "Q110970851",
+      "text": {
+        "fr": "siège de Boukhara — février 1220. Lieu indiqué par la source : Bukhara.",
+        "en": "Siege of Bukhara (1220) — February 1220. Place recorded by the source: Bukhara."
+      }
+    },
+    {
+      "eventId": "Q111181659",
+      "text": {
+        "fr": "siège d'Ourguentch — octobre 1220. Lieu indiqué par la source : Urgench.",
+        "en": "Siege of Gurganj — October 1220. Place recorded by the source: Urgench."
+      }
+    },
+    {
+      "eventId": "Q5961259",
+      "text": {
+        "fr": "siège de Nishapur — novembre 1220. Lieu indiqué par la source : Nishapur.",
+        "en": "Siege of Nishapur — November 1220. Place recorded by the source: Nishapur."
+      }
+    },
+    {
+      "eventId": "Q134378394",
+      "text": {
+        "fr": "Siège de Tâloqân — 1221. Lieu indiqué par la source : Taloqan.",
+        "en": "Siege of Taliqan — 1221. Place recorded by the source: Taloqan."
+      }
+    },
+    {
+      "eventId": "Q135206981",
+      "text": {
+        "fr": "Siege of Termez — 1221. Lieu indiqué par la source : Termez.",
+        "en": "Siege of Termez — 1221. Place recorded by the source: Termez."
+      }
+    },
+    {
+      "eventId": "Q136332984",
+      "text": {
+        "fr": "Siege of Ustunavand — 1221. Lieu indiqué par la source : Damavand.",
+        "en": "Siege of Ustunavand — 1221. Place recorded by the source: Damavand."
+      }
+    },
+    {
+      "eventId": "Q3269746",
+      "text": {
+        "fr": "bataille de Parwan — 1221. Lieu indiqué par la source : Parwan Province.",
+        "en": "Battle of Parwan — 1221. Place recorded by the source: Parwan Province."
+      }
+    },
+    {
+      "eventId": "Q4548218",
+      "text": {
+        "fr": "siège de Bâmiyân — 1221. Lieu indiqué par la source : Bamyan.",
+        "en": "Siege of Bamyan — 1221. Place recorded by the source: Bamyan."
+      }
+    },
+    {
+      "eventId": "Q131521135",
+      "text": {
+        "fr": "Sack of Balkh — février 1221. Lieu indiqué par la source : Balkh.",
+        "en": "Sack of Balkh — February 1221. Place recorded by the source: Balkh."
+      }
+    },
+    {
+      "eventId": "Q135326004",
+      "text": {
+        "fr": "Siege of Jand — avril 1221. Lieu indiqué par la source : Jand.",
+        "en": "Siege of Jand — April 1221. Place recorded by the source: Jand."
+      }
+    },
+    {
+      "eventId": "Q39081822",
+      "text": {
+        "fr": "siège de Merv — avril 1221. Lieu indiqué par la source : Merv.",
+        "en": "Siege of Merv — April 1221. Place recorded by the source: Merv."
+      }
+    },
+    {
+      "eventId": "Q3269760",
+      "text": {
+        "fr": "bataille de l'Indus — 24 novembre 1221. Lieu indiqué par la source : Indus River.",
+        "en": "Battle of Indus — 24 November 1221. Place recorded by the source: Indus River."
+      }
+    },
+    {
+      "eventId": "Q570204",
+      "text": {
+        "fr": "bataille de la Kalka — 31 mai 1223. Lieu indiqué par la source : Kalchyk.",
+        "en": "Battle of the Kalka River — 31 May 1223. Place recorded by the source: Kalchyk."
+      }
+    },
+    {
+      "eventId": "Q4301653",
+      "text": {
+        "fr": "invasions mongoles en Anatolie — 1241. Lieu indiqué par la source : Anatolia.",
+        "en": "Mongol conquest of Anatolia — 1241. Place recorded by the source: Anatolia."
+      }
+    },
+    {
+      "eventId": "Q159512",
+      "text": {
+        "fr": "bataille de Legnica — 9 avril 1241. Lieu indiqué par la source : Legnickie Pole.",
+        "en": "Battle of Legnica — 9 April 1241. Place recorded by the source: Legnickie Pole."
+      }
+    },
+    {
+      "eventId": "Q705874",
+      "text": {
+        "fr": "bataille de Mohi — 11 avril 1241. Lieu indiqué par la source : Muhi.",
+        "en": "Battle of Mohi — 11 April 1241. Place recorded by the source: Muhi."
+      }
+    },
+    {
+      "eventId": "Q137161215",
+      "text": {
+        "fr": "Siege of Erzurum — 1242. Lieu indiqué par la source : Erzurum.",
+        "en": "Siege of Erzurum — 1242. Place recorded by the source: Erzurum."
+      }
+    },
+    {
+      "eventId": "Q136344",
+      "text": {
+        "fr": "bataille de Köse Dağ — 26 juin 1243. Lieu indiqué par la source : Mount Kösedağ.",
+        "en": "Battle of Köse Dağ — 26 June 1243. Place recorded by the source: Mount Kösedağ."
+      }
+    },
+    {
+      "eventId": "Q92987578",
+      "text": {
+        "fr": "campagne mongole contre les Nizârites — 1253. Lieu indiqué par la source : Khorasan.",
+        "en": "Mongol campaign against the Nizaris — 1253. Place recorded by the source: Khorasan."
+      }
+    },
+    {
+      "eventId": "Q89195518",
+      "text": {
+        "fr": "siège de Gerdkūh — mai 1253. Lieu indiqué par la source : Gerdkuh.",
+        "en": "Siege of Gerdkuh — May 1253. Place recorded by the source: Gerdkuh."
+      }
+    },
+    {
+      "eventId": "Q140590752",
+      "text": {
+        "fr": "Battle of Aksaray — 14 octobre 1256. Lieu indiqué par la source : Sultanhanı.",
+        "en": "Battle of Aksaray — 14 October 1256. Place recorded by the source: Sultanhanı."
+      }
+    },
+    {
+      "eventId": "Q98906430",
+      "text": {
+        "fr": "siège de Maymun-Diz — 8 novembre 1256. Lieu indiqué par la source : Maymun-Diz.",
+        "en": "Siege of Maymun-Diz — 8 November 1256. Place recorded by the source: Maymun-Diz."
+      }
+    },
+    {
+      "eventId": "Q17586779",
+      "text": {
+        "fr": "siège d'Alamut — décembre 1256. Lieu indiqué par la source : Alamut.",
+        "en": "Siege of Alamut — December 1256. Place recorded by the source: Alamut."
+      }
+    },
+    {
+      "eventId": "Q98907486",
+      "text": {
+        "fr": "siège de Lambsar — décembre 1256. Lieu indiqué par la source : Lambsar Castle.",
+        "en": "Siege of Lambsar — December 1256. Place recorded by the source: Lambsar Castle."
+      }
+    },
+    {
+      "eventId": "Q125188437",
+      "text": {
+        "fr": "Siege of Mayyāfāriqīn — 1259. Lieu indiqué par la source : Silvan.",
+        "en": "Siege of Mayyāfāriqīn — 1259. Place recorded by the source: Silvan."
+      }
+    },
+    {
+      "eventId": "Q18326286",
+      "text": {
+        "fr": "campagnes de Kubilai Khan — 1266. Lieu indiqué par la source : South China.",
+        "en": "Kublai Khan's Campaigns — 1266. Place recorded by the source: South China."
+      }
+    },
+    {
+      "eventId": "Q136451000",
+      "text": {
+        "fr": "Chem River Battle — 1300. Lieu indiqué par la source : Emba River.",
+        "en": "Chem River Battle — 1300. Place recorded by the source: Emba River."
+      }
+    },
+    {
+      "eventId": "Q131151125",
+      "text": {
+        "fr": "Ilkhanate campaign to Bithynia — 1308. Lieu indiqué par la source : Bithynia.",
+        "en": "Ilkhanate campaign to Bithynia — 1308. Place recorded by the source: Bithynia."
+      }
+    },
+    {
+      "eventId": "Q133855846",
+      "text": {
+        "fr": "guerre circassienne–Horde d’Or — 1319. Lieu indiqué par la source : Circassia.",
+        "en": "Circassian–Golden Horde War — 1319. Place recorded by the source: Circassia."
+      }
+    }
+  ]
+}

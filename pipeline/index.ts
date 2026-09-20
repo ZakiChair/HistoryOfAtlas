@@ -16,4 +16,6 @@ if (!options.has('--offline')) {
 await buildEvents(root, {
   partial: options.has('--partial'),
   skipTiles: options.has('--skip-tiles'),
+  verify: options.has('--verify'),
+  refreshEditorial: options.has('--refresh-editorial'),
 });

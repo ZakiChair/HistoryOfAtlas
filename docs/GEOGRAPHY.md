@@ -11,17 +11,17 @@ python3 pipeline/geography/build.py
 python3 -m unittest discover -s pipeline/geography -p 'test_*.py'
 ```
 
-The parent `pnpm data:build` command invokes the first command. `--fetch-only` downloads and verifies Historical Basemaps and Natural Earth source files without requiring tippecanoe. Full builds also fetch Cliopatria. `--jobs 2` bounds parallel geometry conversion. Downloads are cached under `data/raw/geography`; SHA-256 locks under `data/geography` detect changed bytes behind immutable source URLs. No geometry is fetched from a mutable `main` or `master` URL.
+The parent `pnpm data:build` command invokes the first command. `--fetch-only` downloads and verifies Historical Basemaps and Natural Earth source files without requiring tippecanoe. Full builds also fetch Cliopatria. `--offline` forbids network requests and fails if a required source is absent from the cache. `--jobs 2` bounds parallel geometry conversion. Downloads are cached under `data/raw/geography`; SHA-256 locks under `data/geography` detect changed bytes behind immutable source URLs. No geometry is fetched from a mutable `main` or `master` URL.
 
 Keep `sources.lock.json`, `cliopatria.lock.json`, reports, pipeline code, and deployable `public/geo` artifacts in version control. The intermediate `data/geography/*.geojson`, `*.log`, `__pycache__`, and PMTiles build signature files are disposable. A clean rebuild uses the locked source revisions and verifies source checksums.
 
 ## Sources, exact revisions, and licences
 
-| Dataset                                                                    | Revision                                   | Licence                                                                                                                            | Use                                                                              |
-| -------------------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria) | `ad28a691b7c07c1fca89d0e0636d324667d2a258` | [CC BY 4.0](https://github.com/Seshat-Global-History-Databank/cliopatria/blob/ad28a691b7c07c1fca89d0e0636d324667d2a258/LICENSE.md) | Dated territory intervals, polity identities and areas                           |
-| [Historical Basemaps](https://github.com/aourednik/historical-basemaps)    | `da7a4b735ecef70aebdc9c73e409d8a2500d50f3` | **GPL-3.0**, not CC0                                                                                                               | 50 world snapshots, including 4000 BCE predecessor and ending in 2010            |
-| [Natural Earth vector](https://github.com/nvkelso/natural-earth-vector)    | `ca96624a56bd078437bca8184e78163e5039ad19` | [Public domain](https://www.naturalearthdata.com/about/terms-of-use/)                                                              | 1:50m land, coastlines, rivers, contemporary countries, physical-region polygons |
+| Dataset                                                                    | Revision                                   | Licence                                                                                                                            | Use                                                                                                                        |
+| -------------------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria) | `ad28a691b7c07c1fca89d0e0636d324667d2a258` | [CC BY 4.0](https://github.com/Seshat-Global-History-Databank/cliopatria/blob/ad28a691b7c07c1fca89d0e0636d324667d2a258/LICENSE.md) | Dated territory intervals, polity identities and areas                                                                     |
+| [Historical Basemaps](https://github.com/aourednik/historical-basemaps)    | `da7a4b735ecef70aebdc9c73e409d8a2500d50f3` | **GPL-3.0**, not CC0                                                                                                               | 50 world snapshots, including 4000 BCE predecessor and ending in 2010                                                      |
+| [Natural Earth vector](https://github.com/nvkelso/natural-earth-vector)    | `ca96624a56bd078437bca8184e78163e5039ad19` | [Public domain](https://www.naturalearthdata.com/about/terms-of-use/)                                                              | 1:50m land, coastlines, rivers, contemporary countries, physical-region polygons; 1:10m land for event-location validation |
 
 Cite Cliopatria's [Scientific Data publication](https://doi.org/10.1038/s41597-025-04516-9), authors James Bennett et al., and Seshat Global History Databank. The attribution manifest states our modifications: BCE conversion, selection of POLITY rows, normalized attributes, computed label anchors, vector tiling, and simplification. Source `Area` values are retained.
 
@@ -50,6 +50,8 @@ The source ends in 2024. For 2025 onward, the UI must disclose that it retains t
 ## Rendering contract
 
 `/geo/manifest.json` is the only eager geography index. No original or normalized GeoJSON is a browser dependency. PMTiles v3 archives contain vector tiles at zooms 0–5 and support overzooming. Serve `.pmtiles` without HTTP content encoding and with byte-range requests. CORS is needed only if hosting the files on another origin.
+
+Labels retain every source point at every zoom (`--base-zoom=0 --drop-rate=1`). Spatial thinning before temporal filtering would discard labels for entire periods, particularly where many successive states share an anchor. MapLibre filters by year before resolving symbol collisions. Polygon simplification is unchanged; the tile schema version invalidates both snapshot and Cliopatria caches when these compilation rules change.
 
 `manifest.temporal` contains:
 

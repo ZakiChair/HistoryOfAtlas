@@ -1,0 +1,209 @@
+{
+  "id": "Q202161",
+  "title": {
+    "fr": "guerre des Gaules",
+    "en": "Gallic War"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q202161",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q1267513",
+      "text": {
+        "fr": "bataille de l'Ochsenfeld — 58 av. J.-C.. Lieu indiqué par la source : Alsace.",
+        "en": "Battle of Vosges — 58 BCE. Place recorded by the source: Alsace."
+      }
+    },
+    {
+      "eventId": "Q1274566",
+      "text": {
+        "fr": "bataille de l'Arar — 58 av. J.-C.. Lieu indiqué par la source : Villefranche-sur-Saône.",
+        "en": "Battle of the Arar — 58 BCE. Place recorded by the source: Villefranche-sur-Saône."
+      }
+    },
+    {
+      "eventId": "Q2984753",
+      "text": {
+        "fr": "bataille de Cavillonum — 58 av. J.-C.. Lieu indiqué par la source : Chalon-sur-Saône.",
+        "en": "Battle of Cavillonum — 58 BCE. Place recorded by the source: Chalon-sur-Saône."
+      }
+    },
+    {
+      "eventId": "Q3636657",
+      "text": {
+        "fr": "Battle of Vesontio — 58 av. J.-C.. Lieu indiqué par la source : Vesontio.",
+        "en": "Battle of Vesontio — 58 BCE. Place recorded by the source: Vesontio."
+      }
+    },
+    {
+      "eventId": "Q635028",
+      "text": {
+        "fr": "bataille de Bibracte — 58 av. J.-C.. Lieu indiqué par la source : Saône-et-Loire.",
+        "en": "Battle of Bibracte — 58 BCE. Place recorded by the source: Saône-et-Loire."
+      }
+    },
+    {
+      "eventId": "Q1260622",
+      "text": {
+        "fr": "bataille de l'Aisne — 57 av. J.-C.. Lieu indiqué par la source : Aisne.",
+        "en": "Battle of the Axona — 57 BCE. Place recorded by the source: Aisne."
+      }
+    },
+    {
+      "eventId": "Q1268733",
+      "text": {
+        "fr": "bataille du Sabis — 57 av. J.-C.. Lieu indiqué par la source : Saulzoir.",
+        "en": "Battle of the Sabis — 57 BCE. Place recorded by the source: Saulzoir."
+      }
+    },
+    {
+      "eventId": "Q131654555",
+      "text": {
+        "fr": "siège de Bibrax — 57 av. J.-C.. Lieu indiqué par la source : Bibrax.",
+        "en": "Siege of Bibrax — 57 BCE. Place recorded by the source: Bibrax."
+      }
+    },
+    {
+      "eventId": "Q4871929",
+      "text": {
+        "fr": "bataille d'Octodure — 57 av. J.-C.. Lieu indiqué par la source : Martigny.",
+        "en": "Battle of Octodurus — 57 BCE. Place recorded by the source: Martigny."
+      }
+    },
+    {
+      "eventId": "Q664365",
+      "text": {
+        "fr": "bataille d'Octodure — 57 av. J.-C.. Lieu indiqué par la source : Martigny.",
+        "en": "Battle of Octodurus — 57 BCE. Place recorded by the source: Martigny."
+      }
+    },
+    {
+      "eventId": "Q46861274",
+      "text": {
+        "fr": "siège des Atuatucis — septembre 57 av. J.-C.. Lieu indiqué par la source : Atuatuca Eburonum.",
+        "en": "Siege of the Atuatuci — September 57 BCE. Place recorded by the source: Atuatuca Eburonum."
+      }
+    },
+    {
+      "eventId": "Q2462109",
+      "text": {
+        "fr": "guerre des Vénètes — 56 av. J.-C.. Localisation indiquée par Wikidata.",
+        "en": "Battle of Morbihan — 56 BCE. Location recorded by Wikidata."
+      }
+    },
+    {
+      "eventId": "Q2890308",
+      "text": {
+        "fr": "bataille de Vernix — 56 av. J.-C.. Lieu indiqué par la source : Vernix.",
+        "en": "Battle of Vernix — 56 BCE. Place recorded by the source: Vernix."
+      }
+    },
+    {
+      "eventId": "Q50423959",
+      "text": {
+        "fr": "Battle against the Aquitanians — 56 av. J.-C.. Lieu indiqué par la source : Aquitaine.",
+        "en": "Battle against the Aquitanians — 56 BCE. Place recorded by the source: Aquitaine."
+      }
+    },
+    {
+      "eventId": "Q742306",
+      "text": {
+        "fr": "expédition de Jules César en Bretagne — 56 av. J.-C.. Lieu indiqué par la source : Dover.",
+        "en": "Caesar's invasions of Britain — 56 BCE. Place recorded by the source: Dover."
+      }
+    },
+    {
+      "eventId": "Q15934409",
+      "text": {
+        "fr": "siège de Namur — 54 av. J.-C.. Lieu indiqué par la source : Namur.",
+        "en": "Siege of Namur — 54 BCE. Place recorded by the source: Namur."
+      }
+    },
+    {
+      "eventId": "Q9172543",
+      "text": {
+        "fr": "Battle of the Sambre — 54 av. J.-C.. Lieu indiqué par la source : Sambre.",
+        "en": "Battle of the Sambre — 54 BCE. Place recorded by the source: Sambre."
+      }
+    },
+    {
+      "eventId": "Q2505574",
+      "text": {
+        "fr": "bataille d'Aduatuca — octobre 54 av. J.-C.. Lieu indiqué par la source : Tongeren.",
+        "en": "Ambiorix's Revolt — October 54 BCE. Place recorded by the source: Tongeren."
+      }
+    },
+    {
+      "eventId": "Q9172552",
+      "text": {
+        "fr": "Battle of the Semois River — 53 av. J.-C.. Lieu indiqué par la source : Semois.",
+        "en": "Battle of the Semois River — 53 BCE. Place recorded by the source: Semois."
+      }
+    },
+    {
+      "eventId": "Q1972070",
+      "text": {
+        "fr": "bataille de Lutèce — 52 av. J.-C.. Lieu indiqué par la source : Grenelle.",
+        "en": "Battle of Lutetia — 52 BCE. Place recorded by the source: Grenelle."
+      }
+    },
+    {
+      "eventId": "Q280868",
+      "text": {
+        "fr": "siège de Gergovie — 52 av. J.-C.. Lieu indiqué par la source : Gergovie.",
+        "en": "Battle of Gergovia — 52 BCE. Place recorded by the source: Gergovie."
+      }
+    },
+    {
+      "eventId": "Q9173354",
+      "text": {
+        "fr": "Battle of Noviodunum — 52 av. J.-C.. Lieu indiqué par la source : Châtillon-sur-Seine.",
+        "en": "Battle of Noviodunum — 52 BCE. Place recorded by the source: Châtillon-sur-Seine."
+      }
+    },
+    {
+      "eventId": "Q9173794",
+      "text": {
+        "fr": "Battle of the Saône — 52 av. J.-C.. Lieu indiqué par la source : Saône.",
+        "en": "Battle of the Saône — 52 BCE. Place recorded by the source: Saône."
+      }
+    },
+    {
+      "eventId": "Q4087405",
+      "text": {
+        "fr": "siège d'Avaricum — avril 52 av. J.-C.. Lieu indiqué par la source : Bourges.",
+        "en": "Siege of Avaricum — April 52 BCE. Place recorded by the source: Bourges."
+      }
+    },
+    {
+      "eventId": "Q131386",
+      "text": {
+        "fr": "siège d'Alésia — juillet 52 av. J.-C.. Lieu indiqué par la source : Alesia.",
+        "en": "Battle of Alesia — July 52 BCE. Place recorded by the source: Alesia."
+      }
+    },
+    {
+      "eventId": "Q2236672",
+      "text": {
+        "fr": "Battle of Vingeanne — juillet 52 av. J.-C.. Localisation indiquée par Wikidata.",
+        "en": "Battle of Vingeanne — July 52 BCE. Location recorded by Wikidata."
+      }
+    },
+    {
+      "eventId": "Q12950513",
+      "text": {
+        "fr": "siège d'Uxellodunum — 51 av. J.-C.. Lieu indiqué par la source : Uxellodunum.",
+        "en": "Siege of Uxellodunum — 51 BCE. Place recorded by the source: Uxellodunum."
+      }
+    }
+  ]
+}

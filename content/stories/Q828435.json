@@ -1,0 +1,104 @@
+{
+  "id": "Q828435",
+  "title": {
+    "fr": "conquête de l'Empire aztèque",
+    "en": "Spanish conquest of the Aztec Empire"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q828435",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q129644300",
+      "text": {
+        "fr": "Battle of Tlaxcala — 5 septembre 1519. Lieu indiqué par la source : Tlaxcala.",
+        "en": "Battle of Tlaxcala — 5 September 1519. Place recorded by the source: Tlaxcala."
+      }
+    },
+    {
+      "eventId": "Q9173414",
+      "text": {
+        "fr": "Battle of the Pánuco River — 1520. Lieu indiqué par la source : Pánuco River.",
+        "en": "Battle of the Pánuco River — 1520. Place recorded by the source: Pánuco River."
+      }
+    },
+    {
+      "eventId": "Q9173635",
+      "text": {
+        "fr": "Battle of Tetzcoco — 1520. Lieu indiqué par la source : Texcoco de Mora.",
+        "en": "Battle of Tetzcoco — 1520. Place recorded by the source: Texcoco de Mora."
+      }
+    },
+    {
+      "eventId": "Q11688210",
+      "text": {
+        "fr": "Battle of Nautla — 29 avril 1520. Lieu indiqué par la source : Nautla.",
+        "en": "Battle of Nautla — 29 April 1520. Place recorded by the source: Nautla."
+      }
+    },
+    {
+      "eventId": "Q97610233",
+      "text": {
+        "fr": "Battle of Cempoala — 27 mai 1520. Lieu indiqué par la source : Cempoala.",
+        "en": "Battle of Cempoala — 27 May 1520. Place recorded by the source: Cempoala."
+      }
+    },
+    {
+      "eventId": "Q1308854",
+      "text": {
+        "fr": "Noche Triste — 30 juin 1520. Lieu indiqué par la source : Lake Texcoco.",
+        "en": "La Noche Triste — 30 June 1520. Place recorded by the source: Lake Texcoco."
+      }
+    },
+    {
+      "eventId": "Q2888038",
+      "text": {
+        "fr": "bataille d'Otumba — 7 juillet 1520. Lieu indiqué par la source : Otompan.",
+        "en": "Battle of Otumba — 7 July 1520. Place recorded by the source: Otompan."
+      }
+    },
+    {
+      "eventId": "Q9173031",
+      "text": {
+        "fr": "Battle of Huaxtepec — 1521. Lieu indiqué par la source : Huaxtepec.",
+        "en": "Battle of Huaxtepec — 1521. Place recorded by the source: Huaxtepec."
+      }
+    },
+    {
+      "eventId": "Q9173622",
+      "text": {
+        "fr": "Battle of Tacuba — 1521. Lieu indiqué par la source : Tacuba.",
+        "en": "Battle of Tacuba — 1521. Place recorded by the source: Tacuba."
+      }
+    },
+    {
+      "eventId": "Q9173728",
+      "text": {
+        "fr": "Battle of Xaltocan — 1521. Lieu indiqué par la source : Xaltocan.",
+        "en": "Battle of Xaltocan — 1521. Place recorded by the source: Xaltocan."
+      }
+    },
+    {
+      "eventId": "Q9173731",
+      "text": {
+        "fr": "Battle of Yecapixtla — 1521. Lieu indiqué par la source : Yecapixtla.",
+        "en": "Battle of Yecapixtla — 1521. Place recorded by the source: Yecapixtla."
+      }
+    },
+    {
+      "eventId": "Q112811996",
+      "text": {
+        "fr": "Battle of Colhuacatonco — 30 juin 1521. Localisation indiquée par Wikidata.",
+        "en": "Battle of Colhuacatonco — 30 June 1521. Location recorded by Wikidata."
+      }
+    }
+  ]
+}

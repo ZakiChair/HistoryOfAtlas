@@ -14,14 +14,27 @@ export function entityColorRgb(id: string): [number, number, number] {
   const saturation = 0.43 + ((hash >>> 9) % 18) / 100;
   const lightness = 0.53 + ((hash >>> 17) % 12) / 100;
   const chroma = (1 - Math.abs(2 * lightness - 1)) * saturation;
-  const x = chroma * (1 - Math.abs((hue / 60) % 2 - 1));
+  const x = chroma * (1 - Math.abs(((hue / 60) % 2) - 1));
   const m = lightness - chroma / 2;
-  const sectors: [number, number, number][] = [[chroma, x, 0], [x, chroma, 0], [0, chroma, x], [0, x, chroma], [x, 0, chroma], [chroma, 0, x]];
-  return sectors[Math.floor(hue / 60)]!.map((channel) => Math.round((channel + m) * 255)) as [number, number, number];
+  const sectors: [number, number, number][] = [
+    [chroma, x, 0],
+    [x, chroma, 0],
+    [0, chroma, x],
+    [0, x, chroma],
+    [x, 0, chroma],
+    [chroma, 0, x],
+  ];
+  return sectors[Math.floor(hue / 60)]!.map((channel) => Math.round((channel + m) * 255)) as [
+    number,
+    number,
+    number,
+  ];
 }
 
 export function entityColor(id: string): string {
-  return `#${entityColorRgb(id).map((channel) => channel.toString(16).padStart(2, '0')).join('')}`;
+  return `#${entityColorRgb(id)
+    .map((channel) => channel.toString(16).padStart(2, '0'))
+    .join('')}`;
 }
 
 export function contrastingTextColor(hex: string): '#0b1220' | '#ffffff' {
@@ -35,5 +48,11 @@ export function contrastingTextColor(hex: string): '#0b1220' | '#ffffff' {
 }
 
 export const EVENT_COLORS = {
-  battle: '#d6ac6b', siege: '#d28a73', naval: '#79b7c8', war: '#c78082', campaign: '#a99bc8', treaty: '#a4b58c', conquest: '#c8a077',
+  battle: '#d6ac6b',
+  siege: '#d28a73',
+  naval: '#79b7c8',
+  war: '#c78082',
+  campaign: '#a99bc8',
+  treaty: '#a4b58c',
+  conquest: '#c8a077',
 } as const;

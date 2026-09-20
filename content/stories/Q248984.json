@@ -1,0 +1,139 @@
+{
+  "id": "Q248984",
+  "title": {
+    "fr": "conquête musulmane de la Syrie",
+    "en": "Muslim conquest of the Levant"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q248984",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q888904",
+      "text": {
+        "fr": "bataille d'Ajnadayn — 634. Lieu indiqué par la source : Ajnadayn.",
+        "en": "Battle of Ajnadayn — 634. Place recorded by the source: Ajnadayn."
+      }
+    },
+    {
+      "eventId": "Q16822665",
+      "text": {
+        "fr": "bataille de Marj Rahit — 24 avril 634. Lieu indiqué par la source : Marj Rahit.",
+        "en": "Battle of Marj Rahit — 24 April 634. Place recorded by the source: Marj Rahit."
+      }
+    },
+    {
+      "eventId": "Q2706752",
+      "text": {
+        "fr": "bataille d'al-Qaryatayn — juin 634. Lieu indiqué par la source : Syria.",
+        "en": "Battle of al-Qaryatayn — June 634. Place recorded by the source: Syria."
+      }
+    },
+    {
+      "eventId": "Q2756897",
+      "text": {
+        "fr": "bataille de Bosra — juin 634. Lieu indiqué par la source : Bosra.",
+        "en": "Battle of Bosra — June 634. Place recorded by the source: Bosra."
+      }
+    },
+    {
+      "eventId": "Q18890189",
+      "text": {
+        "fr": "Battle of al-Yaqusah — août 634. Lieu indiqué par la source : Q12195000.",
+        "en": "Battle of al-Yaqusah — August 634. Place recorded by the source: Q12195000."
+      }
+    },
+    {
+      "eventId": "Q639827",
+      "text": {
+        "fr": "siège de Damas — 21 août 634. Lieu indiqué par la source : Damascus.",
+        "en": "Siege of Damascus — 21 August 634. Place recorded by the source: Damascus."
+      }
+    },
+    {
+      "eventId": "Q3636519",
+      "text": {
+        "fr": "bataille de Maraj-al-Debaj — septembre 634. Lieu indiqué par la source : An-Nusayriyah Mountains.",
+        "en": "Battle of Marj al-Dibaj — September 634. Place recorded by the source: An-Nusayriyah Mountains."
+      }
+    },
+    {
+      "eventId": "Q1030249",
+      "text": {
+        "fr": "bataille de Fahl — janvier 635. Lieu indiqué par la source : Jordan River.",
+        "en": "Battle of Fahl — January 635. Place recorded by the source: Jordan River."
+      }
+    },
+    {
+      "eventId": "Q3625476",
+      "text": {
+        "fr": "siège d'Émèse — décembre 635. Lieu indiqué par la source : Emesa.",
+        "en": "Siege of Emesa — December 635. Place recorded by the source: Emesa."
+      }
+    },
+    {
+      "eventId": "Q194226",
+      "text": {
+        "fr": "bataille du Yarmouk — 15 août 636. Lieu indiqué par la source : Yarmuk.",
+        "en": "Battle of Yarmouk — 15 August 636. Place recorded by the source: Yarmuk."
+      }
+    },
+    {
+      "eventId": "Q815154",
+      "text": {
+        "fr": "siège de Jérusalem — novembre 636. Lieu indiqué par la source : Jerusalem.",
+        "en": "Siege of Jerusalem — November 636. Place recorded by the source: Jerusalem."
+      }
+    },
+    {
+      "eventId": "Q2089132",
+      "text": {
+        "fr": "bataille de Hazir — juin 637. Lieu indiqué par la source : Qinnasrin.",
+        "en": "Battle of Hazir — June 637. Place recorded by the source: Qinnasrin."
+      }
+    },
+    {
+      "eventId": "Q2563208",
+      "text": {
+        "fr": "siège d'Alep — août 637. Lieu indiqué par la source : Aleppo.",
+        "en": "Siege of Aleppo — August 637. Place recorded by the source: Aleppo."
+      }
+    },
+    {
+      "eventId": "Q656787",
+      "text": {
+        "fr": "Battle of the Iron Bridge — octobre 637. Lieu indiqué par la source : Antioch.",
+        "en": "Battle of the Iron Bridge — October 637. Place recorded by the source: Antioch."
+      }
+    },
+    {
+      "eventId": "Q108899257",
+      "text": {
+        "fr": "siège d'Émèse — 638. Lieu indiqué par la source : Emesa.",
+        "en": "Siege of Emesa — 638. Place recorded by the source: Emesa."
+      }
+    },
+    {
+      "eventId": "Q141273362",
+      "text": {
+        "fr": "siège d'Édesse — 639. Lieu indiqué par la source : Edessa.",
+        "en": "Siege of Edessa — 639. Place recorded by the source: Edessa."
+      }
+    },
+    {
+      "eventId": "Q141273360",
+      "text": {
+        "fr": "Siege of Raqqa — août 639. Lieu indiqué par la source : Raqqa.",
+        "en": "Siege of Raqqa — August 639. Place recorded by the source: Raqqa."
+      }
+    }
+  ]
+}

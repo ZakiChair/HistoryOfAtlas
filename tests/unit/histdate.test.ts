@@ -4,6 +4,7 @@ import {
   formatHistDate,
   formatYear,
   isValidHistDate,
+  histDateBounds,
   parseHistoricalYear,
   parseWikidataDate,
   parseWikidataTime,
@@ -20,8 +21,16 @@ describe('historical dates without native Date conversion', () => {
   });
 
   it('distinguishes Wikidata JSON historical numbering from RDF astronomical numbering', () => {
-    expect(parseWikidataDate('-0331-10-01T00:00:00Z', 11, 'json')).toEqual({ year: -330, month: 10, day: 1 });
-    expect(parseWikidataDate('-0330-10-01T00:00:00Z', 11, 'rdf')).toEqual({ year: -330, month: 10, day: 1 });
+    expect(parseWikidataDate('-0331-10-01T00:00:00Z', 11, 'json')).toEqual({
+      year: -330,
+      month: 10,
+      day: 1,
+    });
+    expect(parseWikidataDate('-0330-10-01T00:00:00Z', 11, 'rdf')).toEqual({
+      year: -330,
+      month: 10,
+      day: 1,
+    });
     expect(parseWikidataDate('-0001-00-00T00:00:00Z', 9, 'json')).toEqual({ year: 0 });
     expect(parseWikidataDate('0000-01-01T00:00:00Z', 9, 'rdf')).toEqual({ year: 0 });
   });
@@ -33,7 +42,9 @@ describe('historical dates without native Date conversion', () => {
   });
 
   it('does not turn an uncertain millennium into a falsely precise century', () => {
-    expect(() => parseWikidataTime('-2000-00-00T00:00:00Z', { precision: 6, encoding: 'json' })).toThrow(/precision/i);
+    expect(() =>
+      parseWikidataTime('-2000-00-00T00:00:00Z', { precision: 6, encoding: 'json' }),
+    ).toThrow(/precision/i);
   });
 
   it('validates leap years against the declared calendar rather than an assumed modern calendar', () => {
@@ -44,10 +55,40 @@ describe('historical dates without native Date conversion', () => {
     expect(isValidHistDate({ year: 1812, month: 4, day: 31 })).toBe(false);
   });
 
+  it('bounds partial dates without treating an unknown end day as the first of the month', () => {
+    expect(histDateBounds({ year: 1700, month: 2 }, 'julian')).toEqual({
+      earliest: { year: 1700, month: 2, day: 1 },
+      latest: { year: 1700, month: 2, day: 29 },
+    });
+    expect(histDateBounds({ year: 1700, month: 2 }, 'gregorian')).toEqual({
+      earliest: { year: 1700, month: 2, day: 1 },
+      latest: { year: 1700, month: 2, day: 28 },
+    });
+    expect(histDateBounds({ year: 0 })).toEqual({
+      earliest: { year: 0, month: 1, day: 1 },
+      latest: { year: 0, month: 12, day: 31 },
+    });
+  });
+
   it('preserves calendar metadata and visibly formats approximation and calendar', () => {
-    expect(parseWikidataTime('+1700-02-29T00:00:00Z', { precision: 11, encoding: 'json', calendar: 'http://www.wikidata.org/entity/Q1985786' })).toEqual({ date: { year: 1700, month: 2, day: 29 }, datePrecision: 'day', calendar: 'julian' });
+    expect(
+      parseWikidataTime('+1700-02-29T00:00:00Z', {
+        precision: 11,
+        encoding: 'json',
+        calendar: 'http://www.wikidata.org/entity/Q1985786',
+      }),
+    ).toEqual({
+      date: { year: 1700, month: 2, day: 29 },
+      datePrecision: 'day',
+      calendar: 'julian',
+    });
     expect(formatHistDate({ year: -330 }, 'fr', { approximate: true })).toBe('vers 331 av. J.-C.');
-    expect(formatHistDate({ year: 1812, month: 9, day: 7 }, 'en', { calendar: 'julian', showCalendar: true })).toBe('7 September 1812 (Julian)');
+    expect(
+      formatHistDate({ year: 1812, month: 9, day: 7 }, 'en', {
+        calendar: 'julian',
+        showCalendar: true,
+      }),
+    ).toBe('7 September 1812 (Julian)');
   });
 
   it('accepts explicit BCE input while keeping signed URL years astronomical', () => {
@@ -66,7 +107,9 @@ describe('nonlinear timeline', () => {
     }
     expect(yearToPosition(2026, 2026)).toBe(1);
     expect(yearToPosition(-3500, 2026)).toBe(0);
-    expect(yearToPosition(1950, 2026) - yearToPosition(1940, 2026)).toBeGreaterThan(yearToPosition(-2000, 2026) - yearToPosition(-2010, 2026));
+    expect(yearToPosition(1950, 2026) - yearToPosition(1940, 2026)).toBeGreaterThan(
+      yearToPosition(-2000, 2026) - yearToPosition(-2010, 2026),
+    );
     expect(classifyEra(1812)).toBe('19th-century');
   });
 });

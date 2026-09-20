@@ -1,0 +1,93 @@
+name: Validate Atlas Belli
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      gpu_audit:
+        description: 'Run the hardware audit on a self-hosted runner labelled atlas-gpu'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: atlas-belli-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Unit tests
+        run: pnpm test
+      - name: Geography source and artifact invariants
+        run: python3 -m unittest discover -s pipeline/geography -p 'test_*.py'
+      - name: Lint
+        run: pnpm lint
+      - name: Static production build
+        run: pnpm build
+        env:
+          NEXT_PUBLIC_SITE_URL: http://localhost:3000
+          NEXT_TELEMETRY_DISABLED: 1
+      - name: Initial JavaScript transfer budget
+        run: pnpm measure:bundle
+      - name: Install Chromium and system dependencies
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Browser and accessibility tests
+        run: pnpm test:e2e
+      - name: Preserve browser and Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: quality-reports
+          path: |
+            playwright-report/
+            test-results/
+            .lighthouseci/
+            data/reports/bundle.json
+          if-no-files-found: ignore
+          retention-days: 14
+
+  hardware-budgets:
+    if: github.event_name == 'workflow_dispatch' && inputs.gpu_audit
+    runs-on: [self-hosted, atlas-gpu]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm exec playwright install chromium
+      - name: GPU frame budget
+        run: pnpm test:performance
+        env:
+          PLAYWRIGHT_GPU: native
+      - name: Lighthouse mobile budgets
+        run: pnpm audit:lighthouse
+        env:
+          PLAYWRIGHT_GPU: native
+      - name: Preserve hardware measurements
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: hardware-reports
+          path: |
+            performance-report/
+            test-results/performance/
+            .lighthouseci/
+          if-no-files-found: ignore
+          retention-days: 14

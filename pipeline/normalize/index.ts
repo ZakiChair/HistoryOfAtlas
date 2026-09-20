@@ -3,7 +3,12 @@ import { join } from 'node:path';
 import { HistoricalEventSchema, type HistoricalEvent } from '../../lib/schema';
 import { classifyEra } from '../../lib/eras';
 import { compareHistDates, parseWikidataTime } from '../../lib/histdate';
-import type { EventType, RegionId } from '../../lib/types';
+import type { EventType } from '../../lib/types';
+import { classifyRegion } from './region';
+export { classifyRegion } from './region';
+import exclusions from '../../data/curated/excluded-classes.json';
+import recordExclusions from '../../data/curated/excluded-records.json';
+import media from '../../data/curated/medium-classes.json';
 
 type ClaimValue =
   | string
@@ -17,8 +22,15 @@ type ClaimValue =
       longitude?: number;
       globe?: string;
       amount?: string;
+      unit?: string;
+      lowerBound?: string;
+      upperBound?: string;
     };
-type Claim = { rank?: string; mainsnak?: { datavalue?: { value: ClaimValue } } };
+type Claim = {
+  rank?: string;
+  qualifiers?: Record<string, unknown>;
+  mainsnak?: { datavalue?: { value: ClaimValue } };
+};
 export type Entity = {
   id: string;
   lastrevid?: number;
@@ -51,21 +63,55 @@ export function entityIds(entity: Entity, property: string): string[] {
     typeof value === 'object' && value.id ? [value.id] : [],
   );
 }
+/** A scalar field cannot faithfully represent competing estimates or per-side counts. */
+export function scalarQuantity(entity: Entity, property: string): number | undefined {
+  const claims = (entity.claims?.[property] ?? []).filter(
+    (claim) => claim.rank !== 'deprecated' && claim.mainsnak?.datavalue,
+  );
+  const preferred = claims.filter((claim) => claim.rank === 'preferred');
+  const chosen = preferred.length ? preferred : claims;
+  if (!chosen.length || chosen.some((claim) => Object.keys(claim.qualifiers ?? {}).length))
+    return undefined;
+  const amounts = chosen.map((claim) => claim.mainsnak!.datavalue!.value);
+  if (
+    amounts.some(
+      (value) =>
+        typeof value !== 'object' ||
+        !value.amount ||
+        (value.unit && value.unit !== '1') ||
+        (value.lowerBound !== undefined && Number(value.lowerBound) !== Number(value.amount)) ||
+        (value.upperBound !== undefined && Number(value.upperBound) !== Number(value.amount)),
+    )
+  )
+    return undefined;
+  const numbers = new Set(amounts.map((value) => Number((value as { amount: string }).amount)));
+  const number = [...numbers][0]!;
+  return numbers.size === 1 && Number.isSafeInteger(number) && number >= 0 ? number : undefined;
+}
 export function label(entity: Entity | undefined, language = 'en'): string | undefined {
   return entity?.labels?.[language]?.value;
 }
+export function sourceExclusion(entity: Entity): string | undefined {
+  const reviewed = recordExclusions.records.find((record) => record.id === entity.id);
+  if (reviewed) return reviewed.reason;
+  const instanceClasses = entityIds(entity, 'P31');
+  return (
+    exclusions.classes.find((entry) => instanceClasses.includes(entry.id)) ??
+    exclusions.properties.find((entry) => values(entity, entry.id).length > 0)
+  )?.reason;
+}
 
-/** Broad display regions are navigation bins, not claims about historical borders. */
-export function classifyRegion(coords?: [number, number]): RegionId {
-  if (!coords) return 'global';
-  const [lon, lat] = coords;
-  if ((lon > 110 && lat < -10) || (lon < -130 && lat < 30)) return 'oceania';
-  if (lon < -25 && lat > 12) return 'north-america';
-  if (lon < -25 && lat <= 12) return 'south-america';
-  if (lon >= -20 && lon < 52 && lat < 36) return 'africa';
-  if (lon >= 26 && lon < 65 && lat >= 12 && lat < 43) return 'middle-east';
-  if (lon >= -25 && lon < 60 && lat >= 35) return 'europe';
-  return 'asia';
+/** Explicit source evidence only: a battle in a naval war need not itself be naval. */
+export function sourceBattleMedium(entity: Entity | undefined): 'air' | 'naval' | undefined {
+  if (!entity) return undefined;
+  const airClasses = media.air.map((entry) => entry.id);
+  if (entityIds(entity, 'P31').some((id) => airClasses.includes(id))) return 'air';
+  if (
+    /\bnaval battle\b/i.test(entity.descriptions?.en?.value ?? '') ||
+    /\bbataille navale\b/i.test(entity.descriptions?.fr?.value ?? '')
+  )
+    return 'naval';
+  return undefined;
 }
 
 export async function loadEntities(rawDirectory: string): Promise<Map<string, Entity>> {
@@ -76,8 +122,22 @@ export async function loadEntities(rawDirectory: string): Promise<Map<string, En
     const document = JSON.parse(await readFile(join(rawDirectory, name), 'utf8')) as {
       entities: Record<string, Entity>;
     };
-    for (const entity of Object.values(document.entities))
-      if (entity.id) entities.set(entity.id, entity);
+    for (const entity of Object.values(document.entities)) {
+      if (!entity.id) continue;
+      const previous = entities.get(entity.id);
+      if (!previous) entities.set(entity.id, entity);
+      else {
+        const [older, newer] =
+          (entity.lastrevid ?? 0) >= (previous.lastrevid ?? 0)
+            ? [previous, entity]
+            : [entity, previous];
+        entities.set(entity.id, {
+          ...older,
+          ...newer,
+          labels: { ...older.labels, ...newer.labels },
+        });
+      }
+    }
   }
   return entities;
 }
@@ -123,12 +183,20 @@ export async function normalize(
       });
       continue;
     }
-    const types = entityIds(entity, 'P31').flatMap((id) => [...(classes.get(id) ?? [])]);
-    const type = PRIORITY.find((type) => types.includes(type));
-    if (!type) {
+    const instanceClasses = entityIds(entity, 'P31');
+    const exclusion = sourceExclusion(entity);
+    if (exclusion) {
+      rejected.push({ id, reasons: [exclusion] });
+      continue;
+    }
+    const types = instanceClasses.flatMap((id) => [...(classes.get(id) ?? [])]);
+    const sourceType = PRIORITY.find((type) => types.includes(type));
+    if (!sourceType) {
       rejected.push({ id, reasons: ['unsupported-class'] });
       continue;
     }
+    const navalDescription = sourceType === 'battle' && sourceBattleMedium(entity) === 'naval';
+    const type = navalDescription ? 'naval' : sourceType;
     try {
       const starts = values(entity, 'P580').length
         ? values(entity, 'P580')
@@ -156,6 +224,14 @@ export async function normalize(
           typeof value.longitude === 'number' &&
           typeof value.latitude === 'number',
       );
+      if (
+        points.some(
+          (value) => typeof value === 'object' && value.globe && !value.globe.endsWith('/Q2'),
+        )
+      ) {
+        rejected.push({ id, reasons: ['non-earth-coordinate'] });
+        continue;
+      }
       let point: ClaimValue | undefined = points[0];
       let pointEntity = id;
       let pointKind: 'event' | 'place' = 'event';
@@ -176,6 +252,10 @@ export async function normalize(
             break;
           }
         }
+      if (point && typeof point === 'object' && point.globe && !point.globe.endsWith('/Q2')) {
+        rejected.push({ id, reasons: ['non-earth-coordinate'] });
+        continue;
+      }
       const coords: [number, number] | undefined =
         point &&
         typeof point === 'object' &&
@@ -195,26 +275,34 @@ export async function normalize(
           wikipedia[language] =
             `https://${language}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
       }
-      const english = label(entity) ?? label(entity, 'fr');
+      const original = Object.entries(entity.labels ?? {})
+        .filter(([, label]) => label.value)
+        .sort(([a], [b]) => (a === 'mul' ? -1 : b === 'mul' ? 1 : a.localeCompare(b)))[0];
+      const english = label(entity) ?? label(entity, 'fr') ?? original?.[1].value;
       if (!english) {
         rejected.push({ id, reasons: ['missing-label'] });
         continue;
       }
       const name = { en: english, ...(label(entity, 'fr') ? { fr: label(entity, 'fr')! } : {}) };
       const victorId = entityIds(entity, 'P1346')[0];
-      const strengthValue = values(entity, 'P1132')[0];
-      const strength =
-        typeof strengthValue === 'object' && strengthValue.amount
-          ? Number(strengthValue.amount)
-          : undefined;
+      const imageValue = values(entity, 'P18')[0];
+      const displayPlaceId = pointKind === 'place' ? pointEntity : placeIds[0];
       const event = HistoricalEventSchema.parse({
         id,
         type,
         name,
+        nameLanguage: label(entity) ? undefined : label(entity, 'fr') ? 'fr' : original?.[0],
         start: start.date,
         end,
         coords,
-        parentWar: entityIds(entity, 'P361')[0],
+        parentWar: entityIds(entity, 'P361').find((id) => {
+          const parent = entities.get(id);
+          return (
+            parent &&
+            !sourceExclusion(parent) &&
+            entityIds(parent, 'P31').some((classId) => classes.has(classId))
+          );
+        }),
         belligerents: entityIds(entity, 'P710').map((entityId) => ({
           side: 'other',
           entityId,
@@ -226,6 +314,14 @@ export async function normalize(
         region: classifyRegion(coords),
         sources: [
           source,
+          ...(navalDescription
+            ? [
+                {
+                  ...source,
+                  label: 'Wikidata · classification navale explicite dans la description',
+                },
+              ]
+            : []),
           ...(pointKind === 'place'
             ? [
                 {
@@ -242,13 +338,23 @@ export async function normalize(
         disputed:
           (times.length > 1 &&
             times.some((time) => compareHistDates(time.date, start.date) !== 0)) ||
-          points.length > 1,
+          new Set(
+            points.map((value) =>
+              typeof value === 'object' ? `${value.longitude},${value.latitude}` : '',
+            ),
+          ).size > 1,
         wikipedia,
-        place: placeIds[0]
-          ? { id: placeIds[0], name: label(entities.get(placeIds[0])) ?? placeIds[0] }
+        place: displayPlaceId
+          ? { id: displayPlaceId, name: label(entities.get(displayPlaceId)) ?? displayPlaceId }
           : undefined,
         sitelinks: Object.keys(entity.sitelinks ?? {}).length,
-        strength: Number.isFinite(strength) ? strength : undefined,
+        strength: scalarQuantity(entity, 'P1132'),
+        deaths: scalarQuantity(entity, 'P1120'),
+        casualties: scalarQuantity(entity, 'P1590'),
+        image:
+          typeof imageValue === 'string'
+            ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(imageValue)}?width=960`
+            : undefined,
         coordinateSource: coords
           ? {
               kind: pointKind,

@@ -1,0 +1,83 @@
+{
+  "id": "Q2915203",
+  "title": {
+    "fr": "guerre Adal-Éthiopie",
+    "en": "Ethiopian–Adal War"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q2915203",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q2889965",
+      "text": {
+        "fr": "bataille de Shembra Couré — 9 mars 1529. Lieu indiqué par la source : Sultanate of Dawaro.",
+        "en": "Battle of Shimbra Kure — 9 March 1529. Place recorded by the source: Sultanate of Dawaro."
+      }
+    },
+    {
+      "eventId": "Q2887867",
+      "text": {
+        "fr": "bataille d'Antoukyah — 1531. Lieu indiqué par la source : Antsokiyana Gemza.",
+        "en": "Battle of Antukyah — 1531. Place recorded by the source: Antsokiyana Gemza."
+      }
+    },
+    {
+      "eventId": "Q2887837",
+      "text": {
+        "fr": "bataille d'Amba Sel — 28 octobre 1531. Lieu indiqué par la source : Bale Province.",
+        "en": "Battle of Amba Sel — 28 October 1531. Place recorded by the source: Bale Province."
+      }
+    },
+    {
+      "eventId": "Q726829",
+      "text": {
+        "fr": "bataille de Sahart — 24 avril 1541. Lieu indiqué par la source : Tigray Region.",
+        "en": "Battle of Sahart — 24 April 1541. Place recorded by the source: Tigray Region."
+      }
+    },
+    {
+      "eventId": "Q121335444",
+      "text": {
+        "fr": "Battle of Massawa — mai 1541. Lieu indiqué par la source : Massawa.",
+        "en": "Battle of Massawa — May 1541. Place recorded by the source: Massawa."
+      }
+    },
+    {
+      "eventId": "Q279250",
+      "text": {
+        "fr": "bataille de Baçente — 2 février 1542. Lieu indiqué par la source : Tigray Province.",
+        "en": "Battle of Baçente — 2 February 1542. Place recorded by the source: Tigray Province."
+      }
+    },
+    {
+      "eventId": "Q834881",
+      "text": {
+        "fr": "bataille de Jarte — 4 avril 1542. Lieu indiqué par la source : Hintalo Wajirat.",
+        "en": "Battle of Jarte — 4 April 1542. Place recorded by the source: Hintalo Wajirat."
+      }
+    },
+    {
+      "eventId": "Q4872927",
+      "text": {
+        "fr": "bataille de la Colline des Juifs — août 1542. Lieu indiqué par la source : Amhara Region.",
+        "en": "Battle of the Hill of the Jews — August 1542. Place recorded by the source: Amhara Region."
+      }
+    },
+    {
+      "eventId": "Q957263",
+      "text": {
+        "fr": "bataille de Wayna Daga — 21 février 1543. Lieu indiqué par la source : Lake Tana.",
+        "en": "Battle of Wayna Daga — 21 February 1543. Place recorded by the source: Lake Tana."
+      }
+    }
+  ]
+}

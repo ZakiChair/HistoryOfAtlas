@@ -1,0 +1,300 @@
+{
+  "id": "Q78994",
+  "title": {
+    "fr": "guerres napoléoniennes",
+    "en": "Napoleonic Wars"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q78994",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q249232",
+      "text": {
+        "fr": "guerre de la Troisième Coalition — 1805. Lieu indiqué par la source : Central Europe.",
+        "en": "War of the Third Coalition — 1805. Place recorded by the source: Central Europe."
+      }
+    },
+    {
+      "eventId": "Q159072",
+      "text": {
+        "fr": "bataille d'Ulm — 16 octobre 1805. Lieu indiqué par la source : Ulm.",
+        "en": "Battle of Ulm — 16 October 1805. Place recorded by the source: Ulm."
+      }
+    },
+    {
+      "eventId": "Q171416",
+      "text": {
+        "fr": "bataille de Trafalgar — 21 octobre 1805. Lieu indiqué par la source : Cape Trafalgar.",
+        "en": "Battle of Trafalgar — 21 October 1805. Place recorded by the source: Cape Trafalgar."
+      }
+    },
+    {
+      "eventId": "Q134114",
+      "text": {
+        "fr": "bataille d'Austerlitz — 2 décembre 1805. Lieu indiqué par la source : Slavkov u Brna.",
+        "en": "Battle of Austerlitz — 2 December 1805. Place recorded by the source: Slavkov u Brna."
+      }
+    },
+    {
+      "eventId": "Q605977",
+      "text": {
+        "fr": "Quatrième Coalition — 1806. Lieu indiqué par la source : Kingdom of Saxony.",
+        "en": "War of the Fourth Coalition — 1806. Place recorded by the source: Kingdom of Saxony."
+      }
+    },
+    {
+      "eventId": "Q154426",
+      "text": {
+        "fr": "bataille d'Iéna — 14 octobre 1806. Lieu indiqué par la source : Jena.",
+        "en": "Battle of Jena–Auerstedt — 14 October 1806. Place recorded by the source: Jena."
+      }
+    },
+    {
+      "eventId": "Q31301",
+      "text": {
+        "fr": "guerre anglo-turque — 1807. Lieu indiqué par la source : Dardanelles.",
+        "en": "Anglo-Turkish War — 1807. Place recorded by the source: Dardanelles."
+      }
+    },
+    {
+      "eventId": "Q331347",
+      "text": {
+        "fr": "bataille d'Eylau — 7 février 1807. Lieu indiqué par la source : Kaliningrad.",
+        "en": "Battle of Eylau — 7 February 1807. Place recorded by the source: Kaliningrad."
+      }
+    },
+    {
+      "eventId": "Q241108",
+      "text": {
+        "fr": "bataille de Friedland — 14 juin 1807. Lieu indiqué par la source : Pravdinsk.",
+        "en": "Battle of Friedland — 14 June 1807. Place recorded by the source: Pravdinsk."
+      }
+    },
+    {
+      "eventId": "Q376154",
+      "text": {
+        "fr": "bataille de Copenhague — 16 août 1807. Lieu indiqué par la source : Copenhagen.",
+        "en": "Battle of Copenhagen — 16 August 1807. Place recorded by the source: Copenhagen."
+      }
+    },
+    {
+      "eventId": "Q2441248",
+      "text": {
+        "fr": "guerre anglo-russe — 2 septembre 1807. Lieu indiqué par la source : Finland.",
+        "en": "Anglo-Russian War — 2 September 1807. Place recorded by the source: Finland."
+      }
+    },
+    {
+      "eventId": "Q152499",
+      "text": {
+        "fr": "guerre d'indépendance espagnole — 2 mai 1808. Lieu indiqué par la source : Iberian Peninsula.",
+        "en": "Peninsular War — 2 May 1808. Place recorded by the source: Iberian Peninsula."
+      }
+    },
+    {
+      "eventId": "Q1364346",
+      "text": {
+        "fr": "bataille de Bailén — 16 juillet 1808. Lieu indiqué par la source : Bailén.",
+        "en": "Battle of Bailén — 16 July 1808. Place recorded by the source: Bailén."
+      }
+    },
+    {
+      "eventId": "Q209359",
+      "text": {
+        "fr": "bataille de Vimeiro — 21 août 1808. Lieu indiqué par la source : Vimeiro.",
+        "en": "Battle of Vimeiro — 21 August 1808. Place recorded by the source: Vimeiro."
+      }
+    },
+    {
+      "eventId": "Q2427013",
+      "text": {
+        "fr": "bataille de Tudela — 23 novembre 1808. Lieu indiqué par la source : Tudela.",
+        "en": "Battle of Tudela — 23 November 1808. Place recorded by the source: Tudela."
+      }
+    },
+    {
+      "eventId": "Q155676",
+      "text": {
+        "fr": "bataille de Somosierra — 30 novembre 1808. Lieu indiqué par la source : Somosierra.",
+        "en": "Battle of Somosierra — 30 November 1808. Place recorded by the source: Somosierra."
+      }
+    },
+    {
+      "eventId": "Q708088",
+      "text": {
+        "fr": "bataille de La Corogne — 16 janvier 1809. Lieu indiqué par la source : A Coruña.",
+        "en": "Battle of Corunna — 16 January 1809. Place recorded by the source: A Coruña."
+      }
+    },
+    {
+      "eventId": "Q684324",
+      "text": {
+        "fr": "cinquième coalition — 10 avril 1809. Lieu indiqué par la source : Central Europe.",
+        "en": "War of the Fifth Coalition — 10 April 1809. Place recorded by the source: Central Europe."
+      }
+    },
+    {
+      "eventId": "Q700860",
+      "text": {
+        "fr": "bataille d'Eckmühl — 22 avril 1809. Lieu indiqué par la source : Munich.",
+        "en": "Battle of Eckmühl — 22 April 1809. Place recorded by the source: Munich."
+      }
+    },
+    {
+      "eventId": "Q541626",
+      "text": {
+        "fr": "bataille d'Essling — 21 mai 1809. Lieu indiqué par la source : Lobau.",
+        "en": "Battle of Aspern-Essling — 21 May 1809. Place recorded by the source: Lobau."
+      }
+    },
+    {
+      "eventId": "Q467777",
+      "text": {
+        "fr": "bataille de Wagram — 5 juillet 1809. Lieu indiqué par la source : Deutsch-Wagram.",
+        "en": "Battle of Wagram — 5 July 1809. Place recorded by the source: Deutsch-Wagram."
+      }
+    },
+    {
+      "eventId": "Q169023",
+      "text": {
+        "fr": "bataille de Talavera — 27 juillet 1809. Lieu indiqué par la source : Talavera de la Reina.",
+        "en": "Battle of Talavera — 27 July 1809. Place recorded by the source: Talavera de la Reina."
+      }
+    },
+    {
+      "eventId": "Q2473448",
+      "text": {
+        "fr": "bataille de Lissa — 13 mars 1811. Lieu indiqué par la source : Adriatic Sea.",
+        "en": "Battle of Lissa — 13 March 1811. Place recorded by the source: Adriatic Sea."
+      }
+    },
+    {
+      "eventId": "Q689471",
+      "text": {
+        "fr": "bataille d'Albuera — 16 mai 1811. Lieu indiqué par la source : La Albuera.",
+        "en": "Battle of Albuera — 16 May 1811. Place recorded by the source: La Albuera."
+      }
+    },
+    {
+      "eventId": "Q815121",
+      "text": {
+        "fr": "siège de Badajoz — 16 mars 1812. Lieu indiqué par la source : Badajoz.",
+        "en": "Siege of Badajoz — 16 March 1812. Place recorded by the source: Badajoz."
+      }
+    },
+    {
+      "eventId": "Q179250",
+      "text": {
+        "fr": "campagne de Russie — 24 juin 1812. Lieu indiqué par la source : Russian Empire.",
+        "en": "French invasion of Russia — 24 June 1812. Place recorded by the source: Russian Empire."
+      }
+    },
+    {
+      "eventId": "Q708580",
+      "text": {
+        "fr": "bataille des Arapiles — 22 juillet 1812. Lieu indiqué par la source : Arapiles.",
+        "en": "Battle of Salamanca — 22 July 1812. Place recorded by the source: Arapiles."
+      }
+    },
+    {
+      "eventId": "Q1071578",
+      "text": {
+        "fr": "bataille de Smolensk — 16 août 1812. Lieu indiqué par la source : Smolensk.",
+        "en": "Battle of Smolensk — 16 August 1812. Place recorded by the source: Smolensk."
+      }
+    },
+    {
+      "eventId": "Q184320",
+      "text": {
+        "fr": "bataille de la Moskova — 7 septembre 1812. Lieu indiqué par la source : Borodino.",
+        "en": "Battle of Borodino — 7 September 1812. Place recorded by the source: Borodino."
+      }
+    },
+    {
+      "eventId": "Q555839",
+      "text": {
+        "fr": "bataille de la Bérézina — 26 novembre 1812. Lieu indiqué par la source : Berezina.",
+        "en": "Battle of Berezina — 26 November 1812. Place recorded by the source: Berezina."
+      }
+    },
+    {
+      "eventId": "Q138107",
+      "text": {
+        "fr": "guerre de la Sixième Coalition — 1813. Lieu indiqué par la source : Central Europe.",
+        "en": "War of the Sixth Coalition — 1813. Place recorded by the source: Central Europe."
+      }
+    },
+    {
+      "eventId": "Q329534",
+      "text": {
+        "fr": "bataille de Lützen — 2 mai 1813. Lieu indiqué par la source : Großgörschen.",
+        "en": "Battle of Lützen — 2 May 1813. Place recorded by the source: Großgörschen."
+      }
+    },
+    {
+      "eventId": "Q170265",
+      "text": {
+        "fr": "bataille de Bautzen — 20 mai 1813. Lieu indiqué par la source : Bautzen.",
+        "en": "Battle of Bautzen — 20 May 1813. Place recorded by the source: Bautzen."
+      }
+    },
+    {
+      "eventId": "Q276059",
+      "text": {
+        "fr": "bataille de Vitoria — 21 juin 1813. Lieu indiqué par la source : Vitoria-Gasteiz.",
+        "en": "Battle of Vitoria — 21 June 1813. Place recorded by the source: Vitoria-Gasteiz."
+      }
+    },
+    {
+      "eventId": "Q339052",
+      "text": {
+        "fr": "bataille de Gross Beeren — 23 août 1813. Lieu indiqué par la source : Großbeeren.",
+        "en": "Battle of Großbeeren — 23 August 1813. Place recorded by the source: Großbeeren."
+      }
+    },
+    {
+      "eventId": "Q17594",
+      "text": {
+        "fr": "bataille de Dresde — 26 août 1813. Lieu indiqué par la source : Dresden.",
+        "en": "Battle of Dresden — 26 August 1813. Place recorded by the source: Dresden."
+      }
+    },
+    {
+      "eventId": "Q48253",
+      "text": {
+        "fr": "bataille de Kulm — 29 août 1813. Lieu indiqué par la source : Chlumec.",
+        "en": "Battle of Kulm — 29 August 1813. Place recorded by the source: Chlumec."
+      }
+    },
+    {
+      "eventId": "Q151005",
+      "text": {
+        "fr": "bataille de Leipzig — 16 octobre 1813. Lieu indiqué par la source : Leipzig.",
+        "en": "Battle of Leipzig — 16 October 1813. Place recorded by the source: Leipzig."
+      }
+    },
+    {
+      "eventId": "Q780921",
+      "text": {
+        "fr": "bataille de Paris — 30 mars 1814. Lieu indiqué par la source : Paris.",
+        "en": "Battle of Paris — 30 March 1814. Place recorded by the source: Paris."
+      }
+    },
+    {
+      "eventId": "Q48314",
+      "text": {
+        "fr": "bataille de Waterloo — 18 juin 1815. Lieu indiqué par la source : Waterloo Battlefield.",
+        "en": "Battle of Waterloo — 18 June 1815. Place recorded by the source: Waterloo Battlefield."
+      }
+    }
+  ]
+}

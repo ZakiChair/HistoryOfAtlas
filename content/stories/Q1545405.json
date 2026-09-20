@@ -1,0 +1,104 @@
+{
+  "id": "Q1545405",
+  "title": {
+    "fr": "Guerres de Nouvelle-Zélande",
+    "en": "New Zealand Wars"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q1545405",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q2470023",
+      "text": {
+        "fr": "guerre du Mât d’Amiral — 11 mars 1845. Lieu indiqué par la source : Northland Region.",
+        "en": "Flagstaff War — 11 March 1845. Place recorded by the source: Northland Region."
+      }
+    },
+    {
+      "eventId": "Q4871482",
+      "text": {
+        "fr": "Battle of Kororareka — 11 mars 1845. Lieu indiqué par la source : Russell.",
+        "en": "Battle of Kororareka — 11 March 1845. Place recorded by the source: Russell."
+      }
+    },
+    {
+      "eventId": "Q116413774",
+      "text": {
+        "fr": "Battle of Puketutu — 8 mai 1845. Lieu indiqué par la source : Bay of Islands.",
+        "en": "Battle of Puketutu — 8 May 1845. Place recorded by the source: Bay of Islands."
+      }
+    },
+    {
+      "eventId": "Q949495",
+      "text": {
+        "fr": "Battle of Ohaeawai — juillet 1845. Lieu indiqué par la source : Ngawha Springs.",
+        "en": "Battle of Ohaeawai — July 1845. Place recorded by the source: Ngawha Springs."
+      }
+    },
+    {
+      "eventId": "Q4870427",
+      "text": {
+        "fr": "Battle of Battle Hill — 13 août 1846. Lieu indiqué par la source : Battle Hill Farm Forest Park.",
+        "en": "Battle of Battle Hill — 13 August 1846. Place recorded by the source: Battle Hill Farm Forest Park."
+      }
+    },
+    {
+      "eventId": "Q5453870",
+      "text": {
+        "fr": "guerre de Taranaki — 17 mars 1860. Lieu indiqué par la source : Taranaki Region.",
+        "en": "First Taranaki War — 17 March 1860. Place recorded by the source: Taranaki Region."
+      }
+    },
+    {
+      "eventId": "Q5919478",
+      "text": {
+        "fr": "Invasion of the Waikato — 17 juillet 1863. Lieu indiqué par la source : Waikato Region.",
+        "en": "Invasion of the Waikato — 17 July 1863. Place recorded by the source: Waikato Region."
+      }
+    },
+    {
+      "eventId": "Q7688846",
+      "text": {
+        "fr": "Tauranga campaign — 21 janvier 1864. Lieu indiqué par la source : Bay of Plenty Region.",
+        "en": "Tauranga campaign — 21 January 1864. Place recorded by the source: Bay of Plenty Region."
+      }
+    },
+    {
+      "eventId": "Q5328000",
+      "text": {
+        "fr": "guerre du Cap-Est — 13 avril 1865. Lieu indiqué par la source : New Zealand.",
+        "en": "East Cape War — 13 April 1865. Place recorded by the source: New Zealand."
+      }
+    },
+    {
+      "eventId": "Q7443579",
+      "text": {
+        "fr": "seconde guerre de Taranaki — novembre 1866. Lieu indiqué par la source : Taranaki Region.",
+        "en": "Second Taranaki War — November 1866. Place recorded by the source: Taranaki Region."
+      }
+    },
+    {
+      "eventId": "Q7810218",
+      "text": {
+        "fr": "la guerre de Tītokowaru — juin 1868. Lieu indiqué par la source : Taranaki Region.",
+        "en": "Tītokowaru's War — June 1868. Place recorded by the source: Taranaki Region."
+      }
+    },
+    {
+      "eventId": "Q108860691",
+      "text": {
+        "fr": "siège de Ngatapa — 31 décembre 1868. Lieu indiqué par la source : Ngātapa.",
+        "en": "Siege of Ngatapa — 31 December 1868. Place recorded by the source: Ngātapa."
+      }
+    }
+  ]
+}

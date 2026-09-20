@@ -1,0 +1,2150 @@
+{
+  "version": 1,
+  "status": "source-verified-editorial-seed",
+  "method": "Wikidata sitelink ranking, with four records per populated region/era stratum. This is a reproducible editorial starting selection, not an expert historical canon.",
+  "events": [
+    {
+      "id": "Q362",
+      "name": {
+        "fr": "Seconde Guerre mondiale",
+        "en": "World War II"
+      },
+      "source": "https://www.wikidata.org/wiki/Q362",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q361",
+      "name": {
+        "fr": "Première Guerre mondiale",
+        "en": "World War I"
+      },
+      "source": "https://www.wikidata.org/wiki/Q361",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q8683",
+      "name": {
+        "fr": "guerre froide",
+        "en": "Cold War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8683",
+      "reason": "south-america / 20th-century"
+    },
+    {
+      "id": "Q110999040",
+      "name": {
+        "fr": "invasion de l'Ukraine par la Russie",
+        "en": "full-scale Russo-Ukrainian war"
+      },
+      "source": "https://www.wikidata.org/wiki/Q110999040",
+      "reason": "europe / contemporary"
+    },
+    {
+      "id": "Q8676",
+      "name": {
+        "fr": "guerre de Sécession",
+        "en": "American Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8676",
+      "reason": "north-america / 19th-century"
+    },
+    {
+      "id": "Q8740",
+      "name": {
+        "fr": "guerre du Vietnam",
+        "en": "Vietnam War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8740",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q8663",
+      "name": {
+        "fr": "guerre de Corée",
+        "en": "Korean War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8663",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q2487",
+      "name": {
+        "fr": "guerre de Trente Ans",
+        "en": "Thirty Years' War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2487",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q10859",
+      "name": {
+        "fr": "guerre d'Espagne",
+        "en": "Spanish Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q10859",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q12551",
+      "name": {
+        "fr": "guerre de Cent Ans",
+        "en": "Hundred Years' War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q12551",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q8736",
+      "name": {
+        "fr": "traité de Versailles",
+        "en": "Treaty of Versailles"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8736",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q15860072",
+      "name": {
+        "fr": "guerre russo-ukrainienne",
+        "en": "Russo-Ukrainian war"
+      },
+      "source": "https://www.wikidata.org/wiki/Q15860072",
+      "reason": "europe / contemporary"
+    },
+    {
+      "id": "Q122962941",
+      "name": {
+        "fr": "guerre à Gaza depuis 2023",
+        "en": "Gaza War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q122962941",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q178810",
+      "name": {
+        "fr": "guerre civile syrienne",
+        "en": "Syrian Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q178810",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q40949",
+      "name": {
+        "fr": "guerre d'indépendance des États-Unis",
+        "en": "American Revolutionary War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q40949",
+      "reason": "north-america / early-modern"
+    },
+    {
+      "id": "Q37643",
+      "name": {
+        "fr": "guerre du Golfe",
+        "en": "Gulf War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q37643",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q33761",
+      "name": {
+        "fr": "printemps arabe",
+        "en": "Arab Spring"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33761",
+      "reason": "africa / contemporary"
+    },
+    {
+      "id": "Q545449",
+      "name": {
+        "fr": "guerre d'Irak",
+        "en": "Iraq War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q545449",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q38789",
+      "name": {
+        "fr": "bataille de Stalingrad",
+        "en": "Battle of Stalingrad"
+      },
+      "source": "https://www.wikidata.org/wiki/Q38789",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q49077",
+      "name": {
+        "fr": "guerre des Six Jours",
+        "en": "Six-Day War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q49077",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q130796",
+      "name": {
+        "fr": "Pacte germano-soviétique",
+        "en": "Molotov–Ribbentrop Pact"
+      },
+      "source": "https://www.wikidata.org/wiki/Q130796",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q79911",
+      "name": {
+        "fr": "guerre civile russe",
+        "en": "Russian Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q79911",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q83085",
+      "name": {
+        "fr": "guerre d'Afghanistan",
+        "en": "Soviet-Afghan War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q83085",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q254106",
+      "name": {
+        "fr": "guerre de Crimée",
+        "en": "Crimean War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q254106",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q78994",
+      "name": {
+        "fr": "guerres napoléoniennes",
+        "en": "Napoleonic Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q78994",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q80330",
+      "name": {
+        "fr": "première révolution anglaise",
+        "en": "English Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q80330",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q33143",
+      "name": {
+        "fr": "guerre de Sept Ans",
+        "en": "Seven Years' War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33143",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q46362",
+      "name": {
+        "fr": "congrès de Vienne",
+        "en": "Congress of Vienna"
+      },
+      "source": "https://www.wikidata.org/wiki/Q46362",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q46083",
+      "name": {
+        "fr": "guerre franco-allemande de 1870",
+        "en": "Franco-Prussian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q46083",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q82664",
+      "name": {
+        "fr": "guerre Iran-Irak",
+        "en": "Iran–Iraq War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q82664",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q48314",
+      "name": {
+        "fr": "bataille de Waterloo",
+        "en": "Battle of Waterloo"
+      },
+      "source": "https://www.wikidata.org/wiki/Q48314",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q134949",
+      "name": {
+        "fr": "guerre d'Hiver",
+        "en": "Winter War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q134949",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q159950",
+      "name": {
+        "fr": "guerre russo-japonaise",
+        "en": "Russo-Japanese War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q159950",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q48249",
+      "name": {
+        "fr": "guerre des Malouines",
+        "en": "Falklands War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q48249",
+      "reason": "south-america / 20th-century"
+    },
+    {
+      "id": "Q49100",
+      "name": {
+        "fr": "guerre du Kippour",
+        "en": "Yom Kippur War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q49100",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q79791",
+      "name": {
+        "fr": "Reconquista",
+        "en": "Reconquista"
+      },
+      "source": "https://www.wikidata.org/wiki/Q79791",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q170314",
+      "name": {
+        "fr": "seconde guerre sino-japonaise",
+        "en": "Second Sino-Japanese War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q170314",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q189266",
+      "name": {
+        "fr": "front de l'Est",
+        "en": "Eastern Front"
+      },
+      "source": "https://www.wikidata.org/wiki/Q189266",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q26013",
+      "name": {
+        "fr": "guerre anglo-américaine de 1812",
+        "en": "War of 1812"
+      },
+      "source": "https://www.wikidata.org/wiki/Q26013",
+      "reason": "south-america / 19th-century"
+    },
+    {
+      "id": "Q81545",
+      "name": {
+        "fr": "guerre civile libyenne",
+        "en": "Libyan Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q81545",
+      "reason": "africa / contemporary"
+    },
+    {
+      "id": "Q12583",
+      "name": {
+        "fr": "guerre hispano-américaine",
+        "en": "Spanish–American War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q12583",
+      "reason": "north-america / 19th-century"
+    },
+    {
+      "id": "Q52418",
+      "name": {
+        "fr": "attaque de Pearl Harbor",
+        "en": "Attack on Pearl Harbor"
+      },
+      "source": "https://www.wikidata.org/wiki/Q52418",
+      "reason": "oceania / 20th-century"
+    },
+    {
+      "id": "Q49101",
+      "name": {
+        "fr": "crise du canal de Suez",
+        "en": "Suez Crisis"
+      },
+      "source": "https://www.wikidata.org/wiki/Q49101",
+      "reason": "africa / 20th-century"
+    },
+    {
+      "id": "Q51649",
+      "name": {
+        "fr": "première croisade",
+        "en": "First Crusade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q51649",
+      "reason": "middle-east / medieval"
+    },
+    {
+      "id": "Q179975",
+      "name": {
+        "fr": "guerre civile chinoise",
+        "en": "Chinese Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q179975",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q124988",
+      "name": {
+        "fr": "guerres puniques",
+        "en": "Punic Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q124988",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q131969",
+      "name": {
+        "fr": "bataille des Thermopyles",
+        "en": "Battle of Thermopylae"
+      },
+      "source": "https://www.wikidata.org/wiki/Q131969",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q182865",
+      "name": {
+        "fr": "guerre d'Afghanistan",
+        "en": "War in Afghanistan (2001–2021)"
+      },
+      "source": "https://www.wikidata.org/wiki/Q182865",
+      "reason": "asia / contemporary"
+    },
+    {
+      "id": "Q620735",
+      "name": {
+        "fr": "guerre russo-géorgienne",
+        "en": "Russo-Georgian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q620735",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q33745",
+      "name": {
+        "fr": "guerre du Péloponnèse",
+        "en": "Peloponnesian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33745",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q127751",
+      "name": {
+        "fr": "guerre des Deux-Roses",
+        "en": "Wars of the Roses"
+      },
+      "source": "https://www.wikidata.org/wiki/Q127751",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q150995",
+      "name": {
+        "fr": "traités de Westphalie",
+        "en": "Peace of Westphalia"
+      },
+      "source": "https://www.wikidata.org/wiki/Q150995",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q486124",
+      "name": {
+        "fr": "bataille de Badr",
+        "en": "Battle of Badr"
+      },
+      "source": "https://www.wikidata.org/wiki/Q486124",
+      "reason": "middle-east / medieval"
+    },
+    {
+      "id": "Q83224",
+      "name": {
+        "fr": "bataille d'Hastings",
+        "en": "Battle of Hastings"
+      },
+      "source": "https://www.wikidata.org/wiki/Q83224",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q160077",
+      "name": {
+        "fr": "chute de Constantinople",
+        "en": "Fall of Constantinople"
+      },
+      "source": "https://www.wikidata.org/wiki/Q160077",
+      "reason": "middle-east / medieval"
+    },
+    {
+      "id": "Q165725",
+      "name": {
+        "fr": "guerres balkaniques",
+        "en": "Balkan Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q165725",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q150812",
+      "name": {
+        "fr": "campagne de Pologne",
+        "en": "1939 Invasion of Poland"
+      },
+      "source": "https://www.wikidata.org/wiki/Q150812",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q151616",
+      "name": {
+        "fr": "grande guerre du Nord",
+        "en": "Great Northern War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q151616",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q179250",
+      "name": {
+        "fr": "campagne de Russie",
+        "en": "French invasion of Russia"
+      },
+      "source": "https://www.wikidata.org/wiki/Q179250",
+      "reason": "asia / 19th-century"
+    },
+    {
+      "id": "Q29269",
+      "name": {
+        "fr": "première guerre de Tchétchénie",
+        "en": "First Chechen War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q29269",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q76026",
+      "name": {
+        "fr": "guerres médiques",
+        "en": "Greco-Persian Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q76026",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q150701",
+      "name": {
+        "fr": "guerre de Succession d'Espagne",
+        "en": "War of the Spanish Succession"
+      },
+      "source": "https://www.wikidata.org/wiki/Q150701",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q171416",
+      "name": {
+        "fr": "bataille de Trafalgar",
+        "en": "Battle of Trafalgar"
+      },
+      "source": "https://www.wikidata.org/wiki/Q171416",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q177918",
+      "name": {
+        "fr": "première guerre balkanique",
+        "en": "First Balkan War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q177918",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q154720",
+      "name": {
+        "fr": "bataille d'Angleterre",
+        "en": "Battle of Britain"
+      },
+      "source": "https://www.wikidata.org/wiki/Q154720",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q178687",
+      "name": {
+        "fr": "guerre sino-japonaise",
+        "en": "First Sino-Japanese War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q178687",
+      "reason": "asia / 19th-century"
+    },
+    {
+      "id": "Q191282",
+      "name": {
+        "fr": "première guerre de l'opium",
+        "en": "First Opium War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q191282",
+      "reason": "asia / 19th-century"
+    },
+    {
+      "id": "Q51656",
+      "name": {
+        "fr": "quatrième croisade",
+        "en": "Fourth Crusade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q51656",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q134900605",
+      "name": {
+        "fr": "guerre Iran-Israël",
+        "en": "Twelve-Day War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q134900605",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q31900",
+      "name": {
+        "fr": "bataille de Marathon",
+        "en": "Battle of Marathon"
+      },
+      "source": "https://www.wikidata.org/wiki/Q31900",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q6271",
+      "name": {
+        "fr": "deuxième guerre punique",
+        "en": "Second Punic War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q6271",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q6683",
+      "name": {
+        "fr": "guerre américano-mexicaine",
+        "en": "Mexican-American War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q6683",
+      "reason": "north-america / 19th-century"
+    },
+    {
+      "id": "Q134114",
+      "name": {
+        "fr": "bataille d'Austerlitz",
+        "en": "Battle of Austerlitz"
+      },
+      "source": "https://www.wikidata.org/wiki/Q134114",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q151340",
+      "name": {
+        "fr": "bataille de France",
+        "en": "Battle of France"
+      },
+      "source": "https://www.wikidata.org/wiki/Q151340",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q164432",
+      "name": {
+        "fr": "guerre de Quatre-Vingts Ans",
+        "en": "Eighty Years' War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q164432",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q164983",
+      "name": {
+        "fr": "bataille des Dardanelles",
+        "en": "Gallipoli Campaign"
+      },
+      "source": "https://www.wikidata.org/wiki/Q164983",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q51654",
+      "name": {
+        "fr": "deuxième croisade",
+        "en": "Second Crusade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q51654",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q130861",
+      "name": {
+        "fr": "bataille de Koursk",
+        "en": "Battle of Kursk"
+      },
+      "source": "https://www.wikidata.org/wiki/Q130861",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q154182",
+      "name": {
+        "fr": "bataille de Berlin",
+        "en": "Battle of Berlin"
+      },
+      "source": "https://www.wikidata.org/wiki/Q154182",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q16470",
+      "name": {
+        "fr": "débarquement de Normandie",
+        "en": "Normandy landings"
+      },
+      "source": "https://www.wikidata.org/wiki/Q16470",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q170850",
+      "name": {
+        "fr": "bombardement de Zanzibar",
+        "en": "Anglo-Zanzibar War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q170850",
+      "reason": "africa / 19th-century"
+    },
+    {
+      "id": "Q193258",
+      "name": {
+        "fr": "traité de Lausanne",
+        "en": "Treaty of Lausanne"
+      },
+      "source": "https://www.wikidata.org/wiki/Q193258",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q49104",
+      "name": {
+        "fr": "conflit israélo-libanais de 2006",
+        "en": "2006 Lebanon War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q49104",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q151860",
+      "name": {
+        "fr": "siège de Léningrad",
+        "en": "Siege of Leningrad"
+      },
+      "source": "https://www.wikidata.org/wiki/Q151860",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q182062",
+      "name": {
+        "fr": "guerre d'indépendance grecque",
+        "en": "Greek War of Independence"
+      },
+      "source": "https://www.wikidata.org/wiki/Q182062",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q190029",
+      "name": {
+        "fr": "guerre du Kosovo",
+        "en": "Kosovo War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q190029",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q51655",
+      "name": {
+        "fr": "troisième croisade",
+        "en": "Third Crusade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q51655",
+      "reason": "middle-east / medieval"
+    },
+    {
+      "id": "Q99659280",
+      "name": {
+        "fr": "deuxième guerre du Haut-Karabagh",
+        "en": "Second Nagorno-Karabakh War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q99659280",
+      "reason": "middle-east / contemporary"
+    },
+    {
+      "id": "Q165425",
+      "name": {
+        "fr": "bataille de Lépante",
+        "en": "Battle of Lepanto"
+      },
+      "source": "https://www.wikidata.org/wiki/Q165425",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q200790",
+      "name": {
+        "fr": "guerre d'Algérie",
+        "en": "Algerian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q200790",
+      "reason": "africa / 20th-century"
+    },
+    {
+      "id": "Q33570",
+      "name": {
+        "fr": "bataille de Grunwald",
+        "en": "Battle of Grunwald"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33570",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q130847",
+      "name": {
+        "fr": "bataille de Verdun",
+        "en": "Battle of Verdun"
+      },
+      "source": "https://www.wikidata.org/wiki/Q130847",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q186284",
+      "name": {
+        "fr": "guerre soviéto-polonaise",
+        "en": "Polish–Soviet War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q186284",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q122371",
+      "name": {
+        "fr": "traité de Brest-Litovsk",
+        "en": "Treaty of Brest-Litovsk"
+      },
+      "source": "https://www.wikidata.org/wiki/Q122371",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q132568",
+      "name": {
+        "fr": "bataille de la Somme",
+        "en": "Battle of the Somme"
+      },
+      "source": "https://www.wikidata.org/wiki/Q132568",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q181902",
+      "name": {
+        "fr": "traité de Trianon",
+        "en": "Treaty of Trianon"
+      },
+      "source": "https://www.wikidata.org/wiki/Q181902",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q184183",
+      "name": {
+        "fr": "deuxième guerre balkanique",
+        "en": "Second Balkan War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q184183",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q214426",
+      "name": {
+        "fr": "Révolution mexicaine",
+        "en": "Mexican Revolution"
+      },
+      "source": "https://www.wikidata.org/wiki/Q214426",
+      "reason": "north-america / 20th-century"
+    },
+    {
+      "id": "Q117716414",
+      "name": {
+        "fr": "conflit soudanais",
+        "en": "Sudanese civil war"
+      },
+      "source": "https://www.wikidata.org/wiki/Q117716414",
+      "reason": "africa / contemporary"
+    },
+    {
+      "id": "Q153650",
+      "name": {
+        "fr": "guerre austro-prussienne",
+        "en": "Austro-Prussian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q153650",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q173077",
+      "name": {
+        "fr": "bataille de Poitiers",
+        "en": "Battle of Tours"
+      },
+      "source": "https://www.wikidata.org/wiki/Q173077",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q182515",
+      "name": {
+        "fr": "traité de Sèvres",
+        "en": "Treaty of Sèvres"
+      },
+      "source": "https://www.wikidata.org/wiki/Q182515",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q200485",
+      "name": {
+        "fr": "conquête normande de l'Angleterre",
+        "en": "Norman conquest of England"
+      },
+      "source": "https://www.wikidata.org/wiki/Q200485",
+      "reason": "europe / medieval"
+    },
+    {
+      "id": "Q234738",
+      "name": {
+        "fr": "guerre d'indépendance turque",
+        "en": "Turkish War of Independence"
+      },
+      "source": "https://www.wikidata.org/wiki/Q234738",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q152499",
+      "name": {
+        "fr": "guerre d'indépendance espagnole",
+        "en": "Peninsular War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q152499",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q173034",
+      "name": {
+        "fr": "bataille de Midway",
+        "en": "Battle of Midway"
+      },
+      "source": "https://www.wikidata.org/wiki/Q173034",
+      "reason": "north-america / 20th-century"
+    },
+    {
+      "id": "Q178510",
+      "name": {
+        "fr": "bataille de Mohács",
+        "en": "Battle of Mohács"
+      },
+      "source": "https://www.wikidata.org/wiki/Q178510",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q178850",
+      "name": {
+        "fr": "bataille de Salamine",
+        "en": "Battle of Salamis"
+      },
+      "source": "https://www.wikidata.org/wiki/Q178850",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q179591",
+      "name": {
+        "fr": "bataille de Cannes",
+        "en": "Battle of Cannae"
+      },
+      "source": "https://www.wikidata.org/wiki/Q179591",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q32929",
+      "name": {
+        "fr": "guerre de Succession d'Autriche",
+        "en": "War of the Austrian Succession"
+      },
+      "source": "https://www.wikidata.org/wiki/Q32929",
+      "reason": "north-america / early-modern"
+    },
+    {
+      "id": "Q371394",
+      "name": {
+        "fr": "guerre de libération du Bangladesh",
+        "en": "Bangladesh Liberation War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q371394",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q381375",
+      "name": {
+        "fr": "première guerre du Haut-Karabagh",
+        "en": "First Nagorno-Karabakh War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q381375",
+      "reason": "middle-east / 20th-century"
+    },
+    {
+      "id": "Q418151",
+      "name": {
+        "fr": "seconde guerre de l'opium",
+        "en": "Second Opium War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q418151",
+      "reason": "asia / 19th-century"
+    },
+    {
+      "id": "Q748780",
+      "name": {
+        "fr": "guerre d'Indochine",
+        "en": "First Indochina War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q748780",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q152004",
+      "name": {
+        "fr": "guerre du Pacifique",
+        "en": "War of the Pacific"
+      },
+      "source": "https://www.wikidata.org/wiki/Q152004",
+      "reason": "south-america / 19th-century"
+    },
+    {
+      "id": "Q160387",
+      "name": {
+        "fr": "bataille d'Actium",
+        "en": "Battle of Actium"
+      },
+      "source": "https://www.wikidata.org/wiki/Q160387",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q215112",
+      "name": {
+        "fr": "seconde guerre des Boers",
+        "en": "Second Boer War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q215112",
+      "reason": "africa / 19th-century"
+    },
+    {
+      "id": "Q151005",
+      "name": {
+        "fr": "bataille de Leipzig",
+        "en": "Battle of Leipzig"
+      },
+      "source": "https://www.wikidata.org/wiki/Q151005",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q151290",
+      "name": {
+        "fr": "bataille de Moscou",
+        "en": "Battle of Moscow"
+      },
+      "source": "https://www.wikidata.org/wiki/Q151290",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q180182",
+      "name": {
+        "fr": "bataille d'Iwo Jima",
+        "en": "Battle of Iwo Jima"
+      },
+      "source": "https://www.wikidata.org/wiki/Q180182",
+      "reason": "asia / 20th-century"
+    },
+    {
+      "id": "Q200855",
+      "name": {
+        "fr": "bataille de Vienne",
+        "en": "Battle of Vienna"
+      },
+      "source": "https://www.wikidata.org/wiki/Q200855",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q87779",
+      "name": {
+        "fr": "bataille de Teutobourg",
+        "en": "Battle of the Teutoburg Forest"
+      },
+      "source": "https://www.wikidata.org/wiki/Q87779",
+      "reason": "europe / classical"
+    },
+    {
+      "id": "Q120843",
+      "name": {
+        "fr": "seconde guerre de Tchétchénie",
+        "en": "Second Chechen War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q120843",
+      "reason": "europe / 20th-century"
+    },
+    {
+      "id": "Q154674",
+      "name": {
+        "fr": "traités d'Utrecht",
+        "en": "Peace of Utrecht"
+      },
+      "source": "https://www.wikidata.org/wiki/Q154674",
+      "reason": "europe / early-modern"
+    },
+    {
+      "id": "Q179670",
+      "name": {
+        "fr": "bataille de Gaugamèles",
+        "en": "Battle of Gaugamela"
+      },
+      "source": "https://www.wikidata.org/wiki/Q179670",
+      "reason": "middle-east / classical"
+    },
+    {
+      "id": "Q184320",
+      "name": {
+        "fr": "bataille de la Moskova",
+        "en": "Battle of Borodino"
+      },
+      "source": "https://www.wikidata.org/wiki/Q184320",
+      "reason": "europe / 19th-century"
+    },
+    {
+      "id": "Q6334",
+      "name": {
+        "fr": "troisième guerre punique",
+        "en": "Third Punic War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q6334",
+      "reason": "africa / classical"
+    },
+    {
+      "id": "Q58947",
+      "name": {
+        "fr": "guerre de la Triple-Alliance",
+        "en": "Paraguayan War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q58947",
+      "reason": "south-america / 19th-century"
+    },
+    {
+      "id": "Q139808",
+      "name": {
+        "fr": "bataille des champs Catalauniques",
+        "en": "Battle of the Maureaco Fields"
+      },
+      "source": "https://www.wikidata.org/wiki/Q139808",
+      "reason": "europe / late-antiquity"
+    },
+    {
+      "id": "Q190315",
+      "name": {
+        "fr": "accords de Dayton",
+        "en": "Dayton Agreement"
+      },
+      "source": "https://www.wikidata.org/wiki/Q190315",
+      "reason": "north-america / 20th-century"
+    },
+    {
+      "id": "Q190758",
+      "name": {
+        "fr": "guerre civile au Darfour",
+        "en": "War in Darfur"
+      },
+      "source": "https://www.wikidata.org/wiki/Q190758",
+      "reason": "africa / contemporary"
+    },
+    {
+      "id": "Q203233",
+      "name": {
+        "fr": "bataille de Plassey",
+        "en": "Battle of Plassey"
+      },
+      "source": "https://www.wikidata.org/wiki/Q203233",
+      "reason": "asia / early-modern"
+    },
+    {
+      "id": "Q33132",
+      "name": {
+        "fr": "bataille de Gettysburg",
+        "en": "Battle of Gettysburg"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33132",
+      "reason": "north-america / 19th-century"
+    },
+    {
+      "id": "Q200056",
+      "name": {
+        "fr": "bataille de Zama",
+        "en": "Battle of Zama"
+      },
+      "source": "https://www.wikidata.org/wiki/Q200056",
+      "reason": "africa / classical"
+    },
+    {
+      "id": "Q51661",
+      "name": {
+        "fr": "septième croisade",
+        "en": "Seventh Crusade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q51661",
+      "reason": "africa / medieval"
+    },
+    {
+      "id": "Q887684",
+      "name": {
+        "fr": "conquête musulmane de la Perse",
+        "en": "Muslim conquest of Persia"
+      },
+      "source": "https://www.wikidata.org/wiki/Q887684",
+      "reason": "asia / medieval"
+    },
+    {
+      "id": "Q94916",
+      "name": {
+        "fr": "seconde guerre italo-éthiopienne",
+        "en": "Second Italo-Ethiopian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q94916",
+      "reason": "africa / 20th-century"
+    },
+    {
+      "id": "Q154697",
+      "name": {
+        "fr": "guerre de la conquête",
+        "en": "French and Indian War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q154697",
+      "reason": "north-america / early-modern"
+    },
+    {
+      "id": "Q203729",
+      "name": {
+        "fr": "bataille de Qadesh",
+        "en": "Battle of Kadesh"
+      },
+      "source": "https://www.wikidata.org/wiki/Q203729",
+      "reason": "middle-east / ancient"
+    },
+    {
+      "id": "Q392541",
+      "name": {
+        "fr": "traité de San Francisco",
+        "en": "Treaty of San Francisco"
+      },
+      "source": "https://www.wikidata.org/wiki/Q392541",
+      "reason": "north-america / 20th-century"
+    },
+    {
+      "id": "Q201526",
+      "name": {
+        "fr": "bataille d'Issos",
+        "en": "Battle of Issus"
+      },
+      "source": "https://www.wikidata.org/wiki/Q201526",
+      "reason": "middle-east / classical"
+    },
+    {
+      "id": "Q243620",
+      "name": {
+        "fr": "guerre civile somalienne",
+        "en": "Somali Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q243620",
+      "reason": "africa / 20th-century"
+    },
+    {
+      "id": "Q243684",
+      "name": {
+        "fr": "huitième croisade",
+        "en": "Eighth Crusade"
+      },
+      "source": "https://www.wikidata.org/wiki/Q243684",
+      "reason": "africa / medieval"
+    },
+    {
+      "id": "Q157627",
+      "name": {
+        "fr": "bataille de l'Atlantique",
+        "en": "Battle of the Atlantic"
+      },
+      "source": "https://www.wikidata.org/wiki/Q157627",
+      "reason": "south-america / 20th-century"
+    },
+    {
+      "id": "Q329203",
+      "name": {
+        "fr": "première guerre des Boers",
+        "en": "First Boer War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q329203",
+      "reason": "africa / 19th-century"
+    },
+    {
+      "id": "Q108102583",
+      "name": {
+        "fr": "chute de Kaboul",
+        "en": "Fall of Kabul"
+      },
+      "source": "https://www.wikidata.org/wiki/Q108102583",
+      "reason": "asia / contemporary"
+    },
+    {
+      "id": "Q111017791",
+      "name": {
+        "fr": "bataille de Marioupol",
+        "en": "Siege of Mariupol"
+      },
+      "source": "https://www.wikidata.org/wiki/Q111017791",
+      "reason": "europe / contemporary"
+    },
+    {
+      "id": "Q192473",
+      "name": {
+        "fr": "bataille d'Andrinople",
+        "en": "Battle of Adrianople"
+      },
+      "source": "https://www.wikidata.org/wiki/Q192473",
+      "reason": "middle-east / late-antiquity"
+    },
+    {
+      "id": "Q500409",
+      "name": {
+        "fr": "guerres perso-romaines",
+        "en": "Roman–Persian Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q500409",
+      "reason": "middle-east / classical"
+    },
+    {
+      "id": "Q213074",
+      "name": {
+        "fr": "bataille de l'Hydaspe",
+        "en": "Battle of the Hydaspes"
+      },
+      "source": "https://www.wikidata.org/wiki/Q213074",
+      "reason": "asia / classical"
+    },
+    {
+      "id": "Q223126",
+      "name": {
+        "fr": "guerre du Chaco",
+        "en": "Chaco War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q223126",
+      "reason": "south-america / 20th-century"
+    },
+    {
+      "id": "Q475678",
+      "name": {
+        "fr": "guerre de la drogue au Mexique",
+        "en": "Mexican drug war"
+      },
+      "source": "https://www.wikidata.org/wiki/Q475678",
+      "reason": "north-america / contemporary"
+    },
+    {
+      "id": "Q205887",
+      "name": {
+        "fr": "bataille de Carrhes",
+        "en": "Battle of Carrhae"
+      },
+      "source": "https://www.wikidata.org/wiki/Q205887",
+      "reason": "middle-east / classical"
+    },
+    {
+      "id": "Q207165",
+      "name": {
+        "fr": "bataille de la mer de Corail",
+        "en": "Battle of the Coral Sea"
+      },
+      "source": "https://www.wikidata.org/wiki/Q207165",
+      "reason": "oceania / 20th-century"
+    },
+    {
+      "id": "Q875512",
+      "name": {
+        "fr": "traité de Turkmanchai",
+        "en": "Treaty of Turkmenchay"
+      },
+      "source": "https://www.wikidata.org/wiki/Q875512",
+      "reason": "middle-east / 19th-century"
+    },
+    {
+      "id": "Q228911",
+      "name": {
+        "fr": "guerre anglo-zouloue",
+        "en": "Anglo-Zulu War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q228911",
+      "reason": "africa / 19th-century"
+    },
+    {
+      "id": "Q234188",
+      "name": {
+        "fr": "bataille de Sekigahara",
+        "en": "Battle of Sekigahara"
+      },
+      "source": "https://www.wikidata.org/wiki/Q234188",
+      "reason": "asia / early-modern"
+    },
+    {
+      "id": "Q243979",
+      "name": {
+        "fr": "bataille d'Aboukir",
+        "en": "Battle of the Nile"
+      },
+      "source": "https://www.wikidata.org/wiki/Q243979",
+      "reason": "africa / early-modern"
+    },
+    {
+      "id": "Q253684",
+      "name": {
+        "fr": "expédition d'Égypte",
+        "en": "French invasion of Egypt and Syria"
+      },
+      "source": "https://www.wikidata.org/wiki/Q253684",
+      "reason": "africa / early-modern"
+    },
+    {
+      "id": "Q492415",
+      "name": {
+        "fr": "bataille de Talas",
+        "en": "Battle of Talas"
+      },
+      "source": "https://www.wikidata.org/wiki/Q492415",
+      "reason": "asia / medieval"
+    },
+    {
+      "id": "Q605321",
+      "name": {
+        "fr": "première bataille de Pânipat",
+        "en": "Battle of Panipat"
+      },
+      "source": "https://www.wikidata.org/wiki/Q605321",
+      "reason": "asia / early-modern"
+    },
+    {
+      "id": "Q849680",
+      "name": {
+        "fr": "guerres indiennes",
+        "en": "American Indian Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q849680",
+      "reason": "north-america / early-modern"
+    },
+    {
+      "id": "Q217145",
+      "name": {
+        "fr": "bataille de Guadalcanal",
+        "en": "Guadalcanal campaign"
+      },
+      "source": "https://www.wikidata.org/wiki/Q217145",
+      "reason": "oceania / 20th-century"
+    },
+    {
+      "id": "Q576338",
+      "name": {
+        "fr": "guerre d'Imjin",
+        "en": "Japanese invasions of Korea"
+      },
+      "source": "https://www.wikidata.org/wiki/Q576338",
+      "reason": "asia / early-modern"
+    },
+    {
+      "id": "Q332543",
+      "name": {
+        "fr": "bataille des Pyramides",
+        "en": "Battle of the Pyramids"
+      },
+      "source": "https://www.wikidata.org/wiki/Q332543",
+      "reason": "africa / early-modern"
+    },
+    {
+      "id": "Q339321",
+      "name": {
+        "fr": "bataille du pont Milvius",
+        "en": "Battle of the Milvian Bridge"
+      },
+      "source": "https://www.wikidata.org/wiki/Q339321",
+      "reason": "europe / late-antiquity"
+    },
+    {
+      "id": "Q137847",
+      "name": {
+        "fr": "traité d'Andrinople",
+        "en": "treaty of Adrianople"
+      },
+      "source": "https://www.wikidata.org/wiki/Q137847",
+      "reason": "middle-east / 19th-century"
+    },
+    {
+      "id": "Q2092093",
+      "name": {
+        "fr": "conquêtes mongoles",
+        "en": "Mongol invasions and conquests"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2092093",
+      "reason": "asia / medieval"
+    },
+    {
+      "id": "Q745110",
+      "name": {
+        "fr": "bataille de Tchaldiran",
+        "en": "Battle of Chaldiran"
+      },
+      "source": "https://www.wikidata.org/wiki/Q745110",
+      "reason": "middle-east / early-modern"
+    },
+    {
+      "id": "Q112114958",
+      "name": {
+        "fr": "bataille de Bakhmout",
+        "en": "Battle of Bakhmut"
+      },
+      "source": "https://www.wikidata.org/wiki/Q112114958",
+      "reason": "europe / contemporary"
+    },
+    {
+      "id": "Q1420115",
+      "name": {
+        "fr": "guerre russo-persane de 1826-1828",
+        "en": "Russo-Persian War of 1826–28"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1420115",
+      "reason": "middle-east / 19th-century"
+    },
+    {
+      "id": "Q751743",
+      "name": {
+        "fr": "rébellion des Turbans jaunes",
+        "en": "Yellow Turban Rebellion"
+      },
+      "source": "https://www.wikidata.org/wiki/Q751743",
+      "reason": "asia / classical"
+    },
+    {
+      "id": "Q179275",
+      "name": {
+        "fr": "conflit armé du Nord-Ouest du Pakistan",
+        "en": "insurgency in Khyber Pakhtunkhwa"
+      },
+      "source": "https://www.wikidata.org/wiki/Q179275",
+      "reason": "asia / contemporary"
+    },
+    {
+      "id": "Q733364",
+      "name": {
+        "fr": "bataille de Megiddo",
+        "en": "Battle of Megiddo"
+      },
+      "source": "https://www.wikidata.org/wiki/Q733364",
+      "reason": "middle-east / ancient"
+    },
+    {
+      "id": "Q830059",
+      "name": {
+        "fr": "bataille de la Falaise rouge",
+        "en": "Battle of Red Cliffs"
+      },
+      "source": "https://www.wikidata.org/wiki/Q830059",
+      "reason": "asia / classical"
+    },
+    {
+      "id": "Q737542",
+      "name": {
+        "fr": "guerre de Genpei",
+        "en": "Genpei War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q737542",
+      "reason": "asia / medieval"
+    },
+    {
+      "id": "Q250309",
+      "name": {
+        "fr": "bataille de Tarawa",
+        "en": "Battle of Tarawa"
+      },
+      "source": "https://www.wikidata.org/wiki/Q250309",
+      "reason": "oceania / 20th-century"
+    },
+    {
+      "id": "Q317519",
+      "name": {
+        "fr": "conquête rashidun de l'Égypte",
+        "en": "Arab conquest of Egypt"
+      },
+      "source": "https://www.wikidata.org/wiki/Q317519",
+      "reason": "africa / medieval"
+    },
+    {
+      "id": "Q430726",
+      "name": {
+        "fr": "guerre anglo-espagnole",
+        "en": "Anglo-Spanish War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q430726",
+      "reason": "south-america / early-modern"
+    },
+    {
+      "id": "Q827612",
+      "name": {
+        "fr": "guerre de Jugurtha",
+        "en": "Jugurthine War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q827612",
+      "reason": "africa / classical"
+    },
+    {
+      "id": "Q836944",
+      "name": {
+        "fr": "bataille de la rivière froide",
+        "en": "Battle of the Frigidus"
+      },
+      "source": "https://www.wikidata.org/wiki/Q836944",
+      "reason": "europe / late-antiquity"
+    },
+    {
+      "id": "Q1136575",
+      "name": {
+        "fr": "Guerre des Vandales",
+        "en": "Vandalic War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1136575",
+      "reason": "africa / medieval"
+    },
+    {
+      "id": "Q1121532",
+      "name": {
+        "fr": "bataille des Trois Rois",
+        "en": "Battle of Alcácer Quibir"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1121532",
+      "reason": "africa / early-modern"
+    },
+    {
+      "id": "Q427958",
+      "name": {
+        "fr": "bataille de Sinope",
+        "en": "Battle of Sinop"
+      },
+      "source": "https://www.wikidata.org/wiki/Q427958",
+      "reason": "middle-east / 19th-century"
+    },
+    {
+      "id": "Q636771",
+      "name": {
+        "fr": "conquête de l'empire inca",
+        "en": "Spanish conquest of the Inca Empire"
+      },
+      "source": "https://www.wikidata.org/wiki/Q636771",
+      "reason": "south-america / early-modern"
+    },
+    {
+      "id": "Q961430",
+      "name": {
+        "fr": "guerre de Chypre",
+        "en": "Ottoman–Venetian War of 1570–1573"
+      },
+      "source": "https://www.wikidata.org/wiki/Q961430",
+      "reason": "middle-east / early-modern"
+    },
+    {
+      "id": "Q655480",
+      "name": {
+        "fr": "quasi-guerre",
+        "en": "Quasi-War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q655480",
+      "reason": "south-america / early-modern"
+    },
+    {
+      "id": "Q934157",
+      "name": {
+        "fr": "bataille d'Ayacucho",
+        "en": "Battle of Ayacucho"
+      },
+      "source": "https://www.wikidata.org/wiki/Q934157",
+      "reason": "south-america / 19th-century"
+    },
+    {
+      "id": "Q849653",
+      "name": {
+        "fr": "bataille de Thapsus",
+        "en": "Battle of Thapsus"
+      },
+      "source": "https://www.wikidata.org/wiki/Q849653",
+      "reason": "africa / classical"
+    },
+    {
+      "id": "Q253155",
+      "name": {
+        "fr": "traité de paix égypto-hittite",
+        "en": "Egyptian–Hittite peace treaty"
+      },
+      "source": "https://www.wikidata.org/wiki/Q253155",
+      "reason": "middle-east / ancient"
+    },
+    {
+      "id": "Q734700",
+      "name": {
+        "fr": "bataille d'Avarayr",
+        "en": "Battle of Avarayr"
+      },
+      "source": "https://www.wikidata.org/wiki/Q734700",
+      "reason": "middle-east / late-antiquity"
+    },
+    {
+      "id": "Q841211",
+      "name": {
+        "fr": "bataille de la Nedao",
+        "en": "Battle of Nedao"
+      },
+      "source": "https://www.wikidata.org/wiki/Q841211",
+      "reason": "europe / late-antiquity"
+    },
+    {
+      "id": "Q2060524",
+      "name": {
+        "fr": "traité de Qasr-i-Chirin",
+        "en": "Treaty of Zuhab"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2060524",
+      "reason": "middle-east / early-modern"
+    },
+    {
+      "id": "Q700841",
+      "name": {
+        "fr": "guerre ottomano-persanne",
+        "en": "Ottoman-Safavid War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q700841",
+      "reason": "middle-east / early-modern"
+    },
+    {
+      "id": "Q714557",
+      "name": {
+        "fr": "guerre du Kalinga",
+        "en": "Kalinga War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q714557",
+      "reason": "asia / classical"
+    },
+    {
+      "id": "Q767848",
+      "name": {
+        "fr": "bataille d'Andrinople",
+        "en": "Battle of Adrianople (324)"
+      },
+      "source": "https://www.wikidata.org/wiki/Q767848",
+      "reason": "middle-east / late-antiquity"
+    },
+    {
+      "id": "Q98371472",
+      "name": {
+        "fr": "Accord de paix entre Israël et les Émirats arabes unis",
+        "en": "Israel–United Arab Emirates normalization agreement"
+      },
+      "source": "https://www.wikidata.org/wiki/Q98371472",
+      "reason": "north-america / contemporary"
+    },
+    {
+      "id": "Q377269",
+      "name": {
+        "fr": "guerre néerlando-portugaise",
+        "en": "Dutch–Portuguese War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q377269",
+      "reason": "south-america / early-modern"
+    },
+    {
+      "id": "Q880629",
+      "name": {
+        "fr": "guerre noire",
+        "en": "Black War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q880629",
+      "reason": "oceania / 19th-century"
+    },
+    {
+      "id": "Q1273506",
+      "name": {
+        "fr": "bataille de Muye",
+        "en": "Battle of Muye"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1273506",
+      "reason": "asia / ancient"
+    },
+    {
+      "id": "Q133821305",
+      "name": {
+        "fr": "accord de paix entre l'Arménie et l'Azerbaïdjan",
+        "en": "Armenia-Azerbaijan peace agreement"
+      },
+      "source": "https://www.wikidata.org/wiki/Q133821305",
+      "reason": "north-america / contemporary"
+    },
+    {
+      "id": "Q1545405",
+      "name": {
+        "fr": "Guerres de Nouvelle-Zélande",
+        "en": "New Zealand Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1545405",
+      "reason": "oceania / 19th-century"
+    },
+    {
+      "id": "Q30041564",
+      "name": {
+        "fr": "bataille de Marawi",
+        "en": "Siege of Marawi"
+      },
+      "source": "https://www.wikidata.org/wiki/Q30041564",
+      "reason": "asia / contemporary"
+    },
+    {
+      "id": "Q849474",
+      "name": {
+        "fr": "bataille de Qarqar",
+        "en": "Battle of Qarqar"
+      },
+      "source": "https://www.wikidata.org/wiki/Q849474",
+      "reason": "middle-east / ancient"
+    },
+    {
+      "id": "Q1333898",
+      "name": {
+        "fr": "bataille de la rivière Fei",
+        "en": "Battle of Fei River"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1333898",
+      "reason": "asia / late-antiquity"
+    },
+    {
+      "id": "Q1192398",
+      "name": {
+        "fr": "Guerres des mousquets",
+        "en": "Musket Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1192398",
+      "reason": "oceania / 19th-century"
+    },
+    {
+      "id": "Q1231697",
+      "name": {
+        "fr": "bataille de Samarra",
+        "en": "Driving car"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1231697",
+      "reason": "middle-east / late-antiquity"
+    },
+    {
+      "id": "Q1036947",
+      "name": {
+        "fr": "bataille du delta du Nil",
+        "en": "Battle of the Delta"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1036947",
+      "reason": "africa / ancient"
+    },
+    {
+      "id": "Q25517452",
+      "name": {
+        "fr": "bataille de la Tollense",
+        "en": "Battle of the Tollense River"
+      },
+      "source": "https://www.wikidata.org/wiki/Q25517452",
+      "reason": "europe / ancient"
+    },
+    {
+      "id": "Q519546",
+      "name": {
+        "fr": "guerre civile nauruane",
+        "en": "Nauruan Civil War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q519546",
+      "reason": "oceania / 19th-century"
+    },
+    {
+      "id": "Q99207513",
+      "name": {
+        "en": "Bahrain–Israel peace agreement"
+      },
+      "source": "https://www.wikidata.org/wiki/Q99207513",
+      "reason": "north-america / contemporary"
+    },
+    {
+      "id": "Q612221",
+      "name": {
+        "fr": "bataille du cap Bon",
+        "en": "Battle of Cape Bon"
+      },
+      "source": "https://www.wikidata.org/wiki/Q612221",
+      "reason": "africa / late-antiquity"
+    },
+    {
+      "id": "Q2889339",
+      "name": {
+        "fr": "guerres de la frontière en Australie",
+        "en": "Australian frontier wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2889339",
+      "reason": "oceania / early-modern"
+    },
+    {
+      "id": "Q11789247",
+      "name": {
+        "fr": "Conquête vandale de l'Afrique romaine",
+        "en": "Vandal conquest of Roman Africa"
+      },
+      "source": "https://www.wikidata.org/wiki/Q11789247",
+      "reason": "africa / late-antiquity"
+    },
+    {
+      "id": "Q703426",
+      "name": {
+        "fr": "guerre Koguryo-Wa",
+        "en": "Goguryeo–Wa War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q703426",
+      "reason": "asia / late-antiquity"
+    },
+    {
+      "id": "Q30742713",
+      "name": {
+        "fr": "prise de Carthage",
+        "en": "Capture of Carthage"
+      },
+      "source": "https://www.wikidata.org/wiki/Q30742713",
+      "reason": "africa / late-antiquity"
+    },
+    {
+      "id": "Q3271041",
+      "name": {
+        "en": "Battle of Canhe Slope"
+      },
+      "source": "https://www.wikidata.org/wiki/Q3271041",
+      "reason": "asia / late-antiquity"
+    },
+    {
+      "id": "Q1152668",
+      "name": {
+        "en": "Battle of Perire"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1152668",
+      "reason": "africa / ancient"
+    },
+    {
+      "id": "Q122453766",
+      "name": {
+        "fr": "Guerre civile romaine (427–429)",
+        "en": "Roman civil war of 427-429"
+      },
+      "source": "https://www.wikidata.org/wiki/Q122453766",
+      "reason": "africa / late-antiquity"
+    },
+    {
+      "id": "Q18148539",
+      "name": {
+        "en": "Tikal–Calakmul wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q18148539",
+      "reason": "north-america / medieval"
+    },
+    {
+      "id": "Q2339983",
+      "name": {
+        "en": "Battle of the Maule"
+      },
+      "source": "https://www.wikidata.org/wiki/Q2339983",
+      "reason": "south-america / medieval"
+    },
+    {
+      "id": "Q950914",
+      "name": {
+        "en": "Battle of Penfui"
+      },
+      "source": "https://www.wikidata.org/wiki/Q950914",
+      "reason": "oceania / early-modern"
+    },
+    {
+      "id": "Q10920656",
+      "name": {
+        "fr": "Guerre entre la dynastie Zhou et l'État de Chu",
+        "en": "Zhou–Chu War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q10920656",
+      "reason": "asia / ancient"
+    },
+    {
+      "id": "Q16966331",
+      "name": {
+        "fr": "Guerre Yan-Gojoseon",
+        "en": "Gojoseon–Yan War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q16966331",
+      "reason": "asia / late-antiquity"
+    },
+    {
+      "id": "Q21006622",
+      "name": {
+        "en": "Battle of Pasca"
+      },
+      "source": "https://www.wikidata.org/wiki/Q21006622",
+      "reason": "south-america / medieval"
+    },
+    {
+      "id": "Q387238",
+      "name": {
+        "en": "Battle of Tlatelolco"
+      },
+      "source": "https://www.wikidata.org/wiki/Q387238",
+      "reason": "north-america / medieval"
+    },
+    {
+      "id": "Q5722345",
+      "name": {
+        "en": "Battle of Chocontá"
+      },
+      "source": "https://www.wikidata.org/wiki/Q5722345",
+      "reason": "south-america / medieval"
+    },
+    {
+      "id": "Q1966558",
+      "name": {
+        "fr": "guerre du salpêtre",
+        "en": "Saltpeter War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q1966558",
+      "reason": "north-america / medieval"
+    },
+    {
+      "id": "Q66474138",
+      "name": {
+        "fr": "campagne de Catatumbo",
+        "en": "Catatumbo campaign"
+      },
+      "source": "https://www.wikidata.org/wiki/Q66474138",
+      "reason": "south-america / contemporary"
+    },
+    {
+      "id": "Q8244305",
+      "name": {
+        "en": "Battle of Matasiete"
+      },
+      "source": "https://www.wikidata.org/wiki/Q8244305",
+      "reason": "south-america / contemporary"
+    },
+    {
+      "id": "Q105973572",
+      "name": {
+        "fr": "guerres hispano-chamorras",
+        "en": "Spanish–Chamorro Wars"
+      },
+      "source": "https://www.wikidata.org/wiki/Q105973572",
+      "reason": "oceania / early-modern"
+    },
+    {
+      "id": "Q4870490",
+      "name": {
+        "en": "Battle of Bitter Lakes"
+      },
+      "source": "https://www.wikidata.org/wiki/Q4870490",
+      "reason": "africa / ancient"
+    },
+    {
+      "id": "Q4871235",
+      "name": {
+        "en": "Battle of Hingakaka"
+      },
+      "source": "https://www.wikidata.org/wiki/Q4871235",
+      "reason": "oceania / early-modern"
+    },
+    {
+      "id": "Q19546198",
+      "name": {
+        "en": "Deception Island incident"
+      },
+      "source": "https://www.wikidata.org/wiki/Q19546198",
+      "reason": "global / 20th-century"
+    },
+    {
+      "id": "Q33133080",
+      "name": {
+        "en": "Llochegua Clashes"
+      },
+      "source": "https://www.wikidata.org/wiki/Q33133080",
+      "reason": "south-america / contemporary"
+    },
+    {
+      "id": "Q124304483",
+      "name": {
+        "en": "Siege of Naqada"
+      },
+      "source": "https://www.wikidata.org/wiki/Q124304483",
+      "reason": "africa / ancient"
+    },
+    {
+      "id": "Q125753108",
+      "name": {
+        "fr": "guerre inca-huanca",
+        "en": "Huanca–Inca War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q125753108",
+      "reason": "south-america / medieval"
+    },
+    {
+      "id": "Q18150751",
+      "name": {
+        "fr": "première guerre Tikal–Calakmul",
+        "en": "First Tikal–Calakmul War"
+      },
+      "source": "https://www.wikidata.org/wiki/Q18150751",
+      "reason": "north-america / medieval"
+    },
+    {
+      "id": "Q27230926",
+      "name": {
+        "en": "Agreements of Havana"
+      },
+      "source": "https://www.wikidata.org/wiki/Q27230926",
+      "reason": "south-america / contemporary"
+    },
+    {
+      "id": "Q112106967",
+      "name": {
+        "en": "Mycenaean conquest of Crete"
+      },
+      "source": "https://www.wikidata.org/wiki/Q112106967",
+      "reason": "europe / ancient"
+    }
+  ]
+}

@@ -11,6 +11,7 @@ Priorité confirmée par l’utilisateur : le territoire qui se redessine est le
 - Next.js App Router, React, TypeScript strict, export statique. Les pages de référence sont produites à la compilation ; l’atlas est un composant client chargé progressivement. Déploiement autonome Nginx, sans service propriétaire.
 - MapLibre GL : globe initial, projection Mercator alternative ; un fond physique Natural Earth et des instantanés de frontières en PMTiles locaux. Requêtes HTTP Range, sans serveur de tuiles. Deck.gl est chargé à l’ouverture d’une campagne pour son tracé animé.
 - Deux plans de données : tuiles vectorielles pour les géométries et filtrage dans le moteur cartographique ; petits index par période pour les listes et fiches JSON individuelles. L’interface ne charge pas un GeoJSON mondial.
+- Les événements disposent de 61 archives temporelles, avec une marge de 25 ans et inclusion des événements longs par chevauchement. La navigation annuelle utilise une seule source vectorielle et conserve l’archive chargée tant qu’elle couvre la fenêtre visible. Une plage explicite, une guerre complète ou les traces autorisent l’archive globale. Le filtrage dans MapLibre ne remplace pas ce découpage des transferts.
 - Zustand porte l’état partageable ; parseur/encodeur URL testé, paramètres bornés et invalides ignorés. La carte s’abonne directement au store pour éviter un rendu React global à chaque année.
 - Dates historiques : module pur sans Date JavaScript, années astronomiques, précision et calendrier explicités. Les conversions des conventions BCE sont testées et documentées.
 - Recherche MiniSearch dans un Web Worker, index chargé seulement à la première recherche ; téléchargement progressif des tranches. Les résultats doivent piloter carte et année.
@@ -26,7 +27,7 @@ Le globe est l’élément principal. Océan bleu encre #071b29, relief ardoise 
 
 ## Frontières entre modules
 
-`pipeline/` produit `public/data/` et `public/geo/`. `lib/schema.ts` définit le contrat Zod partagé. `lib/histdate/` ne dépend ni du réseau ni de React. `lib/data-client/` gère cache, annulation et chargement. `components/map/` possède le cycle de vie WebGL ; `components/timeline/` anime le temps ; les panneaux sont des consommateurs de données. Les parcours sont déclaratifs dans `content/stories/`.
+`pipeline/` produit `public/data/` et `public/geo/`. `lib/schema.ts` définit le contrat Zod partagé. `lib/histdate/` ne dépend ni du réseau ni de React. `lib/data-client/` gère le cache et le chargement ; les consommateurs ignorent les réponses devenues obsolètes. `components/map/` possède le cycle de vie WebGL ; `components/timeline/` anime le temps ; les panneaux sont des consommateurs de données. Les parcours sont déclaratifs dans `content/stories/`.
 
 ## Risques et critères mesurables
 
@@ -60,3 +61,14 @@ Les couches indépendantes peuvent être préparées en parallèle ; chaque jalo
 - https://www.naturalearthdata.com/about/terms-of-use/
 - https://github.com/Seshat-Global-History-Databank/cliopatria
 - https://doi.org/10.1038/s41597-025-04516-9
+
+## Ajustements issus des essais
+
+- MapLibre 6 distribue un worker ESM séparé. Un pré-script copie ses modules et sa licence sous une URL locale versionnée ; le navigateur reçoit cette URL explicitement. Nginx sert correctement les fichiers `.mjs`.
+- À faible zoom et au repos, un worker regroupe les seuls événements déjà rendus et filtrés par les tuiles, dans l’espace écran. Les QID sont dédupliqués. Le petit GeoJSON de regroupement est un résultat de visualisation, pas une nouvelle source historique. Les marqueurs vectoriels reprennent immédiatement pendant la lecture, le déplacement ou les changements de filtre.
+- Les ancêtres militaires attestés par P361/P527 sont propagés avec protection contre les cycles : une guerre peut retrouver les batailles de ses campagnes intermédiaires. Un parent géographique ou organisationnel ne devient pas artificiellement une guerre.
+- Les relations militaires sans dates parentales suffisantes ou incompatibles avec leurs bornes sont mises en quarantaine, séparément des événements. La vue liste utilise les mêmes regroupements validés que la carte.
+- Les labels temporels sont conservés dès le zoom mondial lors de la génération PMTiles. Une suppression préalable des points rendrait certains noms définitivement indisponibles après filtrage par année. La taille des noms dépend du zoom et de la superficie documentée.
+- MapLibre 6 sous-compte certaines requêtes sur tout le viewport en projection globe. Les lectures de la vue au repos sont donc découpées en rectangles de 256 pixels et dédupliquées ; Mercator conserve sa requête unique. Ce contrôle concerne les regroupements de marqueurs et le carnet des territoires visibles.
+- Les fiches s’ouvrent explicitement depuis campagnes et récits, afin de préserver leurs commandes sur mobile. Les titres disponibles seulement dans une langue d’origine sont conservés avec cette langue indiquée ; aucune traduction historique n’est inventée.
+- Les tests fonctionnels restent indépendants du benchmark GPU. L’audit Lighthouse applique le ralentissement mobile pendant la capture (`devtools`) et conserve les seuils 85/95/95. La mesure du délai de rendu territorial et du JavaScript complet est séparée : le score Lighthouse ne suffit pas à certifier ces budgets.

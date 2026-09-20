@@ -1,0 +1,10 @@
+{
+  "purpose": "Identify explicitly sourced air battles, which can legitimately occur over open water.",
+  "verifiedBy": "Live Wikidata labels queried through WDQS, 2026-09-20",
+  "air": [
+    { "id": "Q9173759", "label": "air battle", "source": "https://www.wikidata.org/wiki/Q9173759" },
+    { "id": "Q830494", "label": "dogfight", "source": "https://www.wikidata.org/wiki/Q830494" },
+    { "id": "Q16335379", "label": "aerial ramming", "source": "https://www.wikidata.org/wiki/Q16335379" }
+  ],
+  "navalDescriptionRule": "Only explicit English 'naval battle' or French 'bataille navale' descriptions may refine an otherwise generic battle type; descriptions referring merely to a naval war are insufficient."
+}

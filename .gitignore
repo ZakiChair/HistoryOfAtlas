@@ -9,9 +9,14 @@ data/geography/build/
 .env*
 test-results/
 playwright-report/
+performance-report/
 .lighthouseci/
 .DS_Store
 data/geography/*.geojson
 data/geography/*.log
 **/__pycache__/
 public/geo/*.sha256
+data/events.geojson
+public/vendor/
+public/.data-build-*/
+public/data.previous-*/

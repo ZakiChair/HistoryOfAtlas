@@ -1,0 +1,216 @@
+{
+  "id": "Q551888",
+  "title": {
+    "fr": "guerres d'Alexandre le Grand",
+    "en": "Wars of Alexander the Great"
+  },
+  "description": {
+    "fr": "Un parcours de lieux et de dates documentés. Chaque étape conserve sa source ; les frontières montrent le contexte de la période.",
+    "en": "A journey through documented places and dates. Each step retains its source; borders show the context of the period."
+  },
+  "sources": [
+    {
+      "label": "Wikidata · P361/P527",
+      "url": "https://www.wikidata.org/wiki/Q551888",
+      "license": "CC0-1.0"
+    }
+  ],
+  "steps": [
+    {
+      "eventId": "Q137864271",
+      "text": {
+        "fr": "Battle of Thessaly — 336 av. J.-C.. Lieu indiqué par la source : Vale of Tempe.",
+        "en": "Battle of Thessaly — 336 BCE. Place recorded by the source: Vale of Tempe."
+      }
+    },
+    {
+      "eventId": "Q19823647",
+      "text": {
+        "fr": "Battle of Mount Haemus — 335 av. J.-C.. Lieu indiqué par la source : Haemus Mons.",
+        "en": "Battle of Mount Haemus — 335 BCE. Place recorded by the source: Haemus Mons."
+      }
+    },
+    {
+      "eventId": "Q2237798",
+      "text": {
+        "fr": "bataille de Thèbes — 335 av. J.-C.. Lieu indiqué par la source : Thebes.",
+        "en": "Battle of Thebes — 335 BCE. Place recorded by the source: Thebes."
+      }
+    },
+    {
+      "eventId": "Q260684",
+      "text": {
+        "fr": "campagne d'Alexandre le Grand de 335 — 335 av. J.-C.. Lieu indiqué par la source : Ancient Greece.",
+        "en": "Alexander's Balkan campaign — 335 BCE. Place recorded by the source: Ancient Greece."
+      }
+    },
+    {
+      "eventId": "Q9172447",
+      "text": {
+        "fr": "Battle of Shipka Pass — 335 av. J.-C.. Lieu indiqué par la source : Shipka Pass.",
+        "en": "Battle of Shipka Pass — 335 BCE. Place recorded by the source: Shipka Pass."
+      }
+    },
+    {
+      "eventId": "Q6200334",
+      "text": {
+        "fr": "siège de Pélion — décembre 335 av. J.-C.. Lieu indiqué par la source : Pelion.",
+        "en": "Siege of Pelium — December 335 BCE. Place recorded by the source: Pelion."
+      }
+    },
+    {
+      "eventId": "Q11794911",
+      "text": {
+        "fr": "siège de Termessos — 334 av. J.-C.. Lieu indiqué par la source : Termessus.",
+        "en": "Siege of Termessos — 334 BCE. Place recorded by the source: Termessus."
+      }
+    },
+    {
+      "eventId": "Q1432300",
+      "text": {
+        "fr": "guerre d'Agis — 334 av. J.-C.. Lieu indiqué par la source : Peloponnese.",
+        "en": "War of Agis — 334 BCE. Place recorded by the source: Peloponnese."
+      }
+    },
+    {
+      "eventId": "Q28933",
+      "text": {
+        "fr": "siège d'Halicarnasse — 334 av. J.-C.. Lieu indiqué par la source : Halicarnassus.",
+        "en": "Siege of Halicarnassus — 334 BCE. Place recorded by the source: Halicarnassus."
+      }
+    },
+    {
+      "eventId": "Q4115121",
+      "text": {
+        "fr": "siège de Milet — 334 av. J.-C.. Lieu indiqué par la source : Miletus.",
+        "en": "Siege of Miletus — 334 BCE. Place recorded by the source: Miletus."
+      }
+    },
+    {
+      "eventId": "Q192938",
+      "text": {
+        "fr": "bataille du Granique — mai 334 av. J.-C.. Lieu indiqué par la source : Biga River.",
+        "en": "Battle of the Granicus — May 334 BCE. Place recorded by the source: Biga River."
+      }
+    },
+    {
+      "eventId": "Q201526",
+      "text": {
+        "fr": "bataille d'Issos — 5 novembre 333 av. J.-C.. Lieu indiqué par la source : Issus.",
+        "en": "Battle of Issus — 5 November 333 BCE. Place recorded by the source: Issus."
+      }
+    },
+    {
+      "eventId": "Q815233",
+      "text": {
+        "fr": "siège de Tyr — janvier 332 av. J.-C.. Lieu indiqué par la source : Tyre.",
+        "en": "Siege of Tyre — January 332 BCE. Place recorded by the source: Tyre."
+      }
+    },
+    {
+      "eventId": "Q815143",
+      "text": {
+        "fr": "siège de Gaza — octobre 332 av. J.-C.. Lieu indiqué par la source : Gaza City.",
+        "en": "Siege of Gaza — October 332 BCE. Place recorded by the source: Gaza City."
+      }
+    },
+    {
+      "eventId": "Q223220",
+      "text": {
+        "fr": "bataille de Mégalopolis — 331 av. J.-C.. Lieu indiqué par la source : Megalopolis.",
+        "en": "Battle of Megalopolis — 331 BCE. Place recorded by the source: Megalopolis."
+      }
+    },
+    {
+      "eventId": "Q179670",
+      "text": {
+        "fr": "bataille de Gaugamèles — 1 octobre 331 av. J.-C.. Lieu indiqué par la source : Gaugamela.",
+        "en": "Battle of Gaugamela — 1 October 331 BCE. Place recorded by the source: Gaugamela."
+      }
+    },
+    {
+      "eventId": "Q15197556",
+      "text": {
+        "fr": "Battle of the Uxian Defile — décembre 331 av. J.-C.. Localisation indiquée par Wikidata.",
+        "en": "Battle of the Uxian Defile — December 331 BCE. Location recorded by Wikidata."
+      }
+    },
+    {
+      "eventId": "Q112016",
+      "text": {
+        "fr": "bataille des Portes persiques — 20 janvier 330 av. J.-C.. Lieu indiqué par la source : Persian Gates.",
+        "en": "Battle of the Persian Gate on the Mountain — 20 January 330 BCE. Place recorded by the source: Persian Gates."
+      }
+    },
+    {
+      "eventId": "Q4087495",
+      "text": {
+        "fr": "bataille du Polytimète — 329 av. J.-C.. Lieu indiqué par la source : Zeravshan.",
+        "en": "Battle of Polytimetus — 329 BCE. Place recorded by the source: Zeravshan."
+      }
+    },
+    {
+      "eventId": "Q7509958",
+      "text": {
+        "fr": "siège de Cyropolis — 329 av. J.-C.. Lieu indiqué par la source : Cyropolis.",
+        "en": "Siege of Cyropolis — 329 BCE. Place recorded by the source: Cyropolis."
+      }
+    },
+    {
+      "eventId": "Q123215",
+      "text": {
+        "fr": "bataille de Jaxartes — octobre 329 av. J.-C.. Lieu indiqué par la source : Syr Darya.",
+        "en": "Battle of Jaxartes — October 329 BCE. Place recorded by the source: Syr Darya."
+      }
+    },
+    {
+      "eventId": "Q2237498",
+      "text": {
+        "fr": "Battle of Gabai — 328 av. J.-C.. Lieu indiqué par la source : Bukhara.",
+        "en": "Battle of Gabai — 328 BCE. Place recorded by the source: Bukhara."
+      }
+    },
+    {
+      "eventId": "Q1887690",
+      "text": {
+        "fr": "siège de la roche de Sogdiane — 327 av. J.-C.. Lieu indiqué par la source : Sogdia.",
+        "en": "Siege of the Sogdian Rock — 327 BCE. Place recorded by the source: Sogdia."
+      }
+    },
+    {
+      "eventId": "Q4200795",
+      "text": {
+        "fr": "campagne indienne d’Alexandre le Grand — 327 av. J.-C.. Lieu indiqué par la source : Indus Valley.",
+        "en": "Indian campaign of Alexander the Great — 327 BCE. Place recorded by the source: Indus Valley."
+      }
+    },
+    {
+      "eventId": "Q5168559",
+      "text": {
+        "fr": "campagne de Cophen — mai 327 av. J.-C.. Lieu indiqué par la source : Swat District.",
+        "en": "Cophen Campaign — May 327 BCE. Place recorded by the source: Swat District."
+      }
+    },
+    {
+      "eventId": "Q131564123",
+      "text": {
+        "fr": "siège d'Aornos — avril 326 av. J.-C.. Lieu indiqué par la source : Aornos.",
+        "en": "Siege of Aornos — April 326 BCE. Place recorded by the source: Aornos."
+      }
+    },
+    {
+      "eventId": "Q213074",
+      "text": {
+        "fr": "bataille de l'Hydaspe — mai 326 av. J.-C.. Lieu indiqué par la source : Jhelum River.",
+        "en": "Battle of the Hydaspes — May 326 BCE. Place recorded by the source: Jhelum River."
+      }
+    },
+    {
+      "eventId": "Q6744162",
+      "text": {
+        "fr": "campagne de Mallian — novembre 326 av. J.-C.. Lieu indiqué par la source : Punjab.",
+        "en": "Mallian Campaign — November 326 BCE. Place recorded by the source: Punjab."
+      }
+    }
+  ]
+}
