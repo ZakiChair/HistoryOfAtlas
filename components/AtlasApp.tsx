@@ -29,7 +29,8 @@ import {
   Footprints,
   History,
 } from 'lucide-react';
-import { parseAtlasUrl, serializeAtlasUrl, useAtlasStore } from '@/lib/store';
+import { useAtlasStore } from '@/lib/store';
+import { createAtlasUrlSync } from '@/lib/store/url-sync';
 import { useI18n } from '@/lib/i18n';
 import { CURRENT_YEAR, getEra } from '@/lib/eras';
 import { formatYear } from '@/lib/histdate';
@@ -242,17 +243,14 @@ export default function AtlasApp() {
   useEffect(() => {
     useAtlasStore.getState().hydrateFromUrl(window.location.search);
     setHydrated(true);
-    let timer: ReturnType<typeof setTimeout>;
-    const unsubscribe = useAtlasStore.subscribe((state) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        const query = serializeAtlasUrl(state);
-        if (location.search !== query)
-          history.replaceState(null, '', `${location.pathname}${query}`);
-      }, 180);
+    const urlSync = createAtlasUrlSync({
+      getState: useAtlasStore.getState,
+      subscribe: (listener) => useAtlasStore.subscribe(listener),
+      readQuery: () => window.location.search,
+      writeQuery: (query) => history.replaceState(null, '', `${location.pathname}${query}`),
+      hydrateQuery: (query) => useAtlasStore.getState().hydrateFromUrl(query),
     });
-    const pop = () => useAtlasStore.setState(parseAtlasUrl(window.location.search));
-    window.addEventListener('popstate', pop);
+    window.addEventListener('popstate', urlSync.restore);
     const listener = (event: Event) => setTerritories((event as CustomEvent<Territory[]>).detail);
     window.addEventListener('atlas:territories', listener);
     const key = (event: KeyboardEvent) => {
@@ -272,9 +270,8 @@ export default function AtlasApp() {
     };
     window.addEventListener('keydown', key);
     return () => {
-      clearTimeout(timer);
-      unsubscribe();
-      window.removeEventListener('popstate', pop);
+      urlSync.dispose();
+      window.removeEventListener('popstate', urlSync.restore);
       window.removeEventListener('atlas:territories', listener);
       window.removeEventListener('keydown', key);
     };

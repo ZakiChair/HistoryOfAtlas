@@ -14,10 +14,12 @@ import { getEvent, readJson, type DataManifest } from '@/lib/data-client';
 import { temporalWindow } from '@/lib/map-time';
 import { selectEventArchive } from '@/lib/event-archives';
 import { boundaryFrames, wrapLongitude } from '@/lib/map-boundaries';
+import { createPlaybackMapGate } from '@/lib/playback-readiness';
 import type { GeographyManifest } from '@/lib/geography';
 import { addEventSprites } from './markers';
 import { EMPTY_FEATURE_FILTER } from './style-filters';
 import { queryViewportFeatures } from './query-viewport';
+import { createRenderQueue } from './render-queue';
 import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from './event-clusters';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
@@ -157,6 +159,8 @@ export default function WorldMap() {
     let disposed = false;
     let initializeFrame = 0;
     let cleanup: (() => void) | undefined;
+    const playbackGate = createPlaybackMapGate();
+    playbackGate.wait();
     const initialize = async () => {
       try {
         const [maplibre, { Protocol }, geo] = await Promise.all([
@@ -200,6 +204,7 @@ export default function WorldMap() {
         let ghostToken = 0;
         let ghostLayer: string | null = null;
         let ghostReady: (() => void) | null = null;
+        let retiringTerritories = false;
 
         const selectMapEvent = (id: string) => {
           useAtlasStore.setState({ selectedEvent: id, selectedEntity: null, playing: false });
@@ -265,32 +270,42 @@ export default function WorldMap() {
         const removeTerritorySource = (id: string) => {
           if (ghostLayer === `${id}-ghost`) cancelGhost();
           const resource = boundaryResources.get(id);
+          // Source removal emits synchronous data events. Detach bookkeeping first.
+          boundaryResources.delete(id);
           if (resource?.retirement) clearTimeout(resource.retirement);
           resource?.detach();
           for (const suffix of ['ghost', 'fill', 'border', 'label']) {
             if (map.getLayer(`${id}-${suffix}`)) map.removeLayer(`${id}-${suffix}`);
           }
           if (map.getSource(id)) map.removeSource(id);
-          boundaryResources.delete(id);
         };
+
+        const territoriesLoaded = () =>
+          currentBoundarySources.every((id) => map.getSource(id) && map.isSourceLoaded(id));
 
         const retirePreviousTerritories = () => {
           if (
             disposed ||
+            retiringTerritories ||
             !currentBoundarySources.length ||
-            !currentBoundarySources.every((id) => map.getSource(id) && map.isSourceLoaded(id))
+            !territoriesLoaded()
           )
             return;
-          for (const [id, resource] of boundaryResources) {
-            if (currentBoundarySources.includes(id) || resource.retirement !== null) continue;
-            map.setPaintProperty(`${id}-ghost`, 'fill-opacity', 0);
-            map.setPaintProperty(`${id}-fill`, 'fill-opacity', 0);
-            map.setPaintProperty(`${id}-border`, 'line-opacity', 0);
-            if (reduced) removeTerritorySource(id);
-            else
-              resource.retirement = setTimeout(() => {
-                if (!disposed && !currentBoundarySources.includes(id)) removeTerritorySource(id);
-              }, 450);
+          retiringTerritories = true;
+          try {
+            for (const [id, resource] of boundaryResources) {
+              if (currentBoundarySources.includes(id) || resource.retirement !== null) continue;
+              map.setPaintProperty(`${id}-ghost`, 'fill-opacity', 0);
+              map.setPaintProperty(`${id}-fill`, 'fill-opacity', 0);
+              map.setPaintProperty(`${id}-border`, 'line-opacity', 0);
+              if (reduced) removeTerritorySource(id);
+              else
+                resource.retirement = setTimeout(() => {
+                  if (!disposed && !currentBoundarySources.includes(id)) removeTerritorySource(id);
+                }, 450);
+            }
+          } finally {
+            retiringTerritories = false;
           }
         };
         map.on('sourcedata', retirePreviousTerritories);
@@ -634,11 +649,26 @@ export default function WorldMap() {
           }
         };
 
+        let appliedState: AtlasState | undefined;
+        const renderQueue = createRenderQueue<AtlasState>({
+          apply: (state) => {
+            playbackGate.wait();
+            apply(state, appliedState);
+            appliedState = state;
+          },
+          isReady: () => {
+            const loaded = territoriesLoaded() && (!eventsReady || map.isSourceLoaded('events'));
+            if (loaded) playbackGate.ready();
+            return loaded;
+          },
+          requestRender: () => map.triggerRepaint(),
+        });
+
         map.on('load', () => {
           if (disposed) return;
           styleReady = true;
           reconcilingInitialState = true;
-          apply(useAtlasStore.getState());
+          renderQueue.submit(useAtlasStore.getState(), true);
           reconcilingInitialState = false;
           setReady(true);
           window.dispatchEvent(new Event('atlas:ready'));
@@ -774,7 +804,8 @@ export default function WorldMap() {
                 selectEvent: selectMapEvent,
                 reducedMotion: reduced,
               });
-              apply(useAtlasStore.getState());
+              appliedState = undefined;
+              renderQueue.submit(useAtlasStore.getState(), true);
               map.on('click', 'event-points', (event) => {
                 const id = event.features?.[0]?.properties?.id;
                 if (!id) return;
@@ -807,7 +838,11 @@ export default function WorldMap() {
           movingFromStore = false;
         });
         let previousTerritories = '';
-        map.on('idle', () => {
+        let lastTerritoryPublication = -Infinity;
+        const publishTerritories = (force = false) => {
+          const now = performance.now();
+          if (!territoriesLoaded() || (!force && now - lastTerritoryPublication < 250)) return;
+          lastTerritoryPublication = now;
           const layers = currentBoundarySources
             .map((id) => `${id}-fill`)
             .filter((id) => map.getLayer(id));
@@ -831,16 +866,37 @@ export default function WorldMap() {
             previousTerritories = key;
             window.dispatchEvent(new CustomEvent('atlas:territories', { detail: territories }));
           }
+        };
+        map.on('render', () => {
+          if (!styleReady || disposed) return;
+          // Present the completed year before allowing another worker reparse.
+          retirePreviousTerritories();
+          publishTerritories();
+          renderQueue.rendered();
         });
+        map.on('idle', () => publishTerritories(true));
         map.on('error', (event) => {
           console.warn('Atlas cartography:', event.error.message);
-          if (/WebGL|context lost/i.test(event.error.message)) setError(true);
+          if (/WebGL|context lost/i.test(event.error.message)) {
+            playbackGate.dispose();
+            setError(true);
+          }
+          // A failed source can become settled without emitting another data event.
+          if (!disposed) map.triggerRepaint();
         });
         const unsubscribe = useAtlasStore.subscribe((state, previous) => {
-          if (styleReady) apply(state, previous);
+          if (!styleReady) return;
+          // Playback may coalesce years, but direct interactions always take effect now.
+          const interrupt =
+            !state.playing ||
+            (Object.keys(state) as (keyof AtlasState)[]).some(
+              (key) => key !== 'year' && state[key] !== previous[key],
+            );
+          renderQueue.submit(state, interrupt);
         });
         cleanup = () => {
           unsubscribe();
+          renderQueue.dispose();
           overlayCleanup?.();
           eventClustering?.destroy();
           cancelGhost();
@@ -856,6 +912,7 @@ export default function WorldMap() {
         };
       } catch (cause) {
         console.error(cause);
+        playbackGate.ready();
         if (!disposed) setError(true);
       }
     };
@@ -867,6 +924,7 @@ export default function WorldMap() {
     });
     return () => {
       disposed = true;
+      playbackGate.dispose();
       cancelAnimationFrame(initializeFrame);
       cleanup?.();
     };

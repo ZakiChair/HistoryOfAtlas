@@ -3,7 +3,8 @@ import type { Map as MapInstance, MapGeoJSONFeature } from 'maplibre-gl';
 /**
  * Large query rectangles undercount features on MapLibre's globe projection.
  * Query bounded screen rectangles instead, retaining MapLibre's visibility and
- * layer filters. Call only when the map is idle; no source corpus is downloaded.
+ * layer filters. Call after a rendered frame, at a bounded cadence; no source
+ * corpus is downloaded.
  */
 export function queryViewportFeatures(map: MapInstance, layers: string[]): MapGeoJSONFeature[] {
   if (map.getProjection().type !== 'globe') return map.queryRenderedFeatures({ layers });

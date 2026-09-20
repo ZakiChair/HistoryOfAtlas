@@ -1,6 +1,6 @@
 {
   "method": "Unique script and preload URLs in exported index.html; gzip default level. This measures the HTML shell, not the total JavaScript required for an interactive map. Browser network audits measure the deferred map and worker separately.",
-  "initialGzipBytes": 252011,
+  "initialGzipBytes": 252453,
   "budgetBytes": 300000,
   "shellBudgetMet": true,
   "assets": [
@@ -40,25 +40,24 @@
       "gzipBytes": 3595
     },
     {
-      "path": "/_next/static/chunks/3kmo7lfe31dh8.js",
+      "path": "/_next/static/chunks/0te5q0du8ae25.js",
       "bytes": 987,
       "gzipBytes": 387
     },
     {
-      "path": "/_next/static/chunks/1lhb8m5yrk2a5.js",
-      "bytes": 164412,
-      "gzipBytes": 56326
+      "path": "/_next/static/chunks/1pvpsoykisy_7.js",
+      "bytes": 165127,
+      "gzipBytes": 56633
     },
     {
-      "path": "/_next/static/chunks/2b_t6vmk_q5tw.js",
-      "bytes": 49122,
-      "gzipBytes": 17767
+      "path": "/_next/static/chunks/2tjq5yx1vxe6-.js",
+      "bytes": 49504,
+      "gzipBytes": 17902
     },
     {
       "path": "/_next/static/chunks/0cz1d0mv5g_q7.js",
       "bytes": 112594,
       "gzipBytes": 39473
     }
-  ],
-  "codeCommit": "299cad7a223828f0e8d84bd61dbcdae6e14d796a"
+  ]
 }

@@ -7,6 +7,7 @@ import { CURRENT_YEAR, ERAS, MIN_YEAR, getEra, positionToYear, yearToPosition } 
 import { formatYear, parseHistoricalYear } from '@/lib/histdate';
 import { useTranslation } from '@/lib/i18n';
 import { advancePlayback, buildDensityBins, type DensityYear } from '@/lib/playback';
+import { createPlaybackFrameClock, isPlaybackMapReady } from '@/lib/playback-readiness';
 import { useAtlasStore } from '@/lib/store';
 
 const EMPTY_DENSITY: DensityYear[] = [];
@@ -25,11 +26,16 @@ function useTimelinePlayback(density: readonly DensityYear[]): void {
   );
   useEffect(() => {
     let frame = 0;
-    let previous = 0;
+    const clock = createPlaybackFrameClock();
     let remainder = 0;
     function tick(time: number) {
       const state = useAtlasStore.getState();
       if (!state.playing) return;
+      const elapsed = clock.next(time, isPlaybackMapReady());
+      if (elapsed === null) {
+        frame = requestAnimationFrame(tick);
+        return;
+      }
       const density =
         (countByYear.get(state.year - 1) ?? 0) +
         (countByYear.get(state.year) ?? 0) +
@@ -37,12 +43,11 @@ function useTimelinePlayback(density: readonly DensityYear[]): void {
       const maxYear = state.range?.[1] ?? CURRENT_YEAR;
       const position = advancePlayback(
         { year: state.year, remainder },
-        previous ? time - previous : 0,
+        elapsed,
         state.speed,
         density,
         maxYear,
       );
-      previous = time;
       remainder = position.remainder;
       if (position.year !== state.year) state.setYear(position.year);
       if (position.finished) state.setPlaying(false);
@@ -50,7 +55,7 @@ function useTimelinePlayback(density: readonly DensityYear[]): void {
     }
     function start(playing: boolean) {
       cancelAnimationFrame(frame);
-      previous = 0;
+      clock.reset();
       remainder = 0;
       if (playing) frame = requestAnimationFrame(tick);
     }

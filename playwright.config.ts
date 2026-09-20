@@ -15,9 +15,13 @@ export const getGraphicsArguments = (mode = process.env.PLAYWRIGHT_GPU ?? 'softw
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
+  // Source-backed map scenarios include several navigations on CI's software GPU.
+  // Keep their functional waits separate from the explicit performance audits.
+  timeout: 60_000,
+  expect: { timeout: 15_000 },
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 1 : undefined,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: { baseURL, trace: 'retain-on-failure', screenshot: 'only-on-failure' },
   projects: [

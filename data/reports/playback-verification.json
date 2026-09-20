@@ -1,0 +1,200 @@
+{
+  "verifiedAt": "2026-09-20T19:45:14.090700+00:00",
+  "method": "Playwright queries actual rendered territory polygons and their source intervals during uninterrupted playback, before pausing. Chromium and Pixel 7 emulation use SwiftShader, one worker. Frame rate alone is not a correctness assertion.",
+  "sourceFilesSha256": {
+    "components/map/WorldMap.tsx": "86bc89e21e3638827633e54216a620209108374b629238e70636fe6f52204a29",
+    "components/map/render-queue.ts": "0827d9f7a61dee88a1ba902af47ddbf42e894330bc8b4e32e4cba11c1b1d4000",
+    "components/map/query-viewport.ts": "56a93a716ffb39dec7efd1c8b80c7d05336457d913416064a0874e819a0c25ba",
+    "components/timeline/Timeline.tsx": "a6f6809741d8487fcb5dfee278f3c8cde90c4e64ce06fa730e656d685e6bf08c",
+    "components/AtlasApp.tsx": "8fd6732fea5133caa2d491c1782c200450d5ec5ea56bac25ed96dca309f446d1",
+    "lib/playback-readiness.ts": "e98aa79dafc2807dc5d27a41e927ceba104635761034c05f35607b1801d6efe6",
+    "lib/store/url-sync.ts": "1dd99112ed756369c44623ba4cedf343d5725f35dc04025a4ae6d86f21f5a9cb",
+    "tests/e2e/playback-territories.spec.ts": "fd4e07a8c89bb883bbf63977b0582c113a0ced4a1397187c3515a0ecb9453bc0",
+    "playwright.config.ts": "e75d64b3c9e03dc942e8b25ebb339e31419b45414507b8733c4c738564b5960a"
+  },
+  "before": {
+    "from": 1785,
+    "to": 2026,
+    "sourceReloadsAtEnd": 489,
+    "idleEventsDuringPlayback": 0,
+    "retainedSourcesAtYear1997": [
+      "territory-1750",
+      "events",
+      "territory-1800",
+      "territory-1950",
+      "territory-1975"
+    ],
+    "note": "Repeated reparses left recent archive tiles loading; the rendered source regression failed for 1800 and 1900. Single-flight work alone still let the software-rendered map lag behind its clock; the final correction also waits for presentation."
+  },
+  "checks": {
+    "unitTestsPassed": 144,
+    "e2eTestsPassed": 44,
+    "typecheck": "passed",
+    "lintErrors": 0,
+    "exportedPages": 5496,
+    "initialShellGzipBytes": 252453
+  },
+  "playback": [
+    {
+      "name": "1800 and 1900 eras on the globe",
+      "profile": "chromium",
+      "projection": "globe",
+      "reducedMotion": false,
+      "start": 1785,
+      "end": 1945,
+      "archives": [
+        {
+          "archiveStart": 1800,
+          "samples": 11,
+          "samplesWithCurrentPolygons": 9,
+          "firstObservedYear": 1800,
+          "lastObservedYear": 1846
+        },
+        {
+          "archiveStart": 1850,
+          "samples": 9,
+          "samplesWithCurrentPolygons": 8,
+          "firstObservedYear": 1852,
+          "lastObservedYear": 1894
+        },
+        {
+          "archiveStart": 1900,
+          "samples": 13,
+          "samplesWithCurrentPolygons": 11,
+          "firstObservedYear": 1901,
+          "lastObservedYear": 1923
+        }
+      ],
+      "territoryPublications": 32,
+      "pageErrors": []
+    },
+    {
+      "name": "1800 and 1900 eras on the globe",
+      "profile": "mobile-chromium",
+      "projection": "globe",
+      "reducedMotion": false,
+      "start": 1785,
+      "end": 1945,
+      "archives": [
+        {
+          "archiveStart": 1800,
+          "samples": 54,
+          "samplesWithCurrentPolygons": 52,
+          "firstObservedYear": 1801,
+          "lastObservedYear": 1849
+        },
+        {
+          "archiveStart": 1850,
+          "samples": 35,
+          "samplesWithCurrentPolygons": 33,
+          "firstObservedYear": 1854,
+          "lastObservedYear": 1897
+        },
+        {
+          "archiveStart": 1900,
+          "samples": 14,
+          "samplesWithCurrentPolygons": 12,
+          "firstObservedYear": 1902,
+          "lastObservedYear": 1922
+        }
+      ],
+      "territoryPublications": 39,
+      "pageErrors": []
+    },
+    {
+      "name": "astronomical zero on the globe",
+      "profile": "chromium",
+      "projection": "globe",
+      "reducedMotion": true,
+      "start": -20,
+      "end": 70,
+      "archives": [
+        {
+          "archiveStart": 1,
+          "samples": 12,
+          "samplesWithCurrentPolygons": 11,
+          "firstObservedYear": 10,
+          "lastObservedYear": 72
+        }
+      ],
+      "territoryPublications": 8,
+      "pageErrors": []
+    },
+    {
+      "name": "astronomical zero on the globe",
+      "profile": "mobile-chromium",
+      "projection": "globe",
+      "reducedMotion": true,
+      "start": -20,
+      "end": 70,
+      "archives": [
+        {
+          "archiveStart": 1,
+          "samples": 17,
+          "samplesWithCurrentPolygons": 16,
+          "firstObservedYear": 13,
+          "lastObservedYear": 74
+        }
+      ],
+      "territoryPublications": 7,
+      "pageErrors": []
+    },
+    {
+      "name": "1492 era in Mercator with reduced motion",
+      "profile": "chromium",
+      "projection": "mercator",
+      "reducedMotion": true,
+      "start": 1485,
+      "end": 1540,
+      "archives": [
+        {
+          "archiveStart": 1500,
+          "samples": 25,
+          "samplesWithCurrentPolygons": 25,
+          "firstObservedYear": 1500,
+          "lastObservedYear": 1544
+        }
+      ],
+      "territoryPublications": 13,
+      "pageErrors": []
+    },
+    {
+      "name": "1492 era in Mercator with reduced motion",
+      "profile": "mobile-chromium",
+      "projection": "mercator",
+      "reducedMotion": true,
+      "start": 1485,
+      "end": 1540,
+      "archives": [
+        {
+          "archiveStart": 1500,
+          "samples": 27,
+          "samplesWithCurrentPolygons": 26,
+          "firstObservedYear": 1501,
+          "lastObservedYear": 1545
+        }
+      ],
+      "territoryPublications": 13,
+      "pageErrors": []
+    }
+  ],
+  "networkRecovery": {
+    "method": "Delay an archive response by 3.5 seconds, return HTTP 404, verify playback resumes, then manually jump to a different valid archive. Native Chromium.",
+    "passed": true,
+    "resumeYear": "1812",
+    "recoveredSource": {
+      "year": "1851",
+      "loaded": true
+    },
+    "pageErrors": [],
+    "expectedWarnings": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "Atlas cartography: Bad response code: 404"
+    ]
+  },
+  "limits": [
+    "Software rendering tests verify synchronization, not device frame-rate budgets.",
+    "Configured playback speed is a maximum, reduced by data density and render availability.",
+    "No historical observations or coordinates were changed."
+  ]
+}

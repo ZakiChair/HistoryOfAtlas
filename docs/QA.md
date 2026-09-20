@@ -2,6 +2,18 @@
 
 Les assertions historiques des tests de navigation utilisent les fichiers du pipeline : l’événement de Waterloo est recherché dans le lot du XIXe siècle, et la campagne est choisie dans le catalogue produit. Les quelques objets synthétiques des tests unitaires vérifient uniquement des contrats logiciels ; ils ne sont jamais distribués dans le corpus.
 
+## Correction de la lecture automatique
+
+Le scénario de régression 1785 → 1945 reproduisait un curseur en mouvement alors que les archives territoriales de 1800 et 1900 ne devenaient pas visibles pendant la lecture. L’instrumentation relevait **489 appels de rechargement en 11 secondes** : les mises à jour successives relançaient le travail des sources avant qu’un rendu puisse être présenté. Les traces CI signalaient aussi des tentatives de modification de couches territoriales déjà supprimées. Ces observations expliquent pourquoi mesurer uniquement la progression du curseur ou les callbacks d’animation ne suffisait pas.
+
+Le correctif conserve une seule mise à jour cartographique en cours et la dernière année reçue, puis attend un rendu terminé avant de poursuivre. L’horloge attend également les sources : sans cette coordination, le rendu logiciel présentait encore les frontières de 1850 lorsque le curseur atteignait 1911. La vitesse choisie devient une cible maximale, réduite par la densité documentaire et la disponibilité du rendu. L’attente ne s’accumule pas en années à rattraper. Les sauts manuels et la pause restent prioritaires. Le retrait des anciennes sources protège les callbacks réentrants ; la publication du carnet s’appuie également sur le rendu, sans attendre uniquement `idle`. L’URL utilise désormais une cadence de 250 ms avec le dernier état, une écriture immédiate à la pause et l’annulation des écritures différées lors du retour historique ou du démontage. Son test a d’abord reproduit une URL bloquée en 1800 après une progression jusqu’en 1900, puis est passé au vert.
+
+La vérification finale passe **144 tests unitaires et 44 tests E2E**, dont six régressions de lecture sur ordinateur et mobile : passage des archives de 1800, 1850 et 1900 sur le globe, changement d’ère de 1492 en Mercator et passage de l’année astronomique zéro. Les tests lisent les polygones effectivement rendus et leurs intervalles sources avant toute pause. La suite complète avec SwiftShader, un seul worker, passe en 5,2 minutes. Le délai fonctionnel de lecture tient compte de l’attente du rendu ; les budgets de performance restent séparés. Les résultats et empreintes des fichiers sont dans `data/reports/playback-verification.json`.
+
+L’export produit **5 496 pages**. Le JavaScript initial représente **252 453 octets gzip**, pour la coque de l’interface ; le moteur cartographique différé se mesure séparément. Les résultats des passages précédents ci-dessous restent associés à leurs révisions et protocoles.
+
+Un contrôle réseau injecte une réponse 404 après 3,5 secondes pour l’archive territoriale de 1800. L’année reste 1800 pendant l’attente, puis la lecture reprend après l’erreur. Un saut manuel vers 1851 charge ensuite l’archive de 1850. Aucune exception JavaScript n’est relevée ; les avertissements HTTP attendus restent visibles. Les erreurs de source réveillent la vérification du rendu ; une carte retirée ou indisponible libère son verrou.
+
 ## Commandes reproductibles
 
 ```sh
