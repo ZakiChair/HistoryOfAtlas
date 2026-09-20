@@ -22,6 +22,22 @@ The build prerenders the methodology, each war catalog entry, and important even
 
 The preview server uses port 3000. Stop an existing development server before auditing production so that tests cannot accidentally inspect development assets. Browser tests can target a running deployment with `PLAYWRIGHT_BASE_URL=https://your-atlas.example pnpm test:e2e`.
 
+## Vercel production
+
+The public project is linked to [ZakiChair/atlas-belli](https://github.com/ZakiChair/atlas-belli), with `main` as its production branch and [atlas-belli.vercel.app](https://atlas-belli.vercel.app) as its production domain. Vercel uses the Next.js preset and Node 24; the application retains its static export.
+
+`NEXT_PUBLIC_SITE_URL=https://atlas-belli.vercel.app` is configured for Production and Preview so canonical, sitemap and Open Graph URLs refer to the public site. The value is public configuration. Local Vercel credentials and `.env` files are excluded from Git and CLI uploads.
+
+`vercel.json` supplies the MIME types needed by PMTiles, MapLibre module workers and the generated Open Graph image. PMTiles use browser revalidation because their paths are stable between data publications. Versioned MapLibre modules can be cached immutably. The Vercel CDN supplies byte ranges and compression; the Nginx configuration is specific to Docker.
+
+Pushes to `main` trigger production deployments through the Git integration. For a manual deployment from an authenticated, linked checkout:
+
+```sh
+vercel deploy --prod --archive=tgz
+```
+
+The split archive upload is important for this repository's source-file count. `.vercelignore` excludes acquisition caches, local exports, credentials and test artifacts. The committed data artifacts are included and the remote build does not rerun Wikidata acquisition.
+
 ## Docker on a VPS
 
 ```sh
