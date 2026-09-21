@@ -45,21 +45,28 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const event = await readEvent((await params).id);
-  if (!event) return { title: 'Événement introuvable — Atlas Belli' };
-  const name = event.name.fr ?? event.name.en;
-  const description = `${name} · ${formatDateRange(event.start, event.end, 'fr', event.datePrecision)}. Consultez les dates, les participants documentés et les sources, puis explorez cet événement sur la carte historique.`;
+  if (!event) return { title: 'Event not found — HistoryOfAtlas' };
+  const name = event.name.en;
+  const description = `${name} · ${formatDateRange(event.start, event.end, 'en', event.datePrecision)}. See dates, documented participants and sources, then explore this event on the historical map.`;
   return {
-    title: `${name} — Atlas Belli`,
+    title: `${name} — HistoryOfAtlas`,
     description,
     alternates: { canonical: `/event/${event.id}/` },
-    openGraph: { title: name, description, type: 'article', images: ['/opengraph-image'] },
+    openGraph: {
+      title: name,
+      description,
+      siteName: 'HistoryOfAtlas',
+      locale: 'en_US',
+      type: 'article',
+      images: ['/opengraph-image'],
+    },
   };
 }
 
 export default async function EventPage({ params }: { params: Promise<{ id: string }> }) {
   const event = await readEvent((await params).id);
   if (!event) notFound();
-  const name = event.name.fr ?? event.name.en;
+  const name = event.name.en;
   const query = new URLSearchParams({ y: String(event.start.year), e: event.id });
   if (event.coords) {
     query.set('lon', String(event.coords[0]));
@@ -69,9 +76,9 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
   const sources = [...event.sources];
   for (const [language, url] of Object.entries(event.wikipedia ?? {})) {
     if (url && !sources.some((source) => source.url === url))
-      sources.push({ label: `Wikipédia ${language.toUpperCase()}`, url });
+      sources.push({ label: `Wikipedia ${language.toUpperCase()}`, url });
   }
-  const date = formatDateRange(event.start, event.end, 'fr', {
+  const date = formatDateRange(event.start, event.end, 'en', {
     precision: event.datePrecision,
     approximate: event.dateApproximate,
     calendar: event.calendar,
@@ -81,56 +88,56 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
     <main className="document-page">
       <header className="document-header">
         <Link className="back-link" href="/">
-          ← Revenir à l’atlas
+          ← Back to the atlas
         </Link>
-        <span className="eyebrow">LES ARCHIVES DE L’ATLAS · {event.id}</span>
+        <span className="eyebrow">THE ATLAS ARCHIVES · {event.id}</span>
         <h1>{name}</h1>
         <p>{date}</p>
         <Link className="primary-button" href={`/?${query}`}>
-          Situer cet événement dans l’histoire ↗
+          Explore this event in history ↗
         </Link>
       </header>
       <article className="document-body">
         {event.disputed && (
           <p className="document-notice">
-            Plusieurs dates ou lieux sont renseignés dans la source Wikidata de cet événement.
+            This event’s Wikidata source lists more than one date or location.
           </p>
         )}
-        {event.summary?.fr && <p>{event.summary.fr}</p>}
-        {!event.summary?.fr && event.summary?.en && <p lang="en">{event.summary.en}</p>}
-        {(event.description?.fr ?? event.description?.en) && (
-          <p lang={event.description?.fr ? 'fr' : 'en'}>
-            {event.description?.fr ?? event.description?.en}
+        {event.summary?.en && <p>{event.summary.en}</p>}
+        {!event.summary?.en && event.summary?.fr && <p lang="fr">{event.summary.fr}</p>}
+        {(event.description?.en ?? event.description?.fr) && (
+          <p lang={event.description?.en ? 'en' : 'fr'}>
+            {event.description?.en ?? event.description?.fr}
           </p>
         )}
         <div className="document-grid">
           <section className="document-card">
-            <span className="eyebrow">01 / REPÈRES</span>
-            <h2>Les faits documentés</h2>
+            <span className="eyebrow">01 / KEY FACTS</span>
+            <h2>Documented facts</h2>
             <dl>
               <dt>Date</dt>
               <dd>{date}</dd>
-              <dt>Précision</dt>
+              <dt>Precision</dt>
               <dd>
                 {
                   {
-                    day: 'Jour',
-                    month: 'Mois',
-                    year: 'Année',
-                    decade: 'Décennie',
-                    century: 'Siècle',
+                    day: 'Day',
+                    month: 'Month',
+                    year: 'Year',
+                    decade: 'Decade',
+                    century: 'Century',
                   }[event.datePrecision]
                 }
               </dd>
               {event.place?.name && (
                 <>
-                  <dt>Lieu référencé</dt>
+                  <dt>Referenced location</dt>
                   <dd>{event.place.name}</dd>
                 </>
               )}
               {event.coords && (
                 <>
-                  <dt>Coordonnées de la source</dt>
+                  <dt>Source coordinates</dt>
                   <dd>
                     {event.coords[1].toFixed(4)}°, {event.coords[0].toFixed(4)}°
                   </dd>
@@ -138,44 +145,44 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
               )}
               {event.outcome && (
                 <>
-                  <dt>Issue indiquée</dt>
+                  <dt>Reported outcome</dt>
                   <dd>{event.outcome}</dd>
                 </>
               )}
               {event.victor && (
                 <>
-                  <dt>Vainqueur indiqué</dt>
+                  <dt>Reported victor</dt>
                   <dd>{event.victor}</dd>
                 </>
               )}
               {event.strength !== undefined && (
                 <>
-                  <dt>Effectifs rapportés</dt>
-                  <dd>{event.strength.toLocaleString('fr')}</dd>
+                  <dt>Reported strength</dt>
+                  <dd>{event.strength.toLocaleString('en')}</dd>
                 </>
               )}
               {event.deaths !== undefined && (
                 <>
-                  <dt>Morts rapportés</dt>
-                  <dd>{event.deaths.toLocaleString('fr')}</dd>
+                  <dt>Reported deaths</dt>
+                  <dd>{event.deaths.toLocaleString('en')}</dd>
                 </>
               )}
               {event.casualties !== undefined && (
                 <>
-                  <dt>Pertes rapportées</dt>
-                  <dd>{event.casualties.toLocaleString('fr')}</dd>
+                  <dt>Reported casualties</dt>
+                  <dd>{event.casualties.toLocaleString('en')}</dd>
                 </>
               )}
             </dl>
             {event.parentWar && (
               <Link className="source-link" href={`/?war=${event.parentWar}&y=${event.start.year}`}>
-                Explorer le conflit lié · {event.parentWar} ↗
+                Explore the related conflict · {event.parentWar} ↗
               </Link>
             )}
           </section>
           <section className="document-card">
-            <span className="eyebrow">02 / ACTEURS</span>
-            <h2>Participants référencés</h2>
+            <span className="eyebrow">02 / PARTICIPANTS</span>
+            <h2>Referenced participants</h2>
             {event.belligerents.length ? (
               <ul>
                 {event.belligerents.map((party) => (
@@ -191,17 +198,17 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                 ))}
               </ul>
             ) : (
-              <p>Les participants ne sont pas renseignés dans ce relevé.</p>
+              <p>Participants are not listed in this record.</p>
             )}
             <p>
-              Une participation documentée ne suffit pas à établir les camps opposés. Les alliances
-              absentes des sources ne sont pas reconstituées.
+              Documented participation does not establish opposing sides. Alliances absent from the
+              sources are not reconstructed.
             </p>
           </section>
         </div>
         {Boolean(event.people?.length) && (
           <section>
-            <h2>Personnes et commandement</h2>
+            <h2>People and command</h2>
             <ul>
               {event.people!.map((person, index) => {
                 const personQuery = new URLSearchParams(query);
@@ -209,10 +216,10 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                 return (
                   <li key={`${person.statementId}-${person.personId}-${index}`}>
                     <Link href={`/?${personQuery}`}>
-                      {person.name.fr ?? person.name.en} —{' '}
+                      {person.name.en} —{' '}
                       {person.role === 'commander'
-                        ? 'commandement documenté'
-                        : 'participation documentée'}
+                        ? 'documented command'
+                        : 'documented participation'}
                     </Link>
                     {' · '}
                     <a href={person.sources[0].url} target="_blank" rel="noreferrer">
@@ -226,11 +233,10 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
         )}
         <section>
           <span className="eyebrow">03 / PROVENANCE</span>
-          <h2>Remonter aux sources</h2>
+          <h2>Trace the sources</h2>
           <p>
-            Les informations de cette page proviennent de Wikidata. Les résumés éventuels et les
-            illustrations conservent leurs licences propres ; la fiche interactive ouvre les
-            articles encyclopédiques associés.
+            The information on this page comes from Wikidata. Summaries and illustrations retain
+            their own licences; the interactive record opens the related encyclopedia articles.
           </p>
           <ul>
             {sources.map((source) => (
@@ -242,7 +248,7 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
             ))}
           </ul>
           <Link className="source-link" href="/about/">
-            Comprendre les dates, les incertitudes et les licences →
+            Understand dates, uncertainty and licences →
           </Link>
         </section>
       </article>

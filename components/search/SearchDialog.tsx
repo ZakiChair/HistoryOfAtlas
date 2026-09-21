@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Search, X, Globe2, UserRound, ArrowUpRight, LoaderCircle } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
-import { useI18n } from '@/lib/i18n';
+import { localizedName, useI18n } from '@/lib/i18n';
 import { formatYear } from '@/lib/histdate';
 import { createEventNavigation, openPerson } from '@/lib/navigation';
 import type { SearchRecord } from '@/lib/search-records';
@@ -210,7 +210,7 @@ export default function SearchDialog({
                     )}
                   </span>
                   <span>
-                    <strong>{result.name[locale] ?? result.name.en}</strong>
+                    <strong>{localizedName(result.name, locale)}</strong>
                     <small>
                       {result.year !== undefined && formatYear(result.year, locale)}
                       {result.kind === 'person' &&
@@ -234,11 +234,13 @@ export default function SearchDialog({
           {!query && (
             <div className="search-suggestions">
               <span>{t('Quelques points de départ', 'Some starting points')}</span>
-              {['Rome', 'Napoléon', 'Mongol', 'Waterloo'].map((word) => (
-                <button key={word} onClick={() => setQuery(word)}>
-                  {word}
-                </button>
-              ))}
+              {['Rome', locale === 'fr' ? 'Napoléon' : 'Napoleon', 'Mongol', 'Waterloo'].map(
+                (word) => (
+                  <button key={word} onClick={() => setQuery(word)}>
+                    {word}
+                  </button>
+                ),
+              )}
             </div>
           )}
           <div className="search-footer">

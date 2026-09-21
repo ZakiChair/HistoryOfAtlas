@@ -5,7 +5,10 @@ import type { HistoricalEvent } from '@/lib/schema';
 import { hasStaticEventPage } from '@/lib/seo';
 export const dynamic = 'force-static';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const origin = (process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000').replace(/\/$/, '');
+  const origin = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://historyofatlas.vercel.app').replace(
+    /\/$/,
+    '',
+  );
   const directory = path.join(process.cwd(), 'public/data');
   const [warsText, curatedText, files] = await Promise.all([
     readFile(path.join(directory, 'wars.json'), 'utf8'),

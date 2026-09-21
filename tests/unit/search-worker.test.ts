@@ -29,7 +29,11 @@ const documents: Record<string, unknown> = {
   ],
 };
 
-async function searchWithUnavailable(paths: string[]) {
+async function searchWithUnavailable(
+  paths: string[],
+  query = 'Example',
+  sourceDocuments = documents,
+) {
   const responses: WorkerResponse[] = [];
   const scope = {
     onmessage: null as ((message: MessageEvent) => void) | null,
@@ -37,14 +41,15 @@ async function searchWithUnavailable(paths: string[]) {
   };
   vi.stubGlobal('self', scope);
   vi.stubGlobal('fetch', async (path: string) => {
-    if (paths.includes(path) || !(path in documents)) return new Response('', { status: 503 });
-    return new Response(JSON.stringify(documents[path]), {
+    if (paths.includes(path) || !(path in sourceDocuments))
+      return new Response('', { status: 503 });
+    return new Response(JSON.stringify(sourceDocuments[path]), {
       headers: { 'Content-Type': 'application/json' },
     });
   });
   await import('../../components/search/search.worker');
   scope.onmessage!({ data: { type: 'init', year: 0 } } as MessageEvent);
-  scope.onmessage!({ data: { type: 'search', query: 'Example' } } as MessageEvent);
+  scope.onmessage!({ data: { type: 'search', query } } as MessageEvent);
   return responses;
 }
 
@@ -85,4 +90,38 @@ describe('search sources fail independently', () => {
     );
     expect(responses.flatMap((response) => response.results ?? [])).toEqual([]);
   });
+});
+
+describe('localized source names', () => {
+  const name = {
+    en: 'Example record',
+    de: 'Einzigartig',
+    es: 'Singular',
+    zh: '本地标签',
+    ru: 'Уникальный',
+  };
+  const localizedDocuments = {
+    ...documents,
+    '/data/search/0.json': [
+      { id: 'Q10', name, start: { year: 0 }, type: 'battle', importance: 50 },
+    ],
+    '/data/people-index.json': [{ id: 'Q11', name }],
+    '/geo/polities.json': [{ id: 'structural-polity', name, firstObserved: 0 }],
+  };
+
+  it.each(['de', 'es', 'zh', 'ru'] as const)(
+    'finds supplied %s labels in events, people and territories',
+    async (locale) => {
+      const responses = await searchWithUnavailable([], name[locale], localizedDocuments);
+      await vi.waitFor(() => {
+        const last = responses.filter((response) => response.type === 'results').at(-1);
+        expect(last?.loaded).toBe(last?.total);
+        expect(last?.results?.map((result) => result.kind).sort()).toEqual([
+          'entity',
+          'event',
+          'person',
+        ]);
+      });
+    },
+  );
 });

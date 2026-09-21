@@ -1,4 +1,5 @@
 import MiniSearch from 'minisearch';
+import { LOCALES, type LocalizedName } from '@/lib/types';
 import {
   personSearchRecord,
   type PersonIndexRecord,
@@ -40,7 +41,7 @@ async function initialize(year: number) {
   const entities = source('/geo/polities.json', (value) => {
     const records = value as {
       id: string;
-      name: string | { en: string; fr?: string };
+      name: string | LocalizedName;
       firstObserved: number;
       center?: [number, number];
       wikipedia?: string;
@@ -52,7 +53,7 @@ async function initialize(year: number) {
           id: entity.id,
           kind: 'entity',
           name,
-          title: `${name.fr ?? ''} ${name.en}`,
+          title: [...new Set(LOCALES.map((locale) => name[locale]).filter(Boolean))].join(' '),
           year: entity.firstObserved,
           coords: entity.center,
           type: 'entity',
@@ -82,7 +83,7 @@ async function initialize(year: number) {
         await source(chunk.path, (value) => {
           const records = value as {
             id: string;
-            name: { en: string; fr?: string };
+            name: LocalizedName;
             start: { year: number };
             coords?: [number, number];
             type: string;
@@ -94,7 +95,9 @@ async function initialize(year: number) {
               index.add({
                 ...event,
                 kind: 'event',
-                title: `${event.name.fr ?? ''} ${event.name.en}`,
+                title: [
+                  ...new Set(LOCALES.map((locale) => event.name[locale]).filter(Boolean)),
+                ].join(' '),
                 year: event.start.year,
               });
         });

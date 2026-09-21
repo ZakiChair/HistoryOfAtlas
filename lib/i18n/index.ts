@@ -1,9 +1,12 @@
 'use client';
 
+import { useCallback } from 'react';
 import { useAtlasStore } from '../store';
-import type { EventType, Locale, RegionId } from '../types';
+import { LOCALES } from '../types';
+import { additionalCopy } from './copy';
+import type { DatePrecision, EventType, Locale, LocalizedName, RegionId } from '../types';
 
-export const dictionaries = {
+const baseDictionaries = {
   fr: {
     explore: 'Explorer',
     stories: 'Parcours',
@@ -120,11 +123,60 @@ export const dictionaries = {
     timeline: 'Timeline',
     searchResults: 'Search results',
   },
-} satisfies Record<Locale, Record<string, string>>;
+};
 
-export type TranslationKey = keyof typeof dictionaries.fr;
+export type TranslationKey = keyof typeof baseDictionaries.en;
+export type TranslationValues = Record<string, string | number>;
 
-export const EVENT_TYPE_LABELS: Record<EventType, Record<Locale, string>> = {
+/** Substitute named values after translating so each language can choose its word order. */
+export function interpolate(template: string, values: TranslationValues = {}): string {
+  return template.replace(/\{(\w+)\}/g, (placeholder, key: string) =>
+    Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : placeholder,
+  );
+}
+
+export function translateCopy(
+  locale: Locale,
+  french: string,
+  english: string,
+  values?: TranslationValues,
+): string {
+  const text =
+    locale === 'fr'
+      ? french
+      : locale === 'en'
+        ? english
+        : (additionalCopy[english]?.[locale] ?? english);
+  return interpolate(text, values);
+}
+
+export const dictionaries = Object.fromEntries(
+  LOCALES.map((locale) => [
+    locale,
+    Object.fromEntries(
+      Object.entries(baseDictionaries.en).map(([key, english]) => [
+        key,
+        translateCopy(locale, baseDictionaries.fr[key as TranslationKey], english),
+      ]),
+    ),
+  ]),
+) as Record<Locale, Record<TranslationKey, string>>;
+
+function labels<T extends string>(
+  values: Record<T, { fr: string; en: string }>,
+): Record<T, Record<Locale, string>> {
+  return Object.fromEntries(
+    Object.entries(values).map(([key, value]) => {
+      const { fr, en } = value as { fr: string; en: string };
+      return [
+        key,
+        Object.fromEntries(LOCALES.map((locale) => [locale, translateCopy(locale, fr, en)])),
+      ];
+    }),
+  ) as Record<T, Record<Locale, string>>;
+}
+
+export const EVENT_TYPE_LABELS = labels<EventType>({
   battle: { fr: 'Bataille', en: 'Battle' },
   siege: { fr: 'Siège', en: 'Siege' },
   naval: { fr: 'Bataille navale', en: 'Naval battle' },
@@ -132,9 +184,9 @@ export const EVENT_TYPE_LABELS: Record<EventType, Record<Locale, string>> = {
   campaign: { fr: 'Campagne', en: 'Campaign' },
   treaty: { fr: 'Traité', en: 'Treaty' },
   conquest: { fr: 'Conquête', en: 'Conquest' },
-};
+});
 
-export const REGION_LABELS: Record<RegionId, Record<Locale, string>> = {
+export const REGION_LABELS = labels<RegionId>({
   europe: { fr: 'Europe', en: 'Europe' },
   africa: { fr: 'Afrique', en: 'Africa' },
   asia: { fr: 'Asie', en: 'Asia' },
@@ -143,31 +195,43 @@ export const REGION_LABELS: Record<RegionId, Record<Locale, string>> = {
   'south-america': { fr: 'Amérique du Sud', en: 'South America' },
   oceania: { fr: 'Océanie', en: 'Oceania' },
   global: { fr: 'Monde / non attribué', en: 'Global / unassigned' },
-};
+});
+
+export const PRECISION_LABELS = labels<DatePrecision>({
+  day: { fr: 'au jour', en: 'day' },
+  month: { fr: 'au mois', en: 'month' },
+  year: { fr: 'à l’année', en: 'year' },
+  decade: { fr: 'à la décennie', en: 'decade' },
+  century: { fr: 'au siècle', en: 'century' },
+});
 
 export function translate(locale: Locale, key: TranslationKey): string {
   return dictionaries[locale][key] ?? dictionaries.en[key];
 }
 
-export function localizedName(value: { fr?: string; en: string }, locale: Locale): string {
+export function localizedName(value: LocalizedName, locale: Locale): string {
   return value[locale] ?? value.en;
+}
+
+export function localizedLanguage(value: LocalizedName, locale: Locale): Locale {
+  return value[locale] !== undefined ? locale : 'en';
 }
 
 export function localeDirection(locale: string): 'ltr' | 'rtl' {
   return ['ar', 'fa', 'he', 'ur'].includes(locale.split('-')[0]!) ? 'rtl' : 'ltr';
 }
 
-/** t('play') uses the dictionary; t('Texte FR', 'English text') supports local editorial copy. */
+/** t('play') uses a keyed label; t('Texte FR', 'English text') uses the editorial catalog. */
 export function useTranslation() {
   const locale = useAtlasStore((state) => state.locale);
   const setLocale = useAtlasStore((state) => state.setLocale);
-  function t(keyOrFrench: TranslationKey | string, english?: string): string {
-    return english !== undefined
-      ? locale === 'fr'
-        ? keyOrFrench
-        : english
-      : translate(locale, keyOrFrench as TranslationKey);
-  }
+  const t = useCallback(
+    (keyOrFrench: TranslationKey | string, english?: string, values?: TranslationValues): string =>
+      english !== undefined
+        ? translateCopy(locale, keyOrFrench, english, values)
+        : translate(locale, keyOrFrench as TranslationKey),
+    [locale],
+  );
   return { locale, setLocale, t, dir: localeDirection(locale) };
 }
 

@@ -1,3 +1,4 @@
+import { translateCopy } from '@/lib/i18n';
 import { ArrowUpRight, BookOpen } from 'lucide-react';
 import type { Source } from '@/lib/schema';
 import type { Locale } from '@/lib/types';
@@ -7,10 +8,11 @@ export default function EventSources({ sources, locale }: { sources: Source[]; l
   return (
     <section
       className="detail-section"
-      aria-label={locale === 'fr' ? 'Sources et provenance' : 'Sources and provenance'}
+      aria-label={translateCopy(locale, 'Sources et provenance', 'Sources and provenance')}
     >
       <h3>
-        <BookOpen size={14} /> {locale === 'fr' ? 'Sources & provenance' : 'Sources & provenance'}
+        <BookOpen size={14} />{' '}
+        {translateCopy(locale, 'Sources & provenance', 'Sources & provenance')}
       </h3>
       <ul className="sources-list">
         {unique.map((source) => (
@@ -21,7 +23,9 @@ export default function EventSources({ sources, locale }: { sources: Source[]; l
                 {source.license && <small>{source.license}</small>}
               </span>
               <ArrowUpRight size={15} aria-hidden="true" />
-              <span className="sr-only">{locale === 'fr' ? ' (nouvel onglet)' : ' (new tab)'}</span>
+              <span className="sr-only">
+                {translateCopy(locale, ' (nouvel onglet)', ' (new tab)')}
+              </span>
             </a>
           </li>
         ))}

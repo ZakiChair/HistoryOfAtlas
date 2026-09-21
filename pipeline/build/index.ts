@@ -93,7 +93,7 @@ async function curate(events: HistoricalEvent[], directory: string): Promise<Set
   return ids;
 }
 
-function buildSequences(
+export function buildSequences(
   wars: Map<string, HistoricalEvent[]>,
   entities: Map<string, Entity>,
   selection: { id: string }[],
@@ -149,7 +149,8 @@ function buildSequences(
           eventId: event.id,
           coords: event.coords!,
           date: event.start,
-          label: event.name.fr ?? event.name.en,
+          label: event.name.en,
+          name: event.name,
           sources: event.sources,
         })),
     });
@@ -601,7 +602,11 @@ export async function buildEvents(
         if (result.status !== 0)
           throw new Error(`tippecanoe failed: ${result.error?.message ?? result.stderr}`);
       };
-      compileTiles('events.pmtiles', '../../data/events.geojson', 'Atlas Belli · Wikidata events');
+      compileTiles(
+        'events.pmtiles',
+        '../../data/events.geojson',
+        'HistoryOfAtlas · Wikidata events',
+      );
       const featureById = new Map(
         geojson.features.map((feature) => [feature.properties.id, feature]),
       );
@@ -613,7 +618,7 @@ export async function buildEvents(
         compileTiles(
           `event-shards/${shard.key}.pmtiles`,
           '.shard-input.geojson',
-          `Atlas Belli · Wikidata events · ${shard.key}`,
+          `HistoryOfAtlas · Wikidata events · ${shard.key}`,
         );
       }
       await rm(join(output, '.shard-input.geojson'));

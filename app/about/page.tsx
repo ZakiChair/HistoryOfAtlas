@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export const dynamic = 'force-static';
 export const metadata: Metadata = {
-  title: 'Sources & méthodologie — Atlas Belli',
+  title: 'Sources & methodology — HistoryOfAtlas',
   description:
-    'Comment Atlas Belli documente les événements, les frontières, les dates anciennes et les incertitudes. Sources ouvertes, licences et rapport de couverture.',
+    'How HistoryOfAtlas documents events, boundaries, ancient dates and uncertainty. Open sources, licences and coverage reports.',
   alternates: { canonical: '/about/' },
 };
 
@@ -41,139 +41,134 @@ export default async function AboutPage() {
       (text) => JSON.parse(text) as GeoManifest,
     ),
   ]);
-  const number = (value: number) => new Intl.NumberFormat('fr').format(value);
+  const number = (value: number) => new Intl.NumberFormat('en').format(value);
   const regions: Record<string, string> = {
     europe: 'Europe',
-    africa: 'Afrique',
-    asia: 'Asie',
-    'middle-east': 'Moyen-Orient',
-    'north-america': 'Amérique du Nord',
-    'south-america': 'Amérique du Sud',
-    oceania: 'Océanie',
-    global: 'Monde / non attribué',
+    africa: 'Africa',
+    asia: 'Asia',
+    'middle-east': 'Middle East',
+    'north-america': 'North America',
+    'south-america': 'South America',
+    oceania: 'Oceania',
+    global: 'Global / unassigned',
   };
   return (
     <main className="document-page">
       <header className="document-header">
         <Link className="back-link" href="/">
-          ← Revenir à l’atlas
+          ← Back to the atlas
         </Link>
-        <span className="eyebrow">LE DESSOUS DES CARTES</span>
+        <span className="eyebrow">BEHIND THE MAPS</span>
         <h1>
-          L’histoire mérite
+          History deserves
           <br />
-          des sources.
+          sources.
         </h1>
         <p>
-          Un atlas pour explorer les évolutions territoriales et les conflits documentés. Une carte
-          demeure une interprétation : sa provenance et ses limites doivent rester visibles.
+          An atlas for exploring territorial change and documented conflicts. A map remains an
+          interpretation: its provenance and limits must stay visible.
         </p>
-        <a className="source-link" href="#english" lang="en">
-          Read the methodology in English ↓
-        </a>
       </header>
-      <article className="document-body">
+      <article className="document-body" id="english">
         <div className="document-grid">
           <section className="document-card">
-            <span className="eyebrow">01 / ÉVÉNEMENTS</span>
+            <span className="eyebrow">01 / EVENTS</span>
             <h2>{number(quality.geolocatedDatedEvents)}</h2>
             <p>
-              Événements géolocalisés et datés dans cette version. {number(quality.withProvenance)}{' '}
-              portent une provenance explicite.
+              Dated, geolocated events in this release. {number(quality.withProvenance)} have
+              explicit provenance.
             </p>
             <a className="source-link" href="/data/quality.json">
-              Ouvrir le rapport de qualité ↗
+              Open the quality report ↗
             </a>
           </section>
           <section className="document-card">
-            <span className="eyebrow">02 / TERRITOIRES</span>
+            <span className="eyebrow">02 / TERRITORIES</span>
             <h2>{number(geography.temporal.records)}</h2>
             <p>
-              Géométries politiques datées, pour {number(geography.temporal.entities)} entités
-              nommées dans Cliopatria. {geography.snapshots.length} instantanés Historical Basemaps
-              offrent une source de référence complémentaire.
+              Dated polity geometries for {number(geography.temporal.entities)} named entities in
+              Cliopatria. {geography.snapshots.length} Historical Basemaps snapshots provide an
+              additional reference source.
             </p>
             <a className="source-link" href="/geo/manifest.json">
-              Consulter le manifeste géographique ↗
+              View the geography manifest ↗
             </a>
           </section>
         </div>
         {!quality.acceptance.met && (
           <p className="document-notice">
-            Le seuil prévu de {number(quality.acceptance.target)} événements valides n’est pas
-            atteint dans ce build. Les données manquantes ou rejetées ne sont pas remplacées par des
-            événements inventés.
+            This build does not meet the target of {number(quality.acceptance.target)} valid events.
+            Missing or rejected records are never replaced with invented events.
           </p>
         )}
         <section>
           <span className="eyebrow">03 / PROVENANCE</span>
-          <h2>Des sources ouvertes, des licences distinctes</h2>
+          <h2>Open sources, distinct licences</h2>
           <div className="document-grid">
             <div className="document-card">
               <h3>Wikidata</h3>
               <p>
-                Les événements, dates, lieux, participants et liens vers les conflits proviennent
-                des déclarations structurées de Wikidata, sous CC0. Les identifiants QID permettent
-                de remonter à chaque fiche et à son historique.
+                Events, dates, locations, participants and conflict links come from Wikidata’s
+                structured statements, released under CC0. QID identifiers link back to each record
+                and its history.
               </p>
               <a className="source-link" href="https://www.wikidata.org/wiki/Wikidata:Licensing">
-                Wikidata · licence CC0 ↗
+                Wikidata · CC0 licence ↗
               </a>
             </div>
             {geography.sources.map((source) => (
               <div className="document-card" key={source.label}>
                 <h3>{source.label}</h3>
                 <p>
-                  {source.licence}. Les révisions des dépôts et les empreintes SHA-256 sont
-                  verrouillées dans le pipeline. Les données ont été normalisées, les années avant
-                  notre ère converties en numérotation astronomique et les géométries simplifiées
-                  pour la production de tuiles. Les sources originales restent accessibles.
+                  {source.licence}. Repository revisions and SHA-256 checksums are pinned in the
+                  pipeline. Data have been normalized, BCE years converted to astronomical numbering
+                  and geometries simplified for tiles. Original sources remain accessible.
                 </p>
                 <a className="source-link" href={source.url}>
-                  Consulter la source ↗
+                  View the source ↗
                 </a>
                 <a className="source-link" href={source.licenceUrl}>
-                  Lire la licence ↗
+                  Read the licence ↗
                 </a>
                 {source.citation && (
                   <a className="source-link" href={source.citation}>
-                    Publication scientifique ↗
+                    Research publication ↗
                   </a>
                 )}
                 {source.correspondingSource && (
                   <a className="source-link" href={source.correspondingSource}>
-                    Télécharger le code et les géométries sources correspondants ↓
+                    Download the corresponding source code and geometries ↓
                   </a>
                 )}
               </div>
             ))}
             <div className="document-card">
-              <h3>Typographies hébergées localement</h3>
+              <h3>Locally hosted fonts</h3>
               <p>
-                Cormorant est une création des Cormorant Project Authors ; Manrope des Manrope
-                Project Authors. Les deux polices sont distribuées avec leur licence SIL Open Font
-                License 1.1 et leurs avis de copyright.
+                Cormorant is by the Cormorant Project Authors; Manrope is by the Manrope Project
+                Authors. Both fonts are distributed with their SIL Open Font License 1.1 and
+                copyright notices.
               </p>
               <a className="source-link" href="/fonts/cormorantgaramond-OFL.txt">
-                Cormorant · copyright et licence ↗
+                Cormorant · copyright and licence ↗
               </a>
               <a className="source-link" href="/fonts/manrope-OFL.txt">
-                Manrope · copyright et licence ↗
+                Manrope · copyright and licence ↗
               </a>
             </div>
             <div className="document-card">
-              <h3>Wikipédia & Wikimedia Commons</h3>
+              <h3>Wikipedia & Wikimedia Commons</h3>
               <p>
-                Les résumés sont chargés à l’ouverture des fiches, en français avec repli en
-                anglais. Les textes sont attribués à Wikipédia et distribués selon les conditions CC
-                BY-SA applicables. Chaque image conserve la licence indiquée sur sa page Wikimedia
-                Commons.
+                Summaries load when records are opened, in the selected language when available,
+                with English as the fallback. Text is attributed to Wikipedia and distributed under
+                the applicable CC BY-SA terms. Each image retains the licence specified on its
+                Wikimedia Commons page.
               </p>
               <a
                 className="source-link"
                 href="https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
               >
-                Conditions de réutilisation Wikimedia ↗
+                Wikimedia reuse terms ↗
               </a>
               <a className="source-link" href="https://creativecommons.org/licenses/by-sa/4.0/">
                 CC BY-SA 4.0 ↗
@@ -182,108 +177,102 @@ export default async function AboutPage() {
           </div>
         </section>
         <section>
-          <span className="eyebrow">04 / TEMPS & FRONTIÈRES</span>
-          <h2>Ne pas confondre précision et certitude</h2>
+          <span className="eyebrow">04 / TIME & BOUNDARIES</span>
+          <h2>Precision is not certainty</h2>
           <p>
-            Les années sont stockées selon la numérotation astronomique : 1 av. J.-C. correspond à
-            0, 2 av. J.-C. à −1. L’interface les présente en notation historique. Le calendrier
-            julien, grégorien ou non précisé et la précision de la date sont conservés lorsqu’ils
-            sont disponibles.
+            Years are stored using astronomical numbering: 1 BCE is year 0, and 2 BCE is −1. The
+            interface displays historical notation. Julian, Gregorian or unspecified calendars and
+            date precision are preserved when available.
           </p>
           <p>
-            Cliopatria décrit des polygones valables sur des intervalles inclusifs entre 3400 av.
-            J.-C. et 2024. Le filtrage de ces intervalles fait évoluer la carte. Les contours
-            anciens restent approximatifs ; l’absence de polygone ne signifie pas qu’un espace était
-            inhabité. Après 2024, les dernières frontières documentées sont conservées et ne
-            constituent pas une vérification des changements récents.
+            Cliopatria describes polygons valid over inclusive intervals between 3400 BCE and 2024.
+            Filtering these intervals changes the map. Ancient boundaries remain approximate; an
+            absent polygon does not mean a place was uninhabited. After 2024, the last documented
+            boundaries are retained and do not verify recent changes.
           </p>
           <p>
-            Les instantanés Historical Basemaps vont ici de 4000 av. J.-C. à 2010 et sont parfois
-            séparés de plusieurs siècles. Un éventuel fondu entre instantanés sert à la lecture
-            visuelle : il ne crée pas de nouvelles frontières historiques. Les rivières et côtes
-            Natural Earth décrivent le monde physique contemporain.
+            Historical Basemaps snapshots range from 4000 BCE to 2010 and may be centuries apart.
+            Any visual transition between snapshots aids reading; it does not create new historical
+            boundaries. Natural Earth rivers and coastlines describe the contemporary physical
+            world.
           </p>
           <p>
-            Les courbes de superficie mesurent la géométrie des observations. Les premières et
-            dernières observations d’un territoire ne sont pas assimilées à sa fondation ou sa
-            disparition. Les alliances regroupées dans Cliopatria sont exclues du remplissage
-            principal afin de ne pas les représenter comme un État unitaire.
+            Area charts measure the geometry of observations. A territory’s first and last
+            observations are not treated as its founding or dissolution. Alliances grouped in
+            Cliopatria are excluded from the main fill so they are not presented as unitary states.
           </p>
           <p>
-            La carte synchronise les événements et les territoires par leur date. Elle n’attribue
-            pas automatiquement un changement de frontières à une bataille voisine ou contemporaine.
-            Les lignes entre événements liés indiquent une chronologie, pas un itinéraire d’armée
-            attesté.
+            The map synchronizes events and territories by date. It does not automatically attribute
+            a boundary change to a nearby or contemporary battle. Lines between related events
+            indicate chronology, not a documented army route.
           </p>
         </section>
         <section>
-          <span className="eyebrow">05 / COUVERTURE</span>
-          <h2>Une histoire mondiale, une couverture inégale</h2>
+          <span className="eyebrow">05 / COVERAGE</span>
+          <h2>World history, uneven coverage</h2>
           <p>
-            Les sources ouvertes reflètent des déséquilibres géographiques, linguistiques et
-            chronologiques. Le nombre de points visibles mesure la documentation disponible, pas la
-            quantité de violence d’une région ou d’une époque.
+            Open sources reflect geographic, linguistic and chronological imbalances. The number of
+            visible points measures available documentation, not the amount of violence in a region
+            or period.
           </p>
           <div className="document-grid">
             {Object.entries(quality.coverage.byRegion).map(([region, count]) => (
               <div className="document-card" key={region}>
                 <h3>{regions[region] ?? region}</h3>
-                <p>{number(count)} événements dans ce build</p>
+                <p>{number(count)} events in this build</p>
               </div>
             ))}
           </div>
           <p>
-            Les coordonnées issues du lieu associé indiquent ce lieu ; elles ne prouvent pas
-            l’emplacement exact du champ de bataille. Le masque de validation Natural Earth à 1:10m
-            est distinct du fond physique à 1:50m. Une tolérance côtière de 25 km tient compte de la
-            généralisation de cette géométrie et des petites îles. Les anomalies de dates,
-            coordonnées et événements terrestres au large sont consignées dans le rapport.
+            Coordinates obtained from an associated place identify that place; they do not establish
+            the exact battlefield location. The Natural Earth 1:10m validation mask is separate from
+            the 1:50m physical basemap. A 25 km coastal tolerance accounts for generalized geometry
+            and small islands. Date anomalies, coordinate problems and offshore land events are
+            recorded in the report.
           </p>
           <p>
-            Le score d’importance organise la lisibilité au zoom. Il combine les liens interlangues,
-            la sélection éditoriale et le contexte documenté ; il ne constitue pas un jugement moral
-            sur les événements.
+            The importance score organizes readability at different zoom levels. It combines
+            interlanguage links, editorial selection and documented context; it is not a moral
+            judgement on events.
           </p>
         </section>
         <section>
-          <span className="eyebrow">PERSONNES & COMMANDEMENT</span>
-          <h2>Biographies, règnes et fonctions documentés</h2>
+          <span className="eyebrow">PEOPLE & COMMAND</span>
+          <h2>Documented biographies, reigns and offices</h2>
           <p>
-            Les fiches des personnes relient les biographies encyclopédiques aux dates et fonctions
-            de Wikidata. Chaque fonction conserve ses bornes temporelles disponibles et ses sources.
-            Une date absente reste inconnue ; plusieurs dates concurrentes restent visibles. Une
-            fonction politique ou militaire n’est pas systématiquement un règne.
+            People’s records connect encyclopedia biographies to Wikidata dates and offices. Each
+            office retains its available date bounds and sources. A missing date stays unknown;
+            competing dates stay visible. A political or military office is not automatically
+            labelled a reign.
           </p>
           <p>
-            Un commandant est lié à un événement lorsque la source indique explicitement son
-            commandement, notamment comme qualificatif d’un participant. Une simple participation à
-            un conflit ne suffit pas à lui attribuer la direction de ses batailles ou de ses
-            conquêtes. Les changements territoriaux ne sont pas attribués automatiquement à ces
-            personnes.
+            A commander is linked to an event when the source explicitly records command, including
+            as a participant qualifier. Participation in a conflict alone does not establish
+            leadership of its battles or conquests. Territorial changes are not automatically
+            attributed to these people.
           </p>
           <p>
-            Les dirigeants proposés depuis un territoire reposent sur une correspondance d’identité
-            vérifiée. Les associations ambiguës entre les sources géographiques et Wikidata sont
-            écartées. Les listes de personnes, de fonctions et de batailles dépendent des
-            déclarations disponibles et ne constituent pas des biographies ou des successions
-            exhaustives.
+            Leaders linked from a territory rely on a reviewed identity match. Ambiguous
+            associations between geographical sources and Wikidata are excluded. Lists of people,
+            offices and battles depend on available statements and are not exhaustive biographies or
+            successions.
           </p>
           <a className="source-link" href="/data/enrichment.json">
-            Consulter la couverture des dossiers ↗
+            View dossier coverage ↗
           </a>
         </section>
         <section>
           <span className="eyebrow">06 / CORRECTIONS</span>
-          <h2>Faire progresser l’atlas</h2>
+          <h2>Improve the atlas</h2>
           <p>
-            Pour signaler une erreur, conservez le lien partagé, le QID de l’événement ou
-            l’identifiant de l’observation territoriale, l’année affichée et une référence
-            vérifiable. Les corrections de faits doivent d’abord remonter à la source concernée.
+            To report an error, include the shared link, event QID or territorial observation
+            identifier, displayed year and a verifiable reference. Factual corrections should first
+            be submitted to the relevant source.
           </p>
           <ul>
             <li>
               <a className="source-link" href="https://www.wikidata.org/wiki/Wikidata:Introduction">
-                Corriger une déclaration Wikidata ↗
+                Correct a Wikidata statement ↗
               </a>
             </li>
             <li>
@@ -291,7 +280,7 @@ export default async function AboutPage() {
                 className="source-link"
                 href="https://github.com/Seshat-Global-History-Databank/cliopatria/issues"
               >
-                Signaler une erreur à Cliopatria ↗
+                Report an error to Cliopatria ↗
               </a>
             </li>
             <li>
@@ -299,62 +288,18 @@ export default async function AboutPage() {
                 className="source-link"
                 href="https://github.com/aourednik/historical-basemaps/issues"
               >
-                Signaler une erreur à Historical Basemaps ↗
+                Report an error to Historical Basemaps ↗
               </a>
             </li>
           </ul>
           <p>
-            Le ton de l’atlas est documentaire. Les limites et désaccords restent visibles ; les
-            noms et revendications de souveraineté présents dans les sources ne constituent pas une
-            prise de position.
-          </p>
-        </section>
-        <section id="english" lang="en">
-          <span className="eyebrow">METHODOLOGY · ENGLISH</span>
-          <h2>An atlas with inspectable evidence</h2>
-          <p>
-            This build contains {number(quality.geolocatedDatedEvents)} dated, geolocated events
-            with Wikidata provenance and {number(geography.temporal.records)} dated polity
-            geometries from Cliopatria. Every displayed record links to its source. Event coverage
-            is incomplete and uneven across regions and periods; missing data are never filled with
-            invented events.
-          </p>
-          <p>
-            Cliopatria is CC BY 4.0, Historical Basemaps is GPL-3.0, Natural Earth is public domain,
-            and Wikidata structured data is CC0. Wikipedia summaries retain their attribution and
-            applicable CC BY-SA terms; image licences are specified on their Commons pages. Modified
-            Historical Basemaps geometry and complete corresponding source are downloadable above.
-          </p>
-          <p>
-            BCE dates use astronomical year numbering internally. Boundary intervals, date precision
-            and uncertainty are preserved. Approximate ancient boundaries are not modern sovereignty
-            claims. Current physical geography does not reconstruct ancient coastlines. Territorial
-            observations end in 2024, and the interface retains the last documented state after that
-            date.
-          </p>
-          <p>
-            Playing a conflict shows chronologically linked source events; connecting lines are not
-            reconstructed army routes. A battle and a territorial change sharing a date do not
-            establish causation. Territory area histories show observations, not asserted founding
-            or dissolution dates.
-          </p>
-          <p>
-            Biographical dates and offices retain their statement-level evidence and date variants.
-            Participation does not imply command: commanders require an explicit source statement.
-            Political offices are not automatically labelled reigns. Links from map territories to
-            rulers require a reviewed identity match, and ambiguous cross-references are excluded.
-            The people and office lists reflect source coverage, not an exhaustive succession.
-          </p>
-          <p>
-            To report a correction, include the shared view, source identifier, displayed year, and
-            a reliable reference. Use the source issue links above. The machine-readable quality
-            report discloses coverage, rejections, and whether the event-count acceptance target is
-            met.
+            The atlas takes a documentary approach. Limits and disagreements stay visible; names and
+            sovereignty claims in the sources do not imply endorsement.
           </p>
         </section>
         <p className="source-note">
-          Rapport produit le {quality.builtAt.slice(0, 10)} · Données téléchargées et transformées
-          par un pipeline reproductible.
+          Report generated on {quality.builtAt.slice(0, 10)} · Data downloaded and transformed by a
+          reproducible pipeline.
         </p>
       </article>
     </main>

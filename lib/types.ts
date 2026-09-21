@@ -30,7 +30,21 @@ export const REGION_IDS = [
 export type EventType = (typeof EVENT_TYPES)[number];
 export type EraId = (typeof ERA_IDS)[number];
 export type RegionId = (typeof REGION_IDS)[number];
-export type Locale = 'fr' | 'en';
+export const LOCALES = ['en', 'fr', 'de', 'es', 'zh', 'ru'] as const;
+export type Locale = (typeof LOCALES)[number];
+export const DEFAULT_LOCALE: Locale = 'en';
+export const LOCALE_LABELS: Record<Locale, string> = {
+  en: 'English',
+  fr: 'Français',
+  de: 'Deutsch',
+  es: 'Español',
+  zh: '简体中文',
+  ru: 'Русский',
+};
+export function isLocale(value: unknown): value is Locale {
+  return typeof value === 'string' && LOCALES.includes(value as Locale);
+}
+export type LocalizedName = { en: string } & Partial<Record<Locale, string>>;
 export type Calendar = 'julian' | 'gregorian' | 'unknown';
 export type DatePrecision = 'day' | 'month' | 'year' | 'decade' | 'century';
 export type {

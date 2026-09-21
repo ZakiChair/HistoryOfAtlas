@@ -42,6 +42,45 @@ const event = (): HistoricalEvent => ({
 });
 
 describe('source-faithful people enrichment', () => {
+  it('preserves available Wikipedia articles in every additional interface language', () => {
+    const names = {
+      de: 'Deutscher Artikel',
+      es: 'Artículo español',
+      zh: '中文条目',
+      ru: 'Русская статья',
+    };
+    const entities = new Map<string, Entity>([
+      [
+        'Q100',
+        { id: 'Q100', claims: { P710: [claim('Q100$participant', item('Q1'))] } } as Entity,
+      ],
+      [
+        'Q1',
+        {
+          ...human('Q1'),
+          sitelinks: Object.fromEntries(
+            Object.entries(names).map(([language, title]) => [`${language}wiki`, { title }]),
+          ),
+        },
+      ],
+    ]);
+    const result = buildPeople([event()], entities, new Set());
+    const expected = Object.fromEntries(
+      Object.entries(names).map(([language, title]) => [
+        language,
+        `https://${language}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(' ', '_'))}`,
+      ]),
+    );
+    expect(result.people[0]?.wikipedia).toEqual(expected);
+    for (const url of Object.values(expected)) {
+      expect(result.people[0]?.sources).toContainEqual({
+        label: expect.stringMatching(/^Wikipedia \(/),
+        url,
+        license: 'CC-BY-SA-4.0',
+      });
+    }
+  });
+
   it('keeps participation separate from command, reads side-qualified commanders, and excludes nonhumans', () => {
     const entities = new Map<string, Entity>([
       [

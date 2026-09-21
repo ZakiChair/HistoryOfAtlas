@@ -1,11 +1,12 @@
 import type { Person } from './schema';
+import { LOCALES, type LocalizedName } from './types';
 
 export type PersonIndexRecord = Pick<Person, 'id' | 'name'> & { aliases?: string; year?: number };
 export type SearchRecord = {
   id: string;
   targetId?: string;
   kind: 'event' | 'entity' | 'person';
-  name: { fr?: string; en: string };
+  name: LocalizedName;
   title: string;
   year?: number;
   coords?: [number, number];
@@ -20,7 +21,7 @@ export function personSearchRecord(person: PersonIndexRecord): SearchRecord {
     targetId: person.id,
     kind: 'person',
     name: person.name,
-    title: `${person.name.fr ?? ''} ${person.name.en}`,
+    title: [...new Set(LOCALES.map((locale) => person.name[locale]).filter(Boolean))].join(' '),
     year: person.year,
     aliases: person.aliases,
     type: 'person',

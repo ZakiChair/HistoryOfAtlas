@@ -33,7 +33,7 @@ test('battle to commander preserves the map and returns to the battle after a bi
   expect(person.events.some((link) => link.eventId === event.id)).toBe(true);
   await page.route('https://*.wikipedia.org/api/rest_v1/page/summary/**', (route) => route.abort());
   await page.goto(
-    `/?y=${event.start.year}&e=${event.id}&lon=${event.coords![0]}&lat=${event.coords![1]}&z=4`,
+    `/?lang=fr&y=${event.start.year}&e=${event.id}&lon=${event.coords![0]}&lat=${event.coords![1]}&z=4`,
   );
   const eventPanel = page.getByTestId('event-panel');
   await expect(eventPanel.getByTestId('event-people')).toBeAttached();
@@ -53,7 +53,7 @@ test('battle to commander preserves the map and returns to the battle after a bi
   await expect(
     personPanel.getByRole('heading', { name: person.name.fr ?? person.name.en, exact: true }),
   ).toBeVisible();
-  await page.getByRole('button', { name: /Passer en anglais$/ }).click();
+  await page.getByTestId('language-select').selectOption('en');
   await expect(
     personPanel.getByRole('heading', { name: person.name.en, exact: true }),
   ).toBeVisible();
@@ -84,7 +84,7 @@ test('people are searchable while their dossiers stay unloaded until selected', 
   expect(commander).toBeTruthy();
   const requested: string[] = [];
   page.on('request', (request) => requested.push(new URL(request.url()).pathname));
-  await page.goto('/?y=1815');
+  await page.goto('/?lang=fr&y=1815');
   await page.getByRole('button', { name: 'Rechercher dans l’atlas', exact: true }).click();
   const input = page.getByRole('combobox', { name: 'Rechercher dans l’atlas' });
   await input.fill(commander!.name.fr ?? commander!.name.en);
@@ -113,7 +113,7 @@ test('a battle displays its sourced French encyclopedia summary and attribution'
     requested = true;
     await route.fulfill({ json: summary });
   });
-  await page.goto(`/?y=${event.start.year}&e=${event.id}`);
+  await page.goto(`/?lang=fr&y=${event.start.year}&e=${event.id}`);
   const panel = page.getByTestId('event-panel');
   await expect(panel.locator('.detail-summary')).toHaveText(summary.extract);
   expect(requested).toBe(true);

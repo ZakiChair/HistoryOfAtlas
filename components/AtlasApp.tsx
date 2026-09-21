@@ -31,7 +31,8 @@ import {
 } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { createAtlasUrlSync } from '@/lib/store/url-sync';
-import { useI18n } from '@/lib/i18n';
+import { useI18n, translateCopy } from '@/lib/i18n';
+import { isLocale, LOCALES, LOCALE_LABELS } from '@/lib/types';
 import { CURRENT_YEAR, getEra } from '@/lib/eras';
 import { formatYear } from '@/lib/histdate';
 import { useJson } from '@/lib/data-client/hooks';
@@ -137,13 +138,11 @@ function Overview({
             <li key={item.id}>
               <button
                 onClick={() =>
-                  useAtlasStore
-                    .getState()
-                    .patchState({
-                      selectedEntity: item.id,
-                      selectedEvent: null,
-                      selectedPerson: null,
-                    })
+                  useAtlasStore.getState().patchState({
+                    selectedEntity: item.id,
+                    selectedEvent: null,
+                    selectedPerson: null,
+                  })
                 }
               >
                 <span className="territory-color" style={{ background: item.color }} />
@@ -294,6 +293,10 @@ export default function AtlasApp() {
     document.documentElement.dataset.theme = theme;
     document.documentElement.lang = locale;
     document.documentElement.dir = dir;
+    return () => {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    };
   }, [theme, locale, dir]);
   useEffect(() => {
     if (campaignId) {
@@ -366,9 +369,11 @@ export default function AtlasApp() {
           );
           if (!matches.length) {
             setToast(
-              locale === 'fr'
-                ? 'Aucun événement daté de ce jour dans les archives disponibles.'
-                : 'No event dated to this day in the available archives.',
+              translateCopy(
+                locale,
+                'Aucun événement daté de ce jour dans les archives disponibles.',
+                'No event dated to this day in the available archives.',
+              ),
             );
             return;
           }
@@ -386,9 +391,11 @@ export default function AtlasApp() {
         }
       } catch {
         setToast(
-          locale === 'fr'
-            ? 'Cette archive n’est pas disponible pour le moment.'
-            : 'This archive is currently unavailable.',
+          translateCopy(
+            locale,
+            'Cette archive n’est pas disponible pour le moment.',
+            'This archive is currently unavailable.',
+          ),
         );
       }
     },
@@ -407,17 +414,17 @@ export default function AtlasApp() {
           className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''}`}
         >
           <h1 className="sr-only">
-            Atlas Belli — {t('L’histoire à travers les cartes', 'History through maps')}
+            HistoryOfAtlas — {t('L’histoire à travers les cartes', 'History through maps')}
           </h1>
           <a className="skip-link" href="#atlas-explore">
             {t('skipToContent')}
           </a>
           {hydrated && <WorldMap />}
           <header className="atlas-header">
-            <Link href="/" className="brand">
+            <Link href={locale === 'en' ? '/' : `/?lang=${locale}`} className="brand">
               <CompassRose small />
               <span>
-                Atlas Belli
+                HistoryOfAtlas
                 <span className="brand-subtitle">
                   {t('L’histoire à travers les cartes', 'History through maps')}
                 </span>
@@ -449,15 +456,21 @@ export default function AtlasApp() {
                 </button>
                 <kbd aria-hidden="true">⌘ K</kbd>
               </div>
-              <button
-                className="language-toggle"
-                aria-label={
-                  locale === 'fr' ? 'FR EN — Passer en anglais' : 'EN FR — Switch to French'
-                }
-                onClick={() => setLocale(locale === 'fr' ? 'en' : 'fr')}
+              <select
+                className="language-select"
+                aria-label={t('Langue', 'Language')}
+                data-testid="language-select"
+                value={locale}
+                onChange={(event) => {
+                  if (isLocale(event.target.value)) setLocale(event.target.value);
+                }}
               >
-                {locale.toUpperCase()} <span>{locale === 'fr' ? 'EN' : 'FR'}</span>
-              </button>
+                {LOCALES.map((language) => (
+                  <option key={language} value={language} lang={language}>
+                    {LOCALE_LABELS[language]}
+                  </option>
+                ))}
+              </select>
               <Link prefetch={false} href="/about/" className="about-link" aria-label={t('about')}>
                 <Info size={18} />
               </Link>

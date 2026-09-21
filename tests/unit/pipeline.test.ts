@@ -96,7 +96,7 @@ it('preserves original-language labels and the newer source revision across cach
   }
 });
 
-it('keeps a sourced original title with its language instead of inventing an English translation', async () => {
+it('keeps sourced original titles and multilingual Wikipedia links without inventing translations', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'atlas-original-title-'));
   try {
     await writeFile(join(directory, 'candidate-ids.json'), JSON.stringify(['Q1']));
@@ -122,6 +122,12 @@ it('keeps a sourced original title with its language instead of inventing an Eng
             id: 'Q1',
             lastrevid: 20,
             labels: { ja: { value: '原題' } },
+            sitelinks: {
+              dewiki: { title: 'Deutscher Artikel' },
+              eswiki: { title: 'Artículo español' },
+              zhwiki: { title: '中文条目' },
+              ruwiki: { title: 'Русская статья' },
+            },
             claims: {
               P31: [claim({ id: 'Q178561' })],
               P585: [claim({ time: '+2000-01-01T00:00:00Z', precision: 9 })],
@@ -138,6 +144,12 @@ it('keeps a sourced original title with its language instead of inventing an Eng
     expect(result.events[0]?.name.en).toBe('原題');
     expect(result.events[0]?.nameLanguage).toBe('ja');
     expect(result.events[0]?.sources[0]?.url).toBe('https://www.wikidata.org/wiki/Q1?oldid=20');
+    expect(result.events[0]?.wikipedia).toEqual({
+      de: `https://de.wikipedia.org/wiki/${encodeURIComponent('Deutscher_Artikel')}`,
+      es: `https://es.wikipedia.org/wiki/${encodeURIComponent('Artículo_español')}`,
+      zh: `https://zh.wikipedia.org/wiki/${encodeURIComponent('中文条目')}`,
+      ru: `https://ru.wikipedia.org/wiki/${encodeURIComponent('Русская_статья')}`,
+    });
   } finally {
     await rm(directory, { recursive: true, force: true });
   }

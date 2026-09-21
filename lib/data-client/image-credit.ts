@@ -1,4 +1,5 @@
 import { readJson } from './index';
+import { DEFAULT_LOCALE, type Locale } from '../types';
 
 export type CommonsFile = {
   filename: string;
@@ -131,7 +132,7 @@ type ImageInfoResponse = {
  */
 export async function getCommonsImageCredit(
   image: string,
-  locale: 'fr' | 'en' = 'fr',
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<CommonsImageCredit | null> {
   const file = getCommonsFile(image);
   if (!file) return null;

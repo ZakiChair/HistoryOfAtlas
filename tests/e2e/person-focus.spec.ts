@@ -20,7 +20,7 @@ test('a cached person opened from search keeps focus in its dossier and preserve
   const person: Person = await (
     await request.get(`/data/people/${commander!.personId}.json`)
   ).json();
-  await page.goto(`/?y=${event.start.year}&e=${event.id}`);
+  await page.goto(`/?lang=fr&y=${event.start.year}&e=${event.id}`);
   const eventPanel = page.getByTestId('event-panel');
   const sourceButton = eventPanel
     .getByTestId('event-people')

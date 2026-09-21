@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { HistoricalEventSchema, type HistoricalEvent } from '../../lib/schema';
 import { classifyEra } from '../../lib/eras';
 import { compareHistDates, parseWikidataTime } from '../../lib/histdate';
-import type { EventType } from '../../lib/types';
+import { LOCALES, type EventType } from '../../lib/types';
 import { classifyRegion } from './region';
 export { classifyRegion } from './region';
 import exclusions from '../../data/curated/excluded-classes.json';
@@ -272,8 +272,8 @@ export async function normalize(
         url: `https://www.wikidata.org/wiki/${id}${entity.lastrevid ? `?oldid=${entity.lastrevid}` : ''}`,
         license: 'CC0-1.0',
       };
-      const wikipedia: { en?: string; fr?: string } = {};
-      for (const language of ['en', 'fr'] as const) {
+      const wikipedia: NonNullable<HistoricalEvent['wikipedia']> = {};
+      for (const language of LOCALES) {
         const title = entity.sitelinks?.[`${language}wiki`]?.title;
         if (title)
           wikipedia[language] =

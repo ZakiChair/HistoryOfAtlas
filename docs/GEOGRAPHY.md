@@ -1,6 +1,6 @@
 # Geography: reproducible territory history
 
-Atlas Belli draws dated territorial geometries, not only event markers. The main layer uses **Cliopatria**, a Seshat Global History Databank dataset. The requested **Historical Basemaps** remains available as an independent reference. **Natural Earth** supplies the contemporary physical basemap. None requires an API key.
+HistoryOfAtlas draws dated territorial geometries, not only event markers. The main layer uses **Cliopatria**, a Seshat Global History Databank dataset. The requested **Historical Basemaps** remains available as an independent reference. **Natural Earth** supplies the contemporary physical basemap. None requires an API key.
 
 ## Rebuild
 

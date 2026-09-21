@@ -1,4 +1,4 @@
-name: Validate Atlas Belli
+name: Validate HistoryOfAtlas
 on:
   push:
   pull_request:
@@ -11,7 +11,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: atlas-belli-${{ github.ref }}
+  group: historyofatlas-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   quality:

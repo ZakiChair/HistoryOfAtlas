@@ -12,7 +12,7 @@ from threading import Lock
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / 'data/raw/wikidata'
 ENDPOINT = 'https://query.wikidata.org/sparql'
-USER_AGENT = 'AtlasBelli/1.0 (open-source historical atlas; reproducible CC0 data ingestion)'
+USER_AGENT = 'HistoryOfAtlas/1.0 (open-source historical atlas; reproducible CC0 data ingestion)'
 ROOTS = {'battle': 'Q178561', 'siege': 'Q188055', 'naval': 'Q1261499', 'war': 'Q198', 'campaign': 'Q831663', 'treaty': 'Q625298', 'conquest': 'Q1361229'}
 RATE_LOCK = Lock()
 LAST_REQUEST = 0.0

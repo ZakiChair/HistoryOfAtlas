@@ -11,6 +11,7 @@ import {
   type PolityLeaders,
 } from '../../lib/schema';
 import { compareHistDates, histDateBounds, parseWikidataTime } from '../../lib/histdate';
+import { LOCALES } from '../../lib/types';
 import {
   entityIds,
   label,
@@ -123,7 +124,7 @@ function evidence(
 
 function wikiLinks(entity: Entity): NonNullable<Person['wikipedia']> {
   const links: NonNullable<Person['wikipedia']> = {};
-  for (const language of ['fr', 'en'] as const) {
+  for (const language of LOCALES) {
     const title = entity.sitelinks?.[`${language}wiki`]?.title;
     if (title)
       links[language] =

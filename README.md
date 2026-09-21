@@ -1,8 +1,8 @@
-# Atlas Belli
+# HistoryOfAtlas
 
-[Live atlas](https://atlas-belli.vercel.app) · [Public repository](https://github.com/ZakiChair/atlas-belli)
+[Live atlas](https://historyofatlas.vercel.app) · [Public repository](https://github.com/ZakiChair/HistoryOfAtlas)
 
-An interactive historical atlas of territorial change and documented military events. Move through time to see dated polity geometries, explore sourced events, and inspect what the underlying datasets actually say. The interface defaults to French, with English available.
+An interactive historical atlas of territorial change and documented military events. Move through time to see dated polity geometries, explore sourced events, and inspect what the underlying datasets actually say. The interface defaults to English and also supports French, German, Spanish, Simplified Chinese and Russian. Historical source text uses the selected language when available, with English as the fallback.
 
 The main boundary layer uses Seshat **Cliopatria**: 13,380 dated polity geometry records for 1,583 source-named entities, distributed in 39 temporal PMTiles archives. **Historical Basemaps** supplies 50 independent world snapshots. **Natural Earth** supplies the physical basemap. Events are acquired from **Wikidata**, never reconstructed from model memory.
 
@@ -62,8 +62,8 @@ pnpm audit:lighthouse
 The hardware Lighthouse audit enforces Performance ≥85, Accessibility ≥95 and SEO ≥95 against the production preview using mobile DevTools throttling. Cloud CI runs functional and accessibility checks; the optional `hardware-budgets` job requires a self-hosted runner labelled `atlas-gpu`. These are acceptance thresholds, not a claim that every device or build has achieved them. Frame-rate and initial bundle targets require their own measurements.
 
 ```sh
-docker build --build-arg NEXT_PUBLIC_SITE_URL=https://your-atlas.example -t atlas-belli:local .
-docker run --rm -p 8080:8080 atlas-belli:local
+docker build --build-arg NEXT_PUBLIC_SITE_URL=https://your-atlas.example -t historyofatlas:local .
+docker run --rm -p 8080:8080 historyofatlas:local
 ```
 
 Replace the example origin with the real deployment origin. The multistage image serves the static export using Nginx as a non-root user. Its configuration preserves the byte-range requests required by PMTiles. No deployment is performed by the repository's CI.

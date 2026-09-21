@@ -9,6 +9,22 @@ import {
 describe('shareable atlas state', () => {
   beforeEach(() => useAtlasStore.getState().reset());
 
+  it('opens an unlocalized or unsupported shared link in English', () => {
+    expect(parseAtlasUrl('').locale).toBe('en');
+    expect(parseAtlasUrl('?lang=xx').locale).toBe('en');
+    expect(useAtlasStore.getState().locale).toBe('en');
+  });
+
+  it.each(['en', 'fr', 'de', 'es', 'zh', 'ru'] as const)(
+    'preserves the selected language %s when sharing and reopening the atlas',
+    (locale) => {
+      useAtlasStore.getState().setLocale(locale);
+      expect(parseAtlasUrl(serializeAtlasUrl(useAtlasStore.getState())).locale).toBe(locale);
+      useAtlasStore.getState().hydrateFromUrl(`?lang=${locale}`);
+      expect(useAtlasStore.getState().locale).toBe(locale);
+    },
+  );
+
   it('restores camera, historical zero, filters and navigation from a deep link', () => {
     const state = {
       ...DEFAULT_ATLAS_STATE,
@@ -51,7 +67,7 @@ describe('shareable atlas state', () => {
     expect(state.camera.lon).toBe(DEFAULT_ATLAS_STATE.camera.lon);
     expect(state.camera.zoom).toBe(0);
     expect(state.selectedEvent).toBeNull();
-    expect(state.locale).toBe('fr');
+    expect(state.locale).toBe('en');
     expect(state.projection).toBe('globe');
     expect(state.filters).toEqual(DEFAULT_ATLAS_STATE.filters);
   });

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 export const dynamic = 'force-static';
-export const alt = 'Atlas Belli — L’histoire à travers les cartes';
+export const alt = 'HistoryOfAtlas — History through maps';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export default function OpenGraphImage() {
@@ -63,16 +63,16 @@ export default function OpenGraphImage() {
           marginBottom: 42,
         }}
       >
-        5 500 ANS · UN MONDE EN MOUVEMENT
+        5,500 YEARS · A WORLD IN MOTION
       </div>
-      <div style={{ fontSize: 112, fontFamily: 'serif', letterSpacing: '-4px', display: 'flex' }}>
-        Atlas Belli
+      <div style={{ fontSize: 100, fontFamily: 'serif', letterSpacing: '-4px', display: 'flex' }}>
+        HistoryOfAtlas
       </div>
       <div style={{ fontSize: 34, color: '#bccbd1', display: 'flex', marginTop: 20 }}>
-        L’histoire à travers les cartes.
+        History through maps.
       </div>
       <div style={{ fontSize: 16, color: '#c6a76d', display: 'flex', marginTop: 66 }}>
-        TERRITOIRES · CONFLITS · SOURCES OUVERTES
+        TERRITORIES · CONFLICTS · OPEN SOURCES
       </div>
     </div>,
     size,

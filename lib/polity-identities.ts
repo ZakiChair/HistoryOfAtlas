@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import registry from '@/data/curated/polity-identities.json';
+import { LocalizedNameSchema } from './schema';
 
 const Qid = z.string().regex(/^Q[1-9]\d*$/);
 const IdentitySchema = z
@@ -9,7 +10,7 @@ const IdentitySchema = z
     sourceWikidataId: Qid,
     wikidataId: Qid,
     status: z.enum(['verified', 'ambiguous']),
-    label: z.object({ en: z.string().min(1), fr: z.string().min(1).optional() }),
+    label: LocalizedNameSchema,
     wikidataRevision: z.number().int().positive(),
     wikidataDescription: z.object({ en: z.string().optional(), fr: z.string().optional() }),
     reason: z.string().min(1),

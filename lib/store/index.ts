@@ -3,7 +3,7 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { CURRENT_YEAR, MIN_YEAR } from '../eras';
-import { ERA_IDS, EVENT_TYPES, REGION_IDS } from '../types';
+import { DEFAULT_LOCALE, ERA_IDS, EVENT_TYPES, REGION_IDS, isLocale } from '../types';
 import type { EraId, EventType, Locale, RegionId } from '../types';
 
 // Keep URL normalization aligned with MapLibre's Mercator latitude limit.
@@ -58,7 +58,7 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   selectedWar: null,
   selectedEntity: null,
   selectedPerson: null,
-  locale: 'fr',
+  locale: DEFAULT_LOCALE,
   theme: 'dark',
   projection: 'globe',
   boundarySource: 'cliopatria',
@@ -164,7 +164,8 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   state.selectedWar = identifier(query.get('war'));
   state.selectedEntity = identifier(query.get('entity'), false);
   state.selectedPerson = identifier(query.get('person'));
-  state.locale = query.get('lang') === 'en' ? 'en' : 'fr';
+  const locale = query.get('lang');
+  state.locale = isLocale(locale) ? locale : DEFAULT_LOCALE;
   state.theme = query.get('theme') === 'light' ? 'light' : 'dark';
   state.projection = query.get('projection') === 'mercator' ? 'mercator' : 'globe';
   state.boundarySource =

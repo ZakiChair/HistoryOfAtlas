@@ -70,7 +70,7 @@ test('a reviewed territory opens its sourced current leader and returns to the t
   const year = tenure!.start![0].date.year;
   const requested = new Set<string>();
   page.on('request', (resource) => requested.add(new URL(resource.url()).pathname));
-  await page.goto(`/?entity=${mapping!.polityId}&y=${year}`);
+  await page.goto(`/?lang=fr&entity=${mapping!.polityId}&y=${year}`);
   const territoryPanel = page.getByTestId('entity-panel');
   await expect(
     territoryPanel.getByRole('heading', { name: polity.name, exact: true }),
@@ -78,7 +78,7 @@ test('a reviewed territory opens its sourced current leader and returns to the t
   const leaders = territoryPanel.getByTestId('entity-leaders');
   await expect(
     leaders.getByRole('heading', {
-      name: `Périodes documentées en ${formatYear(year)}`,
+      name: `Périodes documentées en ${formatYear(year, 'fr')}`,
       exact: true,
     }),
   ).toBeVisible();
@@ -111,7 +111,10 @@ test('a reviewed territory opens its sourced current leader and returns to the t
   await expect(leader).toBeVisible();
   await expect.poll(() => new URL(page.url()).searchParams.has('person')).toBe(false);
   expect(new URL(page.url()).searchParams.get('entity')).toBe(mapping!.polityId);
-  await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-valuetext', formatYear(year));
+  await expect(page.getByTestId('year-slider')).toHaveAttribute(
+    'aria-valuetext',
+    formatYear(year, 'fr'),
+  );
 });
 
 test('an explicitly ambiguous Roman identity does not borrow rulers or wars from its source QID', async ({
@@ -131,7 +134,7 @@ test('an explicitly ambiguous Roman identity does not borrow rulers or wars from
   expect(polity.wikidataId).toBe(mapping!.wikidataId);
   const requested = new Set<string>();
   page.on('request', (resource) => requested.add(new URL(resource.url()).pathname));
-  await page.goto(`/?entity=${mapping!.polityId}&y=${polity.firstObserved}`);
+  await page.goto(`/?lang=fr&entity=${mapping!.polityId}&y=${polity.firstObserved}`);
   const panel = page.getByTestId('entity-panel');
   await expect(panel.getByRole('heading', { name: polity.name, exact: true })).toBeVisible();
   await expect(panel.locator('.entity-sources')).toBeAttached();

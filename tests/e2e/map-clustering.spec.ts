@@ -36,7 +36,7 @@ test('globe clustering includes sourced visible points and remains correct in Me
       },
     });
   });
-  await page.goto('/?y=1812&z=1.8&lon=18&lat=32&from=1700&to=2000');
+  await page.goto('/?lang=fr&y=1812&z=1.8&lon=18&lat=32&from=1700&to=2000');
   const includesSource = () =>
     page.evaluate((id) => {
       const { queries } = (window as unknown as { clusterProbe: Probe }).clusterProbe;

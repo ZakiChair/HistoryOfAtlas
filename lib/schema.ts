@@ -15,6 +15,10 @@ export const SourceSchema = z.object({
 export const LocalizedNameSchema = z.object({
   fr: z.string().min(1).optional(),
   en: z.string().min(1),
+  de: z.string().min(1).optional(),
+  es: z.string().min(1).optional(),
+  zh: z.string().min(1).optional(),
+  ru: z.string().min(1).optional(),
 });
 export const CoordinatesSchema = z.tuple([
   z.number().finite().min(-180).max(180),
@@ -34,7 +38,14 @@ export const HistDateSchema = z
   })
   .refine((date) => isValidHistDate(date), 'Invalid historical date');
 
-const LocalizedTextSchema = z.object({ fr: z.string().optional(), en: z.string().optional() });
+const LocalizedTextSchema = z.object({
+  en: z.string().optional(),
+  fr: z.string().optional(),
+  de: z.string().optional(),
+  es: z.string().optional(),
+  zh: z.string().optional(),
+  ru: z.string().optional(),
+});
 const WikidataPropertySchema = z.string().regex(/^P[1-9]\d*$/);
 const NamedEntitySchema = z.object({ id: QidSchema, name: LocalizedNameSchema });
 const StatementEvidenceShape = {
@@ -162,7 +173,7 @@ export const PersonSchema = z.object({
   nameLanguage: z.string().min(1).max(40).optional(),
   description: LocalizedTextSchema.optional(),
   summary: LocalizedTextSchema.optional(),
-  wikipedia: z.object({ fr: z.string().optional(), en: z.string().optional() }).optional(),
+  wikipedia: LocalizedTextSchema.optional(),
   image: HttpUrlSchema.optional(),
   birth: z.array(SourcedDateSchema).optional(),
   death: z.array(SourcedDateSchema).optional(),
@@ -194,14 +205,14 @@ export const HistoricalEventSchema = z
     importance: z.number().finite().min(0).max(100),
     era: EraIdSchema,
     region: RegionIdSchema,
-    summary: z.object({ fr: z.string().optional(), en: z.string().optional() }).optional(),
+    summary: LocalizedTextSchema.optional(),
     image: HttpUrlSchema.optional(),
     sources: z.array(SourceSchema).min(1, 'Every event must retain provenance'),
     datePrecision: DatePrecisionSchema,
     disputed: z.boolean().optional(),
     calendar: CalendarSchema.optional(),
     dateApproximate: z.boolean().optional(),
-    wikipedia: z.object({ fr: z.string().optional(), en: z.string().optional() }).optional(),
+    wikipedia: LocalizedTextSchema.optional(),
     place: z.object({ id: QidSchema.optional(), name: z.string() }).optional(),
     sitelinks: z.number().int().nonnegative().optional(),
     strength: z.number().nonnegative().optional(),
@@ -252,7 +263,7 @@ export const CampaignSchema = z
     leader: z.string().optional(),
     people: z.array(EventPersonLinkSchema).optional(),
     polity: z.string(),
-    description: z.object({ fr: z.string().optional(), en: z.string().optional() }).optional(),
+    description: LocalizedTextSchema.optional(),
     sources: z.array(SourceSchema).min(1),
     steps: z
       .array(
@@ -261,6 +272,7 @@ export const CampaignSchema = z
           coords: CoordinatesSchema,
           date: HistDateSchema,
           label: z.string().min(1),
+          name: LocalizedNameSchema.optional(),
           sources: z.array(SourceSchema).min(1).optional(),
         }),
       )

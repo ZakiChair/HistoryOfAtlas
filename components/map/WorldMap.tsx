@@ -586,7 +586,7 @@ export default function WorldMap() {
             if (!previous || state.locale !== previous.locale)
               map.setLayoutProperty('event-icons', 'text-field', [
                 'coalesce',
-                ['get', state.locale === 'fr' ? 'name_fr' : 'name_en'],
+                ['get', `name_${state.locale}`],
                 ['get', 'name_en'],
               ]);
           }
@@ -779,11 +779,7 @@ export default function WorldMap() {
                 'source-layer': 'events',
                 minzoom: 4.5,
                 layout: {
-                  'text-field': [
-                    'coalesce',
-                    ['get', initial.locale === 'fr' ? 'name_fr' : 'name_en'],
-                    ['get', 'name_en'],
-                  ],
+                  'text-field': ['coalesce', ['get', `name_${initial.locale}`], ['get', 'name_en']],
                   'text-font': ['Atlas UI'],
                   'text-size': 11,
                   'text-offset': [0, 1.5],

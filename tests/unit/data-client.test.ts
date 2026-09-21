@@ -12,6 +12,161 @@ describe('lazy data loading and provenance-preserving summaries', () => {
   beforeEach(() => vi.resetModules());
   afterEach(() => vi.unstubAllGlobals());
 
+  it.each([
+    ['de', 'Beispielartikel'],
+    ['es', 'Artículo de ejemplo'],
+    ['zh', '示例条目'],
+    ['ru', 'Пример статьи'],
+  ] as const)(
+    'discovers the sourced %s article when the corpus only has an English link',
+    async (locale, title) => {
+      const articleUrl = `https://${locale}.wikipedia.org/wiki/${encodeURIComponent(title.replaceAll(' ', '_'))}`;
+      const requested: URL[] = [];
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async (input: string) => {
+          const url = new URL(input);
+          requested.push(url);
+          return url.pathname === '/w/api.php'
+            ? jsonResponse({
+                batchcomplete: true,
+                query: {
+                  pages: [
+                    {
+                      pageid: 10,
+                      ns: 0,
+                      title: 'Source title & notes',
+                      langlinks: [{ lang: locale, title, url: articleUrl }],
+                    },
+                  ],
+                },
+              })
+            : url.hostname === `${locale}.wikipedia.org`
+              ? jsonResponse({
+                  title,
+                  extract: 'Actual localized article.',
+                  content_urls: { desktop: { page: articleUrl } },
+                })
+              : jsonResponse({ title: 'English article', extract: 'Fallback English article.' });
+        }),
+      );
+      const { getWikipediaSummary } = await import('../../lib/data-client');
+      const summary = await getWikipediaSummary(
+        { sources: [], wikipedia: { en: 'https://en.wikipedia.org/wiki/Source_title_%26_notes' } },
+        locale,
+      );
+      expect(summary).toMatchObject({
+        language: locale,
+        title,
+        url: articleUrl,
+        text: 'Actual localized article.',
+      });
+      expect(requested).toHaveLength(2);
+      expect(requested[0].hostname).toBe('en.wikipedia.org');
+      expect(Object.fromEntries(requested[0].searchParams)).toMatchObject({
+        action: 'query',
+        prop: 'langlinks',
+        titles: 'Source_title_&_notes',
+        lllang: locale,
+        llprop: 'url',
+        formatversion: '2',
+        redirects: '1',
+        origin: '*',
+      });
+      expect(requested[1].href).toBe(
+        `https://${locale}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replaceAll(' ', '_'))}`,
+      );
+    },
+  );
+
+  it.each([
+    'missing',
+    'offline',
+    'untrusted-url',
+    'wrong-language',
+    'summary-unavailable',
+  ] as const)(
+    'retains honest English fallback when localized article resolution is %s',
+    async (failure) => {
+      const requested: URL[] = [];
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async (input: string) => {
+          const url = new URL(input);
+          requested.push(url);
+          if (url.pathname === '/w/api.php') {
+            if (failure === 'offline') throw new Error('offline');
+            const links =
+              failure === 'missing'
+                ? []
+                : [
+                    {
+                      lang: failure === 'wrong-language' ? 'es' : 'de',
+                      title: 'Beispiel',
+                      url:
+                        failure === 'untrusted-url'
+                          ? 'https://example.org/wiki/Beispiel'
+                          : 'https://de.wikipedia.org/wiki/Beispiel',
+                    },
+                  ];
+            return jsonResponse({
+              batchcomplete: true,
+              query: { pages: [{ pageid: 10, ns: 0, title: 'Example', langlinks: links }] },
+            });
+          }
+          return url.hostname === 'de.wikipedia.org'
+            ? jsonResponse({}, 404)
+            : jsonResponse({ title: 'Example', extract: 'English source text.' });
+        }),
+      );
+      const { getWikipediaSummary } = await import('../../lib/data-client');
+      expect(
+        await getWikipediaSummary(
+          { sources: [{ label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Example' }] },
+          'de',
+        ),
+      ).toMatchObject({
+        language: 'en',
+        text: 'English source text.',
+        url: 'https://en.wikipedia.org/wiki/Example',
+      });
+      expect(requested[0].pathname).toBe('/w/api.php');
+      expect(
+        requested.every((url) => ['en.wikipedia.org', 'de.wikipedia.org'].includes(url.hostname)),
+      ).toBe(true);
+    },
+  );
+
+  it.each(['de', 'es', 'zh', 'ru'] as const)(
+    'prefers an available %s source and identifies an English fallback honestly',
+    async (locale) => {
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async (url: string) =>
+          jsonResponse({
+            title: 'Example',
+            extract: url.includes(`//${locale}.`) ? 'Localized source.' : 'English source.',
+          }),
+        ),
+      );
+      const { getWikipediaSummary } = await import('../../lib/data-client');
+      const sources = {
+        sources: [],
+        wikipedia: {
+          [locale]: `https://${locale}.wikipedia.org/wiki/Example`,
+          en: 'https://en.wikipedia.org/wiki/Example',
+        },
+      };
+      expect(await getWikipediaSummary(sources, locale)).toMatchObject({
+        language: locale,
+        text: 'Localized source.',
+      });
+      expect(
+        await getWikipediaSummary({ ...sources, wikipedia: { en: sources.wikipedia.en } }, locale),
+      ).toMatchObject({ language: 'en', text: 'English source.' });
+    },
+  );
+
   it('shares an in-flight download and retries a failed download', async () => {
     let attempts = 0;
     vi.stubGlobal(

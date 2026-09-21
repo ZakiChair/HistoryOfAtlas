@@ -13,7 +13,7 @@ test('desktop atlas has no automatically detectable WCAG AA violations', async (
   page,
 }, testInfo) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/?y=1812');
+  await page.goto('/?lang=fr&y=1812');
   await expect(page.getByTestId('year-slider')).toBeVisible();
   const result = await audit(page);
   await testInfo.attach('axe-desktop', {
@@ -27,7 +27,7 @@ test('search is accessible and keyboard focus returns to its trigger', async ({
   page,
 }, testInfo) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/?y=1812');
+  await page.goto('/?lang=fr&y=1812');
   const trigger = page.getByRole('button', { name: 'Rechercher dans l’atlas', exact: true });
   await trigger.click();
   await expect(page.getByRole('combobox', { name: 'Rechercher dans l’atlas' })).toBeFocused();

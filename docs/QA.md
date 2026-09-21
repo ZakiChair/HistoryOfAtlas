@@ -1,4 +1,4 @@
-# Vérification d’Atlas Belli
+# Vérification d’HistoryOfAtlas
 
 Les assertions historiques des tests de navigation utilisent les fichiers du pipeline : l’événement de Waterloo est recherché dans le lot du XIXe siècle, et la campagne est choisie dans le catalogue produit. Les quelques objets synthétiques des tests unitaires vérifient uniquement des contrats logiciels ; ils ne sont jamais distribués dans le corpus.
 

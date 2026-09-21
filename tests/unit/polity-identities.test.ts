@@ -9,6 +9,16 @@ import {
 const territory = (id: string, name: string, wikidataId: string) => ({ id, name, wikidataId });
 
 describe('reviewed political identities', () => {
+  it('retains sourced translated polity labels during validation', () => {
+    const first = polityIdentityRegistry.mappings[0];
+    const label = { ...first.label, de: 'Beispiel', es: 'Ejemplo', zh: '示例', ru: 'Пример' };
+    const result = PolityIdentityRegistrySchema.parse({
+      ...polityIdentityRegistry,
+      mappings: [{ ...first, label }],
+    });
+    expect(result.mappings[0].label).toEqual(label);
+  });
+
   it('requires the exact reviewed map record and its unchanged source identifier', () => {
     expect(
       resolvePolityIdentity(territory('clio-bd4b87bc07eb4c', 'Ottoman Empire', 'Q12560'))

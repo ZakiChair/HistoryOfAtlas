@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Pause, Play, Shield, X } from 'lucide-react';
 import { readJson } from '@/lib/data-client';
 import { formatYear } from '@/lib/histdate';
-import { useI18n } from '@/lib/i18n';
+import { localizedName, useI18n } from '@/lib/i18n';
 import { useAtlasStore } from '@/lib/store';
 import { resolvePolityIdentity } from '@/lib/polity-identities';
 import EntityLeaders from './EntityLeaders';
@@ -412,7 +412,7 @@ export default function EntityPanel() {
                           state.selectEntity(null);
                         }}
                       >
-                        {war.name[locale] ?? war.name.en}
+                        {localizedName(war.name, locale)}
                         <span>{formatYear(war.start.year, locale)}</span>
                       </button>
                     </li>

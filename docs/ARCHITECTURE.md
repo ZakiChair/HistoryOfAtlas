@@ -1,8 +1,8 @@
-# Atlas Belli — architecture
+# HistoryOfAtlas — architecture
 
 ## Contrat de produit
 
-Atlas mondial francophone/anglophone, de l’année astronomique −3500 à l’année courante. Le produit doit rendre visibles ses sources, ses absences et les incertitudes. Aucun événement, coordonnée ou frontière ne peut être composé depuis la mémoire du développeur. Les seuils d’acceptation sont des objectifs à mesurer, et non des chiffres à afficher sans preuve.
+Atlas mondial en anglais par défaut, avec interfaces française, allemande, espagnole, chinoise et russe, de l’année astronomique −3500 à l’année courante. Les textes des sources utilisent la langue choisie lorsqu’elle est disponible, avec repli en anglais. Le produit doit rendre visibles ses sources, ses absences et les incertitudes. Aucun événement, coordonnée ou frontière ne peut être composé depuis la mémoire du développeur. Les seuils d’acceptation sont des objectifs à mesurer, et non des chiffres à afficher sans preuve.
 
 ## Décisions
 

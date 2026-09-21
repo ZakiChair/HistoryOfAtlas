@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { getWikipediaSummary, type WikiSummary } from '@/lib/data-client';
 import { getCommonsImageCredit, type CommonsImageCredit } from '@/lib/data-client/image-credit';
-import { localizedName } from '@/lib/i18n';
+import { localizedName, translateCopy } from '@/lib/i18n';
 import type { HistoricalEvent } from '@/lib/schema';
 import type { Locale } from '@/lib/types';
 
@@ -62,9 +62,11 @@ function ImageCredits({ image, locale }: { image: string; locale: Locale }) {
         </>
       )}
       <a href={source} target="_blank" rel="noreferrer">
-        {locale === 'fr'
-          ? 'Image : source, crédits et licence'
-          : 'Image: source, credits and license'}{' '}
+        {translateCopy(
+          locale,
+          'Image : source, crédits et licence',
+          'Image: source, credits and license',
+        )}{' '}
         <ArrowUpRight size={10} />
       </a>
     </figcaption>
@@ -99,7 +101,7 @@ export default function EncyclopediaContent({
   const text = summary?.text ?? event.summary?.[locale] ?? event.summary?.en ?? event.summary?.fr;
   const textLanguage =
     summary?.language ?? (event.summary?.[locale] ? locale : event.summary?.en ? 'en' : 'fr');
-  const articleUrl = summary?.url ?? event.wikipedia?.[textLanguage as 'fr' | 'en'];
+  const articleUrl = summary?.url ?? event.wikipedia?.[textLanguage as Locale];
   const image = summary?.image ?? event.image;
   return (
     <>
@@ -111,9 +113,12 @@ export default function EncyclopediaContent({
             src={image}
             alt={
               summary?.imageDescription ??
-              (locale === 'fr'
-                ? `Illustration associée à ${localizedName(event.name, locale)}`
-                : `Illustration associated with ${localizedName(event.name, locale)}`)
+              translateCopy(
+                locale,
+                'Illustration associée à {name}',
+                'Illustration associated with {name}',
+                { name: localizedName(event.name, locale) },
+              )
             }
             loading="lazy"
             decoding="async"
@@ -124,14 +129,14 @@ export default function EncyclopediaContent({
       )}
       {text ? (
         <section className="detail-section">
-          <h3>{locale === 'fr' ? 'En quelques mots' : 'In context'}</h3>
+          <h3>{translateCopy(locale, 'En quelques mots', 'In context')}</h3>
           <p className="detail-summary" lang={textLanguage}>
             {text}
           </p>
           {articleUrl && (
             <p className="detail-attribution">
               <a href={articleUrl} target="_blank" rel="noreferrer">
-                {locale === 'fr' ? 'Wikipédia' : 'Wikipedia'}
+                {translateCopy(locale, 'Wikipédia', 'Wikipedia')}
                 {textLanguage !== locale ? ` (${textLanguage.toUpperCase()})` : ''}
               </a>
               {' · '}
@@ -147,13 +152,15 @@ export default function EncyclopediaContent({
         </section>
       ) : loading ? (
         <p className="detail-summary-loading" role="status">
-          {locale === 'fr' ? 'Lecture du résumé Wikipédia…' : 'Loading the Wikipedia summary…'}
+          {translateCopy(locale, 'Lecture du résumé Wikipédia…', 'Loading the Wikipedia summary…')}
         </p>
       ) : (
         <p className="notice">
-          {locale === 'fr'
-            ? 'Résumé indisponible. Les sources ci-dessous permettent de poursuivre la lecture.'
-            : 'Summary unavailable. The sources below provide further information.'}
+          {translateCopy(
+            locale,
+            'Résumé indisponible. Les sources ci-dessous permettent de poursuivre la lecture.',
+            'Summary unavailable. The sources below provide further information.',
+          )}
         </p>
       )}
     </>

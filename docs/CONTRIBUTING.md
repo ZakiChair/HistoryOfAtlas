@@ -1,6 +1,6 @@
 # Contributing
 
-Atlas Belli separates historical evidence, derived data, and interface code. A useful change improves one of them without disguising uncertainty in another.
+HistoryOfAtlas separates historical evidence, derived data, and interface code. A useful change improves one of them without disguising uncertainty in another.
 
 ## Local workflow
 
@@ -36,7 +36,7 @@ Participants whose alliances are not sourced remain unassigned. Missing troop co
 
 ## Interface and performance
 
-Use FR/EN translations, semantic controls, visible focus, keyboard navigation and reduced-motion preferences. Any chart or map interaction needs an accessible equivalent. Historical uncertainty and source access are product features, not details to hide for visual polish.
+Provide interface translations for English, French, German, Spanish, Simplified Chinese and Russian; English is the default. Use semantic controls, visible focus, keyboard navigation and reduced-motion preferences. Any chart or map interaction needs an accessible equivalent. Historical uncertainty and source access are product features, not details to hide for visual polish.
 
 Keep large geometry out of client JavaScript and global React state. Use PMTiles and GPU time filters for map geometry; read temporal JSON partitions on demand and run search in its worker. Summaries, images and polity area histories load when needed. Avoid tests that merely repeat implementation details; test date conventions, interval boundaries, URL restoration and actual user journeys.
 

@@ -22,7 +22,7 @@ Les tests navigateur contrôlent les territoires effectivement rendus avant et a
 
 ## Phase 7 — export, déploiement et réception
 
-L’export statique génère **5 496 pages**, dont 3 878 événements et 1 610 guerres, avec métadonnées, sitemap et Open Graph. Docker/Nginx, CI fonctionnelle, audits d’accessibilité et benchmark GPU séparé sont disponibles. Le conteneur local a été construit et vérifié. Le site est publié sur [atlas-belli.vercel.app](https://atlas-belli.vercel.app) et le code sur [GitHub — ZakiChair/atlas-belli](https://github.com/ZakiChair/atlas-belli).
+L’export statique génère **5 496 pages**, dont 3 878 événements et 1 610 guerres, avec métadonnées, sitemap et Open Graph. Docker/Nginx, CI fonctionnelle, audits d’accessibilité et benchmark GPU séparé sont disponibles. Le conteneur local a été construit et vérifié. Le site est publié sur [historyofatlas.vercel.app](https://historyofatlas.vercel.app) et le code sur [GitHub — ZakiChair/HistoryOfAtlas](https://github.com/ZakiChair/HistoryOfAtlas).
 
 Les commandes, résultats, profils matériels et limites mesurées sont dans [QA.md](QA.md) et `data/reports/`. Les contrôles de compilation, les 130 tests unitaires TypeScript et les 7 tests de géographie Python passent. Les 38 tests navigateur, dont six audits axe, passent. Les médianes Lighthouse sont de 93/100/100 pour l’atlas et de 100/100/100 pour la méthodologie. Ces résultats sont conservés séparément des mesures de transfert et de disponibilité de la carte.
 

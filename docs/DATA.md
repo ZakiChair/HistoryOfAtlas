@@ -1,6 +1,6 @@
 # Données, provenance et reconstruction
 
-Atlas Belli conserve les identifiants et les sources ; aucune date, coordonnée, bataille ou frontière n’est écrite de mémoire dans le jeu affiché. Les chiffres exacts figurent dans `data/reports/quality.json` et sa version publique `/data/quality.json`. Une valeur cible n’est jamais présentée comme une couverture mesurée.
+HistoryOfAtlas conserve les identifiants et les sources ; aucune date, coordonnée, bataille ou frontière n’est écrite de mémoire dans le jeu affiché. Les chiffres exacts figurent dans `data/reports/quality.json` et sa version publique `/data/quality.json`. Une valeur cible n’est jamais présentée comme une couverture mesurée.
 
 ## Exécution
 

@@ -32,14 +32,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const war = (await readWars()).find((item) => item.id === id);
-  if (!war) return { title: 'Conflit introuvable — Atlas Belli' };
-  const name = war.name.fr ?? war.name.en;
-  const description = `${name} : ${war.count} événements documentés, leur chronologie et leurs sources dans Atlas Belli.`;
+  if (!war) return { title: 'Conflict not found — HistoryOfAtlas' };
+  const name = war.name.en;
+  const description = `${name}: ${war.count} documented events, their chronology and sources in HistoryOfAtlas.`;
   return {
-    title: `${name} — Atlas Belli`,
+    title: `${name} — HistoryOfAtlas`,
     description,
     alternates: { canonical: `/war/${id}/` },
-    openGraph: { title: name, description, type: 'article', images: ['/opengraph-image'] },
+    openGraph: {
+      title: name,
+      description,
+      siteName: 'HistoryOfAtlas',
+      locale: 'en_US',
+      type: 'article',
+      images: ['/opengraph-image'],
+    },
   };
 }
 
@@ -50,45 +57,44 @@ export default async function WarPage({ params }: { params: Promise<{ id: string
   const events = JSON.parse(
     await readFile(path.join(root, 'wars', `${war.id}.json`), 'utf8'),
   ) as HistoricalEvent[];
-  const name = war.name.fr ?? war.name.en;
+  const name = war.name.en;
   return (
     <main className="document-page">
       <header className="document-header">
         <Link className="back-link" href="/">
-          ← Revenir à l’atlas
+          ← Back to the atlas
         </Link>
-        <span className="eyebrow">CONFLITS & CHRONOLOGIES · {war.id}</span>
+        <span className="eyebrow">CONFLICTS & TIMELINES · {war.id}</span>
         <h1>{name}</h1>
         <p>
-          {war.count} événement{war.count > 1 ? 's' : ''} documenté{war.count > 1 ? 's' : ''} dans
-          ce relevé
+          {war.count} documented event{war.count === 1 ? '' : 's'} in this record
         </p>
         <Link
           className="primary-button"
           href={`/?war=${war.id}&y=${war.start.year}&from=${war.start.year}&to=${war.end?.year ?? war.start.year}&projection=mercator`}
         >
-          Explorer cette chronologie ↗
+          Explore this timeline ↗
         </Link>
       </header>
       <article className="document-body">
         <section>
-          <h2>Les événements liés</h2>
+          <h2>Related events</h2>
           <p>
-            Les liens chronologiques ci-dessous viennent des relations « partie de » et « comprend »
-            de Wikidata. Cette sélection couvre {formatDateRange(war.start, war.end, 'fr')}, sans
-            prétendre couvrir toute la durée du conflit ni reconstituer les mouvements d’une armée.
+            The chronological links below come from Wikidata’s “part of” and “has part” relations.
+            This selection covers {formatDateRange(war.start, war.end, 'en')}; it does not claim to
+            cover the entire conflict or reconstruct an army’s movements.
           </p>
           <ol className="war-event-list">
             {events.map((event) => (
               <li key={event.id}>
                 <span className="eyebrow">
-                  {formatDateRange(event.start, event.end, 'fr', event.datePrecision)}
+                  {formatDateRange(event.start, event.end, 'en', event.datePrecision)}
                 </span>
                 <h3>
                   <Link
                     href={`/?e=${event.id}&war=${war.id}&y=${event.start.year}${event.coords ? `&lon=${event.coords[0]}&lat=${event.coords[1]}&z=5` : ''}`}
                   >
-                    {event.name.fr ?? event.name.en} ↗
+                    {event.name.en} ↗
                   </Link>
                 </h3>
                 <a
@@ -104,16 +110,16 @@ export default async function WarPage({ params }: { params: Promise<{ id: string
           </ol>
         </section>
         <section>
-          <h2>Provenance et limites</h2>
+          <h2>Provenance and limits</h2>
           <p>
-            L’absence d’un événement ne signifie pas qu’il n’a pas eu lieu. Les dates, participants
-            et lieux disponibles dépendent de la couverture des sources ouvertes.
+            An absent event does not mean it never happened. The available dates, participants and
+            locations depend on the coverage of open sources.
           </p>
           <a className="source-link" href={war.source} target="_blank" rel="noreferrer">
             Wikidata · {war.id} ↗
           </a>
           <Link className="source-link" href="/about/">
-            Lire la méthodologie →
+            Read the methodology →
           </Link>
         </section>
       </article>

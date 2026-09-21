@@ -9,7 +9,7 @@ test('timeline playback maintains a measured 30 fps in this browser', async ({
   request,
 }, testInfo) => {
   const manifest = await (await request.get('/data/manifest.json')).json();
-  await page.goto('/?y=1800&lon=15&lat=40&z=2');
+  await page.goto('/?lang=fr&y=1800&lon=15&lat=40&z=2');
   await expect(page.locator('.world-map-wrap')).toHaveAttribute('data-ready', 'true');
   await page.getByRole('button', { name: /100 ans par seconde$/ }).click();
   await page.getByTestId('timeline-play').click();

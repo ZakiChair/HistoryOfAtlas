@@ -1,3 +1,5 @@
+import type { Locale, LocalizedName } from './types';
+
 export type TerritorySnapshot = {
   year: number;
   sourceYear?: number;
@@ -25,7 +27,7 @@ export type GeographyManifest = {
 export type PolitySummary = {
   id: string;
   entityId?: string;
-  name: string | { en: string; fr?: string };
+  name: string | LocalizedName;
   wikidataId?: string;
   start?: number;
   end?: number;
@@ -40,5 +42,5 @@ export type PolityDetail = PolitySummary & {
   sources?: { label: string; url: string }[];
   bounds?: [number, number, number, number];
 };
-export const polityName = (entity: PolitySummary, locale: 'fr' | 'en') =>
+export const polityName = (entity: PolitySummary, locale: Locale) =>
   typeof entity.name === 'string' ? entity.name : (entity.name[locale] ?? entity.name.en);

@@ -27,7 +27,7 @@ HIST_COMMIT = 'da7a4b735ecef70aebdc9c73e409d8a2500d50f3'
 NE_COMMIT = 'ca96624a56bd078437bca8184e78163e5039ad19'
 HIST_BASE = f'https://raw.githubusercontent.com/aourednik/historical-basemaps/{HIST_COMMIT}'
 NE_BASE = f'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/{NE_COMMIT}'
-UA = 'AtlasBelli/1.0 (open historical atlas; reproducible geography ingestion)'
+UA = 'HistoryOfAtlas/1.0 (open historical atlas; reproducible geography ingestion)'
 NE_FILES = {
     'land': 'ne_50m_land.geojson',
     'coastline': 'ne_50m_coastline.geojson',

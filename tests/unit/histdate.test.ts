@@ -12,6 +12,41 @@ import {
 import { classifyEra, positionToYear, yearToPosition } from '../../lib/eras';
 
 describe('historical dates without native Date conversion', () => {
+  it('uses English when no language is supplied', () => {
+    expect(formatYear(0)).toBe('1 BCE');
+    expect(formatHistDate({ year: 1815, month: 6, day: 18 })).toBe('18 June 1815');
+  });
+
+  it.each([
+    ['en', '331 BCE', '18 June 1815', '4th century BCE', 'c. 331 BCE (Julian)'],
+    ['fr', '331 av. J.-C.', '18 juin 1815', '4e siècle av. J.-C.', 'vers 331 av. J.-C. (julien)'],
+    [
+      'de',
+      '331 v. Chr.',
+      '18. Juni 1815',
+      '4. Jahrhundert v. Chr.',
+      'ca. 331 v. Chr. (julianisch)',
+    ],
+    ['es', '331 a. C.', '18 de junio de 1815', 'siglo IV a. C.', 'c. 331 a. C. (juliano)'],
+    ['zh', '公元前331年', '1815年6月18日', '公元前4世纪', '约公元前331年 (儒略历)'],
+    ['ru', '331 до н. э.', '18 июня 1815', 'IV век до н. э.', 'ок. 331 до н. э. (юлианский)'],
+  ] as const)(
+    'formats historical dates and source calendars in %s',
+    (locale, year, day, century, approximate) => {
+      expect(formatYear(-330, locale)).toBe(year);
+      expect(formatHistDate({ year: 1815, month: 6, day: 18 }, locale)).toBe(day);
+      expect(formatHistDate({ year: -330 }, locale, 'century')).toBe(century);
+      expect(
+        formatHistDate({ year: -330 }, locale, {
+          approximate: true,
+          calendar: 'julian',
+          showCalendar: true,
+        }),
+      ).toBe(approximate);
+      expect(parseHistoricalYear(year)).toBe(-330);
+    },
+  );
+
   it('keeps the astronomical zero at 1 BCE and crosses directly into 1 CE', () => {
     expect(formatYear(0, 'fr')).toBe('1 av. J.-C.');
     expect(formatYear(-330, 'fr')).toBe('331 av. J.-C.');

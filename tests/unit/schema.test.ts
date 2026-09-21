@@ -5,6 +5,7 @@ import {
   CampaignSchema,
   EventShardSchema,
 } from '../../lib/schema';
+import { buildSequences } from '../../pipeline/build';
 
 // Synthetic structural fixture: it is never shipped as historical data.
 const fixture = {
@@ -22,6 +23,52 @@ const fixture = {
 };
 
 describe('ingestion contracts', () => {
+  it('builds campaign steps with English defaults and preserved sourced names', () => {
+    const event = HistoricalEventSchema.parse({
+      ...fixture,
+      name: { en: 'English event', fr: 'Événement français', de: 'Deutsches Ereignis' },
+    });
+    const second = { ...event, id: 'Q43', start: { year: 1 } };
+    const campaign = buildSequences(
+      new Map([['Q44', [event, second]]]),
+      new Map([['Q44', { id: 'Q44', labels: { en: { value: 'Campaign' } } }]]),
+      [{ id: 'Q44' }],
+    )[0];
+    expect(campaign.steps[0].label).toBe('English event');
+    expect(campaign.steps[0].name).toEqual({
+      en: 'English event',
+      fr: 'Événement français',
+      de: 'Deutsches Ereignis',
+    });
+  });
+
+  it('retains available names, descriptions and source links in all six languages', () => {
+    const names = {
+      en: 'Example',
+      fr: 'Exemple',
+      de: 'Beispiel',
+      es: 'Ejemplo',
+      zh: '示例',
+      ru: 'Пример',
+    };
+    const links = {
+      en: 'https://en.wikipedia.org/wiki/Example',
+      de: 'https://de.wikipedia.org/wiki/Beispiel',
+      zh: 'https://zh.wikipedia.org/wiki/示例',
+    };
+    const event = HistoricalEventSchema.parse({
+      ...fixture,
+      name: names,
+      description: names,
+      summary: names,
+      wikipedia: links,
+    });
+    expect(event.name).toEqual(names);
+    expect(event.description).toEqual(names);
+    expect(event.summary).toEqual(names);
+    expect(event.wikipedia).toEqual(links);
+  });
+
   it('requires temporal tile validity to contain the whole declared interval', () => {
     const shard = {
       key: '0',

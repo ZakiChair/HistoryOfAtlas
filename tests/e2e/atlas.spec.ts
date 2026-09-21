@@ -49,7 +49,7 @@ test('normal timeline navigation loads temporal tiles rather than the all-era ar
   expect(second).toBeTruthy();
   const requested = new Set<string>();
   page.on('request', (request) => requested.add(new URL(request.url()).pathname));
-  await page.goto('/?y=1812');
+  await page.goto('/?lang=fr&y=1812');
   // Wait for the actual map data before checking the deferred notebook. This is
   // a data-loading invariant; hardware timing is covered by the separate audits.
   await expect.poll(() => requested.has(first.path), { timeout: 30_000 }).toBe(true);
@@ -72,7 +72,7 @@ test('normal timeline navigation loads temporal tiles rather than the all-era ar
   await editYear(page, '1944');
   await expect.poll(() => requested.has(second.path)).toBe(true);
   expect(requested.has(manifest.eventsPmtiles)).toBe(false);
-  await page.goto('/?y=1944&from=1900&to=2000');
+  await page.goto('/?lang=fr&y=1944&from=1900&to=2000');
   await expect.poll(() => requested.has(manifest.eventsPmtiles)).toBe(true);
 });
 
@@ -104,7 +104,7 @@ test('war list includes sourced battles nested through intermediate campaigns', 
 });
 
 test('timeline crosses astronomical zero and accepts an explicit BCE year', async ({ page }) => {
-  await page.goto('/?y=0');
+  await page.goto('/?lang=fr&y=0');
   const slider = page.getByTestId('year-slider');
   await expect(slider).toHaveAttribute('aria-valuetext', '1 av. J.-C.');
   await slider.focus();
@@ -122,7 +122,7 @@ test('a sourced event opens from the list with consultable provenance', async ({
   request,
 }) => {
   const event = await sourcedEvent(request);
-  await page.goto(`/?y=${event.start.year}&mode=list`);
+  await page.goto(`/?lang=fr&y=${event.start.year}&mode=list`);
   await page
     .locator('.event-row')
     .filter({ hasText: event.name.fr ?? event.name.en })
@@ -141,7 +141,7 @@ test('a sourced event opens from the list with consultable provenance', async ({
 
 test('fuzzy search changes both the selected event and timeline', async ({ page, request }) => {
   const event = await sourcedEvent(request);
-  await page.goto('/?y=-330');
+  await page.goto('/?lang=fr&y=-330');
   await page.getByRole('button', { name: 'Rechercher dans l’atlas', exact: true }).click();
   const input = page.getByRole('combobox', { name: 'Rechercher dans l’atlas' });
   await input.fill('Waterlo');
@@ -182,7 +182,7 @@ test('participant filter uses sourced entities and updates the visible events', 
       (record.end?.year ?? record.start.year) >= event.start.year - 3 &&
       record.belligerents.some((item) => item.entityId === participant.entityId),
   );
-  await page.goto(`/?y=${event.start.year}&mode=list`);
+  await page.goto(`/?lang=fr&y=${event.start.year}&mode=list`);
   const rows = page.locator('.event-row');
   await expect(rows.first()).toBeVisible();
   const initialCount = await rows.count();
@@ -224,7 +224,7 @@ test('a rendered polity opens sourced area observations and can be followed and 
   const event = await sourcedEvent(request);
   expect(event.coords).toBeTruthy();
   await page.goto(
-    `/?y=${event.start.year}&lon=${event.coords![0]}&lat=${event.coords![1]}&z=3&projection=mercator`,
+    `/?lang=fr&y=${event.start.year}&lon=${event.coords![0]}&lat=${event.coords![1]}&z=3&projection=mercator`,
   );
   await expect(page.locator('.territory-list button').first()).toBeVisible();
   const candidates = await page.evaluate(() =>
@@ -286,7 +286,7 @@ test('a rendered polity opens sourced area observations and can be followed and 
   );
   await expect.poll(() => new URL(page.url()).searchParams.has('play')).toBe(false);
   const lastYear = Math.max(...selected.observations.map((item) => item.toYear));
-  await page.goto(`/?entity=${selected.id}&follow=1&y=${lastYear - 1}&speed=100`);
+  await page.goto(`/?lang=fr&entity=${selected.id}&follow=1&y=${lastYear - 1}&speed=100`);
   await expect(follow).toContainText('Suivre ce territoire');
   await expect.poll(() => Number(new URL(page.url()).searchParams.get('y'))).toBe(lastYear);
   await expect.poll(() => new URL(page.url()).searchParams.has('follow')).toBe(false);
@@ -303,7 +303,9 @@ test('campaign playback resumes from its URL and stops when its context is left'
   const campaigns: Campaign[] = await (await request.get('/data/campaigns.json')).json();
   const campaign = campaigns.find((item) => item.steps.length >= 3)!;
   expect(campaign).toBeTruthy();
-  await page.goto(`/?campaign=${campaign.id}&step=0&cplay=1&y=${campaign.steps[0].date.year}`);
+  await page.goto(
+    `/?lang=fr&campaign=${campaign.id}&step=0&cplay=1&y=${campaign.steps[0].date.year}`,
+  );
   const pause = page
     .locator('.campaign-controls')
     .getByRole('button', { name: 'Pause', exact: true });
@@ -336,7 +338,7 @@ test('a sourced guided story drives the timeline through its documented steps', 
       .slice(0, 2)
       .map(async (step) => (await request.get(`/data/events/${step.eventId}.json`)).json()),
   );
-  await page.goto('/');
+  await page.goto('/?lang=fr');
   await page.getByRole('button', { name: 'Parcours', exact: true }).click();
   await page
     .locator('.story-card')
@@ -444,14 +446,14 @@ test('URL reload restores camera, event, range and filters', async ({ page, requ
 
 test('language switching translates timeline and event names', async ({ page, request }) => {
   const event = await sourcedEvent(request);
-  await page.goto(`/?y=${event.start.year}&e=${event.id}`);
-  await page.getByRole('button', { name: /Passer en anglais$/ }).click();
+  await page.goto(`/?lang=fr&y=${event.start.year}&e=${event.id}`);
+  await page.getByTestId('language-select').selectOption('en');
   await expect(
     page.getByTestId('event-panel').getByRole('heading', { name: event.name.en }),
   ).toBeVisible();
   await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-label', 'Year');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await page.getByRole('button', { name: /Switch to French$/ }).click();
+  await page.getByTestId('language-select').selectOption('fr');
   await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-label', 'Année');
 });
 
@@ -461,7 +463,7 @@ test('campaign playback advances a real sourced step', async ({ page, request })
     (item) => item.steps.length >= 2 && item.steps[0].date.year !== item.steps[1].date.year,
   )!;
   expect(campaign).toBeTruthy();
-  await page.goto(`/?campaign=${campaign.id}&step=0&y=${campaign.steps[0].date.year}`);
+  await page.goto(`/?lang=fr&campaign=${campaign.id}&step=0&y=${campaign.steps[0].date.year}`);
   await page.getByRole('button', { name: 'Campagnes', exact: true }).click();
   await page.getByRole('button', { name: 'Lire la campagne', exact: true }).click();
   await expect
@@ -483,7 +485,9 @@ test('campaign playback advances a real sourced step', async ({ page, request })
   expect(stoppedIndex).toBeGreaterThanOrEqual(1);
   expect(stoppedIndex).toBeLessThan(campaign.steps.length);
   await expect(page.locator('.campaign-steps [aria-current="step"]')).toContainText(
-    campaign.steps[stoppedIndex].label,
+    campaign.steps[stoppedIndex].name?.fr ??
+      campaign.steps[stoppedIndex].name?.en ??
+      campaign.steps[stoppedIndex].label,
   );
   await expect.poll(() => new URL(page.url()).searchParams.get('step')).toBe(String(stoppedIndex));
   await expect
@@ -502,11 +506,13 @@ test('an out-of-range campaign deep link opens its last documented step', async 
   const campaign = campaigns.find((item) => item.steps.length >= 2)!;
   expect(campaign).toBeTruthy();
   const last = campaign.steps.at(-1)!;
-  await page.goto(`/?campaign=${campaign.id}&step=99999&y=${campaign.steps[0].date.year}`);
+  await page.goto(`/?lang=fr&campaign=${campaign.id}&step=99999&y=${campaign.steps[0].date.year}`);
   await expect
     .poll(() => new URL(page.url()).searchParams.get('step'))
     .toBe(String(campaign.steps.length - 1));
-  await expect(page.locator('.campaign-steps [aria-current="step"]')).toContainText(last.label);
+  await expect(page.locator('.campaign-steps [aria-current="step"]')).toContainText(
+    last.name?.fr ?? last.name?.en ?? last.label,
+  );
   await expect(
     page.locator('.campaign-controls').getByRole('button', { name: 'Étape suivante', exact: true }),
   ).toBeDisabled();
@@ -528,7 +534,7 @@ test('changing the year changes actual rendered historical territories', async (
         .sort();
     });
   });
-  await page.goto('/?y=1812&lon=12&lat=43&z=3&projection=mercator');
+  await page.goto('/?lang=fr&y=1812&lon=12&lat=43&z=3&projection=mercator');
   await expect
     .poll(async () => (await page.locator('.world-map').boundingBox())?.height ?? 0)
     .toBeGreaterThan(300);
@@ -560,7 +566,7 @@ test('mobile event drawer and timeline remain usable without horizontal overflow
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   const event = await sourcedEvent(request);
-  await page.goto(`/?y=${event.start.year}&e=${event.id}`);
+  await page.goto(`/?lang=fr&y=${event.start.year}&e=${event.id}`);
   await expect(
     page.getByTestId('event-panel').getByRole('heading', { name: event.name.fr ?? event.name.en }),
   ).toBeVisible();

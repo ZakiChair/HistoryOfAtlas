@@ -1,7 +1,5 @@
 {
-  "image": "atlas-belli:local",
   "imageId": "sha256:2919c104d347af073d961a30139f9db3481121557920ff80629949375e0c5e67",
-  "container": "atlas-belli-verification",
   "origin": "http://127.0.0.1:18080",
   "user": "nginx",
   "health": "healthy",

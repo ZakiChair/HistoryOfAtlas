@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { useJson } from '@/lib/data-client/hooks';
 import { formatHistDate, formatYear } from '@/lib/histdate';
-import { localizedName, useI18n } from '@/lib/i18n';
+import { localizedName, useI18n, translateCopy } from '@/lib/i18n';
 import { createEventNavigation } from '@/lib/navigation';
 import type { Person, PersonEventLink, PersonTenure, Source, SourcedDate } from '@/lib/schema';
 import { serializeAtlasUrl, useAtlasStore } from '@/lib/store';
@@ -48,9 +48,11 @@ function SourceDates({
       <span className="detail-kicker">{label}</span>
       {dates.length > 1 && (
         <p className="detail-precision">
-          {locale === 'fr'
-            ? 'Plusieurs indications de date dans les sources'
-            : 'Multiple date statements in the sources'}
+          {translateCopy(
+            locale,
+            'Plusieurs indications de date dans les sources',
+            'Multiple date statements in the sources',
+          )}
         </p>
       )}
       <ul>
@@ -232,7 +234,8 @@ function PersonDetail({ person }: { person: Person }) {
     : person.description?.en
       ? 'en'
       : 'fr';
-  const titleLanguage = locale === 'fr' && person.name.fr ? 'fr' : (person.nameLanguage ?? 'en');
+  const titleLanguage =
+    locale !== 'en' && person.name[locale] ? locale : (person.nameLanguage ?? 'en');
   const conquests = person.events.filter((event) => event.type === 'conquest');
   const otherEvents = person.events.filter((event) => event.type !== 'conquest');
   async function sharePerson() {

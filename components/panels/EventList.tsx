@@ -134,7 +134,9 @@ export default function EventList({ full = false }: { full?: boolean }) {
           className="text-button list-more"
           onClick={() => useAtlasStore.setState({ mode: 'list' })}
         >
-          {t('Voir les', 'View all')} {visible.length} {t('événements', 'events')}
+          {t('Voir les {count} événements', 'View all {count} events', {
+            count: visible.length.toLocaleString(locale),
+          })}
           <ArrowUpRight size={14} />
         </button>
       )}

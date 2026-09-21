@@ -1,4 +1,4 @@
-import type { Calendar, DatePrecision, Locale } from '../types';
+import { DEFAULT_LOCALE, type Calendar, type DatePrecision, type Locale } from '../types';
 
 export interface HistDate {
   year: number;
@@ -35,7 +35,122 @@ const MONTHS: Record<Locale, readonly string[]> = {
     'November',
     'December',
   ],
+  de: [
+    'Januar',
+    'Februar',
+    'März',
+    'April',
+    'Mai',
+    'Juni',
+    'Juli',
+    'August',
+    'September',
+    'Oktober',
+    'November',
+    'Dezember',
+  ],
+  es: [
+    'enero',
+    'febrero',
+    'marzo',
+    'abril',
+    'mayo',
+    'junio',
+    'julio',
+    'agosto',
+    'septiembre',
+    'octubre',
+    'noviembre',
+    'diciembre',
+  ],
+  zh: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+  ru: [
+    'января',
+    'февраля',
+    'марта',
+    'апреля',
+    'мая',
+    'июня',
+    'июля',
+    'августа',
+    'сентября',
+    'октября',
+    'ноября',
+    'декабря',
+  ],
 };
+
+const RUSSIAN_MONTHS = [
+  'январь',
+  'февраль',
+  'март',
+  'апрель',
+  'май',
+  'июнь',
+  'июль',
+  'август',
+  'сентябрь',
+  'октябрь',
+  'ноябрь',
+  'декабрь',
+];
+const BCE_LABELS: Record<Locale, string> = {
+  en: 'BCE',
+  fr: 'av. J.-C.',
+  de: 'v. Chr.',
+  es: 'a. C.',
+  zh: '公元前',
+  ru: 'до н. э.',
+};
+const APPROXIMATE_LABELS: Record<Locale, string> = {
+  en: 'c. ',
+  fr: 'vers ',
+  de: 'ca. ',
+  es: 'c. ',
+  zh: '约',
+  ru: 'ок. ',
+};
+const CALENDAR_LABELS: Record<Locale, Record<Calendar, string>> = {
+  fr: { julian: 'julien', gregorian: 'grégorien', unknown: 'calendrier non précisé' },
+  en: { julian: 'Julian', gregorian: 'Gregorian', unknown: 'calendar unspecified' },
+  de: { julian: 'julianisch', gregorian: 'gregorianisch', unknown: 'Kalender nicht angegeben' },
+  es: { julian: 'juliano', gregorian: 'gregoriano', unknown: 'calendario no especificado' },
+  zh: { julian: '儒略历', gregorian: '格里高利历', unknown: '历法未注明' },
+  ru: { julian: 'юлианский', gregorian: 'григорианский', unknown: 'календарь не указан' },
+};
+
+function withEra(text: string, year: number, locale: Locale): string {
+  if (year > 0) return text;
+  return locale === 'zh' ? `${BCE_LABELS.zh}${text}` : `${text} ${BCE_LABELS[locale]}`;
+}
+
+function romanNumeral(value: number): string {
+  // Very large source years remain readable without allocating enormous Roman strings.
+  if (value > 3999) return String(value);
+  let remaining = value;
+  let text = '';
+  for (const [number, numeral] of [
+    [1000, 'M'],
+    [900, 'CM'],
+    [500, 'D'],
+    [400, 'CD'],
+    [100, 'C'],
+    [90, 'XC'],
+    [50, 'L'],
+    [40, 'XL'],
+    [10, 'X'],
+    [9, 'IX'],
+    [5, 'V'],
+    [4, 'IV'],
+    [1, 'I'],
+  ] as const) {
+    while (remaining >= number) {
+      text += numeral;
+      remaining -= number;
+    }
+  }
+  return text;
+}
 
 export function isLeapYear(year: number, calendar: Calendar = 'gregorian'): boolean {
   return year % 4 === 0 && (calendar !== 'gregorian' || year % 100 !== 0 || year % 400 === 0);
@@ -100,9 +215,10 @@ export function histDateToScalar(date: HistDate): number {
   return date.year + ((date.month ?? 1) - 1) / 12 + ((date.day ?? 1) - 1) / 372;
 }
 
-export function formatYear(year: number, locale: Locale = 'fr'): string {
+export function formatYear(year: number, locale: Locale = DEFAULT_LOCALE): string {
   const integer = Math.round(year);
-  return integer <= 0 ? `${1 - integer} ${locale === 'fr' ? 'av. J.-C.' : 'BCE'}` : String(integer);
+  const text = `${integer <= 0 ? 1 - integer : integer}${locale === 'zh' ? '年' : ''}`;
+  return withEra(text, integer, locale);
 }
 
 export interface FormatHistDateOptions {
@@ -114,7 +230,7 @@ export interface FormatHistDateOptions {
 
 export function formatHistDate(
   date: HistDate,
-  locale: Locale = 'fr',
+  locale: Locale = DEFAULT_LOCALE,
   options: FormatHistDateOptions | DatePrecision = {},
 ): string {
   const opts = typeof options === 'string' ? { precision: options } : options;
@@ -124,27 +240,42 @@ export function formatHistDate(
   let text = formatYear(date.year, locale);
   if (precision === 'century') {
     const number = Math.ceil((date.year <= 0 ? 1 - date.year : date.year) / 100);
-    const ordinal =
-      locale === 'fr'
-        ? `${number}${number === 1 ? 'er' : 'e'}`
-        : `${number}${number % 100 >= 11 && number % 100 <= 13 ? 'th' : (({ 1: 'st', 2: 'nd', 3: 'rd' } as Record<number, string>)[number % 10] ?? 'th')}`;
-    text = `${ordinal} ${locale === 'fr' ? 'siècle' : 'century'}${date.year <= 0 ? (locale === 'fr' ? ' av. J.-C.' : ' BCE') : ''}`;
+    const englishOrdinal = `${number}${number % 100 >= 11 && number % 100 <= 13 ? 'th' : (({ 1: 'st', 2: 'nd', 3: 'rd' } as Record<number, string>)[number % 10] ?? 'th')}`;
+    const centuries: Record<Locale, string> = {
+      en: `${englishOrdinal} century`,
+      fr: `${number}${number === 1 ? 'er' : 'e'} siècle`,
+      de: `${number}. Jahrhundert`,
+      es: `siglo ${romanNumeral(number)}`,
+      zh: `${number}世纪`,
+      ru: `${romanNumeral(number)} век`,
+    };
+    text = withEra(centuries[locale], date.year, locale);
   } else if (precision === 'decade') {
     const historicalYear = date.year <= 0 ? 1 - date.year : date.year;
     const decade = Math.floor(historicalYear / 10) * 10;
-    text = locale === 'fr' ? `années ${decade}` : `${decade}s`;
-    if (date.year <= 0) text += locale === 'fr' ? ' av. J.-C.' : ' BCE';
-  } else if (date.month !== undefined && (precision === 'month' || precision === 'day')) {
-    text = `${MONTHS[locale][date.month - 1]} ${text}`;
-    if (date.day !== undefined && precision === 'day') text = `${date.day} ${text}`;
-  }
-  if (opts.approximate) text = `${locale === 'fr' ? 'vers' : 'c.'} ${text}`;
-  if (opts.showCalendar && opts.calendar) {
-    const labels: Record<Locale, Record<Calendar, string>> = {
-      fr: { julian: 'julien', gregorian: 'grégorien', unknown: 'calendrier non précisé' },
-      en: { julian: 'Julian', gregorian: 'Gregorian', unknown: 'calendar unspecified' },
+    const decades: Record<Locale, string> = {
+      en: `${decade}s`,
+      fr: `années ${decade}`,
+      de: `${decade}er-Jahre`,
+      es: `década de ${decade}`,
+      zh: `${decade}年代`,
+      ru: `${decade}-е годы`,
     };
-    text += ` (${labels[locale][opts.calendar]})`;
+    text = withEra(decades[locale], date.year, locale);
+  } else if (date.month !== undefined && (precision === 'month' || precision === 'day')) {
+    const day = precision === 'day' ? date.day : undefined;
+    const month =
+      locale === 'ru' && day === undefined
+        ? RUSSIAN_MONTHS[date.month - 1]
+        : MONTHS[locale][date.month - 1];
+    if (locale === 'zh') text = `${text}${month}${day === undefined ? '' : `${day}日`}`;
+    else if (locale === 'es') text = `${day === undefined ? '' : `${day} de `}${month} de ${text}`;
+    else
+      text = `${day === undefined ? '' : `${day}${locale === 'de' ? '.' : ''} `}${month} ${text}`;
+  }
+  if (opts.approximate) text = `${APPROXIMATE_LABELS[locale]}${text}`;
+  if (opts.showCalendar && opts.calendar) {
+    text += ` (${CALENDAR_LABELS[locale][opts.calendar]})`;
   }
   return text;
 }
@@ -152,7 +283,7 @@ export function formatHistDate(
 export function formatDateRange(
   start: HistDate,
   end: HistDate | undefined,
-  locale: Locale = 'fr',
+  locale: Locale = DEFAULT_LOCALE,
   options: FormatHistDateOptions | DatePrecision = {},
 ): string {
   const first = formatHistDate(start, locale, options);
@@ -168,12 +299,18 @@ export function parseHistoricalYear(input: string): number | null {
     const year = Number(value);
     return Number.isSafeInteger(year) ? year : null;
   }
-  const bce = /^(\d+)\s*(?:BCE?|av\.?\s*J\.?\s*-?\s*C\.?)$/i.exec(value);
+  const bce =
+    /^(\d+)\s*(?:BCE?|av\.?\s*J\.?\s*-?\s*C\.?|v\.?\s*Chr\.?|a\.?\s*C\.?|до\s*н\.?\s*э\.?)$/i.exec(
+      value,
+    ) ?? /^公元前\s*(\d+)\s*年?$/.exec(value);
   if (bce) {
     const year = Number(bce[1]);
     return Number.isSafeInteger(year) && year > 0 ? 1 - year : null;
   }
-  const ce = /^(\d+)\s*(?:CE|AD|ap\.?\s*J\.?\s*-?\s*C\.?)$/i.exec(value);
+  const ce =
+    /^(\d+)\s*(?:CE|AD|ap\.?\s*J\.?\s*-?\s*C\.?|n\.?\s*Chr\.?|d\.?\s*C\.?|н\.?\s*э\.?)$/i.exec(
+      value,
+    ) ?? /^(?:公元\s*)?(\d+)\s*年$/.exec(value);
   if (ce) {
     const year = Number(ce[1]);
     return Number.isSafeInteger(year) && year > 0 ? year : null;

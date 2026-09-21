@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, BookOpen } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
-import { useI18n } from '@/lib/i18n';
+import { localizedLanguage, localizedName, useI18n } from '@/lib/i18n';
 import { useJson } from '@/lib/data-client/hooks';
 import { getEvent } from '@/lib/data-client';
 import { openEvent } from '@/lib/navigation';
@@ -82,8 +82,12 @@ export default function StoryPanel() {
             <ArrowLeft size={15} />
             {t('Tous les parcours', 'All stories')}
           </button>
-          <h2 className="story-title">{story.title[locale] ?? story.title.en}</h2>
-          <p className="panel-intro">{story.description[locale] ?? story.description.en}</p>
+          <h2 className="story-title" lang={localizedLanguage(story.title, locale)}>
+            {localizedName(story.title, locale)}
+          </h2>
+          <p className="panel-intro" lang={localizedLanguage(story.description, locale)}>
+            {localizedName(story.description, locale)}
+          </p>
           <div
             ref={container}
             className="story-scroll"
@@ -99,7 +103,9 @@ export default function StoryPanel() {
                 <span className="story-step-number">
                   {index + 1} / {story.steps.length}
                 </span>
-                <p>{step.text[locale] ?? step.text.en}</p>
+                <p lang={localizedLanguage(step.text, locale)}>
+                  {localizedName(step.text, locale)}
+                </p>
                 <button
                   className="text-button"
                   onClick={() => {
@@ -156,7 +162,9 @@ export default function StoryPanel() {
                 }}
               >
                 <span className="story-card-index">{String(index + 1).padStart(2, '0')}</span>
-                <strong>{item.title[locale] ?? item.title.en}</strong>
+                <strong lang={localizedLanguage(item.title, locale)}>
+                  {localizedName(item.title, locale)}
+                </strong>
                 <span>
                   {item.steps.length} {t('étapes documentées', 'documented steps')}
                   <ArrowUpRight size={15} />

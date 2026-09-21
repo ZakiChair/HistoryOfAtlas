@@ -2,6 +2,16 @@ import { describe, expect, it } from 'vitest';
 import { personSearchRecord } from '../../lib/search-records';
 
 describe('person search documents', () => {
+  it('makes every sourced translation of a person searchable', () => {
+    const result = personSearchRecord({
+      id: 'Q10',
+      name: { en: 'Example', de: 'Beispiel', es: 'Ejemplo', zh: '示例', ru: 'Пример' },
+    });
+    for (const name of ['Example', 'Beispiel', 'Ejemplo', '示例', 'Пример']) {
+      expect(result.title).toContain(name);
+    }
+  });
+
   it('keeps a person separate from an event sharing an identifier', () => {
     const result = personSearchRecord({ id: 'Q10', name: { en: 'Structural name' } });
     expect(result.id).not.toBe('Q10');

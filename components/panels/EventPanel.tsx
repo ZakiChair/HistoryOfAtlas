@@ -21,7 +21,13 @@ import {
 import { getEvent } from '@/lib/data-client';
 import { useJson } from '@/lib/data-client/hooks';
 import { compareHistDates, formatDateRange, formatYear } from '@/lib/histdate';
-import { EVENT_TYPE_LABELS, localizedName, useI18n } from '@/lib/i18n';
+import {
+  EVENT_TYPE_LABELS,
+  PRECISION_LABELS,
+  localizedName,
+  useI18n,
+  translateCopy,
+} from '@/lib/i18n';
 import { openEvent } from '@/lib/navigation';
 import { getEventPermalink } from '@/lib/seo';
 import { serializeAtlasUrl, useAtlasStore } from '@/lib/store';
@@ -39,16 +45,6 @@ const TYPE_ICONS = {
   campaign: Route,
   treaty: ScrollText,
   conquest: Flag,
-};
-const PRECISION_LABELS = {
-  fr: {
-    day: 'au jour',
-    month: 'au mois',
-    year: 'à l’année',
-    decade: 'à la décennie',
-    century: 'au siècle',
-  },
-  en: { day: 'day', month: 'month', year: 'year', decade: 'decade', century: 'century' },
 };
 
 function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Locale }) {
@@ -115,7 +111,7 @@ function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Loca
 
   return (
     <section className="detail-section detail-war">
-      <h3>{locale === 'fr' ? 'Dans le même conflit' : 'Within this conflict'}</h3>
+      <h3>{translateCopy(locale, 'Dans le même conflit', 'Within this conflict')}</h3>
       <button className="text-button detail-parent" onClick={showWar}>
         {parent
           ? localizedName(parent.name, locale)
@@ -128,7 +124,7 @@ function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Loca
         <div
           className="war-mini-timeline"
           role="group"
-          aria-label={locale === 'fr' ? 'Chronologie du conflit' : 'Conflict timeline'}
+          aria-label={translateCopy(locale, 'Chronologie du conflit', 'Conflict timeline')}
         >
           {timelineEvents.map((item) => (
             <button
@@ -153,7 +149,7 @@ function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Loca
           title={previous ? localizedName(previous.name, locale) : undefined}
         >
           <ArrowLeft size={13} />
-          {locale === 'fr' ? 'Précédent' : 'Previous'}
+          {translateCopy(locale, 'Précédent', 'Previous')}
         </button>
         <button
           className="secondary-button"
@@ -161,20 +157,22 @@ function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Loca
           onClick={() => next && void navigate(next)}
           title={next ? localizedName(next.name, locale) : undefined}
         >
-          {locale === 'fr' ? 'Suivant' : 'Next'}
+          {translateCopy(locale, 'Suivant', 'Next')}
           <ArrowRight size={13} />
         </button>
       </div>
       <button className="primary-button" onClick={showWar}>
         <Route size={14} />
-        {locale === 'fr' ? 'Voir tout le conflit' : 'View the whole conflict'}
+        {translateCopy(locale, 'Voir tout le conflit', 'View the whole conflict')}
         {ordered.length > 0 && <span>{ordered.length}</span>}
       </button>
       {navigationError && (
         <p className="notice" role="status">
-          {locale === 'fr'
-            ? 'La chronologie détaillée de ce conflit n’est pas disponible dans ce corpus.'
-            : 'A detailed chronology of this conflict is not available in this corpus.'}
+          {translateCopy(
+            locale,
+            'La chronologie détaillée de ce conflit n’est pas disponible dans ce corpus.',
+            'A detailed chronology of this conflict is not available in this corpus.',
+          )}
         </p>
       )}
     </section>
@@ -189,7 +187,8 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
   const [shareUrl, setShareUrl] = useState('');
   const Icon = TYPE_ICONS[event.type];
   const name = localizedName(event.name, locale);
-  const titleLanguage = locale === 'fr' && event.name.fr ? 'fr' : (event.nameLanguage ?? 'en');
+  const titleLanguage =
+    locale !== 'en' && event.name[locale] ? locale : (event.nameLanguage ?? 'en');
   let originalLanguage = event.nameLanguage;
   if (originalLanguage) {
     try {
@@ -261,7 +260,7 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
           <span>{date}</span>
         </div>
         <div className="detail-precision">
-          {t('Précision', 'Precision')} : {PRECISION_LABELS[locale][event.datePrecision]}
+          {t('Précision', 'Precision')} : {PRECISION_LABELS[event.datePrecision][locale]}
         </div>
         {(event.place?.name || event.coords) && (
           <div className="detail-meta">

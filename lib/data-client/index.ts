@@ -1,4 +1,5 @@
 import type { HistoricalEvent, Campaign, EventShard } from '@/lib/schema';
+import { DEFAULT_LOCALE, type Locale } from '@/lib/types';
 
 export type DataManifest = {
   version: number;
@@ -57,29 +58,86 @@ export type WikiSummary = {
   language: string;
   title: string;
 };
+
+type WikipediaArticle = { url: string; title: string; language: Locale };
+type WikipediaSubject = Pick<HistoricalEvent, 'sources' | 'wikipedia'>;
+
+function wikipediaArticle(value: unknown, language: Locale): WikipediaArticle | null {
+  if (typeof value !== 'string') return null;
+  try {
+    const url = new URL(value);
+    if (
+      url.protocol !== 'https:' ||
+      url.hostname !== `${language}.wikipedia.org` ||
+      url.username ||
+      url.password ||
+      url.port ||
+      !url.pathname.startsWith('/wiki/')
+    )
+      return null;
+    const title = decodeURIComponent(url.pathname.slice('/wiki/'.length));
+    return title ? { url: url.href, title, language } : null;
+  } catch {
+    return null;
+  }
+}
+
+function sourcedWikipediaArticle(
+  event: WikipediaSubject,
+  language: Locale,
+): WikipediaArticle | null {
+  const candidates = [event.wikipedia?.[language], ...event.sources.map((item) => item.url)];
+  return (
+    candidates
+      .map((value) => wikipediaArticle(value, language))
+      .find((article) => article !== null) ?? null
+  );
+}
+
+/** Resolve only an interlanguage link published by the already sourced article.
+ * https://www.mediawiki.org/wiki/API:Langlinks
+ */
+async function resolveWikipediaLanguage(
+  event: WikipediaSubject,
+  locale: Locale,
+): Promise<WikipediaArticle | null> {
+  const source = (['en', 'fr'] as const)
+    .filter((language) => language !== locale)
+    .map((language) => sourcedWikipediaArticle(event, language))
+    .find((article) => article !== null);
+  if (!source) return null;
+  const query = new URLSearchParams({
+    action: 'query',
+    format: 'json',
+    formatversion: '2',
+    origin: '*',
+    redirects: '1',
+    titles: source.title,
+    prop: 'langlinks',
+    lllang: locale,
+    llprop: 'url',
+    lllimit: '1',
+  });
+  try {
+    const result = await readJson<{
+      query?: { pages?: { langlinks?: { lang?: string; url?: string }[] }[] };
+    }>(`https://${source.language}.wikipedia.org/w/api.php?${query}`);
+    const link = result.query?.pages?.[0]?.langlinks?.find((item) => item.lang === locale);
+    return wikipediaArticle(link?.url, locale);
+  } catch {
+    // An unavailable language link never prevents reading the existing sourced article.
+    return null;
+  }
+}
+
 export async function getWikipediaSummary(
-  event: Pick<HistoricalEvent, 'sources' | 'wikipedia'>,
-  locale: 'fr' | 'en',
+  event: WikipediaSubject,
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<WikiSummary | null> {
-  const languages: ('fr' | 'en')[] = locale === 'fr' ? ['fr', 'en'] : ['en', 'fr'];
+  const languages = [...new Set<Locale>([locale, 'en', 'fr'])];
   for (const language of languages) {
-    const candidates = [event.wikipedia?.[language], ...event.sources.map((item) => item.url)];
-    const source = candidates.flatMap((value) => {
-      if (!value) return [];
-      try {
-        const url = new URL(value);
-        if (
-          url.protocol !== 'https:' ||
-          url.hostname !== `${language}.wikipedia.org` ||
-          !url.pathname.startsWith('/wiki/')
-        )
-          return [];
-        const title = decodeURIComponent(url.pathname.slice('/wiki/'.length));
-        return title ? [{ url: url.href, title }] : [];
-      } catch {
-        return [];
-      }
-    })[0];
+    let source = sourcedWikipediaArticle(event, language);
+    if (!source && language === locale) source = await resolveWikipediaLanguage(event, locale);
     if (!source) continue;
     const { title } = source;
     try {

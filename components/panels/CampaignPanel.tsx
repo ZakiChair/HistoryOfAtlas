@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { ArrowUpRight, Play, Pause, SkipForward, SkipBack, X, Route } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
-import { useI18n } from '@/lib/i18n';
+import { localizedLanguage, localizedName, useI18n } from '@/lib/i18n';
 import { formatYear } from '@/lib/histdate';
 import { useJson } from '@/lib/data-client/hooks';
 import { openCampaign } from '@/lib/navigation';
@@ -52,9 +52,9 @@ export default function CampaignPanel() {
   return (
     <section className="campaign-panel">
       <div className="section-heading">
-        <h2>
+        <h2 lang={selected ? localizedLanguage(selected.name, locale) : undefined}>
           {selected
-            ? (selected.name[locale] ?? selected.name.en)
+            ? localizedName(selected.name, locale)
             : t('Guerres & campagnes', 'Wars & campaigns')}
         </h2>
         {selected && (
@@ -144,7 +144,9 @@ export default function CampaignPanel() {
                   <span className="step-number">{index + 1}</span>
                   <span>
                     <small>{formatYear(item.date.year, locale)}</small>
-                    <strong>{item.label}</strong>
+                    <strong lang={item.name ? localizedLanguage(item.name, locale) : undefined}>
+                      {item.name ? localizedName(item.name, locale) : item.label}
+                    </strong>
                   </span>
                 </button>
               </li>
@@ -179,7 +181,9 @@ export default function CampaignPanel() {
             >
               <Route size={20} strokeWidth={1.25} />
               <span>
-                <strong>{campaign.name[locale] ?? campaign.name.en}</strong>
+                <strong lang={localizedLanguage(campaign.name, locale)}>
+                  {localizedName(campaign.name, locale)}
+                </strong>
                 <small>
                   {formatYear(campaign.steps[0].date.year, locale)} —{' '}
                   {formatYear(campaign.steps.at(-1)!.date.year, locale)}
