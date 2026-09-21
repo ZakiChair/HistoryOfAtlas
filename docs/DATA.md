@@ -94,3 +94,26 @@ Les changements territoriaux proviennent des intervalles et géométries des sou
 - `public/data/on-this-day/{MM-DD}.json` : événements dont la source fournit réellement un mois et un jour.
 
 Les tableaux bruts de toutes les géométries ne sont jamais importés par le code de l’interface.
+
+## Dossiers de batailles et de personnes
+
+L’enrichissement est intégré à `pnpm data:build`. `pipeline/fetch/enrichment.py` acquiert par lots les personnes explicitement liées aux événements, les dirigeants déclarés des entités politiques sources, leurs fonctions et les juridictions de ces fonctions. Le cache conserve réponses, révisions, empreintes, progression et indisponibilités. Un build complet refuse une acquisition inachevée ou dont les entrées ont changé.
+
+Les descriptions FR/EN de Wikidata sont copiées dans `description`, séparément des résumés Wikipédia. Le lecteur encyclopédique consulte les liens `wikipedia` normalisés, avec repli de langue et attribution ; descriptions et repères restent disponibles si l’API Wikipédia ne répond pas. Les champs riches sont retirés des tranches temporelles et des listes de guerre.
+
+Le [commandement P4791](https://www.wikidata.org/wiki/Property:P4791), directement sur l’événement ou comme qualificatif d’un participant P710, produit un lien `commander`. P710, [P1344](https://www.wikidata.org/wiki/Property:P1344) et [P607](https://www.wikidata.org/wiki/Property:P607) établissent seulement une participation. Le pipeline n’attribue pas toutes les batailles d’une guerre à chacun de ses commandants. Les liens inverses événement/personne conservent la même déclaration et ses références.
+
+Les naissances P569, décès P570 et fonctions P39, P35/P6 conservent les déclarations non obsolètes, y compris les anciens mandats de rang normal. Chaque date contient calendrier, précision, approximation éventuelle, identifiant de déclaration, entité source et références bibliographiques disponibles. Les variantes ne sont pas écrasées. Les marqueurs d’incertitude et bornes qualificatives déclenchent une approximation ; leurs détails restent consultables dans la déclaration originale. Les valeurs invalides et les relations certainement incompatibles avec la vie de la personne sont consignées dans le rapport.
+
+La juridiction d’une fonction repose sur P1001. L’identification des fonctions de chef d’État ou de gouvernement utilise les déclarations explicites P1906/P1313 du territoire. Quand une association est datée, elle doit couvrir le mandat entier avec des calendriers compatibles. Une fonction traversant une transition de juridiction reste une fonction sans territoire déduit : aucune durée n’est découpée ou réécrite pour forcer la correspondance.
+
+Les correspondances de carte passent par `data/curated/polity-identities.json` : 26 observations vérifiées, 24 QID distincts et deux associations erronées explicitement exclues. Les libellés et révisions vérifiés figurent dans `data/reports/polity-identity-review.json`. Une identité non revue n’est pas utilisée pour attribuer des dirigeants ou des guerres à un polygone. Ce registre ne modifie pas les géométries de la source.
+
+Les sorties supplémentaires sont :
+
+- `people/{QID}.json` : biographie structurée, fonctions datées, événements et sources, chargée seulement à l’ouverture.
+- `people-index.json` : noms et alias pour le worker, chargé seulement à l’ouverture de la recherche.
+- `polity-leaders/{QID}.json` : fonctions explicitement rattachées à une entité source.
+- `enrichment.json` : couverture et motifs de rejet, version détaillée dans `data/reports/enrichment.json`.
+
+Le relevé du 21 septembre 2026 contient 11 364 personnes, 19 174 notices avec description, 6 849 notices avec personnes liées, 14 790 liens de commandement, 10 182 liens de participation et 22 066 fonctions, dont 15 570 avec début et fin. Ces effectifs décrivent les déclarations disponibles, pas une liste exhaustive des souverains, des états-majors ou des règnes. `pnpm data:check` vérifie les schémas, la provenance et les 24 972 liens réciproques dans les artefacts publiés, sans accès réseau ni cache brut.

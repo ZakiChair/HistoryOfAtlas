@@ -32,6 +32,10 @@ jobs:
         run: pnpm test
       - name: Geography source and artifact invariants
         run: python3 -m unittest discover -s pipeline/geography -p 'test_*.py'
+      - name: People acquisition invariants
+        run: python3 -m unittest discover -s pipeline/fetch -p 'test_*.py'
+      - name: Published dossier provenance and reciprocal links
+        run: pnpm data:check
       - name: Lint
         run: pnpm lint
       - name: Static production build

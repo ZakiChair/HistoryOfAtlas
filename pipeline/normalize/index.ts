@@ -10,7 +10,7 @@ import exclusions from '../../data/curated/excluded-classes.json';
 import recordExclusions from '../../data/curated/excluded-records.json';
 import media from '../../data/curated/medium-classes.json';
 
-type ClaimValue =
+export type ClaimValue =
   | string
   | number
   | {
@@ -25,10 +25,14 @@ type ClaimValue =
       unit?: string;
       lowerBound?: string;
       upperBound?: string;
+      before?: number;
+      after?: number;
     };
-type Claim = {
+export type Claim = {
+  id?: string;
   rank?: string;
   qualifiers?: Record<string, unknown>;
+  references?: { snaks?: Record<string, unknown> }[];
   mainsnak?: { datavalue?: { value: ClaimValue } };
 };
 export type Entity = {
@@ -291,6 +295,10 @@ export async function normalize(
         id,
         type,
         name,
+        description:
+          entity.descriptions?.fr?.value || entity.descriptions?.en?.value
+            ? { fr: entity.descriptions?.fr?.value, en: entity.descriptions?.en?.value }
+            : undefined,
         nameLanguage: label(entity) ? undefined : label(entity, 'fr') ? 'fr' : original?.[0],
         start: start.date,
         end,
@@ -314,6 +322,11 @@ export async function normalize(
         region: classifyRegion(coords),
         sources: [
           source,
+          ...Object.entries(wikipedia).map(([language, url]) => ({
+            label: `Wikipedia (${language})`,
+            url,
+            license: 'CC-BY-SA-4.0',
+          })),
           ...(navalDescription
             ? [
                 {

@@ -41,4 +41,10 @@ export type {
   DataManifest,
   Source,
   Story,
+  Person,
+  PersonTenure,
+  SourcedDate,
+  PersonEventLink,
+  EventPersonLink,
+  PolityLeaders,
 } from './schema';

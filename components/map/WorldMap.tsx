@@ -207,7 +207,12 @@ export default function WorldMap() {
         let retiringTerritories = false;
 
         const selectMapEvent = (id: string) => {
-          useAtlasStore.setState({ selectedEvent: id, selectedEntity: null, playing: false });
+          useAtlasStore.getState().patchState({
+            selectedEvent: id,
+            selectedEntity: null,
+            selectedPerson: null,
+            playing: false,
+          });
           void getEvent(id)
             .then((item) => {
               if (!disposed && useAtlasStore.getState().selectedEvent === id && item.coords)
@@ -445,7 +450,11 @@ export default function WorldMap() {
               return;
             const entityId = event.features?.[0]?.properties?.entityId;
             if (entityId)
-              useAtlasStore.setState({ selectedEntity: String(entityId), selectedEvent: null });
+              useAtlasStore.getState().patchState({
+                selectedEntity: String(entityId),
+                selectedEvent: null,
+                selectedPerson: null,
+              });
           };
           const enter = () => {
             if (!currentBoundarySources.includes(id)) return;

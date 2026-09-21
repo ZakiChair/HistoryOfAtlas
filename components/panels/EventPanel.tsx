@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Anchor,
   ArrowLeft,
@@ -18,8 +18,7 @@ import {
   Swords,
   X,
 } from 'lucide-react';
-import { getEvent, getWikipediaSummary, type WikiSummary } from '@/lib/data-client';
-import { getCommonsImageCredit, type CommonsImageCredit } from '@/lib/data-client/image-credit';
+import { getEvent } from '@/lib/data-client';
 import { useJson } from '@/lib/data-client/hooks';
 import { compareHistDates, formatDateRange, formatYear } from '@/lib/histdate';
 import { EVENT_TYPE_LABELS, localizedName, useI18n } from '@/lib/i18n';
@@ -29,6 +28,8 @@ import { serializeAtlasUrl, useAtlasStore } from '@/lib/store';
 import type { HistoricalEvent } from '@/lib/schema';
 import type { Locale } from '@/lib/types';
 import EventSources from './EventSources';
+import EncyclopediaContent from './EncyclopediaContent';
+import EventPeople from './EventPeople';
 
 const TYPE_ICONS = {
   battle: Swords,
@@ -49,150 +50,6 @@ const PRECISION_LABELS = {
   },
   en: { day: 'day', month: 'month', year: 'year', decade: 'decade', century: 'century' },
 };
-
-function imageCreditUrl(image: string): string {
-  try {
-    const url = new URL(image);
-    if (url.hostname === 'commons.wikimedia.org' && /Special:FilePath\//.test(url.pathname)) {
-      return `https://commons.wikimedia.org/wiki/File:${url.pathname.split('Special:FilePath/')[1]}`;
-    }
-    if (url.hostname === 'upload.wikimedia.org') {
-      const segments = url.pathname.split('/');
-      const name = segments.includes('thumb') ? segments.at(-2) : segments.at(-1);
-      const repository = segments[2];
-      if (name && segments[1] === 'wikipedia') {
-        if (repository === 'commons') return `https://commons.wikimedia.org/wiki/File:${name}`;
-        if (/^[a-z][a-z-]*$/.test(repository))
-          return `https://${repository}.wikipedia.org/wiki/File:${name}`;
-      }
-    }
-    return image;
-  } catch {
-    return image;
-  }
-}
-
-function ImageCredits({ image, locale }: { image: string; locale: Locale }) {
-  const [credit, setCredit] = useState<CommonsImageCredit | null>(null);
-  useEffect(() => {
-    let active = true;
-    getCommonsImageCredit(image, locale).then((result) => {
-      if (active) setCredit(result);
-    });
-    return () => {
-      active = false;
-    };
-  }, [image, locale]);
-  const attribution =
-    credit?.attribution ??
-    [...new Set([credit?.author, credit?.credit].filter(Boolean))].join(' · ');
-  const source = credit?.creditUrl ?? imageCreditUrl(image);
-  return (
-    <figcaption>
-      {attribution && (
-        <span>
-          {attribution}
-          {' · '}
-        </span>
-      )}
-      {credit?.license && (
-        <>
-          <a href={credit.licenseUrl ?? source} target="_blank" rel="noreferrer">
-            {credit.license}
-          </a>
-          {' · '}
-        </>
-      )}
-      <a href={source} target="_blank" rel="noreferrer">
-        {locale === 'fr'
-          ? 'Image : source, crédits et licence'
-          : 'Image: source, credits and license'}{' '}
-        <ArrowUpRight size={10} />
-      </a>
-    </figcaption>
-  );
-}
-
-function WikipediaContent({ event, locale }: { event: HistoricalEvent; locale: Locale }) {
-  const [summary, setSummary] = useState<WikiSummary | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    let active = true;
-    getWikipediaSummary(event, locale)
-      .then((result) => {
-        if (active) {
-          setSummary(result);
-          setLoading(false);
-        }
-      })
-      .catch(() => {
-        if (active) setLoading(false);
-      });
-    return () => {
-      active = false;
-    };
-  }, [event, locale]);
-  const text = summary?.text ?? event.summary?.[locale] ?? event.summary?.en;
-  const textLanguage = summary?.language ?? (event.summary?.[locale] ? locale : 'en');
-  const image = summary?.image ?? event.image;
-  return (
-    <>
-      {image && (
-        <figure className="detail-image">
-          {/* Remote image dimensions and hosts are source-dependent; a native lazy image keeps the static export independent of an image server. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={image}
-            alt={
-              summary?.imageDescription ??
-              (locale === 'fr'
-                ? `Illustration associée à ${localizedName(event.name, locale)}`
-                : `Illustration associated with ${localizedName(event.name, locale)}`)
-            }
-            loading="lazy"
-            decoding="async"
-            referrerPolicy="no-referrer"
-          />
-          <ImageCredits key={`${image}-${locale}`} image={image} locale={locale} />
-        </figure>
-      )}
-      {text ? (
-        <section className="detail-section">
-          <h3>{locale === 'fr' ? 'En quelques mots' : 'In context'}</h3>
-          <p className="detail-summary" lang={textLanguage}>
-            {text}
-          </p>
-          {summary && (
-            <p className="detail-attribution">
-              <a href={summary.url} target="_blank" rel="noreferrer">
-                {locale === 'fr' ? 'Wikipédia' : 'Wikipedia'}
-                {summary.language !== locale ? ` (${summary.language.toUpperCase()})` : ''}
-              </a>
-              {' · '}
-              <a
-                href="https://creativecommons.org/licenses/by-sa/4.0/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                CC BY-SA
-              </a>
-            </p>
-          )}
-        </section>
-      ) : loading ? (
-        <p className="detail-summary-loading" role="status">
-          {locale === 'fr' ? 'Lecture du résumé Wikipédia…' : 'Loading the Wikipedia summary…'}
-        </p>
-      ) : (
-        <p className="notice">
-          {locale === 'fr'
-            ? 'Résumé indisponible. Les sources ci-dessous permettent de consulter l’événement.'
-            : 'Summary unavailable. The sources below provide further information.'}
-        </p>
-      )}
-    </>
-  );
-}
 
 function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Locale }) {
   const warId = event.parentWar ?? (event.type === 'war' ? event.id : null);
@@ -326,6 +183,8 @@ function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Loca
 
 function EventDetail({ event }: { event: HistoricalEvent }) {
   const { locale, t } = useI18n();
+  const heading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => heading.current?.focus({ preventScroll: true }), []);
   const [shareState, setShareState] = useState<'idle' | 'copied' | 'manual'>('idle');
   const [shareUrl, setShareUrl] = useState('');
   const Icon = TYPE_ICONS[event.type];
@@ -382,7 +241,14 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
         </button>
       </header>
       <div className="panel-body">
-        <h2 className="detail-title" id="event-panel-title" lang={titleLanguage} dir="auto">
+        <h2
+          ref={heading}
+          tabIndex={-1}
+          className="detail-title"
+          id="event-panel-title"
+          lang={titleLanguage}
+          dir="auto"
+        >
           {name}
         </h2>
         {originalLanguage && (
@@ -429,7 +295,18 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
             {t('Plusieurs dates ou lieux dans la source', 'Multiple source dates or locations')}
           </p>
         )}
-        <WikipediaContent key={`${event.id}-${locale}`} event={event} locale={locale} />
+        {(event.description?.[locale] ?? event.description?.en ?? event.description?.fr) && (
+          <div className="detail-description">
+            <p lang={event.description?.[locale] ? locale : event.description?.en ? 'en' : 'fr'}>
+              {event.description?.[locale] ?? event.description?.en ?? event.description?.fr}
+            </p>
+            <a href={event.sources[0].url} target="_blank" rel="noreferrer">
+              Wikidata · CC0 <ArrowUpRight size={10} />
+            </a>
+          </div>
+        )}
+        <EncyclopediaContent key={`${event.id}-${locale}`} subject={event} locale={locale} />
+        {event.people && <EventPeople people={event.people} participants={event.belligerents} />}
         {groups.length > 0 && (
           <section className="detail-section">
             <h3>{t('Belligérants documentés', 'Documented participants')}</h3>

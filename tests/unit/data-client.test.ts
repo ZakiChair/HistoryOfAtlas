@@ -105,4 +105,41 @@ describe('lazy data loading and provenance-preserving summaries', () => {
       text: 'Text received from the source.',
     });
   });
+
+  it('uses the normalized Wikipedia links even when the provenance list only contains Wikidata', async () => {
+    const fetcher = vi.fn(async () =>
+      jsonResponse({ title: 'Article', extract: 'Sourced context.' }),
+    );
+    vi.stubGlobal('fetch', fetcher);
+    const { getWikipediaSummary } = await import('../../lib/data-client');
+    const summary = await getWikipediaSummary(
+      {
+        sources: [{ label: 'Wikidata', url: 'https://www.wikidata.org/wiki/Q1' }],
+        wikipedia: { fr: 'https://fr.wikipedia.org/wiki/Article_%C3%A9tudi%C3%A9' },
+      } as HistoricalEvent,
+      'fr',
+    );
+    expect(summary?.text).toBe('Sourced context.');
+    expect(summary?.url).toBe('https://fr.wikipedia.org/wiki/Article_%C3%A9tudi%C3%A9');
+    expect(fetcher).toHaveBeenCalledWith(
+      'https://fr.wikipedia.org/api/rest_v1/page/summary/Article_%C3%A9tudi%C3%A9',
+      expect.anything(),
+    );
+  });
+
+  it('ignores misleading or malformed Wikipedia links without fetching unrelated hosts', async () => {
+    const fetcher = vi.fn();
+    vi.stubGlobal('fetch', fetcher);
+    const { getWikipediaSummary } = await import('../../lib/data-client');
+    await expect(
+      getWikipediaSummary(
+        {
+          sources: [{ label: 'Invalid', url: 'https://example.org/fr.wikipedia.org/wiki/Article' }],
+          wikipedia: { fr: '%broken' },
+        } as HistoricalEvent,
+        'fr',
+      ),
+    ).resolves.toBeNull();
+    expect(fetcher).not.toHaveBeenCalled();
+  });
 });

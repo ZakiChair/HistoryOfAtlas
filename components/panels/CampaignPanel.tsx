@@ -7,6 +7,7 @@ import { formatYear } from '@/lib/histdate';
 import { useJson } from '@/lib/data-client/hooks';
 import { openCampaign } from '@/lib/navigation';
 import type { Campaign } from '@/lib/schema';
+import EventPeople from './EventPeople';
 
 export default function CampaignPanel() {
   const { data: campaigns, loading, error } = useJson<Campaign[]>('/data/campaigns.json');
@@ -15,7 +16,9 @@ export default function CampaignPanel() {
   const { locale, t } = useI18n();
   const playing = useAtlasStore((state) => state.campaignPlaying);
   const setPlaying = useAtlasStore((state) => state.setCampaignPlaying);
-  const detailOpen = useAtlasStore((state) => Boolean(state.selectedEvent || state.selectedEntity));
+  const detailOpen = useAtlasStore((state) =>
+    Boolean(state.selectedEvent || state.selectedEntity || state.selectedPerson),
+  );
   useEffect(() => {
     if (detailOpen) setPlaying(false);
   }, [detailOpen, setPlaying]);
@@ -87,6 +90,7 @@ export default function CampaignPanel() {
             {formatYear(selected.steps[0].date.year, locale)} —{' '}
             {formatYear(selected.steps.at(-1)!.date.year, locale)}
           </p>
+          {selected.people?.length ? <EventPeople people={selected.people} /> : null}
           <div className="campaign-controls">
             <button
               className="icon-button"
@@ -120,7 +124,7 @@ export default function CampaignPanel() {
               className="text-button"
               onClick={() => {
                 setPlaying(false);
-                useAtlasStore.setState({ selectedEvent: selected.steps[step].eventId ?? null });
+                useAtlasStore.getState().selectEvent(selected.steps[step].eventId ?? null);
               }}
             >
               {t('Lire la fiche de cette étape', 'Read this step’s event')}

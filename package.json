@@ -20,6 +20,7 @@
     "format": "prettier --write .",
     "data:build": "tsx pipeline/index.ts",
     "data:geo": "tsx pipeline/geography/build.ts",
+    "data:check": "tsx scripts/check-dossiers.ts",
     "check": "pnpm typecheck && pnpm test && pnpm lint",
     "predev": "node scripts/prepare-map-assets.mjs",
     "prebuild": "node scripts/prepare-map-assets.mjs",

@@ -33,3 +33,13 @@ La réception des performances reste **partielle** : le JavaScript initial de l�
 Les observations Cliopatria s’arrêtent en 2024 et les instantanés Historical Basemaps en 2010. L’interface indique la dernière date sourcée lorsqu’une année ultérieure est choisie. Les polygones anciens sont des approximations ; les lacunes ne sont pas interpolées en nouvelles affirmations historiques. Les batailles et les changements de territoires partagent la chronologie sans leur attribuer automatiquement un lien causal. Les séquences relient les événements documentés et ne constituent pas des itinéraires de marche attestés.
 
 La sélection éditoriale corrige partiellement les déséquilibres régionaux des sources ; elle ne remplace pas une revue scientifique par des historiens. Les effectifs, pertes, vainqueurs et textes restent tributaires des propriétés effectivement disponibles. Aucun fait manquant n’est complété de mémoire.
+
+## Enrichissement — dossiers de batailles et de personnes
+
+Les notices détaillées affichent désormais les descriptions Wikidata et chargent effectivement les résumés Wikipédia grâce aux liens normalisés. Les commandants et participants explicitement documentés ouvrent un dossier biographique avec portrait éventuel, dates sourcées, fonctions/règnes et événements liés. Le paramètre `person=QID` conserve le contexte de retour et la recherche indexe les personnes sans charger leurs biographies.
+
+Le corpus comprend 11 364 personnes, 19 174 notices avec description, 24 972 liens réciproques et 22 066 fonctions. Les 295 assertions écartées sont documentées ; les dates ne sont jamais réécrites pour forcer un rattachement. Les dirigeants et guerres associés aux territoires passent par 26 correspondances revues. Le registre distingue explicitement les identités ambiguës.
+
+La reconstruction hors ligne vérifiée produit 35 353 fichiers identiques ; les schémas et liens réciproques passent `pnpm data:check`. Le rapport de couverture fait foi dans `data/reports/enrichment.json`, la vérification indépendante d’un échantillon de dates et de fonctions dans `data/reports/leader-source-audit.json`. Les descriptions riches, relations détaillées et portraits restent absents du chargement cartographique initial.
+
+La vérification finale passe 193 tests Vitest, 9 tests Python et 56 scénarios navigateur sur ordinateur et mobile, avec SwiftShader et un seul worker. La compilation, TypeScript, ESLint et le contrôle de provenance réussissent. L’export conserve 5 496 pages ; la coque initiale représente 253 182 octets gzip. Les nouveaux scénarios vérifient aussi le focus de la recherche et la conservation de la fiche après annulation avec Échap. Les limites de couverture historique et de performance des sections précédentes restent explicites.

@@ -1,19 +1,12 @@
 import MiniSearch from 'minisearch';
-
-type SearchRecord = {
-  id: string;
-  kind: 'event' | 'entity';
-  name: { fr?: string; en: string };
-  title: string;
-  year: number;
-  coords?: [number, number];
-  type: string;
-  importance: number;
-  aliases?: string;
-};
+import {
+  personSearchRecord,
+  type PersonIndexRecord,
+  type SearchRecord,
+} from '@/lib/search-records';
 const index = new MiniSearch<SearchRecord>({
   fields: ['title', 'aliases'],
-  storeFields: ['name', 'year', 'coords', 'type', 'kind', 'importance'],
+  storeFields: ['name', 'year', 'coords', 'type', 'kind', 'importance', 'targetId'],
   searchOptions: { prefix: true, fuzzy: 0.2, boost: { title: 3 } },
 });
 let query = '',
@@ -31,35 +24,63 @@ async function json(path: string) {
   return response.json();
 }
 async function initialize(year: number) {
-  try {
-    const [manifest, entities] = await Promise.all([
-      json('/data/search-manifest.json'),
-      json('/geo/polities.json'),
-    ]);
-    for (const entity of entities) {
-      const name = typeof entity.name === 'string' ? { en: entity.name } : entity.name;
-      index.add({
-        id: entity.id,
-        kind: 'entity',
-        name,
-        title: `${name.fr ?? ''} ${name.en}`,
-        year: entity.firstObserved,
-        coords: entity.center,
-        type: 'entity',
-        importance: 70,
-        aliases: entity.wikipedia ?? '',
-      });
+  // Each catalog is independent: a failed polity file must not suppress battle or person search.
+  total = 3;
+  let available = false;
+  const source = async (path: string, consume: (value: unknown) => void) => {
+    try {
+      consume(await json(path));
+      available = true;
+    } catch {
+      self.postMessage({ type: 'warning', path });
     }
-    const chunks = (manifest.chunks as { path: string; start: number; end: number }[]).sort(
-      (a, b) => Math.abs(a.start - year) - Math.abs(b.start - year),
-    );
-    total = chunks.length;
-    const queue = [...chunks];
+    loaded++;
+    respond();
+  };
+  const entities = source('/geo/polities.json', (value) => {
+    const records = value as {
+      id: string;
+      name: string | { en: string; fr?: string };
+      firstObserved: number;
+      center?: [number, number];
+      wikipedia?: string;
+    }[];
+    for (const entity of records) {
+      const name = typeof entity.name === 'string' ? { en: entity.name } : entity.name;
+      if (!index.has(entity.id))
+        index.add({
+          id: entity.id,
+          kind: 'entity',
+          name,
+          title: `${name.fr ?? ''} ${name.en}`,
+          year: entity.firstObserved,
+          coords: entity.center,
+          type: 'entity',
+          importance: 70,
+          aliases: entity.wikipedia ?? '',
+        });
+    }
+  });
+  const people = source('/data/people-index.json', (value) => {
+    for (const person of value as PersonIndexRecord[]) {
+      const document = personSearchRecord(person);
+      if (!index.has(document.id)) index.add(document);
+    }
+  });
+  const events = async () => {
+    let chunks: { path: string; start: number; end: number }[] = [];
+    await source('/data/search-manifest.json', (value) => {
+      const manifest = value as { chunks: typeof chunks };
+      chunks = [...manifest.chunks].sort(
+        (a, b) => Math.abs(a.start - year) - Math.abs(b.start - year),
+      );
+      total += chunks.length;
+    });
     const load = async () => {
-      while (queue.length) {
-        const chunk = queue.shift()!;
-        try {
-          const events = (await json(chunk.path)) as {
+      while (chunks.length) {
+        const chunk = chunks.shift()!;
+        await source(chunk.path, (value) => {
+          const records = value as {
             id: string;
             name: { en: string; fr?: string };
             start: { year: number };
@@ -68,7 +89,7 @@ async function initialize(year: number) {
             importance: number;
             aliases?: string;
           }[];
-          for (const event of events)
+          for (const event of records)
             if (!index.has(event.id))
               index.add({
                 ...event,
@@ -76,18 +97,14 @@ async function initialize(year: number) {
                 title: `${event.name.fr ?? ''} ${event.name.en}`,
                 year: event.start.year,
               });
-        } catch {
-          self.postMessage({ type: 'warning', path: chunk.path });
-        }
-        loaded++;
-        respond();
+        });
       }
     };
     await Promise.all([load(), load(), load()]);
-    respond();
-  } catch {
-    self.postMessage({ type: 'error' });
-  }
+  };
+  await Promise.all([entities, people, events()]);
+  if (!available) self.postMessage({ type: 'error' });
+  respond();
 }
 self.onmessage = (message: MessageEvent<{ type: string; query?: string; year?: number }>) => {
   if (message.data.type === 'init' && !initialized) {

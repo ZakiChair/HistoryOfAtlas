@@ -98,6 +98,11 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
         )}
         {event.summary?.fr && <p>{event.summary.fr}</p>}
         {!event.summary?.fr && event.summary?.en && <p lang="en">{event.summary.en}</p>}
+        {(event.description?.fr ?? event.description?.en) && (
+          <p lang={event.description?.fr ? 'fr' : 'en'}>
+            {event.description?.fr ?? event.description?.en}
+          </p>
+        )}
         <div className="document-grid">
           <section className="document-card">
             <span className="eyebrow">01 / REPÈRES</span>
@@ -143,6 +148,24 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                   <dd>{event.victor}</dd>
                 </>
               )}
+              {event.strength !== undefined && (
+                <>
+                  <dt>Effectifs rapportés</dt>
+                  <dd>{event.strength.toLocaleString('fr')}</dd>
+                </>
+              )}
+              {event.deaths !== undefined && (
+                <>
+                  <dt>Morts rapportés</dt>
+                  <dd>{event.deaths.toLocaleString('fr')}</dd>
+                </>
+              )}
+              {event.casualties !== undefined && (
+                <>
+                  <dt>Pertes rapportées</dt>
+                  <dd>{event.casualties.toLocaleString('fr')}</dd>
+                </>
+              )}
             </dl>
             {event.parentWar && (
               <Link className="source-link" href={`/?war=${event.parentWar}&y=${event.start.year}`}>
@@ -176,6 +199,31 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
             </p>
           </section>
         </div>
+        {Boolean(event.people?.length) && (
+          <section>
+            <h2>Personnes et commandement</h2>
+            <ul>
+              {event.people!.map((person, index) => {
+                const personQuery = new URLSearchParams(query);
+                personQuery.set('person', person.personId);
+                return (
+                  <li key={`${person.statementId}-${person.personId}-${index}`}>
+                    <Link href={`/?${personQuery}`}>
+                      {person.name.fr ?? person.name.en} —{' '}
+                      {person.role === 'commander'
+                        ? 'commandement documenté'
+                        : 'participation documentée'}
+                    </Link>
+                    {' · '}
+                    <a href={person.sources[0].url} target="_blank" rel="noreferrer">
+                      Source ↗
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
         <section>
           <span className="eyebrow">03 / PROVENANCE</span>
           <h2>Remonter aux sources</h2>

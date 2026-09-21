@@ -1,5 +1,5 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
-import { randomUUID } from 'node:crypto';
+import { createHash, randomUUID } from 'node:crypto';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import type { FeatureCollection, MultiPolygon, Polygon } from 'geojson';
@@ -22,6 +22,7 @@ import { ERA_IDS, REGION_IDS } from '../../lib/types';
 import { buildWarGroups } from './war-groups';
 import { verifyIdenticalTrees } from './verify';
 import { temporalShards } from './shards';
+import { buildPeople, compactEvent as compact } from '../normalize/enrichment';
 
 const SOURCE = { label: 'Wikidata', url: 'https://www.wikidata.org/', license: 'CC0-1.0' };
 function groupBy<T, K>(items: T[], key: (item: T) => K): Map<K, T[]> {
@@ -41,16 +42,6 @@ const countBy = (events: HistoricalEvent[], property: 'type' | 'era' | 'region')
     (counts, event) => ({ ...counts, [event[property]]: (counts[event[property]] ?? 0) + 1 }),
     {},
   );
-function compact(event: HistoricalEvent): HistoricalEvent {
-  const entry = { ...event };
-  delete entry.summary;
-  delete entry.image;
-  delete entry.strength;
-  delete entry.casualties;
-  delete entry.deaths;
-  return entry;
-}
-
 async function curate(events: HistoricalEvent[], directory: string): Promise<Set<string>> {
   await mkdir(directory, { recursive: true });
   const path = join(directory, 'events.json');
@@ -178,7 +169,7 @@ export async function buildEvents(
   if (options.verify && options.refreshEditorial)
     throw new Error('Verification cannot refresh the editorial selection.');
   const published = join(root, 'public/data');
-  const output = join(root, 'public', `.data-build-${randomUUID()}`);
+  const output = join(root, 'data', `.events-build-${randomUUID()}`);
   try {
     const reports = join(root, 'data/reports');
     if (!options.partial) {
@@ -199,6 +190,8 @@ export async function buildEvents(
       'search',
       'on-this-day',
       'event-shards',
+      'people',
+      'polity-leaders',
     ].map((name) => (name.includes('/') ? name : join(output, name))))
       await mkdir(directory, { recursive: true });
     const {
@@ -206,6 +199,37 @@ export async function buildEvents(
       rejected,
       entities,
     } = await normalize(join(root, 'data/raw/wikidata'));
+    const enrichmentAcquisition = !options.partial
+      ? (JSON.parse(
+          await readFile(join(root, 'data/raw/wikidata/enrichment-acquisition.json'), 'utf8'),
+        ) as {
+          schemaVersion: number;
+          status: string;
+          inputs: Record<string, string>;
+          requiredIds: string[];
+          polityIds: string[];
+          peopleCandidates: number;
+          offices: number;
+          unavailableIds: string[];
+        })
+      : undefined;
+    if (enrichmentAcquisition) {
+      if (enrichmentAcquisition.schemaVersion !== 1 || enrichmentAcquisition.status !== 'complete')
+        throw new Error(
+          'People enrichment acquisition is incomplete; resume data:build before publication.',
+        );
+      for (const [path, digest] of Object.entries(enrichmentAcquisition.inputs)) {
+        if (
+          createHash('sha256')
+            .update(await readFile(join(root, path)))
+            .digest('hex') !== digest
+        )
+          throw new Error(`Enrichment source inputs changed: ${path}. Resume data:build.`);
+      }
+      const unavailable = new Set(enrichmentAcquisition.unavailableIds);
+      if (enrichmentAcquisition.requiredIds.some((id) => !entities.has(id) && !unavailable.has(id)))
+        throw new Error('A required person or office cache entry is missing. Resume data:build.');
+    }
     if (!options.partial && rejected.some((entry) => entry.reasons.includes('not-yet-fetched'))) {
       throw new Error(
         'The cache is missing eligible Wikidata records. Resume data:build before publishing a full acquisition.',
@@ -285,6 +309,30 @@ export async function buildEvents(
         strength: event.strength,
       });
     accepted.sort(chronological);
+    const enrichment = buildPeople(
+      [...accepted, ...context],
+      entities,
+      new Set(enrichmentAcquisition?.polityIds ?? []),
+    );
+    for (const person of enrichment.people)
+      await json(join(output, `people/${person.id}.json`), person);
+    await json(
+      join(output, 'people-index.json'),
+      enrichment.people.map((person) => ({
+        id: person.id,
+        name: person.name,
+        year: person.birth?.[0]?.date.year,
+        aliases: [
+          person.description?.fr,
+          person.description?.en,
+          ...person.tenures.map((tenure) => tenure.office?.name.en),
+        ]
+          .filter(Boolean)
+          .join(' '),
+      })),
+    );
+    for (const polity of enrichment.polities)
+      await json(join(output, `polity-leaders/${polity.polityId}.json`), polity);
     const groups = new Map<string, HistoricalEvent[]>();
     for (const event of accepted) {
       const width = event.start.year >= 1800 ? 10 : 100;
@@ -384,6 +432,10 @@ export async function buildEvents(
       });
     }
     await json(join(output, 'wars.json'), warCatalog);
+    for (const campaign of campaigns) {
+      const notice = [...accepted, ...context].find((event) => event.id === campaign.id);
+      if (notice?.people?.length) campaign.people = notice.people;
+    }
     await json(join(output, 'campaigns.json'), campaigns);
     for (const [key, events] of groupBy(
       accepted.filter((event) => event.start.month && event.start.day),
@@ -580,6 +632,56 @@ export async function buildEvents(
       ),
     );
     const builtAt = timestamps.sort().at(-1) ?? 'unknown';
+    const notices = [...accepted, ...context];
+    const peopleLinks = notices.flatMap((event) => event.people ?? []);
+    const tenures = enrichment.people.flatMap((person) => person.tenures);
+    const enrichmentReport = {
+      version: 1,
+      builtAt,
+      totalPeople: enrichment.people.length,
+      totalEventNotices: notices.length,
+      geolocatedEvents: accepted.length,
+      eventsWithDescription: notices.filter(
+        (event) => event.description?.fr || event.description?.en,
+      ).length,
+      descriptionsByLanguage: {
+        fr: notices.filter((event) => event.description?.fr).length,
+        en: notices.filter((event) => event.description?.en).length,
+      },
+      eventsWithPeople: notices.filter((event) => event.people?.length).length,
+      commanderLinks: peopleLinks.filter((link) => link.role === 'commander').length,
+      participantLinks: peopleLinks.filter((link) => link.role === 'participant').length,
+      tenures: tenures.length,
+      tenuresWithBothBounds: tenures.filter((tenure) => tenure.start?.length && tenure.end?.length)
+        .length,
+      peopleWithBirth: enrichment.people.filter((person) => person.birth?.length).length,
+      peopleWithDeath: enrichment.people.filter((person) => person.death?.length).length,
+      polityCatalogs: enrichment.polities.length,
+      polityCatalogsWithLeaders: enrichment.polities.filter((polity) => polity.leaders.length)
+        .length,
+      acquisition: enrichmentAcquisition
+        ? {
+            peopleCandidates: enrichmentAcquisition.peopleCandidates,
+            offices: enrichmentAcquisition.offices,
+            unavailableIds: enrichmentAcquisition.unavailableIds,
+          }
+        : { status: 'partial' },
+      rejections: enrichment.rejected.length,
+      rejectionCounts: enrichment.rejected.reduce<Record<string, number>>((counts, entry) => {
+        counts[entry.reason] = (counts[entry.reason] ?? 0) + 1;
+        return counts;
+      }, {}),
+      methods: [
+        'Descriptions are copied from Wikidata and remain separate from Wikipedia summaries fetched only when a dossier is opened.',
+        'Command requires explicit P4791, including qualifiers of a P710 participant. P710, P607 and P1344 alone only establish participation.',
+        'All non-deprecated P35, P6 and P39 statements are retained, including historical normal-rank office holders when a preferred current holder exists.',
+        'Office jurisdiction requires P1001; head-of-state/government classification of P39 requires the polity to explicitly identify that office with P1906/P1313.',
+        'People must have a sourced human classification. Invalid dates, nonhuman candidates and definitely incompatible event/lifetime links are quarantined.',
+        'No reign, command role, conquest or territorial consequence is inferred from birth country, name similarity, political position or chronological proximity.',
+        'Each date and relation retains its Wikidata statement and available bibliographic references. Community assertions without external references are not independent historical verification.',
+      ],
+    };
+    await json(join(output, 'enrichment.json'), enrichmentReport);
     const manifest = DataManifestSchema.parse({
       version: 1,
       builtAt,
@@ -700,6 +802,11 @@ export async function buildEvents(
     } else {
       await publishDirectory(output, published);
       await json(join(reports, 'quality.json'), report, true);
+      await json(
+        join(reports, 'enrichment.json'),
+        { ...enrichmentReport, rejected: enrichment.rejected },
+        true,
+      );
       await json(
         join(reports, 'relations.json'),
         { method: report.militaryRelations.note, rejected: relations.rejected },

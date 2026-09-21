@@ -1,22 +1,15 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { Search, X, Globe2, ArrowUpRight, LoaderCircle } from 'lucide-react';
+import { Search, X, Globe2, UserRound, ArrowUpRight, LoaderCircle } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { useI18n } from '@/lib/i18n';
 import { formatYear } from '@/lib/histdate';
-import { getEvent } from '@/lib/data-client';
-import { openEvent } from '@/lib/navigation';
+import { createEventNavigation, openPerson } from '@/lib/navigation';
+import type { SearchRecord } from '@/lib/search-records';
 import { EventIcon } from '../ui/EventIcon';
 
-type Result = {
-  id: string;
-  kind: 'event' | 'entity';
-  name: { en: string; fr?: string };
-  year: number;
-  coords?: [number, number];
-  type: string;
-};
+type Result = Pick<SearchRecord, 'id' | 'targetId' | 'kind' | 'name' | 'year' | 'coords' | 'type'>;
 export default function SearchDialog({
   open,
   onOpenChange,
@@ -25,6 +18,8 @@ export default function SearchDialog({
   onOpenChange: (open: boolean) => void;
 }) {
   const { locale, t } = useI18n();
+  const eventNavigation = useMemo(() => createEventNavigation(), []);
+  useEffect(() => () => eventNavigation.cancel(), [eventNavigation]);
   const [query, setQuery] = useState(''),
     [results, setResults] = useState<Result[]>([]),
     [busy, setBusy] = useState(true),
@@ -34,9 +29,21 @@ export default function SearchDialog({
   const worker = useRef<Worker | null>(null),
     latestQuery = useRef('');
   const returnFocus = useRef<HTMLElement | null>(null);
+  const destination = useRef<Result['kind'] | null>(null);
   useEffect(() => {
-    const instance = new Worker(new URL('./search.worker.ts', import.meta.url));
+    let instance: Worker;
+    try {
+      instance = new Worker(new URL('./search.worker.ts', import.meta.url));
+    } catch {
+      setError(true);
+      setBusy(false);
+      return;
+    }
     worker.current = instance;
+    instance.onerror = () => {
+      setError(true);
+      setBusy(false);
+    };
     instance.onmessage = (
       message: MessageEvent<{
         type: string;
@@ -59,6 +66,7 @@ export default function SearchDialog({
     instance.postMessage({ type: 'init', year: useAtlasStore.getState().year });
     return () => {
       instance.terminate();
+      worker.current = null;
     };
   }, []);
   useEffect(() => {
@@ -67,12 +75,15 @@ export default function SearchDialog({
     worker.current?.postMessage({ type: 'search', query });
   }, [query]);
   const select = async (result: Result) => {
-    if (result.kind === 'entity') {
+    eventNavigation.cancel();
+    if (result.kind === 'person') {
+      openPerson(result.targetId ?? result.id, { preserveContext: false });
+    } else if (result.kind === 'entity') {
       const state = useAtlasStore.getState();
       state.patchState({
         selectedEntity: result.id,
         selectedEvent: null,
-        year: result.year,
+        ...(result.year !== undefined ? { year: result.year } : {}),
         playing: false,
         ...(result.coords
           ? { camera: { ...state.camera, lon: result.coords[0], lat: result.coords[1], zoom: 3 } }
@@ -80,12 +91,13 @@ export default function SearchDialog({
       });
     } else {
       try {
-        openEvent(await getEvent(result.id));
+        if (!(await eventNavigation.open(result.id))) return;
       } catch {
         setError(true);
         return;
       }
     }
+    destination.current = result.kind;
     onOpenChange(false);
   };
   return (
@@ -101,6 +113,17 @@ export default function SearchDialog({
           }}
           onCloseAutoFocus={(event) => {
             event.preventDefault();
+            if (destination.current) {
+              // The destination may already be mounted; its mount effect will not run again.
+              const panel = document.querySelector<HTMLElement>(
+                `[data-testid="${destination.current}-panel"]`,
+              );
+              const target =
+                panel?.querySelector<HTMLElement>('[tabindex="-1"]') ??
+                panel?.querySelector<HTMLElement>('button');
+              target?.focus({ preventScroll: true });
+              return;
+            }
             if (returnFocus.current?.isConnected) returnFocus.current.focus();
           }}
         >
@@ -113,7 +136,10 @@ export default function SearchDialog({
               autoComplete="off"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder={t('Une bataille, un empire, un lieu…', 'A battle, an empire, a place…')}
+              placeholder={t(
+                'Une bataille, un dirigeant, un empire…',
+                'A battle, a leader, an empire…',
+              )}
               aria-label={t('Rechercher dans l’atlas', 'Search the atlas')}
               role="combobox"
               aria-controls="atlas-search-results"
@@ -175,7 +201,9 @@ export default function SearchDialog({
                   onMouseEnter={() => setActive(index)}
                 >
                   <span className="search-kind">
-                    {result.kind === 'entity' ? (
+                    {result.kind === 'person' ? (
+                      <UserRound size={19} />
+                    ) : result.kind === 'entity' ? (
                       <Globe2 size={19} />
                     ) : (
                       <EventIcon type={result.type} size={19} />
@@ -184,7 +212,9 @@ export default function SearchDialog({
                   <span>
                     <strong>{result.name[locale] ?? result.name.en}</strong>
                     <small>
-                      {formatYear(result.year, locale)}
+                      {result.year !== undefined && formatYear(result.year, locale)}
+                      {result.kind === 'person' &&
+                        `${result.year !== undefined ? ' · ' : ''}${t('Personnage historique', 'Historical figure')}`}
                       {result.kind === 'entity' && ` · ${t('Territoire', 'Territory')}`}
                     </small>
                   </span>

@@ -6,6 +6,8 @@ import { readJson } from '@/lib/data-client';
 import { formatYear } from '@/lib/histdate';
 import { useI18n } from '@/lib/i18n';
 import { useAtlasStore } from '@/lib/store';
+import { resolvePolityIdentity } from '@/lib/polity-identities';
+import EntityLeaders from './EntityLeaders';
 
 export type ObservationInput = {
   year?: number;
@@ -147,14 +149,15 @@ export default function EntityPanel() {
   }, [entity]);
 
   useEffect(() => {
-    if (!entity?.wikidataId) return;
+    const identity = entity ? resolvePolityIdentity(entity) : null;
+    if (!identity) return;
     let live = true;
     readJson<EntityWar[]>('/data/wars.json')
       .then((catalog) => {
         if (live)
           setWars(
             catalog.filter((war) =>
-              war.belligerents?.some((party) => party.entityId === entity.wikidataId),
+              war.belligerents?.some((party) => party.entityId === identity.wikidataId),
             ),
           );
       })
@@ -199,6 +202,7 @@ export default function EntityPanel() {
 
   if (!selectedEntity) return null;
   const visible = entity?.id === selectedEntity ? entity : null;
+  const reviewedIdentity = visible ? resolvePolityIdentity(visible) : null;
   const observations = normalizeObservations(visible?.observations ?? []);
   const chart = observations.length ? areaPath(observations) : null;
   const activeObservation = observations.find(
@@ -299,6 +303,9 @@ export default function EntityPanel() {
                   : t('Non documentée cette année', 'Not documented for this year')}
               </strong>
             </div>
+            {reviewedIdentity && (
+              <EntityLeaders key={visible.id} identity={reviewedIdentity} year={year} />
+            )}
             {chart && (
               <section aria-labelledby="area-title">
                 <h3 id="area-title">{t('L’évolution du territoire', 'Territorial change')}</h3>
@@ -388,7 +395,7 @@ export default function EntityPanel() {
                 'Approximate boundaries. Mapped changes are not automatically attributed to contemporary battles.',
               )}
             </p>
-            {wars.length > 0 && (
+            {reviewedIdentity && wars.length > 0 && (
               <section>
                 <h3>
                   {t('Conflits associés dans les sources', 'Conflicts associated in the sources')}

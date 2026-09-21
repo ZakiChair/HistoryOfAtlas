@@ -2894,3 +2894,247 @@ ul {
   align-items: center;
   min-height: 24px;
 }
+
+/* Source-backed people and battle context, loaded with detail panels. */
+.detail-description {
+  margin: 18px 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--gold);
+}
+.detail-description p {
+  margin: 0 0 5px;
+  line-height: 1.65;
+  font-size: 14px;
+}
+.detail-description > a {
+  font-size: 10px;
+  color: var(--muted);
+}
+.detail-description svg {
+  display: inline;
+}
+.people-group + .people-group {
+  margin-top: 18px;
+}
+.people-group h4 {
+  margin: 0 0 8px;
+}
+.people-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.people-links li {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+}
+.person-link {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  text-align: start;
+}
+.person-link strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.person-link small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.person-link:hover strong {
+  color: var(--gold);
+}
+.person-source {
+  display: grid;
+  place-items: center;
+  min-width: 36px;
+  color: var(--muted);
+}
+
+/* Lazy biographical profiles share the responsive event drawer. */
+.person-life {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.person-dates {
+  margin-top: 10px;
+}
+.person-dates ul,
+.person-tenures {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.person-dates li {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.person-evidence {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  margin-top: 3px;
+}
+.person-evidence a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 24px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.person-evidence a:hover {
+  color: var(--gold);
+}
+.person-tenure {
+  border-left: 1px solid var(--line);
+  margin: 18px 0;
+  padding-left: 13px;
+}
+.person-tenure h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.person-tenure h4 a,
+.person-polity {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+}
+.person-polity {
+  color: var(--gold);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.person-events .people-links > li > div {
+  width: 100%;
+}
+.person-events .person-link {
+  width: 100%;
+  text-align: left;
+}
+.person-events .person-link:disabled {
+  cursor: wait;
+}
+.person-panel .panel-footer {
+  flex-wrap: wrap;
+}
+
+/* Reviewed political identities reveal sourced offices on demand. */
+.entity-leaders {
+  margin: 22px 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.entity-leaders h4 {
+  margin: 18px 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.entity-leaders .source-note a,
+.leader-role a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.leader-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.leader-card {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.leader-person {
+  display: block;
+  min-height: 32px;
+  width: 100%;
+  padding: 0;
+  text-align: start;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+.leader-person:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.leader-role,
+.leader-period {
+  margin: 4px 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.leader-role {
+  color: var(--muted);
+}
+.leader-sources {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.leader-sources summary,
+.other-leaders summary {
+  min-height: 28px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.leader-sources a {
+  display: block;
+  min-height: 24px;
+  padding: 3px 0;
+  overflow-wrap: anywhere;
+}
+.leader-sources a:hover {
+  color: var(--gold);
+}
+.other-leaders {
+  margin-top: 14px;
+  font-size: 12px;
+}
+.people-group .people-links li {
+  flex-wrap: wrap;
+}
+.person-references {
+  flex-basis: 100%;
+  padding-bottom: 9px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.person-references summary {
+  cursor: pointer;
+  padding: 5px 0;
+}
+.person-references a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 5px 0;
+  overflow-wrap: anywhere;
+}
+.detail-title:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 5px;
+}
+.description-source {
+  display: block;
+  margin-top: 5px;
+}

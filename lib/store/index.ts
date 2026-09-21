@@ -32,6 +32,7 @@ export interface AtlasState {
   selectedEvent: string | null;
   selectedWar: string | null;
   selectedEntity: string | null;
+  selectedPerson: string | null;
   locale: Locale;
   theme: 'dark' | 'light';
   projection: 'globe' | 'mercator';
@@ -56,6 +57,7 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   selectedEvent: null,
   selectedWar: null,
   selectedEntity: null,
+  selectedPerson: null,
   locale: 'fr',
   theme: 'dark',
   projection: 'globe',
@@ -161,6 +163,7 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   state.selectedEvent = identifier(query.get('e'));
   state.selectedWar = identifier(query.get('war'));
   state.selectedEntity = identifier(query.get('entity'), false);
+  state.selectedPerson = identifier(query.get('person'));
   state.locale = query.get('lang') === 'en' ? 'en' : 'fr';
   state.theme = query.get('theme') === 'light' ? 'light' : 'dark';
   state.projection = query.get('projection') === 'mercator' ? 'mercator' : 'globe';
@@ -187,6 +190,12 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   );
   if (state.campaignPlaying) state.playing = false;
   else if (state.entityFollowing) state.playing = true;
+  if (state.selectedPerson) {
+    // Opening a dossier pauses its source, but the timeline can be restarted explicitly.
+    state.playing = query.get('play') === '1';
+    state.campaignPlaying = false;
+    state.entityFollowing = false;
+  }
   return state;
 }
 
@@ -210,6 +219,7 @@ export function serializeAtlasUrl(state: AtlasState): string {
   if (state.selectedEvent) query.set('e', state.selectedEvent);
   if (state.selectedWar) query.set('war', state.selectedWar);
   if (state.selectedEntity) query.set('entity', state.selectedEntity);
+  if (state.selectedPerson) query.set('person', state.selectedPerson);
   if (state.range) {
     query.set('from', String(state.range[0]));
     query.set('to', String(state.range[1]));
@@ -237,6 +247,7 @@ export interface AtlasActions {
   selectEvent: (id: string | null) => void;
   selectWar: (id: string | null) => void;
   selectEntity: (id: string | null) => void;
+  selectPerson: (id: string | null) => void;
   setLocale: (locale: Locale) => void;
   setTheme: (theme: AtlasState['theme']) => void;
   setProjection: (projection: AtlasState['projection']) => void;
@@ -263,10 +274,21 @@ function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<A
   const changedEntity =
     patch.selectedEntity !== undefined && patch.selectedEntity !== state.selectedEntity;
   const changedCampaign = patch.campaignId !== undefined && patch.campaignId !== state.campaignId;
+  const changedStory = patch.storyId !== undefined && patch.storyId !== state.storyId;
+  if (patch.selectedPerson !== undefined) next.selectedPerson = identifier(patch.selectedPerson);
+  else if (
+    patch.selectedEvent ||
+    patch.selectedEntity ||
+    patch.selectedWar ||
+    changedCampaign ||
+    changedStory
+  )
+    next.selectedPerson = null;
   const openingOtherContext =
-    (patch.storyId !== undefined && patch.storyId !== state.storyId) ||
+    changedStory ||
     Boolean(patch.selectedEvent) ||
-    Boolean(patch.selectedWar);
+    Boolean(patch.selectedWar) ||
+    Boolean(patch.selectedPerson);
   if (changedEntity || openingOtherContext || patch.playing === false) {
     next.entityFollowing = false;
     if (state.entityFollowing) next.playing = false;
@@ -289,6 +311,7 @@ function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<A
   if (!next.campaignId) next.campaignPlaying = false;
   return {
     ...patch,
+    selectedPerson: next.selectedPerson,
     playing: next.playing,
     entityFollowing: next.entityFollowing,
     campaignPlaying: next.campaignPlaying,
@@ -307,6 +330,7 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
     selectWar: (id) => set((state) => playbackPatch(state, { selectedWar: identifier(id) })),
     selectEntity: (id) =>
       set((state) => playbackPatch(state, { selectedEntity: identifier(id, false) })),
+    selectPerson: (id) => set((state) => playbackPatch(state, { selectedPerson: identifier(id) })),
     setLocale: (locale) => set({ locale }),
     setTheme: (theme) => set({ theme }),
     setProjection: (projection) => set({ projection }),

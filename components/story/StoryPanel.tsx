@@ -27,7 +27,9 @@ export default function StoryPanel() {
   const { data: stories, loading, error } = useJson<Story[]>('/data/stories.json');
   const id = useAtlasStore((s) => s.storyId),
     activeStep = useAtlasStore((s) => s.storyStep);
-  const detailOpen = useAtlasStore((s) => Boolean(s.selectedEvent || s.selectedEntity));
+  const detailOpen = useAtlasStore((s) =>
+    Boolean(s.selectedEvent || s.selectedEntity || s.selectedPerson),
+  );
   const { locale, t } = useI18n();
   const container = useRef<HTMLDivElement>(null);
   const [navigationError, setNavigationError] = useState(false);

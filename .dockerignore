@@ -19,3 +19,5 @@ test-results
 .DS_Store
 public/.data-build-*
 public/data.previous-*
+data/.events-build-*
+data/.events-previous-*

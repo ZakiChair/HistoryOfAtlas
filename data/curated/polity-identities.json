@@ -1,0 +1,874 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-09-21",
+  "policy": "Only explicitly reviewed map-record identities are eligible for leadership enrichment. Unlisted, changed, or ambiguous source cross-references never infer political identity. Geographic observation bounds are not dates of state existence.",
+  "mappings": [
+    {
+      "polityId": "clio-c98b611f8d51f3",
+      "sourceName": "(First French Empire)",
+      "sourceWikidataId": "Q71084",
+      "wikidataId": "Q71084",
+      "status": "verified",
+      "label": {
+        "fr": "Premier Empire français",
+        "en": "First French Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q71084"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q71084&oldid=2546625162"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546625162,
+      "wikidataDescription": {
+        "en": "empire of Napoleon I of France, from 1804 to 1815",
+        "fr": "premier des deux empires français établis au profit de la dynastie des Bonaparte, de 1804 à 1814"
+      }
+    },
+    {
+      "polityId": "clio-0c5c0bdb8a7628",
+      "sourceName": "(Second French Empire)",
+      "sourceWikidataId": "Q71092",
+      "wikidataId": "Q71092",
+      "status": "verified",
+      "label": {
+        "fr": "Second Empire",
+        "en": "Second French Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q71092"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q71092&oldid=2546624191"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546624191,
+      "wikidataDescription": {
+        "fr": "régime politique et période de l'histoire de France",
+        "en": "government of France under Napoleon III, from 1852 to 1870"
+      }
+    },
+    {
+      "polityId": "clio-cc6ae44dcc7f3a",
+      "sourceName": "Achaemenid Empire",
+      "sourceWikidataId": "Q389688",
+      "wikidataId": "Q389688",
+      "status": "verified",
+      "label": {
+        "en": "Achaemenid Empire",
+        "fr": "Empire achéménide"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q389688"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q389688&oldid=2545393691"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2545393691,
+      "wikidataDescription": {
+        "en": "Iranian (Persian) empire (550–330 BC)",
+        "fr": "premier empire perse, de 550 à 330 av. J.-C."
+      }
+    },
+    {
+      "polityId": "clio-fdb191844d7f92",
+      "sourceName": "Ashanti Empire",
+      "sourceWikidataId": "Q722071",
+      "wikidataId": "Q722071",
+      "status": "verified",
+      "label": {
+        "en": "Ashanti Empire",
+        "fr": "Empire ashanti"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q722071"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q722071&oldid=2535803642"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2535803642,
+      "wikidataDescription": {
+        "fr": "État akan situé dans l'actuel Ghana et ayant existé de 1670 à 1902 puis de 1935 à 1957",
+        "en": "former Akan empire centered around modern day Ghana"
+      }
+    },
+    {
+      "polityId": "clio-d3ee6cca4f3b6f",
+      "sourceName": "Aztec Triple Alliance",
+      "sourceWikidataId": "Q2608489",
+      "wikidataId": "Q2608489",
+      "status": "verified",
+      "label": {
+        "fr": "Empire aztèque",
+        "en": "Aztec Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q2608489"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q2608489&oldid=2535671544"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2535671544,
+      "wikidataDescription": {
+        "en": "former Mesoamerican empire",
+        "fr": "ancien empire amérindien en Amérique du Nord"
+      }
+    },
+    {
+      "polityId": "clio-7e06fd81c0e059",
+      "sourceName": "Eastern Roman Empire",
+      "sourceWikidataId": "Q12544",
+      "wikidataId": "Q12544",
+      "status": "verified",
+      "label": {
+        "en": "Byzantine Empire",
+        "fr": "Empire byzantin"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q12544"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q12544&oldid=2546625199"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546625199,
+      "wikidataDescription": {
+        "en": "Roman Empire during Late Antiquity and the Middle Ages",
+        "fr": "État issu de la scission de l'Empire romain du IVe siècle jusqu'au XVè siècle"
+      }
+    },
+    {
+      "polityId": "clio-7771566865da8e",
+      "sourceName": "Ethiopian Empire",
+      "sourceWikidataId": "Q207521",
+      "wikidataId": "Q207521",
+      "status": "verified",
+      "label": {
+        "fr": "Empire éthiopien",
+        "en": "Ethiopian Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q207521"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q207521&oldid=2546624243"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546624243,
+      "wikidataDescription": {
+        "en": "1270–1974 state in the Horn of Africa",
+        "fr": "ancien État (1270–1974)"
+      }
+    },
+    {
+      "polityId": "clio-bd4117cb9fdb95",
+      "sourceName": "First French Empire",
+      "sourceWikidataId": "Q71084",
+      "wikidataId": "Q71084",
+      "status": "verified",
+      "label": {
+        "fr": "Premier Empire français",
+        "en": "First French Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q71084"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q71084&oldid=2546625162"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546625162,
+      "wikidataDescription": {
+        "en": "empire of Napoleon I of France, from 1804 to 1815",
+        "fr": "premier des deux empires français établis au profit de la dynastie des Bonaparte, de 1804 à 1814"
+      }
+    },
+    {
+      "polityId": "clio-9e213d80ae0b92",
+      "sourceName": "First Mexican Empire",
+      "sourceWikidataId": "Q285658",
+      "wikidataId": "Q285658",
+      "status": "verified",
+      "label": {
+        "en": "First Mexican Empire",
+        "fr": "Premier Empire mexicain"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q285658"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q285658&oldid=2538030638"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2538030638,
+      "wikidataDescription": {
+        "en": "former empire in America (1821-1823)",
+        "fr": "État d'Amérique entre 1822 et 1823"
+      }
+    },
+    {
+      "polityId": "clio-f0b5dfaf9c6fdb",
+      "sourceName": "Gupta Empire",
+      "sourceWikidataId": "Q11774",
+      "wikidataId": "Q11774",
+      "status": "verified",
+      "label": {
+        "en": "Gupta Empire",
+        "fr": "Empire Gupta"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q11774"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q11774&oldid=2532578154"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2532578154,
+      "wikidataDescription": {
+        "en": "ancient Indian empire (c. 3rd century CE–575 CE)",
+        "fr": "dynastie indienne ayant régné entre le IIIe et le VIe siècle"
+      }
+    },
+    {
+      "polityId": "clio-e1e4a22cf49cda",
+      "sourceName": "Inca Empire",
+      "sourceWikidataId": "Q28573",
+      "wikidataId": "Q28573",
+      "status": "verified",
+      "label": {
+        "fr": "Empire inca",
+        "en": "Inca Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q28573"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q28573&oldid=2542474846"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2542474846,
+      "wikidataDescription": {
+        "en": "1438–1533 empire in South America",
+        "fr": "empire précolombien d'Amérique du Sud"
+      }
+    },
+    {
+      "polityId": "clio-08e31009201c1b",
+      "sourceName": "Khmer Empire",
+      "sourceWikidataId": "Q201705",
+      "wikidataId": "Q201705",
+      "status": "verified",
+      "label": {
+        "fr": "Empire khmer",
+        "en": "Khmer Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q201705"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q201705&oldid=2522052421"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2522052421,
+      "wikidataDescription": {
+        "fr": "empire du Sud-est asiatique 802 à 1431",
+        "en": "802–1431 empire in Southeast Asia"
+      }
+    },
+    {
+      "polityId": "clio-52a520c7fcd313",
+      "sourceName": "Kingdom of Fiji",
+      "sourceWikidataId": "Q17515160",
+      "wikidataId": "Q17515160",
+      "status": "verified",
+      "label": {
+        "en": "Kingdom of Fiji",
+        "fr": "Royaume de Viti"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q17515160"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q17515160&oldid=2408534907"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2408534907,
+      "wikidataDescription": {
+        "en": "monarchy in Fiji from 1871 to 1874"
+      }
+    },
+    {
+      "polityId": "clio-81834c8c8a3d45",
+      "sourceName": "Kingdom of Kongo",
+      "sourceWikidataId": "Q796583",
+      "wikidataId": "Q796583",
+      "status": "verified",
+      "label": {
+        "fr": "royaume de Kongo",
+        "en": "Kingdom of Kongo"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q796583"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q796583&oldid=2538476315"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2538476315,
+      "wikidataDescription": {
+        "en": "former African kingdom located in west central Africa",
+        "fr": "État pré-colonial de l’Ouest de l’Afrique centrale, du XIVe au début du XXe siècle"
+      }
+    },
+    {
+      "polityId": "clio-bd0e87909a083c",
+      "sourceName": "Majapahit",
+      "sourceWikidataId": "Q49326",
+      "wikidataId": "Q49326",
+      "status": "verified",
+      "label": {
+        "en": "Majapahit",
+        "fr": "Majapahit"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q49326"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q49326&oldid=2535630116"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2535630116,
+      "wikidataDescription": {
+        "en": "Empire of Javanese, based in Majakarta (Mojokerto)",
+        "fr": "royaume sur l'île de Java de 1293 à 1527"
+      }
+    },
+    {
+      "polityId": "clio-d6b0950c0e7637",
+      "sourceName": "Mali Empire",
+      "sourceWikidataId": "Q184536",
+      "wikidataId": "Q184536",
+      "status": "verified",
+      "label": {
+        "fr": "Empire du Mali",
+        "en": "Mali Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q184536"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q184536&oldid=2515848098"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2515848098,
+      "wikidataDescription": {
+        "fr": "État africain médiéval en Afrique de l'Ouest (1235-1670)",
+        "en": "empire in West Africa from c.1230 to 1670"
+      }
+    },
+    {
+      "polityId": "clio-056a5c807487bb",
+      "sourceName": "Maurya Empire",
+      "sourceWikidataId": "Q62943",
+      "wikidataId": "Q62943",
+      "status": "verified",
+      "label": {
+        "fr": "Empire Maurya",
+        "en": "Maurya empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q62943"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q62943&oldid=2540429200"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2540429200,
+      "wikidataDescription": {
+        "fr": "ancien État",
+        "en": "ancient Indian empire (322–184 BCE)"
+      }
+    },
+    {
+      "polityId": "clio-0124e15c940878",
+      "sourceName": "Ming Dynasty",
+      "sourceWikidataId": "Q9903",
+      "wikidataId": "Q9903",
+      "status": "verified",
+      "label": {
+        "en": "Ming dynasty",
+        "fr": "dynastie Ming"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q9903"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q9903&oldid=2547027519"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2547027519,
+      "wikidataDescription": {
+        "en": "imperial dynasty of China from 1368 to 1644",
+        "fr": "dynastie d’empereurs chinois, du XIVe au XVIIe siècle"
+      }
+    },
+    {
+      "polityId": "clio-885f966c9c1fbf",
+      "sourceName": "Mongol Empire",
+      "sourceWikidataId": "Q12557",
+      "wikidataId": "Q12557",
+      "status": "verified",
+      "label": {
+        "en": "Mongol Empire",
+        "fr": "Empire mongol"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q12557"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q12557&oldid=2546625073"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546625073,
+      "wikidataDescription": {
+        "en": "13th- and 14th-century empire originating in Mongolia",
+        "fr": "État du XIIIe siècle fondé par Gengis Khan"
+      }
+    },
+    {
+      "polityId": "clio-51ef0a90a52152",
+      "sourceName": "Mughal Empire",
+      "sourceWikidataId": "Q33296",
+      "wikidataId": "Q33296",
+      "status": "verified",
+      "label": {
+        "fr": "Empire moghol",
+        "en": "Mughal Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q33296"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q33296&oldid=2546624881"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546624881,
+      "wikidataDescription": {
+        "en": "great Turkic descent empire ruling India (1526–1857)",
+        "fr": "État turco-mongol musulman de l'Inde (1526-1857)"
+      }
+    },
+    {
+      "polityId": "clio-bd4b87bc07eb4c",
+      "sourceName": "Ottoman Empire",
+      "sourceWikidataId": "Q12560",
+      "wikidataId": "Q12560",
+      "status": "verified",
+      "label": {
+        "en": "Ottoman Empire",
+        "fr": "Empire ottoman"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q12560"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q12560&oldid=2547115513"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2547115513,
+      "wikidataDescription": {
+        "en": "multiethnic empire with the monarchs from the Ottoman dynasty (1299–1922)",
+        "fr": "État multi-ethnique transcontinental ayant existé de 1299 à 1922"
+      }
+    },
+    {
+      "polityId": "clio-df03851b6d8f9c",
+      "sourceName": "Oyo Empire",
+      "sourceWikidataId": "Q849623",
+      "wikidataId": "Q849623",
+      "status": "verified",
+      "label": {
+        "fr": "royaume d'Oyo",
+        "en": "Oyo Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q849623"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q849623&oldid=2517116591"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2517116591,
+      "wikidataDescription": {
+        "fr": "ancien pays",
+        "en": "former imperial state"
+      }
+    },
+    {
+      "polityId": "clio-7e579a63489c39",
+      "sourceName": "Qing Dynasty",
+      "sourceWikidataId": "Q8733",
+      "wikidataId": "Q8733",
+      "status": "verified",
+      "label": {
+        "en": "Qing dynasty",
+        "fr": "dynastie Qing"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q8733"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q8733&oldid=2547027619"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2547027619,
+      "wikidataDescription": {
+        "en": "Manchu-led dynasty of China (1644–1912)",
+        "fr": "dynastie d'origine mandchoue et dernière dynastie impériale de Chine, du XVIIe au XXe siècle"
+      }
+    },
+    {
+      "polityId": "clio-c2e7e68740a509",
+      "sourceName": "Republic of Hawai'i",
+      "sourceWikidataId": "Q1057542",
+      "wikidataId": "Q1057542",
+      "status": "verified",
+      "label": {
+        "fr": "République d'Hawaï",
+        "en": "Republic of Hawaii"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q1057542"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q1057542&oldid=2514773415"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2514773415,
+      "wikidataDescription": {
+        "en": "republic on the Hawaii Islands between 1894–1898",
+        "fr": "république des îles Hawaï entre 1894 et 1898"
+      }
+    },
+    {
+      "polityId": "clio-4cc2aedd5ebff5",
+      "sourceName": "Roman Empire",
+      "sourceWikidataId": "Q12544",
+      "wikidataId": "Q12544",
+      "status": "ambiguous",
+      "label": {
+        "en": "Byzantine Empire",
+        "fr": "Empire byzantin"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q12544"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q12544&oldid=2546625199"
+        }
+      ],
+      "reason": "The source observations include the earlier Roman Empire, whereas Q12544 describes the Byzantine/Eastern Roman Empire of Late Antiquity and the Middle Ages. Do not import its rulers into the earlier polity.",
+      "wikidataRevision": 2546625199,
+      "wikidataDescription": {
+        "en": "Roman Empire during Late Antiquity and the Middle Ages",
+        "fr": "État issu de la scission de l'Empire romain du IVe siècle jusqu'au XVè siècle"
+      }
+    },
+    {
+      "polityId": "clio-08a805b4e8b60a",
+      "sourceName": "Sasanian Empire",
+      "sourceWikidataId": "Q1661685",
+      "wikidataId": "Q1661685",
+      "status": "ambiguous",
+      "label": {
+        "fr": "Indo-Sassanides",
+        "en": "Indo-Sassanids"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q1661685"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q1661685&oldid=2522594545"
+        }
+      ],
+      "reason": "Q1661685 describes the Indo-Sassanids/Kushano-Sasanian Kingdom, a different political entity from the Sasanian Empire named by this map record.",
+      "wikidataRevision": 2522594545,
+      "wikidataDescription": {
+        "fr": "ancien État",
+        "en": "Branch of Sasanian Persians ruling Bactria (c.230–c.365)"
+      }
+    },
+    {
+      "polityId": "clio-5d9bde74650b9c",
+      "sourceName": "Second French Empire",
+      "sourceWikidataId": "Q71092",
+      "wikidataId": "Q71092",
+      "status": "verified",
+      "label": {
+        "fr": "Second Empire",
+        "en": "Second French Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q71092"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q71092&oldid=2546624191"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2546624191,
+      "wikidataDescription": {
+        "fr": "régime politique et période de l'histoire de France",
+        "en": "government of France under Napoleon III, from 1852 to 1870"
+      }
+    },
+    {
+      "polityId": "clio-d0b66abd827794",
+      "sourceName": "Songhai Empire",
+      "sourceWikidataId": "Q202687",
+      "wikidataId": "Q202687",
+      "status": "verified",
+      "label": {
+        "fr": "Empire songhaï",
+        "en": "Songhai Empire"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria — pinned political observation identity",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258"
+        },
+        {
+          "label": "Wikidata — reviewed political entity",
+          "url": "https://www.wikidata.org/wiki/Q202687"
+        },
+        {
+          "label": "Wikidata — reviewed source revision",
+          "url": "https://www.wikidata.org/w/index.php?title=Q202687&oldid=2530412798"
+        }
+      ],
+      "reason": "Reviewed source-named polity and Wikidata entity. This mapping does not establish reign dates, command of a battle, or responsibility for territorial changes.",
+      "wikidataRevision": 2530412798,
+      "wikidataDescription": {
+        "en": "former state located in western Africa",
+        "fr": "ancien pays"
+      }
+    }
+  ]
+}

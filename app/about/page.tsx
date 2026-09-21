@@ -246,6 +246,33 @@ export default async function AboutPage() {
           </p>
         </section>
         <section>
+          <span className="eyebrow">PERSONNES & COMMANDEMENT</span>
+          <h2>Biographies, règnes et fonctions documentés</h2>
+          <p>
+            Les fiches des personnes relient les biographies encyclopédiques aux dates et fonctions
+            de Wikidata. Chaque fonction conserve ses bornes temporelles disponibles et ses sources.
+            Une date absente reste inconnue ; plusieurs dates concurrentes restent visibles. Une
+            fonction politique ou militaire n’est pas systématiquement un règne.
+          </p>
+          <p>
+            Un commandant est lié à un événement lorsque la source indique explicitement son
+            commandement, notamment comme qualificatif d’un participant. Une simple participation à
+            un conflit ne suffit pas à lui attribuer la direction de ses batailles ou de ses
+            conquêtes. Les changements territoriaux ne sont pas attribués automatiquement à ces
+            personnes.
+          </p>
+          <p>
+            Les dirigeants proposés depuis un territoire reposent sur une correspondance d’identité
+            vérifiée. Les associations ambiguës entre les sources géographiques et Wikidata sont
+            écartées. Les listes de personnes, de fonctions et de batailles dépendent des
+            déclarations disponibles et ne constituent pas des biographies ou des successions
+            exhaustives.
+          </p>
+          <a className="source-link" href="/data/enrichment.json">
+            Consulter la couverture des dossiers ↗
+          </a>
+        </section>
+        <section>
           <span className="eyebrow">06 / CORRECTIONS</span>
           <h2>Faire progresser l’atlas</h2>
           <p>
@@ -310,6 +337,13 @@ export default async function AboutPage() {
             reconstructed army routes. A battle and a territorial change sharing a date do not
             establish causation. Territory area histories show observations, not asserted founding
             or dissolution dates.
+          </p>
+          <p>
+            Biographical dates and offices retain their statement-level evidence and date variants.
+            Participation does not imply command: commanders require an explicit source statement.
+            Political offices are not automatically labelled reigns. Links from map territories to
+            rulers require a reviewed identity match, and ambiguous cross-references are excluded.
+            The people and office lists reflect source coverage, not an exhaustive succession.
           </p>
           <p>
             To report a correction, include the shared view, source identifier, displayed year, and

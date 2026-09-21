@@ -12,6 +12,7 @@ function run(script: string): void {
 if (!options.has('--offline')) {
   if (!options.has('--events-only')) run('pipeline/geography/build.py');
   run('pipeline/fetch/wikidata.py');
+  run('pipeline/fetch/enrichment.py');
 }
 await buildEvents(root, {
   partial: options.has('--partial'),

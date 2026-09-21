@@ -20,4 +20,6 @@ data/events.geojson
 public/vendor/
 public/.data-build-*/
 public/data.previous-*/
+data/.events-build-*/
+data/.events-previous-*/
 .vercel

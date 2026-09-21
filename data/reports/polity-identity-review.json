@@ -1,0 +1,694 @@
+{
+  "reviewedOn": "2026-09-21",
+  "method": "Entity identities were reviewed against Wikidata labels, descriptions, aliases and the pinned Cliopatria records. Two mismatches remain explicitly excluded. Observation periods are cartographic coverage, not political lifespans or reign dates.",
+  "request": {
+    "endpoint": "https://www.wikidata.org/w/api.php",
+    "action": "wbgetentities",
+    "props": "info|labels|descriptions|aliases",
+    "languages": "en|fr",
+    "ids": [
+      "Q1057542",
+      "Q11774",
+      "Q12544",
+      "Q12557",
+      "Q12560",
+      "Q1661685",
+      "Q17515160",
+      "Q184536",
+      "Q201705",
+      "Q202687",
+      "Q207521",
+      "Q2608489",
+      "Q285658",
+      "Q28573",
+      "Q33296",
+      "Q389688",
+      "Q49326",
+      "Q62943",
+      "Q71084",
+      "Q71092",
+      "Q722071",
+      "Q796583",
+      "Q849623",
+      "Q8733",
+      "Q9903"
+    ],
+    "license": "CC0-1.0",
+    "rawFile": "data/raw/wikidata/polity-identity-review.json",
+    "sha256": "5c8825a2ef18d781f37d2897550861f9b89170503c4bb9d13bc2f00ac4da5f61"
+  },
+  "verifiedMapRecords": 26,
+  "verifiedDistinctQids": 24,
+  "excludedMapRecords": 2,
+  "items": [
+    {
+      "qid": "Q8733",
+      "revision": 2547027619,
+      "modified": "2026-09-17T12:56:29Z",
+      "labels": {
+        "en": "Qing dynasty",
+        "fr": "dynastie Qing"
+      },
+      "descriptions": {
+        "en": "Manchu-led dynasty of China (1644–1912)",
+        "fr": "dynastie d'origine mandchoue et dernière dynastie impériale de Chine, du XVIIe au XXe siècle"
+      },
+      "aliases": {
+        "en": [
+          "Empire of the Great Qing",
+          "Great Qing",
+          "Qing Empire",
+          "Qing China",
+          "Manchu China",
+          "Ch'ing Empire",
+          "Ch'ing China",
+          "Great Qing state",
+          "Ta Tsing Empire",
+          "Tai Ching Ti Kuo",
+          "Manchu Tartar dynasty",
+          "Tartar Chinese Empire",
+          "Chinese-Tartar empire",
+          "Tartar-Manchu dynasty",
+          "Ta-tsing dynasty",
+          "Tai-tsing dynasty",
+          "Tsing dynasty",
+          "Great Tsing dynasty",
+          "Great Pure dynasty",
+          "Manchu empire",
+          "Manchu dynasty",
+          "Great Ching dynasty",
+          "Great Qing Empire",
+          "Ch'ing dynasty"
+        ],
+        "fr": [
+          "dynastie Ch'ing",
+          "dynastie Ching",
+          "dynastie Tsing",
+          "empire du Grand Qing",
+          "Grand Qing",
+          "Dinastía Qing o Ts'ing",
+          "Tai-tsing"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q8733&oldid=2547027619"
+    },
+    {
+      "qid": "Q9903",
+      "revision": 2547027519,
+      "modified": "2026-09-17T12:55:49Z",
+      "labels": {
+        "en": "Ming dynasty",
+        "fr": "dynastie Ming"
+      },
+      "descriptions": {
+        "en": "imperial dynasty of China from 1368 to 1644",
+        "fr": "dynastie d’empereurs chinois, du XIVe au XVIIe siècle"
+      },
+      "aliases": {
+        "en": [
+          "Empire of the Great Ming",
+          "Ming China",
+          "Ming Empire",
+          "Ming imperium",
+          "Ming-era",
+          "Ming era",
+          "Ming period",
+          "Great Ming",
+          "Ming"
+        ],
+        "fr": [
+          "Ming"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q9903&oldid=2547027519"
+    },
+    {
+      "qid": "Q11774",
+      "revision": 2532578154,
+      "modified": "2026-08-18T01:52:19Z",
+      "labels": {
+        "en": "Gupta Empire",
+        "fr": "Empire Gupta"
+      },
+      "descriptions": {
+        "en": "ancient Indian empire (c. 3rd century CE–575 CE)",
+        "fr": "dynastie indienne ayant régné entre le IIIe et le VIe siècle"
+      },
+      "aliases": {
+        "en": [
+          "Gupta dynasty",
+          "Golden age of India",
+          "the Gupta Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q11774&oldid=2532578154"
+    },
+    {
+      "qid": "Q12544",
+      "revision": 2546625199,
+      "modified": "2026-09-16T11:18:31Z",
+      "labels": {
+        "en": "Byzantine Empire",
+        "fr": "Empire byzantin"
+      },
+      "descriptions": {
+        "en": "Roman Empire during Late Antiquity and the Middle Ages",
+        "fr": "État issu de la scission de l'Empire romain du IVe siècle jusqu'au XVè siècle"
+      },
+      "aliases": {
+        "en": [
+          "Byzantium",
+          "Eastern Roman Empire",
+          "Roman Empire",
+          "Lower Empire",
+          "Romanía",
+          "Greek Empire",
+          "Empire of the Greeks"
+        ],
+        "fr": [
+          "Empire romain d'Orient"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q12544&oldid=2546625199"
+    },
+    {
+      "qid": "Q12557",
+      "revision": 2546625073,
+      "modified": "2026-09-16T11:18:01Z",
+      "labels": {
+        "en": "Mongol Empire",
+        "fr": "Empire mongol"
+      },
+      "descriptions": {
+        "en": "13th- and 14th-century empire originating in Mongolia",
+        "fr": "État du XIIIe siècle fondé par Gengis Khan"
+      },
+      "aliases": {
+        "fr": [
+          "Empire turco-mongol"
+        ],
+        "en": [
+          "Mongolian Empire",
+          "Great Mongol Nation"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q12557&oldid=2546625073"
+    },
+    {
+      "qid": "Q12560",
+      "revision": 2547115513,
+      "modified": "2026-09-17T18:27:33Z",
+      "labels": {
+        "en": "Ottoman Empire",
+        "fr": "Empire ottoman"
+      },
+      "descriptions": {
+        "en": "multiethnic empire with the monarchs from the Ottoman dynasty (1299–1922)",
+        "fr": "État multi-ethnique transcontinental ayant existé de 1299 à 1922"
+      },
+      "aliases": {
+        "en": [
+          "Ottoman State",
+          "Turkish Empire",
+          "Sublime Ottoman State"
+        ],
+        "fr": [
+          "Sublime Porte"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q12560&oldid=2547115513"
+    },
+    {
+      "qid": "Q28573",
+      "revision": 2542474846,
+      "modified": "2026-09-08T21:57:16Z",
+      "labels": {
+        "fr": "Empire inca",
+        "en": "Inca Empire"
+      },
+      "descriptions": {
+        "en": "1438–1533 empire in South America",
+        "fr": "empire précolombien d'Amérique du Sud"
+      },
+      "aliases": {
+        "en": [
+          "Tawantinsuyu",
+          "Tahuantinsuyo",
+          "Incan empire",
+          "Quechuan empire",
+          "Empire of the incas",
+          "Tawantin Suyu"
+        ],
+        "fr": [
+          "Tawantin Suyu",
+          "Empire Incaïque",
+          "Incanat",
+          "Tahuantinsuyo",
+          "Empire Cuzquénien",
+          "Empire Quechua",
+          "Tahuantinsuyu"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q28573&oldid=2542474846"
+    },
+    {
+      "qid": "Q33296",
+      "revision": 2546624881,
+      "modified": "2026-09-16T11:17:20Z",
+      "labels": {
+        "fr": "Empire moghol",
+        "en": "Mughal Empire"
+      },
+      "descriptions": {
+        "en": "great Turkic descent empire ruling India (1526–1857)",
+        "fr": "État turco-mongol musulman de l'Inde (1526-1857)"
+      },
+      "aliases": {
+        "fr": [
+          "Empereur moghol",
+          "Empire mogol",
+          "Moghols",
+          "Grand Moghol"
+        ],
+        "en": [
+          "Mogul Empire",
+          "Mughal India",
+          "Moghul Empire",
+          "Mogul India",
+          "Moghul India",
+          "Mogol Empire",
+          "Mogol India",
+          "Moghol Empire",
+          "Moghol India",
+          "Moghal Empire",
+          "Moghal India",
+          "Mongol Empire in India",
+          "Hindostan",
+          "Hindustan",
+          "Dominion of Hindustan",
+          "Land of Hind",
+          "Sultanate of al-Hind",
+          "Hind"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q33296&oldid=2546624881"
+    },
+    {
+      "qid": "Q49326",
+      "revision": 2535630116,
+      "modified": "2026-08-24T01:14:31Z",
+      "labels": {
+        "en": "Majapahit",
+        "fr": "Majapahit"
+      },
+      "descriptions": {
+        "en": "Empire of Javanese, based in Majakarta (Mojokerto)",
+        "fr": "royaume sur l'île de Java de 1293 à 1527"
+      },
+      "aliases": {
+        "en": [
+          "Majapahit Empire",
+          "Majapahit empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q49326&oldid=2535630116"
+    },
+    {
+      "qid": "Q62943",
+      "revision": 2540429200,
+      "modified": "2026-09-05T09:29:48Z",
+      "labels": {
+        "fr": "Empire Maurya",
+        "en": "Maurya empire"
+      },
+      "descriptions": {
+        "fr": "ancien État",
+        "en": "ancient Indian empire (322–184 BCE)"
+      },
+      "aliases": {
+        "fr": [
+          "Maurya"
+        ],
+        "en": [
+          "Mauryan Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q62943&oldid=2540429200"
+    },
+    {
+      "qid": "Q71084",
+      "revision": 2546625162,
+      "modified": "2026-09-16T11:18:21Z",
+      "labels": {
+        "fr": "Premier Empire français",
+        "en": "First French Empire"
+      },
+      "descriptions": {
+        "en": "empire of Napoleon I of France, from 1804 to 1815",
+        "fr": "premier des deux empires français établis au profit de la dynastie des Bonaparte, de 1804 à 1814"
+      },
+      "aliases": {
+        "fr": [
+          "1er Empire",
+          "Ier Empire",
+          "Premier empire Napoléonien",
+          "Empire napoléonien",
+          "La France de 1804 à 1814",
+          "Empire français"
+        ],
+        "en": [
+          "Greater French Empire",
+          "Napoleonic Empire",
+          "French Empire",
+          "Napoleonic France",
+          "French First Empire",
+          "The 1st French Empire",
+          "1st French Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q71084&oldid=2546625162"
+    },
+    {
+      "qid": "Q71092",
+      "revision": 2546624191,
+      "modified": "2026-09-16T11:14:20Z",
+      "labels": {
+        "fr": "Second Empire",
+        "en": "Second French Empire"
+      },
+      "descriptions": {
+        "fr": "régime politique et période de l'histoire de France",
+        "en": "government of France under Napoleon III, from 1852 to 1870"
+      },
+      "aliases": {
+        "fr": [
+          "IIème Empire",
+          "2nd empire",
+          "Second Empire français"
+        ],
+        "en": [
+          "Second Empire, 1852-1870",
+          "1852-1870"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q71092&oldid=2546624191"
+    },
+    {
+      "qid": "Q184536",
+      "revision": 2515848098,
+      "modified": "2026-07-10T11:41:21Z",
+      "labels": {
+        "fr": "Empire du Mali",
+        "en": "Mali Empire"
+      },
+      "descriptions": {
+        "fr": "État africain médiéval en Afrique de l'Ouest (1235-1670)",
+        "en": "empire in West Africa from c.1230 to 1670"
+      },
+      "aliases": {
+        "en": [
+          "Manden Kurufaba",
+          "Manden",
+          "Nyeni",
+          "Empire of Mali"
+        ],
+        "fr": [
+          "Empire mandingue"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q184536&oldid=2515848098"
+    },
+    {
+      "qid": "Q201705",
+      "revision": 2522052421,
+      "modified": "2026-07-24T10:34:59Z",
+      "labels": {
+        "fr": "Empire khmer",
+        "en": "Khmer Empire"
+      },
+      "descriptions": {
+        "fr": "empire du Sud-est asiatique 802 à 1431",
+        "en": "802–1431 empire in Southeast Asia"
+      },
+      "aliases": {
+        "fr": [
+          "Chronologie de l'empire Khmer"
+        ],
+        "en": [
+          "Khmer"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q201705&oldid=2522052421"
+    },
+    {
+      "qid": "Q202687",
+      "revision": 2530412798,
+      "modified": "2026-08-12T12:40:44Z",
+      "labels": {
+        "fr": "Empire songhaï",
+        "en": "Songhai Empire"
+      },
+      "descriptions": {
+        "en": "former state located in western Africa",
+        "fr": "ancien pays"
+      },
+      "aliases": {
+        "fr": [
+          "Empire Songhai",
+          "Empire de Gao"
+        ],
+        "en": [
+          "Songhay Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q202687&oldid=2530412798"
+    },
+    {
+      "qid": "Q207521",
+      "revision": 2546624243,
+      "modified": "2026-09-16T11:14:31Z",
+      "labels": {
+        "fr": "Empire éthiopien",
+        "en": "Ethiopian Empire"
+      },
+      "descriptions": {
+        "en": "1270–1974 state in the Horn of Africa",
+        "fr": "ancien État (1270–1974)"
+      },
+      "aliases": {
+        "fr": [
+          "Abyssinien",
+          "Empire d’Ethiopie",
+          "Empire d’Éthiopie",
+          "Abyssinie",
+          "Empire d'Ethiopie"
+        ],
+        "en": [
+          "Kingdom of Abyssinia",
+          "Abyssinia",
+          "Abisinia",
+          "Abissinia",
+          "Abyssinian Empire",
+          "Empire of Abyssinia"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q207521&oldid=2546624243"
+    },
+    {
+      "qid": "Q285658",
+      "revision": 2538030638,
+      "modified": "2026-08-30T04:15:47Z",
+      "labels": {
+        "en": "First Mexican Empire",
+        "fr": "Premier Empire mexicain"
+      },
+      "descriptions": {
+        "en": "former empire in America (1821-1823)",
+        "fr": "État d'Amérique entre 1822 et 1823"
+      },
+      "aliases": {
+        "en": [
+          "Primer Imperio Mexicano",
+          "Fist Mexican Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q285658&oldid=2538030638"
+    },
+    {
+      "qid": "Q389688",
+      "revision": 2545393691,
+      "modified": "2026-09-14T03:56:34Z",
+      "labels": {
+        "en": "Achaemenid Empire",
+        "fr": "Empire achéménide"
+      },
+      "descriptions": {
+        "en": "Iranian (Persian) empire (550–330 BC)",
+        "fr": "premier empire perse, de 550 à 330 av. J.-C."
+      },
+      "aliases": {
+        "en": [
+          "First Persian Empire",
+          "Achaemenid Persian Empire",
+          "Persian Achaemenid Empire",
+          "Achaemenid Persia"
+        ],
+        "fr": [
+          "empire perse"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q389688&oldid=2545393691"
+    },
+    {
+      "qid": "Q722071",
+      "revision": 2535803642,
+      "modified": "2026-08-24T13:05:56Z",
+      "labels": {
+        "en": "Ashanti Empire",
+        "fr": "Empire ashanti"
+      },
+      "descriptions": {
+        "fr": "État akan situé dans l'actuel Ghana et ayant existé de 1670 à 1902 puis de 1935 à 1957",
+        "en": "former Akan empire centered around modern day Ghana"
+      },
+      "aliases": {
+        "en": [
+          "Ashantee",
+          "Ashanti",
+          "Asante Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q722071&oldid=2535803642"
+    },
+    {
+      "qid": "Q796583",
+      "revision": 2538476315,
+      "modified": "2026-08-31T04:34:07Z",
+      "labels": {
+        "fr": "royaume de Kongo",
+        "en": "Kingdom of Kongo"
+      },
+      "descriptions": {
+        "en": "former African kingdom located in west central Africa",
+        "fr": "État pré-colonial de l’Ouest de l’Afrique centrale, du XIVe au début du XXe siècle"
+      },
+      "aliases": {
+        "fr": [
+          "Royaume du Kongo",
+          "Empire Kongo",
+          "Royaume Kongo",
+          "Kongo"
+        ],
+        "en": [
+          "Kongo dya Ntotila",
+          "Wene wa Kongo",
+          "Reino do Congo"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q796583&oldid=2538476315"
+    },
+    {
+      "qid": "Q849623",
+      "revision": 2517116591,
+      "modified": "2026-07-13T16:58:21Z",
+      "labels": {
+        "fr": "royaume d'Oyo",
+        "en": "Oyo Empire"
+      },
+      "descriptions": {
+        "fr": "ancien pays",
+        "en": "former imperial state"
+      },
+      "aliases": {
+        "fr": [
+          "Royaume d’Oyo"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q849623&oldid=2517116591"
+    },
+    {
+      "qid": "Q1057542",
+      "revision": 2514773415,
+      "modified": "2026-07-07T09:56:00Z",
+      "labels": {
+        "fr": "République d'Hawaï",
+        "en": "Republic of Hawaii"
+      },
+      "descriptions": {
+        "en": "republic on the Hawaii Islands between 1894–1898",
+        "fr": "république des îles Hawaï entre 1894 et 1898"
+      },
+      "aliases": {
+        "fr": [
+          "République de Hawaï",
+          "République d'Hawaii",
+          "Republique de Hawaii"
+        ],
+        "en": [
+          "Hawaii Republic"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q1057542&oldid=2514773415"
+    },
+    {
+      "qid": "Q1661685",
+      "revision": 2522594545,
+      "modified": "2026-07-25T17:56:11Z",
+      "labels": {
+        "fr": "Indo-Sassanides",
+        "en": "Indo-Sassanids"
+      },
+      "descriptions": {
+        "fr": "ancien État",
+        "en": "Branch of Sasanian Persians ruling Bactria (c.230–c.365)"
+      },
+      "aliases": {
+        "fr": [
+          "Indo-sassanides"
+        ],
+        "en": [
+          "Kushano-Sasanian Kingdom"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q1661685&oldid=2522594545"
+    },
+    {
+      "qid": "Q2608489",
+      "revision": 2535671544,
+      "modified": "2026-08-24T04:25:59Z",
+      "labels": {
+        "fr": "Empire aztèque",
+        "en": "Aztec Empire"
+      },
+      "descriptions": {
+        "en": "former Mesoamerican empire",
+        "fr": "ancien empire amérindien en Amérique du Nord"
+      },
+      "aliases": {
+        "en": [
+          "Triple Alliance",
+          "Mexica Empire"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q2608489&oldid=2535671544"
+    },
+    {
+      "qid": "Q17515160",
+      "revision": 2408534907,
+      "modified": "2025-09-23T10:41:18Z",
+      "labels": {
+        "en": "Kingdom of Fiji",
+        "fr": "Royaume de Viti"
+      },
+      "descriptions": {
+        "en": "monarchy in Fiji from 1871 to 1874"
+      },
+      "aliases": {
+        "en": [
+          "Kingdom of Viti"
+        ]
+      },
+      "revisionUrl": "https://www.wikidata.org/w/index.php?title=Q17515160&oldid=2408534907"
+    }
+  ]
+}

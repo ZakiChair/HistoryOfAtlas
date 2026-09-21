@@ -1,8 +1,53 @@
 import { useAtlasStore } from './store';
 import type { HistoricalEvent, Campaign } from './schema';
+import { getEvent } from './data-client';
+
+type NavigableEvent = Pick<HistoricalEvent, 'id' | 'start' | 'coords'>;
+
+/** A detail/dialog owns one navigator so later choices supersede earlier network replies. */
+export function createEventNavigation(load: (id: string) => Promise<NavigableEvent> = getEvent) {
+  let sequence = 0;
+  return {
+    async open(id: string, options: { preserveContext?: boolean; isCurrent?: () => boolean } = {}) {
+      const request = ++sequence;
+      const current = () => request === sequence && (options.isCurrent?.() ?? true);
+      try {
+        const event = await load(id);
+        if (!current()) return false;
+        openEvent(event, options);
+        return true;
+      } catch (error) {
+        if (!current()) return false;
+        throw error;
+      }
+    },
+    cancel() {
+      sequence += 1;
+    },
+  };
+}
+
+export function openPerson(id: string, options: { preserveContext?: boolean } = {}) {
+  if (!/^Q[1-9]\d*$/.test(id)) return;
+  useAtlasStore.getState().patchState({
+    selectedPerson: id,
+    playing: false,
+    campaignPlaying: false,
+    entityFollowing: false,
+    ...(options.preserveContext === false
+      ? {
+          selectedEvent: null,
+          selectedEntity: null,
+          selectedWar: null,
+          campaignId: null,
+          storyId: null,
+        }
+      : {}),
+  });
+}
 
 export function openEvent(
-  event: Pick<HistoricalEvent, 'id' | 'start' | 'coords'>,
+  event: NavigableEvent,
   options: { preserveContext?: boolean; showDetails?: boolean } = {},
 ) {
   const state = useAtlasStore.getState();
@@ -10,6 +55,7 @@ export function openEvent(
     year: event.start.year,
     selectedEvent: options.showDetails === false ? null : event.id,
     selectedEntity: null,
+    selectedPerson: null,
     playing: false,
     mode: 'events',
     range: null,
@@ -41,6 +87,7 @@ export function openCampaign(campaign: Campaign, step = 0) {
     campaignStep: step,
     selectedEvent: null,
     selectedEntity: null,
+    selectedPerson: null,
     selectedWar: null,
     year: target.date.year,
     mode: 'events',

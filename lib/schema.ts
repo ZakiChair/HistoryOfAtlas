@@ -34,12 +34,151 @@ export const HistDateSchema = z
   })
   .refine((date) => isValidHistDate(date), 'Invalid historical date');
 
+const LocalizedTextSchema = z.object({ fr: z.string().optional(), en: z.string().optional() });
+const WikidataPropertySchema = z.string().regex(/^P[1-9]\d*$/);
+const NamedEntitySchema = z.object({ id: QidSchema, name: LocalizedNameSchema });
+const StatementEvidenceShape = {
+  statementId: z.string().min(1),
+  sourceEntityId: QidSchema,
+  sources: z.array(SourceSchema).min(1),
+};
+
+export const SourcedDateSchema = z
+  .object({
+    date: HistDateSchema,
+    precision: DatePrecisionSchema,
+    calendar: CalendarSchema,
+    approximate: z.boolean().optional(),
+    property: WikidataPropertySchema,
+    ...StatementEvidenceShape,
+  })
+  .superRefine((value, context) => {
+    if (!isValidHistDate(value.date, value.calendar))
+      context.addIssue({
+        code: 'custom',
+        path: ['date'],
+        message: 'Date is invalid in its source calendar',
+      });
+    if (
+      (value.precision === 'day' && value.date.day === undefined) ||
+      (value.precision === 'month' && value.date.month === undefined)
+    )
+      context.addIssue({
+        code: 'custom',
+        path: ['precision'],
+        message: 'Date precision requires its corresponding date components',
+      });
+  });
+
+const MilitaryParticipationShape = {
+  role: z.enum(['commander', 'participant']),
+  property: z.enum(['P4791', 'P710', 'P1344', 'P607']),
+  participantId: QidSchema.optional(),
+  ...StatementEvidenceShape,
+};
+
+export const EventPersonLinkSchema = z
+  .object({
+    personId: QidSchema,
+    name: LocalizedNameSchema,
+    ...MilitaryParticipationShape,
+  })
+  .refine(
+    (value) => value.role !== 'commander' || value.property === 'P4791',
+    'Command requires an explicit command statement',
+  );
+
+export const PersonEventLinkSchema = z
+  .object({
+    eventId: QidSchema,
+    name: LocalizedNameSchema,
+    type: EventTypeSchema,
+    start: HistDateSchema.optional(),
+    end: HistDateSchema.optional(),
+    coords: CoordinatesSchema.optional(),
+    ...MilitaryParticipationShape,
+  })
+  .refine(
+    (value) => value.role !== 'commander' || value.property === 'P4791',
+    'Command requires an explicit command statement',
+  );
+
+export const PersonTenureSchema = z
+  .object({
+    id: z.string().min(1),
+    personId: QidSchema,
+    name: LocalizedNameSchema,
+    polity: NamedEntitySchema.optional(),
+    office: NamedEntitySchema.optional(),
+    role: z.enum(['head-of-state', 'head-of-government', 'office-holder']),
+    start: z.array(SourcedDateSchema).optional(),
+    end: z.array(SourcedDateSchema).optional(),
+    property: z.enum(['P35', 'P6', 'P39']),
+    ...StatementEvidenceShape,
+  })
+  .refine(
+    (value) => Boolean(value.polity || value.office),
+    'A tenure must identify its polity or office',
+  )
+  .superRefine((value, context) => {
+    if (value.property === 'P39') {
+      if (!value.office)
+        context.addIssue({
+          code: 'custom',
+          path: ['office'],
+          message: 'An office-held statement must identify its office',
+        });
+      if (value.sourceEntityId !== value.personId)
+        context.addIssue({
+          code: 'custom',
+          path: ['sourceEntityId'],
+          message: 'An office-held statement belongs to the named person',
+        });
+      return;
+    }
+    if (!value.polity || value.sourceEntityId !== value.polity.id)
+      context.addIssue({
+        code: 'custom',
+        path: ['sourceEntityId'],
+        message: 'A head-of-state or government statement belongs to the named polity',
+      });
+    const expectedRole = value.property === 'P35' ? 'head-of-state' : 'head-of-government';
+    if (value.role !== expectedRole)
+      context.addIssue({
+        code: 'custom',
+        path: ['role'],
+        message: 'Political role does not match the cited property',
+      });
+  });
+
+export const PolityLeadersSchema = z.object({
+  polityId: QidSchema,
+  leaders: z.array(PersonTenureSchema),
+});
+
+export const PersonSchema = z.object({
+  id: QidSchema,
+  name: LocalizedNameSchema,
+  nameLanguage: z.string().min(1).max(40).optional(),
+  description: LocalizedTextSchema.optional(),
+  summary: LocalizedTextSchema.optional(),
+  wikipedia: z.object({ fr: z.string().optional(), en: z.string().optional() }).optional(),
+  image: HttpUrlSchema.optional(),
+  birth: z.array(SourcedDateSchema).optional(),
+  death: z.array(SourcedDateSchema).optional(),
+  tenures: z.array(PersonTenureSchema),
+  events: z.array(PersonEventLinkSchema),
+  sources: z.array(SourceSchema).min(1),
+});
+
 export const HistoricalEventSchema = z
   .object({
     id: QidSchema,
     type: EventTypeSchema,
     name: LocalizedNameSchema,
     nameLanguage: z.string().min(1).max(40).optional(),
+    description: LocalizedTextSchema.optional(),
+    people: z.array(EventPersonLinkSchema).optional(),
     start: HistDateSchema,
     end: HistDateSchema.optional(),
     coords: CoordinatesSchema.optional(),
@@ -111,6 +250,7 @@ export const CampaignSchema = z
     id: QidSchema,
     name: LocalizedNameSchema,
     leader: z.string().optional(),
+    people: z.array(EventPersonLinkSchema).optional(),
     polity: z.string(),
     description: z.object({ fr: z.string().optional(), en: z.string().optional() }).optional(),
     sources: z.array(SourceSchema).min(1),
@@ -208,3 +348,9 @@ export type DataManifest = z.infer<typeof DataManifestSchema>;
 export type EventShard = z.infer<typeof EventShardSchema>;
 export type Source = z.infer<typeof SourceSchema>;
 export type Story = z.infer<typeof StorySchema>;
+export type SourcedDate = z.infer<typeof SourcedDateSchema>;
+export type EventPersonLink = z.infer<typeof EventPersonLinkSchema>;
+export type PersonEventLink = z.infer<typeof PersonEventLinkSchema>;
+export type PersonTenure = z.infer<typeof PersonTenureSchema>;
+export type Person = z.infer<typeof PersonSchema>;
+export type PolityLeaders = z.infer<typeof PolityLeadersSchema>;

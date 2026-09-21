@@ -47,6 +47,7 @@ const WorldMap = dynamic(() => import('./map/WorldMap'), { ssr: false });
 const EventList = dynamic(() => import('./panels/EventList'));
 const EventPanel = dynamic(() => import('./panels/EventPanel'));
 const EntityPanel = dynamic(() => import('./panels/EntityPanel'));
+const PersonPanel = dynamic(() => import('./panels/PersonPanel'));
 const Filters = dynamic(() => import('./panels/Filters'));
 const CampaignPanel = dynamic(() => import('./panels/CampaignPanel'));
 const StoryPanel = dynamic(() => import('./story/StoryPanel'));
@@ -136,7 +137,13 @@ function Overview({
             <li key={item.id}>
               <button
                 onClick={() =>
-                  useAtlasStore.setState({ selectedEntity: item.id, selectedEvent: null })
+                  useAtlasStore
+                    .getState()
+                    .patchState({
+                      selectedEntity: item.id,
+                      selectedEvent: null,
+                      selectedPerson: null,
+                    })
                 }
               >
                 <span className="territory-color" style={{ background: item.color }} />
@@ -226,6 +233,7 @@ export default function AtlasApp() {
   const boundarySource = useAtlasStore((s) => s.boundarySource);
   const selectedEvent = useAtlasStore((s) => s.selectedEvent),
     selectedEntity = useAtlasStore((s) => s.selectedEntity),
+    selectedPerson = useAtlasStore((s) => s.selectedPerson),
     selectedWar = useAtlasStore((s) => s.selectedWar);
   const campaignId = useAtlasStore((s) => s.campaignId),
     storyId = useAtlasStore((s) => s.storyId);
@@ -254,14 +262,20 @@ export default function AtlasApp() {
     const listener = (event: Event) => setTerritories((event as CustomEvent<Territory[]>).detail);
     window.addEventListener('atlas:territories', listener);
     const key = (event: KeyboardEvent) => {
+      if (event.defaultPrevented) return;
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
         setSearchOpen((value) => !value);
       }
       if (event.key === 'Escape') {
+        if (useAtlasStore.getState().selectedPerson) {
+          useAtlasStore.getState().selectPerson(null);
+          return;
+        }
         useAtlasStore.setState({
           selectedEvent: null,
           selectedEntity: null,
+          selectedPerson: null,
           playing: false,
           campaignPlaying: false,
           entityFollowing: false,
@@ -385,7 +399,7 @@ export default function AtlasApp() {
     const state = useAtlasStore.getState();
     state.setCamera({ zoom: Math.max(0, Math.min(18, state.camera.zoom + amount)) });
   };
-  const hasDetail = Boolean(selectedEntity || selectedEvent);
+  const hasDetail = Boolean(selectedPerson || selectedEntity || selectedEvent);
   return (
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation}>
@@ -683,7 +697,9 @@ export default function AtlasApp() {
               </button>
             </div>
           )}
-          {selectedEntity ? (
+          {selectedPerson ? (
+            <PersonPanel key={selectedPerson} />
+          ) : selectedEntity ? (
             <EntityPanel key={selectedEntity} />
           ) : selectedEvent ? (
             <EventPanel key={selectedEvent} />

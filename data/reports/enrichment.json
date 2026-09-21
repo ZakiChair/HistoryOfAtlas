@@ -1,0 +1,2094 @@
+{
+  "version": 1,
+  "builtAt": "2026-09-21T06:56:14Z",
+  "totalPeople": 11364,
+  "totalEventNotices": 20415,
+  "geolocatedEvents": 20037,
+  "eventsWithDescription": 19174,
+  "descriptionsByLanguage": {
+    "fr": 6915,
+    "en": 19078
+  },
+  "eventsWithPeople": 6849,
+  "commanderLinks": 14790,
+  "participantLinks": 10182,
+  "tenures": 22066,
+  "tenuresWithBothBounds": 15570,
+  "peopleWithBirth": 9637,
+  "peopleWithDeath": 9299,
+  "polityCatalogs": 1405,
+  "polityCatalogsWithLeaders": 312,
+  "acquisition": {
+    "peopleCandidates": 11439,
+    "offices": 4883,
+    "unavailableIds": [
+      "Q110930029"
+    ]
+  },
+  "rejections": 295,
+  "rejectionCounts": {
+    "invalid-or-unsupported-person-date": 59,
+    "not-human": 47,
+    "event-after-person-death": 156,
+    "life-dates-incoherent": 1,
+    "event-before-person-birth": 27,
+    "tenure-ends-before-start": 5
+  },
+  "methods": [
+    "Descriptions are copied from Wikidata and remain separate from Wikipedia summaries fetched only when a dossier is opened.",
+    "Command requires explicit P4791, including qualifiers of a P710 participant. P710, P607 and P1344 alone only establish participation.",
+    "All non-deprecated P35, P6 and P39 statements are retained, including historical normal-rank office holders when a preferred current holder exists.",
+    "Office jurisdiction requires P1001; head-of-state/government classification of P39 requires the polity to explicitly identify that office with P1906/P1313.",
+    "People must have a sourced human classification. Invalid dates, nonhuman candidates and definitely incompatible event/lifetime links are quarantined.",
+    "No reign, command role, conquest or territorial consequence is inferred from birth country, name similarity, political position or chronological proximity.",
+    "Each date and relation retains its Wikidata statement and available bibliographic references. Community assertions without external references are not independent historical verification."
+  ],
+  "rejected": [
+    {
+      "sourceEntityId": "Q318613",
+      "statementId": "Q318613$6a43b5f1-b9fa-48f5-8a66-1a99badf8300",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q794867",
+      "statementId": "Q794867$d4fb0711-5cb3-47b3-bfe5-852226bac992",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q2290815",
+      "statementId": "Q2290815$f8ebb414-81dd-41e2-a97c-53ea350d95ab",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q19413781",
+      "statementId": "Q19413781$7880021a-ea03-4e84-9eb1-f33b9d0649b6",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q6820981",
+      "statementId": "Q6820981$a6f59b38-4441-9259-4fe9-d906ad49bd7e",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q176022",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q1340816",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q1340816",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q12885900",
+      "eventId": "Q97661679",
+      "statementId": "Q97661679$67de8df9-4f07-7425-0902-b15b52180ebb",
+      "sourceEntityId": "Q97661679",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q299428",
+      "eventId": "Q3281712",
+      "statementId": "Q3281712$fbef1cba-49a0-6cff-6420-2e7f42f090fb",
+      "sourceEntityId": "Q3281712",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q225198",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q30635996",
+      "statementId": "Q30635996$96820b70-4f4d-ebc5-e033-b5ced0ca3245",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q207634",
+      "statementId": "Q207634$1ccdc79d-4d49-8d2f-c049-14981262a7e7",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q105952310",
+      "statementId": "Q105952310$83daa12c-4670-cdcb-7fe5-d130a5348fe4",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q1248143",
+      "statementId": "Q1248143$05e0369b-f369-43c8-96bb-46062219dc45",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q3618730",
+      "eventId": "Q975123",
+      "statementId": "Q975123$5d274a29-44e9-98bc-0a62-8cba50e026a4",
+      "sourceEntityId": "Q975123",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q313126",
+      "eventId": "Q119840646",
+      "statementId": "Q119840646$b4ebe73e-4e07-4527-f74f-105b61abb5f8",
+      "sourceEntityId": "Q119840646",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q137763228",
+      "sourceEntityId": "Q137763228",
+      "reason": "life-dates-incoherent"
+    },
+    {
+      "personId": "Q17192312",
+      "eventId": "Q192938",
+      "statementId": "Q192938$942e6d7c-4639-3ddd-e607-d76b67eb163a",
+      "sourceEntityId": "Q192938",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q539858",
+      "statementId": "Q539858$b5fd7b38-1d53-4855-be0f-6d9854798903",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q539858",
+      "statementId": "Q539858$5539b0a4-48f1-ccc7-e50c-b3899b8906f8",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q7429470",
+      "statementId": "Q7429470$f3149442-4f11-21c1-4620-ec6171ca1c7f",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q130650",
+      "eventId": "Q2912306",
+      "statementId": "Q2912306$3eddfd42-48fd-7165-a4ec-4d2d4aaeba14",
+      "sourceEntityId": "Q2912306",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q202113",
+      "eventId": "Q120556871",
+      "statementId": "Q120556871$569818d7-4234-320c-3ce6-c114a58e4ec6",
+      "sourceEntityId": "Q120556871",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q437766",
+      "statementId": "Q437766$d4204670-2f53-480f-befb-8d47a1e08026",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q710851",
+      "statementId": "Q710851$A5DC934D-BE39-4018-AA22-886175323BCF",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q111559",
+      "statementId": "Q111559$30811d9d-43a2-8e6e-9d93-fe49ac1ff21c",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q521485",
+      "eventId": "Q1503611",
+      "statementId": "Q1503611$cb0ac7b2-403d-21c3-7e41-9ecbff2e062f",
+      "sourceEntityId": "Q1503611",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q5753089",
+      "eventId": "Q1503611",
+      "statementId": "Q1503611$60d7864b-4310-c89f-13a2-facdc1b466a9",
+      "sourceEntityId": "Q1503611",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q110930029",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q878437",
+      "statementId": "Q878437$38f278a2-f0bf-4a2f-bebb-433b317fac98",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q1493701",
+      "statementId": "Q1493701$2154582b-fd2e-4ddb-a013-7b5c0a541c7b",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q2746526",
+      "eventId": "Q122917675",
+      "statementId": "Q122917675$782e090d-4f5c-f49a-b1e8-1ae4ace95005",
+      "sourceEntityId": "Q122917675",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q719001",
+      "eventId": "Q13403337",
+      "statementId": "Q13403337$9436415e-4821-e8e2-343e-11a51bb8ad0d",
+      "sourceEntityId": "Q13403337",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q733566",
+      "eventId": "Q1476280",
+      "statementId": "Q1476280$c7b6e45b-4698-d35b-671a-ae86c68d6086",
+      "sourceEntityId": "Q1476280",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2220263",
+      "eventId": "Q128094297",
+      "statementId": "Q128094297$c318bf23-49db-b150-f4d9-9d73b4632134",
+      "sourceEntityId": "Q128094297",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q312544",
+      "eventId": "Q130377907",
+      "statementId": "Q130377907$9cacda45-4505-8a85-5500-e15f378bdf5b",
+      "sourceEntityId": "Q130377907",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q312544",
+      "eventId": "Q130564623",
+      "statementId": "Q130564623$dff80a39-4832-6bc1-6944-23d1d895b3ba",
+      "sourceEntityId": "Q130564623",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q259150",
+      "statementId": "Q259150$efa9a8bd-7a08-4dfc-a799-ed35acccc1b3",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q371319",
+      "eventId": "Q124353303",
+      "statementId": "Q124353303$6e16a851-4877-50d7-6237-796cd47ba373",
+      "sourceEntityId": "Q124353303",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q10860522",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q23617307",
+      "eventId": "Q124353303",
+      "statementId": "Q124353303$bde7066a-44eb-62ad-4208-1258d9bcb4b8",
+      "sourceEntityId": "Q124353303",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q371319",
+      "eventId": "Q65042705",
+      "statementId": "Q65042705$09415164-4d55-c2e1-1701-cc2d9de36548",
+      "sourceEntityId": "Q65042705",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q98922139",
+      "eventId": "Q65042705",
+      "statementId": "Q65042705$823217f2-4210-a46f-8a44-a6382e47f121",
+      "sourceEntityId": "Q65042705",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q2210015",
+      "statementId": "Q2210015$b0344ea0-48ff-4f6b-8486-a8a4bf2d57cc",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q2198014",
+      "statementId": "Q2198014$2c3d2221-be43-4b66-880c-35d30157e7bd",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q36724",
+      "statementId": "Q36724$f938f861-4bc7-7558-7658-dca00d048060",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q58165",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q36724",
+      "eventId": "Q892169",
+      "statementId": "Q892169$e8b181e6-4f4d-688c-7784-8f7b69bbb7d3",
+      "sourceEntityId": "Q892169",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3623581",
+      "eventId": "Q892169",
+      "statementId": "Q892169$b3991434-417c-007d-6a3f-e134199226b1",
+      "sourceEntityId": "Q892169",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q924253",
+      "statementId": "Q924253$38AAAE01-75A4-403E-A0EC-E9EC87BB96F7",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q895326",
+      "statementId": "Q895326$003c5696-ea55-49ab-8976-145079149f6f",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q3502063",
+      "statementId": "Q3502063$ce0fe258-f22f-4f90-a322-85c47022cdd2",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q888785",
+      "statementId": "Q888785$468fe247-5ed8-4f39-bcb8-689019eeec23",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q1554864",
+      "statementId": "Q1554864$34a09373-a6e3-4932-b0c0-20ea0f7f38fe",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q2643836",
+      "statementId": "Q2643836$43ca9e10-d30d-44ee-8b5c-086742887e2d",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q124744455",
+      "statementId": "Q124744455$1E3BDC0D-9F70-4F5C-9931-A3734E247F13",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q6417381",
+      "eventId": "Q2599625",
+      "statementId": "Q2599625$8b365ad8-4d43-7f0f-61a6-22fed7c0840a",
+      "sourceEntityId": "Q2599625",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q293599",
+      "eventId": "Q135111709",
+      "statementId": "Q135111709$2a8303a9-40d0-395c-9c48-dad7ed7d9dfa",
+      "sourceEntityId": "Q135111709",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q913524",
+      "statementId": "Q913524$3a20e5b8-23fb-4ee6-a53e-d3fb1691aebc",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q1398713",
+      "statementId": "Q1398713$db657eb4-bb33-4620-832e-fa9905c944e5",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q41605",
+      "eventId": "Q141254303",
+      "statementId": "Q141254303$83182943-4bd0-b185-21e8-bd289aded3a0",
+      "sourceEntityId": "Q141254303",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q31974",
+      "eventId": "Q64744266",
+      "statementId": "Q64744266$a7ac6fba-4504-edae-5fd6-e1e99b4bcc8e",
+      "sourceEntityId": "Q64744266",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q128371",
+      "eventId": "Q64744266",
+      "statementId": "Q64744266$a7ac6fba-4504-edae-5fd6-e1e99b4bcc8e",
+      "sourceEntityId": "Q64744266",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q7876443",
+      "eventId": "Q18008014",
+      "statementId": "Q18008014$d59020cc-406f-27aa-bc50-2c0dc8a08d22",
+      "sourceEntityId": "Q18008014",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q3526711",
+      "statementId": "Q3526711$2fdafb87-f024-487e-8eda-cc34a127bccf",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q13195332",
+      "eventId": "Q22341845",
+      "statementId": "Q22341845$1a558d70-441c-d442-2f6c-293b329980cd",
+      "sourceEntityId": "Q22341845",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q879668",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q1370586",
+      "statementId": "Q1370586$433ffcbf-4599-5b61-35c7-bbcd078d2121",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q31695",
+      "eventId": "Q428851",
+      "statementId": "Q428851$99fe684d-43e6-4a6d-decb-5e2f5f34799e",
+      "sourceEntityId": "Q428851",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q5945589",
+      "eventId": "Q5454133",
+      "statementId": "Q5454133$255ee30d-4000-d384-410a-fe6013c087aa",
+      "sourceEntityId": "Q5454133",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q6044504",
+      "eventId": "Q5454133",
+      "statementId": "Q5454133$7b5de0c1-4c23-0282-61c1-468c5a3c872a",
+      "sourceEntityId": "Q5454133",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q131341003",
+      "eventId": "Q4871022",
+      "statementId": "Q4871022$f558f2a9-443a-f460-e736-3d202af1f447",
+      "sourceEntityId": "Q4871022",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4816931",
+      "eventId": "Q4871022",
+      "statementId": "Q4871022$2a65e957-4521-c92e-bd62-9db5e17c13d0",
+      "sourceEntityId": "Q4871022",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q639222",
+      "eventId": "Q16822586",
+      "statementId": "Q16822586$70ce0b78-4408-800a-14eb-1f10e1d926ad",
+      "sourceEntityId": "Q16822586",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q111727991",
+      "eventId": "Q112181341",
+      "statementId": "Q112181341$c1f22126-4dbb-ede5-323e-e22305905e25",
+      "sourceEntityId": "Q112181341",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q7876443",
+      "eventId": "Q18005378",
+      "statementId": "Q18005378$c0501587-45cc-b30d-68e6-3ee1da01e252",
+      "sourceEntityId": "Q18005378",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q7876443",
+      "eventId": "Q11949510",
+      "statementId": "Q11949510$88463736-4e5f-50f8-b42b-d0ef17d78181",
+      "sourceEntityId": "Q11949510",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q18639748",
+      "eventId": "Q38199444",
+      "statementId": "Q38199444$cf9c63e8-42ee-13d2-fce7-e70b80293011",
+      "sourceEntityId": "Q38199444",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q18639748",
+      "eventId": "Q20638753",
+      "statementId": "Q20638753$829ea2e3-4853-87ea-fc0f-8f526f1724e0",
+      "sourceEntityId": "Q20638753",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q555219",
+      "eventId": "Q135100291",
+      "statementId": "Q135100291$7d832c6b-46d5-e1bf-472d-52eff10a824f",
+      "sourceEntityId": "Q135100291",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1058153",
+      "eventId": "Q2637246",
+      "statementId": "Q2637246$68081ed0-4e7b-46a8-93de-73434102d897",
+      "sourceEntityId": "Q2637246",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q25571977",
+      "eventId": "Q19908093",
+      "statementId": "Q19908093$88084a1e-4189-de59-c3a3-09b53cfc154b",
+      "sourceEntityId": "Q19908093",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q1398384",
+      "eventId": "Q20584463",
+      "statementId": "Q20584463$7946205a-4b44-6fd2-831a-6e7ac67a2537",
+      "sourceEntityId": "Q20584463",
+      "property": "P710",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q2634369",
+      "eventId": "Q7509995",
+      "statementId": "Q7509995$25BF16E4-42CA-4010-8F19-EB4C5C85BA54",
+      "sourceEntityId": "Q7509995",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q714771",
+      "eventId": "Q51649",
+      "statementId": "Q51649$24A16503-96B8-4D51-8DBE-CB289873CD58",
+      "sourceEntityId": "Q51649",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q2859106",
+      "statementId": "Q2859106$a88048f4-5852-4785-a5c1-ec58b54aa135",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q5444683",
+      "eventId": "Q2459925",
+      "statementId": "Q2459925$5cf96cae-4aa8-0d92-ac2e-f239eec64e8d",
+      "sourceEntityId": "Q2459925",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q10372893",
+      "eventId": "Q9651130",
+      "statementId": "Q9651130$8ecb7e06-426c-f75c-f949-2430daf53bbc",
+      "sourceEntityId": "Q9651130",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q299612",
+      "eventId": "Q130343176",
+      "statementId": "Q130343176$5449afeb-44f0-f110-bb61-952795450b62",
+      "sourceEntityId": "Q130343176",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2607672",
+      "eventId": "Q15895729",
+      "statementId": "Q15895729$045974a4-4c01-11df-42b3-0fb40d8bea2b",
+      "sourceEntityId": "Q15895729",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q719148",
+      "eventId": "Q23503832",
+      "statementId": "Q23503832$09cffc4f-488f-8d19-7732-11091736f0c4",
+      "sourceEntityId": "Q23503832",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q11909166",
+      "eventId": "Q11908733",
+      "statementId": "Q11908733$8a100dd6-4202-1573-e0c3-431278d52415",
+      "sourceEntityId": "Q11908733",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q21033003",
+      "statementId": "Q21033003$ea5ac5ef-adb6-4f7e-ac22-3e20c4d6a3fc",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q2129448",
+      "statementId": "Q2129448$e242ddf2-4c1e-4e73-80e1-fe1e99587a02",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q6367489",
+      "eventId": "Q113549086",
+      "statementId": "Q113549086$4e38a75f-49ff-1fd7-9727-7ce696becfbc",
+      "sourceEntityId": "Q113549086",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "sourceEntityId": "Q347168",
+      "statementId": "Q347168$d6f3ebc5-11da-487d-8190-8c9742c2283d",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q11904692",
+      "statementId": "Q11904692$e6423e19-9db0-4ad7-ab59-38b07305653e",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q189550",
+      "eventId": "Q113576053",
+      "statementId": "Q113576053$de51ae7e-41d5-81da-bea9-4591156403bc",
+      "sourceEntityId": "Q113576053",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q350213",
+      "eventId": "Q132891063",
+      "statementId": "Q132891063$72b0c494-402d-87f4-edb0-deae7f8997fa",
+      "sourceEntityId": "Q132891063",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q3968067",
+      "eventId": "Q109480896",
+      "statementId": "Q109480896$0a3f4942-4f9a-a45d-664c-baeb5e6d1b8a",
+      "sourceEntityId": "Q109480896",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q11905214",
+      "statementId": "Q11905214$c3fef95a-7493-4c9d-b0b4-3f73dd99ce9d",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q2081844",
+      "eventId": "Q4110449",
+      "statementId": "Q4110449$3a3b9ac0-4490-13e2-1d17-5c196fbebed6",
+      "sourceEntityId": "Q4110449",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1862161",
+      "eventId": "Q1341824",
+      "statementId": "Q1341824$c21115bf-48d1-cfe3-f5e9-282a6faaf959",
+      "sourceEntityId": "Q1341824",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q828639",
+      "statementId": "Q828639$be096cab-892a-49a1-b811-096b54a2590a",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q1280381",
+      "statementId": "Q1280381$b88a7894-e696-425a-9ee4-dd86e5e4a29b",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q514144",
+      "statementId": "Q514144$3ac9741e-2bd0-48f6-a3e5-f661287c4c5e",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q12857549",
+      "statementId": "Q12857549$335efba3-34bd-46d7-bc11-699dbed26b2a",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q10886638",
+      "eventId": "Q48880934",
+      "statementId": "Q48880934$94fbb210-4297-af0c-3e38-805221b9fc41",
+      "sourceEntityId": "Q48880934",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q342847",
+      "statementId": "Q342847$2a02cd19-93b8-4a1a-8e73-a8a4ff087ff5",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q12878424",
+      "eventId": "Q16331909",
+      "statementId": "Q16331909$507f2864-4448-4ec7-2c1a-61a81cd58eef",
+      "sourceEntityId": "Q16331909",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q186581",
+      "eventId": "Q136451000",
+      "statementId": "Q136451000$0dae901e-4d88-e997-a8d2-c4874dd27623",
+      "sourceEntityId": "Q136451000",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q162217",
+      "eventId": "Q136451000",
+      "statementId": "Q136451000$0dae901e-4d88-e997-a8d2-c4874dd27623",
+      "sourceEntityId": "Q136451000",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q115965546",
+      "eventId": "Q136451000",
+      "statementId": "Q136451000$0dae901e-4d88-e997-a8d2-c4874dd27623",
+      "sourceEntityId": "Q136451000",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q244007",
+      "eventId": "Q138280002",
+      "statementId": "Q138280002$016efee1-44b0-dc98-c661-1f3db89e3926",
+      "sourceEntityId": "Q138280002",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q5063089",
+      "eventId": "Q12880452",
+      "statementId": "Q12880452$7996a353-4633-f81d-f897-780864c3455d",
+      "sourceEntityId": "Q12880452",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "sourceEntityId": "Q19291026",
+      "statementId": "Q19291026$c3903fec-4a17-9867-bf0e-08512b493da3",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q16527558",
+      "eventId": "Q11908798",
+      "statementId": "Q11908798$7f85153b-4fb9-419c-bf52-4adc1b1cd807",
+      "sourceEntityId": "Q11908798",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q348943",
+      "eventId": "Q3817182",
+      "statementId": "Q3817182$54F7665F-BA1B-4519-B4EF-0051945B0E9E",
+      "sourceEntityId": "Q3817182",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q24238356",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q108105",
+      "statementId": "Q108105$a8d116ba-daf8-43c2-a922-461587c1db2f",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q10265761",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q10265761",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q336365",
+      "statementId": "Q336365$851fbcd1-69ac-493c-a704-693a306490fb",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q336365",
+      "eventId": "Q123463218",
+      "statementId": "Q123463218$d62f85f2-4d67-7d7a-47d8-a7b504e9d1b0",
+      "sourceEntityId": "Q123463218",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q3498016",
+      "statementId": "Q3498016$E725FFA0-3CF1-4515-BF20-628D0C16847F",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q6017005",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q3101188",
+      "eventId": "Q20985004",
+      "statementId": "Q20985004$4bc91bbc-4e90-95a9-673f-069a1e37d5a7",
+      "sourceEntityId": "Q20985004",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3817353",
+      "eventId": "Q110425658",
+      "statementId": "Q110425658$308eda28-4c37-0ded-0d6d-84816df35a8f",
+      "sourceEntityId": "Q110425658",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1095044",
+      "eventId": "Q124693349",
+      "statementId": "Q124693349$2f19f70a-4e4d-f5f3-2938-90dd4a0cbd27",
+      "sourceEntityId": "Q124693349",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1095287",
+      "eventId": "Q124693349",
+      "statementId": "Q124693349$2f19f70a-4e4d-f5f3-2938-90dd4a0cbd27",
+      "sourceEntityId": "Q124693349",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q6071757",
+      "eventId": "Q137393467",
+      "statementId": "Q137393467$18e760b7-4e27-56a5-b916-7fa799f1aa1a",
+      "sourceEntityId": "Q137393467",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q3131793",
+      "eventId": "Q137460687",
+      "statementId": "Q137460687$3851bf08-4b99-34bb-f332-5dad7998fcbc",
+      "sourceEntityId": "Q137460687",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q4724714",
+      "statementId": "Q4724714$b8c2ec26-2178-4d8e-8a5e-290fb6d7d7a6",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q1515617",
+      "statementId": "Q1515617$98943318-0816-414c-ac42-02e7ed246d8f",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q550611",
+      "eventId": "Q130467117",
+      "statementId": "Q130467117$20d6e76f-4f38-f002-cdc0-60d9edc5f2f3",
+      "sourceEntityId": "Q130467117",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3073358",
+      "eventId": "Q129578",
+      "statementId": "Q129578$E0526F64-0ACC-40B1-879C-72FBDDE9E013",
+      "sourceEntityId": "Q129578",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q430365",
+      "statementId": "Q430365$11d9a7cb-4cbf-fa6c-f489-3a78350d24e1",
+      "property": "P570",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q7852773",
+      "eventId": "Q133896573",
+      "statementId": "Q133896573$91c00248-4ab2-6369-1fbb-d5fcfd5ffd40",
+      "sourceEntityId": "Q133896573",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q12443070",
+      "eventId": "Q133896573",
+      "statementId": "Q133896573$53c5a8e2-4b12-f91e-594c-ee9e99d509cc",
+      "sourceEntityId": "Q133896573",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3414883",
+      "eventId": "Q114065659",
+      "statementId": "Q114065659$12d1d37d-4cb6-86d0-d2e9-47bef91289c0",
+      "sourceEntityId": "Q114065659",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q187998",
+      "eventId": "Q3312328",
+      "statementId": "Q3312328$eb2ca296-401e-68ee-db8b-73310e876361",
+      "sourceEntityId": "Q3312328",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q583465",
+      "eventId": "Q661940",
+      "statementId": "Q661940$67b6020e-410a-3035-9e6c-d8e9370924ed",
+      "sourceEntityId": "Q661940",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q6695968",
+      "eventId": "Q661940",
+      "statementId": "Q661940$896d014f-4eb7-7161-8771-bcc8797f0512",
+      "sourceEntityId": "Q661940",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q112957817",
+      "eventId": "Q4090268",
+      "statementId": "Q4090268$59ec5a34-4ca8-305a-e0a3-3bc0b3ba570d",
+      "sourceEntityId": "Q4090268",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3926949",
+      "eventId": "Q9173414",
+      "statementId": "Q9173414$7936ae6f-466a-101d-9311-11dbb50923b2",
+      "sourceEntityId": "Q9173414",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3926949",
+      "eventId": "Q9173635",
+      "statementId": "Q9173635$8bb2a8b7-4ee1-bbb0-dc69-ee1ba1866803",
+      "sourceEntityId": "Q9173635",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q919172",
+      "eventId": "Q11688210",
+      "statementId": "Q11688210$2e5e74c2-4752-c260-9646-43b7752561a1",
+      "sourceEntityId": "Q11688210",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3926949",
+      "eventId": "Q11688210",
+      "statementId": "Q11688210$f7afeb60-46ff-8c07-ea06-0b4d9d36e21d",
+      "sourceEntityId": "Q11688210",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3926949",
+      "eventId": "Q9173031",
+      "statementId": "Q9173031$de496409-439c-5985-e097-e8e4fa9e9a9a",
+      "sourceEntityId": "Q9173031",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3926949",
+      "eventId": "Q9173622",
+      "statementId": "Q9173622$87f203e4-4e6b-7f21-121e-829d7798a440",
+      "sourceEntityId": "Q9173622",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3926949",
+      "eventId": "Q9173728",
+      "statementId": "Q9173728$cb047efe-4832-f6bd-a35b-100b5ccfacc8",
+      "sourceEntityId": "Q9173728",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q1378425",
+      "statementId": "Q1378425$fe915e8f-36e3-4356-aaea-c571614e4a05",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q1525723",
+      "eventId": "Q1054975",
+      "statementId": "Q1054975$61409c23-48f6-1212-fc61-d38af6784589",
+      "sourceEntityId": "Q1054975",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q6639705",
+      "eventId": "Q11544092",
+      "statementId": "Q11544092$d35ceb56-4f0e-77d4-f029-d888cebec119",
+      "sourceEntityId": "Q11544092",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q559150",
+      "eventId": "Q111940778",
+      "statementId": "Q111940778$e8882587-4aab-12aa-9f17-3f4d12433bfc",
+      "sourceEntityId": "Q111940778",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q7521762",
+      "eventId": "Q107360383",
+      "statementId": "Q107360383$38c0bdc4-4efe-7ce1-276f-f8305f336e23",
+      "sourceEntityId": "Q107360383",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q4842721",
+      "statementId": "Q4842721$39972759-80ea-4358-b2a5-396c0851fdd5",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q748569",
+      "eventId": "Q134996426",
+      "statementId": "Q134996426$c38b607a-4936-d62d-7f03-ba4d7d8ac6d0",
+      "sourceEntityId": "Q134996426",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q968072",
+      "eventId": "Q131127393",
+      "statementId": "Q131127393$1d6d4b5c-4eb4-ac44-b2db-2c6a00145a0a",
+      "sourceEntityId": "Q131127393",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2566879",
+      "eventId": "Q131143744",
+      "statementId": "Q131143744$972c10b9-47c9-8c2c-b3ab-80c962bf429d",
+      "sourceEntityId": "Q131143744",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1363744",
+      "eventId": "Q16370197",
+      "statementId": "Q16370197$4ed2502c-4c0a-0fd6-6213-b2f371f69253",
+      "sourceEntityId": "Q16370197",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2662869",
+      "eventId": "Q119166481",
+      "statementId": "Q119166481$61e6ed73-4349-abc2-0f43-8fbaa3dfd4be",
+      "sourceEntityId": "Q119166481",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q11449177",
+      "eventId": "Q11391517",
+      "statementId": "Q11391517$5d0b7a8d-4d67-a0cf-ea40-afa8f86912a5",
+      "sourceEntityId": "Q11391517",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q297047",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q28987100",
+      "eventId": "Q136229318",
+      "statementId": "Q136229318$70c440f1-435d-50f8-92b6-25db97e18a2d",
+      "sourceEntityId": "Q136229318",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4773725",
+      "eventId": "Q115828870",
+      "statementId": "Q115828870$3e3a4483-46e5-44c7-89ea-0b95d82199cf",
+      "sourceEntityId": "Q115828870",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q16849834",
+      "eventId": "Q136605166",
+      "statementId": "Q136605166$c3cb9ee1-41f1-c3ca-130d-9681d4c0fe8d",
+      "sourceEntityId": "Q136605166",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q110104459",
+      "eventId": "Q118946728",
+      "statementId": "Q118946728$5e4b406e-46e1-2bc0-b766-dfecd034884b",
+      "sourceEntityId": "Q118946728",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q10306800",
+      "eventId": "Q121238525",
+      "statementId": "Q121238525$88da42b5-402b-6298-dfb6-d9b9e0a885cc",
+      "sourceEntityId": "Q121238525",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q20448046",
+      "eventId": "Q118966480",
+      "statementId": "Q118966480$b2caa104-4e7f-1888-65d0-99f0b981cfde",
+      "sourceEntityId": "Q118966480",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q6095216",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q2364811",
+      "statementId": "Q2364811$15708840-48d5-4ad8-adfe-d0107c4b4c10",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q1188845",
+      "eventId": "Q134877741",
+      "statementId": "Q134877741$a130c0dd-4edf-9b86-3006-d8e175beb86b",
+      "sourceEntityId": "Q134877741",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4900734",
+      "eventId": "Q4870296",
+      "statementId": "Q4870296$f36ee387-4c9a-fb2e-cf06-6eb769a1ea6e",
+      "sourceEntityId": "Q4870296",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q4900734",
+      "eventId": "Q39050091",
+      "statementId": "Q39050091$45b8bf38-42cf-6e6e-477e-b5daea39b56e",
+      "sourceEntityId": "Q39050091",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q4900734",
+      "eventId": "Q4871391",
+      "statementId": "Q4871391$fec4c388-4d3e-9e01-d69a-1cd411894e20",
+      "sourceEntityId": "Q4871391",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q31190107",
+      "eventId": "Q118946386",
+      "statementId": "Q118946386$bb99a09f-4ec9-9805-b239-ded9e1184417",
+      "sourceEntityId": "Q118946386",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q31190107",
+      "eventId": "Q118946833",
+      "statementId": "Q118946833$d25857bc-485c-4d27-0075-2855c468a763",
+      "sourceEntityId": "Q118946833",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2978354",
+      "eventId": "Q1795012",
+      "statementId": "Q1795012$31367223-4ea7-642b-d2df-438e016cc557",
+      "sourceEntityId": "Q1795012",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2898975",
+      "eventId": "Q2890883",
+      "statementId": "Q2890883$9e7a06bb-4910-bb32-1a20-d16c137b31f5",
+      "sourceEntityId": "Q2890883",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3656289",
+      "eventId": "Q16931483",
+      "statementId": "Q16931483$482a01b2-4a7a-5d9c-1719-19ad25a4a546",
+      "sourceEntityId": "Q16931483",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q449435",
+      "eventId": "Q2889584",
+      "statementId": "Q2889584$451ea5b5-4eae-c2eb-32b9-3af494e80d24",
+      "sourceEntityId": "Q2889584",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2854147",
+      "eventId": "Q916495",
+      "statementId": "Q916495$c9bf9c47-4ecc-f43a-d6ee-0b2fd8f532e0",
+      "sourceEntityId": "Q916495",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q2469274",
+      "eventId": "Q111488675",
+      "statementId": "Q111488675$0d3bd8f0-438d-3a99-59f8-c1c0c2da27be",
+      "sourceEntityId": "Q111488675",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q2061435",
+      "statementId": "Q2061435$a1f8ddfe-c2f3-4a8f-90ad-3b6851813147",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q19892696",
+      "eventId": "Q7509876",
+      "statementId": "Q7509876$445c287a-428b-2a6e-2dad-6dd2fa74ade0",
+      "sourceEntityId": "Q7509876",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q110104518",
+      "eventId": "Q118946341",
+      "statementId": "Q118946341$725ec518-4896-4eed-39da-57fc76d210a1",
+      "sourceEntityId": "Q118946341",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q11914127",
+      "eventId": "Q11914879",
+      "statementId": "Q11914879$88bf99e6-4b92-d330-740c-b099a160c884",
+      "sourceEntityId": "Q11914879",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q334140",
+      "eventId": "Q11794876",
+      "statementId": "Q11794876$65453cbd-41e5-b215-3881-84f347c034ff",
+      "sourceEntityId": "Q11794876",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3918583",
+      "eventId": "Q7510145",
+      "statementId": "Q7510145$ae767a8c-4922-672c-010f-24ab387c6711",
+      "sourceEntityId": "Q7510145",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q11310750",
+      "eventId": "Q616846",
+      "statementId": "Q616846$4f6b1342-474a-c709-9a00-79f02495e389",
+      "sourceEntityId": "Q616846",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4203121",
+      "eventId": "Q138535170",
+      "statementId": "Q138535170$43614D25-2BF4-4F1C-8957-F207DD208394",
+      "sourceEntityId": "Q138535170",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q7852763",
+      "eventId": "Q132126605",
+      "statementId": "Q132126605$7b9acfef-41d1-61e4-89e2-c137a32f02cd",
+      "sourceEntityId": "Q132126605",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q60841192",
+      "eventId": "Q20053432",
+      "statementId": "Q20053432$c1234134-4cbf-7e84-a35a-da977e503948",
+      "sourceEntityId": "Q20053432",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q20533189",
+      "statementId": "Q20533189$d9fc452f-4839-6e88-0934-1cbae8edd96e",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q1264633",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q2349705",
+      "eventId": "Q135424326",
+      "statementId": "Q135424326$8fafa2bf-46e6-689e-df1d-3b29cd7ccbe9",
+      "sourceEntityId": "Q135424326",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q16364440",
+      "eventId": "Q7510082",
+      "statementId": "Q7510082$58d2c500-48fe-c364-db6f-556b54648caa",
+      "sourceEntityId": "Q7510082",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4408786",
+      "eventId": "Q3755669",
+      "statementId": "Q3755669$f98628c6-4c71-0021-78fe-b464a69675cc",
+      "sourceEntityId": "Q3755669",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "sourceEntityId": "Q382308",
+      "statementId": "Q382308$9803c28f-fc88-4e4b-8ea2-1107c49c5223",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q113992871",
+      "eventId": "Q125496725",
+      "statementId": "Q125496725$5e76299c-4f2e-a834-e22b-469329d33c1f",
+      "sourceEntityId": "Q125496725",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q816767",
+      "eventId": "Q4072912",
+      "statementId": "Q4072912$3d394a02-4498-f8ba-4667-4e03f83ec2e3",
+      "sourceEntityId": "Q4072912",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q816767",
+      "eventId": "Q118946692",
+      "statementId": "Q118946692$c8eb0947-4559-6d8b-d954-58b4942efbf2",
+      "sourceEntityId": "Q118946692",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q816767",
+      "eventId": "Q12867550",
+      "statementId": "Q12867550$43ddc4df-4c29-8819-b5a1-cf7ac24b1a3d",
+      "sourceEntityId": "Q12867550",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q816767",
+      "eventId": "Q15908732",
+      "statementId": "Q15908732$8D905A53-0B79-464A-AC20-209DB1B7F3BC",
+      "sourceEntityId": "Q15908732",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q56260461",
+      "eventId": "Q115913015",
+      "statementId": "Q115913015$d53c25c8-43be-7f50-aab5-5e85f3165697",
+      "sourceEntityId": "Q115913015",
+      "property": "P710",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q297557",
+      "eventId": "Q15096609",
+      "statementId": "Q15096609$BFEF4EFE-E45F-4A2E-9010-97E2D4DAF660",
+      "sourceEntityId": "Q15096609",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q7618398",
+      "eventId": "Q15096609",
+      "statementId": "Q15096609$A84B88CE-4553-4914-8769-51FD02E6B3D2",
+      "sourceEntityId": "Q15096609",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q11248349",
+      "eventId": "Q15096609",
+      "statementId": "Q15096609$18E67585-A592-4B7F-B54E-B3A818B94383",
+      "sourceEntityId": "Q15096609",
+      "property": "P710",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4314697",
+      "eventId": "Q124638953",
+      "statementId": "Q124638953$f3dcb95c-44d4-d4ba-14f4-4b7aeec4351f",
+      "sourceEntityId": "Q124638953",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4314697",
+      "eventId": "Q129315338",
+      "statementId": "Q129315338$97dae59f-4f96-6481-39df-15c343462bc0",
+      "sourceEntityId": "Q129315338",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q12174307",
+      "eventId": "Q124077509",
+      "statementId": "Q124077509$06e89af9-4879-ceed-3973-c98204986a2b",
+      "sourceEntityId": "Q124077509",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2270048",
+      "eventId": "Q786657",
+      "statementId": "Q786657$eddaf050-4705-26f2-a412-9f8629bef37a",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q19844173",
+      "eventId": "Q786657",
+      "statementId": "Q786657$eddaf050-4705-26f2-a412-9f8629bef37a",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q5946408",
+      "eventId": "Q786657",
+      "statementId": "Q786657$eddaf050-4705-26f2-a412-9f8629bef37a",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q55636",
+      "eventId": "Q786657",
+      "statementId": "Q786657$163afc62-48a1-ee34-7fbf-96c16b97a5fc",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q557792",
+      "eventId": "Q786657",
+      "statementId": "Q786657$163afc62-48a1-ee34-7fbf-96c16b97a5fc",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q983888",
+      "eventId": "Q786657",
+      "statementId": "Q786657$163afc62-48a1-ee34-7fbf-96c16b97a5fc",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q2610308",
+      "eventId": "Q786657",
+      "statementId": "Q786657$163afc62-48a1-ee34-7fbf-96c16b97a5fc",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q5938157",
+      "eventId": "Q786657",
+      "statementId": "Q786657$163afc62-48a1-ee34-7fbf-96c16b97a5fc",
+      "sourceEntityId": "Q786657",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q28356459",
+      "eventId": "Q20073897",
+      "statementId": "Q20073897$3c58ca11-4ce4-f7b0-1151-1f43cd8dd6ef",
+      "sourceEntityId": "Q20073897",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3817353",
+      "eventId": "Q12865046",
+      "statementId": "Q12865046$4f63df93-4f5f-a7ed-bd7c-58813c93a2a7",
+      "sourceEntityId": "Q12865046",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q180992",
+      "eventId": "Q116299351",
+      "statementId": "Q116299351$1bbc7907-4f9a-8f7d-e3eb-72589210830b",
+      "sourceEntityId": "Q116299351",
+      "property": "P4791",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q2607672",
+      "eventId": "Q133406246",
+      "statementId": "Q133406246$7ee6bec3-4e27-4b0e-81ca-8d7590de1dc0",
+      "sourceEntityId": "Q133406246",
+      "property": "P4791",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q890021",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q18577504",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q51254307",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q52063041",
+      "reason": "not-human"
+    },
+    {
+      "sourceEntityId": "Q886997",
+      "statementId": "Q886997$28c24b1c-8d29-4dba-bcda-9b6cd010b547",
+      "property": "P569",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q12292234",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q20497550",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q1886285",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q52145588",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q1788734",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q181217",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q2558636",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q58769733",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q52154980",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q100740654",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q3240735",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q2747456",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q116",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q740406",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q184951",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q12821337",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q30917",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q30917",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q183426",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q858316",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q56310154",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q52074947",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q124846311",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q12292233",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q12725418",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q839139",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q130605610",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q52147334",
+      "reason": "not-human"
+    },
+    {
+      "personId": "Q972556",
+      "sourceEntityId": "Q972556",
+      "statementId": "Q972556$3d5442cb-4fa4-ae0d-5aa7-c5fc0c3a4f95",
+      "property": "P39",
+      "reason": "tenure-ends-before-start"
+    },
+    {
+      "personId": "Q456935",
+      "sourceEntityId": "Q456935",
+      "statementId": "Q456935$ED5A1CEA-4F3C-47F4-9EA0-B155C519BFE4",
+      "property": "P39",
+      "reason": "tenure-ends-before-start"
+    },
+    {
+      "personId": "Q3623581",
+      "eventId": "Q892169",
+      "statementId": "Q3623581$6ea8be7c-4dfb-ebe5-37f2-76e2f08077b4",
+      "sourceEntityId": "Q3623581",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1108678",
+      "eventId": "Q2484843",
+      "statementId": "Q1108678$abeafb87-458b-7b5d-3cad-e3710f3298d5",
+      "sourceEntityId": "Q1108678",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q5945589",
+      "eventId": "Q5454133",
+      "statementId": "Q5945589$090655d5-481d-2155-8f88-46af5e9a63e2",
+      "sourceEntityId": "Q5945589",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q6044504",
+      "eventId": "Q5454133",
+      "statementId": "Q6044504$792b2bf5-424d-a517-97b0-c56a1ed70a26",
+      "sourceEntityId": "Q6044504",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q131341003",
+      "eventId": "Q4871022",
+      "statementId": "Q131341003$5cda09b5-4e32-7acf-3e70-7b33b4fa9670",
+      "sourceEntityId": "Q131341003",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q4816931",
+      "eventId": "Q4871022",
+      "statementId": "Q4816931$b8dbb548-4da0-4fb1-ef4a-b1765bb4e279",
+      "sourceEntityId": "Q4816931",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q1625275",
+      "eventId": "Q815156",
+      "statementId": "Q1625275$590a85f9-4b28-32ef-0eb8-f230642c22da",
+      "sourceEntityId": "Q1625275",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q511869",
+      "eventId": "Q425617",
+      "statementId": "Q511869$6d1763eb-4b5c-45d9-0209-7c60a2a2f8e3",
+      "sourceEntityId": "Q511869",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q367350",
+      "eventId": "Q3485851",
+      "statementId": "Q367350$4f3e3658-429d-5009-4185-5774a2bf40cb",
+      "sourceEntityId": "Q367350",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3273106",
+      "eventId": "Q7510180",
+      "statementId": "Q3273106$90ADA89A-C3C8-4AEB-85B2-CA424173AC36",
+      "sourceEntityId": "Q3273106",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3289754",
+      "eventId": "Q5027837",
+      "statementId": "Q3289754$7e7512a8-4f00-2847-dea0-775aec43d238",
+      "sourceEntityId": "Q3289754",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3159931",
+      "eventId": "Q673175",
+      "statementId": "Q3159931$6793C194-A5A9-4728-B964-7C1BC9912032",
+      "sourceEntityId": "Q3159931",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q1066602",
+      "eventId": "Q673175",
+      "statementId": "Q1066602$B74CD9CC-2B1D-4184-A3F2-450B93517C79",
+      "sourceEntityId": "Q1066602",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q714627",
+      "eventId": "Q78994",
+      "statementId": "Q714627$5EDB3B4B-4969-4489-B176-B9BE73F63CDC",
+      "sourceEntityId": "Q714627",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q723058",
+      "eventId": "Q152499",
+      "statementId": "Q723058$855158a7-4591-d0a2-41b6-9c0954338a72",
+      "sourceEntityId": "Q723058",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q342869",
+      "eventId": "Q78994",
+      "statementId": "Q342869$d076ed1f-4163-bf0d-f080-f087fccd56ff",
+      "sourceEntityId": "Q342869",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q481313",
+      "eventId": "Q78994",
+      "statementId": "Q481313$FE962D9C-9956-48CB-BFD5-3A855488C03E",
+      "sourceEntityId": "Q481313",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q313196",
+      "eventId": "Q78994",
+      "statementId": "Q313196$548EBB3E-983B-4A58-92A5-418566444EA3",
+      "sourceEntityId": "Q313196",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q128743",
+      "eventId": "Q78994",
+      "statementId": "Q128743$045F15E7-03FC-4B7F-8D17-D37C38B0832C",
+      "sourceEntityId": "Q128743",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q154232",
+      "eventId": "Q78994",
+      "statementId": "Q154232$EC2BE541-A650-4C7E-973B-80599FD7B7A1",
+      "sourceEntityId": "Q154232",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q3558776",
+      "eventId": "Q182062",
+      "statementId": "Q3558776$934EDE71-A538-4014-86F7-1E3553404D7A",
+      "sourceEntityId": "Q3558776",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q130613",
+      "eventId": "Q287942",
+      "statementId": "Q130613$FFDAB4F6-B714-47B2-B215-6975DF0D681B",
+      "sourceEntityId": "Q130613",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q130613",
+      "eventId": "Q2067876",
+      "statementId": "Q130613$E5DDC8E8-75DA-46EC-B695-B6AC79BEB4A5",
+      "sourceEntityId": "Q130613",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q1047558",
+      "eventId": "Q1072889",
+      "statementId": "Q1047558$c76e2507-4c34-b6b6-172f-6ed16f1324dc",
+      "sourceEntityId": "Q1047558",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q734977",
+      "eventId": "Q1072889",
+      "statementId": "Q734977$b4f1de46-4678-9a89-76e2-23c4796d7902",
+      "sourceEntityId": "Q734977",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q157632",
+      "eventId": "Q287942",
+      "statementId": "Q157632$6593BEB2-CBE0-4B5B-A282-C03306124C37",
+      "sourceEntityId": "Q157632",
+      "property": "P607",
+      "reason": "event-after-person-death"
+    },
+    {
+      "personId": "Q280985",
+      "sourceEntityId": "Q280985",
+      "statementId": "Q280985$96574EFA-D8D6-41A2-AAEA-DBA40E899492",
+      "property": "P39",
+      "reason": "tenure-ends-before-start"
+    },
+    {
+      "sourceEntityId": "Q8016",
+      "statementId": "Q8016$2019F361-71DF-4D5B-AABB-7091406D695D",
+      "property": "P580",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "sourceEntityId": "Q8016",
+      "statementId": "Q8016$b216471b-48c6-00ae-a541-6bb7d78ff9cd",
+      "property": "P582",
+      "reason": "invalid-or-unsupported-person-date"
+    },
+    {
+      "personId": "Q935536",
+      "eventId": "Q254106",
+      "statementId": "Q935536$7BFF1011-3DA6-4181-B725-CB348043633F",
+      "sourceEntityId": "Q935536",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q380878",
+      "sourceEntityId": "Q380878",
+      "statementId": "Q380878$EFC2460A-580D-4708-BDC1-C34289E3570A",
+      "property": "P39",
+      "reason": "tenure-ends-before-start"
+    },
+    {
+      "personId": "Q328323",
+      "sourceEntityId": "Q328323",
+      "statementId": "Q328323$a708a155-40d9-313f-409c-708b9edf6480",
+      "property": "P39",
+      "reason": "tenure-ends-before-start"
+    },
+    {
+      "personId": "Q120180",
+      "eventId": "Q287942",
+      "statementId": "Q120180$A23C81AA-DF96-420E-B59E-33D7868390E1",
+      "sourceEntityId": "Q120180",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q3331362",
+      "eventId": "Q852088",
+      "statementId": "Q3331362$9dc286cc-4ebc-7aa6-2abd-77134670a462",
+      "sourceEntityId": "Q3331362",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    },
+    {
+      "personId": "Q3462649",
+      "eventId": "Q852088",
+      "statementId": "Q3462649$a86f5e11-4cf1-8bae-a4a2-e810736cb759",
+      "sourceEntityId": "Q3462649",
+      "property": "P607",
+      "reason": "event-before-person-birth"
+    }
+  ]
+}

@@ -143,4 +143,93 @@ describe('shareable atlas state', () => {
     expect(useAtlasStore.getState().filters).toBe(initial.filters);
     unsubscribe();
   });
+
+  it('shares a person while retaining its context and explicit timeline playback', () => {
+    const state = parseAtlasUrl(
+      '?person=Q42&e=Q43&campaign=Q44&step=2&y=-330&lon=12&lat=34&play=1&cplay=1',
+    );
+    expect(state).toMatchObject({
+      selectedPerson: 'Q42',
+      selectedEvent: 'Q43',
+      campaignId: 'Q44',
+      campaignStep: 2,
+      year: -330,
+      playing: true,
+      campaignPlaying: false,
+      entityFollowing: false,
+    });
+    expect(parseAtlasUrl(serializeAtlasUrl(state))).toEqual(state);
+    expect(parseAtlasUrl('?person=../../file')).toHaveProperty('selectedPerson', null);
+  });
+
+  it('restores a timeline explicitly restarted after opening a person', () => {
+    const actions = useAtlasStore.getState();
+    actions.patchState({
+      selectedEvent: 'Q43',
+      campaignId: 'Q44',
+      campaignStep: 2,
+      year: 0,
+      camera: { lon: 12.345, lat: -34.567, zoom: 4.25, bearing: 18, pitch: 25 },
+      playing: true,
+    });
+    actions.selectPerson('Q42');
+    expect(useAtlasStore.getState().playing).toBe(false);
+    actions.setPlaying(true);
+    const before = useAtlasStore.getState();
+    const restored = parseAtlasUrl(serializeAtlasUrl(before));
+    expect(restored).toMatchObject({
+      selectedPerson: 'Q42',
+      selectedEvent: 'Q43',
+      campaignId: 'Q44',
+      campaignStep: 2,
+      year: 0,
+      playing: true,
+      campaignPlaying: false,
+      entityFollowing: false,
+    });
+    expect(restored.camera).toEqual(before.camera);
+    expect(parseAtlasUrl(serializeAtlasUrl(restored))).toEqual(restored);
+    actions.hydrateFromUrl(serializeAtlasUrl(before));
+    expect(useAtlasStore.getState().playing).toBe(true);
+    actions.selectPerson(null);
+    expect(useAtlasStore.getState()).toMatchObject({ selectedEvent: 'Q43', playing: true });
+  });
+
+  it('opening a person stops all clocks and closing it restores the source context', () => {
+    const state = useAtlasStore.getState();
+    state.patchState({ selectedEntity: 'clio-ab12', campaignId: 'Q44' });
+    state.setEntityFollowing(true);
+    state.selectPerson('Q42');
+    expect(useAtlasStore.getState()).toMatchObject({
+      selectedPerson: 'Q42',
+      selectedEntity: 'clio-ab12',
+      campaignId: 'Q44',
+      playing: false,
+      campaignPlaying: false,
+      entityFollowing: false,
+    });
+    state.selectPerson(null);
+    expect(useAtlasStore.getState()).toMatchObject({
+      selectedPerson: null,
+      selectedEntity: 'clio-ab12',
+      campaignId: 'Q44',
+      playing: false,
+    });
+    state.setCampaignPlaying(true);
+    state.selectPerson('Q42');
+    expect(useAtlasStore.getState().campaignPlaying).toBe(false);
+  });
+
+  it('a new event or territory replaces a person detail rather than hiding below it', () => {
+    const state = useAtlasStore.getState();
+    state.selectPerson('Q42');
+    state.selectEvent('Q43');
+    expect(useAtlasStore.getState()).toMatchObject({ selectedPerson: null, selectedEvent: 'Q43' });
+    state.selectPerson('Q42');
+    state.patchState({ selectedEntity: 'clio-ab12', selectedEvent: null });
+    expect(useAtlasStore.getState()).toMatchObject({
+      selectedPerson: null,
+      selectedEntity: 'clio-ab12',
+    });
+  });
 });

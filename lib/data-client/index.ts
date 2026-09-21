@@ -22,7 +22,7 @@ const cache = new Map<string, Promise<unknown>>();
 export function readJson<T>(url: string): Promise<T> {
   let promise = cache.get(url);
   if (!promise) {
-    promise = fetch(url)
+    promise = fetch(url, { signal: AbortSignal.timeout(12_000) })
       .then((response) => {
         if (!response.ok) throw new Error(`${response.status}: ${url}`);
         return response.json();
@@ -58,16 +58,30 @@ export type WikiSummary = {
   title: string;
 };
 export async function getWikipediaSummary(
-  event: HistoricalEvent,
+  event: Pick<HistoricalEvent, 'sources' | 'wikipedia'>,
   locale: 'fr' | 'en',
 ): Promise<WikiSummary | null> {
-  const languages = locale === 'fr' ? ['fr', 'en'] : ['en', 'fr'];
+  const languages: ('fr' | 'en')[] = locale === 'fr' ? ['fr', 'en'] : ['en', 'fr'];
   for (const language of languages) {
-    const source = event.sources.find((item) =>
-      item.url.includes(`${language}.wikipedia.org/wiki/`),
-    );
+    const candidates = [event.wikipedia?.[language], ...event.sources.map((item) => item.url)];
+    const source = candidates.flatMap((value) => {
+      if (!value) return [];
+      try {
+        const url = new URL(value);
+        if (
+          url.protocol !== 'https:' ||
+          url.hostname !== `${language}.wikipedia.org` ||
+          !url.pathname.startsWith('/wiki/')
+        )
+          return [];
+        const title = decodeURIComponent(url.pathname.slice('/wiki/'.length));
+        return title ? [{ url: url.href, title }] : [];
+      } catch {
+        return [];
+      }
+    })[0];
     if (!source) continue;
-    const title = decodeURIComponent(new URL(source.url).pathname.replace('/wiki/', ''));
+    const { title } = source;
     try {
       const result = await readJson<{
         extract?: string;

@@ -1,0 +1,21 @@
+{
+  "title": "Bataille de Waterloo",
+  "wikibase_item": "Q48314",
+  "lang": "fr",
+  "revision": "239322357",
+  "extract": "La bataille de Waterloo [watɛʁlo] s'est déroulée le 18 juin 1815, en Belgique, à vingt kilomètres au sud de Bruxelles, dans l'actuelle province du Brabant wallon. Cette bataille a opposé l'armée française dite Armée du Nord, dirigée par l'empereur Napoléon Ier, à l'armée des Alliés, dirigée par le duc de Wellington et composée de Britanniques, d'Allemands et de Néerlandais, rejointe par l'armée prussienne commandée par le maréchal Blücher. Elle s'est achevée par la défaite décisive de l'armée française.",
+  "content_urls": {
+    "desktop": {
+      "page": "https://fr.wikipedia.org/wiki/Bataille_de_Waterloo",
+      "revisions": "https://fr.wikipedia.org/wiki/Bataille_de_Waterloo?action=history",
+      "edit": "https://fr.wikipedia.org/wiki/Bataille_de_Waterloo?action=edit",
+      "talk": "https://fr.wikipedia.org/wiki/Discussion:Bataille_de_Waterloo"
+    },
+    "mobile": {
+      "page": "https://fr.wikipedia.org/wiki/Bataille_de_Waterloo",
+      "revisions": "https://fr.wikipedia.org/wiki/Special:History/Bataille_de_Waterloo",
+      "edit": "https://fr.wikipedia.org/wiki/Bataille_de_Waterloo?action=edit",
+      "talk": "https://fr.wikipedia.org/wiki/Discussion:Bataille_de_Waterloo"
+    }
+  }
+}

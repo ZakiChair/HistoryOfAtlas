@@ -1,9 +1,10 @@
 import { rename, rm } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
+import { dirname, join } from 'node:path';
 
 /** Publish a complete generated directory; omitted records cannot survive a rebuild. */
 export async function publishDirectory(staging: string, destination: string): Promise<void> {
-  const backup = `${destination}.previous-${randomUUID()}`;
+  const backup = join(dirname(staging), `.events-previous-${randomUUID()}`);
   let previous = false;
   try {
     await rename(destination, backup);
