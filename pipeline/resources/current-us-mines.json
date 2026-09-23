@@ -1,0 +1,3623 @@
+{
+  "sources": [
+    {
+      "id": "usgs-current-us-2026",
+      "name": "USGS — United States mines, 2026 assumed-active register",
+      "url": "https://doi.org/10.5066/P1BUPUAM",
+      "year": 2026,
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "description": "Qualified USGS operating-status snapshot. Only mines/quarries with supported commodities and reviewed independent coordinates are included; processing-only facilities are excluded. Official USGS metadata confirms title, authors, DOI and release date; the public mirror supplies attributed row values and original spreadsheet records. The official download was inaccessible, so byte-for-byte equivalence to its workbook was not verified."
+    }
+  ],
+  "sites": [
+    {
+      "id": "current-us:USA0068",
+      "name": "Big Ledge",
+      "coordinates": [
+        -115.039,
+        41.5028
+      ],
+      "categories": [
+        "barium"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "barium"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0106",
+      "name": "Buick Mine",
+      "coordinates": [
+        -91.1226,
+        37.6059
+      ],
+      "categories": [
+        "copper",
+        "lead",
+        "zinc"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper",
+            "lead",
+            "zinc"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0231",
+      "name": "East Boulder Mine",
+      "coordinates": [
+        -110.0895976,
+        45.50397661
+      ],
+      "categories": [
+        "copper",
+        "nickel",
+        "palladium",
+        "platinum",
+        "selenium",
+        "tellurium"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper",
+            "nickel",
+            "palladium",
+            "platinum",
+            "selenium",
+            "tellurium"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0251",
+      "name": "Fletcher Mine",
+      "coordinates": [
+        -91.1095,
+        37.4665
+      ],
+      "categories": [
+        "copper",
+        "gold",
+        "lead",
+        "silver",
+        "zinc"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper",
+            "gold",
+            "lead",
+            "silver",
+            "zinc"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0252",
+      "name": "Florence Mine",
+      "coordinates": [
+        -111.4282583,
+        33.04671825
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0256",
+      "name": "Florida Canyon Mine",
+      "coordinates": [
+        -118.2367825,
+        40.57948
+      ],
+      "categories": [
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0284",
+      "name": "Gold Road Mine",
+      "coordinates": [
+        -114.37683,
+        35.03176667
+      ],
+      "categories": [
+        "gold",
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "gold",
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0302",
+      "name": "Greystone",
+      "coordinates": [
+        -116.873,
+        40.2741
+      ],
+      "categories": [
+        "barium"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "barium"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0414",
+      "name": "Lisbon Valley Mine",
+      "coordinates": [
+        -109.1267,
+        38.12484
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0430",
+      "name": "Lucky Friday Mine",
+      "coordinates": [
+        -115.775663,
+        47.476936
+      ],
+      "categories": [
+        "lead",
+        "silver",
+        "zinc"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "lead",
+            "silver",
+            "zinc"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0456",
+      "name": "Meikle Mine",
+      "coordinates": [
+        -116.413357,
+        41.032178
+      ],
+      "categories": [
+        "gold",
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "gold",
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0458",
+      "name": "Mesquite Mine",
+      "coordinates": [
+        -114.9851,
+        33.0564375
+      ],
+      "categories": [
+        "gold",
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "gold",
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0479",
+      "name": "Mineral Park Mine",
+      "coordinates": [
+        -114.167525,
+        35.39086417
+      ],
+      "categories": [
+        "copper",
+        "molybdenum"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper",
+            "molybdenum"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0503",
+      "name": "Moss Mine",
+      "coordinates": [
+        -114.43995,
+        35.09132
+      ],
+      "categories": [
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0559",
+      "name": "Pan Mine",
+      "coordinates": [
+        -115.746748,
+        39.31281555
+      ],
+      "categories": [
+        "gold",
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "gold",
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0640",
+      "name": "Ray Mine",
+      "coordinates": [
+        -110.9855755,
+        33.18015182
+      ],
+      "categories": [
+        "copper",
+        "gold",
+        "molybdenum",
+        "silver"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper",
+            "gold",
+            "molybdenum",
+            "silver"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0719",
+      "name": "Silver Bell Mine",
+      "coordinates": [
+        -111.5055091,
+        32.39514405
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "copper"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0721",
+      "name": "Silver Peak Mine",
+      "coordinates": [
+        -117.6375066,
+        37.75054145
+      ],
+      "categories": [
+        "lithium"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "lithium"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    },
+    {
+      "id": "current-us:USA0816",
+      "name": "Vernal Mine",
+      "coordinates": [
+        -109.496575,
+        40.6068
+      ],
+      "categories": [
+        "phosphate"
+      ],
+      "country": "United States",
+      "sourceId": "usgs-current-us-2026",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+          "categories": [
+            "phosphate"
+          ],
+          "approximate": true,
+          "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+        }
+      ]
+    }
+  ],
+  "observationGroups": [
+    {
+      "sourceId": "usgs-current-us-2026",
+      "updates": [
+        {
+          "siteId": "fineprint:COM00084.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "molybdenum",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00088.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00133.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "molybdenum",
+                "selenium",
+                "tellurium"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00206.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00253.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00264.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "molybdenum"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00302.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00363.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "cobalt",
+                "copper",
+                "gold",
+                "nickel",
+                "palladium",
+                "platinum"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00418.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00438.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "antimony",
+                "copper",
+                "lead",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00500.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "lead",
+                "silver",
+                "zinc"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00516.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00530.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "molybdenum"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "gem-giomt:P100000128691",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "iron"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "gem-giomt:P100000128693",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "iron"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00631.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00776.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "gem-giomt:P100000128695",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "iron"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "current-major:morenci",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "molybdenum"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "current-major:mountain-pass",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "rare-earths"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "gem-giomt:P100000128697",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "iron"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00991.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "molybdenum",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00997.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01072.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "lead",
+                "silver",
+                "zinc"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01091.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "gold",
+                "molybdenum",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01093.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01101.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01190.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "molybdenum",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01311.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "copper",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "gem-giomt:P100000128700",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "iron"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        },
+        {
+          "siteId": "fineprint:COM01367.00",
+          "periods": [
+            {
+              "fromYear": 2026,
+              "toYear": 2026,
+              "sourceUrl": "https://doi.org/10.5066/P1BUPUAM",
+              "categories": [
+                "gold",
+                "silver"
+              ],
+              "approximate": true,
+              "description": "Activité présumée par l’USGS (statut « Assumed active »), registre publié le 29 juin 2026. Il s’agit d’un état administratif présumé, pas d’une mesure de production en 2026 ni d’une preuve d’exploitation ininterrompue. Les fermetures ou suspensions identifiées par des sources primaires vérifiées sont exclues. / USGS assumed-active mine snapshot; actual annual production and continuous operation are not independently verified."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "current-us:USA0040",
+      "name": "Bagdad Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00084.00",
+      "facilityId": "USA0040",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U83",
+        "U84",
+        "U85",
+        "U86"
+      ],
+      "sourceRows": [
+        84,
+        85,
+        86,
+        87
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Molybdenum",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0040",
+        "name": "Bagdad Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -113.2111358,
+          34.5847282
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00084.00",
+        "coordinateRecordName": "Bagdad",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0042",
+      "name": "Bald Mountain Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00088.00",
+      "facilityId": "USA0042",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U88",
+        "U89"
+      ],
+      "sourceRows": [
+        89,
+        90
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0042",
+        "name": "Bald Mountain Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -115.6136584,
+          39.9428052
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00088.00",
+        "coordinateRecordName": "Bald Mountain",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0068",
+      "name": "Big Ledge",
+      "mode": "observations",
+      "facilityId": "USA0068",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U121"
+      ],
+      "sourceRows": [
+        122
+      ],
+      "sourceMinerals": [
+        "Barite"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0068",
+        "name": "Big Ledge",
+        "state": "Nevada",
+        "coordinates": [
+          -115.039,
+          41.5028
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM04531",
+        "coordinateRecordName": "Big Ledge Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0069",
+      "name": "Bingham Canyon Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00133.00",
+      "facilityId": "USA0069",
+      "status": "Assumed active",
+      "state": "Utah",
+      "recordIds": [
+        "U122",
+        "U123",
+        "U124",
+        "U125",
+        "U126"
+      ],
+      "sourceRows": [
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Molybdenum",
+        "Selenium",
+        "Tellurium"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0069",
+        "name": "Bingham Canyon Mine",
+        "state": "Utah",
+        "coordinates": [
+          -112.1493862,
+          40.5221684
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00133.00",
+        "coordinateRecordName": "Bingham Canyon",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0106",
+      "name": "Buick Mine",
+      "mode": "observations",
+      "facilityId": "USA0106",
+      "status": "Assumed active",
+      "state": "Missouri",
+      "recordIds": [
+        "U178",
+        "U179",
+        "U180"
+      ],
+      "sourceRows": [
+        179,
+        180,
+        181
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Lead",
+        "Zinc"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0106",
+        "name": "Buick Mine",
+        "state": "Missouri",
+        "coordinates": [
+          -91.1226,
+          37.6059
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM03130",
+        "coordinateRecordName": "Buick Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0130",
+      "name": "Carlota Mines",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00206.00",
+      "facilityId": "USA0130",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U210"
+      ],
+      "sourceRows": [
+        211
+      ],
+      "sourceMinerals": [
+        "Copper"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0130",
+        "name": "Carlota Mines",
+        "state": "Arizona",
+        "coordinates": [
+          -110.98956,
+          33.3847768
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00206.00",
+        "coordinateRecordName": "Carlota",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0153",
+      "name": "Chino Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00253.00",
+      "facilityId": "USA0153",
+      "status": "Assumed active",
+      "state": "New Mexico",
+      "recordIds": [
+        "U240",
+        "U241",
+        "U242"
+      ],
+      "sourceRows": [
+        241,
+        242,
+        243
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0153",
+        "name": "Chino Mine",
+        "state": "New Mexico",
+        "coordinates": [
+          -108.0862584,
+          32.7908875
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00253.00",
+        "coordinateRecordName": "Chino",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0164",
+      "name": "Climax Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00264.00",
+      "facilityId": "USA0164",
+      "status": "Assumed active",
+      "state": "Colorado",
+      "recordIds": [
+        "U268",
+        "U269"
+      ],
+      "sourceRows": [
+        269,
+        270
+      ],
+      "sourceMinerals": [
+        "Molybdenum",
+        "Rhenium"
+      ],
+      "omittedMinerals": [
+        "Rhenium"
+      ],
+      "coordinateEvidence": {
+        "facilityId": "USA0164",
+        "name": "Climax Mine",
+        "state": "Colorado",
+        "coordinates": [
+          -106.1831665,
+          39.3686637
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00264.00",
+        "coordinateRecordName": "Climax",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0194",
+      "name": "Cripple Creek and Victor Gold Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00302.00",
+      "facilityId": "USA0194",
+      "status": "Assumed active",
+      "state": "Colorado",
+      "recordIds": [
+        "U323",
+        "U324"
+      ],
+      "sourceRows": [
+        324,
+        325
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0194",
+        "name": "Cripple Creek and Victor Gold Mine",
+        "state": "Colorado",
+        "coordinates": [
+          -105.146627666937,
+          38.7445379943853
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00302.00",
+        "coordinateRecordName": "Cripple Creek & Victor",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0230",
+      "name": "Eagle Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00363.00",
+      "facilityId": "USA0230",
+      "status": "Assumed active",
+      "state": "Michigan",
+      "recordIds": [
+        "U368",
+        "U369",
+        "U370",
+        "U371",
+        "U372",
+        "U373"
+      ],
+      "sourceRows": [
+        369,
+        370,
+        371,
+        372,
+        373,
+        374
+      ],
+      "sourceMinerals": [
+        "Cobalt",
+        "Copper",
+        "Gold",
+        "Nickel",
+        "Palladium",
+        "Platinum"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0230",
+        "name": "Eagle Mine",
+        "state": "Michigan",
+        "coordinates": [
+          -87.8803375127954,
+          46.7429387110415
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00363.00",
+        "coordinateRecordName": "Eagle",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0231",
+      "name": "East Boulder Mine",
+      "mode": "observations",
+      "facilityId": "USA0231",
+      "status": "Assumed active",
+      "state": "Montana",
+      "recordIds": [
+        "U374",
+        "U375",
+        "U376",
+        "U377",
+        "U378",
+        "U379",
+        "U380"
+      ],
+      "sourceRows": [
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Nickel",
+        "Palladium",
+        "Platinum",
+        "Rhodium",
+        "Selenium",
+        "Tellurium"
+      ],
+      "omittedMinerals": [
+        "Rhodium"
+      ],
+      "coordinateEvidence": {
+        "facilityId": "USA0231",
+        "name": "East Boulder Mine",
+        "state": "Montana",
+        "coordinates": [
+          -110.0895976,
+          45.50397661
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM05107",
+        "coordinateRecordName": "East Boulder",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0251",
+      "name": "Fletcher Mine",
+      "mode": "observations",
+      "facilityId": "USA0251",
+      "status": "Assumed active",
+      "state": "Missouri",
+      "recordIds": [
+        "U416",
+        "U417",
+        "U418",
+        "U419",
+        "U420"
+      ],
+      "sourceRows": [
+        417,
+        418,
+        419,
+        420,
+        421
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Lead",
+        "Silver",
+        "Zinc"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0251",
+        "name": "Fletcher Mine",
+        "state": "Missouri",
+        "coordinates": [
+          -91.1095,
+          37.4665
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM03082",
+        "coordinateRecordName": "Fletcher",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0252",
+      "name": "Florence Mine",
+      "mode": "observations",
+      "facilityId": "USA0252",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U421"
+      ],
+      "sourceRows": [
+        422
+      ],
+      "sourceMinerals": [
+        "Copper"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0252",
+        "name": "Florence Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -111.4282583,
+          33.04671825
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM13454",
+        "coordinateRecordName": "Florence project",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0256",
+      "name": "Florida Canyon Mine",
+      "mode": "observations",
+      "facilityId": "USA0256",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U425"
+      ],
+      "sourceRows": [
+        426
+      ],
+      "sourceMinerals": [
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0256",
+        "name": "Florida Canyon Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -118.2367825,
+          40.57948
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM04299",
+        "coordinateRecordName": "Florida Canyon Gold Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0262",
+      "name": "Fort Knox Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00418.00",
+      "facilityId": "USA0262",
+      "status": "Assumed active",
+      "state": "Alaska",
+      "recordIds": [
+        "U434"
+      ],
+      "sourceRows": [
+        435
+      ],
+      "sourceMinerals": [
+        "Gold"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0262",
+        "name": "Fort Knox Mine",
+        "state": "Alaska",
+        "coordinates": [
+          -147.3607848,
+          64.9968601
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00418.00",
+        "coordinateRecordName": "Fort Knox",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0272",
+      "name": "Galena Complex",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00438.00",
+      "facilityId": "USA0272",
+      "status": "Assumed active",
+      "state": "Idaho",
+      "recordIds": [
+        "U446",
+        "U447",
+        "U448",
+        "U449"
+      ],
+      "sourceRows": [
+        447,
+        448,
+        449,
+        450
+      ],
+      "sourceMinerals": [
+        "Antimony",
+        "Copper",
+        "Lead",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0272",
+        "name": "Galena Complex",
+        "state": "Idaho",
+        "coordinates": [
+          -115.9673844,
+          47.4779122
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00438.00",
+        "coordinateRecordName": "Galena",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0284",
+      "name": "Gold Road Mine",
+      "mode": "observations",
+      "facilityId": "USA0284",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U464",
+        "U465"
+      ],
+      "sourceRows": [
+        465,
+        466
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0284",
+        "name": "Gold Road Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -114.37683,
+          35.03176667
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM02654",
+        "coordinateRecordName": "Gold Road Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0301",
+      "name": "Greens Creek Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00500.00",
+      "facilityId": "USA0301",
+      "status": "Assumed active",
+      "state": "Alaska",
+      "recordIds": [
+        "U486",
+        "U487",
+        "U488",
+        "U489",
+        "U490"
+      ],
+      "sourceRows": [
+        487,
+        488,
+        489,
+        490,
+        491
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Lead",
+        "Silver",
+        "Zinc"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0301",
+        "name": "Greens Creek Mine",
+        "state": "Alaska",
+        "coordinates": [
+          -134.6392364,
+          58.0823593
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00500.00",
+        "coordinateRecordName": "Greens Creek",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0302",
+      "name": "Greystone",
+      "mode": "observations",
+      "facilityId": "USA0302",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U491"
+      ],
+      "sourceRows": [
+        492
+      ],
+      "sourceMinerals": [
+        "Barite"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0302",
+        "name": "Greystone",
+        "state": "Nevada",
+        "coordinates": [
+          -116.873,
+          40.2741
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM04207",
+        "coordinateRecordName": "Greystone",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0304",
+      "name": "Haile Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00516.00",
+      "facilityId": "USA0304",
+      "status": "Assumed active",
+      "state": "South Carolina",
+      "recordIds": [
+        "U493",
+        "U494"
+      ],
+      "sourceRows": [
+        494,
+        495
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0304",
+        "name": "Haile Mine",
+        "state": "South Carolina",
+        "coordinates": [
+          -80.5392379,
+          34.5977287
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00516.00",
+        "coordinateRecordName": "Haile",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0318",
+      "name": "Henderson Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00530.00",
+      "facilityId": "USA0318",
+      "status": "Assumed active",
+      "state": "Colorado",
+      "recordIds": [
+        "U512",
+        "U513"
+      ],
+      "sourceRows": [
+        513,
+        514
+      ],
+      "sourceMinerals": [
+        "Molybdenum",
+        "Rhenium"
+      ],
+      "omittedMinerals": [
+        "Rhenium"
+      ],
+      "coordinateEvidence": {
+        "facilityId": "USA0318",
+        "name": "Henderson Mine",
+        "state": "Colorado",
+        "coordinates": [
+          -105.8374706,
+          39.7698159
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00530.00",
+        "coordinateRecordName": "Henderson",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0323",
+      "name": "Hibbing Taconite",
+      "mode": "observations",
+      "matchedSiteId": "gem-giomt:P100000128691",
+      "facilityId": "USA0323",
+      "status": "Assumed active",
+      "state": "Minnesota",
+      "recordIds": [
+        "U523"
+      ],
+      "sourceRows": [
+        524
+      ],
+      "sourceMinerals": [
+        "Iron Ore"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0323",
+        "name": "Hibbing Taconite",
+        "state": "Minnesota",
+        "coordinates": [
+          -92.965529,
+          47.477477
+        ],
+        "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+        "matchedSiteId": "gem-giomt:P100000128691",
+        "coordinateRecordName": "Hibbing Taconite Mine",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0371",
+      "name": "Keetac",
+      "mode": "observations",
+      "matchedSiteId": "gem-giomt:P100000128693",
+      "facilityId": "USA0371",
+      "status": "Assumed active",
+      "state": "Minnesota",
+      "recordIds": [
+        "U586"
+      ],
+      "sourceRows": [
+        587
+      ],
+      "sourceMinerals": [
+        "Iron Ore"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0371",
+        "name": "Keetac",
+        "state": "Minnesota",
+        "coordinates": [
+          -93.075038,
+          47.42003
+        ],
+        "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+        "coordinateRecordId": "ICMM08381",
+        "coordinateRecordName": "US Steel Keetac Mine",
+        "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+        "matchedSiteId": "gem-giomt:P100000128693"
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0376",
+      "name": "Kensington Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00631.00",
+      "facilityId": "USA0376",
+      "status": "Assumed active",
+      "state": "Alaska",
+      "recordIds": [
+        "U598"
+      ],
+      "sourceRows": [
+        599
+      ],
+      "sourceMinerals": [
+        "Gold"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0376",
+        "name": "Kensington Mine",
+        "state": "Alaska",
+        "coordinates": [
+          -135.057135289752,
+          58.8493598919714
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00631.00",
+        "coordinateRecordName": "Kensington",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0414",
+      "name": "Lisbon Valley Mine",
+      "mode": "observations",
+      "facilityId": "USA0414",
+      "status": "Assumed active",
+      "state": "Utah",
+      "recordIds": [
+        "U645"
+      ],
+      "sourceRows": [
+        646
+      ],
+      "sourceMinerals": [
+        "Copper"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0414",
+        "name": "Lisbon Valley Mine",
+        "state": "Utah",
+        "coordinates": [
+          -109.1267,
+          38.12484
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM03374",
+        "coordinateRecordName": "Lisbon Valley",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0430",
+      "name": "Lucky Friday Mine",
+      "mode": "observations",
+      "facilityId": "USA0430",
+      "status": "Assumed active",
+      "state": "Idaho",
+      "recordIds": [
+        "U664",
+        "U665",
+        "U666"
+      ],
+      "sourceRows": [
+        665,
+        666,
+        667
+      ],
+      "sourceMinerals": [
+        "Lead",
+        "Silver",
+        "Zinc"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0430",
+        "name": "Lucky Friday Mine",
+        "state": "Idaho",
+        "coordinates": [
+          -115.775663,
+          47.476936
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM05352",
+        "coordinateRecordName": "Lucky Friday",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0444",
+      "name": "Marigold Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00776.00",
+      "facilityId": "USA0444",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U686",
+        "U687"
+      ],
+      "sourceRows": [
+        687,
+        688
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0444",
+        "name": "Marigold Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -117.1491012,
+          40.7495727
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00776.00",
+        "coordinateRecordName": "Marigold",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0456",
+      "name": "Meikle Mine",
+      "mode": "observations",
+      "facilityId": "USA0456",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U701",
+        "U702"
+      ],
+      "sourceRows": [
+        702,
+        703
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0456",
+        "name": "Meikle Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -116.413357,
+          41.032178
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM04432",
+        "coordinateRecordName": "Meikle Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0458",
+      "name": "Mesquite Mine",
+      "mode": "observations",
+      "facilityId": "USA0458",
+      "status": "Assumed active",
+      "state": "California",
+      "recordIds": [
+        "U704",
+        "U705"
+      ],
+      "sourceRows": [
+        705,
+        706
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0458",
+        "name": "Mesquite Mine",
+        "state": "California",
+        "coordinates": [
+          -114.9851,
+          33.0564375
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM02374",
+        "coordinateRecordName": "Mesquite Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0479",
+      "name": "Mineral Park Mine",
+      "mode": "observations",
+      "facilityId": "USA0479",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U740",
+        "U741"
+      ],
+      "sourceRows": [
+        741,
+        742
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Molybdenum"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0479",
+        "name": "Mineral Park Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -114.167525,
+          35.39086417
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM02743",
+        "coordinateRecordName": "Mineral Park",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0485",
+      "name": "Minntac Mine",
+      "mode": "observations",
+      "matchedSiteId": "gem-giomt:P100000128695",
+      "facilityId": "USA0485",
+      "status": "Assumed active",
+      "state": "Minnesota",
+      "recordIds": [
+        "U749"
+      ],
+      "sourceRows": [
+        750
+      ],
+      "sourceMinerals": [
+        "Iron Ore"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0485",
+        "name": "Minntac Mine",
+        "state": "Minnesota",
+        "coordinates": [
+          -92.631421,
+          47.544885
+        ],
+        "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+        "coordinateRecordId": "ICMM08538",
+        "coordinateRecordName": "US Steel Minntac Mine",
+        "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+        "matchedSiteId": "gem-giomt:P100000128695"
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0496",
+      "name": "Morenci Mine",
+      "mode": "observations",
+      "matchedSiteId": "current-major:morenci",
+      "facilityId": "USA0496",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U766",
+        "U767",
+        "U768"
+      ],
+      "sourceRows": [
+        767,
+        768,
+        769
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Molybdenum"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0496",
+        "name": "Morenci Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -109.3353162,
+          33.0634695
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "current-major:morenci",
+        "coordinateRecordName": "Morenci",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0503",
+      "name": "Moss Mine",
+      "mode": "observations",
+      "facilityId": "USA0503",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U775"
+      ],
+      "sourceRows": [
+        776
+      ],
+      "sourceMinerals": [
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0503",
+        "name": "Moss Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -114.43995,
+          35.09132
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM13672",
+        "coordinateRecordName": "Moss",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0506",
+      "name": "Mountain Pass Mine",
+      "mode": "observations",
+      "matchedSiteId": "current-major:mountain-pass",
+      "facilityId": "USA0506",
+      "status": "Assumed active",
+      "state": "California",
+      "recordIds": [
+        "U778"
+      ],
+      "sourceRows": [
+        779
+      ],
+      "sourceMinerals": [
+        "Rare earths"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0506",
+        "name": "Mountain Pass Mine",
+        "state": "California",
+        "coordinates": [
+          -115.5316666667,
+          35.4822222222
+        ],
+        "coordinateSourceUrl": "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000008/mpmcexhibit961123125.htm",
+        "matchedSiteId": "current-major:mountain-pass",
+        "coordinateRecordName": "Mountain Pass",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0543",
+      "name": "Northshore Mine",
+      "mode": "observations",
+      "matchedSiteId": "gem-giomt:P100000128697",
+      "facilityId": "USA0543",
+      "status": "Assumed active",
+      "state": "Minnesota",
+      "recordIds": [
+        "U840"
+      ],
+      "sourceRows": [
+        841
+      ],
+      "sourceMinerals": [
+        "Iron Ore"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0543",
+        "name": "Northshore Mine",
+        "state": "Minnesota",
+        "coordinates": [
+          -91.925224,
+          47.660443
+        ],
+        "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+        "coordinateRecordId": "ICMM13086",
+        "coordinateRecordName": "Cleveland-Cliffs Northshore Mine",
+        "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+        "matchedSiteId": "gem-giomt:P100000128697"
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0559",
+      "name": "Pan Mine",
+      "mode": "observations",
+      "facilityId": "USA0559",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U860",
+        "U861"
+      ],
+      "sourceRows": [
+        861,
+        862
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0559",
+        "name": "Pan Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -115.746748,
+          39.31281555
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM13725",
+        "coordinateRecordName": "Pan",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0569",
+      "name": "Pinto Valley Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00991.00",
+      "facilityId": "USA0569",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U878",
+        "U879",
+        "U880",
+        "U881"
+      ],
+      "sourceRows": [
+        879,
+        880,
+        881,
+        882
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Molybdenum",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0569",
+        "name": "Pinto Valley Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -110.968467556599,
+          33.3955924932904
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00991.00",
+        "coordinateRecordName": "Pinto Valley",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0621",
+      "name": "Pogo Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM00997.00",
+      "facilityId": "USA0621",
+      "status": "Assumed active",
+      "state": "Alaska",
+      "recordIds": [
+        "U934"
+      ],
+      "sourceRows": [
+        935
+      ],
+      "sourceMinerals": [
+        "Gold"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0621",
+        "name": "Pogo Mine",
+        "state": "Alaska",
+        "coordinates": [
+          -144.9045104,
+          64.4535064
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM00997.00",
+        "coordinateRecordName": "Pogo",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0640",
+      "name": "Ray Mine",
+      "mode": "observations",
+      "facilityId": "USA0640",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U962",
+        "U963",
+        "U964",
+        "U965"
+      ],
+      "sourceRows": [
+        963,
+        964,
+        965,
+        966
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Molybdenum",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0640",
+        "name": "Ray Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -110.9855755,
+          33.18015182
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM02391",
+        "coordinateRecordName": "Ray",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0642",
+      "name": "Red Dog Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01072.00",
+      "facilityId": "USA0642",
+      "status": "Assumed active",
+      "state": "Alaska",
+      "recordIds": [
+        "U967",
+        "U968",
+        "U969",
+        "U970"
+      ],
+      "sourceRows": [
+        968,
+        969,
+        970,
+        971
+      ],
+      "sourceMinerals": [
+        "Germanium",
+        "Lead",
+        "Silver",
+        "Zinc"
+      ],
+      "omittedMinerals": [
+        "Germanium"
+      ],
+      "coordinateEvidence": {
+        "facilityId": "USA0642",
+        "name": "Red Dog Mine",
+        "state": "Alaska",
+        "coordinates": [
+          -162.8561111,
+          68.0755556
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01072.00",
+        "coordinateRecordName": "Red Dog",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0665",
+      "name": "Robinson Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01091.00",
+      "facilityId": "USA0665",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U1000",
+        "U1001",
+        "U1002",
+        "U1003"
+      ],
+      "sourceRows": [
+        1001,
+        1002,
+        1003,
+        1004
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Gold",
+        "Molybdenum",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0665",
+        "name": "Robinson Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -115.010938888696,
+          39.2643921153573
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01091.00",
+        "coordinateRecordName": "Robinson",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0667",
+      "name": "Rochester Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01093.00",
+      "facilityId": "USA0667",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U1008",
+        "U1009"
+      ],
+      "sourceRows": [
+        1009,
+        1010
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0667",
+        "name": "Rochester Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -118.1541315,
+          40.2855087
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01093.00",
+        "coordinateRecordName": "Rochester",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0682",
+      "name": "Round Mountain Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01101.00",
+      "facilityId": "USA0682",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U1026",
+        "U1027"
+      ],
+      "sourceRows": [
+        1027,
+        1028
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0682",
+        "name": "Round Mountain Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -117.1034089,
+          38.7083535
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01101.00",
+        "coordinateRecordName": "Round Mountain",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0716",
+      "name": "Sierrita Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01190.00",
+      "facilityId": "USA0716",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U1077",
+        "U1078",
+        "U1079",
+        "U1080"
+      ],
+      "sourceRows": [
+        1078,
+        1079,
+        1080,
+        1081
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Molybdenum",
+        "Rhenium",
+        "Silver"
+      ],
+      "omittedMinerals": [
+        "Rhenium"
+      ],
+      "coordinateEvidence": {
+        "facilityId": "USA0716",
+        "name": "Sierrita Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -111.1012802,
+          31.8757743
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01190.00",
+        "coordinateRecordName": "Sierrita",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0719",
+      "name": "Silver Bell Mine",
+      "mode": "observations",
+      "facilityId": "USA0719",
+      "status": "Assumed active",
+      "state": "Arizona",
+      "recordIds": [
+        "U1083"
+      ],
+      "sourceRows": [
+        1086
+      ],
+      "sourceMinerals": [
+        "Copper"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0719",
+        "name": "Silver Bell Mine",
+        "state": "Arizona",
+        "coordinates": [
+          -111.5055091,
+          32.39514405
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM02270",
+        "coordinateRecordName": "Silver Bell mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0721",
+      "name": "Silver Peak Mine",
+      "mode": "observations",
+      "facilityId": "USA0721",
+      "status": "Assumed active",
+      "state": "Nevada",
+      "recordIds": [
+        "U1085"
+      ],
+      "sourceRows": [
+        1088
+      ],
+      "sourceMinerals": [
+        "Lithium"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0721",
+        "name": "Silver Peak Mine",
+        "state": "Nevada",
+        "coordinates": [
+          -117.6375066,
+          37.75054145
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM03191",
+        "coordinateRecordName": "Silver Peak",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0803",
+      "name": "Tyrone Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01311.00",
+      "facilityId": "USA0803",
+      "status": "Assumed active",
+      "state": "New Mexico",
+      "recordIds": [
+        "U1218",
+        "U1219"
+      ],
+      "sourceRows": [
+        1221,
+        1222
+      ],
+      "sourceMinerals": [
+        "Copper",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0803",
+        "name": "Tyrone Mine",
+        "state": "New Mexico",
+        "coordinates": [
+          -108.3678263,
+          32.6439668
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01311.00",
+        "coordinateRecordName": "Tyrone",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0807",
+      "name": "United Taconite Mine",
+      "mode": "observations",
+      "matchedSiteId": "gem-giomt:P100000128700",
+      "facilityId": "USA0807",
+      "status": "Assumed active",
+      "state": "Minnesota",
+      "recordIds": [
+        "U1223"
+      ],
+      "sourceRows": [
+        1226
+      ],
+      "sourceMinerals": [
+        "Iron Ore"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0807",
+        "name": "United Taconite Mine",
+        "state": "Minnesota",
+        "coordinates": [
+          -92.548602,
+          47.481496
+        ],
+        "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+        "coordinateRecordId": "ICMM08901",
+        "coordinateRecordName": "Cleveland-Cliffs United Taconite Mine",
+        "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+        "matchedSiteId": "gem-giomt:P100000128700"
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0816",
+      "name": "Vernal Mine",
+      "mode": "observations",
+      "facilityId": "USA0816",
+      "status": "Assumed active",
+      "state": "Utah",
+      "recordIds": [
+        "U1233"
+      ],
+      "sourceRows": [
+        1236
+      ],
+      "sourceMinerals": [
+        "Phosphate Rock"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0816",
+        "name": "Vernal Mine",
+        "state": "Utah",
+        "coordinates": [
+          -109.496575,
+          40.6068
+        ],
+        "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "coordinateRecordId": "ICMM04315",
+        "coordinateRecordName": "Vernal Mine",
+        "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    },
+    {
+      "id": "current-us:USA0837",
+      "name": "Wharf Mine",
+      "mode": "observations",
+      "matchedSiteId": "fineprint:COM01367.00",
+      "facilityId": "USA0837",
+      "status": "Assumed active",
+      "state": "South Dakota",
+      "recordIds": [
+        "U1265",
+        "U1266"
+      ],
+      "sourceRows": [
+        1268,
+        1269
+      ],
+      "sourceMinerals": [
+        "Gold",
+        "Silver"
+      ],
+      "omittedMinerals": [],
+      "coordinateEvidence": {
+        "facilityId": "USA0837",
+        "name": "Wharf Mine",
+        "state": "South Dakota",
+        "coordinates": [
+          -103.8458114,
+          44.3471028
+        ],
+        "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+        "matchedSiteId": "fineprint:COM01367.00",
+        "coordinateRecordName": "Wharf",
+        "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+      },
+      "retrievedThrough": "https://us-facilities.rovjok.com"
+    }
+  ],
+  "omitted": [
+    {
+      "facilityId": "USA0002",
+      "name": "Adams Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0015",
+      "name": "Alva Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0022",
+      "name": "Apex Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0029",
+      "name": "Ashdown Mine",
+      "reason": "Held for further status review: the mirrored row cites a 2011 SEC source and a stock forum, insufficient to resolve contradictory closure reporting. This omission is not a newly inferred closure date.",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM"
+    },
+    {
+      "facilityId": "USA0035",
+      "name": "Aurora Mine (Lee Creek Mine)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0037",
+      "name": "Avery Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0050",
+      "name": "Batesville Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0061",
+      "name": "Berwind Mine Complex",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0064",
+      "name": "Betze-Post Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0074",
+      "name": "Black Rock Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0075",
+      "name": "Blackfoot Bridge Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0077",
+      "name": "Blue Creek No. 4 Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0080",
+      "name": "Blue Rapids Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0084",
+      "name": "Bonne Terre Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0086",
+      "name": "Borealis Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0089",
+      "name": "Boron Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0090",
+      "name": "Bouse Junction Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0098",
+      "name": "Brooksville Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0101",
+      "name": "Brushy Creek Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0102",
+      "name": "Buchanan No. 1 Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0105",
+      "name": "Buick Mill",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0111",
+      "name": "Burke Hollow",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0129",
+      "name": "Carlin Trend Mines (Gold Quarry, Goldstar, Green Lantern, Leeville, Fallon, Rita K, Exodus, Pete Bajo, Ren)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0132",
+      "name": "Carlsbad East Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0139",
+      "name": "Castle Mountain Mine",
+      "reason": "Mining suspended August 2024; operator Q1 2026 financial statements report care and maintenance with residual leach revenue.",
+      "sourceUrl": "https://www.equinoxgold.com/wp-content/uploads/2026/05/EQX-2026.03.31-Financial-Statements.pdf"
+    },
+    {
+      "facilityId": "USA0142",
+      "name": "Chalk Hills Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0156",
+      "name": "Christensen Ranch IRS Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0167",
+      "name": "Cobre Magnetite Stockpile",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0168",
+      "name": "Cody Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0178",
+      "name": "Conda Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0180",
+      "name": "Continental Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0188",
+      "name": "Cortez Hills Open Pit Mines (Pipeline Cross Roads, Cortez)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0189",
+      "name": "Cortez Hills Underground Mines (Cortez Hills, Goldrush)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0191",
+      "name": "Coyote",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0192",
+      "name": "Crescent Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0198",
+      "name": "Cumberland Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0200",
+      "name": "Cyril Mines (#2, #5)",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0215",
+      "name": "Diamond Creek",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0216",
+      "name": "Diamond Gypsum Quarries (North and South)",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0223",
+      "name": "Dry Creek Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0229",
+      "name": "Eagle Gysum Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0232",
+      "name": "East Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0233",
+      "name": "East Tennessee Mines (Young, Coy, Immel)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0237",
+      "name": "Elk Creek Coal Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0243",
+      "name": "Empire Gypsum Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0245",
+      "name": "Empire State Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0255",
+      "name": "Florida Canyon Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0267",
+      "name": "Four Corners",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0270",
+      "name": "Gabbs Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0277",
+      "name": "Georgia Mines",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0278",
+      "name": "Georgia-Florida Heavy Mineral Sands Deposits",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0283",
+      "name": "Gold Bar Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0286",
+      "name": "Gold Rock Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0287",
+      "name": "Golden Chest Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0295",
+      "name": "Granite Creek Underground Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0310",
+      "name": "Hastie Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0314",
+      "name": "HB Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0331",
+      "name": "Hoskins Gypsum Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0341",
+      "name": "Hycroft Mine",
+      "reason": "Mining ceased in November 2021. February 2026 technical report concerns a resource update, not a restart.",
+      "sourceUrl": "https://www.hycroftmining.com/_resources/reports/2026-Hycroft-Technical-Report-Updated-MRE.pdf?v=0.979"
+    },
+    {
+      "facilityId": "USA0345",
+      "name": "Idaho (Friday, Buffalo Gulch, Deadwood, Kimberly and Rescue Mines)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0355",
+      "name": "Ione Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0361",
+      "name": "Isabella Pearl Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0365",
+      "name": "Jerritt Canyon Mine",
+      "reason": "Operator April 2026 restart plan targets production in the second half of 2027; preparatory spending is not operating production.",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1308648/000106299326001815/exhibit99-1.htm"
+    },
+    {
+      "facilityId": "USA0368",
+      "name": "Johnson Camp Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0370",
+      "name": "Kaufman Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0380",
+      "name": "Kiewit Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0389",
+      "name": "La Sal Complex (Energy Queen, Redd Block, Beaver, La Sal, and Pandora mines)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0402",
+      "name": "Las Vegas Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0405",
+      "name": "Leer Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0406",
+      "name": "Leer South Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0416",
+      "name": "Little Valley Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0424",
+      "name": "Lost Creek Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0426",
+      "name": "Lost Hills Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0434",
+      "name": "Magnolia South Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0438",
+      "name": "Manh Choh Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0477",
+      "name": "Millrun Mine and Concord Concentrator",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0489",
+      "name": "Moab Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0502",
+      "name": "Moss Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0505",
+      "name": "Mountain Laurel Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0508",
+      "name": "Mountain Springs",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0517",
+      "name": "Nelson Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0520",
+      "name": "New Braunfels Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0531",
+      "name": "Nixon Fork Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0547",
+      "name": "Ochre Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0549",
+      "name": "Ogden Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0551",
+      "name": "Old Hickory Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0563",
+      "name": "Phoenix Mines (Phoenix and Iron Canyon)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0571",
+      "name": "Pinyon Plain Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0572",
+      "name": "Pioneer Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0619",
+      "name": "Plaster City Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0630",
+      "name": "Pumpkin Hollow Mine",
+      "reason": "Operator January 2026 permit project plan describes pre-operational phase and planned 2027 processing restart. No verified completed restart as of review.",
+      "sourceUrl": "https://www.yerington.net/AgendaCenter/ViewFile/Minutes/_02252026-49"
+    },
+    {
+      "facilityId": "USA0639",
+      "name": "Rasmussen Valley",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0646",
+      "name": "Relief Canyon Mine",
+      "reason": "Operator 2025 AIF published March 2026 identifies care and maintenance; operations suspended August 2021.",
+      "sourceUrl": "https://americas-gold.com/site/assets/files/6089/2025aif.pdf"
+    },
+    {
+      "facilityId": "USA0648",
+      "name": "Republic Pit",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0673",
+      "name": "Rodeo Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0676",
+      "name": "Rosita South Cadena ISR Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0677",
+      "name": "Ross and Kendrick Mines",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0679",
+      "name": "Rossi Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0681",
+      "name": "Rotan Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0685",
+      "name": "Ruby Hill Mines",
+      "reason": "September 22, 2026 operator release describes the Archimedes mine under construction with first production anticipated Q4. Residual historic heap leaching is not evidence of current mine extraction.",
+      "sourceUrl": "https://www.i80gold.com/i-80-gold-announces-initial-assay-results-from-mineral-point-open-pit-project-in-nevada-including-a-step-out-hole-of-1-33-g-t-au-and-39-2-g-t-ag-over-225-6-meters/"
+    },
+    {
+      "facilityId": "USA0687",
+      "name": "Safford & Lone Star Mines",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0713",
+      "name": "Shoals Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0726",
+      "name": "Smoky Canyon",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0727",
+      "name": "Soledad Mountain Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0730",
+      "name": "South Fort Meade Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0733",
+      "name": "Spor Mountain Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0737",
+      "name": "Spruce Pine HPQ Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0738",
+      "name": "Spruce Pine Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0741",
+      "name": "St. Clair Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0750",
+      "name": "Standard Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0753",
+      "name": "Stillwater Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0766",
+      "name": "Sweetwater Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0780",
+      "name": "The Mission Complex (Eisenhower, Pima, San Xavier Mines)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0784",
+      "name": "Tilden",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0786",
+      "name": "Tintic Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0797",
+      "name": "Trail Ridge/Trail Ridge South Mines",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0802",
+      "name": "Turquoise Ridge Mines (Underground and Surface)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0814",
+      "name": "Ventucopa Quarry",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0815",
+      "name": "Verde Gypsum Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0817",
+      "name": "Viburnum Mine #29",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0818",
+      "name": "Viburnum Mine #35 (Casteel Mine)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0821",
+      "name": "Virginia Division",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0828",
+      "name": "Wendover Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0832",
+      "name": "West Elk Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0834",
+      "name": "West Virginia Operations",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0840",
+      "name": "White Mesa Mine",
+      "reason": "No supported extracted commodity"
+    },
+    {
+      "facilityId": "USA0842",
+      "name": "White Springs Mine (Swift Creek Mine)",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0846",
+      "name": "Wingate Mine",
+      "reason": "No unambiguous reviewed coordinate match"
+    },
+    {
+      "facilityId": "USA0847",
+      "name": "Winkelman Quarry",
+      "reason": "No supported extracted commodity"
+    }
+  ]
+}

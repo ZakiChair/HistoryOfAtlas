@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-22",
+  "kind": "bounded-discovery-diagnostic",
+  "class": "Q876274",
+  "queryFile": "data/raw/wikidata/naval-warfare-instance-review-2026-09-21.sparql",
+  "sourceResults": 28,
+  "limitations": [
+    "This query inventories directly typed, dated naval-warfare items only; it does not establish every omitted battle.",
+    "A label or description is a triage hint, not historical approval. Campaigns and wars require no battle inclusion merely because they have dates."
+  ],
+  "records": [
+    {
+      "id": "Q175767",
+      "name": "Johnson South Reef skirmish",
+      "sourceRevision": null,
+      "status": "previously-catalogued",
+      "source": "https://www.wikidata.org/wiki/Q175767"
+    },
+    {
+      "id": "Q208127",
+      "name": "Battle of Tsushima",
+      "sourceRevision": 2540174146,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q208127"
+    },
+    {
+      "id": "Q377269",
+      "name": "Dutch–Portuguese War",
+      "sourceRevision": null,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q377269"
+    },
+    {
+      "id": "Q695497",
+      "name": "naval warfare of World War I",
+      "sourceRevision": null,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q695497"
+    },
+    {
+      "id": "Q1406399",
+      "name": "Kettle War",
+      "sourceRevision": 2419668713,
+      "status": "reviewed-hold-incident-conflict-scope",
+      "source": "https://www.wikidata.org/wiki/Q1406399",
+      "reviewNote": "Item combines the 8 October 1784 encounter and dispute through the 1785 treaty; an individual-incident identity decision is still needed.",
+      "reviewDocument": "docs/battle-naval-omissions-followup-review-2026-09-22.md"
+    },
+    {
+      "id": "Q1484069",
+      "name": "English Channel naval campaign, 1338-1339",
+      "sourceRevision": null,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q1484069"
+    },
+    {
+      "id": "Q2869902",
+      "name": "Raid on Saint-Paul",
+      "sourceRevision": 2392936364,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q2869902",
+      "reviewDocument": "docs/battle-saint-paul-review-2026-09-21.md",
+      "reviewNote": "Individual amphibious engagement established by the contemporary Royal Collection print and Ministry of Culture archaeology. Inclusion and companion start-date correction to 21 September 1809 are integrated in curated data; public rebuild is a separate step. The approximate bay anchor is retained, not certified as an exact ship position.",
+      "reviewSources": [
+        "https://militarymaps.rct.uk/napoleonic-wars-1803-15/reunion-1809-reunion-indian-ocean-french-overseas-department-21deg0600s-55deg3600e",
+        "https://archeologie.culture.gouv.fr/ocean-indien/fr/batterie-de-lembouchure"
+      ]
+    },
+    {
+      "id": "Q3365821",
+      "name": "Invasion of Île Bonaparte",
+      "sourceRevision": null,
+      "status": "previously-catalogued",
+      "source": "https://www.wikidata.org/wiki/Q3365821"
+    },
+    {
+      "id": "Q3532383",
+      "name": "Israeli naval campaign in Operation Yoav",
+      "sourceRevision": 2272917969,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q3532383"
+    },
+    {
+      "id": "Q4065200",
+      "name": "Anglo-French War of 1627–29",
+      "sourceRevision": 2511152561,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q4065200"
+    },
+    {
+      "id": "Q4200836",
+      "name": "Indo-Pakistani Naval War of 1971",
+      "sourceRevision": 2511074824,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q4200836"
+    },
+    {
+      "id": "Q4677388",
+      "name": "Action of 8 May 1941",
+      "sourceRevision": 2529525980,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q4677388"
+    },
+    {
+      "id": "Q4677407",
+      "name": "Action off Charles Island",
+      "sourceRevision": 1344295715,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q4677407"
+    },
+    {
+      "id": "Q4677409",
+      "name": "Action off James Island",
+      "sourceRevision": 1735116680,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q4677409"
+    },
+    {
+      "id": "Q4870168",
+      "name": "Battle for Lake Tanganyika",
+      "sourceRevision": 2366388614,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q4870168"
+    },
+    {
+      "id": "Q5037019",
+      "name": "Capture of HMS Penguin",
+      "sourceRevision": 1876991192,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q5037019"
+    },
+    {
+      "id": "Q5377423",
+      "name": "Engagements on Lake Huron",
+      "sourceRevision": 2538219422,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q5377423"
+    },
+    {
+      "id": "Q5975578",
+      "name": "Niihau Incident",
+      "sourceRevision": 2440505264,
+      "status": "reviewed-hold-outside-naval-engagement-scope",
+      "source": "https://www.wikidata.org/wiki/Q5975578",
+      "reviewNote": "Official accounts establish a crash, hostage-taking and civilian struggle; no opposing military fleets or formations established.",
+      "reviewDocument": "docs/battle-naval-omissions-followup-review-2026-09-22.md"
+    },
+    {
+      "id": "Q6414580",
+      "name": "Tankers War",
+      "sourceRevision": null,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q6414580"
+    },
+    {
+      "id": "Q7097513",
+      "name": "Operation Sea Dragon",
+      "sourceRevision": 2502422757,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q7097513"
+    },
+    {
+      "id": "Q11457942",
+      "name": "Battle of Teradomari",
+      "sourceRevision": 1379240030,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q11457942",
+      "reviewDocument": "docs/battle-east-asian-naval-review-2026-09-21.md",
+      "reviewNote": "Distinct ship action outside Teradomari harbour established by the Nagaoka City Science Museum. Inclusion and withdrawal of the inherited municipality coordinate are integrated in curated data; 13 July 1868 is retained. Exact offshore coordinates and complete opposing force counts remain unresolved.",
+      "reviewSources": [
+        "https://qa.city.nagaoka.niigata.jp/faq/show/1857?category_id=483&site_domain=default",
+        "https://www.city.nagaoka.niigata.jp/dpage/nagaoka400/pdf/ayumi-full.pdf"
+      ]
+    },
+    {
+      "id": "Q18920213",
+      "name": "Action of 20 November 1779",
+      "sourceRevision": 2395950971,
+      "status": "previously-catalogued",
+      "source": "https://www.wikidata.org/wiki/Q18920213"
+    },
+    {
+      "id": "Q42402335",
+      "name": "Battle of Bōno-Misaki",
+      "sourceRevision": 2543450743,
+      "status": "held-duplicate-existing-event",
+      "source": "https://www.wikidata.org/wiki/Q42402335",
+      "existingEventId": "Q379433",
+      "reviewDocument": "docs/battle-east-asian-naval-review-2026-09-21.md",
+      "reviewNote": "Japan Coast Guard evidence identifies the real 7 April 1945 attack on Yamato, but the existing Operation Ten-Go record Q379433 already projects that action. Hold a second inclusion until nonoverlapping operation/action scopes and a cross-link are established. No record, location or quantity is added.",
+      "reviewSources": [
+        "https://www.kaiho.mlit.go.jp/06kanku/uwajima/pdf/daihachi33.pdf"
+      ]
+    },
+    {
+      "id": "Q51103517",
+      "name": "Combate aeronaval de Coquimbo",
+      "sourceRevision": 1372376673,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q51103517",
+      "reviewNote": "Individual 6 September 1931 aircraft-versus-ships encounter. City coordinate withdrawn; two unquantified groups; no tactical position or force ratio invented.",
+      "reviewDocument": "docs/battle-naval-omissions-followup-review-2026-09-22.md"
+    },
+    {
+      "id": "Q99756141",
+      "name": "Naval campaign in the Indian Ocean in 1941",
+      "sourceRevision": 2520124209,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q99756141"
+    },
+    {
+      "id": "Q125480888",
+      "name": "Algerian–Portuguese naval clashes",
+      "sourceRevision": 2489104202,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q125480888"
+    },
+    {
+      "id": "Q137822090",
+      "name": "가덕도 해전",
+      "sourceRevision": 2456449100,
+      "status": "reviewed-inclusion",
+      "source": "https://www.wikidata.org/wiki/Q137822090",
+      "reviewDocument": "docs/battle-east-asian-naval-review-2026-09-21.md",
+      "reviewNote": "The AKS-linked Gadeokdo encounter is individually identified in 1597, distinct from later seventh-month operations. Inclusion, correction of 1957 to year-only 1597, and withdrawal of the inherited island coordinate are integrated in curated data. No unverified Gregorian day, exact offshore point or force/loss estimate is supplied.",
+      "reviewSources": [
+        "https://encykorea.aks.ac.kr/Article/E0000076",
+        "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_n307400"
+      ]
+    },
+    {
+      "id": "Q140700673",
+      "name": "Naval warfare of Italo-Turkish War",
+      "sourceRevision": 2546884963,
+      "status": "not-promoted-pending-individual-review",
+      "source": "https://www.wikidata.org/wiki/Q140700673"
+    }
+  ],
+  "statusUpdatedAt": "2026-09-22",
+  "statusCounts": {
+    "held-duplicate-existing-event": 1,
+    "not-promoted-pending-individual-review": 16,
+    "previously-catalogued": 3,
+    "reviewed-inclusion": 8
+  },
+  "statusCountScope": "Recomputed from these same 28 directly typed, dated source candidates only: four reviewed statuses updated; no new discovery query or candidate added. Inclusion approval does not itself establish mapping, full quantitative evidence or published-build completion."
+}

@@ -1,0 +1,2134 @@
+{
+  "matches": [
+    {
+      "occurrenceId": "usgs-occurrence:469",
+      "siteId": "historical:kennecott",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. USGS major-deposits approximate deposit location. First shipment corroborated by https://www.nps.gov/wrst/learn/historyculture/kennecott-mines-national-historic-landmark.htm. Earlier development/mining before 1911 is not inferred; temporary closure preserved."
+    },
+    {
+      "occurrenceId": "usgs-occurrence:301",
+      "siteId": "historical:sado-aikawa-gold-mine",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. USGS Sado deposit location, approximate. Gold only because silver is not among existing categories. Niigata prefecture chronology corroborates 1601 full-scale development and 1989 cessation: https://www.pref.niigata.lg.jp/site/sado-goldmine-en/sg-228.html"
+    },
+    {
+      "occurrenceId": "usgs-occurrence:1102",
+      "siteId": "historical:chuquicamata",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. 2025 is the last directly attested production year, not a closure date. No prehistoric continuity is inferred. Start of industrial exploitation corroborated by https://www.codelco.com/en/operaciones/chuquicamata/98-anos-chuquicamata"
+    },
+    {
+      "occurrenceId": "usgs-occurrence:2594",
+      "siteId": "current-uranium:rossing",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. USGS major-deposit coordinate, approximate. End year is latest attested production in the consulted report, not a closure date."
+    },
+    {
+      "occurrenceId": "usgs-occurrence:44",
+      "siteId": "current-major:greenbushes",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. USGS major-deposit coordinate, approximate. Earlier tin/tantalum operations are not assigned to lithium. Tantalum underground care-and-maintenance phases are not lithium closures. End year is latest attested production, not a closure date."
+    },
+    {
+      "occurrenceId": "usgs-occurrence:1838",
+      "siteId": "historical:kiruna-kiirunavaara-iron-mine",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. Operator-authored primary technical report hosted on MineDocs; LKAB report archive: https://lkab.mediaflowportal.com/documents/folder/231556/. Coordinate from SGU 2001 mineral map, entry 53 ORED00012, RT90 national grid northing 7533200 / easting 1684670 transformed to WGS84 (EPSG:3021 to EPSG:4326). Representative deposit point, approximate. USGS original point not reused because it is too far south. End year is latest attested production in this report, not closure. Iron and apatite have separate documented periods. Future rare-earth projects are not treated as historical extraction. Coordinate grid confirmed as RT90 in the accompanying SGU report."
+    },
+    {
+      "occurrenceId": "usgs-occurrence:2541",
+      "siteId": "historical:khouribga-phosphate-mining-district",
+      "reason": "Explicit original USGS identity from existing historical curation; current canonical curated identity retained. Approximate USGS point for the Oulad Abdoun mining district, which groups several successive workings. Earlier underground phase and recent observation are retained separately; the 1994–2023 open-pit period is left unfilled here pending a continuous operational chronology. Additional operator overview: https://www.ocpgroup.ma/en/what-we-do/industrial-operations."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00390",
+      "siteId": "fineprint:COM01209.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00524",
+      "siteId": "fineprint:COM00982.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00538",
+      "siteId": "current-major:antamina",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00632",
+      "siteId": "fineprint:COM00227.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00652",
+      "siteId": "fineprint:COM00257.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00720",
+      "siteId": "fineprint:COM01399.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00756",
+      "siteId": "fineprint:COM00603.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00848",
+      "siteId": "fineprint:COM00283.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM00998",
+      "siteId": "current-major:cerro-verde",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01048",
+      "siteId": "fineprint:COM00305.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01072",
+      "siteId": "fineprint:COM00959.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01075",
+      "siteId": "fineprint:COM01290.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01156",
+      "siteId": "fineprint:COM00212.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01255",
+      "siteId": "fineprint:COM00007.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01301",
+      "siteId": "fineprint:COM01056.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01372",
+      "siteId": "historical:chuquicamata",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01397",
+      "siteId": "fineprint:COM01188.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01403",
+      "siteId": "fineprint:COM00220.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01420",
+      "siteId": "fineprint:COM00769.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01433",
+      "siteId": "current-major:escondida",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01469",
+      "siteId": "fineprint:COM01113.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01478",
+      "siteId": "fineprint:COM00770.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01489",
+      "siteId": "fineprint:COM00694.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01656",
+      "siteId": "fineprint:COM00207.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01667",
+      "siteId": "fineprint:COM01054.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01683",
+      "siteId": "fineprint:COM00747.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01709",
+      "siteId": "fineprint:COM00382.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01755",
+      "siteId": "fineprint:COM00699.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01757",
+      "siteId": "fineprint:COM00050.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01765",
+      "siteId": "fineprint:COM01388.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01771",
+      "siteId": "fineprint:COM00547.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01773",
+      "siteId": "fineprint:COM00581.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01780",
+      "siteId": "fineprint:COM00942.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01800",
+      "siteId": "fineprint:COM01314.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01841",
+      "siteId": "fineprint:COM01116.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01932",
+      "siteId": "fineprint:COM00429.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM01949",
+      "siteId": "fineprint:COM01119.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02043",
+      "siteId": "fineprint:COM00695.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02104",
+      "siteId": "fineprint:COM00178.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02298",
+      "siteId": "fineprint:COM01311.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02348",
+      "siteId": "fineprint:COM01107.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02375",
+      "siteId": "current-major:morenci",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02612",
+      "siteId": "fineprint:COM00516.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM02788",
+      "siteId": "current-major:mountain-pass",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM03679",
+      "siteId": "fineprint:COM01101.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM03948",
+      "siteId": "fineprint:COM00264.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM03978",
+      "siteId": "fineprint:COM01103.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04068",
+      "siteId": "fineprint:COM00530.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04202",
+      "siteId": "fineprint:COM00294.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04212",
+      "siteId": "fineprint:COM01093.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04268",
+      "siteId": "fineprint:COM00133.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04358",
+      "siteId": "fineprint:COM00776.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04523",
+      "siteId": "fineprint:COM00592.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM04927",
+      "siteId": "fineprint:COM01367.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05148",
+      "siteId": "fineprint:COM00485.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05189",
+      "siteId": "mincan:197",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05201",
+      "siteId": "mincan:151",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05355",
+      "siteId": "mincan:390",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05356",
+      "siteId": "fineprint:COM00438.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05396",
+      "siteId": "mincan:723",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05410",
+      "siteId": "mincan:140",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05415",
+      "siteId": "mincan:57",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05451",
+      "siteId": "mincan:407",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05452",
+      "siteId": "mincan:138",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05458",
+      "siteId": "mincan:398",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05469",
+      "siteId": "mincan:221",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05510",
+      "siteId": "mincan:849",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05530",
+      "siteId": "fineprint:COM00972.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05630",
+      "siteId": "fineprint:COM00442.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05641",
+      "siteId": "fineprint:COM01432.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05649",
+      "siteId": "fineprint:COM01261.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05665",
+      "siteId": "fineprint:COM01000.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05672",
+      "siteId": "fineprint:COM00752.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM05997",
+      "siteId": "fineprint:COM00021.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06147",
+      "siteId": "fineprint:COM01008.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06179",
+      "siteId": "fineprint:COM00785.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06195",
+      "siteId": "fineprint:COM00224.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06231",
+      "siteId": "fineprint:COM01368.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06254",
+      "siteId": "fineprint:COM01270.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06267",
+      "siteId": "fineprint:COM00966.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06273",
+      "siteId": "fineprint:COM00300.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06275",
+      "siteId": "fineprint:COM00995.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06278",
+      "siteId": "fineprint:COM00327.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06280",
+      "siteId": "fineprint:COM00605.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06307",
+      "siteId": "fineprint:COM00315.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06308",
+      "siteId": "fineprint:COM00354.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06311",
+      "siteId": "fineprint:COM00864.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06312",
+      "siteId": "fineprint:COM00712.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06335",
+      "siteId": "fineprint:COM01296.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06349",
+      "siteId": "current-major:olympic-dam",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06351",
+      "siteId": "fineprint:COM00950.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06379",
+      "siteId": "fineprint:COM00391.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06387",
+      "siteId": "fineprint:COM00369.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06392",
+      "siteId": "fineprint:COM01295.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06415",
+      "siteId": "current-major:boddington",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06419",
+      "siteId": "fineprint:COM00922.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06433",
+      "siteId": "fineprint:COM00297.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06436",
+      "siteId": "current-major:greenbushes",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06467",
+      "siteId": "fineprint:COM01097.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06485",
+      "siteId": "fineprint:COM00758.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06532",
+      "siteId": "fineprint:COM01067.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06553",
+      "siteId": "fineprint:COM00198.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06667",
+      "siteId": "fineprint:COM01377.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06668",
+      "siteId": "fineprint:COM00862.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06675",
+      "siteId": "fineprint:COM00326.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06691",
+      "siteId": "fineprint:COM01278.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06749",
+      "siteId": "fineprint:COM00208.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06757",
+      "siteId": "fineprint:COM00484.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07240",
+      "siteId": "fineprint:COM01416.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07502",
+      "siteId": "west-africa:iduapriem",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07541",
+      "siteId": "current-major:tenke-fungurume",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07550",
+      "siteId": "fineprint:COM00876.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07559",
+      "siteId": "fineprint:COM00651.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07560",
+      "siteId": "fineprint:COM00649.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07570",
+      "siteId": "fineprint:COM00431.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07725",
+      "siteId": "fineprint:COM00953.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07754",
+      "siteId": "fineprint:COM00033.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07756",
+      "siteId": "fineprint:COM01310.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07819",
+      "siteId": "fineprint:COM00394.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07829",
+      "siteId": "fineprint:COM00344.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07833",
+      "siteId": "fineprint:COM00860.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07834",
+      "siteId": "fineprint:COM00657.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07862",
+      "siteId": "fineprint:COM00976.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07879",
+      "siteId": "fineprint:COM00110.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07902",
+      "siteId": "fineprint:COM00008.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07907",
+      "siteId": "fineprint:COM00013.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07908",
+      "siteId": "fineprint:COM00014.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07909",
+      "siteId": "fineprint:COM00015.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07910",
+      "siteId": "west-africa:akyem",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07912",
+      "siteId": "fineprint:COM00018.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07917",
+      "siteId": "fineprint:COM00024.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07918",
+      "siteId": "fineprint:COM00025.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07924",
+      "siteId": "fineprint:COM00031.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07932",
+      "siteId": "fineprint:COM00041.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07933",
+      "siteId": "fineprint:COM00042.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07938",
+      "siteId": "fineprint:COM00051.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07942",
+      "siteId": "fineprint:COM00056.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07951",
+      "siteId": "fineprint:COM00067.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07953",
+      "siteId": "fineprint:COM00069.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07956",
+      "siteId": "fineprint:COM00072.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07966",
+      "siteId": "fineprint:COM00082.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07969",
+      "siteId": "fineprint:COM00086.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07971",
+      "siteId": "fineprint:COM00088.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07978",
+      "siteId": "fineprint:COM00098.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07979",
+      "siteId": "fineprint:COM00100.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07983",
+      "siteId": "fineprint:COM00104.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07985",
+      "siteId": "fineprint:COM00106.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM07986",
+      "siteId": "fineprint:COM00107.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08005",
+      "siteId": "west-africa:bibiani",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08010",
+      "siteId": "mincan:271",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08013",
+      "siteId": "fineprint:COM00139.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08014",
+      "siteId": "fineprint:COM00140.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08027",
+      "siteId": "fineprint:COM00157.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08028",
+      "siteId": "fineprint:COM00159.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08032",
+      "siteId": "fineprint:COM00163.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08033",
+      "siteId": "fineprint:COM00164.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08034",
+      "siteId": "mincan:194",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08037",
+      "siteId": "fineprint:COM00168.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08045",
+      "siteId": "fineprint:COM00180.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08046",
+      "siteId": "fineprint:COM00181.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08050",
+      "siteId": "fineprint:COM00185.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08051",
+      "siteId": "fineprint:COM00186.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08053",
+      "siteId": "fineprint:COM00188.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08056",
+      "siteId": "fineprint:COM00192.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08058",
+      "siteId": "fineprint:COM00194.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08060",
+      "siteId": "mincan:180",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08069",
+      "siteId": "fineprint:COM00211.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08070",
+      "siteId": "fineprint:COM00213.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08073",
+      "siteId": "fineprint:COM00216.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08074",
+      "siteId": "current-major:sangaredi",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08081",
+      "siteId": "fineprint:COM00228.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08082",
+      "siteId": "fineprint:COM00229.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08083",
+      "siteId": "fineprint:COM00230.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08085",
+      "siteId": "fineprint:COM00232.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08092",
+      "siteId": "fineprint:COM00250.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08094",
+      "siteId": "west-africa:chirano",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08095",
+      "siteId": "fineprint:COM00255.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08097",
+      "siteId": "fineprint:COM00258.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08106",
+      "siteId": "fineprint:COM00269.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08109",
+      "siteId": "fineprint:COM00273.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08110",
+      "siteId": "fineprint:COM00274.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08111",
+      "siteId": "fineprint:COM00277.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08125",
+      "siteId": "fineprint:COM00299.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08130",
+      "siteId": "fineprint:COM00310.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08134",
+      "siteId": "fineprint:COM00314.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08142",
+      "siteId": "fineprint:COM00325.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08146",
+      "siteId": "fineprint:COM00331.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08148",
+      "siteId": "fineprint:COM00333.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08153",
+      "siteId": "fineprint:COM00338.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08164",
+      "siteId": "mincan:157",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08165",
+      "siteId": "fineprint:COM00352.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08175",
+      "siteId": "fineprint:COM00363.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08179",
+      "siteId": "west-africa:edikan",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08182",
+      "siteId": "fineprint:COM00372.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08186",
+      "siteId": "fineprint:COM00376.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08188",
+      "siteId": "fineprint:COM00379.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08195",
+      "siteId": "mincan:204",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08202",
+      "siteId": "fineprint:COM00396.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08203",
+      "siteId": "mincan:882",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08211",
+      "siteId": "fineprint:COM00407.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08219",
+      "siteId": "fineprint:COM00417.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08220",
+      "siteId": "fineprint:COM00418.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08222",
+      "siteId": "fineprint:COM00420.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08227",
+      "siteId": "fineprint:COM00427.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08229",
+      "siteId": "fineprint:COM00430.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08232",
+      "siteId": "fineprint:COM00436.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08234",
+      "siteId": "fineprint:COM00439.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08238",
+      "siteId": "fineprint:COM00446.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08275",
+      "siteId": "mincan:163",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08277",
+      "siteId": "current-major:gove",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08282",
+      "siteId": "fineprint:COM00498.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08284",
+      "siteId": "fineprint:COM00500.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08290",
+      "siteId": "fineprint:COM00506.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08291",
+      "siteId": "fineprint:COM00508.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08306",
+      "siteId": "fineprint:COM00533.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08308",
+      "siteId": "fineprint:COM00535.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08312",
+      "siteId": "fineprint:COM00541.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08325",
+      "siteId": "fineprint:COM00560.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08326",
+      "siteId": "fineprint:COM00561.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08327",
+      "siteId": "fineprint:COM00562.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08328",
+      "siteId": "fineprint:COM00564.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08342",
+      "siteId": "fineprint:COM00578.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08349",
+      "siteId": "fineprint:COM00586.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08351",
+      "siteId": "fineprint:COM00588.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08352",
+      "siteId": "fineprint:COM00589.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08357",
+      "siteId": "gem-giomt:P100000128277",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08371",
+      "siteId": "current-major:kansanshi",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08375",
+      "siteId": "fineprint:COM00625.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08382",
+      "siteId": "fineprint:COM00629.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08384",
+      "siteId": "fineprint:COM00631.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08387",
+      "siteId": "fineprint:COM00634.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08388",
+      "siteId": "fineprint:COM00635.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08395",
+      "siteId": "fineprint:COM00642.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08397",
+      "siteId": "fineprint:COM00645.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08399",
+      "siteId": "fineprint:COM00647.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08400",
+      "siteId": "fineprint:COM00648.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08405",
+      "siteId": "fineprint:COM00655.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08416",
+      "siteId": "fineprint:COM00668.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08419",
+      "siteId": "fineprint:COM00671.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08421",
+      "siteId": "fineprint:COM00673.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08430",
+      "siteId": "fineprint:COM00684.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08435",
+      "siteId": "fineprint:COM00689.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08436",
+      "siteId": "fineprint:COM00690.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08438",
+      "siteId": "fineprint:COM00692.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08439",
+      "siteId": "fineprint:COM00693.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08440",
+      "siteId": "fineprint:COM00696.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08442",
+      "siteId": "fineprint:COM00698.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08446",
+      "siteId": "mincan:171",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08458",
+      "siteId": "fineprint:COM00720.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08460",
+      "siteId": "current-major:lihir",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08464",
+      "siteId": "fineprint:COM00729.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08470",
+      "siteId": "fineprint:COM00736.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08474",
+      "siteId": "fineprint:COM00741.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08475",
+      "siteId": "fineprint:COM00743.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08476",
+      "siteId": "fineprint:COM00744.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08478",
+      "siteId": "fineprint:COM00746.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08482",
+      "siteId": "fineprint:COM00751.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08484",
+      "siteId": "fineprint:COM00754.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08491",
+      "siteId": "fineprint:COM00766.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08495",
+      "siteId": "fineprint:COM00773.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08497",
+      "siteId": "fineprint:COM00775.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08498",
+      "siteId": "fineprint:COM00777.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08500",
+      "siteId": "fineprint:COM00779.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08501",
+      "siteId": "fineprint:COM00780.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08508",
+      "siteId": "mincan:227",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08509",
+      "siteId": "fineprint:COM00790.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08510",
+      "siteId": "fineprint:COM00791.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08511",
+      "siteId": "fineprint:COM00792.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08517",
+      "siteId": "fineprint:COM00801.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08536",
+      "siteId": "fineprint:COM00822.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08537",
+      "siteId": "fineprint:COM00824.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08540",
+      "siteId": "mincan:160",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08542",
+      "siteId": "fineprint:COM00829.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08544",
+      "siteId": "fineprint:COM00831.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08547",
+      "siteId": "mincan:146",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08550",
+      "siteId": "fineprint:COM00838.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08552",
+      "siteId": "west-africa:morila",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08553",
+      "siteId": "fineprint:COM00844.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08555",
+      "siteId": "fineprint:COM00846.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08557",
+      "siteId": "fineprint:COM00849.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08570",
+      "siteId": "mincan:756",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08579",
+      "siteId": "fineprint:COM00886.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08582",
+      "siteId": "fineprint:COM00889.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08592",
+      "siteId": "fineprint:COM00902.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08594",
+      "siteId": "fineprint:COM00906.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08596",
+      "siteId": "fineprint:COM00910.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08602",
+      "siteId": "fineprint:COM00916.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08603",
+      "siteId": "fineprint:COM00917.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08612",
+      "siteId": "fineprint:COM00928.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08616",
+      "siteId": "west-africa:obuasi",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08622",
+      "siteId": "fineprint:COM00940.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08624",
+      "siteId": "fineprint:COM00943.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08628",
+      "siteId": "mincan:314",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08632",
+      "siteId": "fineprint:COM00954.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08633",
+      "siteId": "current-major:spence",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08634",
+      "siteId": "fineprint:COM00956.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08637",
+      "siteId": "fineprint:COM00960.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08641",
+      "siteId": "fineprint:COM00964.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08648",
+      "siteId": "fineprint:COM00973.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08653",
+      "siteId": "fineprint:COM00979.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08659",
+      "siteId": "fineprint:COM00990.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08662",
+      "siteId": "fineprint:COM00997.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08666",
+      "siteId": "fineprint:COM01003.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08711",
+      "siteId": "fineprint:COM01051.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08714",
+      "siteId": "fineprint:COM01062.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08720",
+      "siteId": "fineprint:COM01071.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08721",
+      "siteId": "fineprint:COM01072.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08723",
+      "siteId": "mincan:810",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08741",
+      "siteId": "fineprint:COM01102.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08742",
+      "siteId": "fineprint:COM01104.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08743",
+      "siteId": "west-africa:sadiola",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08747",
+      "siteId": "fineprint:COM01112.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08755",
+      "siteId": "fineprint:COM01123.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08757",
+      "siteId": "fineprint:COM01126.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08759",
+      "siteId": "fineprint:COM01128.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08760",
+      "siteId": "fineprint:COM01129.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08762",
+      "siteId": "fineprint:COM01132.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08767",
+      "siteId": "fineprint:COM01138.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08769",
+      "siteId": "fineprint:COM01141.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08770",
+      "siteId": "mincan:428",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08777",
+      "siteId": "current-major:sentinel",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08778",
+      "siteId": "fineprint:COM01151.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08780",
+      "siteId": "fineprint:COM01153.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08784",
+      "siteId": "fineprint:COM01158.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08786",
+      "siteId": "fineprint:COM01164.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08787",
+      "siteId": "fineprint:COM01166.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08789",
+      "siteId": "fineprint:COM01171.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08800",
+      "siteId": "fineprint:COM01183.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08801",
+      "siteId": "fineprint:COM01184.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08802",
+      "siteId": "fineprint:COM01185.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08807",
+      "siteId": "west-africa:siguiri",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08809",
+      "siteId": "mincan:210",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08811",
+      "siteId": "fineprint:COM01195.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08813",
+      "siteId": "fineprint:COM01197.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08816",
+      "siteId": "fineprint:COM01200.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08821",
+      "siteId": "fineprint:COM01205.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08824",
+      "siteId": "fineprint:COM01208.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08828",
+      "siteId": "fineprint:COM01215.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08840",
+      "siteId": "fineprint:COM01230.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08850",
+      "siteId": "fineprint:COM01241.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08855",
+      "siteId": "fineprint:COM01248.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08858",
+      "siteId": "fineprint:COM01253.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08860",
+      "siteId": "fineprint:COM01255.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08862",
+      "siteId": "fineprint:COM01258.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08863",
+      "siteId": "fineprint:COM01260.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08867",
+      "siteId": "fineprint:COM01265.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08868",
+      "siteId": "fineprint:COM01266.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08869",
+      "siteId": "fineprint:COM01268.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08873",
+      "siteId": "fineprint:COM01275.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08877",
+      "siteId": "fineprint:COM01283.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08879",
+      "siteId": "fineprint:COM01286.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08882",
+      "siteId": "west-africa:tongon",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08888",
+      "siteId": "fineprint:COM01300.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08889",
+      "siteId": "fineprint:COM01301.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08895",
+      "siteId": "fineprint:COM01308.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08899",
+      "siteId": "fineprint:COM01316.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08902",
+      "siteId": "fineprint:COM01320.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08913",
+      "siteId": "fineprint:COM01331.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08927",
+      "siteId": "fineprint:COM01350.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08930",
+      "siteId": "current-major:weipa",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08937",
+      "siteId": "fineprint:COM01366.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08943",
+      "siteId": "fineprint:COM01375.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08954",
+      "siteId": "west-africa:yatela",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08958",
+      "siteId": "fineprint:COM01403.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08962",
+      "siteId": "fineprint:COM01410.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08967",
+      "siteId": "fineprint:COM01418.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08969",
+      "siteId": "fineprint:COM01421.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08970",
+      "siteId": "fineprint:COM01423.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM08972",
+      "siteId": "fineprint:COM01425.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM12841",
+      "siteId": "gem-giomt:P100000128219",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM12871",
+      "siteId": "gem-giomt:P100000128258",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM12879",
+      "siteId": "gem-giomt:P100000128275",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13271",
+      "siteId": "west-africa:agbaou",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13301",
+      "siteId": "fineprint:COM00054.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13309",
+      "siteId": "fineprint:COM00072.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13338",
+      "siteId": "mincan:173",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13349",
+      "siteId": "mincan:216",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13365",
+      "siteId": "mincan:478",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13398",
+      "siteId": "fineprint:COM00285.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13400",
+      "siteId": "mincan:518",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13415",
+      "siteId": "mincan:195",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13444",
+      "siteId": "west-africa:essakane",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13450",
+      "siteId": "west-africa:fekola",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13474",
+      "siteId": "mincan:119",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13482",
+      "siteId": "west-africa:gounkoto",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13522",
+      "siteId": "west-africa:hounde",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13548",
+      "siteId": "mincan:154",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13549",
+      "siteId": "west-africa:ity",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13615",
+      "siteId": "mincan:749",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13619",
+      "siteId": "fineprint:COM00708.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13629",
+      "siteId": "fineprint:COM00739.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13635",
+      "siteId": "mincan:591",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13638",
+      "siteId": "west-africa:mana",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13662",
+      "siteId": "mincan:881",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13686",
+      "siteId": "mincan:525",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13690",
+      "siteId": "west-africa:nampala",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13695",
+      "siteId": "mincan:190",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13722",
+      "siteId": "current-major:oyu-tolgoi",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13734",
+      "siteId": "fineprint:COM00971.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13775",
+      "siteId": "mincan:207",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13786",
+      "siteId": "west-africa:sabodala-massawa",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13841",
+      "siteId": "west-africa:syama",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13848",
+      "siteId": "west-africa:tarkwa",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13867",
+      "siteId": "fineprint:COM01294.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13913",
+      "siteId": "west-africa:yanfolila",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM13926",
+      "siteId": "mincan:522",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM14036",
+      "siteId": "mincan:415",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM14356",
+      "siteId": "fineprint:COM00904.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM14596",
+      "siteId": "mincan:214",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM14691",
+      "siteId": "fineprint:COM00664.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM14722",
+      "siteId": "fineprint:COM00035.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM17365",
+      "siteId": "fineprint:COM00080.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM17436",
+      "siteId": "fineprint:COM00762.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM17437",
+      "siteId": "fineprint:COM00150.00",
+      "reason": "Same normalized primary mine name and coordinates within 10 km; existing independently sourced coordinates retained. Previously reviewed catalogue identity; only knowledge is appended, not activity."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM11663",
+      "siteId": "gcmt:M4625",
+      "reason": "Reviewed exact primary name CCU Patterson Strip Mine, same United States location with coincident published coordinates. Select the exact raw name/point identity rather than the second nearby normalized-name candidate gcmt:M7070. Appends catalogue knowledge only; no activity or GEM-to-GEM merge inferred."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM12422",
+      "siteId": "gcmt:M5931",
+      "reason": "Reviewed exact raw name Deep Mine #16 and coincident published coordinates. The similarly normalized Deep Mine 16 (gcmt:M5933) is 5.24 km away and is not merged. Appends catalogue knowledge only."
+    }
+  ],
+  "exclusions": [
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06469",
+      "reason": "Known inconsistent identity: labeled Rosebery while location and Group Names identify Renison Bell. Excluded until a primary correction resolves this record."
+    },
+    {
+      "occurrenceId": "icmm-occurrence:ICMM06878",
+      "reason": "Known incorrect published Priargunsky point [119.071695,50.35562] is a town about 80 km from the uranium mine; exclude instead of inventing a coordinate correction."
+    }
+  ],
+  "geographicScreen": {
+    "source": "Natural Earth 1:110m admin-0 geometry",
+    "toleranceKm": 40,
+    "rule": "Country polygons or boundary distance within40km screen coarse catalogue coordinates; unsupported islands and offshore points remain omitted pending review. No coordinate is moved or inferred. Historical source country labels Korean Peninsula, Serbia and Montenegro, Somalia are checked against their constituent/successor polygons; source labels are retained."
+  }
+}

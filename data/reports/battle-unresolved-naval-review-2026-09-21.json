@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-21",
+  "scope": "Two remaining mapped date-incompatible naval records. Bounded research only; no repository or generated-data changes. No strength/loss estimates assigned.",
+  "proposedEquipmentAssignments": 0,
+  "proposedMetadataCorrections": 0,
+  "records": {
+    "Q3456346": {
+      "decision": "unresolved-equipment; retain existing record and no forced model assignment",
+      "expected": {
+        "start": {
+          "year": 1865,
+          "month": 11,
+          "day": 17
+        },
+        "medium": "naval",
+        "participantIds": [
+          "Q298",
+          "Q3399982"
+        ]
+      },
+      "equipmentPatch": null,
+      "metadataPatch": null,
+      "participantProfilePatch": null,
+      "findings": [
+        "The naval action itself has plausible bibliographic leads, but no event-specific contemporary account was successfully inspected in this bounded review.",
+        "The apparent institutional corroboration in Puerto del Tomé: Antología Histórica, printed p.46, explicitly cites Spanish Wikipedia for this section. It is circular evidence and must not be promoted to an independent primary review.",
+        "That unverified lead describes Independencia as a steam tug and its opponent as an armed boat dispatched by Resolución. It does not establish a corvette, ironclad or powered Spanish gunboat. Do not depict the parent frigate as the captured launch.",
+        "Existing small-steam-gunboat requires screw propulsion/armed yacht evidence; paddle-steamer requires sidewheels. Neither is established here. Existing troop-transport model is a different function and dated 1904; do not extend merely to fill the gap."
+      ],
+      "sources": [
+        {
+          "url": "https://www.archivohistoricoconcepcion.cl/wp-content/uploads/2022/05/puertodeltome_antologiahistorica.pdf#page=46",
+          "role": "rejected-independent-corroboration",
+          "note": "Printed p.46 explicitly attributes this section to Wikipedia."
+        },
+        {
+          "url": "https://www.armada.cl/noticias-navales/140-aniversario-del-combate-naval-de-papudo",
+          "role": "institutional-context-only",
+          "note": "Lists Independencia among steamers in 1865; does not establish this Tomé action or hull/propulsion details."
+        },
+        {
+          "url": "https://www.museovicunamackenna.gob.cl/publicaciones/historia-de-la-guerra-de-chile-con-espana-de-1863-1866",
+          "role": "future-primary-document-lead",
+          "note": "Museum publishes Vicuña Mackenna 1883 adaptation of Novo y Colson; listing inspected, large PDF not inspected."
+        },
+        {
+          "url": "https://query.nytimes.com/mem/archive-free/pdf?res=990DE0DE153DE63ABC4953DFB766838D679FDE",
+          "role": "unavailable-contemporary-news-lead",
+          "note": "Referenced 1866-01-01 newspaper archive PDF could not be opened. No claim based on its contents."
+        }
+      ],
+      "nextEvidenceNeeded": "Accessible contemporary capture report plus tug propulsion/hull description and launch design; likely requires separate modest steam-tug and armed open-launch assets, only after source review.",
+      "quantitiesChanged": false
+    },
+    "Q126901559": {
+      "decision": "classification-review-hold-recommended; do not animate as opposing armies without further evidence",
+      "expected": {
+        "start": {
+          "year": 1878
+        },
+        "medium": "naval",
+        "participantIds": [
+          "Q34",
+          "Q106991"
+        ],
+        "coords": [
+          -174,
+          66
+        ]
+      },
+      "equipmentPatch": null,
+      "metadataPatch": null,
+      "participantProfilePatch": null,
+      "findings": [
+        "The English article URL now redirects to Vega Expedition. This is a discovery warning, not the basis for exclusion.",
+        "Forum navale 67 pp. 19–20 places the first encounter in early September on the western peninsula, before wintering, and quotes a rifle discharge from Sven Andersson’s diary. It establishes neither organized Chukchi combatants nor a Swedish naval battle.",
+        "Nordenskiöld’s primary memoir vol. I p. 430 dates a first encounter off Cape Chelagskoj to 6 September 1878 and describes visitors including women and children. His account and the diary differ on the boats; do not assert they describe an identical instant or derive exact combat counts.",
+        "Memoir vol. I p. 8 says permission for the naval flag was refused; Vega sailed under the Swedish Yacht Club flag. The vessel description gives a barque rig and auxiliary engine. That does not justify a combat corvette.",
+        "Keep ethnic-group Q106991 unknown; no source supports promoting the entire people to military-unit. Existing inherited peninsula coordinate is not a verified encounter site. The 1878 year is compatible; this is a classification/model gap, not a demonstrated wrong year."
+      ],
+      "sources": [
+        {
+          "url": "https://sjohistoriskasamfundet.se/wp-content/uploads/2017/08/fn67-hag.pdf#page=21",
+          "role": "institutional-study-of-primary-diaries",
+          "note": "Åsa Olovsson, Forum navale 67 (2011), printed pp. 19–20; note 27 on printed p. 45 cites Sven Andersson diary p. 18."
+        },
+        {
+          "url": "https://www.gutenberg.org/files/24365/24365-h/24365-h.htm#v1page430",
+          "role": "primary-account",
+          "note": "A. E. Nordenskiöld, The Voyage of the Vega Round Asia and Europe, 1881, English translation, vol. I p. 430."
+        },
+        {
+          "url": "https://www.gutenberg.org/files/24365/24365-h/24365-h.htm#v1page8",
+          "role": "primary-ship-status",
+          "note": "Scientific expedition ship status; no equipment assignment proposed."
+        },
+        {
+          "url": "https://soa.ub.gu.se/polarportalen/vega-expeditionen-genom-nordostpassagen-1878-1880",
+          "role": "university-background",
+          "note": "Gothenburg University Library expedition overview, naval crew and scientific purpose."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Skirmish_at_the_Chukchi_Peninsula",
+          "role": "redirect-discovery-only",
+          "note": "Now redirects to Vega Expedition; not treated as historical authority."
+        }
+      ],
+      "nextEvidenceNeeded": "Inspect Andersson original diary p. 18 and independent corroboration before keeping a separately classified military engagement. If a noncombat cultural encounter, exclude from battle corpus with explicit documented review rather than invent forces or warship models.",
+      "quantitiesChanged": false
+    }
+  },
+  "cachedSources": [
+    {
+      "file": "/tmp/historyofatlas-two-naval-review/vega-nordenskiold-1881.html",
+      "url": "https://www.gutenberg.org/files/24365/24365-h/24365-h.htm",
+      "sha256": "2a3207c5f7adb6bcd071c3464815d4d3f574b623286064cc3a7824b116c417e6",
+      "note": "Primary expedition leader memoir, 1881 English translation; vol. I pp. 8 and430; ship description in introduction. Public-domain historical text."
+    },
+    {
+      "file": "/tmp/historyofatlas-two-naval-review/vega-olovsson-forum-navale-67-2011.pdf",
+      "url": "https://sjohistoriskasamfundet.se/wp-content/uploads/2017/08/fn67-hag.pdf",
+      "sha256": "7903920f119c4399e47cfbeaca9c01b9e5b0eff43f4bb5bca384e3fe2fdeabc7",
+      "note": "Swedish Maritime History Society scholarly journal, Forum navale 67 (2011), Åsa Olovsson, pp. 19–20 and45 note 27. Secondary study quoting Sven Andersson’s diary, p. 18; archive copy of diary itself not inspected."
+    },
+    {
+      "file": "/tmp/historyofatlas-two-naval-review/vega-omk-summary.pdf",
+      "url": "https://omk.kulturhotell.se/files/original/bb3e705c047bf6b67e70afacf9ef4eae.pdf",
+      "sha256": "9cc4f9b08d541cc356873d64131005c95c1ecbde527d24ec66f7574b3d7c0709",
+      "note": "Expedition overview; background only, not evidence of opposing combatants."
+    },
+    {
+      "file": "/tmp/historyofatlas-two-naval-review/novo-colson-1882-djvu.txt",
+      "url": "https://archive.org/download/historiadelague00colsgoog/historiadelague00colsgoog_djvu.txt",
+      "sha256": "1b90ea37ad1a7a5ab34e6f0d951c75dab89b4f5b3cf2be4da1a9473eee76702b",
+      "note": "Historical Spanish naval account, 1882, OCR. Targeted terms did not locate the Tomé capture; no absence claim because OCR is imperfect."
+    }
+  ]
+}

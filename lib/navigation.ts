@@ -1,8 +1,11 @@
 import { useAtlasStore } from './store';
 import type { HistoricalEvent, Campaign } from './schema';
 import { getEvent } from './data-client';
+import { focusBattle } from './battles/navigation';
+import { isBattleEventType } from './event-visibility';
 
-type NavigableEvent = Pick<HistoricalEvent, 'id' | 'start' | 'coords'>;
+type NavigableEvent = Pick<HistoricalEvent, 'id' | 'start' | 'coords'> &
+  Partial<Pick<HistoricalEvent, 'type'>>;
 
 /** A detail/dialog owns one navigator so later choices supersede earlier network replies. */
 export function createEventNavigation(load: (id: string) => Promise<NavigableEvent> = getEvent) {
@@ -51,7 +54,13 @@ export function openEvent(
   options: { preserveContext?: boolean; showDetails?: boolean } = {},
 ) {
   const state = useAtlasStore.getState();
+  if (state.battleMode && isBattleEventType(event.type)) {
+    focusBattle(event);
+    return;
+  }
   state.patchState({
+    battleMode: false,
+    ...(isBattleEventType(event.type) ? { battlesVisible: true } : {}),
     year: event.start.year,
     selectedEvent: options.showDetails === false ? null : event.id,
     selectedEntity: null,

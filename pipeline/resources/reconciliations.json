@@ -1,0 +1,164 @@
+[
+  {
+    "duplicateId": "mincan:772",
+    "canonicalId": "historical:britannia-copper-mine",
+    "mode": "replace",
+    "reason": "Same Britannia mine/operator. The MinCan coordinate is 26.6 km from the independently located concentrator and its 1905–1974 lifetime hides the documented 1958 suspension. Keep the precise provincial chronology; do not invent the unreviewed restart phase.",
+    "sourceUrl": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1958.pdf"
+  },
+  {
+    "duplicateId": "gem-giomt:P100000128628",
+    "canonicalId": "historical:kiruna-kiirunavaara-iron-mine",
+    "mode": "append-observations",
+    "fromYear": 2024,
+    "reason": "GEM LKAB Kirrunavarra and LKAB Kiirunavaara are the same iron mine, with coordinates 0.98 km apart. Retain the historical iron phase and separately dated 1985–1988 phosphate output; only append the newer iron attestation. Nearby Rektorn remains a separate mine.",
+    "sourceUrl": "https://www.gem.wiki/w/index.php?oldid=1044057"
+  },
+  {
+    "duplicateId": "fineprint:COM00937.00",
+    "canonicalId": "current-major:olympic-dam",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Only the explicitly described FY2025 operating year is added. Copper South Australia combines several mines; its aggregate production quantities are not assigned to Olympic Dam. Year ends 30 June.",
+    "sourceUrl": "https://www.bhp.com/ar2025"
+  },
+  {
+    "duplicateId": "fineprint:COM00048.00",
+    "canonicalId": "current-major:antamina",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. FY2025 ends 30 June. Only copper/zinc are assigned to this new observation; historical molybdenum periods are retained independently.",
+    "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf"
+  },
+  {
+    "duplicateId": "fineprint:COM01355.00",
+    "canonicalId": "current-major:weipa",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5"
+  },
+  {
+    "duplicateId": "fineprint:COM00491.00",
+    "canonicalId": "current-major:gove",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5"
+  },
+  {
+    "duplicateId": "fineprint:COM00217.00",
+    "canonicalId": "current-major:sangaredi",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5"
+  },
+  {
+    "duplicateId": "fineprint:COM00840.00",
+    "canonicalId": "current-major:morenci",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm"
+  },
+  {
+    "duplicateId": "fineprint:COM00233.00",
+    "canonicalId": "current-major:cerro-verde",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm"
+  },
+  {
+    "duplicateId": "fineprint:COM00151.00",
+    "canonicalId": "current-major:boddington",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/"
+  },
+  {
+    "duplicateId": "fineprint:COM00190.00",
+    "canonicalId": "current-major:cadia",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/"
+  },
+  {
+    "duplicateId": "fineprint:COM00725.00",
+    "canonicalId": "current-major:lihir",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/"
+  },
+  {
+    "duplicateId": "fineprint:COM00618.00",
+    "canonicalId": "current-major:kansanshi",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/"
+  },
+  {
+    "duplicateId": "fineprint:COM01150.00",
+    "canonicalId": "current-major:sentinel",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/"
+  },
+  {
+    "duplicateId": "fineprint:COM01273.00",
+    "canonicalId": "current-major:tenke-fungurume",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. The combined TFM/KFM production totals are not assigned to TFM alone. Only the site-specific 2025 mining/operating attestation is added.",
+    "sourceUrl": "https://en.cmoc.com/uploadfile/attachment/CMOCEN2025ESG2026033010011000.pdf"
+  },
+  {
+    "duplicateId": "historical:greenbushes-lithium-mine",
+    "canonicalId": "current-major:greenbushes",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm"
+  },
+  {
+    "duplicateId": "mincan:208",
+    "canonicalId": "current-major:cigar-lake",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+    "sourceUrl": "https://www.cameco.com/invest/financial-information/annual-reports/2025"
+  },
+  {
+    "duplicateId": "mincan:510",
+    "canonicalId": "current-major:mcarthur-river",
+    "mode": "append-observations",
+    "reason": "Reviewed identity for the same mine. Keep all individually sourced earlier periods and add only recent operator observations, without interpolating unobserved years. Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. The reported McArthur River/Key Lake output is positioned at the uranium mine, not the separate Key Lake mill; do not confuse the Australian McArthur River zinc mine.",
+    "sourceUrl": "https://www.cameco.com/invest/financial-information/annual-reports/2025"
+  },
+  {
+    "duplicateId": "fineprint:COM00397.00",
+    "canonicalId": "current-major:escondida",
+    "mode": "append-observations",
+    "reason": "Recovered FINEPRINT mine production matches the already curated named operation and coordinate. Keep the older dated evidence alongside recent operator observations, without interpolating gaps.",
+    "sourceUrl": "https://zenodo.org/records/7369478"
+  },
+  {
+    "duplicateId": "fineprint:COM00496.00",
+    "canonicalId": "current-major:grasberg",
+    "mode": "append-observations",
+    "reason": "Recovered FINEPRINT mine production matches the already curated named operation and coordinate. Keep the older dated evidence alongside recent operator observations, without interpolating gaps.",
+    "sourceUrl": "https://zenodo.org/records/7369478"
+  },
+  {
+    "duplicateId": "fineprint:COM00949.00",
+    "canonicalId": "current-major:oyu-tolgoi",
+    "mode": "append-observations",
+    "reason": "Recovered FINEPRINT mine production matches the already curated named operation and coordinate. Keep the older dated evidence alongside recent operator observations, without interpolating gaps.",
+    "sourceUrl": "https://zenodo.org/records/7369478"
+  },
+  {
+    "duplicateId": "fineprint:COM00872.00",
+    "canonicalId": "current-major:murrin-murrin",
+    "mode": "append-observations",
+    "reason": "Recovered FINEPRINT mine production matches the already curated named operation and coordinate. Keep the older dated evidence alongside recent operator observations, without interpolating gaps.",
+    "sourceUrl": "https://zenodo.org/records/7369478"
+  },
+  {
+    "duplicateId": "fineprint:COM00392.00",
+    "canonicalId": "historical:ranger",
+    "mode": "replace",
+    "reason": "Same Ranger uranium mine. The primary pit-level chronology preserves the separate extraction phases and excludes 2013–2021 stockpile processing; later reported commodity production must not reopen the mine.",
+    "sourceUrl": "https://www.energyres.com.au/about/history/"
+  }
+]

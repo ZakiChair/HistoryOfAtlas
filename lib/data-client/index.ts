@@ -20,6 +20,10 @@ export type DataManifest = {
 };
 
 const cache = new Map<string, Promise<unknown>>();
+/** A rejected schema is not a usable cache entry even when the HTTP request succeeded. */
+export function invalidateJson(url: string): void {
+  cache.delete(url);
+}
 export function readJson<T>(url: string): Promise<T> {
   let promise = cache.get(url);
   if (!promise) {

@@ -7,6 +7,7 @@ import { EVENT_TYPES, REGION_IDS } from '@/lib/types';
 import { ERAS } from '@/lib/eras';
 import { getEventsInRange } from '@/lib/data-client';
 import { temporalWindow } from '@/lib/map-time';
+import { isEventLayerVisible } from '@/lib/event-visibility';
 import type { HistoricalEvent } from '@/lib/schema';
 import { EventIcon } from '../ui/EventIcon';
 
@@ -17,6 +18,7 @@ export default function Filters() {
     range = useAtlasStore((s) => s.range);
   const speed = useAtlasStore((s) => s.speed),
     playing = useAtlasStore((s) => s.playing);
+  const battlesVisible = useAtlasStore((s) => s.battlesVisible);
   const { locale, t } = useI18n();
   const [events, setEvents] = useState<HistoricalEvent[]>([]);
   const [participantsStatus, setParticipantsStatus] = useState<'loading' | 'ready' | 'error'>(
@@ -47,6 +49,7 @@ export default function Filters() {
   const participants = useMemo(() => {
     const names = new Map<string, string>();
     for (const event of events) {
+      if (!isEventLayerVisible(event.type, battlesVisible)) continue;
       if (event.start.year > to || (event.end?.year ?? event.start.year) < from) continue;
       for (const participant of event.belligerents) {
         const existing = names.get(participant.entityId);
@@ -55,7 +58,7 @@ export default function Filters() {
       }
     }
     return [...names].sort((a, b) => a[1].localeCompare(b[1], locale));
-  }, [events, from, to, locale]);
+  }, [events, from, to, locale, battlesVisible]);
   return (
     <section className="filters-panel" aria-label={t('Filtres', 'Filters')}>
       <div className="section-heading">

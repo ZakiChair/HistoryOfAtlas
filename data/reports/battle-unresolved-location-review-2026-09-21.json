@@ -1,0 +1,647 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-21",
+  "coverageSnapshot": {
+    "land-event-in-open-ocean": 11,
+    "broad-place-coordinate": 14
+  },
+  "approvedMetadataCount": 0,
+  "scope": "All 25 current exclusions inventoried; seven targeted source investigations, one previously unresolved case deliberately not reopened, 17 catalogue-only screens. No source counts, dates, media, coordinates, or live records were changed.",
+  "records": [
+    {
+      "battleId": "Q4090333",
+      "name": {
+        "en": "Sangi-Mughan Battle"
+      },
+      "expected": {
+        "start": null,
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "missing-date",
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q25247871",
+      "name": {
+        "fr": "bataille de Constantinople",
+        "en": "Battle of Constantinople"
+      },
+      "expected": {
+        "start": {
+          "year": 922
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q97276810",
+      "name": {
+        "en": "Air War in Taiwan"
+      },
+      "expected": {
+        "start": {
+          "year": 1949
+        },
+        "end": {
+          "year": 1967,
+          "month": 1,
+          "day": 13
+        },
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q710193",
+      "name": {
+        "fr": "bataille de l'archipel des Tachen",
+        "en": "Battle of Dachen Archipelago"
+      },
+      "expected": {
+        "start": {
+          "year": 1955,
+          "month": 1,
+          "day": 19
+        },
+        "end": {
+          "year": 1955,
+          "month": 2,
+          "day": 26
+        },
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q15728772",
+      "name": {
+        "fr": "bataille de la mer Ligure",
+        "en": "Battle of the Ligurian Sea"
+      },
+      "expected": {
+        "start": {
+          "year": 1945,
+          "month": 3,
+          "day": 18
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "hold",
+      "finding": "The cached event has its own offshore point [9, 43.5] and generic battle class, but remains medium land. Naval classification is an obvious research lead; a reviewed institutional coordinate basis for this rounded point was not established in the bounded search, so no medium/coordinate mutation is proposed.",
+      "sources": [],
+      "nextEvidenceNeeded": "Official Lookout/Meteor action report supporting naval classification and reported engagement position."
+    },
+    {
+      "battleId": "Q131314623",
+      "name": {
+        "en": "Battle of Beadala"
+      },
+      "expected": {
+        "start": {
+          "year": 1538,
+          "month": 2,
+          "day": 18
+        },
+        "end": {
+          "year": 1538,
+          "month": 2,
+          "day": 20
+        },
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q109432680",
+      "name": {
+        "en": "Pertempuran Selat Bali"
+      },
+      "expected": {
+        "start": null,
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "missing-date",
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q2604253",
+      "name": {
+        "fr": "incident du Golfe de Syrte",
+        "en": "Gulf of Sidra incident"
+      },
+      "expected": {
+        "start": {
+          "year": 1981,
+          "month": 8,
+          "day": 19
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "hold",
+      "finding": "The Canadian defence history locates the 1981 aerial engagement roughly 60 miles off the Libyan coast. Distance from an unspecified coast point does not establish latitude/longitude. No Gulf of Sidra centroid is promoted.",
+      "sources": [
+        {
+          "label": "Canadian Department of National Defence, Peacekeeping 1815 toToday",
+          "url": "https://www.canada.ca/content/dam/themes/defence/caf/militaryhistory/dhh/general/book-1995-peacekeeping-1815-today.pdf"
+        }
+      ],
+      "nextEvidenceNeeded": "Dated US Navy air engagement report with coordinates or georeferenced track map."
+    },
+    {
+      "battleId": "Q40888983",
+      "name": {
+        "en": "Battle of Lake Maeotis"
+      },
+      "expected": {
+        "start": {
+          "year": -308
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q3555607",
+      "name": {
+        "en": "Battle of Ecbatana"
+      },
+      "expected": {
+        "start": {
+          "year": -128
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "not-reopened",
+      "finding": "Already audited unresolved Ecbatana case; no new institutional battlefield coordinate evidence found in this bounded pass.",
+      "sources": []
+    },
+    {
+      "battleId": "Q116283575",
+      "name": {
+        "en": "Iran–U.S. naval skirmish on 8 October 1987"
+      },
+      "expected": {
+        "start": {
+          "year": 1987,
+          "month": 10,
+          "day": 8
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "hold",
+      "finding": "SOCOM history identifies the 8 October 1987 firefight at Middle Shoals Buoy. The US counter-memorial paragraph 1.50 supports the event near Farsi Island; map 1.6 (PDFpage 35) explicitly labels the buoy with a latitude/longitude graticule, but was prepared to show the 24 July Bridgeton mining and provides no numeric coordinates for the buoy itself. It is a litigant map, not a Court finding. No coordinate has been read to false precision or borrowed from Farsi Island. The closer new lead is the contemporary CENTCOM9 October 1987 cable, Exhibit 78, cited by paragraph 1.50.",
+      "sources": [
+        {
+          "label": "US Special Operations Command history, Operation Earnest Will, hosted by National Security Archive, PDFpage 16",
+          "url": "https://nsarchive2.gwu.edu/NSAEBB/NSAEBB63/doc2.pdf"
+        },
+        {
+          "label": "ICJ Oil Platforms case: US counter-memorial and counter-claim, 23 June 1997, para 1.50/map 1.6 (PDFpages 52/35)",
+          "url": "https://icj-web.leman.un-icc.cloud/sites/default/files/case-related/90/8632.pdf"
+        },
+        {
+          "label": "National Defense University, Joint Force Quarterly 29, Joint Special Operations in Support of Earnest Will, First Blood section",
+          "url": "https://ndupress.ndu.edu/portals/68/documents/jfq/jfq-29.pdf"
+        }
+      ],
+      "nextEvidenceNeeded": "Inspect Exhibit 78 or a dated hydrographic buoy listing before assigning a numeric point. Approximate map interpolation was not promoted in this bounded pass."
+    },
+    {
+      "battleId": "Q4871587",
+      "name": {
+        "fr": "bataille de Wakde-Sarmi",
+        "en": "Battle of Lone Tree Hill"
+      },
+      "expected": {
+        "start": {
+          "year": 1944,
+          "month": 5,
+          "day": 17
+        },
+        "end": {
+          "year": 1944,
+          "month": 9,
+          "day": 2
+        },
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "hold",
+      "finding": "Original event coordinate [138.834, -1.195] is offshore. The official Army history explicitly places the battle at the named coral hill on Maffin Bay, west of the Snaky River and east of Maffin Airfield. Maps 11 andIV were visually inspected: tactical geometry, scale and the hill are present, but there is no latitude/longitude graticule. Do not simply transpose latitude digits to -1.95 or use the bay centroid. A georeferenced military topo sheet or official terrain control points remain necessary.",
+      "sources": [
+        {
+          "label": "US Army Center of Military History, The Approach to the Philippines, chapter X and map 11; primary official history reproduced by HyperWar/ibiblio",
+          "url": "https://www.ibiblio.org/hyperwar/USA/USA-P-Approach/USA-P-Approach-10.html"
+        },
+        {
+          "label": "US Army official history, chapter XI and mapIV, Lone Tree Hill",
+          "url": "https://www.ibiblio.org/hyperwar/USA/USA-P-Approach/USA-P-Approach-11.html"
+        },
+        {
+          "label": "Army University Press, Lone Tree Hill virtual staff ride",
+          "url": "https://www.armyupress.army.mil/Staff-Rides/Virtual-Staff-Ride/Lone-Tree-Hill/"
+        }
+      ],
+      "nextEvidenceNeeded": "Georeferenced original tactical/topographic map or institutionally surveyed hill coordinate."
+    },
+    {
+      "battleId": "Q1927362",
+      "name": {
+        "fr": "opération Pedestal",
+        "en": "Operation Pedestal"
+      },
+      "expected": {
+        "start": {
+          "year": 1942,
+          "month": 8,
+          "day": 3
+        },
+        "end": {
+          "year": 1942,
+          "month": 8,
+          "day": 15
+        },
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q111012552",
+      "name": {
+        "fr": "bataille de l'île des Serpents",
+        "en": "Snake Island campaign"
+      },
+      "expected": {
+        "start": {
+          "year": 2022,
+          "month": 2,
+          "day": 24
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q846532",
+      "name": {
+        "fr": "bataille du golfe de Syrte",
+        "en": "First Gulf of Sidra offensive"
+      },
+      "expected": {
+        "start": {
+          "year": 2011,
+          "month": 3,
+          "day": 26
+        },
+        "end": {
+          "year": 2011,
+          "month": 3,
+          "day": 30
+        },
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q2236679",
+      "name": {
+        "en": "Battle of the Sea of Azov"
+      },
+      "expected": {
+        "start": {
+          "year": 1941,
+          "month": 9,
+          "day": 26
+        },
+        "end": {
+          "year": 1941,
+          "month": 10,
+          "day": 11
+        },
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q2890968",
+      "name": {
+        "fr": "bataille pour l'Australie",
+        "en": "Battle for Australia"
+      },
+      "expected": {
+        "start": {
+          "year": 1942,
+          "month": 2
+        },
+        "end": {
+          "year": 1945,
+          "month": 9,
+          "day": 2
+        },
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q1993443",
+      "name": {
+        "fr": "bataille du Saint-Laurent",
+        "en": "Battle of the St. Lawrence"
+      },
+      "expected": {
+        "start": {
+          "year": 1942,
+          "month": 5
+        },
+        "end": {
+          "year": 1944,
+          "month": 11
+        },
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q11314823",
+      "name": {
+        "en": "Gulf of St. Lawrence Campaign"
+      },
+      "expected": {
+        "start": {
+          "year": 1758,
+          "month": 9
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q4872147",
+      "name": {
+        "en": "Battle of Qurah and Umm al Maradim"
+      },
+      "expected": {
+        "start": {
+          "year": 1991,
+          "month": 1,
+          "day": 24
+        },
+        "end": {
+          "year": 1991,
+          "month": 1,
+          "day": 29
+        },
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q2446410",
+      "name": {
+        "fr": "combat de Pacocha",
+        "en": "Battle of Pacocha"
+      },
+      "expected": {
+        "start": {
+          "year": 1877,
+          "month": 5,
+          "day": 29
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "hold",
+      "finding": "The Navy places the engagement off Pacocha on 29 May 1877. The 1877 Astete/Carrasco combat plan preserved by BnF plots individual ship movements near Ilo, Pacocha and Punta de Coles; the full image was inspected. It has a distance scale and bearings but no coordinate graticule. The shore village or modern municipal center cannot substitute for the plotted offshore action. No coordinate has been inferred from the drawing.",
+      "sources": [
+        {
+          "label": "Peruvian Navy official history: naval action off Pacocha on 29 May 1877",
+          "url": "https://www.gob.pe/27103-historia-de-la-marina-de-guerra-del-peru-siglo-xix"
+        },
+        {
+          "label": "BnF GED-2193, Astete/Carrasco, Plano de Pacocha y del combate, 17 September 1877",
+          "url": "https://gallica.bnf.fr/ark:/12148/btv1b84410615"
+        },
+        {
+          "label": "Revista de Marina, 2019 no.2, John Rodríguez Asti, El combate naval de Pacocha, pp 80–93",
+          "url": "https://revistademarina.pe/wp-content/uploads/Revistas/2019/Revista-de-Marina-Nro.-2-2019.pdf"
+        }
+      ],
+      "nextEvidenceNeeded": "Independent georeferenced chart/control points for the 1877 plan, or a contemporary log with an engagement position."
+    },
+    {
+      "battleId": "Q4870926",
+      "name": {
+        "en": "Battle of Drummond's Island"
+      },
+      "expected": {
+        "start": {
+          "year": 1841,
+          "month": 4,
+          "day": 9
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "hold",
+      "finding": "Wilkes primary narrative identifies Utiroa as the attacked and burned village. That is a useful specific location identity; the cached event point [174.8, 1.35] does not itself establish it. No contemporary georeferenced village point was inspected; neither reversing latitude sign nor using the whole atoll centroid is approved.",
+      "sources": [
+        {
+          "label": "Charles Wilkes, Narrative of the United States Exploring Expedition, volume 5, chapterII (1849 edition transcription)",
+          "url": "https://whalesite.org/anthology/1849_Wilkes/1849_Wilkes_v5.htm"
+        }
+      ],
+      "nextEvidenceNeeded": "Primary chart or official historic-site coordinates establishing the 1841 village footprint."
+    },
+    {
+      "battleId": "Q2005006",
+      "name": {
+        "fr": "campagnes de la mer Baltique",
+        "en": "Baltic Sea campaigns"
+      },
+      "expected": {
+        "start": {
+          "year": 1939
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    },
+    {
+      "battleId": "Q486367",
+      "name": {
+        "fr": "bataille de Chumunjin",
+        "en": "Battle of Chumonchin Chan"
+      },
+      "expected": {
+        "start": {
+          "year": 1950,
+          "month": 7,
+          "day": 2
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "broad-place-coordinate",
+        "missing-coordinates"
+      ],
+      "decision": "hold",
+      "finding": "NHHC confirms the naval engagement on 2 July 1950 off the east coast of Korea, not far south of the 38 thparallel. This locates an area, not an exact battlefield point. It is insufficient to turn the rejected Sea of Japan place centroid into an accepted coordinate. The narrative also has a stray June/July month typo; its heading establishes the July event, and this audit proposes no date change.",
+      "sources": [
+        {
+          "label": "US Naval History and Heritage Command, H-050-1, Battle of Chumonchin Chan section",
+          "url": "https://www.history.navy.mil/content/history/nhhc/about-us/leadership/director/directors-corner/h-grams/h-gram-050/h-050-1.html"
+        }
+      ],
+      "nextEvidenceNeeded": "Juneau/Jamaica/Black Swan action report or log position for 2 July 1950."
+    },
+    {
+      "battleId": "Q3477174",
+      "name": {
+        "fr": "seconde bataille du golfe de Syrte",
+        "en": "Second Gulf of Sidra offensive"
+      },
+      "expected": {
+        "start": {
+          "year": 2011,
+          "month": 10,
+          "day": 20
+        },
+        "end": null,
+        "coords": null
+      },
+      "missing": [
+        "land-event-in-open-ocean"
+      ],
+      "decision": "screened-only",
+      "finding": "Listed and checked against current exclusion; no primary coordinate research in this bounded pass. No point or historical conclusion is inferred from the name.",
+      "sources": []
+    }
+  ],
+  "sourceSnapshotManifest": "/tmp/historyofatlas-location-recovery-sources/manifest.json"
+}

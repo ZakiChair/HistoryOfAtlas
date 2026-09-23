@@ -1,0 +1,9 @@
+[
+  {
+    "duplicateId": "gcmt:M7070",
+    "canonicalId": "gcmt:M4625",
+    "mode": "append-observations",
+    "sourceUrl": "https://www.gem.wiki/CCU_Patterson_Strip_Mine",
+    "reason": "Reviewed GCMT duplicate: identical CCU Patterson Strip primary name, Ohio position, surface mine and CCU Coal and Construction parent. The second source record represents a closure/owner-name variant. Retain both sets of dated knowledge and any direct production periods without resolving contradictory status into invented activity."
+  }
+]

@@ -1,0 +1,1387 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-22",
+  "records": {
+    "Q109065540": {
+      "coords": [
+        12.931085,
+        49.887941
+      ],
+      "note": "Reviewed battlefield location: the Municipality of Kokašice places the 6 May 1680 fighting on Ovčí vrch and explicitly states that the chapel was built on the battlefield. The Municipality of Otročín publishes the chapel/monument GPS point. Coordinates identify that documented battlefield landmark, not an exact battle perimeter or surveyed troop position. Existing day-precision date is retained.",
+      "sources": [
+        {
+          "label": "Municipality of Kokašice · Ovčí vrch history and battlefield chapel",
+          "url": "https://www.kokasice.cz/obec/historie/ovci-vrch/ovci-vrch-14cs.html"
+        },
+        {
+          "label": "Municipality of Otročín · Ovčí vrch chapel and monument · published GPS",
+          "url": "https://www.otrocin.eu/volny-cas/turisticke-cile/kopce-priroda/ovci-vrch-kaple-a-pomnik-0_58.html"
+        }
+      ],
+      "coordinateBasis": "Official municipal GPS for the chapel and monument on the documented battlefield: 49°53′16.587″ N, 12°55′51.905″ E, converted arithmetically to [longitude, latitude] and rounded to six decimals. This is landmark precision; neither combat extent nor survey accuracy is established. The nearby summit and lookout are different points.",
+      "coordinateSourceUrl": "https://www.otrocin.eu/volny-cas/turisticke-cile/kopce-priroda/ovci-vrch-kaple-a-pomnik-0_58.html",
+      "expected": {
+        "start": {
+          "year": 1680,
+          "month": 5,
+          "day": 6
+        },
+        "end": null,
+        "coords": null
+      }
+    },
+    "Q118593994": {
+      "start": {
+        "year": 1678,
+        "month": 3
+      },
+      "note": "Reviewed missing start date at month precision: the French defence historical service catalogs a contemporary view of the town and citadel of Ghent under siege in March 1678. The BnF title dates the king’s personal conduct of the siege to 4 March, which is not treated as the opening day because investment preceded his arrival. Only March 1678 is entered. Existing year-only end and sourced siege-town coordinates remain at their original precision; no exact opening or surrender day is inferred.",
+      "sources": [
+        {
+          "label": "Service historique de la Défense · battle map inventory · item 346, Ghent under siege in March 1678",
+          "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/2019-10/SHD%20bataille%20inventaire%2089-194.pdf"
+        },
+        {
+          "label": "Bibliothèque nationale de France · Louvois authority record · 1745 letter title dates the Ghent siege",
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb119619611"
+        }
+      ],
+      "expected": {
+        "start": null,
+        "end": {
+          "year": 1678
+        },
+        "coords": [
+          3.725277777777778,
+          51.05361111111111
+        ]
+      }
+    },
+    "Q123739799": {
+      "start": {
+        "year": 1658
+      },
+      "note": "Reviewed missing start year: A. V. Malov’s archival study (Ural State University journal, 2004, no. 33, printed p. 162) places Kozlovsky’s departure and the subsequent siege in autumn 1658; Lobanov-Rostovsky receives November pay before arriving at Mscislaŭ already besieged by Kozlovsky. Only 1658 is entered. The exact opening month/day is not established here, and no 1 January start is asserted. Existing April 1659 end and sourced siege-town coordinates are retained.",
+      "sources": [
+        {
+          "label": "A. V. Malov · Ural State University journal 2004 no. 33 · archival study of the 1658–1660 Lithuanian campaign · p. 162",
+          "url": "https://elar.urfu.ru/bitstream/10995/23374/1/iurg-2004-33-19.pdf"
+        }
+      ],
+      "expected": {
+        "start": null,
+        "end": {
+          "year": 1659,
+          "month": 4
+        },
+        "coords": [
+          31.7247,
+          54.0196
+        ]
+      }
+    },
+    "Q700860": {
+      "expected": {
+        "start": {
+          "year": 1809,
+          "month": 4,
+          "day": 22
+        },
+        "end": null,
+        "coords": [
+          11.575,
+          48.1375
+        ]
+      },
+      "coords": [
+        12.183163,
+        48.843924
+      ],
+      "note": "The cached Wikidata battle has no P625 and incorrectly links P276 to Munich (Q1726), whose city coordinate was inherited. Use the official Landkreis Regensburg point for Schloss Eggmühl, a documented fighting site in the battle of 22 April 1809. The municipal historical event description explicitly identifies the surviving castle wall as an assault site. This represents the castle sector of the larger battlefield; it does not define all troop positions or the battlefield perimeter. The date is unchanged. The municipal description was read in the search index; the original URL currently serves a generic page after a site migration.",
+      "coordinateBasis": "Landkreis Regensburg publishes Schloss Eggmühl at Kirchplatz 1 with GeoCoordinates latitude 48.843923667897869 and longitude 12.183163404442897. Rounded to six decimals and stored longitude first. The castle is linked to actual fighting by the municipal historical account of its wall being stormed during the 22 April 1809 battle. This is an official site POI point, not a surveyed battle center, town centroid, memorial proxy, or inferred digit correction.",
+      "coordinateSourceUrl": "https://pages.destination.one/de/landkreis-regensburg/streaming/detail/POI/p_100003509/schloss-eggmuehl",
+      "sources": [
+        {
+          "label": "Markt Schierling — Gedenkveranstaltung zu 215 Jahre Schlacht bei Eggmühl (historic castle assault; indexed municipal page)",
+          "url": "https://www.schierling.de/kultur-freizeit/kultur-termine/2111-gedenkveranstaltung-zu-215-jahre-schlacht-bei-eggmuehl"
+        },
+        {
+          "label": "Landratsamt Regensburg — Schloss Eggmühl (official site GeoCoordinates)",
+          "url": "https://pages.destination.one/de/landkreis-regensburg/streaming/detail/POI/p_100003509/schloss-eggmuehl"
+        }
+      ]
+    },
+    "Q913821": {
+      "expected": {
+        "start": {
+          "year": 1645,
+          "month": 5,
+          "day": 2
+        },
+        "end": null,
+        "coords": [
+          9.829,
+          49.402
+        ]
+      },
+      "start": {
+        "year": 1645,
+        "month": 5,
+        "day": 5
+      },
+      "note": "Reviewed historical date: the City of Bad Mergentheim and the State Office for Heritage explicitly date the Battle of Herbsthausen (Mergentheim) to 5 May 1645. This corrects the source-derived 2 May date at day precision. It is a historical date correction, not a calendar conversion; the CDB90 row dated 2 May remains excluded.",
+      "sources": [
+        {
+          "label": "City of Bad Mergentheim: Herbsthausen historical overview",
+          "url": "https://www.bad-mergentheim.de/de/verwaltung/stadtteile/bad-mergentheimer-stadtteil-herbsthausen-id_436/"
+        },
+        {
+          "label": "Landesamt für Denkmalpflege, Regierungspräsidium Stuttgart: archaeological battlefield opinion, municipal planning file dated 22 July 2025; page 15",
+          "url": "https://ratsinfosystem.bad-mergentheim.de/buergerinfo/getfile.php?id=80705&type=do"
+        }
+      ]
+    },
+    "Q637320": {
+      "expected": {
+        "start": {
+          "year": 1915,
+          "month": 10,
+          "day": 18
+        },
+        "end": {
+          "year": 1915,
+          "month": 11,
+          "day": 3
+        },
+        "coords": [
+          13.4003,
+          45.8567
+        ]
+      },
+      "end": {
+        "year": 1915,
+        "month": 11,
+        "day": 4
+      },
+      "note": "The Italian Ministry of Defence’s official chronology (Milite Ignoto, 1988, PDF p. 5; visually inspected) dates the whole Third Battle of the Isonzo to 18 October–4 November 1915. Correct the previous ending of 3 November by adding the final day. The opening date and location are unchanged. This chronology establishes the event bounds independently of CDB90 personnel estimates.",
+      "sources": [
+        {
+          "label": "Italian Ministry of Defence — Milite Ignoto (1988), PDF p. 5, chronology of the Third Isonzo battle",
+          "url": "https://www.difesa.it/assets/allegati/26653/milite_ignoto.pdf"
+        }
+      ]
+    },
+    "Q1989637": {
+      "expected": {
+        "start": {
+          "year": 1915,
+          "month": 5,
+          "day": 27
+        },
+        "end": null,
+        "coords": [
+          2.73611111,
+          50.54388889
+        ]
+      },
+      "start": {
+        "year": 1915,
+        "month": 5,
+        "day": 15
+      },
+      "end": {
+        "year": 1915,
+        "month": 5,
+        "day": 25
+      },
+      "note": "Replace the isolated 27 May 1915 catalogue date with the official 15–25 May 1915 bounds published by Canada’s Department of National Defence for the Battle of Festubert. These are full battle dates, not the narrower 17–25 May period of Canadian participation in other national chronologies. The CDB90 row spans 16–26 May instead and remains excluded; this correction does not approve its force quantities.",
+      "sources": [
+        {
+          "label": "Canadian Department of National Defence — Festubert, 1915, official full battle dates",
+          "url": "https://www.canada.ca/en/department-national-defence/services/military-history/history-heritage/battle-honours-honorary-distinctions/festubert-1915.html"
+        }
+      ]
+    },
+    "Q2791318": {
+      "expected": {
+        "start": {
+          "year": 1917,
+          "month": 3,
+          "day": 26
+        },
+        "end": null,
+        "coords": [
+          34.4737,
+          31.4893
+        ]
+      },
+      "end": {
+        "year": 1917,
+        "month": 3,
+        "day": 27
+      },
+      "note": "The Australian War Memorial dates the First Battle of Gaza to 26–27 March 1917. Add the supported second day to the catalogue’s existing 26 March opening. No change to equipment or quantities is implied. CDB90 row 326 remains on hold because its original Ottoman army identity and the scope of its 26000-person estimate are unresolved; matching these dates does not approve that numerical profile.",
+      "sources": [
+        {
+          "label": "Australian War Memorial — Sinai Palestine 1916–17, First Gaza battle on 26–27 March",
+          "url": "https://www.awm.gov.au/visit/exhibitions/anzac-voices/sinai-palestine"
+        }
+      ]
+    },
+    "Q384091": {
+      "expected": {
+        "start": {
+          "year": 1905,
+          "month": 2,
+          "day": 6
+        },
+        "end": {
+          "year": 1905,
+          "month": 2,
+          "day": 25
+        },
+        "coords": [
+          123.43333333,
+          41.78333333
+        ]
+      },
+      "start": {
+        "year": 1905,
+        "month": 2,
+        "day": 19
+      },
+      "end": {
+        "year": 1905,
+        "month": 3,
+        "day": 10
+      },
+      "note": "Reviewed calendar expression: the Russian Presidential Library explicitly gives the Battle of Mukden as 6 (19) February–25 February (10 March) 1905. The source Wikidata start/end claims declare the Julian calendar; the dates shown here express that same interval as 19 February–10 March in the Gregorian calendar. JACAR independently dates Oyama’s declaration ending the battle to 10 March. This correction does not approve the CDB90 row beginning 21 February or change any force quantities.",
+      "sources": [
+        {
+          "label": "Russian Presidential Library: Mukden collection, explicit Julian and Gregorian battle dates",
+          "url": "https://www.prlib.ru/section/683596"
+        },
+        {
+          "label": "Japan Center for Asian Historical Records: Mukden chronology, 10 March declaration ending battle",
+          "url": "https://www.jacar.go.jp/exhibition/nichiro2/sensoushi/rikujou09_detail.html"
+        }
+      ]
+    },
+    "Q4872070": {
+      "expected": {
+        "start": {
+          "year": 1945,
+          "month": 5,
+          "day": 5
+        },
+        "end": {
+          "year": 1945,
+          "month": 5,
+          "day": 6
+        },
+        "coords": null
+      },
+      "coords": [
+        -71.416944,
+        41.317222
+      ],
+      "note": "The U.S. Maritime Administration records the 5 May 1945 torpedoing of Black Point by U-853 at this historical incident position. This opening attack provides a documented anchor for the Battle of Point Judith of 5–6 May. The subsequent antisubmarine search and attacks extended south toward Block Island; this point does not locate the final U-853 wreck, every attack, or the entire engagement. Dates and unquantified forces are unchanged.",
+      "coordinateBasis": "MARAD historical incident coordinates for the torpedoing of Black Point: 41°19′02″ N, 71°25′01″ W, converted arithmetically to longitude first and rounded to six decimals. The source classifies its location accuracy as “Historic 1” without a metric error radius. This is the opening attack location, not a surveyed battle center or the U-853 wreck position; the later pursuit covered other waters.",
+      "coordinateSourceUrl": "https://vesselhistory.marad.dot.gov/ShipHistory/Detail/6993",
+      "sources": [
+        {
+          "label": "U.S. Maritime Administration — Black Point, 5 May 1945 torpedoing and historical incident coordinates",
+          "url": "https://vesselhistory.marad.dot.gov/ShipHistory/Detail/6993"
+        },
+        {
+          "label": "U.S. Naval Institute — D. M. Tollaksen, Last Chapter for U-853 (December 1960), opening attack and subsequent search",
+          "url": "https://www.usni.org/magazines/proceedings/1960/december/last-chapter-u-853"
+        }
+      ]
+    },
+    "Q4090309": {
+      "expected": {
+        "start": {
+          "year": 1805,
+          "month": 10,
+          "day": 15
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        9.983,
+        48.411
+      ],
+      "note": "Reviewed approximate hill-sector location: the Haus der Bayerischen Geschichte identifies the 15 October 1805 assault on the Michaelsberg heights overlooking Ulm; the French defence catalogue independently names Michelsberg. The atlas point represents the summit sector of that hill. The later Wilhelmsburg provides a modern geographical reference because Ulm/Neu-Ulm Touristik explicitly places it on the hilltop. The fortress dates from 1842–1849 and is not identified as an 1805 fortification or the exact site of a combat action. Only hill-sector precision is claimed; the battlefield perimeter and troop positions remain unknown.",
+      "sources": [
+        {
+          "label": "Haus der Bayerischen Geschichte / Bayerisches Armeemuseum · Kobell, assault on the Spielberg and Michaelsberg near Ulm, 15 October 1805 · L 6110",
+          "url": "https://hdbg.eu/koenigreich/index.php/objekte/index/id/277"
+        },
+        {
+          "label": "French Ministry of the Armed Forces, CLADE · Bataille d’Ulm ou du Michelsberg, 14 et 15 octobre 1805 · Pelet campaign map",
+          "url": "https://bibliotheques-numeriques.defense.gouv.fr/musee-national-de-la-marine/document/09f848d1-b284-485b-b26a-22b059070c0b"
+        },
+        {
+          "label": "Ulm/Neu-Ulm Touristik · Wilhelmsburg on the Michelsberg summit · published map center",
+          "url": "https://tourismus.ulm.de/de/entdecken/sehen-und-erleben/sehenswuerdigkeiten/bundesfestung/wilhelmsburg-ulm"
+        },
+        {
+          "label": "City of Ulm · Michelsberg and Safranberg · historical topography and later fortress",
+          "url": "https://www.ulm.de/leben-in-ulm/umwelt-energie-entsorgung/lokale-agenda-ulm-21/unterwegs-in-ulm/michelsberg-und-safranberg"
+        }
+      ],
+      "coordinateBasis": "Approximate summit-sector marker, not a surveyed battlefield point. The official tourism page places the modern Wilhelmsburg on the Michelsberg hilltop and publishes locationDetail.center as {lat:48.4112119,lng:9.9830469}. Convert to atlas [longitude,latitude] order and round to three decimals: [9.983,48.411]. The rounding describes numerical display resolution only; it does not establish 100-metre historical accuracy. Geographic scope is the named hill sector. No measured uncertainty radius or exact combat footprint is established; the post-1805 building is used solely to locate the surviving landform.",
+      "coordinateSourceUrl": "https://tourismus.ulm.de/de/entdecken/sehen-und-erleben/sehenswuerdigkeiten/bundesfestung/wilhelmsburg-ulm"
+    },
+    "Q700530": {
+      "expected": {
+        "start": {
+          "year": 1943,
+          "month": 11,
+          "day": 25
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        153.741667,
+        -5.272222
+      ],
+      "note": "The official U.S. Navy track chart provides a position for Destroyer Division 45 at 0143 on 25 November 1943, as it turned toward the enemy after radar contact. This anchors the opening approach of the Cape St. George engagement, not the entire pursuit, an enemy position, or a wreck site. The chart’s wartime claims about enemy numbers and sinkings are superseded and are not imported as numerical evidence. The battle date is unchanged.",
+      "coordinateBasis": "ONI combat narrative, official NHHC 2019 edition: printed p. 51 (PDF p. 65), visually inspected track chart. Its coordinate arrow points to the DESDIV 45 track at 0143: 5°16′20″ S, 153°44′30″ E. Arithmetic conversion to longitude first gives [153.741667,-5.272222]. This is an American approach position at 0143, not the first radar contact at 0141 or a surveyed battle center. The historical chart’s datum and navigation error are unspecified; no modern positional accuracy is claimed.",
+      "coordinateSourceUrl": "https://www.govinfo.gov/content/pkg/GOVPUB-D221-PURL-gpo172671/pdf/GOVPUB-D221-PURL-gpo172671.pdf",
+      "sources": [
+        {
+          "label": "Office of Naval Intelligence / NHHC — Bougainville Operations and the Battle of Cape St. George (2019), chart printed p. 51 and narrative p. 55",
+          "url": "https://www.govinfo.gov/content/pkg/GOVPUB-D221-PURL-gpo172671/pdf/GOVPUB-D221-PURL-gpo172671.pdf"
+        }
+      ]
+    },
+    "Q111947056": {
+      "expected": {
+        "start": {
+          "year": 1775,
+          "month": 4,
+          "day": 19
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -71.298,
+        42.4553
+      ],
+      "coordinateBasis": "NPS Elm Brook Hill place record publishes latitude 42.45528906097832 and longitude -71.29802568901256. Rounded to four decimal places as a site marker for the historic road bend; decimal resolution is not a surveyed error radius or the extent of the engagement.",
+      "coordinateSourceUrl": "https://www.nps.gov/places/elm-brook-hill.htm",
+      "note": "Reviewed location: the marker identifies Elm Brook Hill, also called Bloody Angle, on the Battle Road where the 19 April 1775 ambush occurred. It represents this documented road sector, not every firing position or the full Lexington–Concord battle. NPS supplies the point; no metric historical accuracy is established. The existing date is retained.",
+      "sources": [
+        {
+          "label": "National Park Service · Elm Brook Hill / Bloody Angle, published location",
+          "url": "https://www.nps.gov/places/elm-brook-hill.htm"
+        },
+        {
+          "label": "National Park Service · April 19, 1775, Elm Brook Hill ambush",
+          "url": "https://www.nps.gov/mima/learn/historyculture/april-19-1775.htm"
+        }
+      ]
+    },
+    "Q4872162": {
+      "expected": {
+        "start": {
+          "year": 1863,
+          "month": 11,
+          "day": 20
+        },
+        "end": {
+          "year": 1863,
+          "month": 11,
+          "day": 21
+        },
+        "coords": null
+      },
+      "coords": [
+        175.129,
+        -37.428
+      ],
+      "coordinateBasis": "DOC p.42 gives Rangiriri archaeological site S13/50 at NZMS 260/NZMG 2698700E 6417200N. Transforming EPSG:27200 to EPSG:4326 gives longitude 175.1291245061598, latitude -37.427638341033614; atlas point rounded to three decimals. DOC p.15 states references are rounded to 50/100 metres and generally locate the southwest site corner. This is an archaeological-site reference, not a battlefield centroid or individual tactical position.",
+      "coordinateSourceUrl": "https://www.doc.govt.nz/documents/science-and-technical/sap261entire.pdf",
+      "note": "Reviewed location: Rangiriri site S13/50, the Māori defensive works attacked on 20–21 November 1863. The marker uses the archaeological inventory reference, whose rounding and southwest-corner convention are retained; no new metric error radius is claimed. The wider defensive line and later Te Wheoro redoubt are not reduced to this point. Dates remain unchanged.",
+      "sources": [
+        {
+          "label": "New Zealand Department of Conservation · Prickett, Fortifications of the New Zealand Wars (2016), pp.15,31,42–43",
+          "url": "https://www.doc.govt.nz/documents/science-and-technical/sap261entire.pdf"
+        },
+        {
+          "label": "Land Information New Zealand · NZMG coordinate-system definition",
+          "url": "https://github.com/linz/linz-coordsys/blob/master/files/coordsys.def"
+        },
+        {
+          "label": "Heritage New Zealand Pouhere Taonga · Rangiriri, List 7720, protected extent and map",
+          "url": "https://www.heritage.org.nz/list-details/7720/Rangiriri"
+        }
+      ]
+    },
+    "Q5251295": {
+      "expected": {
+        "start": {
+          "year": 1863,
+          "month": 9,
+          "day": 13
+        },
+        "end": {
+          "year": 1863,
+          "month": 9,
+          "day": 14
+        },
+        "coords": null
+      },
+      "start": {
+        "year": 1863,
+        "month": 9,
+        "day": 14
+      },
+      "coords": [
+        174.9461,
+        -37.1886
+      ],
+      "coordinateBasis": "Heritage New Zealand List 483 publishes the Pukekohe East Presbyterian Church map location in its page data: latitude -37.18860488232277, longitude 174.94613028083916. Rounded to four decimal places. DOC p.31 identifies the same church and surviving stockade remains as site R12/741; the point represents the fortified church, not its entire surrounding engagement area. No surveyed historical error radius is published.",
+      "coordinateSourceUrl": "https://www.heritage.org.nz/list-details/483/483",
+      "note": "Reviewed location and date: the fortified Pukekohe East Presbyterian Church is the documented site of the attack. DOC, the Ministry for Culture and Heritage and Presbyterian archives all identify the attack as 14 September 1863. Start is corrected from 13 to 14 September; the existing end on 14 September is retained. The point locates the surviving church, not a township center or a conjectured grave.",
+      "sources": [
+        {
+          "label": "Heritage New Zealand Pouhere Taonga · Pukekohe East Presbyterian Church, List 483, published map location",
+          "url": "https://www.heritage.org.nz/list-details/483/483"
+        },
+        {
+          "label": "New Zealand Department of Conservation · Prickett, Fortifications of the New Zealand Wars (2016), pp.15,31,42–43",
+          "url": "https://www.doc.govt.nz/documents/science-and-technical/sap261entire.pdf"
+        },
+        {
+          "label": "Manatū Taonga · Pukekohe East NZ Wars memorial and attack of 14 September 1863",
+          "url": "https://nzhistory.govt.nz/memorial/pukekohe-nz-wars-memorial"
+        },
+        {
+          "label": "Presbyterian Research Centre archives · South Auckland, Pukekohe East Church attacked 14 September 1863",
+          "url": "https://www.presbyterian.org.nz/archives/SouthAucklandPresbytery.htm"
+        }
+      ]
+    },
+    "Q2237342": {
+      "expected": {
+        "start": {
+          "year": 1777,
+          "month": 10,
+          "day": 7
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -73.64,
+        43.009
+      ],
+      "note": "Location review: the marker represents the Breymann Redoubt assault sector of the 7 October 1777 battle. It is derived from the NPS georeferenced 1777 fortification line identified as Breymann Redoubt on the official 2004 General Management Plan battle map. The GIS is explicitly schematic and has no measured positional accuracy; coordinates are rounded to three decimals as a display convention. This sector anchor does not reconstruct the wider battlefield, the opening combat at Barber Wheatfield, or individual troop positions. The existing 7 October date is retained.",
+      "coordinateBasis": "Midpoint along feature 3 (zero-based index 2) of the public NPS redoubts.shp polyline dataset, transformed from NAD83 / UTM zone 18N (EPSG:26918) to WGS84 and rounded to three decimals. Feature identity is checked against the labeled NPS General Management Plan 2004 map, Part 2, printed p.17 (PDF p.11). The dataset describes approximate fortified lines for schematic mapping; positional accuracy was not measured. This is a fortification-sector locator, with no claimed numeric error radius.",
+      "coordinateSourceUrl": "https://irma.nps.gov/DataStore/Reference/Profile/1023142",
+      "sources": [
+        {
+          "label": "NPS DataStore · 1777 Redoubts of Battlefield Unit, georeferenced GIS, reference 1023142",
+          "url": "https://irma.nps.gov/DataStore/Reference/Profile/1023142"
+        },
+        {
+          "label": "NPS · redoubts GIS original FGDC metadata, CRS and schematic accuracy limitations",
+          "url": "https://irma.nps.gov/DataStore/DownloadFile/538991"
+        },
+        {
+          "label": "NPS · Saratoga General Management Plan 2004, Part 2, p.17: named Breymann Redoubt assault map",
+          "url": "https://irma.nps.gov/DataStore/DownloadFile/517712"
+        },
+        {
+          "label": "NPS · Breymann Redoubt and the decisive assault on 7 October 1777",
+          "url": "https://www.nps.gov/places/the-decisive-moment-7-breymann-redoubt-continued.htm"
+        },
+        {
+          "label": "NPS · Archaeology of Barber Wheatfield, identifying the Battle of Bemis Heights on 7 October 1777",
+          "url": "https://www.nps.gov/articles/000/the-archaeology-of-the-barber-wheatfield.htm"
+        }
+      ]
+    },
+    "Q2869902": {
+      "expected": {
+        "start": {
+          "year": 1809,
+          "month": 9,
+          "day": 20
+        },
+        "end": {
+          "year": 1809,
+          "month": 9,
+          "day": 28
+        },
+        "coords": [
+          55.266666666667,
+          -21
+        ]
+      },
+      "start": {
+        "year": 1809,
+        "month": 9,
+        "day": 21
+      },
+      "note": "The attack began on 21 September 1809, as dated in the contemporary Royal Collection print and the Ministry of Culture account of the first battery assaulted. This review aligns the original 20 September start to the documented combat; it does not date the expedition’s preparations. The retained end, 28 September, denotes British withdrawal after occupation and destruction of defences, not eight days of uninterrupted fighting. The retained Wikidata event coordinate is a coarse Saint-Paul Bay anchor with one arcminute source precision, not the measured position of a ship, battery or the landing farther north.",
+      "sources": [
+        {
+          "label": "Royal Collection Trust · RCIN 735153 · contemporary view and inscription of the attack, 21 September 1809",
+          "url": "https://militarymaps.rct.uk/napoleonic-wars-1803-15/reunion-1809-reunion-indian-ocean-french-overseas-department-21deg0600s-55deg3600e"
+        },
+        {
+          "label": "Ministère de la Culture · Batterie de l’Embouchure · archaeological evidence and attack on 21 September 1809",
+          "url": "https://archeologie.culture.gouv.fr/ocean-indien/fr/batterie-de-lembouchure"
+        },
+        {
+          "label": "Royal Museums Greenwich · BHC0593 · capture of Saint Paul and withdrawal on 28 September 1809",
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12085"
+        },
+        {
+          "label": "Wikidata · Q2869902 · original event coordinate (one arcminute precision)",
+          "url": "https://www.wikidata.org/wiki/Q2869902",
+          "license": "CC0-1.0"
+        }
+      ]
+    },
+    "Q11457942": {
+      "expected": {
+        "start": {
+          "year": 1868,
+          "month": 7,
+          "day": 13
+        },
+        "end": null,
+        "coords": [
+          138.77022222222223,
+          37.64497222222222
+        ]
+      },
+      "coords": null,
+      "note": "Withdraw the inherited coordinate of Teradomari municipality. The municipal sources establish an offshore naval action, followed by Jundō-maru grounding in the shallows, but provide no georeferenced engagement point. The preserved date 13 July 1868 corresponds to Keio 4, fifth month, day 24; the municipal museum is a repository of recovered material, not the battle position.",
+      "sources": [
+        {
+          "label": "Nagaoka City Science Museum · Jundō-maru shaft and naval action, FAQ 1857",
+          "url": "https://qa.city.nagaoka.niigata.jp/faq/show/1857?category_id=483&site_domain=default"
+        },
+        {
+          "label": "Nagaoka City · 400-year history, PDF p.14 / printed p.25, Jundō-maru at Teradomari",
+          "url": "https://www.city.nagaoka.niigata.jp/dpage/nagaoka400/pdf/ayumi-full.pdf"
+        },
+        {
+          "label": "Wikidata · Teradomari former municipality, inherited place locator",
+          "url": "https://www.wikidata.org/wiki/Q7701513#P625"
+        }
+      ],
+      "coordinateBasis": "The rejected point [138.77022222222223,37.64497222222222] belongs to the linked former municipality Q7701513. Neither the town centre, the present harbour centre nor the museum location is a documented position of the ships. Remove coordinates; geographic uncertainty is unresolved and no precision is asserted.",
+      "coordinateSourceUrl": "https://qa.city.nagaoka.niigata.jp/faq/show/1857?category_id=483&site_domain=default"
+    },
+    "Q137822090": {
+      "expected": {
+        "start": {
+          "year": 1957,
+          "month": 7,
+          "day": 14
+        },
+        "end": null,
+        "coords": [
+          128.83,
+          35.03
+        ]
+      },
+      "start": {
+        "year": 1597
+      },
+      "coords": null,
+      "note": "Correct the erroneous source year 1957 to 1597, retaining year precision only. The linked AKS article identifies the sixth month, nineteenth day in the traditional chronology; no Gregorian month/day conversion is asserted. NIHK distinguishes this engagement from the subsequent seventh-month encounters. Withdraw the inherited Gadeokdo island point: a general island locator cannot establish an offshore battlefield.",
+      "sources": [
+        {
+          "label": "Academy of Korean Studies · Gadeokdo naval battle, E0000076",
+          "url": "https://encykorea.aks.ac.kr/Article/E0000076"
+        },
+        {
+          "label": "National Institute of Korean History · Won Gyun, section 5: sixth-month engagement distinguished from seventh-month operations",
+          "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_n307400"
+        },
+        {
+          "label": "Wikidata · Gadeokdo island, inherited place locator",
+          "url": "https://www.wikidata.org/wiki/Q12612282#P625"
+        }
+      ],
+      "coordinateBasis": "The rejected point [128.83,35.03] is the P625 locator of island Q12612282. The institutional narratives locate the fighting near Gadeokdo without a surveyed position or a calibrated battle map. Remove coordinates; do not substitute the island centre, fortress or later memorial.",
+      "coordinateSourceUrl": "https://encykorea.aks.ac.kr/Article/E0000076"
+    },
+    "Q9347968": {
+      "expected": {
+        "start": {
+          "year": 1877,
+          "month": 3,
+          "day": 3
+        },
+        "end": {
+          "year": 1877,
+          "month": 3,
+          "day": 20
+        },
+        "coords": null
+      },
+      "start": {
+        "year": 1877,
+        "month": 3,
+        "day": 4
+      },
+      "coords": [
+        130.6516,
+        32.9127
+      ],
+      "note": "Correct the opening date to 4 March 1877; retain 20 March. Add an approximate locator within the documented Tabaruzaka battlefield park, in the upper-road sector occupied by Satsuma forces. This is a representative sector point, not a surveyed battle centre or an army position.",
+      "sources": [
+        {
+          "label": "Japan Agency for Cultural Affairs · Seinan War remains, Tabaruzaka battlefield and Sanno-saka position",
+          "url": "https://kunishitei.bunka.go.jp/heritage/detail/401/00003787"
+        },
+        {
+          "label": "Japan Tourism Agency · Tabaruzaka Seinan Civil War Museum, battlefield and 4–20 March 1877",
+          "url": "https://www.mlit.go.jp/tagengo-db/en/R2-02042.html"
+        },
+        {
+          "label": "Kumamoto City Official Guide · Tabaruzaka museum and battlefield park, embedded map locator",
+          "url": "https://kumamoto-guide.jp/en/spots/detail/216"
+        },
+        {
+          "label": "Kumamoto City Board of Education · Tabaruzaka comprehensive survey (2025), chapter V, p.282 / fig.142",
+          "url": "https://www.city.kumamoto.jp/kiji00370798/3_70798_503260_up_lu7x8801.pdf"
+        }
+      ],
+      "coordinateBasis": "The Agency for Cultural Affairs identifies the present park as the Satsuma position at the top of Sanno-saka. The Japan Tourism Agency independently places the museum on the battlefield. The municipal guide embeds a park/museum locator at latitude 32.91268157959, longitude 130.65159606934, rounded here to four decimals. The archaeological report confirms combat around the adjacent upper road. The modern museum is used only to locate this independently attested battlefield sector; no tactical precision is asserted. Reject the heritage page’s city-hall map centre and the survey abstract’s malformed degree/minute coordinates.",
+      "coordinateSourceUrl": "https://kumamoto-guide.jp/en/spots/detail/216"
+    },
+    "Q51103517": {
+      "expected": {
+        "start": {
+          "year": 1931,
+          "month": 9,
+          "day": 6
+        },
+        "end": null,
+        "coords": [
+          -71.338,
+          -29.9532
+        ]
+      },
+      "coords": null,
+      "note": "Withdraw the inherited municipality point for Coquimbo. The museum places the 6 September 1931 encounter between aircraft and ships in the bay; a city point does not locate the squadron or its manoeuvres. The event date and all force evidence are retained.",
+      "sources": [
+        {
+          "label": "Museo Histórico Gabriel González Videla · Historia de acorazados y aviones, 31 August 2020; eyewitness accounts of the 6 September 1931 action",
+          "url": "https://www.museohistoricolaserena.gob.cl/noticias/historia-de-acorazados-y-aviones"
+        },
+        {
+          "label": "Wikidata · Coquimbo Q3871, source of the inherited municipality coordinate",
+          "url": "https://www.wikidata.org/wiki/Q3871#P625",
+          "license": "CC0-1.0"
+        },
+        {
+          "label": "Museo Histórico Gabriel González Videla · Coquimbo, Historia e Identidad; chapter 7, PDF p.22 / printed p.171, Sunday 6 September 1931 action",
+          "url": "https://www.museohistoricolaserena.gob.cl/sites/www.museohistoricolaserena.gob.cl/files/images/articles-96988_archivo_01.pdf"
+        }
+      ],
+      "coordinateBasis": "The only inherited point is the linked city Coquimbo Q3871 at longitude -71.338, latitude -29.9532. The institutional account establishes an air attack on ships in Coquimbo Bay, but supplies no surveyed point or calibrated battle chart. Remove the city locator without substituting a bay centre, present harbour facility, observer location or museum address; the engagement position remains unresolved.",
+      "coordinateSourceUrl": "https://www.museohistoricolaserena.gob.cl/noticias/historia-de-acorazados-y-aviones"
+    },
+    "Q1754785": {
+      "expected": {
+        "start": {
+          "year": 1642,
+          "month": 10,
+          "day": 23
+        },
+        "end": null,
+        "coords": [
+          12.3748,
+          51.3403
+        ]
+      },
+      "note": "Reviewed Gregorian date: 2 November 1642. The HAB/Freiburg edition explicitly pairs 23 October/2 November for the second Breitenfeld battle. The imported 23 October is Old Style even though the cached P585 labels it Gregorian; the correction follows the historical edition rather than silently trusting that erroneous calendar tag. The former Leipzig-centre coordinate is withdrawn after a separate geographical review. The official Westsachsen landscape framework maps the second Breitenfeld battlefield north of Leipzig (map 2.6-39), and the Saxon State Archives independently locates the 1642 battle at Breitenfeld. These sources do not supply an exact replacement point. The event remains available without a map point; the 1631 battlefield monument and the later capture of Leipzig are not substituted for the 1642 field.",
+      "sources": [
+        {
+          "label": "Herzog August Bibliothek / University of Freiburg · Christian II diary edition · introduction to 1642",
+          "url": "https://diglib.hab.de/edoc/ed000228/introduction/introduction_1642.xml"
+        },
+        {
+          "label": "Regionaler Planungsverband Westsachsen · Historische Kulturlandschaft, map 2.6-39 and section 2.6.3.18.1, PDF pp.185–186",
+          "url": "https://www.rpv-westsachsen.de/wp-content/uploads/regionalplan/Grundlagenteil_FB_Teil2.pdf"
+        },
+        {
+          "label": "Sächsisches Staatsarchiv · 20352 Rittergut Breitenfeld bei Leipzig · battle at Breitenfeld in 1642",
+          "url": "https://www.archiv.sachsen.de/archiv/bestand.jsp?oid=06.02&bestandid=20352&syg_id="
+        }
+      ],
+      "start": {
+        "year": 1642,
+        "month": 11,
+        "day": 2
+      },
+      "coords": null,
+      "coordinateBasis": "Withdraw the unsupported Leipzig-centre point. The official Westsachsen landscape framework, map 2.6-39 (PDF page 185, printed 2.6–95), explicitly maps the second Breitenfeld battlefield north of Leipzig, distinct from the city. The source supports a battlefield sector, not a new precise coordinate; no replacement or 1631 monument point is inferred.",
+      "coordinateSourceUrl": "https://www.rpv-westsachsen.de/wp-content/uploads/regionalplan/Grundlagenteil_FB_Teil2.pdf"
+    },
+    "Q695057": {
+      "expected": {
+        "start": {
+          "year": 1675,
+          "month": 6,
+          "day": 28
+        },
+        "end": {
+          "year": 1675,
+          "month": 7,
+          "day": 19
+        },
+        "coords": [
+          12.76666667,
+          52.79972222
+        ]
+      },
+      "note": "Reviewed combat date: 28 June 1675 (18 June Old Style), a short battle described by ZMSBw and dated by the German Historical Institute. Replace the inconsistent imported 19 July endpoint with 28 June. The raw source also contains 29 June Gregorian and July 18–19 Julian claims; these are not silently converted into a multi-week battle. The date review concerns the battle itself, not the later Swedish withdrawal/campaign.",
+      "sources": [
+        {
+          "label": "German Historical Institute · Battle of Fehrbellin, 28 June 1675 · contemporary engraving catalogue",
+          "url": "https://germanhistorydocs.org/en/the-holy-roman-empire-1648-1815/the-battle-of-fehrbellin-on-june-28-1675-c-1675"
+        },
+        {
+          "label": "Bundeswehr ZMSBw · Harald Potempa · Fehrbellin: Mythos einer Schlacht, 2025",
+          "url": "https://zms.bundeswehr.de/de/publikationen-ueberblick/zmg-2025-2-schlacht-von-fehrbellin-5937220"
+        }
+      ],
+      "end": {
+        "year": 1675,
+        "month": 6,
+        "day": 28
+      }
+    },
+    "Q644960": {
+      "expected": {
+        "start": {
+          "year": 1690,
+          "month": 7,
+          "day": 1
+        },
+        "end": null,
+        "coords": [
+          -6.423611111111111,
+          53.723055555555554
+        ]
+      },
+      "note": "Reviewed Gregorian date: 11 July 1690. OPW explicitly calls 1 July Old Style; the Irish public libraries’ visitor-centre account explicitly gives 11 July according to the modern calendar. Cached P585 contains both 11 July Gregorian and 1 July Julian; the selected raw numerical date had lost this distinction. This is the date of the engagement, not the later 12 July commemoration. The prior Kingdom of Scotland (Q230791) item and P710 citations are also preserved as historical participant provenance. Those two citations do not establish a unique coalition assignment or a separate Scottish count and are not used as calendar evidence.",
+      "sources": [
+        {
+          "label": "Office of Public Works · Battle of the Boyne Visitor Centre",
+          "url": "https://heritageireland.ie/visit/places-to-visit/battle-of-the-boyne-visitor-centre-oldbridge-estate/"
+        },
+        {
+          "label": "Ask About Ireland / Irish public libraries · Battle of the Boyne Visitor Centre · calendar equivalence",
+          "url": "https://www.askaboutireland.ie/reading-room/culturenet/landscape-heritage/louth/the-battle-of-the-boyne-v/"
+        },
+        {
+          "label": "Wikidata · CC0",
+          "url": "https://www.wikidata.org/wiki/Q644960#Q644960$45957074-42b9-e3ea-fe5e-a3a9224570d8",
+          "license": "CC0-1.0"
+        },
+        {
+          "label": "Wikidata · CC0",
+          "url": "https://www.wikidata.org/wiki/Q230791",
+          "license": "CC0-1.0"
+        }
+      ],
+      "start": {
+        "year": 1690,
+        "month": 7,
+        "day": 11
+      }
+    },
+    "Q1059732": {
+      "expected": {
+        "start": {
+          "year": 1793,
+          "month": 10,
+          "day": 16
+        },
+        "end": null,
+        "coords": [
+          4.01333,
+          50.2014
+        ]
+      },
+      "note": "Reviewed whole-battle dates: 15–16 October 1793, explicitly given in the Hauts-de-France Inventaire/Ministry of Culture monument record. The imported 16 October is the concluding day shown in the commemorative painting, not the complete duration. No location is taken from the monument, which is in Maubeuge; the battle point remains unchanged.",
+      "sources": [
+        {
+          "label": "French Ministry of Culture / Hauts-de-France Inventaire · Wattignies monument IA59001922",
+          "url": "https://pop.culture.gouv.fr/notice/merimee/IA59001922"
+        },
+        {
+          "label": "French Ministry of Culture · Wattignies painting photograph AP45F00857 · Jourdan and Clerfayt",
+          "url": "https://pop.culture.gouv.fr/notice/memoire/AP45F00857"
+        }
+      ],
+      "start": {
+        "year": 1793,
+        "month": 10,
+        "day": 15
+      },
+      "end": {
+        "year": 1793,
+        "month": 10,
+        "day": 16
+      }
+    },
+    "Q543994": {
+      "expected": {
+        "start": {
+          "year": 1813,
+          "month": 10,
+          "day": 31
+        },
+        "end": null,
+        "coords": [
+          8.9169444444444,
+          50.133055555556
+        ]
+      },
+      "note": "Reviewed whole-battle dates: 30–31 October 1813, explicitly recorded by the City of Hanau and the Bayerisches Armeemuseum object commentary published by HDBG. The latter distinguishes the 30 October breakthrough and the 31 October fighting against the French rear guard. The imported 31 October alone omits the opening day. Geographical uncertainty remains: the existing source coordinate is retained as an approximate Hanau town-area proxy, not a reviewed centre of the battlefield. The municipal museum places the principal field in present-day Lamboy-Tümpelgarten. A KulturRegion FrankfurtRheinMain exhibition catalogue also documents the recapture of Hanau and bombardment of its Vorstadt on 31 October; urban fighting therefore prevents treating every town-area location as unrelated. Neither source validates the exact retained point or provides a replacement coordinate.",
+      "sources": [
+        {
+          "label": "City of Hanau · Historical chronology · battle on 30–31 October 1813",
+          "url": "https://www.hanau.de/stadtentwicklung/geschichte/geschichtsdaten/index.html"
+        },
+        {
+          "label": "Haus der Bayerischen Geschichte · Bayerisches Armeemuseum object 895/65 · Battle of Hanau",
+          "url": "https://portale.hdbg.de/koenigreich-bayern/objekte/objekt/295"
+        },
+        {
+          "label": "Städtische Museen Hanau · Objekt der Woche 187, Zeitzeugen · Lamboy-Tümpelgarten battlefield",
+          "url": "https://www.museen-hanau.de/sammlung/objekt-der-woche/187-zeitzeugen"
+        },
+        {
+          "label": "KulturRegion FrankfurtRheinMain · Krieg und Freiheit catalogue, printed pp.36–37 (PDF page 20) · Hanau and Vorstadt on 31 October 1813",
+          "url": "https://www.krfrm.de/wp-content/uploads/2023/11/ausstellungskatalog_krieg_und_freiheit-1.pdf"
+        }
+      ],
+      "start": {
+        "year": 1813,
+        "month": 10,
+        "day": 30
+      },
+      "end": {
+        "year": 1813,
+        "month": 10,
+        "day": 31
+      }
+    },
+    "Q2888281": {
+      "expected": {
+        "start": {
+          "year": 1847,
+          "month": 4,
+          "day": 18
+        },
+        "end": null,
+        "coords": [
+          -96.91,
+          19.53
+        ]
+      },
+      "note": "Reviewed whole-battle dates: 17–18 April 1847. The Library of Congress contemporary McClellan/Turnbull military map is explicitly titled for both dates. CMH’s campaign summary labels 17 April, while AMEDD dates Scott’s victory to 18 April; both refer to the same engagement. Restore the opening day without extending the battle to the subsequent occupation of Jalapa.",
+      "sources": [
+        {
+          "label": "Library of Congress · McClellan / Turnbull / Scott · Battle of Cerro Gordo, 17–18 April 1847 · map 2018593098",
+          "url": "https://www.loc.gov/item/2018593098/"
+        },
+        {
+          "label": "U.S. Army Center of Military History · Mexican War Campaigns · Cerro Gordo",
+          "url": "https://history.army.mil/Research/Reference-Topics/Army-Campaigns/Brief-Summaries/Mexican-War-Campaigns/"
+        },
+        {
+          "label": "U.S. Army AMEDD · Mary C. Gillett · The Army Medical Department, 1818–1865, chapter 6",
+          "url": "https://achh.army.mil/history/book-civil-gillett2-amedd-1818-1865-chpt6/"
+        }
+      ],
+      "start": {
+        "year": 1847,
+        "month": 4,
+        "day": 17
+      },
+      "end": {
+        "year": 1847,
+        "month": 4,
+        "day": 18
+      }
+    },
+    "Q1327790": {
+      "expected": {
+        "start": {
+          "year": 1863,
+          "month": 9,
+          "day": 20
+        },
+        "end": null,
+        "coords": [
+          -85.26055555555556,
+          34.91777777777778
+        ]
+      },
+      "note": "Reviewed whole-battle dates: 18–20 September 1863. NPS labels 18 September the opening day, 19 September the second day, and describes Wilder’s brigade fighting on all three days. The imported 20 September alone is the concluding day. CDB90 row 200 spans only 19–20 September and remains excluded from automatic whole-battle import; the event is not shortened to fit that source phase.",
+      "sources": [
+        {
+          "label": "National Park Service · Chickamauga 163rd anniversary ranger tours · explicit three-day battle chronology",
+          "url": "https://www.nps.gov/chch/chickamauga163rangertours.htm"
+        }
+      ],
+      "start": {
+        "year": 1863,
+        "month": 9,
+        "day": 18
+      },
+      "end": {
+        "year": 1863,
+        "month": 9,
+        "day": 20
+      }
+    },
+    "Q3357987": {
+      "expected": {
+        "start": {
+          "year": 1879,
+          "month": 11,
+          "day": 26
+        },
+        "end": null,
+        "coords": null
+      },
+      "start": {
+        "year": 1879,
+        "month": 11,
+        "day": 27
+      },
+      "note": "Correct the date to 27 November 1879, printed on the contemporary battle sketch preserved by the Biblioteca Nacional de Chile. The map depicts the initial attack in the ravine and adjoining heights. It is a schematic plan with an approximate distance scale, without a latitude/longitude grid or reviewed modern control points. The event therefore remains unlocated; neither the modern town centre nor an unverified memorial is adopted as its battle position.",
+      "sources": [
+        {
+          "label": "Biblioteca Nacional de Chile · primary 1879 sketch, MC0007387: Battle of Tarapacá, 27 November 1879",
+          "url": "https://www.memoriachilena.gob.cl/602/w3-article-68006.html"
+        },
+        {
+          "label": "Biblioteca Nacional de Chile · MC0007387, primary map inspected: Chilean and Peruvian forces",
+          "url": "https://www.memoriachilena.gob.cl/archivos2/pdfs/MC0007387.pdf"
+        }
+      ]
+    },
+    "Q4872624": {
+      "expected": {
+        "start": {
+          "year": 1894,
+          "month": 10,
+          "day": 22
+        },
+        "end": {
+          "year": 1894,
+          "month": 11,
+          "day": 10
+        },
+        "coords": null
+      },
+      "start": {
+        "year": 1894,
+        "month": 12,
+        "day": 4
+      },
+      "end": {
+        "year": 1894,
+        "month": 12,
+        "day": 7
+      },
+      "coords": [
+        127.1123,
+        36.4332
+      ],
+      "note": "Date this record to the second engagement identified as the Ugeumchi battle by the National Institute of Korean History: lunar 8–11 November 1894, corresponding to Gregorian 4–7 December. The chronology explicitly prints both calendars for 8, 9 and 11 November. This replaces the imported October–November numerical range rather than mixing the earlier Gongju fighting with the named second battle. The chronology mentions scattered retreat continuing around lunar 11–12 November; that does not extend the named four-day battle to every subsequent withdrawal. Add the Korea Heritage Service location of the protected battlefield as a representative sector locator, not a reconstructed troop position.",
+      "sources": [
+        {
+          "label": "National Institute of Korean History · Ugeumchi battle, section 5: second engagement on lunar 8–11 November",
+          "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i402520"
+        },
+        {
+          "label": "National Institute of Korean History · Donghak chronology: lunar 8 November = Gregorian 4 December 1894, battle begins",
+          "url": "https://db.history.go.kr/modern/level.do?levelId=pry_1894_11_08_0010"
+        },
+        {
+          "label": "National Institute of Korean History · Donghak chronology: lunar 9 November = Gregorian 5 December 1894, Ugeumchi assault",
+          "url": "https://db.history.go.kr/modern/level.do?levelId=pry_1894_11_09_0010"
+        },
+        {
+          "label": "National Institute of Korean History · Donghak chronology: lunar 11 November = Gregorian 7 December 1894, defeat and retreat",
+          "url": "https://db.history.go.kr/modern/level.do?levelId=pry_1894_11_11_0010"
+        },
+        {
+          "label": "Korea Heritage Service · Ugeumchi Battlefield, Gongju, historic site 387: official published location",
+          "url": "https://www.heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1333403870000&pageNo=1_1_2_0"
+        },
+        {
+          "label": "Korea Heritage Service · Ugeumchi battlefield description and designated area",
+          "url": "https://digital.khs.go.kr/heri/heriDetail.do?ctptNo=1333403870000&ctptUid=13898859677466300995"
+        }
+      ],
+      "coordinateBasis": "The official Korea Heritage Service entry for Ugeumchi Battlefield, Gongju (historic site 387, 697297 square metres) publishes its position-button parameters as longitude 127.1122867 and latitude 36.43321101. Its paired heritage description identifies the pass below Gyeonjun Mountain as the place where Donghak forces fought the government/Japanese coalition. Round the published location to four decimals. This is a locator of the designated battlefield sector, not an exact point of all fighting, a measured positional error, or the surveyed centre of the 697297-square-metre area. The 1973 memorial is not being used alone to establish the battlefield.",
+      "coordinateSourceUrl": "https://www.heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1333403870000&pageNo=1_1_2_0"
+    },
+    "Q18500027": {
+      "expected": {
+        "start": {
+          "year": 1645,
+          "month": 8,
+          "day": 17
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -34.9201,
+        -8.0358
+      ],
+      "note": "Retain 17 August 1645, independently confirmed by the Brazilian Army. Add an approximate locator for the Casa Forte square / former engenho sector. The Recife municipal account explicitly places the modern square on the former engenho where the battle occurred; the heritage diagnosis relates the old campina to the church and former casa-grande. This is a sector reference, not the excavated footprint of Anna Paes’s house or a precise assault position. The municipal coordinate document is expressly preliminary and referential.",
+      "sources": [
+        {
+          "label": "Prefeitura do Recife · Conheça o Recife, 6 June 2012: Casa Forte square occupies the former engenho battle site",
+          "url": "https://www2.recife.pe.gov.br/node/26901"
+        },
+        {
+          "label": "Recife heritage department · ZEPH-05 diagnosis, 11 February 2019, PDF p.9: former engenho campina, church and casa-grande",
+          "url": "https://conselhodacidade.recife.pe.gov.br/sites/default/files/2020-12/7%C2%AA%20reuni%C3%A3o%20-%202019-02-11%20AP%20DPPC%20DIAGN%C3%93STICO%20ZEPH-05.pdf"
+        },
+        {
+          "label": "Prefeitura do Recife · preliminary tourist point coordinates, PDF p.7, PM-07 / PTM-134: Praça de Casa Forte",
+          "url": "https://parcerias.recife.pe.gov.br/wp-content/uploads/2023/08/LOCALIZACOES_DOS_PONTOS_DE_INTERESSE_PARA_FINS_DE_MODELAGEM_ECONOMICO__1_.pdf"
+        },
+        {
+          "label": "Exército Brasileiro · CPOR Recife history, 9 November 2023: battle date 17 August 1645",
+          "url": "https://eblog.eb.mil.br/de/w/centro-de-preparacao-de-oficiais-da-reserva-do-recife-90-anos-de-historia"
+        }
+      ],
+      "coordinateBasis": "Recife’s published preliminary inventory of tourist signs/points gives Praça de Casa Forte (PM-07 / PTM-134) latitude -8.03581, longitude -34.92010 on PDF page 7; the latitude/longitude columns and referential disclaimer are on page 1. Round to longitude -34.9201, latitude -8.0358. The municipal 2012 account explicitly ties this square to the former battle-site engenho, corroborated spatially by the heritage diagnosis page 9. The point locates that broad historic sector only. It does not claim the current garden plan or its 1934 commemorative monument existed in 1645, and no exact house footprint or numerical accuracy radius is inferred.",
+      "coordinateSourceUrl": "https://parcerias.recife.pe.gov.br/wp-content/uploads/2023/08/LOCALIZACOES_DOS_PONTOS_DE_INTERESSE_PARA_FINS_DE_MODELAGEM_ECONOMICO__1_.pdf"
+    },
+    "Q2002331": {
+      "expected": {
+        "start": {
+          "year": 1632,
+          "month": 9,
+          "day": 9
+        },
+        "end": null,
+        "coords": [
+          10.96527778,
+          49.45277778
+        ]
+      },
+      "start": {
+        "year": 1632,
+        "month": 9,
+        "day": 3
+      },
+      "note": "Reviewed start date: 3 September 1632, directly given for fighting at Alte Veste in the University of St Andrews SSNE record. Replace the imported 9 September start. No end date is asserted by this correction: the separate 4 September active period in CDB90 has not been independently established here, so that quantitative source remains held. The municipal museum confirms the engagement and opposed commands. This start-date correction does not certify a one-day duration or the tabulated force totals.",
+      "sources": [
+        {
+          "label": "University of St Andrews · SSNE 1969 William Bellenden · Alte Veste on 3 September 1632",
+          "url": "https://www.st-andrews.ac.uk/history/ssne/item.php?id=1969"
+        },
+        {
+          "label": "Municipal Museum of Zirndorf · Wallenstein’s camp historical trail",
+          "url": "https://museum.zirndorf.de/das-museum/der-erlebnisweg-wallensteins-lager"
+        }
+      ]
+    },
+    "Q152486": {
+      "expected": {
+        "start": {
+          "year": 1709,
+          "month": 6,
+          "day": 27
+        },
+        "end": null,
+        "coords": [
+          34.55277777777778,
+          49.631388888888885
+        ]
+      },
+      "start": {
+        "year": 1709,
+        "month": 7,
+        "day": 8
+      },
+      "note": "Reviewed Gregorian battle date: 8 July 1709. The Presidential Library explicitly pairs 27 June (Julian) with 8 July; cached Wikidata P585 claims likewise distinguish those calendar models. Replace the raw selected 27 June value, whose Julian calendar was not carried into the public day. This is the battle date, not the later 10 July commemoration or subsequent surrender at Perevolochna. CDB90’s unconverted 28 June source date and its force/casualty scopes remain held; this correction does not authorize their import.",
+      "sources": [
+        {
+          "label": "Presidential Library · Poltava · explicit 27 June / 8 July 1709 calendar pairing",
+          "url": "https://www.prlib.ru/node/619368"
+        }
+      ]
+    },
+    "Q2889112": {
+      "expected": {
+        "start": {
+          "year": 1811,
+          "month": 5,
+          "day": 18
+        },
+        "end": {
+          "year": 1811,
+          "month": 5,
+          "day": 18
+        },
+        "coords": null
+      },
+      "coords": [
+        -56.2014,
+        -34.726
+      ],
+      "note": "The 18 May 1811 engagement is confirmed by the Uruguayan Presidency's published Army address; its Artigas and Posadas forces are distinct from the battles of Las Piedras in 1812 and 1863. The point represents the Parque Artigas battlefield sector using the national museum registry's own map marker. The museum is explicitly on the battlefield, independently identified as historical terrain by Resolution 326/013. It is not a surveyed troop position, exact surrender location or centroid of the complete engagement. Published dates are retained; no calendar conversion is applied.",
+      "sources": [
+        {
+          "label": "Ministerio de Educación y Cultura, Área de Museos · Las Piedras battlefield museum, official site map",
+          "url": "https://www.museos.gub.uy/index.php/museos/museos-por-localidad/canelones/item/985-museo-a-cielo-abierto-batalla-de-las-piedras"
+        },
+        {
+          "label": "Uruguay · Resolution 326/013: Las Piedras battlefield, Parque Artigas cadastral parcel 1905, stadium excluded",
+          "url": "https://www.impo.com.uy/bases/resoluciones/326-2013/1"
+        },
+        {
+          "label": "Presidencia de Uruguay · Army commander address: Artigas and Posadas at Las Piedras, 18 May 1811",
+          "url": "https://archivo.presidencia.gub.uy/_web/noticias/2009/05/2009051804.htm"
+        }
+      ],
+      "coordinateBasis": "The official national museum page supplies JavaScript lat=-34.726049 and lng=-56.2014445 for its own museum marker (position: latlng), not a geocoder-generated town centre or route waypoint. Use [-56.2014,-34.7260], rounded to four decimals, as a representative point within the protected battlefield park. Independent Resolution 326/013 identifies the actual battle terrain (parcel 1905, excluding the stadium). The institution supplies no measured historical positional accuracy, so no error radius or exact battle centre is asserted.",
+      "coordinateSourceUrl": "https://www.museos.gub.uy/index.php/museos/museos-por-localidad/canelones/item/985-museo-a-cielo-abierto-batalla-de-las-piedras"
+    },
+    "Q4872580": {
+      "expected": {
+        "start": {
+          "year": 1808,
+          "month": 4,
+          "day": 19
+        },
+        "end": {
+          "year": 1808,
+          "month": 4,
+          "day": 20
+        },
+        "coords": null
+      },
+      "coords": [
+        11.4878,
+        59.9182
+      ],
+      "note": "The location represents the Toverud farm battlefield sector, using the municipality's map marker for the 1908 Toverudstøtta beside the farm. Municipal history identifies the farm and Toverudsletta as the combat area, independently of the later memorial. This is a sector reference, not an exact 1808 position or a claim that the stone marks the entire engagement. Chronology remains uncertain: Store norske leksikon gives 19 April 1808, whereas the municipality-published Rømskog history gives 20 April. This location-only review preserves the existing start 19 April and end 20 April; it does not independently establish that combat lasted across both dates, and does not create an interval to reconcile the disagreement. No calendar conversion is inferred.",
+      "sources": [
+        {
+          "label": "Aurskog-Høland kommune · Toverud farm battlefield and official Toverudstøtta map link",
+          "url": "https://www.aurskog-holand.kommune.no/innhold/naring-etablering-og-landbruk/turisme/opplevaurskogholand/"
+        },
+        {
+          "label": "Aurskog-Høland kommune · Cultural heritage plan, part 2, PDF p.29: Toverud farm 189/1,2,3 and memorial",
+          "url": "https://www.aurskog-holand.kommune.no/globalassets/bilder-og-dokumenter/politikk-og-planer/kommunale-planer/kommunedelpaner/kommunedelplan-for-kulturminner-og-kulturmiljoer-2007-2015/kulturminneplandel2.pdf"
+        },
+        {
+          "label": "Kartverket · SSR place 794022, Toverud farm, Aurskog-Høland; official geographic cross-check",
+          "url": "https://api.kartverket.no/stedsnavn/v1/sted?stedsnummer=794022&utkoordsys=4258"
+        },
+        {
+          "label": "Store norske leksikon · Toverud: date 19 April 1808 and farm engagement",
+          "url": "https://snl.no/Toverud"
+        },
+        {
+          "label": "Aurskog-Høland kommune · Rømskog bygdebok, volume 2, pp.156–157: Norwegian and Swedish forces; date 20 April 1808",
+          "url": "https://www.aurskog-holand.kommune.no/globalassets/bilder-og-dokumenter/kultur-idrett-og-fritid/dokumenter/romskog-bygdebok/bind2.pdf"
+        }
+      ],
+      "coordinateBasis": "The municipality's Toverudstøtta map link https://goo.gl/maps/u7LCZQhEPGDTtpU18 resolves to the explicit place marker !3d59.9182183!4d11.4877597. Use [11.4878,59.9182], rounded to four decimals; do not use the distinct @ camera centre. Its own history places combat at Toverud farm and on Toverudsletta. The heritage inventory includes the farm and 1908 memorial; Kartverket's independent farm point [11.48952,59.91795] confirms the adjacent farm sector. The memorial pin is a representative site locator, not proof of the exact fighting or surrender position. No measured accuracy is claimed.",
+      "coordinateSourceUrl": "https://www.aurskog-holand.kommune.no/innhold/naring-etablering-og-landbruk/turisme/opplevaurskogholand/"
+    },
+    "Q4872585": {
+      "expected": {
+        "start": {
+          "year": 1808,
+          "month": 4,
+          "day": 25
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        12.1368,
+        60.6534
+      ],
+      "note": "Åsnes municipality identifies the battle on 25 April 1808 in the Trangen valley between Kjellåsen and Butteråsen. The point is Kartverket's published representative position of that named valley, rounded for atlas display, not a surveyed battle centre or deployment. The cemetery at Åsnes church and Sønsterud farm, where the wounded Dreyer later died, are separate places and are not used as the combat location. The existing date is retained without calendar conversion.",
+      "sources": [
+        {
+          "label": "Kartverket · SSR place 796072, Trangen valley, Åsnes; published representative point in EPSG:4258",
+          "url": "https://api.kartverket.no/stedsnavn/v1/sted?stedsnummer=796072&utkoordsys=4258"
+        },
+        {
+          "label": "Åsnes kommune · Cultural heritage plan, pp.54–56: Trangen battle, 25 April 1808, valley and opposing forces",
+          "url": "https://www.asnes.kommune.no/_f/p1/i932152e9-25c2-4701-b401-60709772c64d/kulturminneplan-asnes-030225-med-innholdsfortegnelse.pdf"
+        }
+      ],
+      "coordinateBasis": "Kartverket SSR place 796072 is Trangen, feature type Dal, municipality Åsnes. Its published representasjonspunkt is east 12.13681, north 60.65336 in EUREF89 / EPSG:4258. Use [12.1368,60.6534], rounded to four decimals for atlas display. The municipality's account and inspected schematic identify the combat valley between Kjellåsen and Butteråsen; the inspected official Kartverket topographic map independently confirms those named features. This is the gazetteer's valley reference point, not an averaged geometry, church/cemetery location, monument substitution or calibrated battle-centre estimate. No measured historical accuracy or error radius is available.",
+      "coordinateSourceUrl": "https://api.kartverket.no/stedsnavn/v1/sted?stedsnummer=796072&utkoordsys=4258"
+    },
+    "Q699758": {
+      "expected": {
+        "start": {
+          "year": 1759,
+          "month": 11,
+          "day": 21
+        },
+        "end": null,
+        "coords": [
+          13.80277778,
+          50.92361111
+        ]
+      },
+      "start": {
+        "year": 1759,
+        "month": 11,
+        "day": 20
+      },
+      "end": {
+        "year": 1759,
+        "month": 11,
+        "day": 21
+      },
+      "note": "Reviewed extent: 20–21 November 1759. RCT RCIN 731066.bb dates the Daun–Finck combat to 20 November (its historical notation 9bre means November); the Genoa University Press scholarly edition explicitly gives Maxen on 20–21 November, p. 92. Replace the single imported 21 November start with the fuller extent. This does not claim continuous fighting for two days or verify any troop, loss or prisoner total. CDB90 covers only the 20 November combat interval and remains held from whole-battle import.",
+      "sources": [
+        {
+          "label": "Royal Collection Trust · RCIN 731066.bb · 1765 map inscription dates the Daun–Finck combat to 20 November 1759",
+          "url": "https://militarymaps.rct.uk/the-seven-years-war-1756-63/map-of-the-battle-of-maxen-1759-maxen-saxony-germany-50deg5530n-13deg4805e"
+        },
+        {
+          "label": "Genoa University Press · Metastasio, Carteggio con Daniele Florio, ed. Rabboni and Venier · p. 92 · Maxen 20–21 November 1759",
+          "url": "https://gup.unige.it/sites/gup.unige.it/files/pagine/Carteggio_con_Daniele_Florio.pdf"
+        }
+      ]
+    },
+    "Q1054868": {
+      "expected": {
+        "start": {
+          "year": 1793,
+          "month": 9,
+          "day": 8
+        },
+        "end": null,
+        "coords": [
+          2.5861,
+          50.9803
+        ]
+      },
+      "start": {
+        "year": 1793,
+        "month": 9,
+        "day": 6
+      },
+      "end": {
+        "year": 1793,
+        "month": 9,
+        "day": 8
+      },
+      "note": "Reviewed extent: 6–8 September 1793. The Gendarmerie nationale heritage account explicitly dates the fighting to those three days and calls 8 September the last day of the battle. Preserve the final assault date as the end while restoring the earlier fighting as the start. This is the Hondschoote battle, not the whole Dunkirk siege. The account’s gendarmerie-unit numbers are not converted to whole-army totals. CDB90 covers only 6 September and remains held.",
+      "sources": [
+        {
+          "label": "Gendarmerie nationale · Colonel Laurent Vidal, Un peu de terre de France sur le drapeau, 14 September 2018 · fighting on 6–8 September 1793",
+          "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/histoire/un-peu-de-terre-de-france-sur-le-drapeau"
+        }
+      ]
+    },
+    "Q112665883": {
+      "reviewedAt": "2026-09-23",
+      "expected": {
+        "start": {
+          "year": 1916,
+          "month": 4,
+          "day": 26
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -6.2403,
+        53.3375
+      ],
+      "note": "The bridge-sector locator comes from the official NIAH map record for McKenny Bridge. Hughes, Campbell and Schreibman identify this as the bridge known as Mount Street Bridge. Maynooth University documents the 26 April 1916 engagement across nearby streets and buildings; the point does not describe its full extent or any exact troop position. The existing start date is retained and no end date is added. This review establishes location and opposing local forces only; strength, losses, equipment and movements are not inferred.",
+      "sources": [
+        {
+          "label": "National Inventory of Architectural Heritage · McKenny Bridge, record 50100535",
+          "url": "https://www.buildingsofireland.ie/buildings-search/building/50100535/mckenny-bridge-mount-street-lower-northumberland-road-dublin-2-dublin"
+        },
+        {
+          "label": "National Inventory of Architectural Heritage · official map feature 50100535, published latitude and longitude",
+          "url": "https://services-eu1.arcgis.com/HyjXgkV6KGMSF3jt/arcgis/rest/services/NIAHBuildings/FeatureServer/0/query?where=REG_NO+%3D+%2750100535%27&outFields=%2A&returnGeometry=true&outSR=4326&f=json"
+        },
+        {
+          "label": "Hughes, Campbell and Schreibman · Contested Memories (2017), p. 3 note 4: Mount Street Bridge is McKenny Bridge",
+          "url": "https://dspace.mic.ul.ie/bitstreams/426e2923-7f1c-460e-a48b-8f1bac9fef8c/download"
+        },
+        {
+          "label": "Maynooth University · Battle of Mount Street Bridge: 26 April 1916 and opposing forces",
+          "url": "https://mountstreet1916.ie/battle-of-mount-st/"
+        },
+        {
+          "label": "Maynooth University · Buildings and locations of the Mount Street Bridge engagement",
+          "url": "https://mountstreet1916.ie/battle-of-mount-st/buildings-used/"
+        }
+      ],
+      "coordinateBasis": "NIAH record 50100535 links to the official heritage map. Its NIAHBuildings feature publishes LONGITUDE=-6.24032 and LATITUDE=53.337541; the service geometry requested in EPSG:4326 is [-6.240323698173998,53.337538505431624]. Both round to [-6.2403,53.3375]. This is a bridge-sector reference point, not a surveyed troop position or a centre of the complete battlefield. The named bridge is identified with Mount Street Bridge by Hughes et al., p. 3 note 4. No historical error radius is supplied. The separate memorial southwest of the bridge and other bridges on the canal are not used.",
+      "coordinateSourceUrl": "https://www.buildingsofireland.ie/buildings-search/building/50100535/mckenny-bridge-mount-street-lower-northumberland-road-dublin-2-dublin"
+    },
+    "Q699238": {
+      "reviewedAt": "2026-09-23",
+      "expected": {
+        "start": {
+          "year": 1870,
+          "month": 8,
+          "day": 6
+        },
+        "end": null,
+        "coords": [
+          6.0166666666667,
+          49.15
+        ]
+      },
+      "coords": [
+        6.9666,
+        49.2043
+      ],
+      "sources": [
+        {
+          "label": "Forbach Tourisme / SITLOR via Cirkwi · Site historique des hauteurs de Spicheren · published location",
+          "url": "https://www.cirkwi.com/fr/point-interet/1627601-site-historique-des-hauteurs-de-spicheren"
+        },
+        {
+          "label": "Office de Tourisme Pays de Forbach · Hauteurs de Spicheren, battlefield of 6 August 1870",
+          "url": "https://paysdeforbach.com/decouvrir/les-incontournables/hauteurs-de-spicheren/"
+        },
+        {
+          "label": "Commune de Spicheren · La Bataille de Spicheren, 6 August 1870 on the heights",
+          "url": "https://www.spicheren.com/le-site-du-kreutheck"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.cirkwi.com/fr/point-interet/1627601-site-historique-des-hauteurs-de-spicheren",
+      "note": "The inherited location near Gravelotte is replaced with the published locator for the historic Hauteurs de Spicheren sector. The Forbach tourism office and the municipality identify these heights with the fighting of 6 August 1870. This site reference does not define the full battlefield or a specific regiment position. The existing date, army identities, equipment, strengths and losses are retained; no numerical statements from the tourism or municipal pages are adopted.",
+      "coordinateBasis": "Forbach Tourisme publishes the Site historique des hauteurs de Spicheren through the attributed SITLOR record on Cirkwi, with explicit latitude 49.2042714 and longitude 6.9665873. These round to [6.9666,49.2043]. This is a Hauteurs sector reference point, not a surveyed troop position, exact regimental placement or centre of the entire engagement. The official tourism and municipal accounts independently establish the combat sector. No positional accuracy radius is claimed, and the visitor site is not used to locate a particular 1870 formation or to assign later memorial equipment."
+    }
+  }
+}

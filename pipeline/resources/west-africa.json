@@ -1,0 +1,968 @@
+{
+  "sources": [
+    {
+      "id": "wa-historical-goldfields",
+      "name": "Robyn d’Avignon, Philip D. Curtin and Nehemia Levtzion — West African goldfields",
+      "url": "https://www.dukeupress.edu/a-ritual-geology",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Original historical research: A Ritual Geology (2022), chapter 2; The Lure of Bambuk Gold (1973); Ancient Ghana and Mali, p. 155. Points are deliberately coarse interpretations of regional descriptions, not surveyed mines. Chronological windows describe regional exploitation, not uninterrupted activity of individual shafts."
+    },
+    {
+      "id": "wa-fineprint",
+      "name": "Jasansky et al. — Global mining production dataset (2022)",
+      "url": "https://zenodo.org/records/7369478",
+      "license": "CC BY 4.0",
+      "year": 2026,
+      "description": "Coordinates and annual extraction observations from the authors’ original research dataset. Facility coordinates selected individually; no multipoint centroid invented. Only positive extraction observations are used, with known stockpile-processing years excluded. Review snapshot 2026 does not extend the original temporal coverage.",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "wa-asante",
+      "name": "Asante Gold — Bibiani and Chirano operating disclosures",
+      "url": "https://www.asantegold.com/news-releases/asante-provides-financial-and-operating-results-for-the-quarter-ended-october-31-2025",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operating disclosures for the separately documented Bibiani restart and 2024–2025 extraction at Bibiani and Chirano. Production guidance is not used as actual production."
+    },
+    {
+      "id": "wa-barrick-mali",
+      "name": "Barrick — Loulo-Gounkoto operating history and 2025 AIF",
+      "url": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "2025 AIF and 2011 Form 20-F establish operating history. Loulo began production in 2005 and Gounkoto in 2011. Fineprint/Jasansky et al. supplies separate site coordinates (CC BY 4.0). 2025 has production in January and December separated by suspension; annual granularity cannot encode months. Earlier chronology: https://www.sec.gov/Archives/edgar/data/1175580/000119312512144009/d321465d20f.htm Actual extraction in 2026 is separately attested by the Q2 MD&A; the period link supplies the newer evidence."
+    },
+    {
+      "id": "wa-b2gold-fekola",
+      "name": "B2Gold — Fekola technical report and operating results",
+      "url": "https://s204.q4cdn.com/324791784/files/doc_downloads/2025/10/22/Fekola-Technical_Report-December-31-2023.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Technical report effective 31 December 2023, supplemented by actual 2024–2025 results. Approximate WGS84 position transformed from report UTM zone 29N: E242200, N1387300. Planned regional projects and 2026 guidance are excluded. Q2 2026 actual production and mining are additionally reviewed via the separate 2026 period source."
+    },
+    {
+      "id": "wa-syama",
+      "name": "Ballo et al. and Resolute Mining — Syama",
+      "url": "https://www.rml.com.au/wp-content/uploads/2026/03/Resolute-2025-Annual-Report.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Original field-geology paper (2015), table 1, supplies coordinates and the 1990–2001 phase. Resolute’s prospectus documents the 2008 restart; annual disclosures bound the later phase. Satellite Tabakoroni is not duplicated as a separate mine. Positive Q1 2026 ore mining is additionally attested in the March quarterly report."
+    },
+    {
+      "id": "wa-allied-gold",
+      "name": "Allied Gold — 2025 annual information form",
+      "url": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary mine histories and annual operating tables for Sadiola and Agbaou, reviewed in 2026. Sadiola’s 2019–2020 stockpile-only years are excluded. Sadiola coordinate: Jasansky et al., CC BY 4.0; Agbaou coordinate: the operator technical report’s permit centre. Sadiola has a separate 2026 period supported by positive ore mining in the Q2 MD&A."
+    },
+    {
+      "id": "wa-yatela",
+      "name": "IAMGOLD — Yatela extraction suspension",
+      "url": "https://www.sec.gov/Archives/edgar/data/1203464/000119312513429382/d623780dex991.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary 2013 operating disclosure fixes the September cessation of excavation. First extraction observations and approximate coordinate are from Jasansky et al. (CC BY 4.0). Later heap-leach or stockpile processing is excluded."
+    },
+    {
+      "id": "wa-morila",
+      "name": "AngloGold Ashanti and Firefinch — Morila mining phases",
+      "url": "https://www.sec.gov/Archives/edgar/data/1067428/000120561318000073/aga_mineral.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "The primary history records the 2009 end of the old open-pit phase. Firefinch’s half-year 2022 report records fresh mining in 2021 and 2022. Earlier annual observations and coordinate are from Jasansky et al. (CC BY 4.0)."
+    },
+    {
+      "id": "wa-kalana",
+      "name": "Endeavour Mining — Kalana pre-feasibility technical report",
+      "url": "https://edv-14806-s3.s3.eu-west-2.amazonaws.com/files/7017/1770/6900/edv-kalana-pfs-technical-report.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical underground production phases from sections 4 and 6. Conservative 1985 first-production date used rather than 1982 development. Coordinate is the midpoint of the reported mineralized block-model bounds, transformed from WGS84/UTM 29N; the proposed future open pit is excluded."
+    },
+    {
+      "id": "wa-robex",
+      "name": "Robex Resources — 2025 prospectus independent technical reports",
+      "url": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Technical report sections 6 and 7 document Nampala and the earlier Kiniéro mine. Reported latitude/longitude converted from degrees, minutes and seconds. Operational dates, rather than discovery or permit dates, determine the periods; forecasts are excluded."
+    },
+    {
+      "id": "wa-yanfolila",
+      "name": "Hummingbird Resources and Mali EITI — Yanfolila",
+      "url": "https://wp-hummingbirdresources-2020.s3.eu-west-2.amazonaws.com/media/2024/02/121-Conference-Corporate-Presentation-Feb-2024-V3.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Operator presentation documents production from 2017; Mali EITI 2023 reports actual SMK output. Technical report section 1.2 supplies an approximate project-centre latitude and longitude, with the longitude sign corrected using its explicit western-Mali location and project map."
+    },
+    {
+      "id": "wa-endeavour-hounde",
+      "name": "Endeavour Mining — Houndé",
+      "url": "https://www.endeavourmining.com/our-portfolio/hounde-mine/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operating history and annual extraction table, reviewed through actual 2025 results. Future production guidance is omitted. Representative point at the mine’s disclosed TSF: 11°25′3.28″N, 3°32′31.40″W. Not the exact active pit."
+    },
+    {
+      "id": "wa-endeavour-mana",
+      "name": "Endeavour Mining — Mana",
+      "url": "https://www.endeavourmining.com/our-portfolio/mana-mine/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operating history and annual extraction table, reviewed through actual 2025 results. Future production guidance is omitted. TSF representative coordinate: 11°57′20″N, 3°24′46″W. Years 2009–2014 are outside this entry’s reviewed annual operating evidence, not asserted as a shutdown."
+    },
+    {
+      "id": "wa-endeavour-sabodala-massawa",
+      "name": "Endeavour Mining — Sabodala-Massawa",
+      "url": "https://www.endeavourmining.com/our-portfolio/sabodala-massawa-mine/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operating history and annual extraction table, reviewed through actual 2025 results. Future production guidance is omitted. Sabodala TSF1 representative point: 13°12′42″N, 12°11′53″W. Massawa joined the complex in 2020; its individual deposits are not backdated. The 2010–2016 evidence gap is not a closure claim."
+    },
+    {
+      "id": "wa-endeavour-ity",
+      "name": "Endeavour Mining — Ity",
+      "url": "https://www.endeavourmining.com/our-portfolio/ity-mine/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operating history and annual extraction table, reviewed through actual 2025 results. Future production guidance is omitted. Technical-report mine-centre coordinate: 6°52′16″N, 8°06′30″W. The 1992–2014 evidence gap is not a claim of closure; the 2019 CIL start is not misused as the mine’s first production."
+    },
+    {
+      "id": "wa-endeavour-lafigue",
+      "name": "Endeavour Mining — Lafigué",
+      "url": "https://www.endeavourmining.com/our-portfolio/lafigue-mine/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operating history and annual extraction table, reviewed through actual 2025 results. Future production guidance is omitted. Disclosed TSF representative point: 8°16′23.22″N, 4°39′28.39″W; not an exact individual pit."
+    },
+    {
+      "id": "wa-barrick-tongon",
+      "name": "Barrick — Tongon operating history and 2025 divestment",
+      "url": "https://www.barrick.com/English/news/news-details/2025/barrick-announces-sale-of-interest-in-tongon-for-up-to-305-million/default.aspx",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Operator chronology dates first production to 2010 and documents the operating mine in 2025. Coordinate is the mine’s disclosed tailings-facility position; no activity after the last reviewed year is inferred."
+    },
+    {
+      "id": "wa-goldfields-tarkwa",
+      "name": "Gold Fields — Tarkwa 2025 technical report summary",
+      "url": "https://www.sec.gov/Archives/edgar/data/1172724/000162828026021904/exhibit962_tarkwatrs.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary technical report sections 3 and 5 give the processing-plant coordinate and separate underground/open-pit chronology. Earlier shaft completion is not treated as production. Report effective date bounds the current phase to 2025."
+    },
+    {
+      "id": "wa-iamgold-essakane",
+      "name": "IAMGOLD — Essakane 15-year operating history",
+      "url": "https://www.iamgold.com/English/investors/news-releases/news-releases-details/2026/Essakane-Celebrates-15-Years-of-Mining-Excellence-/default.aspx",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "The 2026 operator retrospective documents 15 years of production completed in 2025, beginning in July 2010. Representative mine-complex coordinate is the disclosed TSF position in the 2023 tailings report."
+    },
+    {
+      "id": "wa-pdi-2026",
+      "name": "Predictive Discovery / Robex — March 2026 quarterly activities report",
+      "url": "https://company-announcements.afr.com/asx/pdi/cc34921f-4287-11f1-a82c-cad0a84b142a.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Issuer report published 28 April 2026, archived as the original ASX announcement. Nampala’s actual March 2026 extraction and December 2025 comparative are used; future mine-life and production targets are excluded."
+    }
+  ],
+  "sites": [
+    {
+      "id": "west-africa:bambuk",
+      "name": "Bambuk — district aurifère historique",
+      "coordinates": [-11.5, 13.0],
+      "categories": ["gold"],
+      "country": "Mali / Senegal",
+      "sourceId": "wa-historical-goldfields",
+      "sourceUrl": "https://unglueit-files.s3.amazonaws.com/ebf/da889d8a337d48928a233957f757e692.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://sahistory.org.za/sites/default/files/archive-files3/nehemia_levtzion_ancient_ghana_and_malibook4you.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 901,
+          "toYear": 1500,
+          "sourceUrl": "https://doi.org/10.1017/S0021853700013086",
+          "description": "Gold-producing region described from the tenth century onward; approximate medieval window, not an exact opening or closure.",
+          "approximate": true
+        },
+        {
+          "fromYear": 1501,
+          "toYear": 1880,
+          "sourceUrl": "https://unglueit-files.s3.amazonaws.com/ebf/da889d8a337d48928a233957f757e692.pdf",
+          "description": "Regional gold extraction during the period discussed in chapter 2, pp. 74–81; includes eighteenth- and nineteenth-century workings.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "west-africa:bure",
+      "name": "Buré — district aurifère historique",
+      "coordinates": [-9.5, 11.5],
+      "categories": ["gold"],
+      "country": "Guinea",
+      "sourceId": "wa-historical-goldfields",
+      "sourceUrl": "https://unglueit-files.s3.amazonaws.com/ebf/da889d8a337d48928a233957f757e692.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://sahistory.org.za/sites/default/files/archive-files3/nehemia_levtzion_ancient_ghana_and_malibook4you.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1200,
+          "toYear": 1500,
+          "sourceUrl": "https://unglueit-files.s3.amazonaws.com/ebf/da889d8a337d48928a233957f757e692.pdf",
+          "description": "Approximate medieval gold-producing region discussed in chapter 2, pp. 68–70, including the Mali Empire and the 1324 account associated with Mansa Musa.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "west-africa:ahafo-south",
+      "name": "Ahafo South",
+      "coordinates": [-2.361318, 6.999829],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2007,
+          "toYear": 2019,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:akyem",
+      "name": "Akyem",
+      "coordinates": [-1.023141, 6.345645],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2013,
+          "toYear": 2019,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:bibiani",
+      "name": "Bibiani",
+      "coordinates": [-2.325679, 6.464845],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2004,
+          "toYear": 2006,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        },
+        {
+          "fromYear": 2022,
+          "toYear": 2022,
+          "sourceUrl": "https://www.asantegold.com/news-releases/asante-accelerates-bibiani-ramp-up",
+          "description": "Mining resumed in February 2022; first gold was poured in July."
+        },
+        {
+          "fromYear": 2023,
+          "toYear": 2023,
+          "sourceUrl": "https://www.asantegold.com/news-releases/asante-announces-technical-reports-delineating-annual-gold-production-near-450-koz-by-2025-significant-resource-growth",
+          "description": "2023 operating results reported with the updated technical study."
+        },
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.asantegold.com/news-releases/asante-provides-financial-and-operating-results-for-the-quarter-ended-october-31-2025",
+          "description": "Positive ore mining and gold production in the 2025 quarter and its 2024 comparative."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:chirano",
+      "name": "Chirano",
+      "coordinates": [-2.382291, 6.311213],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2010,
+          "toYear": 2018,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        },
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.asantegold.com/news-releases/asante-provides-financial-and-operating-results-for-the-quarter-ended-october-31-2025",
+          "description": "Positive ore mining and gold production in the 2025 quarter and its 2024 comparative."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:edikan",
+      "name": "Edikan",
+      "coordinates": [-1.933145, 5.962441],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2012,
+          "toYear": 2020,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:iduapriem",
+      "name": "Iduapriem",
+      "coordinates": [-2.043506, 5.242687],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2004,
+          "toYear": 2018,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:obuasi",
+      "name": "Obuasi",
+      "coordinates": [-1.692104, 6.172193],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2004,
+          "toYear": 2014,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:siguiri",
+      "name": "Siguiri",
+      "coordinates": [-9.353169, 11.55683],
+      "categories": ["gold"],
+      "country": "Guinea",
+      "sourceId": "wa-fineprint",
+      "sourceUrl": "https://zenodo.org/records/7369478",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2004,
+          "toYear": 2018,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Consecutive positive extraction observations in the published dataset; endpoint denotes reviewed coverage, not necessarily closure."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:loulo",
+      "name": "Loulo",
+      "coordinates": [-11.409056, 13.07525],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-barrick-mali",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2005,
+          "toYear": 2024,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+          "description": "Operating phase from the separately documented first-production year through the 2024 comparative; the marker represents this mine within the complex."
+        },
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+          "description": "Production in January and December 2025, separated by a long suspension. The annual interval does not mean uninterrupted activity throughout 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://s25.q4cdn.com/322814910/files/doc_financial/quarterly_results/2026/q2/Barrick_Q2_2026_MD-A.pdf",
+          "description": "Actual extraction and gold production at the Loulo-Gounkoto complex in Q1 and Q2 2026. The two mine markers share complex-level operating evidence; no separate mine tonnage is assigned."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:gounkoto",
+      "name": "Gounkoto",
+      "coordinates": [-11.387321, 12.877723],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-barrick-mali",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2011,
+          "toYear": 2024,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+          "description": "Operating phase from the separately documented first-production year through the 2024 comparative; the marker represents this mine within the complex."
+        },
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+          "description": "Production in January and December 2025, separated by a long suspension. The annual interval does not mean uninterrupted activity throughout 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://s25.q4cdn.com/322814910/files/doc_financial/quarterly_results/2026/q2/Barrick_Q2_2026_MD-A.pdf",
+          "description": "Actual extraction and gold production at the Loulo-Gounkoto complex in Q1 and Q2 2026. The two mine markers share complex-level operating evidence; no separate mine tonnage is assigned."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:fekola",
+      "name": "Fekola",
+      "coordinates": [-11.372398, 12.538859],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-b2gold-fekola",
+      "sourceUrl": "https://s204.q4cdn.com/324791784/files/doc_downloads/2025/10/22/Fekola-Technical_Report-December-31-2023.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://s204.q4cdn.com/324791784/files/doc_downloads/2025/10/22/Fekola-Technical_Report-December-31-2023.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2017,
+          "toYear": 2023,
+          "sourceUrl": "https://s204.q4cdn.com/324791784/files/doc_downloads/2025/10/22/Fekola-Technical_Report-December-31-2023.pdf",
+          "description": "First production in 2017 and subsequent operating history through the technical-report effective date."
+        },
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.b2gold.com/news-media/news-releases/news-details/2026/B2Gold-Reports-Q4-and-Full-Year-2025-Results--2026-Guidance-Achieved-2025-Gold-Production-and-Cost-Guidance-Record-Annual-Revenue-in-2025-of-Over-3-Billion-Gold-Production-for-2026-Anticipated-to-be-Between-820000-and-970000-oz-Q1-2026-Dividend-of-US/default.aspx",
+          "description": "Actual 2024 and 2025 production reported in the full-year results; 2026 guidance excluded."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.b2gold.com/news-media/news-releases/news-details/2026/B2Gold-Reports-Q2-2026-Results-Strong-Operating-Performance-at-the-Fekola-Masbate-and-Otjikoto-Mines-led-to-Higher-than-Expected-Gold-Production-and-Lower-than-Expected-All-In-Sustaining-Costs-Menankoto-Exploitation-Permit-Expected-to-be-Issued-in-th/default.aspx",
+          "description": "Actual Fekola gold production and accelerated open-pit mining are reported for Q2 2026. The pending Fekola Regional permit and later production guidance are excluded."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:syama",
+      "name": "Syama",
+      "coordinates": [-6.0703, 10.7917],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-syama",
+      "sourceUrl": "https://www.rml.com.au/wp-content/uploads/2026/03/Resolute-2025-Annual-Report.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.researchgate.net/profile/Kim-Hein-3/publication/284018291_The_Syama_and_Tabakoroni_goldfields_Mali/links/5c499a27299bf12be3df7791/The-Syama-and-Tabakoroni-goldfields-Mali.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1990,
+          "toYear": 2001,
+          "sourceUrl": "https://www.researchgate.net/profile/Kim-Hein-3/publication/284018291_The_Syama_and_Tabakoroni_goldfields_Mali/links/5c499a27299bf12be3df7791/The-Syama-and-Tabakoroni-goldfields-Mali.pdf",
+          "description": "BHP and Randgold extraction phases reported in the field-study history; subsequent shutdown retained."
+        },
+        {
+          "fromYear": 2008,
+          "toYear": 2022,
+          "sourceUrl": "https://www.rml.com.au/wp-content/uploads/2022/12/7-December-2022-LSE-Prospectus-December-2022.pdf",
+          "description": "Mining recommenced in 2008; operating history documented by the 2022 prospectus."
+        },
+        {
+          "fromYear": 2023,
+          "toYear": 2023,
+          "sourceUrl": "https://www.rml.com.au/wp-content/uploads/2024/01/240131-RSG-ASX-Dec-Quarterly-Report-1.pdf",
+          "description": "Actual Syama ore extraction during 2023."
+        },
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.rml.com.au/wp-content/uploads/2026/03/Resolute-2025-Annual-Report.pdf",
+          "description": "Positive sulphide/oxide ore mining and gold production in the 2025 annual report and 2024 comparative."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.rml.com.au/wp-content/uploads/2026/04/RSG-ASX-March-2026-Quarterly-Report-FINAL.pdf",
+          "description": "Actual underground and open-pit ore extraction at Syama during Q1 2026, with gold poured from both sulphide and oxide operations. Later quarterly and annual guidance is excluded."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:sadiola",
+      "name": "Sadiola",
+      "coordinates": [-11.647074, 13.869528],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-allied-gold",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1996,
+          "toYear": 2018,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+          "description": "Production began in 1996; ore mining stopped in April 2018."
+        },
+        {
+          "fromYear": 2021,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+          "description": "Fresh mining resumed in the second quarter of 2021; actual operating results continue through 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026053477/alliedgoldmda2026q2.htm",
+          "description": "Actual ore extraction and gold production during the first half of 2026, including the quarter ended 30 June. The interval does not represent full-year production guidance."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:yatela",
+      "name": "Yatela",
+      "coordinates": [-11.754168, 14.084742],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-yatela",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1203464/000119312513429382/d623780dex991.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2001,
+          "toYear": 2013,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1203464/000119312513429382/d623780dex991.htm",
+          "description": "Gold-mining phase beginning in 2001; excavation ceased on 30 September 2013. Later processing does not extend this extraction period."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:morila",
+      "name": "Morila",
+      "coordinates": [-6.846886, 11.6809],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-morila",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067428/000120561318000073/aga_mineral.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2001,
+          "toYear": 2009,
+          "sourceUrl": "https://zenodo.org/records/7369478",
+          "description": "Reviewed annual observations within the original open-pit phase, which ended in 2009."
+        },
+        {
+          "fromYear": 2021,
+          "toYear": 2022,
+          "sourceUrl": "https://minedocs.com/24/Firefinch-QR_HY-062022.pdf",
+          "description": "Fresh ore extraction from Morila and associated pits is reported for 2021 and the first half of 2022."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:kalana",
+      "name": "Kalana — ancienne mine souterraine",
+      "coordinates": [-8.19902, 10.793985],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-kalana",
+      "sourceUrl": "https://edv-14806-s3.s3.eu-west-2.amazonaws.com/files/7017/1770/6900/edv-kalana-pfs-technical-report.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://edv-14806-s3.s3.eu-west-2.amazonaws.com/files/7017/1770/6900/edv-kalana-pfs-technical-report.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1985,
+          "toYear": 1991,
+          "sourceUrl": "https://edv-14806-s3.s3.eu-west-2.amazonaws.com/files/7017/1770/6900/edv-kalana-pfs-technical-report.pdf",
+          "description": "Historical gold-production phase ending with closure in August 1991."
+        },
+        {
+          "fromYear": 2004,
+          "toYear": 2017,
+          "sourceUrl": "https://edv-14806-s3.s3.eu-west-2.amazonaws.com/files/7017/1770/6900/edv-kalana-pfs-technical-report.pdf",
+          "description": "Underground production resumed in January 2004; extraction stopped in September 2017."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:nampala",
+      "name": "Nampala",
+      "coordinates": [-6.214444, 11.154722],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-robex",
+      "sourceUrl": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2017,
+          "toYear": 2024,
+          "sourceUrl": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+          "description": "Commercial production and the annual operating table document extraction from 2017 through 2024."
+        },
+        {
+          "fromYear": 2025,
+          "toYear": 2026,
+          "sourceUrl": "https://company-announcements.afr.com/asx/pdi/cc34921f-4287-11f1-a82c-cad0a84b142a.pdf",
+          "description": "Positive ore extraction and gold production in the December 2025 comparative and March 2026 quarter. The 2026 endpoint is a quarterly observation, not a forecast mine-life extension."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:yanfolila",
+      "name": "Yanfolila",
+      "coordinates": [-8.5, 11.2],
+      "categories": ["gold"],
+      "country": "Mali",
+      "sourceId": "wa-yanfolila",
+      "sourceUrl": "https://wp-hummingbirdresources-2020.s3.eu-west-2.amazonaws.com/media/2024/02/121-Conference-Corporate-Presentation-Feb-2024-V3.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.rns-pdf.londonstockexchange.com/rns/1737G_-2015-3-1.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2017,
+          "toYear": 2022,
+          "sourceUrl": "https://wp-hummingbirdresources-2020.s3.eu-west-2.amazonaws.com/media/2024/02/121-Conference-Corporate-Presentation-Feb-2024-V3.pdf",
+          "description": "Gold production began in 2017, with commercial production from 2018; operator history documents the intervening phase."
+        },
+        {
+          "fromYear": 2023,
+          "toYear": 2023,
+          "sourceUrl": "https://eiti.org/sites/default/files/2024-07/Rapport-ITIE-2023-_-Version-Definitive.pdf",
+          "description": "Mali EITI 2023 reports actual gold production by Société des Mines de Komana (SMK)."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:hounde",
+      "name": "Houndé",
+      "coordinates": [-3.542056, 11.417578],
+      "categories": ["gold"],
+      "country": "Burkina Faso",
+      "sourceId": "wa-endeavour-hounde",
+      "sourceUrl": "https://www.endeavourmining.com/our-portfolio/hounde-mine/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.endeavourmining.com/esg/environment/tailings/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2017,
+          "toYear": 2025,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/hounde-mine/",
+          "description": "First gold in 2017; positive annual ore-mining figures through 2025."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:mana",
+      "name": "Mana",
+      "coordinates": [-3.412778, 11.955556],
+      "categories": ["gold"],
+      "country": "Burkina Faso",
+      "sourceId": "wa-endeavour-mana",
+      "sourceUrl": "https://www.endeavourmining.com/our-portfolio/mana-mine/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.endeavourmining.com/esg/environment/tailings/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2008,
+          "toYear": 2008,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/mana-mine/",
+          "description": "First gold production is explicitly dated to 2008."
+        },
+        {
+          "fromYear": 2015,
+          "toYear": 2025,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/mana-mine/",
+          "description": "Positive annual ore-mining observations in the disclosed operating-performance series."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:sabodala-massawa",
+      "name": "Sabodala-Massawa",
+      "coordinates": [-12.198056, 13.211667],
+      "categories": ["gold"],
+      "country": "Senegal",
+      "sourceId": "wa-endeavour-sabodala-massawa",
+      "sourceUrl": "https://www.endeavourmining.com/our-portfolio/sabodala-massawa-mine/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.endeavourmining.com/esg/environment/tailings/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2009,
+          "toYear": 2009,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/sabodala-massawa-mine/",
+          "description": "First Sabodala production in 2009."
+        },
+        {
+          "fromYear": 2017,
+          "toYear": 2025,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/sabodala-massawa-mine/",
+          "description": "Positive annual extraction observations in the disclosed operating-performance series."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:ity",
+      "name": "Ity",
+      "coordinates": [-8.108333, 6.871111],
+      "categories": ["gold"],
+      "country": "Côte d’Ivoire",
+      "sourceId": "wa-endeavour-ity",
+      "sourceUrl": "https://www.endeavourmining.com/our-portfolio/ity-mine/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://s21.q4cdn.com/954147562/files/doc_downloads/technical_report/Ian-Hamilton-technical-report-ity.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1991,
+          "toYear": 1991,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/ity-mine/",
+          "description": "First gold pour in 1991."
+        },
+        {
+          "fromYear": 2015,
+          "toYear": 2025,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/ity-mine/",
+          "description": "Positive annual ore-mining observations in the disclosed operating-performance series."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:lafigue",
+      "name": "Lafigué",
+      "coordinates": [-4.657886, 8.273117],
+      "categories": ["gold"],
+      "country": "Côte d’Ivoire",
+      "sourceId": "wa-endeavour-lafigue",
+      "sourceUrl": "https://www.endeavourmining.com/our-portfolio/lafigue-mine/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.endeavourmining.com/esg/environment/tailings/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.endeavourmining.com/our-portfolio/lafigue-mine/",
+          "description": "First gold in the second quarter of 2024; actual annual extraction in 2024 and 2025."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:kiniero",
+      "name": "Kiniéro — exploitation historique",
+      "coordinates": [-9.796667, 10.431111],
+      "categories": ["gold"],
+      "country": "Guinea",
+      "sourceId": "wa-robex",
+      "sourceUrl": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2002,
+          "toYear": 2014,
+          "sourceUrl": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+          "description": "Open-pit operation began in April 2002 and mining ceased in March 2014, followed by closure in April."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:agbaou",
+      "name": "Agbaou",
+      "coordinates": [-5.183333, 6.133333],
+      "categories": ["gold"],
+      "country": "Côte d’Ivoire",
+      "sourceId": "wa-allied-gold",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.asx.com.au/asxpdf/20150330/pdf/42xl5x076p01q6.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2013,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+          "description": "Initial production in 2013, commercial production in January 2014, and annual reported output through 2025."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:tongon",
+      "name": "Tongon",
+      "coordinates": [-5.763114, 9.941306],
+      "categories": ["gold"],
+      "country": "Côte d’Ivoire",
+      "sourceId": "wa-barrick-tongon",
+      "sourceUrl": "https://www.barrick.com/English/news/news-details/2025/barrick-announces-sale-of-interest-in-tongon-for-up-to-305-million/default.aspx",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://s25.q4cdn.com/322814910/files/doc_downloads/sustainability/Letter-to-the-CoE-plus-inventory.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2010,
+          "toYear": 2025,
+          "sourceUrl": "https://www.barrick.com/English/news/news-details/2025/barrick-announces-sale-of-interest-in-tongon-for-up-to-305-million/default.aspx",
+          "description": "Production from 2010; mine operation attested by the 2025 operator disclosure, before divestment."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:tarkwa",
+      "name": "Tarkwa",
+      "coordinates": [-2.021389, 5.326944],
+      "categories": ["gold"],
+      "country": "Ghana",
+      "sourceId": "wa-goldfields-tarkwa",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1172724/000162828026021904/exhibit962_tarkwatrs.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.sec.gov/Archives/edgar/data/1172724/000162828026021904/exhibit962_tarkwatrs.htm",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1961,
+          "toYear": 1999,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1172724/000162828026021904/exhibit962_tarkwatrs.htm",
+          "description": "Underground operations restarted in 1961 and ceased in 1999."
+        },
+        {
+          "fromYear": 1999,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1172724/000162828026021904/exhibit962_tarkwatrs.htm",
+          "description": "Open-pit operating phase conservatively starts in 1999 and is attested through the 2025 technical report."
+        }
+      ]
+    },
+    {
+      "id": "west-africa:essakane",
+      "name": "Essakane",
+      "coordinates": [0.071667, 14.354167],
+      "categories": ["gold"],
+      "country": "Burkina Faso",
+      "sourceId": "wa-iamgold-essakane",
+      "sourceUrl": "https://www.iamgold.com/English/investors/news-releases/news-releases-details/2026/Essakane-Celebrates-15-Years-of-Mining-Excellence-/default.aspx",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.iamgold.com/files/doc_downloads/2024/05/2023_iamgold-tailings-report-final_protected.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2010,
+          "toYear": 2025,
+          "sourceUrl": "https://www.iamgold.com/English/investors/news-releases/news-releases-details/2026/Essakane-Celebrates-15-Years-of-Mining-Excellence-/default.aspx",
+          "description": "Commercial production began in July 2010; the operator documents the completed fifteen-year production period through 2025."
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "reviewedAt": "2026-09-23",
+    "scope": "West African gold exploitation: selected modern mines and two separately identified historical gold-producing districts. Not an exhaustive mining cadastre.",
+    "temporalMethod": "Only reviewed operating intervals are displayed. Coverage gaps do not necessarily mean inactivity. All periods are finite; sourceYear 2026 is a review snapshot, not an assertion of 2026 production. Annual granularity cannot express partial-year shutdowns.",
+    "geographicMethod": "All points are approximate mine-complex or district markers. Technical-report coordinates and CC BY 4.0 Fineprint research locations are preferred; a disclosed TSF is used as a representative complex anchor only where identified explicitly. Historical districts are coarse interpretations of published regional descriptions, never modern mines projected backwards.",
+    "excluded": "Galam was not added because reviewed evidence identified a trading corridor without a sufficiently separate extraction-area chronology. Stockpile-only years and construction/production guidance are excluded.",
+    "siteAudit": {
+      "west-africa:bambuk": "Approximate regional marker near Kéniéba, within the Senegal–Falémé goldfield described by Levtzion. Centuries normalized to integer display intervals. This district must not be merged with present-day industrial mines. The 1500/1501 boundary separates source windows, not a claimed shutdown.",
+      "west-africa:bure": "Coarse representative point in the Upper Niger/Siguiri region described by Levtzion, not an archaeological shaft. Period is a historical regional window; no continuity into the modern Siguiri mine is inferred.",
+      "west-africa:ahafo-south": "Fineprint facility COM00009.00; original reporting sources are linked in the dataset source_ids table. South-site coordinate selected from the two-point Ahafo facility; Ahafo North is not backdated.",
+      "west-africa:akyem": "Fineprint facility COM00016.00; original reporting sources are linked in the dataset source_ids table.",
+      "west-africa:bibiani": "Fineprint facility COM00130.00; original reporting sources are linked in the dataset source_ids table. Restart phases are independently documented by Asante; the intervening coverage gap is retained.",
+      "west-africa:chirano": "Fineprint facility COM00254.00; original reporting sources are linked in the dataset source_ids table. 2019–2023 is omitted for lack of individually reviewed operating evidence, not asserted as a closure.",
+      "west-africa:edikan": "Fineprint facility COM00368.00; original reporting sources are linked in the dataset source_ids table.",
+      "west-africa:iduapriem": "Fineprint facility COM00553.00; original reporting sources are linked in the dataset source_ids table.",
+      "west-africa:obuasi": "Fineprint facility COM00932.00; original reporting sources are linked in the dataset source_ids table. The 2015 dataset row is excluded because the mine was in its shutdown/care-and-maintenance transition; later redevelopment is outside this entry’s reviewed coverage.",
+      "west-africa:siguiri": "Fineprint facility COM01191.00; original reporting sources are linked in the dataset source_ids table.",
+      "west-africa:loulo": "Separate Fineprint coordinate retained for each mine. Start is corroborated by the 2011 Form 20-F; annual production history also appears in Barrick’s 2020 Investor Day MRM presentation. No 2026 output is inferred. 2026 update: Barrick Q2 MD&A p.20 documents positive open-pit ore and underground extraction plus Q1/Q2 gold production for the combined complex; original separate coordinates are retained without allocating production between them.",
+      "west-africa:gounkoto": "Separate Fineprint coordinate retained for each mine. Start is corroborated by the 2011 Form 20-F; annual production history also appears in Barrick’s 2020 Investor Day MRM presentation. No 2026 output is inferred. 2026 update: Barrick Q2 MD&A p.20 documents positive open-pit ore and underground extraction plus Q1/Q2 gold production for the combined complex; original separate coordinates are retained without allocating production between them.",
+      "west-africa:fekola": "Point represents the Fekola mine complex. Technical report section 4.1 provides the approximate coordinate; transformed EPSG:32629 to EPSG:4326. 2026 update: Q2 results dated 6 August explicitly report Fekola open-pit mining and actual gold production; regional project forecasts excluded.",
+      "west-africa:syama": "The 2002–2007 gap is preserved. Ballo et al., The Syama and Tabakoroni goldfields, Mali, provide the mine coordinate; rounded original location is approximate. 2026 update: March quarterly report production tables show positive Syama underground and open-pit ore mining, not only oxide-stockpile processing.",
+      "west-africa:sadiola": "Fineprint mine coordinate. Stockpile processing between April 2018 and the 2021 mining restart does not extend extraction into 2019 or 2020. 2026 update: Q2 MD&A reports 1.74 Mt ore mined and 48,080 oz produced in the quarter, with positive first-half extraction.",
+      "west-africa:yatela": "The Fineprint Ore mined series after 2013 is not used because the primary closure announcement distinguishes excavation from continuing processing.",
+      "west-africa:morila": "2001 is the first reviewed annual observation, not a claim that the mine opened then. Stockpile/tailings processing after 2009 is excluded; possible other satellite phases are not inferred. Later ownership changes do not by themselves attest continued extraction.",
+      "west-africa:kalana": "Approximate block-model centre from E586610–588520 and N1192480–1194150, EPSG:32629. Processing until December 2017 does not imply extraction after September. No future open-pit construction date is treated as production.",
+      "west-africa:nampala": "Coordinate: 6°12′52″W, 11°09′17″N in section 6.1.1. Earlier partial start-up and shutdown episodes are omitted conservatively; 2025 forecast is not actual production. 2026 update: issuer quarterly report of 28 April 2026, Nampala table, reports 658,905 t ore mined in Q1 2026 and positive December 2025 comparative. The original 2025 technical report’s projected 2026 output is not used.",
+      "west-africa:yanfolila": "Coarse project-centre marker. The 2015 technical report prints 8°30′E alongside an unequivocal western-Mali location; W is used, corroborated by the project map and its position west of Yanfolila. Not a precise individual pit coordinate. No production after the reviewed 2023 data is assumed.",
+      "west-africa:hounde": "Representative point at the mine’s disclosed TSF: 11°25′3.28″N, 3°32′31.40″W. Not the exact active pit.",
+      "west-africa:mana": "TSF representative coordinate: 11°57′20″N, 3°24′46″W. Years 2009–2014 are outside this entry’s reviewed annual operating evidence, not asserted as a shutdown.",
+      "west-africa:sabodala-massawa": "Sabodala TSF1 representative point: 13°12′42″N, 12°11′53″W. Massawa joined the complex in 2020; its individual deposits are not backdated. The 2010–2016 evidence gap is not a closure claim.",
+      "west-africa:ity": "Technical-report mine-centre coordinate: 6°52′16″N, 8°06′30″W. The 1992–2014 evidence gap is not a claim of closure; the 2019 CIL start is not misused as the mine’s first production.",
+      "west-africa:lafigue": "Disclosed TSF representative point: 8°16′23.22″N, 4°39′28.39″W; not an exact individual pit.",
+      "west-africa:kiniero": "Coordinate: 9°47′48″W, 10°25′52″N in section 7.1.1. The earlier mine is distinguished from the later redevelopment project; planned reopening is not actual extraction.",
+      "west-africa:agbaou": "Technical-report permit-centre coordinate, 6°08′N, 5°11′W; approximate complex location rather than individual shaft.",
+      "west-africa:tongon": "Representative TSF coordinate from Barrick’s public tailings inventory. 2025 endpoint is an attestation bound, not a mine-closure claim. Initial production is also recorded in Randgold’s 2014 Form 20-F.",
+      "west-africa:tarkwa": "Process-plant coordinate 5°19′37″N, 2°01′17″W. Underground and open-pit phases overlap in 1999; that overlap is intentional. Earlier 1930s shaft construction is omitted because it is not itself production evidence.",
+      "west-africa:essakane": "TSF location 0°4′18″E, 14°21′15″N is an approximate complex marker, not the active pit. No forecast reserves, mine-life estimates or 2026 guidance extend the period."
+    },
+    "mali2026Update": "Quarterly production/extraction evidence reviewed for Loulo, Gounkoto, Fekola, Syama, Sadiola and Nampala. An active 2026 marker means activity documented within 2026, not a guarantee of uninterrupted production for the whole year or after the latest report. Loulo and Gounkoto share a combined complex operating report."
+  }
+}

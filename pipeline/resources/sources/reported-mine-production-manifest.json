@@ -1,0 +1,10 @@
+{
+  "retrievedAt": "2026-09-23",
+  "commit": "4ab9b84e59193d235feafc974d97696987f8ea53",
+  "url": "https://raw.githubusercontent.com/kadoa-org/world-mining-monitor/4ab9b84e59193d235feafc974d97696987f8ea53/public/data/mining.db",
+  "sourceSha256": "ef718fe055a99d23fb254257256eff577051df1afbebde57e71acccaec25145f",
+  "file": "reported-mine-production.json.gz",
+  "extractSha256": "12713aa68576473821fba76c387457d6e46b16063e17d45971902d65218a98d7",
+  "records": 8564,
+  "description": "Primary operator report facts indexed by Kadoa World Mining Monitor. Production metric only; additional eligibility and reviewed mine-identity filters are applied by the offline builder. No source excerpt is published to the atlas."
+}

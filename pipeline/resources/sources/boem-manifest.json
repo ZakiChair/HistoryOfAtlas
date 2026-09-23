@@ -1,0 +1,25 @@
+{
+  "downloadedAt": "2026-09-23",
+  "sources": [
+    {
+      "file": "tables-2023.zip",
+      "url": "https://www.data.boem.gov/FieldReserves/Files/2023%20Tables%20xlsx%20Public.zip",
+      "sha256": "747fa5a1569196e9635d298ceb3a51fa7f64e55f5089b0528c9782196744e686"
+    },
+    {
+      "file": "mastproddelimit.zip",
+      "url": "https://www.data.boem.gov/FieldReserves/Files/mastproddelimit.zip",
+      "sha256": "ff760513f0cbb2a3c3977b89e23bd4a2d9f5a012bfede08d0693f74bd00b8fca"
+    },
+    {
+      "file": "appendcdelimit.zip",
+      "url": "https://www.data.boem.gov/FieldReserves/Files/appendcdelimit.zip",
+      "sha256": "29661109ba63c1a4757c79232f504431c3768067b116f97fc837858b3b7a58d7"
+    }
+  ],
+  "positionExtractSha256": "7ea000b4fb18402d8240cd3c121e859802d34e79151368728f8da0435cd44f12",
+  "positionMethod": "See boem-positions.py and boem-position-manifest.json; official Appendix A and Blocks DBF join followed by EPSG:4326 polygon centroid.",
+  "extractFile": "boem-fields.json.gz",
+  "extractSha256": "4803c840f2ec436a6936f31b53cd09704f5126cfd61bd0d7ca3785449839f6d5",
+  "fields": 1336
+}

@@ -1,0 +1,791 @@
+{
+  "coordinateMatches": [
+    {
+      "facilityId": "USA0029",
+      "name": "Ashdown Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -118.69681,
+        41.82997
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04589",
+      "coordinateRecordName": "Ashdown Property",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0040",
+      "name": "Bagdad Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -113.2111358,
+        34.5847282
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00084.00",
+      "coordinateRecordName": "Bagdad",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0042",
+      "name": "Bald Mountain Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -115.6136584,
+        39.9428052
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00088.00",
+      "coordinateRecordName": "Bald Mountain",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0068",
+      "name": "Big Ledge",
+      "state": "Nevada",
+      "coordinates": [
+        -115.039,
+        41.5028
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04531",
+      "coordinateRecordName": "Big Ledge Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0069",
+      "name": "Bingham Canyon Mine",
+      "state": "Utah",
+      "coordinates": [
+        -112.1493862,
+        40.5221684
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00133.00",
+      "coordinateRecordName": "Bingham Canyon",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0106",
+      "name": "Buick Mine",
+      "state": "Missouri",
+      "coordinates": [
+        -91.1226,
+        37.6059
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM03130",
+      "coordinateRecordName": "Buick Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0130",
+      "name": "Carlota Mines",
+      "state": "Arizona",
+      "coordinates": [
+        -110.98956,
+        33.3847768
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00206.00",
+      "coordinateRecordName": "Carlota",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0139",
+      "name": "Castle Mountain Mine",
+      "state": "California",
+      "coordinates": [
+        -115.1072824,
+        35.28441992
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM02705",
+      "coordinateRecordName": "Castle Mountain Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0153",
+      "name": "Chino Mine",
+      "state": "New Mexico",
+      "coordinates": [
+        -108.0862584,
+        32.7908875
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00253.00",
+      "coordinateRecordName": "Chino",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0164",
+      "name": "Climax Mine",
+      "state": "Colorado",
+      "coordinates": [
+        -106.1831665,
+        39.3686637
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00264.00",
+      "coordinateRecordName": "Climax",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0194",
+      "name": "Cripple Creek and Victor Gold Mine",
+      "state": "Colorado",
+      "coordinates": [
+        -105.146627666937,
+        38.7445379943853
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00302.00",
+      "coordinateRecordName": "Cripple Creek & Victor",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0230",
+      "name": "Eagle Mine",
+      "state": "Michigan",
+      "coordinates": [
+        -87.8803375127954,
+        46.7429387110415
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00363.00",
+      "coordinateRecordName": "Eagle",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0231",
+      "name": "East Boulder Mine",
+      "state": "Montana",
+      "coordinates": [
+        -110.0895976,
+        45.50397661
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM05107",
+      "coordinateRecordName": "East Boulder",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0251",
+      "name": "Fletcher Mine",
+      "state": "Missouri",
+      "coordinates": [
+        -91.1095,
+        37.4665
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM03082",
+      "coordinateRecordName": "Fletcher",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0252",
+      "name": "Florence Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -111.4282583,
+        33.04671825
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM13454",
+      "coordinateRecordName": "Florence project",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0256",
+      "name": "Florida Canyon Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -118.2367825,
+        40.57948
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04299",
+      "coordinateRecordName": "Florida Canyon Gold Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0262",
+      "name": "Fort Knox Mine",
+      "state": "Alaska",
+      "coordinates": [
+        -147.3607848,
+        64.9968601
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00418.00",
+      "coordinateRecordName": "Fort Knox",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0272",
+      "name": "Galena Complex",
+      "state": "Idaho",
+      "coordinates": [
+        -115.9673844,
+        47.4779122
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00438.00",
+      "coordinateRecordName": "Galena",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0284",
+      "name": "Gold Road Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -114.37683,
+        35.03176667
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM02654",
+      "coordinateRecordName": "Gold Road Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0301",
+      "name": "Greens Creek Mine",
+      "state": "Alaska",
+      "coordinates": [
+        -134.6392364,
+        58.0823593
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00500.00",
+      "coordinateRecordName": "Greens Creek",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0302",
+      "name": "Greystone",
+      "state": "Nevada",
+      "coordinates": [
+        -116.873,
+        40.2741
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04207",
+      "coordinateRecordName": "Greystone",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0304",
+      "name": "Haile Mine",
+      "state": "South Carolina",
+      "coordinates": [
+        -80.5392379,
+        34.5977287
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00516.00",
+      "coordinateRecordName": "Haile",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0318",
+      "name": "Henderson Mine",
+      "state": "Colorado",
+      "coordinates": [
+        -105.8374706,
+        39.7698159
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00530.00",
+      "coordinateRecordName": "Henderson",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0323",
+      "name": "Hibbing Taconite",
+      "state": "Minnesota",
+      "coordinates": [
+        -92.965529,
+        47.477477
+      ],
+      "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+      "matchedSiteId": "gem-giomt:P100000128691",
+      "coordinateRecordName": "Hibbing Taconite Mine",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0341",
+      "name": "Hycroft Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -118.6864867,
+        40.87244
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04400",
+      "coordinateRecordName": "Hycroft Gold Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0365",
+      "name": "Jerritt Canyon Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -115.9054828,
+        41.4075952
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00592.00",
+      "coordinateRecordName": "Jerritt Canyon",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0371",
+      "name": "Keetac",
+      "state": "Minnesota",
+      "coordinates": [
+        -93.075038,
+        47.42003
+      ],
+      "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+      "coordinateRecordId": "ICMM08381",
+      "coordinateRecordName": "US Steel Keetac Mine",
+      "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+      "matchedSiteId": "gem-giomt:P100000128693"
+    },
+    {
+      "facilityId": "USA0376",
+      "name": "Kensington Mine",
+      "state": "Alaska",
+      "coordinates": [
+        -135.057135289752,
+        58.8493598919714
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00631.00",
+      "coordinateRecordName": "Kensington",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0414",
+      "name": "Lisbon Valley Mine",
+      "state": "Utah",
+      "coordinates": [
+        -109.1267,
+        38.12484
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM03374",
+      "coordinateRecordName": "Lisbon Valley",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0430",
+      "name": "Lucky Friday Mine",
+      "state": "Idaho",
+      "coordinates": [
+        -115.775663,
+        47.476936
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM05352",
+      "coordinateRecordName": "Lucky Friday",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0444",
+      "name": "Marigold Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -117.1491012,
+        40.7495727
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00776.00",
+      "coordinateRecordName": "Marigold",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0456",
+      "name": "Meikle Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -116.413357,
+        41.032178
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04432",
+      "coordinateRecordName": "Meikle Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0458",
+      "name": "Mesquite Mine",
+      "state": "California",
+      "coordinates": [
+        -114.9851,
+        33.0564375
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM02374",
+      "coordinateRecordName": "Mesquite Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0479",
+      "name": "Mineral Park Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -114.167525,
+        35.39086417
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM02743",
+      "coordinateRecordName": "Mineral Park",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0485",
+      "name": "Minntac Mine",
+      "state": "Minnesota",
+      "coordinates": [
+        -92.631421,
+        47.544885
+      ],
+      "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+      "coordinateRecordId": "ICMM08538",
+      "coordinateRecordName": "US Steel Minntac Mine",
+      "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+      "matchedSiteId": "gem-giomt:P100000128695"
+    },
+    {
+      "facilityId": "USA0496",
+      "name": "Morenci Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -109.3353162,
+        33.0634695
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "current-major:morenci",
+      "coordinateRecordName": "Morenci",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0503",
+      "name": "Moss Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -114.43995,
+        35.09132
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM13672",
+      "coordinateRecordName": "Moss",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0506",
+      "name": "Mountain Pass Mine",
+      "state": "California",
+      "coordinates": [
+        -115.5316666667,
+        35.4822222222
+      ],
+      "coordinateSourceUrl": "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000008/mpmcexhibit961123125.htm",
+      "matchedSiteId": "current-major:mountain-pass",
+      "coordinateRecordName": "Mountain Pass",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0543",
+      "name": "Northshore Mine",
+      "state": "Minnesota",
+      "coordinates": [
+        -91.925224,
+        47.660443
+      ],
+      "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+      "coordinateRecordId": "ICMM13086",
+      "coordinateRecordName": "Cleveland-Cliffs Northshore Mine",
+      "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+      "matchedSiteId": "gem-giomt:P100000128697"
+    },
+    {
+      "facilityId": "USA0559",
+      "name": "Pan Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -115.746748,
+        39.31281555
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM13725",
+      "coordinateRecordName": "Pan",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0569",
+      "name": "Pinto Valley Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -110.968467556599,
+        33.3955924932904
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00991.00",
+      "coordinateRecordName": "Pinto Valley",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0621",
+      "name": "Pogo Mine",
+      "state": "Alaska",
+      "coordinates": [
+        -144.9045104,
+        64.4535064
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM00997.00",
+      "coordinateRecordName": "Pogo",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0630",
+      "name": "Pumpkin Hollow Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -119.03995,
+        38.93485
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM13957",
+      "coordinateRecordName": "Pumpkin Hollow",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0640",
+      "name": "Ray Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -110.9855755,
+        33.18015182
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM02391",
+      "coordinateRecordName": "Ray",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0642",
+      "name": "Red Dog Mine",
+      "state": "Alaska",
+      "coordinates": [
+        -162.8561111,
+        68.0755556
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01072.00",
+      "coordinateRecordName": "Red Dog",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0646",
+      "name": "Relief Canyon Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -118.1707267,
+        40.20474
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04198",
+      "coordinateRecordName": "Relief Canyon",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0665",
+      "name": "Robinson Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -115.010938888696,
+        39.2643921153573
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01091.00",
+      "coordinateRecordName": "Robinson",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0667",
+      "name": "Rochester Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -118.1541315,
+        40.2855087
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01093.00",
+      "coordinateRecordName": "Rochester",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0682",
+      "name": "Round Mountain Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -117.1034089,
+        38.7083535
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01101.00",
+      "coordinateRecordName": "Round Mountain",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0685",
+      "name": "Ruby Hill Mines",
+      "state": "Nevada",
+      "coordinates": [
+        -115.993114,
+        39.4910398
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01103.00",
+      "coordinateRecordName": "Ruby Hill",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0716",
+      "name": "Sierrita Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -111.1012802,
+        31.8757743
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01190.00",
+      "coordinateRecordName": "Sierrita",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0719",
+      "name": "Silver Bell Mine",
+      "state": "Arizona",
+      "coordinates": [
+        -111.5055091,
+        32.39514405
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM02270",
+      "coordinateRecordName": "Silver Bell mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0721",
+      "name": "Silver Peak Mine",
+      "state": "Nevada",
+      "coordinates": [
+        -117.6375066,
+        37.75054145
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM03191",
+      "coordinateRecordName": "Silver Peak",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0803",
+      "name": "Tyrone Mine",
+      "state": "New Mexico",
+      "coordinates": [
+        -108.3678263,
+        32.6439668
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01311.00",
+      "coordinateRecordName": "Tyrone",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    },
+    {
+      "facilityId": "USA0807",
+      "name": "United Taconite Mine",
+      "state": "Minnesota",
+      "coordinates": [
+        -92.548602,
+        47.481496
+      ],
+      "coordinateSourceUrl": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+      "coordinateRecordId": "ICMM08901",
+      "coordinateRecordName": "Cleveland-Cliffs United Taconite Mine",
+      "coordinateRule": "Reviewed same named mine with corporate prefix omitted by USGS; independent published positions agree within 1 km in the USGS state.",
+      "matchedSiteId": "gem-giomt:P100000128700"
+    },
+    {
+      "facilityId": "USA0816",
+      "name": "Vernal Mine",
+      "state": "Utah",
+      "coordinates": [
+        -109.496575,
+        40.6068
+      ],
+      "coordinateSourceUrl": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+      "coordinateRecordId": "ICMM04315",
+      "coordinateRecordName": "Vernal Mine",
+      "coordinateRule": "Exact normalized primary mine name and coordinates inside the USGS state. ICMM used for location only, never operating status or commodity."
+    },
+    {
+      "facilityId": "USA0837",
+      "name": "Wharf Mine",
+      "state": "South Dakota",
+      "coordinates": [
+        -103.8458114,
+        44.3471028
+      ],
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "matchedSiteId": "fineprint:COM01367.00",
+      "coordinateRecordName": "Wharf",
+      "coordinateRule": "Exact normalized mine name; independently published coordinates inside the USGS state."
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Hycroft Mine",
+      "reason": "Mining ceased in November 2021. February 2026 technical report concerns a resource update, not a restart.",
+      "sourceUrl": "https://www.hycroftmining.com/_resources/reports/2026-Hycroft-Technical-Report-Updated-MRE.pdf?v=0.979"
+    },
+    {
+      "name": "Jerritt Canyon Mine",
+      "reason": "Operator April 2026 restart plan targets production in the second half of 2027; preparatory spending is not operating production.",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1308648/000106299326001815/exhibit99-1.htm"
+    },
+    {
+      "name": "Pumpkin Hollow Mine",
+      "reason": "Operator January 2026 permit project plan describes pre-operational phase and planned 2027 processing restart. No verified completed restart as of review.",
+      "sourceUrl": "https://www.yerington.net/AgendaCenter/ViewFile/Minutes/_02252026-49"
+    },
+    {
+      "name": "Relief Canyon Mine",
+      "reason": "Operator 2025 AIF published March 2026 identifies care and maintenance; operations suspended August 2021.",
+      "sourceUrl": "https://americas-gold.com/site/assets/files/6089/2025aif.pdf"
+    },
+    {
+      "name": "Ruby Hill Mines",
+      "reason": "September 22, 2026 operator release describes the Archimedes mine under construction with first production anticipated Q4. Residual historic heap leaching is not evidence of current mine extraction.",
+      "sourceUrl": "https://www.i80gold.com/i-80-gold-announces-initial-assay-results-from-mineral-point-open-pit-project-in-nevada-including-a-step-out-hole-of-1-33-g-t-au-and-39-2-g-t-ag-over-225-6-meters/"
+    },
+    {
+      "name": "Castle Mountain Mine",
+      "reason": "Mining suspended August 2024; operator Q1 2026 financial statements report care and maintenance with residual leach revenue.",
+      "sourceUrl": "https://www.equinoxgold.com/wp-content/uploads/2026/05/EQX-2026.03.31-Financial-Statements.pdf"
+    },
+    {
+      "name": "Ashdown Mine",
+      "reason": "Held for further status review: the mirrored row cites a 2011 SEC source and a stock forum, insufficient to resolve contradictory closure reporting. This omission is not a newly inferred closure date.",
+      "sourceUrl": "https://doi.org/10.5066/P1BUPUAM"
+    }
+  ],
+  "notes": [
+    "Coordinates are independent of operating status. ICMM is used solely as a coordinate/name reference.",
+    "No nearest-neighbour-only or mine-group-name joins are accepted.",
+    "Meikle is an individually named underground mine within the wider Goldstrike complex; it is not automatically merged with the complex."
+  ]
+}

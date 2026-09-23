@@ -120,7 +120,7 @@ export default function Timeline({
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
       const target = event.target;
       if (
         target instanceof Element &&

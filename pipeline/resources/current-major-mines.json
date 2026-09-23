@@ -1,0 +1,1639 @@
+{
+  "sources": [
+    {
+      "id": "current-major-bhp",
+      "name": "BHP — FY2025 operational review",
+      "url": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-bhp-annual",
+      "name": "BHP — Annual Report 2025",
+      "url": "https://www.bhp.com/ar2025",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-rio",
+      "name": "Rio Tinto — Q4 2025 and Q2 2026 operations reviews",
+      "url": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-freeport",
+      "name": "Freeport-McMoRan — 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-newmont",
+      "name": "Newmont — 2025 annual results",
+      "url": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-first-quantum",
+      "name": "First Quantum Minerals — 2025 preliminary production",
+      "url": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-cmoc",
+      "name": "CMOC — 2025 ESG report",
+      "url": "https://en.cmoc.com/uploadfile/attachment/CMOCEN2025ESG2026033010011000.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-ivanhoe",
+      "name": "Ivanhoe Mines — 2025 results presentation",
+      "url": "https://www.ivanhoemines.com/wp-content/uploads/20260219-FY-2025-Results-Presentation-VF.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-mp-materials",
+      "name": "MP Materials — 2025 annual and Q2 2026 results",
+      "url": "https://www.mpmaterials.com/news/mp-materials-reports-second-quarter-2026-results",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-lithium-argentina",
+      "name": "Lithium Argentina — 2025 annual and Q2 2026 results",
+      "url": "https://investors.lithium-argentina.com/news-releases/news-release-details/lithium-argentina-reports-second-quarter-2026-results",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-albemarle",
+      "name": "Albemarle — 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-cameco",
+      "name": "Cameco — 2025 annual report and observed 2026 production",
+      "url": "https://www.cameco.com/invest/financial-information/annual-reports/2025",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-glencore",
+      "name": "Glencore — 2025 production report",
+      "url": "https://www.glencore.com/.rest/api/v1/documents/static/a8114247-02e8-4bd8-bc04-81f411ba631c/GLEN_2025-FY-Production-Report.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary operator reporting reviewed in September 2026. Source year denotes this evidence snapshot. Periods add only observed production years, not a continuous operating-life estimate; the last observed year is not a closure date. Forecasts and capacity alone are not production evidence."
+    },
+    {
+      "id": "current-major-igo",
+      "name": "IGO — March 2026 Quarterly Activities Report",
+      "url": "https://www.igo.com.au/site/PDF/dc4f0f43-c5fc-4422-a75f-9c84dc120b6c/March2026QuarterlyActivitiesReport",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary joint-venture owner report, published 24 April 2026. Greenbushes observed spodumene production and mining activity in the quarter ended 31 March 2026; full-year forecasts and Kwinana refinery output are excluded. Earlier Greenbushes observations retain their own Albemarle source URLs."
+    }
+  ],
+  "sites": [
+    {
+      "id": "current-major:escondida",
+      "name": "Escondida",
+      "coordinates": [
+        -69.0718966,
+        -24.270757
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "Chile",
+      "sourceId": "current-major-bhp",
+      "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+          "categories": [
+            "copper"
+          ],
+          "description": "Copper output reported for fiscal years 2024 and 2025; these are observation years, not opening or closure dates."
+        }
+      ]
+    },
+    {
+      "id": "current-major:spence",
+      "name": "Spence",
+      "coordinates": [
+        -69.2664741454624,
+        -22.791948408169
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "Chile",
+      "sourceId": "current-major-bhp",
+      "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+          "categories": [
+            "copper"
+          ],
+          "description": "Spence copper production is reported for FY2025; the neighboring Cerro Colorado mine remains on care and maintenance."
+        }
+      ]
+    },
+    {
+      "id": "current-major:olympic-dam",
+      "name": "Olympic Dam",
+      "coordinates": [
+        136.870109008325,
+        -30.4464278902638
+      ],
+      "categories": [
+        "copper",
+        "gold",
+        "silver",
+        "uranium"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-bhp-annual",
+      "sourceUrl": "https://www.bhp.com/ar2025",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.bhp.com/ar2025",
+          "categories": [
+            "copper",
+            "gold",
+            "silver",
+            "uranium"
+          ],
+          "description": "The FY2025 report identifies Olympic Dam as an operating copper, gold, silver and uranium mine; production resumed after a two-week power outage."
+        }
+      ]
+    },
+    {
+      "id": "current-major:antamina",
+      "name": "Antamina",
+      "coordinates": [
+        -77.03633,
+        -9.5652722
+      ],
+      "categories": [
+        "copper",
+        "zinc"
+      ],
+      "country": "Peru",
+      "sourceId": "current-major-bhp",
+      "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+          "categories": [
+            "copper",
+            "zinc"
+          ],
+          "description": "BHP reports copper and zinc production at Antamina in FY2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:oyu-tolgoi",
+      "name": "Oyu Tolgoi",
+      "coordinates": [
+        106.8665028,
+        43.0254198
+      ],
+      "categories": [
+        "copper",
+        "gold",
+        "silver"
+      ],
+      "country": "Mongolia",
+      "sourceId": "current-major-rio",
+      "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+          "categories": [
+            "copper",
+            "gold",
+            "silver"
+          ],
+          "description": "The operator reports copper, gold and silver mine production for both calendar years 2024 and 2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:weipa",
+      "name": "Weipa",
+      "coordinates": [
+        141.634697129687,
+        -12.948688586503
+      ],
+      "categories": [
+        "bauxite"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-rio",
+      "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+          "categories": [
+            "bauxite"
+          ],
+          "description": "Marketable bauxite mine output is reported for calendar years 2024 and 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "categories": [
+            "bauxite"
+          ],
+          "description": "Rio Tinto Q2 2026 production tables report positive marketable bauxite mine output in both Q1 and Q2 2026 for Weipa. This is mine-level actual production on a 100% basis, not shipments, alumina refinery output, guidance or total regional production."
+        }
+      ]
+    },
+    {
+      "id": "current-major:gove",
+      "name": "Gove",
+      "coordinates": [
+        136.839624485425,
+        -12.2628418800118
+      ],
+      "categories": [
+        "bauxite"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-rio",
+      "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+          "categories": [
+            "bauxite"
+          ],
+          "description": "Marketable bauxite mine output is reported for calendar years 2024 and 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "categories": [
+            "bauxite"
+          ],
+          "description": "Rio Tinto Q2 2026 production tables report positive marketable bauxite mine output in both Q1 and Q2 2026 for Gove. This is mine-level actual production on a 100% basis, not shipments, alumina refinery output, guidance or total regional production."
+        }
+      ]
+    },
+    {
+      "id": "current-major:sangaredi",
+      "name": "CBG Sangaredi",
+      "coordinates": [
+        -13.7868526,
+        11.0796532
+      ],
+      "categories": [
+        "bauxite"
+      ],
+      "country": "Guinea",
+      "sourceId": "current-major-rio",
+      "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+          "categories": [
+            "bauxite"
+          ],
+          "description": "Marketable bauxite mine output is reported for calendar years 2024 and 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "categories": [
+            "bauxite"
+          ],
+          "description": "Rio Tinto Q2 2026 production tables report positive marketable bauxite mine output in both Q1 and Q2 2026 for CBG Sangaredi. This is mine-level actual production on a 100% basis, not shipments, alumina refinery output, guidance or total regional production."
+        }
+      ]
+    },
+    {
+      "id": "current-major:morenci",
+      "name": "Morenci",
+      "coordinates": [
+        -109.3353162,
+        33.0634695
+      ],
+      "categories": [
+        "copper",
+        "molybdenum"
+      ],
+      "country": "United States",
+      "sourceId": "current-major-freeport",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2023,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+          "categories": [
+            "copper",
+            "molybdenum"
+          ],
+          "description": "The 2025 filing reports copper and molybdenum production for each year from 2023 through 2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:cerro-verde",
+      "name": "Cerro Verde",
+      "coordinates": [
+        -71.5783298,
+        -16.5382545
+      ],
+      "categories": [
+        "copper",
+        "molybdenum"
+      ],
+      "country": "Peru",
+      "sourceId": "current-major-freeport",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2023,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+          "categories": [
+            "copper",
+            "molybdenum"
+          ],
+          "description": "Copper and molybdenum production is reported separately for 2023, 2024 and 2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:grasberg",
+      "name": "Grasberg minerals district",
+      "coordinates": [
+        137.112584544616,
+        -4.05970031721468
+      ],
+      "categories": [
+        "copper",
+        "gold"
+      ],
+      "country": "Indonesia",
+      "sourceId": "current-major-freeport",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+          "categories": [
+            "copper",
+            "gold"
+          ],
+          "description": "Copper and gold mining is documented in 2025. The September mud-rush interruption and October restart of unaffected mines occurred within this annual observation."
+        }
+      ]
+    },
+    {
+      "id": "current-major:boddington",
+      "name": "Boddington",
+      "coordinates": [
+        116.3826454,
+        -32.7636099
+      ],
+      "categories": [
+        "gold",
+        "copper"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-newmont",
+      "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+          "categories": [
+            "gold",
+            "copper"
+          ],
+          "description": "Mine-level annual gold production is reported for 2024 and 2025; copper co-production is also reported for both years."
+        }
+      ]
+    },
+    {
+      "id": "current-major:cadia",
+      "name": "Cadia",
+      "coordinates": [
+        148.9965603,
+        -33.4579602
+      ],
+      "categories": [
+        "gold",
+        "copper"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-newmont",
+      "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+          "categories": [
+            "gold",
+            "copper"
+          ],
+          "description": "Mine-level annual gold production is reported for 2024 and 2025; copper co-production is also reported for both years."
+        }
+      ]
+    },
+    {
+      "id": "current-major:lihir",
+      "name": "Lihir",
+      "coordinates": [
+        152.642080705952,
+        -3.12361048228974
+      ],
+      "categories": [
+        "gold"
+      ],
+      "country": "Papua New Guinea",
+      "sourceId": "current-major-newmont",
+      "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+          "categories": [
+            "gold"
+          ],
+          "description": "Mine-level annual gold production is reported for 2024 and 2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:kansanshi",
+      "name": "Kansanshi",
+      "coordinates": [
+        26.4338348876549,
+        -12.0911900609537
+      ],
+      "categories": [
+        "copper",
+        "gold"
+      ],
+      "country": "Zambia",
+      "sourceId": "current-major-first-quantum",
+      "sourceUrl": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/",
+          "categories": [
+            "copper",
+            "gold"
+          ],
+          "description": "Annual copper and gold production is reported in both 2024 and 2025. The 2025 S3 expansion is not treated as the mine opening."
+        }
+      ]
+    },
+    {
+      "id": "current-major:sentinel",
+      "name": "Sentinel",
+      "coordinates": [
+        25.3010025,
+        -12.2813844
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "Zambia",
+      "sourceId": "current-major-first-quantum",
+      "sourceUrl": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/",
+          "categories": [
+            "copper"
+          ],
+          "description": "The operator reports copper output in 2024 and 2025 and describes ore mined from different pit stages."
+        }
+      ]
+    },
+    {
+      "id": "current-major:tenke-fungurume",
+      "name": "Tenke Fungurume",
+      "coordinates": [
+        26.1873685574028,
+        -10.5635519404217
+      ],
+      "categories": [
+        "copper",
+        "cobalt"
+      ],
+      "country": "Democratic Republic of the Congo",
+      "sourceId": "current-major-cmoc",
+      "sourceUrl": "https://en.cmoc.com/uploadfile/attachment/CMOCEN2025ESG2026033010011000.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://en.cmoc.com/uploadfile/attachment/CMOCEN2025ESG2026033010011000.pdf",
+          "categories": [
+            "copper",
+            "cobalt"
+          ],
+          "description": "CMOC documents operating copper-cobalt mining and five working production lines at TFM at the end of 2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:kamoa-kakula",
+      "name": "Kamoa-Kakula copper complex",
+      "coordinates": [
+        25.25,
+        -10.7666666667
+      ],
+      "categories": [
+        "copper"
+      ],
+      "country": "Democratic Republic of the Congo",
+      "sourceId": "current-major-ivanhoe",
+      "sourceUrl": "https://www.ivanhoemines.com/wp-content/uploads/20260219-FY-2025-Results-Presentation-VF.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.ivanhoemines.com/wp-content/uploads/1025010-Kamoa-Copper-Kamoa-Kakula-MRMR-Update-Technical-Report-31-March-2026_SEDAR-Compressed.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2021,
+          "toYear": 2025,
+          "sourceUrl": "https://www.ivanhoemines.com/wp-content/uploads/20260219-FY-2025-Results-Presentation-VF.pdf",
+          "categories": [
+            "copper"
+          ],
+          "description": "Annual copper production is reported for every year from 2021 through 2025. Temporary 2025 flooding interruptions are within the annual reporting interval."
+        }
+      ]
+    },
+    {
+      "id": "current-major:mountain-pass",
+      "name": "Mountain Pass",
+      "coordinates": [
+        -115.5316666667,
+        35.4822222222
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "United States",
+      "sourceId": "current-major-mp-materials",
+      "sourceUrl": "https://mpmaterials.com/news/mp-materials-reports-fourth-quarter-and-full-year-2025-results",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000008/mpmcexhibit961123125.htm",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://mpmaterials.com/news/mp-materials-reports-fourth-quarter-and-full-year-2025-results",
+          "categories": [
+            "rare-earths"
+          ],
+          "description": "MP Materials reports rare-earth concentrate output at Mountain Pass in 2024 and 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.mpmaterials.com/news/mp-materials-reports-second-quarter-2026-results",
+          "categories": [
+            "rare-earths"
+          ],
+          "description": "MP Materials reports 11,072 tonnes of REO contained in concentrate produced in the quarter ended 30 June 2026. The operator defines this as an upstream mining and processing indicator at Mountain Pass; separated NdPr and magnet manufacture are not substituted for extraction evidence."
+        }
+      ]
+    },
+    {
+      "id": "current-major:cauchari-olaroz",
+      "name": "Cauchari-Olaroz",
+      "coordinates": [
+        -66.7083333333,
+        -23.6916666667
+      ],
+      "categories": [
+        "lithium"
+      ],
+      "country": "Argentina",
+      "sourceId": "current-major-lithium-argentina",
+      "sourceUrl": "https://investors.lithium-argentina.com/news-releases/news-release-details/lithium-argentina-reports-fourth-quarter-and-full-year-2025",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://investors.lithium-argentina.com/static-files/e1a9d1fd-bd71-4f2b-a065-a829e87e749b",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://investors.lithium-argentina.com/news-releases/news-release-details/lithium-argentina-reports-fourth-quarter-and-full-year-2025",
+          "categories": [
+            "lithium"
+          ],
+          "description": "Lithium carbonate production is attested in 2024 and 2025; the 2025 result is 34,100 tonnes, 34% above 2024."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://investors.lithium-argentina.com/news-releases/news-release-details/lithium-argentina-reports-second-quarter-2026-results",
+          "categories": [
+            "lithium"
+          ],
+          "description": "Lithium Argentina reports 9,280 tonnes of lithium carbonate produced at Cauchari-Olaroz in Q2 2026. The source documents an operating brine project and a completed May maintenance shutdown; annual visibility indicates some operation during 2026, not uninterrupted daily production or planned Stage 2 capacity."
+        }
+      ]
+    },
+    {
+      "id": "current-major:fenix-hombre-muerto",
+      "name": "Fénix — Salar del Hombre Muerto",
+      "coordinates": [
+        -67.0833333333,
+        -25.45
+      ],
+      "categories": [
+        "lithium"
+      ],
+      "country": "Argentina",
+      "sourceId": "current-major-rio",
+      "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.sec.gov/Archives/edgar/data/1742924/000174292423000009/mdafinalresourceandreser.htm",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/financial-news-and-performance/production/2025/2025-fourth-qor.pdf?rev=9635ea7b4d1049cca226572b069c1eb5",
+          "categories": [
+            "lithium"
+          ],
+          "description": "Rio Tinto reports actual Fénix lithium-carbonate output and full-capacity operation during the fourth quarter of 2025."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "categories": [
+            "lithium"
+          ],
+          "description": "Rio Tinto reports actual first lithium production from the Fénix 1B expansion during Q2 2026 at the existing Fénix operation. The expansion attests activity in 2026; it is not treated as the original mine opening and no combined Fénix/Olaroz tonnage is assigned to this site."
+        }
+      ]
+    },
+    {
+      "id": "current-major:greenbushes",
+      "name": "Greenbushes lithium mine",
+      "coordinates": [
+        116.0653,
+        -33.8594
+      ],
+      "categories": [
+        "lithium"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-igo",
+      "sourceUrl": "https://www.igo.com.au/site/PDF/dc4f0f43-c5fc-4422-a75f-9c84dc120b6c/March2026QuarterlyActivitiesReport",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+          "categories": [
+            "lithium"
+          ],
+          "description": "Albemarle reports positive Greenbushes lithium extraction production in 2025, extending the existing independently documented history by one observed year."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.igo.com.au/site/PDF/dc4f0f43-c5fc-4422-a75f-9c84dc120b6c/March2026QuarterlyActivitiesReport",
+          "categories": [
+            "lithium"
+          ],
+          "description": "IGO reports 351 kt of spodumene production at Greenbushes in the quarter ended 31 March 2026 and describes contemporaneous mining, stripping and mine-to-mill operations. This is an observed partial year; downstream Kwinana refinery output and full-year guidance are excluded."
+        }
+      ]
+    },
+    {
+      "id": "current-major:atacama-albemarle",
+      "name": "Salar de Atacama — Albemarle",
+      "coordinates": [
+        -68.3250861111111,
+        -23.64208888888889
+      ],
+      "categories": [
+        "lithium"
+      ],
+      "country": "Chile",
+      "sourceId": "current-major-albemarle",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2023,
+          "toYear": 2025,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+          "categories": [
+            "lithium"
+          ],
+          "description": "Albemarle reports lithium extraction at its Salar de Atacama operation separately for 2023, 2024 and 2025."
+        }
+      ]
+    },
+    {
+      "id": "current-major:cigar-lake",
+      "name": "Cigar Lake",
+      "coordinates": [
+        -104.54123,
+        58.06819
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "country": "Canada",
+      "sourceId": "current-major-cameco",
+      "sourceUrl": "https://www.cameco.com/invest/financial-information/annual-reports/2025",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.cameco.com/invest/financial-information/annual-reports/2025",
+          "categories": [
+            "uranium"
+          ],
+          "description": "Cameco reports uranium mine production in 2025; this observed year does not erase earlier shutdown periods."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results",
+          "categories": [
+            "uranium"
+          ],
+          "description": "Actual second-quarter 2026 uranium production is reported. This observation does not assert production for the unreported remainder of the year."
+        }
+      ]
+    },
+    {
+      "id": "current-major:mcarthur-river",
+      "name": "McArthur River",
+      "coordinates": [
+        -105.081939109775,
+        57.766668
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "country": "Canada",
+      "sourceId": "current-major-cameco",
+      "sourceUrl": "https://www.cameco.com/invest/financial-information/annual-reports/2025",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.cameco.com/invest/financial-information/annual-reports/2025",
+          "categories": [
+            "uranium"
+          ],
+          "description": "Cameco reports uranium mine production in 2025; this observed year does not erase earlier shutdown periods."
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results",
+          "categories": [
+            "uranium"
+          ],
+          "description": "Actual second-quarter 2026 uranium production is reported. This observation does not assert production for the unreported remainder of the year."
+        }
+      ]
+    },
+    {
+      "id": "current-major:murrin-murrin",
+      "name": "Murrin Murrin",
+      "coordinates": [
+        121.895012150019,
+        -28.7676198165239
+      ],
+      "categories": [
+        "nickel",
+        "cobalt"
+      ],
+      "country": "Australia",
+      "sourceId": "current-major-glencore",
+      "sourceUrl": "https://www.glencore.com/.rest/api/v1/documents/static/a8114247-02e8-4bd8-bc04-81f411ba631c/GLEN_2025-FY-Production-Report.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2025,
+          "sourceUrl": "https://www.glencore.com/.rest/api/v1/documents/static/a8114247-02e8-4bd8-bc04-81f411ba631c/GLEN_2025-FY-Production-Report.pdf",
+          "categories": [
+            "nickel",
+            "cobalt"
+          ],
+          "description": "Glencore reports nickel and cobalt production from Murrin Murrin’s own sources in 2024 and 2025."
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "id": "current-major:escondida",
+      "name": "Escondida",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Copper: Escondida, FY25 versus FY24",
+        "production": {
+          "FY2024_copper_kt": 1125,
+          "FY2025_copper_kt": 1305
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00397.00"
+      },
+      "notes": "Fiscal years end 30 June. Do not extend to FY2026 from guidance. Raw FINEPRINT COM00397.00 has coordinates but was absent from the extraction-observation lot."
+    },
+    {
+      "id": "current-major:spence",
+      "name": "Spence",
+      "mode": "observations",
+      "observedYears": [
+        2025
+      ],
+      "evidence": {
+        "locator": "Copper: Pampa Norte/Spence",
+        "FY2025_copper_kt": 268
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00955.01"
+      },
+      "notes": "Use the individual Spence coordinate. Do NOT match or extend fineprint:COM00955.00 Pampa Norte: that parent also contains Cerro Colorado, which was put on care and maintenance in December 2023. FY2025 ends 30 June; no projected FY2026 activity is included."
+    },
+    {
+      "id": "current-major:olympic-dam",
+      "name": "Olympic Dam",
+      "mode": "observations",
+      "observedYears": [
+        2025
+      ],
+      "evidence": {
+        "locator": "Our assets: Copper South Australia, Olympic Dam; FY2025 developments",
+        "corroboratingUrl": "https://www.bhp.com/media-and-insights/image-gallery/locations-and-operations/newman-western-australia-2/"
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00937.00"
+      },
+      "notes": "Only the explicitly described FY2025 operating year is added. Copper South Australia combines several mines; its aggregate production quantities are not assigned to Olympic Dam. Year ends 30 June.",
+      "matchedSiteId": "fineprint:COM00937.00"
+    },
+    {
+      "id": "current-major:antamina",
+      "name": "Antamina",
+      "mode": "observations",
+      "observedYears": [
+        2025
+      ],
+      "evidence": {
+        "locator": "Other copper: Antamina",
+        "FY2025_BHP_share_copper_kt": 119,
+        "FY2025_BHP_share_zinc_kt": 109
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00048.00"
+      },
+      "notes": "FY2025 ends 30 June. Only copper/zinc are assigned to this new observation; historical molybdenum periods are retained independently.",
+      "matchedSiteId": "fineprint:COM00048.00"
+    },
+    {
+      "id": "current-major:oyu-tolgoi",
+      "name": "Oyu Tolgoi",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Production tables: copper, gold and silver — Oyu Tolgoi; detailed operations",
+        "copper_kt_100pct": {
+          "2024": 215.0,
+          "2025": 345.2
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00949.00"
+      },
+      "notes": "Raw FINEPRINT COM00949.00 supplies only coordinates here. No dates inferred from underground expansion milestones or future production targets."
+    },
+    {
+      "id": "current-major:weipa",
+      "name": "Weipa",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "Production tables: bauxite, and Rio Tinto operational data",
+        "production_kt_100pct": {
+          "2024": 37078,
+          "2025": 39464
+        },
+        "observations2026": {
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "archivedOriginalUrl": "https://kadoa.b-cdn.net/mining-sources/ee7ba408f96a3e38422716b9f873b67804243dd180a6452636a1c820841a48b5/document.xlsx",
+          "originalFilename": "q2-2026-90357c00.xlsx",
+          "archiveSha256": "ee7ba408f96a3e38422716b9f873b67804243dd180a6452636a1c820841a48b5",
+          "locator": "QOR Rio Tinto Operational Data!F58:G58; H1 total I58. Headers F3=Q1 2026, G3=Q2 2026; bauxite section A54:A55, units thousand tonnes.",
+          "reportPeriod": "2026-01-01/2026-06-30",
+          "production_kt_100pct": {
+            "Q1_2026": 7902.50234,
+            "Q2_2026": 9406.63645,
+            "H1_2026": 17309.13879
+          },
+          "notes": "Read the operational-data mine output, not the separate Rio Tinto share/shipments table. Sangaredi equity/offtake shares are not applied to the 100% mine output."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM01355.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. Positive mine-level Q1 and Q2 2026 output adds one observed annual period; H1 production is not annualised.",
+      "matchedSiteId": "fineprint:COM01355.00"
+    },
+    {
+      "id": "current-major:gove",
+      "name": "Gove",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "Production tables: bauxite, and Rio Tinto operational data",
+        "production_kt_100pct": {
+          "2024": 12721,
+          "2025": 12729
+        },
+        "observations2026": {
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "archivedOriginalUrl": "https://kadoa.b-cdn.net/mining-sources/ee7ba408f96a3e38422716b9f873b67804243dd180a6452636a1c820841a48b5/document.xlsx",
+          "originalFilename": "q2-2026-90357c00.xlsx",
+          "archiveSha256": "ee7ba408f96a3e38422716b9f873b67804243dd180a6452636a1c820841a48b5",
+          "locator": "QOR Rio Tinto Operational Data!F57:G57; H1 total I57. Headers F3=Q1 2026, G3=Q2 2026; bauxite section A54:A55, units thousand tonnes.",
+          "reportPeriod": "2026-01-01/2026-06-30",
+          "production_kt_100pct": {
+            "Q1_2026": 3108.79754,
+            "Q2_2026": 3229.127,
+            "H1_2026": 6337.92454
+          },
+          "notes": "Read the operational-data mine output, not the separate Rio Tinto share/shipments table. Sangaredi equity/offtake shares are not applied to the 100% mine output."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00491.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. Positive mine-level Q1 and Q2 2026 output adds one observed annual period; H1 production is not annualised.",
+      "matchedSiteId": "fineprint:COM00491.00"
+    },
+    {
+      "id": "current-major:sangaredi",
+      "name": "CBG Sangaredi",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "Production tables: bauxite, and Rio Tinto operational data",
+        "production_kt_100pct": {
+          "2024": 14043,
+          "2025": 17032
+        },
+        "observations2026": {
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "archivedOriginalUrl": "https://kadoa.b-cdn.net/mining-sources/ee7ba408f96a3e38422716b9f873b67804243dd180a6452636a1c820841a48b5/document.xlsx",
+          "originalFilename": "q2-2026-90357c00.xlsx",
+          "archiveSha256": "ee7ba408f96a3e38422716b9f873b67804243dd180a6452636a1c820841a48b5",
+          "locator": "QOR Rio Tinto Operational Data!F62:G62; H1 total I62. Headers F3=Q1 2026, G3=Q2 2026; bauxite section A54:A55, units thousand tonnes.",
+          "reportPeriod": "2026-01-01/2026-06-30",
+          "production_kt_100pct": {
+            "Q1_2026": 3879.8347815,
+            "Q2_2026": 4413.5865958,
+            "H1_2026": 8293.4213773
+          },
+          "notes": "Read the operational-data mine output, not the separate Rio Tinto share/shipments table. Sangaredi equity/offtake shares are not applied to the 100% mine output."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00217.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. Positive mine-level Q1 and Q2 2026 output adds one observed annual period; H1 production is not annualised.",
+      "matchedSiteId": "fineprint:COM00217.00"
+    },
+    {
+      "id": "current-major:morenci",
+      "name": "Morenci",
+      "mode": "observations",
+      "observedYears": [
+        2023,
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Items 1 and 2, Operations — United States: Morenci",
+        "copper_billion_lb_100pct": {
+          "2023": 0.8,
+          "2024": 0.7,
+          "2025": 0.7
+        },
+        "molybdenum_million_lb_100pct": {
+          "2023": 3,
+          "2024": 3,
+          "2025": 7
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00840.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM00840.00"
+    },
+    {
+      "id": "current-major:cerro-verde",
+      "name": "Cerro Verde",
+      "mode": "observations",
+      "observedYears": [
+        2023,
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Items 1 and 2, Operations — South America: Cerro Verde",
+        "copper_billion_lb_100pct": {
+          "2023": 1.0,
+          "2024": 0.9,
+          "2025": 0.9
+        },
+        "molybdenum_million_lb_100pct": {
+          "2023": 22,
+          "2024": 20,
+          "2025": 21
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00233.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM00233.00"
+    },
+    {
+      "id": "current-major:grasberg",
+      "name": "Grasberg minerals district",
+      "mode": "observations",
+      "observedYears": [
+        2025
+      ],
+      "evidence": {
+        "locator": "Items 1 and 2, Operations — Indonesia; 2025 production and September incident",
+        "corroboratingUrl": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000006/a4q2025exhibit991.htm"
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00496.00"
+      },
+      "notes": "District marker covers multiple underground mines. September 2025 suspension and October restart of DMLZ/Big Gossan are not representable as a whole-year gap. Grasberg Block Cave future restart guidance is not used to assert 2026 activity. Raw FINEPRINT start year is not imported."
+    },
+    {
+      "id": "current-major:boddington",
+      "name": "Boddington",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Operating Results table: Attributable Gold Production and Co-Product Production",
+        "gold_koz": {
+          "2024": 590,
+          "2025": 565
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00151.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM00151.00"
+    },
+    {
+      "id": "current-major:cadia",
+      "name": "Cadia",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Operating Results table: Attributable Gold Production and Co-Product Production",
+        "gold_koz": {
+          "2024": 464,
+          "2025": 385
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00190.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM00190.00"
+    },
+    {
+      "id": "current-major:lihir",
+      "name": "Lihir",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Operating Results table: Attributable Gold Production and Co-Product Production",
+        "gold_koz": {
+          "2024": 614,
+          "2025": 585
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00725.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM00725.00"
+    },
+    {
+      "id": "current-major:kansanshi",
+      "name": "Kansanshi",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "2025 preliminary production tables, Kansanshi rows",
+        "copper_kt": {
+          "2024": 171,
+          "2025": 181
+        },
+        "gold_koz": {
+          "2024": 105,
+          "2025": 116
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00618.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM00618.00"
+    },
+    {
+      "id": "current-major:sentinel",
+      "name": "Sentinel",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "2025 preliminary production: Trident — Sentinel",
+        "copper_kt": {
+          "2024": 231,
+          "2025": 189
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM01150.00"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "fineprint:COM01150.00"
+    },
+    {
+      "id": "current-major:tenke-fungurume",
+      "name": "Tenke Fungurume",
+      "mode": "observations",
+      "observedYears": [
+        2025
+      ],
+      "evidence": {
+        "locator": "2025 ESG report, About CMOC: TFM operations",
+        "corroboratingUrl": "https://en.cmoc.com/html/Business/Congo-Cu-Co/"
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM01273.00"
+      },
+      "notes": "The combined TFM/KFM production totals are not assigned to TFM alone. Only the site-specific 2025 mining/operating attestation is added.",
+      "matchedSiteId": "fineprint:COM01273.00"
+    },
+    {
+      "id": "current-major:kamoa-kakula",
+      "name": "Kamoa-Kakula copper complex",
+      "mode": "observations",
+      "observedYears": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "FY2025 results presentation, Kamoa-Kakula annual production table",
+        "copper_t": {
+          "2021": 96026,
+          "2022": 333497,
+          "2023": 393551,
+          "2024": 437147,
+          "2025": 388841
+        },
+        "restartEvidenceUrl": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-announces-restart-of-underground-mining-operations-on-western-side-of-kakula-mine-on-june-7-2025/"
+      },
+      "coordinateEvidence": {
+        "url": "https://www.ivanhoemines.com/wp-content/uploads/1025010-Kamoa-Copper-Kamoa-Kakula-MRMR-Update-Technical-Report-31-March-2026_SEDAR-Compressed.pdf",
+        "notes": "Technical report sections 1.3/4 publish project center 10°46′S, 25°15′E; converted to decimal degrees. Approximate complex center, not a specific shaft."
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year."
+    },
+    {
+      "id": "current-major:mountain-pass",
+      "name": "Mountain Pass",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "Full Year Materials Segment Operational Results",
+        "REO_in_concentrate_t": {
+          "2024": 45455,
+          "2025": 50692
+        },
+        "observations2026": {
+          "sourceUrl": "https://www.mpmaterials.com/news/mp-materials-reports-second-quarter-2026-results",
+          "locator": "Second Quarter 2026 Materials Segment Financial and Operational Results; Key Performance Indicators definitions",
+          "reportPeriod": "2026-04-01/2026-06-30",
+          "production": {
+            "REO_in_concentrate_t": 11072
+          },
+          "extractionEvidence": "REO Production Volume is explicitly defined as an upstream mining and processing indicator, distinct from downstream NdPr output and magnetics."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1801368/000180136826000008/mpmcexhibit961123125.htm",
+        "notes": "2025 Technical Report Summary sections 1.1/3: mine at 35°28′56″N, 115°31′54″W. The mine is mapped, not the downstream Texas magnet plants."
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. A directly reported 2026 quarterly observation is added separately; no future production is inferred."
+    },
+    {
+      "id": "current-major:cauchari-olaroz",
+      "name": "Cauchari-Olaroz",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "FY2025 operational highlights — lithium production",
+        "observations2026": {
+          "sourceUrl": "https://investors.lithium-argentina.com/news-releases/news-release-details/lithium-argentina-reports-second-quarter-2026-results",
+          "locator": "Second Quarter 2026 Results, Cauchari-Olaroz operating highlights",
+          "reportPeriod": "2026-04-01/2026-06-30",
+          "production": {
+            "lithium_carbonate_t_100pct": 9280
+          },
+          "withinYearInterruption": "Planned maintenance and plant improvements shutdown completed in May 2026. Annual precision does not show its duration.",
+          "excluded": "Stage 2 capacity and future wells are not counted as operating production."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://investors.lithium-argentina.com/static-files/e1a9d1fd-bd71-4f2b-a065-a829e87e749b",
+        "notes": "2025 annual report gives the operating salar area between S23°18′–S24°05′ and W66°34′–W66°51′. Marker is the midpoint of this published extent, deliberately approximate; not a surveyed well or plant coordinate."
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. A directly reported 2026 quarterly observation is added separately; no future production is inferred."
+    },
+    {
+      "id": "current-major:fenix-hombre-muerto",
+      "name": "Fénix — Salar del Hombre Muerto",
+      "mode": "observations",
+      "observedYears": [
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "Fourth quarter operations review, Lithium: Fenix operational performance",
+        "observations2026": {
+          "sourceUrl": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+          "locator": "Second Quarter Operations Review 2026, executive summary: actual first production at Fénix 1B",
+          "reportPeriod": "2026-04-01/2026-06-30",
+          "productionMilestone": "First lithium production achieved at Fénix 1B during the reported quarter",
+          "extractionEvidence": "Completed production milestone at the existing brine operation, not a future expansion target."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1742924/000174292423000009/mdafinalresourceandreser.htm",
+        "notes": "Technical report section 3.3 places Project Fenix brine facilities in the western Salar del Hombre Muerto basin at S25°27′, W67°05′. Regional representative coordinate; distinct from Sal de Vida in the eastern basin."
+      },
+      "notes": "Observed 2025 operation and separately reported Q2 2026 first production at the Fénix 1B expansion. The source aggregates some lithium tonnages across Fénix/Olaroz; no aggregate tonnage is assigned to this marker. Acquisition and expansion years are not treated as the original extraction start."
+    },
+    {
+      "id": "current-major:greenbushes",
+      "name": "Greenbushes lithium mine",
+      "mode": "observations",
+      "observedYears": [
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "Item 2, Mineral extraction sites: Aggregate Annual Production",
+        "attributable_lithium_metal_kt_2025": 19,
+        "ownership_fraction": 0.49,
+        "observations2026": {
+          "sourceUrl": "https://www.igo.com.au/site/PDF/dc4f0f43-c5fc-4422-a75f-9c84dc120b6c/March2026QuarterlyActivitiesReport",
+          "locator": "March 2026 Quarterly Activities Report, page 4: Greenbushes lithium mine (100% basis)",
+          "reportPeriod": "2026-01-01/2026-03-31",
+          "production": {
+            "spodumene_concentrate_kt_100pct": 351
+          },
+          "extractionEvidence": "Same mine section describes stripping expenditure, mining fleet productivity and active mine-to-mill improvements."
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://mrdata.usgs.gov/major-deposits/",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "historical:greenbushes-lithium-mine"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. A directly reported 2026 quarterly observation is added separately; no future production is inferred.",
+      "matchedSiteId": "historical:greenbushes-lithium-mine"
+    },
+    {
+      "id": "current-major:atacama-albemarle",
+      "name": "Salar de Atacama — Albemarle",
+      "mode": "observations",
+      "observedYears": [
+        2023,
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Item 2, Mineral extraction sites: Aggregate Annual Production",
+        "lithium_metal_kt": {
+          "2023": 10,
+          "2024": 13,
+          "2025": 14
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+        "notes": "Item 2, Salar de Atacama facility: 23°38′31.52″S, 68°19′30.31″W, converted to decimal degrees. Do not use La Negra conversion-plant coordinates or merge with SQM’s separate extraction operation."
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year."
+    },
+    {
+      "id": "current-major:cigar-lake",
+      "name": "Cigar Lake",
+      "mode": "observations",
+      "observedYears": [
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "2025 annual report, Operational and marketing performance",
+        "U3O8_million_lb_100pct_2025": 19.1,
+        "Q2_2026": {
+          "url": "https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results",
+          "U3O8_million_lb_100pct": 2.9
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "mincan:208"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year.",
+      "matchedSiteId": "mincan:208"
+    },
+    {
+      "id": "current-major:mcarthur-river",
+      "name": "McArthur River",
+      "mode": "observations",
+      "observedYears": [
+        2025,
+        2026
+      ],
+      "evidence": {
+        "locator": "2025 annual report, Operational and marketing performance",
+        "U3O8_million_lb_100pct_2025": 15.1,
+        "Q2_2026": {
+          "url": "https://www.cameco.com/media/news/cameco-reports-2026-second-quarter-results",
+          "U3O8_million_lb_100pct": 3.3
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "mincan:510"
+      },
+      "notes": "Append these observed years only; preserve all earlier periods and any intervening unobserved years. Annual precision does not imply uninterrupted operation every day of a year. The reported McArthur River/Key Lake output is positioned at the uranium mine, not the separate Key Lake mill; do not confuse the Australian McArthur River zinc mine.",
+      "matchedSiteId": "mincan:510"
+    },
+    {
+      "id": "current-major:murrin-murrin",
+      "name": "Murrin Murrin",
+      "mode": "observations",
+      "observedYears": [
+        2024,
+        2025
+      ],
+      "evidence": {
+        "locator": "Production from own sources — Nickel assets, Murrin Murrin",
+        "nickel_kt": {
+          "2024": 34.3,
+          "2025": 32.1
+        },
+        "cobalt_kt": {
+          "2024": 2.5,
+          "2025": 2.2
+        }
+      },
+      "coordinateEvidence": {
+        "url": "https://zenodo.org/records/7369478",
+        "notes": "Published representative mine/facility coordinate reused from the approved source; not an individual shaft or pit boundary.",
+        "originalSiteId": "fineprint:COM00872.00"
+      },
+      "notes": "Use the own-source production table, excluding the higher separate totals that include third-party feed. Raw FINEPRINT supplies the mine location; its undated status or start field is not imported."
+    },
+    {
+      "name": "Curation scope and exclusions",
+      "mode": "scope",
+      "reviewedAt": "2026-09-23",
+      "notes": "Observation extension only. No automatic filling of gaps between prior coverage and this lot. Annual attestations do not encode within-year suspensions or establish opening/closure dates. West African gold is curated separately. Mount Weld is deferred here because its representative coordinate was not independently verified within this pass. Sangaredi covers the CBG operation, not all mines in the Boké region. Atacama covers Albemarle, not the neighboring SQM operation.",
+      "excluded": [
+        {
+          "name": "Thacker Pass",
+          "reason": "Construction project; current operator update targets mechanical completion in late 2027 and production ramp-up during 2028. Earlier forecasts are not actual extraction.",
+          "sourceUrl": "https://lithiumamericas.com/news/news-details/2026/Lithium-Americas-Provides-a-Project-Update-and-2026-Capex-Guidance-for-Thacker-Pass/default.aspx"
+        }
+      ]
+    }
+  ]
+}

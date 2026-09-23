@@ -1,0 +1,362 @@
+{
+  "fieldCount": 1336,
+  "positionCount": 1327,
+  "exclusions": [
+    {
+      "field": "CP000",
+      "area": "CP",
+      "block": "0",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "EC136",
+      "area": "EC",
+      "block": "136",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "EI113B",
+      "area": "EI",
+      "block": "B113",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "LP000",
+      "area": "LP",
+      "block": "0",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "SA017",
+      "area": "SA",
+      "block": "17",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "SS113A",
+      "area": "SS",
+      "block": "A113",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "TS000",
+      "area": "TS",
+      "block": "0",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    },
+    {
+      "field": "VR014",
+      "area": "VR",
+      "block": "14",
+      "reason": "DBF-block-match-count",
+      "count": 0
+    },
+    {
+      "field": "WC049",
+      "area": "WC",
+      "block": "49",
+      "reason": "named-block-not-assigned-to-field-in-current-Appendix-A"
+    }
+  ],
+  "method": "Field code is parsed into BOEM area and named/discovery block. That same block must be assigned to the same field in official Appendix A. Official BOEM blocks.zip DBF joins AREA_CODE+BLOCK_NUMB to PROT_NUMBE. ArcGIS returns only requested block polygons transformed to EPSG:4326. A planar polygon-area centroid represents the named block approximately, not a reservoir boundary or discovery-well point. Prefix A is preserved (HI563A -> HI / A563). No fallback to basin/city/area centroid.",
+  "coordinateAccuracy": "approximate: representative centroid of an OCS block, usually about 3 by 3 miles",
+  "fieldNamingSourceUrl": "https://www.boem.gov/oil-gas-energy/resource-evaluation/ocs-operations-field-directory",
+  "blocksSourceUrl": "https://www.data.boem.gov/Mapping/Files/blocks.zip",
+  "inputSha256": {
+    "hoa-boem-appendadelimit.zip": "02772f9337e4b87bc018ea4582dd8555c89f68763d0ac989df607883d10325bc",
+    "hoa-boem-blocks.zip": "8ceb61ca7a1e48da6b0ea8a891a2b4bf211c8b2d3f9c8135fea69f701570e0de"
+  },
+  "fieldIdsSha256": "5d1c288a59a292d511567a9ff78fcbb43b5f7321f7e9e58b79222042ab3c995a",
+  "requests": [
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA1%27+AND+BLOCK_NUMBER+IN+%28%27++109%27%2C%27++110%27%2C%27++116%27%2C%27++118%27%2C%27++130%27%2C%27++146%27%2C%27++149%27%2C%27++151%27%2C%27++165%27%2C%27++167%27%2C%27+++17%27%2C%27++180%27%2C%27++187%27%2C%27++192%27%2C%27++196%27%2C%27++198%27%2C%27++205%27%2C%27++222%27%2C%27++225%27%2C%27++228%27%2C%27++229%27%2C%27++236%27%2C%27++237%27%2C%27++253%27%2C%27++254%27%2C%27++264%27%2C%27++265%27%2C%27++277%27%2C%27+++28%27%2C%27++280%27%2C%27++284%27%2C%27+++33%27%2C%27+++40%27%2C%27+++41%27%2C%27+++45%27%2C%27+++55%27%2C%27+++66%27%2C%27+++68%27%2C%27+++71%27%2C%27+++76%27%2C%27+++77%27%2C%27+++78%27%2C%27+++81%27%2C%27+++92%27%2C%27+++95%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "1e58110888245b68a54532c9b0b9f62ae2796dd003635476c2711007f29884e6",
+      "features": 45
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA10%27+AND+BLOCK_NUMBER+IN+%28%27++103%27%2C%27++107%27%2C%27++108%27%2C%27++111%27%2C%27++112%27%2C%27++114%27%2C%27++115%27%2C%27++118%27%2C%27++120%27%2C%27++125%27%2C%27++126%27%2C%27++127%27%2C%27++128%27%2C%27++129%27%2C%27++131%27%2C%27++133%27%2C%27++139%27%2C%27++140%27%2C%27++141%27%2C%27++144%27%2C%27++150%27%2C%27++151%27%2C%27+++20%27%2C%27+++29%27%2C%27+++30%27%2C%27+++39%27%2C%27+++41%27%2C%27+++56%27%2C%27++++6%27%2C%27+++61%27%2C%27+++62%27%2C%27+++64%27%2C%27+++69%27%2C%27+++73%27%2C%27+++86%27%2C%27+++89%27%2C%27+++93%27%2C%27+++96%27%2C%27+++98%27%2C%27+++99%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "75de4db8fdcffc5a904da5abf5de2be623f733d85b7d4558e64b1d6650eb8d83",
+      "features": 40
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA10A%27+AND+BLOCK_NUMBER+IN+%28%27++154%27%2C%27++159%27%2C%27++162%27%2C%27++163%27%2C%27++164%27%2C%27++166%27%2C%27++175%27%2C%27++178%27%2C%27++181%27%2C%27++186%27%2C%27++198%27%2C%27++200%27%2C%27++202%27%2C%27++206%27%2C%27++211%27%2C%27++216%27%2C%27++217%27%2C%27++223%27%2C%27++225%27%2C%27++226%27%2C%27++227%27%2C%27++233%27%2C%27++234%27%2C%27++241%27%2C%27++242%27%2C%27++243%27%2C%27++245%27%2C%27++250%27%2C%27++252%27%2C%27++253%27%2C%27++255%27%2C%27++256%27%2C%27++259%27%2C%27++261%27%2C%27++262%27%2C%27++265%27%2C%27++267%27%2C%27++273%27%2C%27++277%27%2C%27++280%27%2C%27++283%27%2C%27++286%27%2C%27++287%27%2C%27++290%27%2C%27++299%27%2C%27++306%27%2C%27++308%27%2C%27++310%27%2C%27++311%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "21aceeed77245a16d47cbe4a9a1108c6702a1f36b994fa3245df50640ee58325",
+      "features": 49
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA10B%27+AND+BLOCK_NUMBER+IN+%28%27+++25%27%2C%27+++41%27%2C%27+++53%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "dad11537e4c9305bf996addfe57e96ccf4914307677bc9aa3538774a785aedd3",
+      "features": 3
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA11%27+AND+BLOCK_NUMBER+IN+%28%27+++14%27%2C%27+++21%27%2C%27+++24%27%2C%27+++25%27%2C%27+++27%27%2C%27+++29%27%2C%27++++3%27%2C%27+++31%27%2C%27+++32%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "380eb8e967b2baa1ce44432ce79da5d4e40fa898777110649813dd95423bb7ea",
+      "features": 9
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA11A%27+AND+BLOCK_NUMBER+IN+%28%27+++37%27%2C%27+++38%27%2C%27+++40%27%2C%27+++41%27%2C%27+++43%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "e2ad0d092b0148ac356fd20d918401c000fd1447728ef6961e8305c393acc88c",
+      "features": 5
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA12%27+AND+BLOCK_NUMBER+IN+%28%27+++10%27%2C%27+++11%27%2C%27+++13%27%2C%27++++7%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "025cdbcf31e12c56f5c9eb4d5eb7836908698ebb635a6094ff4fcbd636921a0b",
+      "features": 4
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA1A%27+AND+BLOCK_NUMBER+IN+%28%27++157%27%2C%27++294%27%2C%27++295%27%2C%27++297%27%2C%27++310%27%2C%27++311%27%2C%27++313%27%2C%27++315%27%2C%27++331%27%2C%27++333%27%2C%27++342%27%2C%27++347%27%2C%27++353%27%2C%27++359%27%2C%27++368%27%2C%27++370%27%2C%27++379%27%2C%27++391%27%2C%27++398%27%2C%27++403%27%2C%27++406%27%2C%27++409%27%2C%27++414%27%2C%27++416%27%2C%27++417%27%2C%27++420%27%2C%27++424%27%2C%27++425%27%2C%27++427%27%2C%27++428%27%2C%27++432%27%2C%27++436%27%2C%27++442%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "1e7b88b410456a412330a5801669b27fcba31637e7664371aafaf370c2e28c7c",
+      "features": 33
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA1B%27+AND+BLOCK_NUMBER+IN+%28%27++459%27%2C%27++464%27%2C%27++472%27%2C%27++480%27%2C%27++489%27%2C%27++491%27%2C%27++492%27%2C%27++498%27%2C%27++504%27%2C%27++507%27%2C%27++518%27%2C%27++533%27%2C%27++536%27%2C%27++537%27%2C%27++540%27%2C%27++543%27%2C%27++546%27%2C%27++547%27%2C%27++576%27%2C%27++587%27%2C%27++589%27%2C%27++592%27%2C%27++598%27%2C%27++599%27%2C%27++600%27%2C%27++604%27%2C%27++607%27%2C%27++615%27%2C%27++617%27%2C%27++618%27%2C%27++620%27%2C%27++635%27%2C%27++639%27%2C%27++643%27%2C%27++661%27%2C%27++663%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "e5d7467f8601ba3a971e218390302fb2ef544e90a3b2b795238f6f674e226db4",
+      "features": 36
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA2%27+AND+BLOCK_NUMBER+IN+%28%27++106%27%2C%27++115%27%2C%27++117%27%2C%27++118%27%2C%27++121%27%2C%27++138%27%2C%27+++14%27%2C%27++142%27%2C%27++144%27%2C%27++148%27%2C%27++151%27%2C%27++160%27%2C%27++171%27%2C%27++185%27%2C%27++193%27%2C%27++195%27%2C%27++196%27%2C%27++++2%27%2C%27++213%27%2C%27++215%27%2C%27++222%27%2C%27++224%27%2C%27++231%27%2C%27++233%27%2C%27+++26%27%2C%27+++33%27%2C%27+++38%27%2C%27+++46%27%2C%27+++49%27%2C%27+++51%27%2C%27+++60%27%2C%27+++62%27%2C%27+++64%27%2C%27+++71%27%2C%27+++89%27%2C%27+++96%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "b63ca99b79e77fbf141acf9562211bc0ceab754c8e3ecf3068c38cafcf44401e",
+      "features": 36
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA2A%27+AND+BLOCK_NUMBER+IN+%28%27++237%27%2C%27++245%27%2C%27++246%27%2C%27++257%27%2C%27++261%27%2C%27++265%27%2C%27++267%27%2C%27++271%27%2C%27++275%27%2C%27++276%27%2C%27++286%27%2C%27++294%27%2C%27++299%27%2C%27++300%27%2C%27++303%27%2C%27++306%27%2C%27++317%27%2C%27++321%27%2C%27++322%27%2C%27++334%27%2C%27++338%27%2C%27++347%27%2C%27++353%27%2C%27++359%27%2C%27++360%27%2C%27++364%27%2C%27++368%27%2C%27++369%27%2C%27++377%27%2C%27++378%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "fe47c9e2a3c637f1d132d06a7cdc5fc4204a123ddafd1347b7479ab3b56e7af6",
+      "features": 30
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA3%27+AND+BLOCK_NUMBER+IN+%28%27++100%27%2C%27++102%27%2C%27++107%27%2C%27++112%27%2C%27++115%27%2C%27++120%27%2C%27++122%27%2C%27++131%27%2C%27++147%27%2C%27++153%27%2C%27++155%27%2C%27++159%27%2C%27++162%27%2C%27++164%27%2C%27++167%27%2C%27++171%27%2C%27++175%27%2C%27++182%27%2C%27++187%27%2C%27++191%27%2C%27++193%27%2C%27++200%27%2C%27++202%27%2C%27++207%27%2C%27++214%27%2C%27++215%27%2C%27++218%27%2C%27++221%27%2C%27++223%27%2C%27+++24%27%2C%27++245%27%2C%27++249%27%2C%27++250%27%2C%27+++39%27%2C%27+++41%27%2C%27+++46%27%2C%27+++50%27%2C%27+++51%27%2C%27+++54%27%2C%27+++60%27%2C%27+++63%27%2C%27+++64%27%2C%27+++69%27%2C%27+++71%27%2C%27+++75%27%2C%27+++76%27%2C%27+++83%27%2C%27+++84%27%2C%27+++86%27%2C%27+++87%27%2C%27+++88%27%2C%27+++95%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "20ba68d89a8037fa747be139f9c8d392d32792df7f540f5df2a5fac9ea04e534",
+      "features": 52
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA3A%27+AND+BLOCK_NUMBER+IN+%28%27+++16%27%2C%27+++17%27%2C%27+++18%27%2C%27+++23%27%2C%27+++27%27%2C%27+++38%27%2C%27+++41%27%2C%27+++48%27%2C%27++++6%27%2C%27+++66%27%2C%27++++9%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "091f5637ec07e8fd4c1904fc9a68577f147fc03b4af44f83f3f56c1a62cb0333",
+      "features": 11
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA3B%27+AND+BLOCK_NUMBER+IN+%28%27++255%27%2C%27++257%27%2C%27++265%27%2C%27++273%27%2C%27++275%27%2C%27++284%27%2C%27++287%27%2C%27++288%27%2C%27++296%27%2C%27++310%27%2C%27++313%27%2C%27++315%27%2C%27++318%27%2C%27++320%27%2C%27++328%27%2C%27++329%27%2C%27++331%27%2C%27++332%27%2C%27++335%27%2C%27++336%27%2C%27++340%27%2C%27++342%27%2C%27++348%27%2C%27++355%27%2C%27++359%27%2C%27++369%27%2C%27++370%27%2C%27++380%27%2C%27++398%27%2C%27++407%27%2C%27++410%27%2C%27++412%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "9491c5e74f4e01192de4d03042f98844b9dbf63ccc25de9f2d4178a493fbbf23",
+      "features": 32
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA3C%27+AND+BLOCK_NUMBER+IN+%28%27++107%27%2C%27++109%27%2C%27++113%27%2C%27++115%27%2C%27++117%27%2C%27++128%27%2C%27++130%27%2C%27++137%27%2C%27++142%27%2C%27++146%27%2C%27++155%27%2C%27++160%27%2C%27++166%27%2C%27++172%27%2C%27++175%27%2C%27++184%27%2C%27++192%27%2C%27++195%27%2C%27++205%27%2C%27+++73%27%2C%27+++76%27%2C%27+++79%27%2C%27+++97%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "3939b2035bcf23f210acf40e14251a144282e2880f41dfeb8892902d32fa9099",
+      "features": 23
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA3D%27+AND+BLOCK_NUMBER+IN+%28%27++223%27%2C%27++231%27%2C%27++236%27%2C%27++239%27%2C%27++241%27%2C%27++243%27%2C%27++249%27%2C%27++252%27%2C%27++255%27%2C%27++257%27%2C%27++261%27%2C%27++265%27%2C%27++269%27%2C%27++273%27%2C%27++274%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "455172b12c3a204f1ea8193c1267e5b6032bec7356f4e0a8d0da50b2bedf7572",
+      "features": 15
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA4%27+AND+BLOCK_NUMBER+IN+%28%27++100%27%2C%27++108%27%2C%27++117%27%2C%27++123%27%2C%27++126%27%2C%27++128%27%2C%27++136%27%2C%27++143%27%2C%27++147%27%2C%27++159%27%2C%27++162%27%2C%27++166%27%2C%27++172%27%2C%27++173%27%2C%27++175%27%2C%27++186%27%2C%27++188%27%2C%27++198%27%2C%27++205%27%2C%27++208%27%2C%27++212%27%2C%27++213%27%2C%27+++23%27%2C%27++231%27%2C%27++238%27%2C%27+++24%27%2C%27++240%27%2C%27++245%27%2C%27++258%27%2C%27++266%27%2C%27+++27%27%2C%27+++28%27%2C%27+++29%27%2C%27+++30%27%2C%27+++32%27%2C%27+++45%27%2C%27+++47%27%2C%27+++48%27%2C%27+++53%27%2C%27+++57%27%2C%27+++64%27%2C%27+++70%27%2C%27+++71%27%2C%27+++74%27%2C%27+++77%27%2C%27+++78%27%2C%27+++79%27%2C%27+++85%27%2C%27+++87%27%2C%27+++89%27%2C%27+++98%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "2f190006b4f435c79fcf464bb99b5740164fe772997640e492b4fe2762654d0c",
+      "features": 51
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA4A%27+AND+BLOCK_NUMBER+IN+%28%27++268%27%2C%27++273%27%2C%27++276%27%2C%27++280%27%2C%27++287%27%2C%27++288%27%2C%27++289%27%2C%27++292%27%2C%27++294%27%2C%27++296%27%2C%27++297%27%2C%27++299%27%2C%27++300%27%2C%27++304%27%2C%27++306%27%2C%27++311%27%2C%27++321%27%2C%27++322%27%2C%27++324%27%2C%27++325%27%2C%27++327%27%2C%27++330%27%2C%27++333%27%2C%27++335%27%2C%27++336%27%2C%27++337%27%2C%27++341%27%2C%27++342%27%2C%27++346%27%2C%27++348%27%2C%27++351%27%2C%27++355%27%2C%27++361%27%2C%27++366%27%2C%27++380%27%2C%27++385%27%2C%27++395%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "75920d1ba6ffe6f5faedc1a085cd377f635174649e817a1274711886e795f8de",
+      "features": 37
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA5%27+AND+BLOCK_NUMBER+IN+%28%27++100%27%2C%27++101%27%2C%27++103%27%2C%27++105%27%2C%27++106%27%2C%27++107%27%2C%27++110%27%2C%27++111%27%2C%27++113%27%2C%27++115%27%2C%27++128%27%2C%27++138%27%2C%27++139%27%2C%27+++15%27%2C%27++151%27%2C%27++154%27%2C%27++158%27%2C%27++160%27%2C%27++165%27%2C%27++167%27%2C%27++169%27%2C%27++176%27%2C%27++178%27%2C%27++189%27%2C%27++207%27%2C%27++208%27%2C%27++222%27%2C%27++230%27%2C%27++235%27%2C%27+++28%27%2C%27+++32%27%2C%27+++37%27%2C%27+++52%27%2C%27+++53%27%2C%27+++56%27%2C%27+++58%27%2C%27+++62%27%2C%27+++67%27%2C%27+++69%27%2C%27+++72%27%2C%27+++78%27%2C%27+++84%27%2C%27+++91%27%2C%27+++92%27%2C%27+++97%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "c93c9902990764fafd747ae79ad8262904915b7189f680a4347f401682f8b4a6",
+      "features": 45
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA5A%27+AND+BLOCK_NUMBER+IN+%28%27++237%27%2C%27++239%27%2C%27++246%27%2C%27++250%27%2C%27++253%27%2C%27++259%27%2C%27++263%27%2C%27++271%27%2C%27++274%27%2C%27++278%27%2C%27++279%27%2C%27++291%27%2C%27++292%27%2C%27++299%27%2C%27++321%27%2C%27++323%27%2C%27++326%27%2C%27++332%27%2C%27++343%27%2C%27++349%27%2C%27++351%27%2C%27++361%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "7cb7acccdb678b4c40007d6c0ebf32d5bb070c9295b3a30c6a1bb3fb49f11473",
+      "features": 22
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA6%27+AND+BLOCK_NUMBER+IN+%28%27++107%27%2C%27++111%27%2C%27++127%27%2C%27++131%27%2C%27++135%27%2C%27++139%27%2C%27++140%27%2C%27++146%27%2C%27++156%27%2C%27++163%27%2C%27++172%27%2C%27++176%27%2C%27++185%27%2C%27++186%27%2C%27++187%27%2C%27++190%27%2C%27++196%27%2C%27++197%27%2C%27++198%27%2C%27++200%27%2C%27++206%27%2C%27++209%27%2C%27+++21%27%2C%27+++30%27%2C%27+++36%27%2C%27+++37%27%2C%27+++41%27%2C%27+++46%27%2C%27+++52%27%2C%27+++54%27%2C%27+++76%27%2C%27+++77%27%2C%27+++86%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "68a099cc573d1a34e8960dd222cbfe2fb3a9d812d4ff920931f3aadaf694c98e",
+      "features": 33
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA6A%27+AND+BLOCK_NUMBER+IN+%28%27++213%27%2C%27++217%27%2C%27++219%27%2C%27++221%27%2C%27++223%27%2C%27++224%27%2C%27++225%27%2C%27++228%27%2C%27++235%27%2C%27++241%27%2C%27++242%27%2C%27++245%27%2C%27++248%27%2C%27++250%27%2C%27++254%27%2C%27++260%27%2C%27++264%27%2C%27++265%27%2C%27++274%27%2C%27++277%27%2C%27++287%27%2C%27++288%27%2C%27++290%27%2C%27++292%27%2C%27++295%27%2C%27++300%27%2C%27++301%27%2C%27++311%27%2C%27++314%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "1e400949b94d5e9be8dd66f73a0c324db6342afb7d97b152d3c451daceb96d68",
+      "features": 29
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA6B%27+AND+BLOCK_NUMBER+IN+%28%27+++13%27%2C%27+++15%27%2C%27+++17%27%2C%27+++18%27%2C%27++++2%27%2C%27+++20%27%2C%27+++23%27%2C%27++++5%27%2C%27++++6%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "8496f3a6404f48dc5d2a1d58465ae07beb1f01c011e71788c91c486862f46a86",
+      "features": 9
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA6C%27+AND+BLOCK_NUMBER+IN+%28%27++++2%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "b0add1359bf00681281a21578f2da767844578e2616b7d15a182083deee29b1c",
+      "features": 1
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA7%27+AND+BLOCK_NUMBER+IN+%28%27+++16%27%2C%27+++18%27%2C%27+++20%27%2C%27+++28%27%2C%27+++30%27%2C%27+++33%27%2C%27+++41%27%2C%27+++43%27%2C%27+++45%27%2C%27+++47%27%2C%27+++54%27%2C%27+++65%27%2C%27+++68%27%2C%27+++70%27%2C%27+++72%27%2C%27+++76%27%2C%27+++79%27%2C%27+++82%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "12cc584c441a0b3a3423b1f8bcb22ea74d768a6dfaadea1eaa300e8234efbf64",
+      "features": 18
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA7A%27+AND+BLOCK_NUMBER+IN+%28%27++102%27%2C%27++109%27%2C%27++115%27%2C%27++116%27%2C%27+++95%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "6a51eec957d296ed2ac8fa41fe4c9f534c62973604cf15edddfbc36e6a93695f",
+      "features": 5
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA8%27+AND+BLOCK_NUMBER+IN+%28%27++105%27%2C%27++109%27%2C%27+++27%27%2C%27+++30%27%2C%27+++35%27%2C%27+++38%27%2C%27+++41%27%2C%27+++49%27%2C%27+++50%27%2C%27+++58%27%2C%27+++60%27%2C%27+++61%27%2C%27+++64%27%2C%27+++65%27%2C%27+++67%27%2C%27+++73%27%2C%27+++79%27%2C%27+++86%27%2C%27+++98%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "e04d1f342ddff7ab68acafc24d196626b86ac8844751a2e99a73031f97d801f0",
+      "features": 19
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA8A%27+AND+BLOCK_NUMBER+IN+%28%27++112%27%2C%27++117%27%2C%27++133%27%2C%27++143%27%2C%27++152%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "83f965cfae5e49f2d341d546f3acf1954d7b23c709eaee278f1f47f0abe24985",
+      "features": 5
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA9%27+AND+BLOCK_NUMBER+IN+%28%27+++27%27%2C%27+++43%27%2C%27+++45%27%2C%27+++49%27%2C%27+++52%27%2C%27+++54%27%2C%27+++61%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "7482279e3c7396569be2db5bdab9668ec3b088b47bdf1eb8d3bac4f2625003ed",
+      "features": 7
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27LA9A%27+AND+BLOCK_NUMBER+IN+%28%27+++62%27%2C%27+++65%27%2C%27+++72%27%2C%27+++78%27%2C%27+++83%27%2C%27+++89%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "17a90c9fda4548883109602f5d2164e83519e5fc0e56becb093c39939321b074",
+      "features": 6
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-01%27+AND+BLOCK_NUMBER+IN+%28%27++109%27%2C%27++112%27%2C%27++157%27%2C%27++158%27%2C%27++160%27%2C%27++165%27%2C%27++168%27%2C%27++205%27%2C%27++421%27%2C%27++430%27%2C%27++579%27%2C%27++597%27%2C%27++602%27%2C%27++642%27%2C%27++643%27%2C%27++668%27%2C%27++688%27%2C%27++759%27%2C%27++945%27%2C%27++949%27%2C%27++992%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "e8bf556282becaefe082fa2ebca33f62dd336b06d7bae4c8bfeda9d9a85ffaff",
+      "features": 21
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-02%27+AND+BLOCK_NUMBER+IN+%28%27++108%27%2C%27++139%27%2C%27++142%27%2C%27++161%27%2C%27++171%27%2C%27++179%27%2C%27++184%27%2C%27++186%27%2C%27++189%27%2C%27++195%27%2C%27++197%27%2C%27++200%27%2C%27++205%27%2C%27++208%27%2C%27++224%27%2C%27++236%27%2C%27++240%27%2C%27++244%27%2C%27++260%27%2C%27++293%27%2C%27++302%27%2C%27++339%27%2C%27++367%27%2C%27++379%27%2C%27++387%27%2C%27++388%27%2C%27++409%27%2C%27++426%27%2C%27++462%27%2C%27++516%27%2C%27++559%27%2C%27++602%27%2C%27+++65%27%2C%27++668%27%2C%27+++70%27%2C%27+++72%27%2C%27++783%27%2C%27+++83%27%2C%27++877%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "996eb784f7756ff843df54d87c3f523aba0105eec06f54098d2642395d760338",
+      "features": 39
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-03%27+AND+BLOCK_NUMBER+IN+%28%27++110%27%2C%27++112%27%2C%27++116%27%2C%27++136%27%2C%27++137%27%2C%27++141%27%2C%27++158%27%2C%27++177%27%2C%27++178%27%2C%27++184%27%2C%27+++19%27%2C%27++195%27%2C%27+++20%27%2C%27++205%27%2C%27+++21%27%2C%27++236%27%2C%27++243%27%2C%27++244%27%2C%27++254%27%2C%27++282%27%2C%27+++29%27%2C%27++299%27%2C%27++339%27%2C%27++385%27%2C%27++389%27%2C%27+++39%27%2C%27++432%27%2C%27++448%27%2C%27+++45%27%2C%27++468%27%2C%27++472%27%2C%27++478%27%2C%27++490%27%2C%27+++52%27%2C%27++562%27%2C%27++599%27%2C%27++++6%27%2C%27+++60%27%2C%27++608%27%2C%27++627%27%2C%27++640%27%2C%27++644%27%2C%27++646%27%2C%27+++65%27%2C%27++654%27%2C%27++680%27%2C%27+++72%27%2C%27++743%27%2C%27+++75%27%2C%27++768%27%2C%27++826%27%2C%27++859%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "5960490633b0d7fb295c68964e7f899514c573a9f97331afe38561edd8a8ba35",
+      "features": 52
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-04%27+AND+BLOCK_NUMBER+IN+%28%27+++24%27%2C%27+++25%27%2C%27+++65%27%2C%27++857%27%2C%27++859%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "afcb322bb166935eb01380c82b2532a0e67cca994abf2518bbfec9e8680b3561",
+      "features": 5
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-05%27+AND+BLOCK_NUMBER+IN+%28%27++872%27%2C%27++875%27%2C%27++964%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "485d6c6963bb7cf073eed3a0087b231f67ebf4e7bd12254a4f426a38085e35e6",
+      "features": 3
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-06%27+AND+BLOCK_NUMBER+IN+%28%27++206%27%2C%27+++29%27%2C%27++469%27%2C%27++508%27%2C%27++627%27%2C%27++678%27%2C%27++759%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "332fc75e1bccf2fdf9e09987021d042ff13157237438ec2e3912cf9d6899b16c",
+      "features": 7
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG16-01%27+AND+BLOCK_NUMBER+IN+%28%27++261%27%2C%27++349%27%2C%27+++37%27%2C%27++426%27%2C%27++575%27%2C%27+++63%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "652c3b86a42c09210afbc77aee4ff081d3bdf34c926e94089e63a96b09e29f51",
+      "features": 6
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG16-02%27+AND+BLOCK_NUMBER+IN+%28%27++++1%27%2C%27++399%27%2C%27++++5%27%2C%27+++50%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "342e214afd5c3267a7017754c1354fa456281c58619073102c805f58145e551a",
+      "features": 4
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NH15-12%27+AND+BLOCK_NUMBER+IN+%28%27+1006%27%2C%27++305%27%2C%27++826%27%2C%27++868%27%2C%27++873%27%2C%27++878%27%2C%27++910%27%2C%27++914%27%2C%27++921%27%2C%27++947%27%2C%27++949%27%2C%27++958%27%2C%27++963%27%2C%27++977%27%2C%27++988%27%2C%27++989%27%2C%27++991%27%2C%27++998%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "7791893e12d4c732bd4b1ec8936939d2e28b62df41131b1c69d88ed4eb3928a6",
+      "features": 18
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NH16-04%27+AND+BLOCK_NUMBER+IN+%28%27+1002%27%2C%27+1003%27%2C%27++819%27%2C%27++820%27%2C%27++821%27%2C%27++823%27%2C%27++827%27%2C%27++830%27%2C%27++861%27%2C%27++862%27%2C%27++864%27%2C%27++865%27%2C%27++866%27%2C%27++868%27%2C%27++870%27%2C%27++872%27%2C%27++873%27%2C%27++904%27%2C%27++914%27%2C%27++916%27%2C%27++945%27%2C%27++947%27%2C%27++950%27%2C%27++951%27%2C%27++952%27%2C%27++955%27%2C%27++959%27%2C%27++960%27%2C%27++961%27%2C%27++988%27%2C%27++990%27%2C%27++991%27%2C%27++993%27%2C%27++994%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "13376d20872a2c067b52888d82363271f417833c7f47b985c903da10a4837490",
+      "features": 34
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NH16-05%27+AND+BLOCK_NUMBER+IN+%28%27++881%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "062bf3af221c133684d4510752bac3054f958d523d7cdb866c34726d198cf0e5",
+      "features": 1
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NH16-07%27+AND+BLOCK_NUMBER+IN+%28%27+1000%27%2C%27+1003%27%2C%27++114%27%2C%27++121%27%2C%27++122%27%2C%27++123%27%2C%27++124%27%2C%27++155%27%2C%27++156%27%2C%27++161%27%2C%27+++20%27%2C%27++204%27%2C%27++209%27%2C%27++213%27%2C%27+++24%27%2C%27++251%27%2C%27++252%27%2C%27+++26%27%2C%27+++27%27%2C%27++294%27%2C%27+++31%27%2C%27+++32%27%2C%27+++33%27%2C%27++340%27%2C%27+++35%27%2C%27++384%27%2C%27++385%27%2C%27++432%27%2C%27+++69%27%2C%27++734%27%2C%27++738%27%2C%27++739%27%2C%27+++74%27%2C%27++742%27%2C%27+++76%27%2C%27+++77%27%2C%27++780%27%2C%27++783%27%2C%27++786%27%2C%27++817%27%2C%27++821%27%2C%27++823%27%2C%27++825%27%2C%27++862%27%2C%27++873%27%2C%27++914%27%2C%27++915%27%2C%27++917%27%2C%27++944%27%2C%27++956%27%2C%27++959%27%2C%27++962%27%2C%27++986%27%2C%27++990%27%2C%27++999%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "01d840504f0504b1493d2b8181be7970216cf0b4364a8abc0020c182137e47ab",
+      "features": 55
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NH16-10%27+AND+BLOCK_NUMBER+IN+%28%27++109%27%2C%27++148%27%2C%27++161%27%2C%27++194%27%2C%27+++20%27%2C%27++211%27%2C%27++214%27%2C%27++243%27%2C%27++252%27%2C%27++257%27%2C%27+++26%27%2C%27++281%27%2C%27++285%27%2C%27+++29%27%2C%27++292%27%2C%27++299%27%2C%27++300%27%2C%27++305%27%2C%27++311%27%2C%27++322%27%2C%27++348%27%2C%27++354%27%2C%27++365%27%2C%27++383%27%2C%27++387%27%2C%27++392%27%2C%27++393%27%2C%27++397%27%2C%27++427%27%2C%27++429%27%2C%27++431%27%2C%27++445%27%2C%27++486%27%2C%27++503%27%2C%27++505%27%2C%27++506%27%2C%27++522%27%2C%27++525%27%2C%27++546%27%2C%27++582%27%2C%27++607%27%2C%27++609%27%2C%27++657%27%2C%27+++66%27%2C%27+++68%27%2C%27++682%27%2C%27++696%27%2C%27++698%27%2C%27++705%27%2C%27++707%27%2C%27++718%27%2C%27++731%27%2C%27+++74%27%2C%27++751%27%2C%27++755%27%2C%27++768%27%2C%27++773%27%2C%27++776%27%2C%27++778%27%2C%27++782%27%2C%27+++79%27%2C%27++794%27%2C%27++800%27%2C%27++807%27%2C%27++816%27%2C%27+++84%27%2C%27++876%27%2C%27++899%27%2C%27++935%27%2C%27++940%27%2C%27++943%27%2C%27++948%27%2C%27++961%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "4cc889fed03befe190d92f47dd116f9e7b6398fab36ee1ae0d46c7c213093143",
+      "features": 73
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NH16-11%27+AND+BLOCK_NUMBER+IN+%28%27++133%27%2C%27++134%27%2C%27++++4%27%2C%27+++48%27%2C%27++618%27%2C%27++621%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "82c1efa8c529ef117ccb410c7d4d5ec4d7877a4daf6f6b09c4494d37974176fc",
+      "features": 6
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX1%27+AND+BLOCK_NUMBER+IN+%28%27+1073%27%2C%27+1111%27%2C%27+1113%27%2C%27+1133%27%2C%27+1152%27%2C%27+1166%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "0deb087d345dee1e980e4e54e9601faeb9d4c033cd2d87c66370b4344945bda1",
+      "features": 6
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX2%27+AND+BLOCK_NUMBER+IN+%28%27+1010%27%2C%27++967%27%2C%27++969%27%2C%27++998%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "575f964016784f4f6c437cfec9722eca3a10a2765546aa05207941922e9e5bf2",
+      "features": 4
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX2A%27+AND+BLOCK_NUMBER+IN+%28%27++912%27%2C%27++913%27%2C%27++996%27%2C%27A++10%27%2C%27A++12%27%2C%27A++42%27%2C%27A++58%27%2C%27A++59%27%2C%27A++72%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "777a4fedb52c33bebb1aee5e8322a8d33bca0cde8636cedf91afc3b790935864",
+      "features": 9
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX3%27+AND+BLOCK_NUMBER+IN+%28%27++726%27%2C%27++738%27%2C%27++739%27%2C%27++752%27%2C%27++754%27%2C%27++755%27%2C%27++756%27%2C%27++757%27%2C%27++759%27%2C%27++781%27%2C%27++782%27%2C%27++784%27%2C%27++785%27%2C%27++789%27%2C%27++791%27%2C%27++805%27%2C%27++807%27%2C%27++831%27%2C%27++847%27%2C%27++859%27%2C%27++868%27%2C%27A++16%27%2C%27A++31%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "4e052867ef2883e369c452d85f868891dd60fe505ac4693e569687f3ef62cc44",
+      "features": 23
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX3A%27+AND+BLOCK_NUMBER+IN+%28%27A+111%27%2C%27A+124%27%2C%27A++53%27%2C%27A++85%27%2C%27A++90%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "ef6d71a8d03d443b9207b8d0a572e0c1fa4ba87bc5dc39dfd3354a400c2c8bff",
+      "features": 5
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX4%27+AND+BLOCK_NUMBER+IN+%28%27++487%27%2C%27++519%27%2C%27++527%27%2C%27++565%27%2C%27++568%27%2C%27++586%27%2C%27++587%27%2C%27++588%27%2C%27++591%27%2C%27++619%27%2C%27++623%27%2C%27++633%27%2C%27++639%27%2C%27++650%27%2C%27++651%27%2C%27++652%27%2C%27++665%27%2C%27++668%27%2C%27++670%27%2C%27++681%27%2C%27++686%27%2C%27++687%27%2C%27++696%27%2C%27++700%27%2C%27++703%27%2C%27++705%27%2C%27++710%27%2C%27A+++4%27%2C%27A+++7%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "2c82f7cb2d0455160954bb79bd99808c67fdf70ca982e8af5e8aa72be08cc4fb",
+      "features": 29
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX5%27+AND+BLOCK_NUMBER+IN+%28%27++364%27%2C%27++376%27%2C%27++397%27%2C%27++398%27%2C%27++399%27%2C%27++412%27%2C%27++413%27%2C%27++431%27%2C%27++437%27%2C%27++451%27%2C%27++453%27%2C%27++455%27%2C%27++475%27%2C%27++491%27%2C%27++494%27%2C%27++501%27%2C%27++506%27%2C%27++507%27%2C%27++515%27%2C%27++538%27%2C%27++541%27%2C%27++542%27%2C%27++544%27%2C%27++550%27%2C%27++552%27%2C%27++578%27%2C%27A+++1%27%2C%27A++17%27%2C%27A+++2%27%2C%27A++20%27%2C%27A++21%27%2C%27A++22%27%2C%27A+++7%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "ade2cc3c667cc8be299b38a5f3a01b863568c4c774b6624149a19fc1c3e77be9",
+      "features": 33
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX5B%27+AND+BLOCK_NUMBER+IN+%28%27A+105%27%2C%27A+133%27%2C%27A++52%27%2C%27A++70%27%2C%27A++76%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "5fe32500e0db46e0ba3e3c80495256d08b82fabdcdfdf3b0301e8a0aca5631ea",
+      "features": 5
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX6%27+AND+BLOCK_NUMBER+IN+%28%27++144%27%2C%27++151%27%2C%27++189%27%2C%27++209%27%2C%27++210%27%2C%27++213%27%2C%27++227%27%2C%27++239%27%2C%27++252%27%2C%27++255%27%2C%27++273%27%2C%27++288%27%2C%27++291%27%2C%27++301%27%2C%27++303%27%2C%27++313%27%2C%27++319%27%2C%27++320%27%2C%27++325%27%2C%27++330%27%2C%27++333%27%2C%27++343%27%2C%27++350%27%2C%27++351%27%2C%27++352%27%2C%27++355%27%2C%27++357%27%2C%27++379%27%2C%27++384%27%2C%27++385%27%2C%27++389%27%2C%27++391%27%2C%27++395%27%2C%27++418%27%2C%27++427%27%2C%27++460%27%2C%27++465%27%2C%27A+101%27%2C%27A++34%27%2C%27A++39%27%2C%27A++50%27%2C%27A++96%27%2C%27A++97%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "6343fddc04283de6cfd85044b925cf1b633a7fe4d5793c07ba0e0915f896d6c1",
+      "features": 43
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX6A%27+AND+BLOCK_NUMBER+IN+%28%27A+127%27%2C%27A+131%27%2C%27A+133%27%2C%27A+155%27%2C%27A+157%27%2C%27A+192%27%2C%27A+218%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "9919fddc99c173cc062656a5d9aff0b751ee214dde491e87a588052e07d7254b",
+      "features": 7
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX7%27+AND+BLOCK_NUMBER+IN+%28%27++105%27%2C%27++108%27%2C%27++111%27%2C%27++116%27%2C%27++117%27%2C%27++131%27%2C%27++133%27%2C%27++140%27%2C%27++154%27%2C%27++160%27%2C%27++163%27%2C%27++164%27%2C%27++169%27%2C%27++170%27%2C%27++177%27%2C%27++179%27%2C%27++194%27%2C%27++196%27%2C%27++198%27%2C%27++199%27%2C%27++202%27%2C%27++206%27%2C%27+++22%27%2C%27++233%27%2C%27++235%27%2C%27++262%27%2C%27+++37%27%2C%27+++47%27%2C%27+++52%27%2C%27+++86%27%2C%27+++88%27%2C%27+++93%27%2C%27A+126%27%2C%27A+129%27%2C%27A++14%27%2C%27A+153%27%2C%27A++20%27%2C%27A++23%27%2C%27A+++6%27%2C%27A++64%27%2C%27A++71%27%2C%27A++83%27%2C%27A+++9%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "8c21c44a2ec5ae5f8a642689c7b394c6d5707856ab15379262409ba8fa839d9d",
+      "features": 43
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX7A%27+AND+BLOCK_NUMBER+IN+%28%27++128%27%2C%27++129%27%2C%27++166%27%2C%27++167%27%2C%27+++45%27%2C%27+++74%27%2C%27A+171%27%2C%27A+178%27%2C%27A+183%27%2C%27A+185%27%2C%27A+200%27%2C%27A+237%27%2C%27A+244%27%2C%27A+245%27%2C%27A+247%27%2C%27A+253%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "d3c4b2b19403f41cba21cad4141a3dd3db039123be33f29532d859d46b30c4ce",
+      "features": 16
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX7B%27+AND+BLOCK_NUMBER+IN+%28%27A+414%27%2C%27A+416%27%2C%27A+442%27%2C%27A+448%27%2C%27A+451%27%2C%27A+467%27%2C%27A+469%27%2C%27A+474%27%2C%27A+480%27%2C%27A+487%27%2C%27A+492%27%2C%27A+497%27%2C%27A+507%27%2C%27A+511%27%2C%27A+515%27%2C%27A+517%27%2C%27A+519%27%2C%27A+523%27%2C%27A+528%27%2C%27A+532%27%2C%27A+537%27%2C%27A+538%27%2C%27A+540%27%2C%27A+542%27%2C%27A+544%27%2C%27A+545%27%2C%27A+549%27%2C%27A+552%27%2C%27A+555%27%2C%27A+557%27%2C%27A+561%27%2C%27A+563%27%2C%27A+568%27%2C%27A+571%27%2C%27A+573%27%2C%27A+576%27%2C%27A+587%27%2C%27A+589%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "def33b74cf9d6b31075acbae70bf3406c8b24be60a0fb2d54c56bcd9bdcb27f7",
+      "features": 38
+    },
+    {
+      "url": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27TX7C%27+AND+BLOCK_NUMBER+IN+%28%27A+260%27%2C%27A+270%27%2C%27A+271%27%2C%27A+273%27%2C%27A+274%27%2C%27A+279%27%2C%27A+280%27%2C%27A+283%27%2C%27A+285%27%2C%27A+290%27%2C%27A+295%27%2C%27A+302%27%2C%27A+309%27%2C%27A+313%27%2C%27A+317%27%2C%27A+320%27%2C%27A+323%27%2C%27A+327%27%2C%27A+330%27%2C%27A+334%27%2C%27A+340%27%2C%27A+341%27%2C%27A+343%27%2C%27A+352%27%2C%27A+355%27%2C%27A+367%27%2C%27A+368%27%2C%27A+370%27%2C%27A+371%27%2C%27A+376%27%2C%27A+384%27%2C%27A+389%27%29&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326&resultRecordCount=10000",
+      "sha256": "f3ea5bb2b75e339a243686410e179003f278336ca1a31faf45ba10c06771b388",
+      "features": 32
+    }
+  ]
+}

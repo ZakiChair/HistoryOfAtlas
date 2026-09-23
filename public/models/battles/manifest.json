@@ -1,0 +1,720 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "file": "armoured-cruiser.glb",
+      "bytes": 130128,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2356
+    },
+    {
+      "file": "austrian-seven-years-infantry.glb",
+      "bytes": 350296,
+      "meshes": 17,
+      "nodes": 36,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9132
+    },
+    {
+      "file": "auxiliary-cruiser.glb",
+      "bytes": 140000,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2712
+    },
+    {
+      "file": "bengal-matchlock.glb",
+      "bytes": 309488,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8860
+    },
+    {
+      "file": "bengal-sepoy.glb",
+      "bytes": 322428,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9072
+    },
+    {
+      "file": "biplane-aircraft.glb",
+      "bytes": 239972,
+      "meshes": 2,
+      "nodes": 4,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 7608
+    },
+    {
+      "file": "british-martini-infantry.glb",
+      "bytes": 359468,
+      "meshes": 14,
+      "nodes": 30,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9172
+    },
+    {
+      "file": "british-rifle.glb",
+      "bytes": 325396,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8548
+    },
+    {
+      "file": "byzantine-spearman.glb",
+      "bytes": 335632,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9964
+    },
+    {
+      "file": "casemate-ironclad.glb",
+      "bytes": 104208,
+      "meshes": 2,
+      "nodes": 4,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 1878
+    },
+    {
+      "file": "cavalry-lancer.glb",
+      "bytes": 716620,
+      "meshes": 21,
+      "nodes": 44,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 21228
+    },
+    {
+      "file": "chariot.glb",
+      "bytes": 1036392,
+      "meshes": 33,
+      "nodes": 68,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 32322
+    },
+    {
+      "file": "civil-war-pikeman.glb",
+      "bytes": 366032,
+      "meshes": 13,
+      "nodes": 28,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9856
+    },
+    {
+      "file": "coastal-paddle-gunboat.glb",
+      "bytes": 167836,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 3060
+    },
+    {
+      "file": "county-kent-heavy-cruiser.glb",
+      "bytes": 349876,
+      "meshes": 21,
+      "nodes": 42,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 7040
+    },
+    {
+      "file": "early-tank.glb",
+      "bytes": 1281556,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 18872
+    },
+    {
+      "file": "field-cannon.glb",
+      "bytes": 187444,
+      "meshes": 4,
+      "nodes": 8,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 5256
+    },
+    {
+      "file": "flintlock-infantry.glb",
+      "bytes": 316596,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8616
+    },
+    {
+      "file": "french-line-infantry-1870.glb",
+      "bytes": 356552,
+      "meshes": 18,
+      "nodes": 38,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8833
+    },
+    {
+      "file": "french-revolution-infantry.glb",
+      "bytes": 306532,
+      "meshes": 15,
+      "nodes": 32,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 7984
+    },
+    {
+      "file": "french-rifle.glb",
+      "bytes": 330768,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8584
+    },
+    {
+      "file": "german-rifle.glb",
+      "bytes": 327100,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8608
+    },
+    {
+      "file": "greek-hoplite.glb",
+      "bytes": 357984,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 10216
+    },
+    {
+      "file": "han-crossbow.glb",
+      "bytes": 244376,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 6724
+    },
+    {
+      "file": "ironclad-warship.glb",
+      "bytes": 140392,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2568
+    },
+    {
+      "file": "japanese-matchlock.glb",
+      "bytes": 820856,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 17100
+    },
+    {
+      "file": "japanese-russo-war-winter-infantry.glb",
+      "bytes": 434904,
+      "meshes": 17,
+      "nodes": 36,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 11907
+    },
+    {
+      "file": "jet-aircraft.glb",
+      "bytes": 55036,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 1480
+    },
+    {
+      "file": "lake-war-canoe.glb",
+      "bytes": 92752,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 1500
+    },
+    {
+      "file": "longbow-archer.glb",
+      "bytes": 270492,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 7078
+    },
+    {
+      "file": "medieval-infantry.glb",
+      "bytes": 401464,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 10582
+    },
+    {
+      "file": "medieval-man-at-arms.glb",
+      "bytes": 293452,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8660
+    },
+    {
+      "file": "mexican-war-infantry.glb",
+      "bytes": 344412,
+      "meshes": 18,
+      "nodes": 38,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8723
+    },
+    {
+      "file": "modern-rifle.glb",
+      "bytes": 330740,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8580
+    },
+    {
+      "file": "modern-tank.glb",
+      "bytes": 1019536,
+      "meshes": 14,
+      "nodes": 28,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 16344
+    },
+    {
+      "file": "monitor-warship.glb",
+      "bytes": 99920,
+      "meshes": 2,
+      "nodes": 4,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 1808
+    },
+    {
+      "file": "mughal-matchlock.glb",
+      "bytes": 307380,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8812
+    },
+    {
+      "file": "musket-infantry.glb",
+      "bytes": 277156,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 7556
+    },
+    {
+      "file": "napoleonic-infantry.glb",
+      "bytes": 312592,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8776
+    },
+    {
+      "file": "new-kingdom-oared-ship.glb",
+      "bytes": 109212,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 1804
+    },
+    {
+      "file": "oared-galley.glb",
+      "bytes": 309504,
+      "meshes": 21,
+      "nodes": 42,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 5929
+    },
+    {
+      "file": "ottoman-musketeer.glb",
+      "bytes": 309604,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8812
+    },
+    {
+      "file": "ottoman-ww1-infantry.glb",
+      "bytes": 406192,
+      "meshes": 15,
+      "nodes": 32,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 11662
+    },
+    {
+      "file": "paddle-steamer.glb",
+      "bytes": 143688,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2504
+    },
+    {
+      "file": "persian-spearman.glb",
+      "bytes": 507316,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 15604
+    },
+    {
+      "file": "propeller-aircraft.glb",
+      "bytes": 128680,
+      "meshes": 2,
+      "nodes": 4,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2500
+    },
+    {
+      "file": "protected-cruiser.glb",
+      "bytes": 133668,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2332
+    },
+    {
+      "file": "prussian-line-infantry-1870.glb",
+      "bytes": 380228,
+      "meshes": 23,
+      "nodes": 48,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9315
+    },
+    {
+      "file": "representative-infantry.glb",
+      "bytes": 279060,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8160
+    },
+    {
+      "file": "republican-infantry.glb",
+      "bytes": 317816,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9128
+    },
+    {
+      "file": "roman-infantry.glb",
+      "bytes": 418580,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 12072
+    },
+    {
+      "file": "russian-russo-war-winter-infantry.glb",
+      "bytes": 382912,
+      "meshes": 18,
+      "nodes": 38,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9283
+    },
+    {
+      "file": "sailing-warship.glb",
+      "bytes": 468764,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 11715
+    },
+    {
+      "file": "small-steam-gunboat.glb",
+      "bytes": 134432,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2580
+    },
+    {
+      "file": "spar-torpedo-launch.glb",
+      "bytes": 115912,
+      "meshes": 2,
+      "nodes": 4,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2280
+    },
+    {
+      "file": "steam-corvette.glb",
+      "bytes": 124740,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2292
+    },
+    {
+      "file": "steam-minelayer.glb",
+      "bytes": 152272,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 3204
+    },
+    {
+      "file": "steam-transport.glb",
+      "bytes": 130068,
+      "meshes": 1,
+      "nodes": 2,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2552
+    },
+    {
+      "file": "steam-warship.glb",
+      "bytes": 208724,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 4768
+    },
+    {
+      "file": "steppe-archer.glb",
+      "bytes": 1110072,
+      "meshes": 21,
+      "nodes": 44,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 26756
+    },
+    {
+      "file": "tercio-pikeman.glb",
+      "bytes": 369728,
+      "meshes": 13,
+      "nodes": 28,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 9990
+    },
+    {
+      "file": "torpedo-boat.glb",
+      "bytes": 129740,
+      "meshes": 3,
+      "nodes": 6,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 2604
+    },
+    {
+      "file": "unclassified-unit.glb",
+      "bytes": 223780,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 6416
+    },
+    {
+      "file": "ww2-straight-deck-carrier.glb",
+      "bytes": 412076,
+      "meshes": 7,
+      "nodes": 14,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 7196
+    },
+    {
+      "file": "zulu-spearman.glb",
+      "bytes": 376216,
+      "meshes": 12,
+      "nodes": 26,
+      "animations": [
+        "March",
+        "Engage"
+      ],
+      "triangles": 8876
+    }
+  ]
+}

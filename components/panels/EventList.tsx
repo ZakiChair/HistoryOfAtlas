@@ -7,6 +7,7 @@ import { getEventsInRange, readJson } from '@/lib/data-client';
 import { formatYear } from '@/lib/histdate';
 import { filterEvents, temporalWindow } from '@/lib/map-time';
 import { openEvent } from '@/lib/navigation';
+import { isEventLayerVisible } from '@/lib/event-visibility';
 import type { HistoricalEvent } from '@/lib/schema';
 import { EventIcon } from '../ui/EventIcon';
 
@@ -17,6 +18,7 @@ export default function EventList({ full = false }: { full?: boolean }) {
   const speed = useAtlasStore((s) => s.speed),
     playing = useAtlasStore((s) => s.playing),
     war = useAtlasStore((s) => s.selectedWar);
+  const battlesVisible = useAtlasStore((s) => s.battlesVisible);
   const { locale, t } = useI18n();
   const [events, setEvents] = useState<HistoricalEvent[]>([]),
     [loading, setLoading] = useState(true),
@@ -65,8 +67,10 @@ export default function EventList({ full = false }: { full?: boolean }) {
         range,
         // The war archive already includes validated descendants through campaigns.
         // Filtering again by the immediate parent would remove those indirect battles.
-      }).sort((a, b) => b.importance - a.importance),
-    [events, year, speed, playing, filters, range],
+      })
+        .filter((event) => isEventLayerVisible(event.type, battlesVisible))
+        .sort((a, b) => b.importance - a.importance),
+    [events, year, speed, playing, filters, range, battlesVisible],
   );
   const [limit, setLimit] = useState(30);
   return (

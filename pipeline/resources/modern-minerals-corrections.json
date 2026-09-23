@@ -1,0 +1,443 @@
+[
+  {
+    "id": "gem-giomt:P100000128196",
+    "removeSiteIds": [
+      "mincan:761"
+    ],
+    "reason": "Same named Scully mine and coherent positions. Operator reports supersede the coarse MinCan dates and preserve the 2014–2019 shutdown; a single GEM lifetime span must not fill it.",
+    "references": [
+      "https://tacoraresources.com/wp-content/uploads/2021/09/Feasibility-Study-Technical-Report-Update.pdf",
+      "https://tacoraresources.com/wp-content/uploads/2021/08/Tacora-Resources-Inc-Annual-Report-2019.pdf"
+    ],
+    "periods": [
+      {
+        "fromYear": 1965,
+        "toYear": 2014,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://tacoraresources.com/wp-content/uploads/2021/09/Feasibility-Study-Technical-Report-Update.pdf",
+        "description": "Operator technical report, history section: commercial mine operated from 1965 until February 2014. Construction and pilot-plant years are excluded."
+      },
+      {
+        "fromYear": 2019,
+        "toYear": 2026,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://tacoraresources.com/wp-content/uploads/2021/08/Tacora-Resources-Inc-Annual-Report-2019.pdf",
+        "approximate": true,
+        "description": "Operator records the May 2019 restart of mining. Continued operation is attested by the September 2026 GEM tracker snapshot; 2026 is an evidence endpoint, not a closure date. The earlier shutdown is preserved."
+      }
+    ]
+  },
+  {
+    "id": "gem-giomt:P100000128201",
+    "removeSiteIds": [
+      "mincan:175"
+    ],
+    "reason": "Same Bloom Lake mine. The operator's historical production table corrects the inverted/incomplete MinCan phases, preserving 2015–2017 non-production.",
+    "references": [
+      "https://company-announcements.afr.com/asx/cia/6daeeb48-ff42-11ed-a05f-bef34c787a2a.pdf",
+      "https://www.championiron.com/investors/technical-reports/"
+    ],
+    "periods": [
+      {
+        "fromYear": 2010,
+        "toYear": 2014,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://company-announcements.afr.com/asx/cia/6daeeb48-ff42-11ed-a05f-bef34c787a2a.pdf",
+        "description": "Champion Iron 2023 Annual Information Form, Table 6-1: historical mine production from 2010–2014, with no production in 2015–2017."
+      },
+      {
+        "fromYear": 2018,
+        "toYear": 2026,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://www.championiron.com/projet/bloom-lake/?lang=fr",
+        "approximate": true,
+        "description": "Operator documents the February 2018 restart. Operation remains attested in the September 2026 GEM snapshot; the 2015–2017 gap is not bridged."
+      }
+    ]
+  },
+  {
+    "id": "gem-giomt:P100000128152",
+    "removeSiteIds": [
+      "mincan:679"
+    ],
+    "reason": "Same Fire Lake mine, both sources at the same site. Operator history and Quebec ministry chronology establish a first extraction in 1977 and reopening in 2006; preserve the intervening closure.",
+    "references": [
+      "https://cdn.arcelormittal.com/media/tcxed3b2/2021-20-f-document-recast.pdf",
+      "https://mrnf.gouv.qc.ca/mines/industrie-substance-exploitees/industrie-histoire/dates-marquantes/",
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ],
+    "periods": [
+      {
+        "fromYear": 1977,
+        "toYear": 1984,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://cdn.arcelormittal.com/media/tcxed3b2/2021-20-f-document-recast.pdf",
+        "approximate": true,
+        "description": "Operator report states first extraction in 1977; MinCan records the end of the original phase in 1984. The earlier source opening date is not treated as extraction."
+      },
+      {
+        "fromYear": 2006,
+        "toYear": 2026,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://mrnf.gouv.qc.ca/mines/industrie-substance-exploitees/industrie-histoire/dates-marquantes/",
+        "approximate": true,
+        "description": "Quebec ministry chronology records reopening in 2006; the September 2026 GEM snapshot attests operating status. Seasonal interruptions may occur within annual operation years."
+      }
+    ]
+  },
+  {
+    "id": "gem-giomt:P100000128188",
+    "removeSiteIds": [
+      "mincan:404"
+    ],
+    "coordinates": [
+      -67.350998,
+      52.7482951698171
+    ],
+    "coordinateSourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+    "reason": "Mont-Wright and Fire Lake are separate mines about 53 km apart in the operator's report. GEM's Mont-Wright coordinate nearly duplicates Fire Lake; use the independently published MinCan Mont-Wright coordinate, preserving correct identity.",
+    "references": [
+      "https://cdn.arcelormittal.com/media/tcxed3b2/2021-20-f-document-recast.pdf",
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ],
+    "periods": [
+      {
+        "fromYear": 1976,
+        "toYear": 2026,
+        "categories": [
+          "iron"
+        ],
+        "sourceUrl": "https://cdn.arcelormittal.com/media/tcxed3b2/2021-20-f-document-recast.pdf",
+        "approximate": true,
+        "description": "Operator property history and MinCan attest operation from 1976; current operation is attested by the September 2026 GEM snapshot. The endpoint does not imply a closure."
+      }
+    ]
+  },
+  {
+    "id": "gem-giomt:P100000128193",
+    "removeSiteIds": [
+      "mincan:202"
+    ],
+    "reason": "Same Mary River mine. MinCan repeats latitude as the absolute longitude (-71.340446,71.340446), hundreds of kilometres from the actual mine. The GEM position and production-start evidence are preferred; the erroneous MinCan record is excluded.",
+    "references": [
+      "https://www.gem.wiki/Baffinland_Mary_River_Mine",
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ]
+  },
+  {
+    "id": "mincan:4",
+    "removeSiteIds": [
+      "mincan:777"
+    ],
+    "reason": "MinCan Wesfrob (Tasu) and Wesfrob Mining Division share the unique name, primary iron, exactly the same 1914–1983 production phase and positions less than 1 km apart. Retain one record.",
+    "references": [
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ]
+  },
+  {
+    "id": "mincan:825",
+    "removeSiteIds": [
+      "mincan:618"
+    ],
+    "reason": "Marmoraton mine and Marmoraton Mining Co. near Marmora identify the same iron operation within 400 m. Keep the conservative later production phase (1955–1978), rather than the ambiguous 1948 opening date.",
+    "references": [
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ]
+  },
+  {
+    "id": "mincan:210",
+    "removeSiteIds": [
+      "mincan:223"
+    ],
+    "reason": "Identical Silvertip name and coordinates. Coeur annual reports supersede contradictory MinCan phases and preserve the February 2020 suspension; no reopening is inferred.",
+    "references": [
+      "https://www.sec.gov/Archives/edgar/data/215466/000021546620000032/cde-12311910k.htm",
+      "https://www.sec.gov/Archives/edgar/data/215466/000021546621000025/cde-20201231.htm"
+    ],
+    "periods": [
+      {
+        "fromYear": 2018,
+        "toYear": 2020,
+        "categories": [
+          "silver"
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/215466/000021546621000025/cde-20201231.htm",
+        "description": "Coeur reports commercial production from September 2018 and suspension of mining and processing in February 2020. Earlier development and later proposed restarts are excluded."
+      }
+    ]
+  },
+  {
+    "id": "mincan:711",
+    "removeSiteIds": [
+      "mincan:715"
+    ],
+    "reason": "Identical Seleine name and coordinates. Windsor Salt and Quebec government records establish first operation in 1982, rather than the earlier development dates in MinCan.",
+    "references": [
+      "https://windsorsalt.com/article/windsor-salt-and-canada-steamship-lines-partner-on-construction-of-cutting-edge-self-unloading-ship/",
+      "https://www.environnement.gouv.qc.ca/evaluations/decret/2022/1400-2022-rae.pdf"
+    ],
+    "periods": [
+      {
+        "fromYear": 1982,
+        "toYear": 2022,
+        "categories": [
+          "salt"
+        ],
+        "sourceUrl": "https://www.environnement.gouv.qc.ca/evaluations/decret/2022/1400-2022-rae.pdf",
+        "description": "Windsor Salt confirms operation since 1982; the 2022 Quebec environmental decision attests continued extraction and shipment operations. 2022 is the latest consulted attestation, not a closure date."
+      }
+    ]
+  },
+  {
+    "id": "mincan:279",
+    "removeSiteIds": [
+      "mincan:857"
+    ],
+    "reason": "Identical Boss Mountain coordinates, unique mine name, molybdenum commodity and production phase 1965–1983. Company-labelled duplicate removed.",
+    "references": [
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ]
+  },
+  {
+    "id": "mincan:139",
+    "removeSiteIds": [
+      "mincan:747"
+    ],
+    "reason": "Same Saskatoon Chemicals salt operation at identical coordinates, with old and subsequent company-labelled records; preserve both attested phases as one site.",
+    "references": [
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ],
+    "periods": [
+      {
+        "fromYear": 1989,
+        "toYear": 1991,
+        "categories": [
+          "salt"
+        ],
+        "sourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "approximate": true,
+        "description": "First of two consecutively recorded MinCan phases for the same Saskatoon Chemicals operation."
+      },
+      {
+        "fromYear": 1992,
+        "toYear": 2022,
+        "categories": [
+          "salt"
+        ],
+        "sourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "approximate": true,
+        "description": "Subsequent MinCan phase under the Weyerhaeuser-labelled company record; open as of the 2022 evidence snapshot."
+      }
+    ]
+  },
+  {
+    "id": "mincan:104",
+    "removeSiteIds": [
+      "mincan:458"
+    ],
+    "reason": "Both named Heath Steele records identify the same zinc mine within 0.45 km. The provincial geological guide and operator technical report replace contradictory MinCan lifetime dates, exclude stockpile treatment following 1983, and discard the unsupported 2007–2008 reopening. Mid-year suspensions retain their partly productive boundary years at annual resolution.",
+    "references": [
+      "https://www2.gnb.ca/content/dam/gnb/Departments/en/pdf/Minerals-Minerales/Geology_Massive_Sulphides_BC-e.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1136861/000113717107000318/techreport.htm"
+    ],
+    "periods": [
+      {
+        "fromYear": 1957,
+        "toYear": 1958,
+        "categories": [
+          "zinc"
+        ],
+        "sourceUrl": "https://www2.gnb.ca/content/dam/gnb/Departments/en/pdf/Minerals-Minerales/Geology_Massive_Sulphides_BC-e.pdf",
+        "approximate": true,
+        "description": "New Brunswick geological guide documents mining from 1957 until the 1958 suspension; the earlier MinCan development date is excluded."
+      },
+      {
+        "fromYear": 1962,
+        "toYear": 1983,
+        "categories": [
+          "zinc"
+        ],
+        "sourceUrl": "https://www2.gnb.ca/content/dam/gnb/Departments/en/pdf/Minerals-Minerales/Geology_Massive_Sulphides_BC-e.pdf",
+        "approximate": true,
+        "description": "Provincial guide documents renewed extraction from 1962 until the 1983 shutdown. Later treatment of previously stockpiled gossan does not establish new extraction."
+      },
+      {
+        "fromYear": 1989,
+        "toYear": 1993,
+        "categories": [
+          "zinc"
+        ],
+        "sourceUrl": "https://www2.gnb.ca/content/dam/gnb/Departments/en/pdf/Minerals-Minerales/Geology_Massive_Sulphides_BC-e.pdf",
+        "approximate": true,
+        "description": "Mining resumed in 1989 and was suspended in mid-1993. The partly productive year 1993 remains visible; the ensuing suspension is documented separately."
+      },
+      {
+        "fromYear": 1994,
+        "toYear": 1999,
+        "categories": [
+          "zinc"
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1136861/000113717107000318/techreport.htm",
+        "approximate": true,
+        "description": "Provincial guide records resumption in mid-1994; the operator technical report confirms final cessation in October 1999. The separate preceding phase preserves the mid-1993 to mid-1994 interruption in provenance, although annual map resolution cannot display the partial-year gap."
+      }
+    ]
+  },
+  {
+    "id": "mincan:150",
+    "removeSiteIds": [
+      "mincan:427"
+    ],
+    "reason": "Same Birchtree nickel mine, 0.17 km apart. Manitoba production history supersedes inconsistent MinCan development/opening dates and confirms the 1977–1989 suspension; Vale reports the September 2017 care-and-maintenance decision.",
+    "references": [
+      "https://www.gov.mb.ca/iem/min-ed/mbhistory/mininv/572.htm",
+      "https://www.gov.mb.ca/iem/min-ed/mbhistory/timeline.html",
+      "https://www.sec.gov/Archives/edgar/data/917851/000110465917062847/a17-24217_16k.htm"
+    ],
+    "periods": [
+      {
+        "fromYear": 1969,
+        "toYear": 1977,
+        "categories": [
+          "nickel"
+        ],
+        "sourceUrl": "https://www.gov.mb.ca/iem/min-ed/mbhistory/mininv/572.htm",
+        "approximate": true,
+        "description": "Manitoba mineral inventory documents first production in 1969 and suspension in December 1977; earlier shaft/development dates are not extraction dates."
+      },
+      {
+        "fromYear": 1989,
+        "toYear": 2017,
+        "categories": [
+          "nickel"
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/917851/000110465917062847/a17-24217_16k.htm",
+        "approximate": true,
+        "description": "Manitoba government chronology records production resumption in 1989. Vale September 2017 production report confirms placement on care and maintenance at the end of that month; no later resumption is inferred."
+      }
+    ]
+  },
+  {
+    "id": "mincan:180",
+    "removeSiteIds": [
+      "mincan:335"
+    ],
+    "reason": "The two Canadian Malartic records represent the old underground mine and the reworked deposit now exploited by the modern open pit, about 2.97 km apart within the mining complex. Preserve the original mine history under the stable modern ID without bridging 1966–2010.",
+    "references": [
+      "https://malartic.agnicoeagle.com/wp-content/uploads/mine-canadian-malartic-scse-bilan-2020.pdf",
+      "https://malartic.agnicoeagle.com/en/about-us/history/",
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ],
+    "periods": [
+      {
+        "fromYear": 1935,
+        "toYear": 1965,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://malartic.agnicoeagle.com/wp-content/uploads/mine-canadian-malartic-scse-bilan-2020.pdf",
+        "approximate": true,
+        "description": "Canadian Malartic operator report distinguishes discovery in 1926 from underground exploitation in 1935, followed by closure in 1965. Other Malartic district mines operated on different dates and are not substituted for this mine."
+      },
+      {
+        "fromYear": 2011,
+        "toYear": 2022,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "approximate": true,
+        "description": "Operator history confirms commercial mining from May 2011; MinCan attests the operation as open in 2022. That evidence endpoint is not a closure date. Earlier exploration and construction are excluded."
+      }
+    ]
+  },
+  {
+    "id": "mincan:195",
+    "removeSiteIds": [
+      "mincan:728"
+    ],
+    "reason": "The two named Detour Lake gold records are 0.27 km apart. Canada Gazette confirms original extraction from 1983 to 1999 and a January 2013 production restart, correcting the continuous 1983–2022 MinCan row.",
+    "references": [
+      "https://gazette.gc.ca/rp-pr/p1/2014/2014-02-08/html/reg1-eng.html",
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ],
+    "periods": [
+      {
+        "fromYear": 1983,
+        "toYear": 1999,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://gazette.gc.ca/rp-pr/p1/2014/2014-02-08/html/reg1-eng.html",
+        "approximate": true,
+        "description": "Canada Gazette records open-pit and underground mining between 1983 and 1999. The 2000–2012 closure is preserved."
+      },
+      {
+        "fromYear": 2013,
+        "toYear": 2022,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "approximate": true,
+        "description": "Canada Gazette confirms production restarted in January 2013; MinCan records the mine as operating in 2022. No operation during the preceding closure or beyond this evidence endpoint is inferred."
+      }
+    ]
+  },
+  {
+    "id": "mincan:225",
+    "removeSiteIds": [
+      "mincan:791"
+    ],
+    "reason": "Same Cochenour-Willans/Cochenour gold mine within 0.09 km. Museum history and Ontario mineral inventory establish production from 1939, not the 1932 surface-development date. Historic and recent phases remain separate. The museum describes a wartime suspension in 1944; 1945 is conservatively left unassigned because fiscal production totals straddle calendar years and the restart date is not precise.",
+    "references": [
+      "https://www.redlakemuseum.com/cochenour-willlans-mine.html",
+      "https://www.geologyontario.mndm.gov.on.ca/mndmfiles/mdi/data/records/MDI52N04SW00018.html",
+      "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071"
+    ],
+    "periods": [
+      {
+        "fromYear": 1939,
+        "toYear": 1944,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://www.redlakemuseum.com/cochenour-willlans-mine.html",
+        "approximate": true,
+        "description": "Museum history dates first production to 1939 and a wartime suspension to 1944. The partly productive suspension year is retained; earlier exploration and shaft construction are excluded."
+      },
+      {
+        "fromYear": 1946,
+        "toYear": 1971,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://www.geologyontario.mndm.gov.on.ca/mndmfiles/mdi/data/records/MDI52N04SW00018.html",
+        "approximate": true,
+        "description": "Ontario inventory contains positive annual production records from 1946 onward and explicitly dates cessation of mining to August 1971. The museum describes a post-war restart without a precise date: 1946 is the first retained reporting year, not an asserted reopening date; 1945 remains a documentary gap. Closure/flooding in 1975 is not treated as extraction."
+      },
+      {
+        "fromYear": 2019,
+        "toYear": 2022,
+        "categories": [
+          "gold"
+        ],
+        "sourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "approximate": true,
+        "description": "Separate modern Cochenour production phase recorded by MinCan, open as of its 2022 snapshot. Exploration/dewatering between the old and new operations does not fill the long extraction gap."
+      }
+    ]
+  }
+]

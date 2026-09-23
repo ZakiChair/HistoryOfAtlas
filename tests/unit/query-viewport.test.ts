@@ -1,6 +1,23 @@
 import { describe, expect, it, vi } from 'vitest';
-import type { Map as MapInstance, MapGeoJSONFeature } from 'maplibre-gl';
+import { createRequire } from 'node:module';
+import type { FilterSpecification, Map as MapInstance, MapGeoJSONFeature } from 'maplibre-gl';
 import { queryViewportFeatures } from '../../components/map/query-viewport';
+import { eventFilter } from '../../components/map/event-filters';
+import { createInitialAtlasState } from '../../lib/store';
+
+const require = createRequire(import.meta.url);
+const mapRequire = createRequire(require.resolve('maplibre-gl/package.json'));
+const { featureFilter } = mapRequire('@maplibre/maplibre-gl-style-spec') as {
+  featureFilter: (
+    filter: unknown,
+    rootKey: string,
+  ) => {
+    filter: (
+      globals: { zoom: number },
+      feature: { type: string; properties: Record<string, unknown> },
+    ) => boolean;
+  };
+};
 
 const feature = (id: string, source = 'events') =>
   ({
@@ -53,4 +70,43 @@ describe('rendered viewport queries on a globe', () => {
     expect(queryViewportFeatures(map, ['events'])).toEqual([]);
     expect(queryRenderedFeatures).toHaveBeenCalledTimes(1);
   });
+
+  it.each(['globe', 'mercator'])(
+    'revalidates old tile features against the current filter on %s',
+    (projection) => {
+      // MapLibre queries can still see the previous feature bucket while a layer's
+      // replacement tiles are being prepared. Only the query filter is synchronous.
+      const bucket = ['battle', 'treaty', 'siege', 'naval', 'war', 'campaign'].map(
+        (type, index) => ({
+          ...feature(`Q${index + 1}`),
+          properties: { id: `Q${index + 1}`, type, start: 1812, end: 1812, importance: 100 },
+        }),
+      );
+      type Query = { filter?: FilterSpecification };
+      const map = {
+        getProjection: () => ({ type: projection }),
+        getCanvas: () => ({ clientWidth: 600, clientHeight: 300 }),
+        queryRenderedFeatures: (boxOrOptions: unknown, options?: Query) => {
+          const query = options ?? (boxOrOptions as Query);
+          const compiled = featureFilter(query.filter, 'queryRenderedFeatures.filter');
+          return bucket.filter((item) =>
+            compiled.filter({ zoom: 1.8 }, { type: 'Point', properties: item.properties }),
+          );
+        },
+      } as unknown as MapInstance;
+      const state = { ...createInitialAtlasState(), battlesVisible: false };
+      expect(
+        queryViewportFeatures(map, ['event-cluster-query'], eventFilter(state)).map(
+          (item) => item.properties.id,
+        ),
+      ).toEqual(['Q2', 'Q5', 'Q6']);
+      expect(
+        queryViewportFeatures(
+          map,
+          ['event-cluster-query'],
+          eventFilter({ ...state, battlesVisible: true }),
+        ).map((item) => item.properties.id),
+      ).toEqual(['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6']);
+    },
+  );
 });

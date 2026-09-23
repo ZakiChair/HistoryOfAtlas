@@ -40,7 +40,8 @@ export function createAtlasUrlSync(options: AtlasUrlSyncOptions) {
     const paused =
       (previous.playing && !state.playing) ||
       (previous.campaignPlaying && !state.campaignPlaying) ||
-      (previous.entityFollowing && !state.entityFollowing);
+      (previous.entityFollowing && !state.entityFollowing) ||
+      (previous.battlePlaying && !state.battlePlaying);
     const elapsed = lastWrite === undefined ? WRITE_INTERVAL_MS : performance.now() - lastWrite;
     if (paused || elapsed >= WRITE_INTERVAL_MS) flush();
     else if (timer === undefined) timer = setTimeout(flush, WRITE_INTERVAL_MS - elapsed);

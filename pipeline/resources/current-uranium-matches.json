@@ -1,0 +1,37 @@
+[
+  {
+    "duplicateId": "current-uranium:honeymoon",
+    "canonicalId": "ga-operating:677",
+    "mode": "append-observations",
+    "sourceUrl": "https://bossenergy.com/honeymoon-project",
+    "reason": "Same Honeymoon ISR operation and identical Geoscience Australia point. Append operator dates including the 2013–2024 suspension; replace neither its coordinates nor its identity."
+  },
+  {
+    "duplicateId": "current-uranium:olympic-dam",
+    "canonicalId": "current-major:olympic-dam",
+    "mode": "append-observations",
+    "sourceUrl": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260422_bhpoperationalreviewfortheninemonthsended31march2026.pdf",
+    "reason": "Same Olympic Dam operation and existing reviewed coordinates. Append only the uranium-specific 2026 observation; do not replace or broaden independently dated copper/gold/silver categories."
+  },
+  {
+    "duplicateId": "mincan:35",
+    "canonicalId": "current-uranium:mcclean-north",
+    "mode": "append-observations",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1063259/000106325926000029/a2026-06dmcmda.htm",
+    "reason": "Same McClean Lake mine complex, new McClean North ore-extraction phase. Retain the old 1999–2010 interval and preserve 2011–2024 as a gap. National record for concentrator-only operation must not create an earlier restart."
+  },
+  {
+    "duplicateId": "fineprint:COM01100.00",
+    "canonicalId": "current-uranium:rossing",
+    "mode": "append-observations",
+    "sourceUrl": "https://www.rossing.com/about-us/",
+    "reason": "Same Rössing mine. Preserve all earlier dated observations and use the FINEPRINT mine position retained by the current-uranium canonical row."
+  },
+  {
+    "duplicateId": "historical:rossing-uranium-mine",
+    "canonicalId": "current-uranium:rossing",
+    "mode": "append-observations",
+    "sourceUrl": "https://www.rossing.com/about-us/",
+    "reason": "Same Rössing mine. Preserve documented continuous 1976–2024 exploitation and append 2025 actual output / 2026 status; canonical position is the more precise FINEPRINT mine point."
+  }
+]

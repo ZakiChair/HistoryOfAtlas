@@ -1,0 +1,1397 @@
+{
+  "sources": [
+    {
+      "id": "current-uranium-kazatomprom",
+      "name": "Kazatomprom — H1 2026 results and SRK January 2026 producing-property audit",
+      "url": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "The January 2026 SRK audit identifies producing properties as of 31 December 2025. The H1 2026 operating review reports actual production for each operating subsidiary. Site-level 2026 presence is an approximate operating-status snapshot, not a division of subsidiary tonnage among its deposits. No discovery year, licence expiry, projected depletion or development-only property is used as a production date."
+    },
+    {
+      "id": "current-uranium-boss",
+      "name": "Boss Energy — Honeymoon operating results to 30 June 2026",
+      "url": "https://bossenergy.com/honeymoon-project",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Primary operator records 1.407 million lb uranium oxide in FY2026 and six producing wellfields on 30 June 2026. It separately records first operation 2011, suspension 2013 and restart April 2024."
+    },
+    {
+      "id": "current-uranium-bhp",
+      "name": "BHP — Operational review to 31 March 2026",
+      "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260422_bhpoperationalreviewfortheninemonthsended31march2026.pdf",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Mine-specific Olympic Dam table on page 8 reports actual ore mined, uranium grade and payable uranium in the March 2026 quarter; aggregate Copper South Australia output is not assigned to other mines."
+    },
+    {
+      "id": "current-uranium-denison",
+      "name": "Denison Mines — Q2 2026 MD&A, McClean North extraction",
+      "url": "https://www.sec.gov/Archives/edgar/data/1063259/000106325926000029/a2026-06dmcmda.htm",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Primary SEC filing dated 12 August 2026 distinguishes McClean North ore mining from toll milling of Cigar Lake feed. Mining started July 2025 and resumed at the end of May 2026; H1 2026 ore mined 933 t."
+    },
+    {
+      "id": "current-uranium-rossing",
+      "name": "Rössing Uranium — 2025 actual output and 2026 operator snapshot",
+      "url": "https://www.rossing.com/about-us/",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Operator records more than 3,100 t uranium oxide in 2025 and continuing production in its 2026 fiftieth-anniversary operating snapshot. The projected 2036 mine life is not used as an observed endpoint."
+    },
+    {
+      "id": "current-uranium-cgn",
+      "name": "CGN / Swakop Uranium — Husab 2025 results and 2026 mine operations",
+      "url": "https://en.cgnpc.com.cn/encgn/pressReleases/2026-09/21/content_3c397abe0c6b460383b87a48e154c210.shtml",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Operator reports record actual Husab output in the 2025 sustainability review and current production and operations during the Namibian presidential visit of 8 July 2026. New development and capacity targets are excluded."
+    },
+    {
+      "id": "current-uranium-paladin",
+      "name": "Paladin Energy — Langer Heinrich June 2026 quarterly report",
+      "url": "https://www.paladinenergy.com/wp-content/uploads/2026/07/61334849.pdf",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Primary operator report issued 22 July 2026, linked from the Paladin stock-exchange announcements page; actual June-quarter output 1.23 million lb and FY2026 output 4.82 million lb. Current open-pit mining is distinguished from the earlier stockpile-only restart."
+    },
+    {
+      "id": "current-uranium-rosatom",
+      "name": "Rosatom mining division — current Russian uranium operations 2026",
+      "url": "https://atommedia.online/press-releases/na-podzemnom-rudnike-8-predpriyatiya-gornorudnogo-diviziona-rosatoma-dosrochno-vveden-v-ekspluatatsi/",
+      "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+      "year": 2026,
+      "description": "Primary operating-company press releases distinguish active mine workings and productive-solution processing from proposed new deposits. Production centres are represented as complexes where mine-level geometry is unavailable."
+    },
+    {
+      "id": "current-uranium-ur-energy",
+      "name": "Ur-Energy — actual Q2 2026 uranium recovery",
+      "url": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
+      "year": 2026,
+      "license": "Factual metadata; original operator reports retain their copyright",
+      "description": "Actual operating recovery in Q2 2026; projected restarts, future wellfields and inventory sales are excluded. Mine coordinates are independently stated in primary operator technical reports."
+    },
+    {
+      "id": "current-uranium-encore",
+      "name": "enCore Energy — actual Q2 2026 uranium recovery",
+      "url": "https://encore.mediaroom.com/2026-08-13-enCore-Energy-Reports-Q2-2026-Financial-Results",
+      "year": 2026,
+      "license": "Factual metadata; original operator reports retain their copyright",
+      "description": "Actual operating recovery in Q2 2026; projected restarts, future wellfields and inventory sales are excluded. Mine coordinates are independently stated in primary operator technical reports."
+    }
+  ],
+  "sites": [
+    {
+      "id": "current-uranium:eastern-mynkuduk",
+      "name": "Eastern Mynkuduk",
+      "country": "Kazakhstan",
+      "coordinates": [
+        68.421,
+        45.642
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Kazatomprom-SaUran records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:central-mynkuduk",
+      "name": "Central Mynkuduk",
+      "country": "Kazakhstan",
+      "coordinates": [
+        68.071,
+        45.601
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; MC Ortalyk records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:western-mynkuduk",
+      "name": "Western Mynkuduk",
+      "country": "Kazakhstan",
+      "coordinates": [
+        67.912,
+        45.595
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Appak records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:akdala",
+      "name": "Akdala",
+      "country": "Kazakhstan",
+      "coordinates": [
+        68.481,
+        45.537
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "Kazatomprom H1 2026 operating review documents Akdala production and transfer to SaUran after the previous contract expired in March 2026. This is actual ongoing mining, not the projected licence end.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:inkai",
+      "name": "Inkai (Block 1)",
+      "country": "Kazakhstan",
+      "coordinates": [
+        67.5,
+        45.333333
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.cameco.com/sites/default/files/documents/Cameco-2024-Inkai-Technical%20Report.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; JV Inkai records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:southern-inkai",
+      "name": "South Inkai (Block 4)",
+      "country": "Kazakhstan",
+      "coordinates": [
+        67.492,
+        45.165
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; SMCC records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:karatau",
+      "name": "Karatau (Budenovskoye Block 2)",
+      "country": "Kazakhstan",
+      "coordinates": [
+        67.647,
+        44.753
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Karatau records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:akbastau",
+      "name": "Akbastau (Budenovskoye Blocks 1, 3 and 4)",
+      "country": "Kazakhstan",
+      "coordinates": [
+        67.642,
+        44.731
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Akbastau records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:kharassan-1",
+      "name": "Kharassan 1",
+      "country": "Kazakhstan",
+      "coordinates": [
+        66.864,
+        43.84
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Turanium records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:kharassan-2",
+      "name": "Kharassan 2",
+      "country": "Kazakhstan",
+      "coordinates": [
+        66.871,
+        43.816
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Baiken-U records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:north-karamurun",
+      "name": "North Karamurun",
+      "country": "Kazakhstan",
+      "coordinates": [
+        66.791,
+        44.096
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; RU-6 records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:south-karamurun",
+      "name": "South Karamurun",
+      "country": "Kazakhstan",
+      "coordinates": [
+        66.828,
+        44.002
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; RU-6 records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:irkol",
+      "name": "Irkol",
+      "country": "Kazakhstan",
+      "coordinates": [
+        66.528,
+        44.121
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Semizbay-U records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:tortkuduk",
+      "name": "Tortkuduk",
+      "country": "Kazakhstan",
+      "coordinates": [
+        69.199,
+        44.503
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Katco records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:southern-moinkum-northern",
+      "name": "South Moinkum (northern part)",
+      "country": "Kazakhstan",
+      "coordinates": [
+        68.918,
+        44.239
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Katco records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:kanzhugan",
+      "name": "Kanzhugan",
+      "country": "Kazakhstan",
+      "coordinates": [
+        68.866,
+        44.045
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "SRK January 2026 audit, table 2-1: producing property at 31 December 2025; Kazatomprom-SaUran records positive actual H1 2026 uranium production in the operating review, section 5.3.3. Approximate site operating-status snapshot; subsidiary totals are not assigned to individual deposits.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:semizbay",
+      "name": "Semizbay",
+      "country": "Kazakhstan",
+      "coordinates": [
+        72.869444,
+        52.930556
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-kazatomprom",
+      "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.hkexnews.hk/listedco/listconews/sehk/2014/0630/LTN201406301306.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+          "description": "Semizbay is a producing property in SRK January 2026 table 2-1; Semizbay-U reported positive actual H1 2026 uranium output. Approximate operating-status snapshot; joint-company tonnes are not assigned to this deposit.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:honeymoon",
+      "name": "Honeymoon",
+      "country": "Australia",
+      "coordinates": [
+        140.662365,
+        -31.74095
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-boss",
+      "sourceUrl": "https://bossenergy.com/honeymoon-project",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://services.ga.gov.au/gis/rest/services/AustralianOperatingMines/MapServer/0",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2011,
+          "toYear": 2013,
+          "sourceUrl": "https://bossenergy.com/honeymoon-project",
+          "description": "Operator chronology: first uranium production in 2011, operations suspended in 2013. No activity is inferred across the suspension.",
+          "categories": [
+            "uranium"
+          ]
+        },
+        {
+          "fromYear": 2024,
+          "toYear": 2026,
+          "sourceUrl": "https://bossenergy.com/honeymoon-project",
+          "description": "Operator chronology: restart in April 2024; FY2026 actual uranium oxide production 1.407 million lb and six producing wellfields at 30 June 2026.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:olympic-dam",
+      "name": "Olympic Dam",
+      "country": "Australia",
+      "coordinates": [
+        136.870109008325,
+        -30.4464278902638
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-bhp",
+      "sourceUrl": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260422_bhpoperationalreviewfortheninemonthsended31march2026.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260422_bhpoperationalreviewfortheninemonthsended31march2026.pdf",
+          "description": "Olympic Dam mine-specific table, page 8: 2,732 kt material mined and 778 t payable uranium in the quarter ended March 2026. Uranium observation only; other commodity histories remain separate.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:mcclean-north",
+      "name": "McClean Lake (McClean North)",
+      "country": "Canada",
+      "coordinates": [
+        -103.803054822356,
+        58.261669
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-denison",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1063259/000106325926000029/a2026-06dmcmda.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2026,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1063259/000106325926000029/a2026-06dmcmda.htm",
+          "description": "McClean North SABRE ore mining began July 2025 and resumed at the end of May 2026 after seasonal drilling. H1 2026: 933 tonnes ore mined containing 174,628 lb U3O8. Toll milling of Cigar Lake ore is excluded as evidence for this mine.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:rossing",
+      "name": "Rössing uranium mine",
+      "country": "Namibia",
+      "coordinates": [
+        15.048008,
+        -22.4790132
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-rossing",
+      "sourceUrl": "https://www.rossing.com/about-us/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://zenodo.org/records/7369478",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://www.rossing.com/about-us/",
+          "description": "The operator reports actual 2025 uranium oxide production exceeding 3,100 tonnes.",
+          "categories": [
+            "uranium"
+          ]
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.rossing.com/about-us/",
+          "description": "Current operator snapshot reviewed September 2026 describes the producing mine in its fiftieth-anniversary year. This is an operating-status observation, not a forecast through its planned mine life.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:husab",
+      "name": "Husab",
+      "country": "Namibia",
+      "coordinates": [
+        15.05305556,
+        -22.5775
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-cgn",
+      "sourceUrl": "https://en.cgnpc.com.cn/encgn/pressReleases/2026-09/21/content_3c397abe0c6b460383b87a48e154c210.shtml",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://de.wikipedia.org/wiki/Husab-Mine",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2025,
+          "toYear": 2025,
+          "sourceUrl": "https://en.cgnpc.com.cn/encgn/pressReleases/2026-07/21/content_48d0b6a8465b4e97be8888a0208858f2.shtml",
+          "description": "CGN 2025 sustainability report launch: Husab achieved record annual uranium output in 2025.",
+          "categories": [
+            "uranium"
+          ]
+        },
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://en.cgnpc.com.cn/encgn/pressReleases/2026-09/21/content_3c397abe0c6b460383b87a48e154c210.shtml",
+          "description": "CGN report dated 8 July 2026 explicitly describes current production and operations at Husab; approximate active-mine snapshot.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:langer-heinrich",
+      "name": "Langer Heinrich",
+      "country": "Namibia",
+      "coordinates": [
+        15.328674,
+        -22.811156
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-paladin",
+      "sourceUrl": "https://www.paladinenergy.com/wp-content/uploads/2026/07/61334849.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://fr.wikipedia.org/wiki/Mine_de_Langer_Heinrich",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.paladinenergy.com/wp-content/uploads/2026/07/61334849.pdf",
+          "description": "Actual June 2026 quarter uranium oxide production 1.23 million lb, with mining and processing ramp-up completed. Only the reported operating year is added; earlier stockpile processing is not used to date renewed ore extraction.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:priargunsky",
+      "name": "Priargunsky uranium mining complex (PIMCU)",
+      "country": "Russia",
+      "coordinates": [
+        118.18,
+        50.1
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-rosatom",
+      "sourceUrl": "https://atommedia.online/press-releases/na-podzemnom-rudnike-8-predpriyatiya-gornorudnogo-diviziona-rosatoma-dosrochno-vveden-v-ekspluatatsi/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://ru.wikipedia.org/wiki/Приаргунское_производственное_горно-химическое_объединение",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://atommedia.online/press-releases/na-podzemnom-rudnike-8-predpriyatiya-gornorudnogo-diviziona-rosatoma-dosrochno-vveden-v-ekspluatatsi/",
+          "description": "Rosatom reports newly commissioned stopes at operating underground mine No. 8, Yubileynoye, on 1 July 2026. Representative PIMCU mining-complex point; future mine projects are not separate producing sites.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:khiagda",
+      "name": "Khiagda uranium mining complex",
+      "country": "Russia",
+      "coordinates": [
+        112.70167,
+        53.65639
+      ],
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-rosatom",
+      "sourceUrl": "https://atommedia.online/press-releases/na-predpriyatii-gornorudnogo-diviziona-rosatoma-nachalos-vnedrenie-ekzoskeletov/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.mindat.org/loc-194854.html",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://atommedia.online/press-releases/na-predpriyatii-gornorudnogo-diviziona-rosatoma-nachalos-vnedrenie-ekzoskeletov/",
+          "description": "Khiagda operator release of 16 June 2026 describes current technological operations processing uranium-bearing solutions from ISR mining. Approximate operating-centre snapshot; no planned deposits are added.",
+          "categories": [
+            "uranium"
+          ],
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:lost-creek",
+      "name": "Lost Creek",
+      "coordinates": [
+        -107.86166666666666,
+        42.13433333333333
+      ],
+      "country": "United States",
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-ur-energy",
+      "sourceUrl": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.ur-energy.com/investors/sec-filings/annual-reports/content/0001104659-26-025923/urg-20251231xex96d1.htm",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
+          "description": "Actual recovery in 2026: Ur-Energy reports 140,873 pounds of U3O8 drummed at Lost Creek in Q2 2026.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:shirley-basin",
+      "name": "Shirley Basin",
+      "coordinates": [
+        -106.18333333333334,
+        42.36666666666667
+      ],
+      "country": "United States",
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-ur-energy",
+      "sourceUrl": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.ur-energy.com/investors/sec-filings/all-sec-filings/content/0001654954-24-002673/urg_ex962.htm",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
+          "description": "Actual restart in 2026: initial uranium capture began in April; 10,634 pounds U3O8 captured during Q2 2026.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "current-uranium:alta-mesa",
+      "name": "Alta Mesa",
+      "coordinates": [
+        -98.315,
+        26.90222222222222
+      ],
+      "country": "United States",
+      "categories": [
+        "uranium"
+      ],
+      "sourceId": "current-uranium-encore",
+      "sourceUrl": "https://encore.mediaroom.com/2026-08-13-enCore-Energy-Reports-Q2-2026-Financial-Results",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://encoreuranium.com/wp-content/uploads/2023/02/TechReport.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "sourceUrl": "https://encore.mediaroom.com/2026-08-13-enCore-Energy-Reports-Q2-2026-Financial-Results",
+          "description": "Q2 2026 operator report confirms Alta Mesa Wellfield 7 recovery, scheduled to cease later in Q3 as it approaches depletion. Proposed Wellfield 3 Extension is not counted as produced.",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "reviewedAt": "2026-09-23",
+    "scope": "Current uranium extraction observations and explicitly dated active-operation snapshots. Known gaps and approximate locations are retained; this is a reviewed contribution, not a complete world inventory.",
+    "temporalPolicy": "Actual production uses its stated year. Current operating-status snapshots are approximate and limited to 2026. No licence expiry, forecast, discovery, foundation or projected mine-life date is substituted for an observation. Annual intervals do not imply unbroken daily extraction.",
+    "coordinatePolicy": "Independent coordinate sources identify actual mine/deposit locations or explicitly named mining complexes, not country or town centres. Kazakh points are approximate regional-map digitizations; others retain their stated original source.",
+    "kazakhMapCalibration": {
+      "sourceUrl": "https://www.kazatomprom.kz/storage/50/uk31126_kazatomprom_2025_cpr_final.pdf",
+      "figure": "2-4",
+      "printedPage": 77,
+      "pdfPage": 154,
+      "projection": "WGS84 UTM zone 42N",
+      "digitizationFramePixels": [
+        1664,
+        1503
+      ],
+      "eastings": [
+        {
+          "value": 300000,
+          "x": 552
+        },
+        {
+          "value": 450000,
+          "x": 1167
+        }
+      ],
+      "northings": [
+        {
+          "value": 5100000,
+          "y": 241
+        },
+        {
+          "value": 4950000,
+          "y": 854
+        }
+      ],
+      "precision": "Regional operation symbols, several-kilometre spatial approximation; coordinates rounded to 0.001 degree do not imply metre accuracy."
+    },
+    "sites": [
+      {
+        "siteId": "current-uranium:eastern-mynkuduk",
+        "review": {
+          "operator": "Kazatomprom-SaUran",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              68.421,
+              45.642
+            ],
+            "easting": 454878,
+            "northing": 5054486,
+            "digitizedPixel": [
+              1187,
+              427
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:central-mynkuduk",
+        "review": {
+          "operator": "MC Ortalyk",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              68.071,
+              45.601
+            ],
+            "easting": 427561,
+            "northing": 5050082,
+            "digitizedPixel": [
+              1075,
+              445
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:western-mynkuduk",
+        "review": {
+          "operator": "Appak",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              67.912,
+              45.595
+            ],
+            "easting": 415122,
+            "northing": 5049592,
+            "digitizedPixel": [
+              1024,
+              447
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:akdala",
+        "review": {
+          "operator": "SMCC / Kazatomprom-SaUran",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              68.481,
+              45.537
+            ],
+            "easting": 459512,
+            "northing": 5042741,
+            "digitizedPixel": [
+              1206,
+              475
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:inkai",
+        "review": {
+          "operator": "JV Inkai",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Cameco 2024 technical report section 4.1 explicitly gives 45°20′N, 67°30′E.",
+          "coordinateAudit": null
+        }
+      },
+      {
+        "siteId": "current-uranium:southern-inkai",
+        "review": {
+          "operator": "SMCC",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              67.492,
+              45.165
+            ],
+            "easting": 381463,
+            "northing": 5002365,
+            "digitizedPixel": [
+              886,
+              640
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:karatau",
+        "review": {
+          "operator": "Karatau",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              67.647,
+              44.753
+            ],
+            "easting": 392927,
+            "northing": 4956362,
+            "digitizedPixel": [
+              933,
+              828
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:akbastau",
+        "review": {
+          "operator": "Akbastau",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              67.642,
+              44.731
+            ],
+            "easting": 392439,
+            "northing": 4953915,
+            "digitizedPixel": [
+              931,
+              838
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:kharassan-1",
+        "review": {
+          "operator": "Turanium",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              66.864,
+              43.84
+            ],
+            "easting": 328293,
+            "northing": 4856281,
+            "digitizedPixel": [
+              668,
+              1237
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:kharassan-2",
+        "review": {
+          "operator": "Baiken-U",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              66.871,
+              43.816
+            ],
+            "easting": 328780,
+            "northing": 4853589,
+            "digitizedPixel": [
+              670,
+              1248
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:north-karamurun",
+        "review": {
+          "operator": "RU-6",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              66.791,
+              44.096
+            ],
+            "easting": 323171,
+            "northing": 4884910,
+            "digitizedPixel": [
+              647,
+              1120
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:south-karamurun",
+        "review": {
+          "operator": "RU-6",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              66.828,
+              44.002
+            ],
+            "easting": 325854,
+            "northing": 4874388,
+            "digitizedPixel": [
+              658,
+              1163
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:irkol",
+        "review": {
+          "operator": "Semizbay-U",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              66.528,
+              44.121
+            ],
+            "easting": 302195,
+            "northing": 4888336,
+            "digitizedPixel": [
+              561,
+              1106
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:tortkuduk",
+        "review": {
+          "operator": "Katco",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              69.199,
+              44.503
+            ],
+            "easting": 515854,
+            "northing": 4927732,
+            "digitizedPixel": [
+              1437,
+              945
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:southern-moinkum-northern",
+        "review": {
+          "operator": "Katco",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              68.918,
+              44.239
+            ],
+            "easting": 493415,
+            "northing": 4898369,
+            "digitizedPixel": [
+              1345,
+              1065
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:kanzhugan",
+        "review": {
+          "operator": "Kazatomprom-SaUran",
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "statusAsOf": "2025-12-31",
+          "productionEvidence": "H1 2026 subsidiary actual output; positive output confirms active operator, not an independently measured output for each deposit.",
+          "coordinateMethod": "Regional operation symbol digitized from SRK May 2025 figure 2-4, page 77 (PDF page 154), WGS84 UTM zone 42N; several-kilometre approximate regional location.",
+          "coordinateAudit": {
+            "coordinates": [
+              68.866,
+              44.045
+            ],
+            "easting": 489268,
+            "northing": 4876835,
+            "digitizedPixel": [
+              1328,
+              1153
+            ]
+          }
+        }
+      },
+      {
+        "siteId": "current-uranium:semizbay",
+        "review": {
+          "producingStatusSource": "https://www.kazatomprom.kz/storage/08/uk31126_kap_2026_cpr_letter123.pdf",
+          "coordinateMethod": "CGN Mining primary technical report, Appendix V: explicit mine coordinate 52°55′50″N, 72°52′10″E."
+        }
+      },
+      {
+        "siteId": "current-uranium:honeymoon",
+        "review": "Geoscience Australia operating-mine point 677; actual producing wellfields, not a proposal or processing of historical ore alone."
+      },
+      {
+        "siteId": "current-uranium:olympic-dam",
+        "review": "Existing reviewed FINEPRINT position reused, CC BY 4.0; matched to current-major:olympic-dam."
+      },
+      {
+        "siteId": "current-uranium:mcclean-north",
+        "review": "Representative McClean Lake complex coordinate retained from MinCan. Do not fill the old 2011–2024 mining hiatus or mistake Cigar Lake toll milling for local ore extraction."
+      },
+      {
+        "siteId": "current-uranium:rossing",
+        "review": "FINEPRINT COM01100.00 mine point reused (CC BY 4.0). The older USGS historical point and ICMM point are about 8 km from the actual mine complex; prefer this coordinate on consolidation."
+      },
+      {
+        "siteId": "current-uranium:husab",
+        "review": "Independent Wikimedia coordinate identifies the uranium pit. Cross-checked against the geotagged 18 June 2022 aerial photograph https://commons.wikimedia.org/wiki/File:Husab_Mine_aerial_view.jpg ; the English-language Wikipedia coastal coordinate was rejected. Position is approximate; no activity dates are sourced from Wikipedia."
+      },
+      {
+        "siteId": "current-uranium:langer-heinrich",
+        "review": "Independent Wikimedia mine coordinate. Paladin primary quarterly report is linked on https://www.paladinenergy.com/investors/asx-announcements/ ; dated operator release reproduces the actual-output table. No projected FY2027 quantity is used."
+      },
+      {
+        "siteId": "current-uranium:priargunsky",
+        "review": "Independent Wikimedia industrial-complex point near Krasnokamensk. ICMM06878 is rejected because its coordinate locates the unrelated town of Priargunsk about 80 km away. This is not a point for each individual underground orebody."
+      },
+      {
+        "siteId": "current-uranium:khiagda",
+        "review": "Independent mineral-locality coordinate for the Khiagda deposit, approximately representing the multi-deposit production centre. Coordinates do not represent every wellfield. Primary activity proof is the operator, not the geological locality listing."
+      },
+      {
+        "siteId": "current-uranium:lost-creek",
+        "review": "Technical report March 9, 2026, section 4.1: approximate property centre 42 degrees 8.06 minutes N, 107 degrees 51.7 minutes W. Representative property position, not shaft boundary."
+      },
+      {
+        "siteId": "current-uranium:shirley-basin",
+        "review": "2024 technical report section 3.1: project centre 42 degrees 22 minutes N and 106 degrees 11 minutes W."
+      },
+      {
+        "siteId": "current-uranium:alta-mesa",
+        "review": "Technical report section 4.1 gives site CPP/mine office at 26 degrees 54 minutes 08 seconds N, 98 degrees 18 minutes 54 seconds W. Report swaps latitude/longitude labels; hemispheres and valid ranges determine axis order. Approximate site/plant position, not a wellfield centroid."
+      }
+    ],
+    "omissions": [
+      {
+        "names": [
+          "Ranger",
+          "Uvanas",
+          "South Moinkum (southern part)",
+          "Elkon",
+          "Etango",
+          "Tumas",
+          "Phoenix/Wheeler River"
+        ],
+        "reason": "Closed/ceased-producing or construction/development-only as of reviewed sources. Historical phases remain elsewhere."
+      },
+      {
+        "names": [
+          "Central Moinkum",
+          "Zhalpak",
+          "Budenovskoye Blocks 6 and 7",
+          "Zarechnoye"
+        ],
+        "reason": "Current production evidence identified, but an independently defensible mine-level coordinate was not secured in this contribution. No city-centre substitute is supplied."
+      },
+      {
+        "names": [
+          "Uzbekistan producing deposits",
+          "China domestic uranium mines",
+          "Dalmatovskoye",
+          "Khokhlovskoye",
+          "Dobrovolnoye"
+        ],
+        "reason": "Additional primary operating evidence exists; precise independent site matching/coordinates remain incomplete. These are documented coverage gaps, not assertions of inactivity."
+      },
+      {
+        "names": [
+          "Key Lake",
+          "McClean Lake toll mill",
+          "Beverley processing plant"
+        ],
+        "reason": "A processing plant or third-party ore throughput alone does not establish local uranium ore extraction."
+      },
+      {
+        "names": [
+          "Nichols Ranch",
+          "Rosita"
+        ],
+        "reason": "Nichols Ranch restart is projected no earlier than 2027; Rosita restart is prospective Q4 2026, not an actual extraction observation as of this review."
+      }
+    ]
+  }
+}

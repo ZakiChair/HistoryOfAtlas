@@ -1,0 +1,909 @@
+{
+  "matches": [
+    {
+      "registryId": "ga-operating:548",
+      "siteId": "fineprint:COM00172.00",
+      "registryName": "Broken Hill",
+      "siteName": "Broken Hill",
+      "distanceKm": 1.53,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:563",
+      "siteId": "fineprint:COM00198.00",
+      "registryName": "Cannington",
+      "siteName": "Cannington",
+      "distanceKm": 1.73,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:571",
+      "siteId": "fineprint:COM00208.00",
+      "registryName": "Carosue Dam",
+      "siteName": "Carosue Dam",
+      "distanceKm": 1.06,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:580",
+      "siteId": "fineprint:COM00224.00",
+      "registryName": "Century",
+      "siteName": "Century",
+      "distanceKm": 2.06,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:607",
+      "siteId": "fineprint:COM00484.00",
+      "registryName": "Golden Grove",
+      "siteName": "Golden Grove",
+      "distanceKm": 0.14,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:610",
+      "siteId": "current-major:gove",
+      "registryName": "Gove",
+      "siteName": "Gove",
+      "distanceKm": 0.34,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:615",
+      "siteId": "current-major:greenbushes",
+      "registryName": "Greenbushes",
+      "siteName": "Greenbushes lithium mine",
+      "distanceKm": 0.42,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:639",
+      "siteId": "fineprint:COM00605.00",
+      "registryName": "Jundee",
+      "siteName": "Jundee",
+      "distanceKm": 2.21,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:644",
+      "siteId": "fineprint:COM00617.00",
+      "registryName": "Kanowna Belle",
+      "siteName": "Kanowna Belle",
+      "distanceKm": 0.57,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:660",
+      "siteId": "fineprint:COM00683.00",
+      "registryName": "Kundana",
+      "siteName": "Kundana",
+      "distanceKm": 1.32,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:692",
+      "siteId": "fineprint:COM00297.00",
+      "registryName": "Cowal",
+      "siteName": "Cowal",
+      "distanceKm": 0.78,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:694",
+      "siteId": "fineprint:COM00300.00",
+      "registryName": "Cracow",
+      "siteName": "Cracow",
+      "distanceKm": 2.92,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:702",
+      "siteId": "fineprint:COM00315.00",
+      "registryName": "Darlot",
+      "siteName": "Darlot",
+      "distanceKm": 1.05,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:706",
+      "siteId": "fineprint:COM00326.00",
+      "registryName": "Deflector",
+      "siteName": "Deflector",
+      "distanceKm": 1.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:717",
+      "siteId": "fineprint:COM00352.00",
+      "registryName": "Dugald River",
+      "siteName": "Dugald River",
+      "distanceKm": 0.68,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:724",
+      "siteId": "fineprint:COM00391.00",
+      "registryName": "Endeavor",
+      "siteName": "Endeavor",
+      "distanceKm": 0.14,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:788",
+      "siteId": "current-major:boddington",
+      "registryName": "Boddington",
+      "siteName": "Boddington",
+      "distanceKm": 2.69,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:803",
+      "siteId": "fineprint:COM00966.00",
+      "registryName": "Paulsens",
+      "siteName": "Paulsens",
+      "distanceKm": 0.09,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:827",
+      "siteId": "fineprint:COM01377.00",
+      "registryName": "Wodgina",
+      "siteName": "Wodgina",
+      "distanceKm": 0.17,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:849",
+      "siteId": "fineprint:COM00995.00",
+      "registryName": "Plutonic",
+      "siteName": "Plutonic",
+      "distanceKm": 0.72,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:855",
+      "siteId": "fineprint:COM01015.00",
+      "registryName": "Prominent Hill",
+      "siteName": "Prominent Hill",
+      "distanceKm": 1.46,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:861",
+      "siteId": "fineprint:COM01067.00",
+      "registryName": "Ravenswood",
+      "siteName": "Ravenswood",
+      "distanceKm": 1.41,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:881",
+      "siteId": "fineprint:COM01097.00",
+      "registryName": "Rosebery",
+      "siteName": "Rosebery",
+      "distanceKm": 0.8,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:920",
+      "siteId": "fineprint:COM01243.00",
+      "registryName": "Sunrise Dam",
+      "siteName": "Sunrise Dam",
+      "distanceKm": 0.69,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:928",
+      "siteId": "fineprint:COM01270.00",
+      "registryName": "Telfer",
+      "siteName": "Telfer",
+      "distanceKm": 0.92,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:932",
+      "siteId": "fineprint:COM01278.00",
+      "registryName": "Thunderbox",
+      "siteName": "Thunderbox",
+      "distanceKm": 1.48,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:936",
+      "siteId": "fineprint:COM01295.00",
+      "registryName": "Tritton",
+      "siteName": "Tritton",
+      "distanceKm": 0.2,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:937",
+      "siteId": "fineprint:COM01296.00",
+      "registryName": "Tropicana",
+      "siteName": "Tropicana",
+      "distanceKm": 2.36,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:979",
+      "siteId": "fineprint:COM00785.00",
+      "registryName": "McArthur River",
+      "siteName": "McArthur River",
+      "distanceKm": 0.54,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:1029",
+      "siteId": "current-major:murrin-murrin",
+      "registryName": "Murrin Murrin",
+      "siteName": "Murrin Murrin",
+      "distanceKm": 0.22,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:1050",
+      "siteId": "fineprint:COM00922.00",
+      "registryName": "Northparkes",
+      "siteName": "Northparkes",
+      "distanceKm": 2.99,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "ga-operating:1055",
+      "siteId": "current-major:olympic-dam",
+      "registryName": "Olympic Dam",
+      "siteName": "Olympic Dam",
+      "distanceKm": 2.09,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:2",
+      "siteId": "mincan:314",
+      "registryName": "Voisey’s Bay",
+      "siteName": "Voisey's Bay",
+      "distanceKm": 0.38,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:20",
+      "siteId": "mincan:226",
+      "registryName": "DSO (Goodwood)",
+      "siteName": "DSO (Goodwood)",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:22",
+      "siteId": "mincan:714",
+      "registryName": "Niobec",
+      "siteName": "Niobec",
+      "distanceKm": 0.18,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:23",
+      "siteId": "mincan:425",
+      "registryName": "Raglan",
+      "siteName": "Raglan",
+      "distanceKm": 0.63,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:25",
+      "siteId": "mincan:204",
+      "registryName": "Éléonore",
+      "siteName": "Éléonore",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:28",
+      "siteId": "mincan:221",
+      "registryName": "North American Lithium",
+      "siteName": "North American Lithium",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:30",
+      "siteId": "mincan:57",
+      "registryName": "Kiena",
+      "siteName": "Kiena",
+      "distanceKm": 0.6,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:33",
+      "siteId": "mincan:138",
+      "registryName": "LaRonde",
+      "siteName": "LaRonde",
+      "distanceKm": 1.01,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:36",
+      "siteId": "mincan:415",
+      "registryName": "Casa Berardi",
+      "siteName": "Casa Berardi",
+      "distanceKm": 0.05,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:50",
+      "siteId": "mincan:195",
+      "registryName": "Detour Lake",
+      "siteName": "Detour Lake",
+      "distanceKm": 0.71,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:53",
+      "siteId": "mincan:522",
+      "registryName": "Young-Davidson",
+      "siteName": "Young-Davidson",
+      "distanceKm": 1.39,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:59",
+      "siteId": "mincan:916",
+      "registryName": "Bell Creek",
+      "siteName": "Bell Creek",
+      "distanceKm": 0.92,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:65",
+      "siteId": "mincan:849",
+      "registryName": "Kidd Creek",
+      "siteName": "Kidd Creek",
+      "distanceKm": 0.3,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:66",
+      "siteId": "mincan:700",
+      "registryName": "McCreedy West",
+      "siteName": "McCreedy West",
+      "distanceKm": 0.02,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:73",
+      "siteId": "mincan:723",
+      "registryName": "Eagle River",
+      "siteName": "Eagle River",
+      "distanceKm": 0.27,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:76",
+      "siteId": "mincan:749",
+      "registryName": "Lac des Iles",
+      "siteName": "Lac-des-iles",
+      "distanceKm": 0.19,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:77",
+      "siteId": "mincan:756",
+      "registryName": "Musselwhite",
+      "siteName": "Musselwhite",
+      "distanceKm": 1.99,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:78",
+      "siteId": "mincan:810",
+      "registryName": "Red Lake",
+      "siteName": "Red Lake",
+      "distanceKm": 1.08,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:79",
+      "siteId": "mincan:214",
+      "registryName": "Rainy River",
+      "siteName": "Rainy River",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:111",
+      "siteId": "mincan:35",
+      "registryName": "McClean Lake",
+      "siteName": "McClean Lake",
+      "distanceKm": 2.6,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:112",
+      "siteId": "current-major:cigar-lake",
+      "registryName": "Cigar Lake",
+      "siteName": "Cigar Lake",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:113",
+      "siteId": "current-major:mcarthur-river",
+      "registryName": "McArthur River",
+      "siteName": "McArthur River",
+      "distanceKm": 1.74,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:152",
+      "siteId": "mincan:190",
+      "registryName": "New Afton",
+      "siteName": "New Afton",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:153",
+      "siteId": "mincan:518",
+      "registryName": "Copper Mountain",
+      "siteName": "Copper Mountain",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:156",
+      "siteId": "mincan:119",
+      "registryName": "Gibraltar",
+      "siteName": "Gibraltar",
+      "distanceKm": 0.15,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:159",
+      "siteId": "mincan:85",
+      "registryName": "Dome Mountain",
+      "siteName": "Dome Mountain",
+      "distanceKm": 0.52,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:160",
+      "siteId": "mincan:207",
+      "registryName": "Red Chris",
+      "siteName": "Red Chris",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:161",
+      "siteId": "mincan:216",
+      "registryName": "Brucejack",
+      "siteName": "Brucejack",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:181",
+      "siteId": "mincan:227",
+      "registryName": "Meliadine",
+      "siteName": "Meliadine",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:10",
+      "siteId": "mincan:109",
+      "registryName": "Pugwash",
+      "siteName": "Pugwash",
+      "distanceKm": 0.25,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:37",
+      "siteId": "mincan:711",
+      "registryName": "Seleine",
+      "siteName": "Seleine",
+      "distanceKm": 0.81,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:95",
+      "siteId": "mincan:535",
+      "registryName": "Goderich",
+      "siteName": "Goderich",
+      "distanceKm": 1.51,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:96",
+      "siteId": "mincan:535",
+      "registryName": "Goderich",
+      "siteName": "Goderich",
+      "distanceKm": 1.92,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:121",
+      "siteId": "mincan:476",
+      "registryName": "Colonsay",
+      "siteName": "Colonsay",
+      "distanceKm": 0.82,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:123",
+      "siteId": "mincan:838",
+      "registryName": "Patience Lake",
+      "siteName": "Patience Lake",
+      "distanceKm": 0.2,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:127",
+      "siteId": "mincan:286",
+      "registryName": "Vanscoy",
+      "siteName": "Vanscoy",
+      "distanceKm": 0.72,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:177",
+      "siteId": "mincan:217",
+      "registryName": "Gahcho Kué",
+      "siteName": "Gahcho Kué",
+      "distanceKm": 0.0,
+      "reason": "Same normalized mine name and country, positions within 5 km; preserve existing independent coordinate and chronology."
+    },
+    {
+      "registryId": "nrcan-producing:3",
+      "siteId": "gem-giomt:P100000128196",
+      "registryName": "Scully",
+      "siteName": "Tacora Resources Scully Mine",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:4",
+      "siteId": "gem-giomt:P100000128153",
+      "registryName": "Carol Lake",
+      "siteName": "IOC Carol Lake Mine",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:17",
+      "siteId": "mincan:620",
+      "registryName": "Lac Tio",
+      "siteName": "Tio (Lake Tio or Allard Lake)",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:18",
+      "siteId": "gem-giomt:P100000128201",
+      "registryName": "Bloom Lake",
+      "siteName": "Quebec Iron Bloom Lake Mine",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:19",
+      "siteId": "gem-giomt:P100000128188",
+      "registryName": "Mont-Wright",
+      "siteName": "ArcelorMittal Mont Wright Mine",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:21",
+      "siteId": "gem-giomt:P100000128152",
+      "registryName": "Fire Lake",
+      "siteName": "ArcelorMittal Fire Lake Mine",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:29",
+      "siteId": "mincan:163",
+      "registryName": "Goldex (Goldex)",
+      "siteName": "Goldex",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:34",
+      "siteId": "mincan:199",
+      "registryName": "Westwood (Westwood)",
+      "siteName": "Westwood",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:52",
+      "siteId": "mincan:173",
+      "registryName": "Black Fox (Fox Complex)",
+      "siteName": "Black Fox",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:63",
+      "siteId": "mincan:524",
+      "registryName": "Fraser (Sudbury INO)",
+      "siteName": "Fraser",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:67",
+      "siteId": "mincan:197",
+      "registryName": "Totten (Sudbury Operations)",
+      "siteName": "Totten",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:68",
+      "siteId": "mincan:181",
+      "registryName": "Timmins West",
+      "siteName": "Timmins",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:70",
+      "siteId": "mincan:224",
+      "registryName": "Borden (Porcupine)",
+      "siteName": "Borden",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:71",
+      "siteId": "mincan:154",
+      "registryName": "Island Gold (Island Gold District)",
+      "siteName": "Island Gold",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:72",
+      "siteId": "mincan:398",
+      "registryName": "Magino (Island Gold District)",
+      "siteName": "Magino",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:74",
+      "siteId": "mincan:738",
+      "registryName": "Hemlo (Williams)",
+      "siteName": "Williams or Page-Williams",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:102",
+      "siteId": "mincan:44",
+      "registryName": "Tanco",
+      "siteName": "Bernic Lake",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:103",
+      "siteId": "mincan:271",
+      "registryName": "Thompson (T-1 and T-3)",
+      "siteName": "Thompson",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:106",
+      "siteId": "mincan:196",
+      "registryName": "Lalor Lake (Snow Lake)",
+      "siteName": "Lalor Lake",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:110",
+      "siteId": "mincan:185",
+      "registryName": "Santoy (Seabee)",
+      "siteName": "Santoy 8",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:154",
+      "siteId": "mincan:468",
+      "registryName": "Highland Valley Copper",
+      "siteName": "Cominco Ltd. — Highland Valley (MinCan mine record)",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:155",
+      "siteId": "mincan:755",
+      "registryName": "Mount Polley",
+      "siteName": "Mount Polly or Mount Polley",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:157",
+      "siteId": "mincan:201",
+      "registryName": "Mount Milligan",
+      "siteName": "Mt Milligan",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:11",
+      "siteId": "mincan:612",
+      "registryName": "Amherst (Nappan)",
+      "siteName": "Sifto Salt Division",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:14",
+      "siteId": "mincan:529",
+      "registryName": "Picadilly",
+      "siteName": "Piccadilly",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:49",
+      "siteId": "mincan:743",
+      "registryName": "Lac-des-Îles",
+      "siteName": "Lac-des-iles (Diotte)",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:99",
+      "siteId": "mincan:318",
+      "registryName": "Windsor",
+      "siteName": "Canadian Salt Co. Ltd., The — Windsor (MinCan mine record)",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:100",
+      "siteId": "mincan:824",
+      "registryName": "Ojibway",
+      "siteName": "Canadian Rock Salt Co. Ltd. The — Ojibway (MinCan mine record)",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:115",
+      "siteId": "mincan:49",
+      "registryName": "Rocanville",
+      "siteName": "Rocanville Division",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:119",
+      "siteId": "mincan:284",
+      "registryName": "Lanigan",
+      "siteName": "Lanigan Division",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:122",
+      "siteId": "mincan:870",
+      "registryName": "Allan",
+      "siteName": "Allan Potashs",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:126",
+      "siteId": "mincan:313",
+      "registryName": "Cory",
+      "siteName": "Cory Division",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:128",
+      "siteId": "mincan:352",
+      "registryName": "Unity",
+      "siteName": "Sifto Salt Division",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "nrcan-producing:179",
+      "siteId": "mincan:945",
+      "registryName": "Ekati",
+      "siteName": "Panda (Ekati Project)",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "ga-operating:558",
+      "siteId": "current-major:cadia",
+      "registryName": "Cadia East",
+      "siteName": "Cadia",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "ga-operating:591",
+      "siteId": "fineprint:COM00304.00",
+      "registryName": "Cobar",
+      "siteName": "CSA",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "ga-operating:642",
+      "siteId": "fineprint:COM00611.00",
+      "registryName": "Kalgoorlie (Super Pit)",
+      "siteName": "Kalgoorlie",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "ga-operating:915",
+      "siteId": "fineprint:COM00422.00",
+      "registryName": "Starlight-Fortnum",
+      "siteName": "Fortnum Gold Operations",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "ga-operating:1011",
+      "siteId": "fineprint:COM00864.00",
+      "registryName": "Mount Magnet",
+      "siteName": "Mt Magnet",
+      "reason": "Reviewed mine-name alias or explicit parenthetical operating identity in the official register, with consistent country and local geography. District/pit neighbors with different names are not merged."
+    },
+    {
+      "registryId": "ga-operating:1021",
+      "siteId": "current-ree:mount-weld",
+      "registryName": "Mount Weld",
+      "siteName": "Mount Weld",
+      "reason": "Same named mine as primary Lynas 2026 rare-earth observation; use one marker."
+    }
+  ],
+  "exclusions": [
+    {
+      "registryId": "ga-operating:580",
+      "reason": "Current Century production is tailings retreatment, not primary ore extraction.",
+      "sourceUrl": "https://www.sibanyestillwater.com/business/australia/century/"
+    },
+    {
+      "registryId": "ga-operating:815",
+      "reason": "Western Cell is a tailings-retreatment facility; do not infer primary extraction.",
+      "sourceUrl": "https://wilunamining.com.au/wp-content/uploads/2026/05/WMCEGMChairAddress15May26.pdf"
+    },
+    {
+      "registryId": "nrcan-producing:111",
+      "reason": "McClean Lake mill/complex snapshot predates McClean North May 2026 restart. Use the separately sourced current-uranium observation instead.",
+      "sourceUrl": "https://maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/900A_and_top_100_en/MapServer/3"
+    },
+    {
+      "registryId": "ga-operating:718",
+      "reason": "East Weipa ceased production in 2024 per operator; latest registry classification is stale.",
+      "sourceUrl": "https://www.riotinto.com/operations/anz/weipa"
+    },
+    {
+      "registryId": "ga-operating:1016",
+      "reason": "Mount Rawdon primary mining ended FY2025; current activity processes stockpiles.",
+      "sourceUrl": "https://evolutionmining.com/our-operations/mt-rawdon/"
+    },
+    {
+      "registryId": "ga-operating:663",
+      "reason": "Lady Loretta closed on 31 December 2025 per Glencore; do not carry registry status into 2026.",
+      "sourceUrl": "https://www.glencore.com/.rest/api/v1/documents/static/a17cc44b-7947-4169-9b6b-b882403fb42b/GLENCORE-Resources-and-Reserves-report-2025.pdf"
+    },
+    {
+      "registryId": "ga-operating:613",
+      "reason": "Great Cobar is a development project, first ore expected FY2028; not current extraction.",
+      "sourceUrl": "https://aureliametals.com/great-cobar/"
+    },
+    {
+      "registryId": "ga-operating:819",
+      "reason": "White Dam processes historic heap-leach material; restarting primary mining is a later phase.",
+      "sourceUrl": "https://brokenhillgold.com.au/white-dam-gold-project/"
+    },
+    {
+      "registryId": "ga-operating:988",
+      "reason": "Mineral Hill broad copper classification is not established output; gold operation subsequently suspended. Exclude ambiguous current carry-forward pending a dated extraction-specific record.",
+      "sourceUrl": "https://kingstonresources.com.au/"
+    }
+  ],
+  "categoryOverrides": [
+    {
+      "registryId": "ga-operating:528",
+      "categories": ["lead", "silver"],
+      "reason": "Abra reports lead and silver production; broad registry copper group is not a produced-product list.",
+      "sourceUrl": "https://endurancemining.com.au/record-safety-production-financial-results-june-quarter/"
+    },
+    {
+      "registryId": "ga-operating:866",
+      "categories": ["tin"],
+      "reason": "Renison is a tin producer; the combined tin/tungsten legend does not establish tungsten output.",
+      "sourceUrl": "https://www.metalsx.com.au/renison-tin-operation/"
+    },
+    {
+      "registryId": "ga-operating:723",
+      "categories": ["copper", "gold"],
+      "reason": "Eloise is a copper-gold mine per the operator, not the zinc-lead registry legend.",
+      "sourceUrl": "https://www.aicmines.com.au/projects/projects-overview/eloise-copper-mine/"
+    },
+    {
+      "registryId": "ga-operating:730",
+      "categories": ["zinc", "lead"],
+      "reason": "Federation operator identifies zinc and lead as primary products; registry copper group is misleading.",
+      "sourceUrl": "https://aureliametals.com/federation/"
+    }
+  ]
+}
