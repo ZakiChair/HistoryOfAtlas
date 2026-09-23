@@ -1,0 +1,423 @@
+{
+  "sources": [
+    {
+      "id": "historical-rammelsberg-expanded",
+      "name": "Historical exploitation evidence — Rammelsberg mining district",
+      "url": "https://whc.unesco.org/en/list/623/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/623/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-wieliczka-expanded",
+      "name": "Historical exploitation evidence — Wieliczka salt mine",
+      "url": "https://whc.unesco.org/en/list/32/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/32/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-bochnia-expanded",
+      "name": "Historical exploitation evidence — Bochnia salt mine",
+      "url": "https://www.pgi.gov.pl/aktualnosci/display/13358-sol-kamienna-jakiej-nie-znamy-z-wizyta-w-kopalni-soli-bochnia.html",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/32/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-iwami-ginzan-expanded",
+      "name": "Historical exploitation evidence — Iwami Ginzan silver mine",
+      "url": "https://whc.unesco.org/en/list/1246/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/1246/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-rosia-montana-expanded",
+      "name": "Historical exploitation evidence — Roșia Montană — Roman gold mines",
+      "url": "https://whc.unesco.org/en/list/1552/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/1552/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-cornwall-st-just-expanded",
+      "name": "Historical exploitation evidence — St Just — historic copper and tin mining district",
+      "url": "https://whc.unesco.org/en/list/1215/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/1215/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-cornwall-camborne-redruth-expanded",
+      "name": "Historical exploitation evidence — Camborne and Redruth — historic copper and tin mining district",
+      "url": "https://whc.unesco.org/en/list/1215/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/1215/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-salins-les-bains-expanded",
+      "name": "Historical exploitation evidence — Salins-les-Bains — Grande Saline",
+      "url": "https://whc.unesco.org/en/list/203/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/203/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-hallstatt-prehistoric-expanded",
+      "name": "Historical exploitation evidence — Hallstatt — prehistoric salt mining district",
+      "url": "https://www.nhm.at/hallstatt/en/site",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://www.wikidata.org/wiki/Q1033019; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-almaden-expanded",
+      "name": "Historical exploitation evidence — Almadén mercury mine",
+      "url": "https://www.minasalmaden.com/parque_minero_almaden.aspx?lang=es-ES",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/1313/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-tarnowskie-gory-expanded",
+      "name": "Historical exploitation evidence — Tarnowskie Góry lead, silver and zinc mining district",
+      "url": "https://unesco.tarnowskiegory.pl/historia/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://whc.unesco.org/en/list/1539/maps/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-cerro-rico-potosi-expanded",
+      "name": "Historical exploitation evidence — Cerro Rico de Potosí — silver mining district",
+      "url": "https://whc.unesco.org/en/list/420/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Chronology reviewed September 2026. Representative site or district position from https://mrdata.usgs.gov/major-deposits/; not an individual shaft. Period bounds distinguish dated observations from approximate archaeological or historical coverage."
+    },
+    {
+      "id": "historical-idrija-expanded",
+      "name": "Municipality of Idrija — Mercury heritage nomination",
+      "url": "https://idrija.si/files/other/news/54/599691.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Primary nomination dossier reviewed September 2026. Printed pages 246, 255, 264, 308 distinguish discovery, mining, the 1977 suspension and the last extraction in 1994. UNESCO representative old-town/mining-landscape coordinate, not an individual shaft."
+    }
+  ],
+  "sites": [
+    {
+      "id": "historical:rammelsberg",
+      "name": "Rammelsberg mining district",
+      "coordinates": [10.4205611, 51.89],
+      "categories": ["copper", "lead"],
+      "country": "Germany",
+      "sourceId": "historical-rammelsberg-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/623/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/623/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1001,
+          "toYear": 1988,
+          "sourceUrl": "https://whc.unesco.org/en/list/623/",
+          "description": "Approximate eleventh-century start of the documented mining tradition. Closure on 30 June 1988 is recorded by the mine museum: https://blog.rammelsberg.de/2018/07/30-juni-1988-30-juni-2018-30-jahre-betriebsende-am-rammelsberg/. No undated zinc co-production is backdated.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:wieliczka",
+      "name": "Wieliczka salt mine",
+      "coordinates": [20.0638889, 49.9791667],
+      "categories": ["salt"],
+      "country": "Poland",
+      "sourceId": "historical-wieliczka-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/32/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/32/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1201,
+          "toYear": 1996,
+          "sourceUrl": "https://repo.agh.edu.pl/entities/publication/03a76eb8-c4db-4594-8e8c-8a00f4dae6ea",
+          "description": "UNESCO documents extraction since the thirteenth century; 1201 is a century-level boundary, not an exact opening. AGH geological research distinguishes the 1996 end here from Bochnia’s 1990 closure.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:bochnia",
+      "name": "Bochnia salt mine",
+      "coordinates": [20.4175, 49.9691667],
+      "categories": ["salt"],
+      "country": "Poland",
+      "sourceId": "historical-bochnia-expanded",
+      "sourceUrl": "https://www.pgi.gov.pl/aktualnosci/display/13358-sol-kamienna-jakiej-nie-znamy-z-wizyta-w-kopalni-soli-bochnia.html",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/32/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1251,
+          "toYear": 1990,
+          "sourceUrl": "https://www.pgi.gov.pl/aktualnosci/display/13358-sol-kamienna-jakiej-nie-znamy-z-wizyta-w-kopalni-soli-bochnia.html",
+          "description": "Polish Geological Institute history: mine established with its shaft in 1251 and production ended in 1990. The 1248 discovery is not used as extraction."
+        }
+      ]
+    },
+    {
+      "id": "historical:iwami-ginzan",
+      "name": "Iwami Ginzan silver mine",
+      "coordinates": [132.4375, 35.1072222],
+      "categories": ["silver"],
+      "country": "Japan",
+      "sourceId": "historical-iwami-ginzan-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/1246/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1246/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1526,
+          "toYear": 1823,
+          "sourceUrl": "https://www.pref.shimane.lg.jp/life/bunka/bunkazai/ginzan/publication/index.data/Official_Record_English.pdf",
+          "approximate": true,
+          "description": "Prefectural heritage record documents silver mining from 1526 and 32 working pits in the 1823 inventory. This is a district-level historical phase; 1823 is the last dated inventory used here, not a claimed closure."
+        },
+        {
+          "fromYear": 1887,
+          "toYear": 1923,
+          "sourceUrl": "https://www.pref.shimane.lg.jp/life/bunka/bunkazai/ginzan/publication/index.data/Official_Record_English.pdf",
+          "description": "The official record explicitly dates the reopening to 1887 and the end to 1923. Silver continued alongside copper. The unreviewed 1824–1886 interval remains empty rather than implying uninterrupted extraction."
+        }
+      ]
+    },
+    {
+      "id": "historical:rosia-montana",
+      "name": "Roșia Montană — Roman gold mines",
+      "coordinates": [23.1305556, 46.3061111],
+      "categories": ["gold"],
+      "country": "Romania",
+      "sourceId": "historical-rosia-montana-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/1552/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1552/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 106,
+          "toYear": 271,
+          "sourceUrl": "https://whc.unesco.org/en/list/1552/",
+          "description": "The documented Roman mining phase, from the Dacian conquest to the Roman withdrawal. Later medieval and modern phases are not joined across the evidence gap.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:cornwall-st-just",
+      "name": "St Just — historic copper and tin mining district",
+      "coordinates": [-5.6719444, 50.1463889],
+      "categories": ["copper", "tin"],
+      "country": "United Kingdom",
+      "sourceId": "historical-cornwall-st-just-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/1215/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1215/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1700,
+          "toYear": 1914,
+          "sourceUrl": "https://whc.unesco.org/en/list/1215/",
+          "description": "Coverage of the industrial mining landscape’s documented 1700–1914 period. Approximate district marker for multiple workings; these limits are not the opening and closure of every constituent mine.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:cornwall-camborne-redruth",
+      "name": "Camborne and Redruth — historic copper and tin mining district",
+      "coordinates": [-5.2594444, 50.2155556],
+      "categories": ["copper", "tin"],
+      "country": "United Kingdom",
+      "sourceId": "historical-cornwall-camborne-redruth-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/1215/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1215/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1700,
+          "toYear": 1914,
+          "sourceUrl": "https://whc.unesco.org/en/list/1215/",
+          "description": "Coverage of the industrial mining landscape’s documented 1700–1914 period. Approximate district marker for multiple workings; these limits are not the opening and closure of every constituent mine.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:salins-les-bains",
+      "name": "Salins-les-Bains — Grande Saline",
+      "coordinates": [5.8763889, 46.9375],
+      "categories": ["salt"],
+      "country": "France",
+      "sourceId": "historical-salins-les-bains-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/203/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/203/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 762,
+          "toYear": 1962,
+          "sourceUrl": "https://whc.unesco.org/en/list/203/",
+          "description": "UNESCO records at least 1,200 years of operation ending in 1962. The approximate lower bound is 1962 minus 1,200 years, not an exact foundation date. Brine extraction at Salins; the distant Arc-et-Senans processing works are not a second deposit.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:hallstatt-prehistoric",
+      "name": "Hallstatt — prehistoric salt mining district",
+      "coordinates": [13.6463889, 47.5593889],
+      "categories": ["salt"],
+      "country": "Austria",
+      "sourceId": "historical-hallstatt-prehistoric-expanded",
+      "sourceUrl": "https://www.nhm.at/hallstatt/en/site",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.wikidata.org/wiki/Q1033019",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": -1499,
+          "toYear": -1244,
+          "sourceUrl": "https://www.nhm-wien.ac.at/hallstatt/en/salt_mine/bronze_age",
+          "description": "Natural History Museum Vienna archaeological chronology: developed Bronze Age mining from approximately 1500 BCE; the latest dated wooden finds are from 1245 BCE. Later Bronze Age extraction is not attested here. Astronomical year numbering.",
+          "approximate": true
+        },
+        {
+          "fromYear": -799,
+          "toYear": -349,
+          "sourceUrl": "https://www.nhm-wien.ac.at/hallstatt/en/salt_mine/discovery/man_in_the_salt",
+          "description": "Iron Age mining documented from around 800 BCE (https://www.nhm-wien.ac.at/hallstatt/en/site/hallstatt_period) until the destructive event around 350 BCE. The intervening archaeological gap remains empty.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:almaden",
+      "name": "Almadén mercury mine",
+      "coordinates": [-4.8397222, 38.7725],
+      "categories": ["mercury"],
+      "country": "Spain",
+      "sourceId": "historical-almaden-expanded",
+      "sourceUrl": "https://www.minasalmaden.com/parque_minero_almaden.aspx?lang=es-ES",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1313/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": -299,
+          "toYear": 2001,
+          "sourceUrl": "https://revistas.um.es/turismo/article/view/24971",
+          "description": "The historic operator places the mining tradition in the third century BCE; the approximate lower boundary is 300 BCE. University of Murcia research distinguishes extraction ending in 2001 from metallurgy ending in 2003. Long mining-tradition interval; intermediate interruptions are not resolved.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:tarnowskie-gory",
+      "name": "Tarnowskie Góry lead, silver and zinc mining district",
+      "coordinates": [18.8512278, 50.4426972],
+      "categories": ["lead", "silver", "zinc"],
+      "country": "Poland",
+      "sourceId": "historical-tarnowskie-gory-expanded",
+      "sourceUrl": "https://unesco.tarnowskiegory.pl/historia/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1539/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1490,
+          "toYear": 1600,
+          "sourceUrl": "https://unesco.tarnowskiegory.pl/historia/",
+          "categories": ["lead", "silver"],
+          "description": "Municipal World Heritage history identifies the first principal phase around 1490–1600, extracting argentiferous lead. Sporadic later workings are not filled in.",
+          "approximate": true
+        },
+        {
+          "fromYear": 1784,
+          "toYear": 1910,
+          "sourceUrl": "https://unesco.tarnowskiegory.pl/historia/",
+          "categories": ["lead", "silver"],
+          "description": "Documented second phase of deeper industrial extraction at the Fryderyk mine."
+        },
+        {
+          "fromYear": 1801,
+          "toYear": 1900,
+          "sourceUrl": "https://unesco.tarnowskiegory.pl/historia/",
+          "categories": ["zinc"],
+          "description": "The same history explicitly attests zinc production in the nineteenth century; it is not retroactively assigned to the medieval phase. Century-level coverage, not exact commodity start/stop dates.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:cerro-rico-potosi",
+      "name": "Cerro Rico de Potosí — silver mining district",
+      "coordinates": [-65.7467, -19.6152],
+      "categories": ["silver"],
+      "country": "Bolivia",
+      "sourceId": "historical-cerro-rico-potosi-expanded",
+      "sourceUrl": "https://whc.unesco.org/en/list/420/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1545,
+          "toYear": 2005,
+          "sourceUrl": "https://whc.unesco.org/en/list/420/",
+          "description": "Mining began in 1545 (https://whc.unesco.org/en/list/883/). UNESCO describes continuing mining after its nineteenth-century decline and the 2005 technical mission. This mining-tradition interval ends at a dated attestation, not an asserted closure; interruptions and individual workings are not resolved.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:idrija",
+      "name": "Idrija mercury mine",
+      "coordinates": [14.0266667, 46.0038889],
+      "categories": ["mercury"],
+      "country": "Slovenia",
+      "sourceId": "historical-idrija-expanded",
+      "sourceUrl": "https://idrija.si/files/other/news/54/599691.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1313/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1497,
+          "toYear": 1977,
+          "sourceUrl": "https://idrija.si/files/other/news/54/599691.pdf",
+          "approximate": true,
+          "description": "Nomination p.246 distinguishes discovery in 1490 from mining dated to 1497 by Valvasor. Temporary suspension decided early in 1977 (p.308); intra-year detail is unavailable at atlas year resolution."
+        },
+        {
+          "fromYear": 1984,
+          "toYear": 1994,
+          "sourceUrl": "https://idrija.si/files/other/news/54/599691.pdf",
+          "description": "Production resumed in 1984 (p.251). Mining ended in 1994, while mercury processing lasted until 1995 (p.255). The full 1978–1983 gap and the later processing-only years are excluded."
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "reviewedAt": "2026-09-23",
+    "scope": "Individually sourced historical extraction phases. Representative districts are named as such. Archaeological and century-level dates are approximate. No deposit occurrence is turned into an operating interval.",
+    "coordinates": "UNESCO component coordinates are used where available. Hallstatt uses the CC0 Wikidata cultural-landscape representative coordinate. Potosí uses USGS major-deposits record 889.",
+    "excluded": "Arc-et-Senans is a processing site supplied with brine from Salins and is not counted as another extraction site."
+  }
+}

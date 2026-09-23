@@ -1,0 +1,20 @@
+{
+  "retrievedAt": "2026-09-23",
+  "doi": "https://doi.org/10.5066/P1BUPUAM",
+  "metadataUrl": "https://data.usgs.gov/datacatalog/metadata/USGS.6a3edaf71ba49b7c2e263528.xml",
+  "metadataTitle": "Mines, smelters, refineries, and recycling facilities in the United States",
+  "publicationDate": "2026-06-29",
+  "groundConditionDates": [
+    "2024-12-04",
+    "2026-04-30"
+  ],
+  "mirror": "https://us-facilities.rovjok.com",
+  "mirrorApi": "https://us-facilities.rovjok.com/api/public/v1/us-facilities/search?featureTypes=Mines%20and%20Quarries&statuses=Assumed%20active&pageSize=100&page=1&includeFacilityGroups=false",
+  "mirrorDatasetId": "usgs-p1bupuam-2026",
+  "mirrorDatasetVersion": "2026-06-29",
+  "provenanceLimitation": "Official USGS metadata confirms title, authors, DOI and release date; the public mirror supplies attributed row values and original spreadsheet records. The official download was inaccessible, so byte-for-byte equivalence to its workbook was not verified.",
+  "file": "current-us-mines-2026.json.gz",
+  "sha256": "0f4c2f676f849a013e0d91a0e64d6a44947a3b84a32c914812a494968014abf1",
+  "records": 301,
+  "facilities": 179
+}

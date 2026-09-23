@@ -1,0 +1,30 @@
+{
+  "retrievedAt": "2026-09-23",
+  "files": [
+    {
+      "name": "usgs",
+      "file": "mineral-occurrences-usgs.json.gz",
+      "sha256": "e7451cbb822284312fabc04ef545196ce20518ac15c234076d45b86bdc80873a",
+      "url": "https://mrdata.usgs.gov/major-deposits/"
+    },
+    {
+      "name": "icmm",
+      "file": "mineral-occurrences-icmm.json.gz",
+      "sha256": "3f3857f8024e0a6a55834119ec3e81653b223c3bbf08fed773a25cf1da37ad4d",
+      "url": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831"
+    },
+    {
+      "name": "country-geometry",
+      "file": "mineral-occurrences-country-geometry.json.gz",
+      "sha256": "f63eb315c7bd71dd7092da1d4c31cb4e006cfb61240a4ad579c1bd5add91e58d",
+      "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson"
+    },
+    {
+      "name": "existing-identities",
+      "file": "mineral-occurrences-existing-identities.json.gz",
+      "sha256": "4bdfcd8c6597d8e0c9a70dd001decef3a05c0c0e5752039a1c8dcabdc314f5f0",
+      "url": "repository public resource identities before occurrence import, 2026-09-23",
+      "rows": 16937
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "icmmId": "ICMM14008",
+    "reason": "Salsigne: BRGM documents definitive cessation of mining in 2004. Moderate identity confidence in ICMM does not establish activity in 2026.",
+    "sourceUrl": "https://dpsm.brgm.fr/actualite/travaux-confortement-site-lancienne-mine-dor-salsigne"
+  },
+  {
+    "icmmId": "ICMM03071",
+    "reason": "Summitville: EPA identifies a former gold mine, with modern mining ending in 1992. Its presence in the ICMM inventory does not attest 2026 extraction.",
+    "sourceUrl": "https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/2245a580171299bd85256628005d51ca.html"
+  },
+  {
+    "icmmId": "ICMM05099",
+    "reason": "Flambeau/Ladysmith: the Wisconsin mining regulator describes the mine as reclaimed and closed, not an operating 2026 mine.",
+    "sourceUrl": "https://dnr.wisconsin.gov/topic/Mines/Flambeau.html"
+  },
+  {
+    "icmmId": "ICMM13855",
+    "reason": "Thacker Pass: the operator February 2026 update identifies construction in progress and processing-plant mechanical completion targeted for late 2027; do not turn this future project into 2026 production.",
+    "sourceUrl": "https://www.lithiumamericas.com/news/news-details/2026/Lithium-Americas-Provides-a-Project-Update-and-2026-Capex-Guidance-for-Thacker-Pass/default.aspx"
+  }
+]

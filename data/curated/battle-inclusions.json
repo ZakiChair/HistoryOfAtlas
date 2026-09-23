@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-22",
+  "records": {
+    "Q208127": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "Tsushima (27–28 May 1905) is included as an individually reviewed naval battle. JACAR identifies the encounter between the Japanese and Russian fleets in the Tsushima Strait and surrounding waters. Its source item is classified as naval warfare, outside the automatic engagement-class discovery; this inclusion does not admit other instances of that broad class. The inherited event coordinate is a source locator, not the extent of the two-day action or reconstructed fleet positions.",
+      "sources": [
+        {
+          "label": "JACAR · Battle of Tsushima, 27–28 May 1905",
+          "url": "https://www.jacar.go.jp/wp/ennews/contents/2282/"
+        },
+        {
+          "label": "JACAR · Tsushima battle chronology and location",
+          "url": "https://www.jacar.go.jp/exhibition/nichiro2/sensoushi/kaijou_08_outline.html"
+        }
+      ]
+    },
+    "Q5037019": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "The capture of HMS Penguin on 23 March 1815 is an individually reviewed naval engagement between Hornet and Penguin. The Naval Historical Center identifies the action off Tristan da Cunha; Peacock and Tom Bowline arrived after the fighting. The broad source classification naval warfare does not independently identify a battle. No exact offshore position has been established, so this newly catalogued engagement remains unmapped rather than being placed at the island centre.",
+      "sources": [
+        {
+          "label": "Naval Historical Center · Hornet captures Penguin, 23 March 1815 (archived at ibiblio)",
+          "url": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/events/war1812/atsea/hnt-peng.htm"
+        },
+        {
+          "label": "Royal Museums Greenwich · Hornet and Penguin, PAD5858",
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-110009"
+        }
+      ]
+    },
+    "Q4677388": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "The Cornwall–Pinguin encounter on 8 May 1941 is individually included as a naval engagement. The Australian War Memorial identifies the ships and date; the contemporary British intelligence report describes the gunnery action and sinking. This admits no other naval-warfare class instance. The inherited Wikidata event point [57.8, 3.5] remains a source locator, not an independently surveyed or newly corrected position.",
+      "sources": [
+        {
+          "label": "Australian War Memorial · Pinguin sunk by Cornwall, 8 May 1941, photograph 128072",
+          "url": "https://www.awm.gov.au/collection/C48238"
+        },
+        {
+          "label": "Naval Intelligence Division · CB4051(29), October 1941, pp.20–21; archived transcription",
+          "url": "https://w.uboatarchive.net/Int/PinguinINT.htm"
+        }
+      ]
+    },
+    "Q4677409": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "The action near James Island is individually included as a naval engagement, not the entire Pacific cruise. NHHC dates the captures of Catherine, Rose and Hector to 28 May 1813; Porter describes the captures and the armed resistance of Hector. Catherine and Rose did not resist, and Hector was encountered afterward. No precise offshore coordinate is established. The source date is retained; the later reunion with Essex on 24 June is not used as a battle date.",
+      "sources": [
+        {
+          "label": "NHHC DANFS · Georgiana, May and July 1813 encounters",
+          "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/g/georgiana-ship.html"
+        },
+        {
+          "label": "David Porter · Journal of a cruise, vol. I (1815), pp.210–217; primary text transcription",
+          "url": "https://whalesite.org/galapagos/1815%20-%20Porter%20-%20Journal%20of%20a%20cruise%20made%20to%20the%20Pacific%20-%20vol%201.htm"
+        }
+      ]
+    },
+    "Q4677407": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "This individually reviewed July 1813 engagement involved Essex, Greenwich and Georgiana and the captures of Charlton, Seringapatam and New Zealander. The inherited 14 July date follows Porter’s narrative sequence (Charles Island on the 12th, departure the next morning, overnight passage and action the following day). NHHC DANFS instead gives 13 July; that one-day disagreement is unresolved and is disclosed here. The conventional Charles Island title is not geographic evidence: Porter places the encounter off Banks Bay after leaving Charles Island. No island centre or unverified offshore point is assigned.",
+      "sources": [
+        {
+          "label": "David Porter · Journal of a cruise, vol. I (1815), pp.210–217; primary text transcription",
+          "url": "https://whalesite.org/galapagos/1815%20-%20Porter%20-%20Journal%20of%20a%20cruise%20made%20to%20the%20Pacific%20-%20vol%201.htm"
+        },
+        {
+          "label": "NHHC DANFS · Georgiana, May and July 1813 encounters",
+          "url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/g/georgiana-ship.html"
+        }
+      ]
+    },
+    "Q2869902": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "Reviewed inclusion of the individual amphibious attack on Saint-Paul, Réunion, in September 1809. The Royal Collection contemporary print names the British squadron, its action against the French frigate Caroline and the assault on a shore battery on 21 September. Ministry of Culture archaeology independently identifies the attack on the Embouchure battery that morning. This is a concrete combined naval and land engagement, distinct from the wider Mauritius campaign and the invasion of the island in 1810; the broad source class naval warfare is not made generally eligible. The raid continued through the British withdrawal on 28 September.",
+      "sources": [
+        {
+          "label": "Royal Collection Trust · RCIN 735153 · contemporary view and inscription of the attack, 21 September 1809",
+          "url": "https://militarymaps.rct.uk/napoleonic-wars-1803-15/reunion-1809-reunion-indian-ocean-french-overseas-department-21deg0600s-55deg3600e"
+        },
+        {
+          "label": "Ministère de la Culture · Batterie de l’Embouchure · archaeological evidence and attack on 21 September 1809",
+          "url": "https://archeologie.culture.gouv.fr/ocean-indien/fr/batterie-de-lembouchure"
+        },
+        {
+          "label": "Royal Museums Greenwich · BHC0593 · capture of Saint Paul and withdrawal on 28 September 1809",
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12085"
+        }
+      ]
+    },
+    "Q11457942": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "Teradomari is individually included as the naval action outside Teradomari harbour on 13 July 1868, within but distinct from the broader Hokuetsu fighting. Nagaoka City documents the attack on the anchored shogunate transport Jundō-maru and its grounding and destruction, dated Keio 4, fifth month, day 24. The cited Niigata University paper independently pairs that traditional date with 13 July 1868. This does not promote the broad naval-warfare class. The linked former municipality supplies no engagement position: its inherited point is explicitly withdrawn in the companion metadata review. No complete opposing strengths or losses are added.",
+      "sources": [
+        {
+          "label": "Nagaoka City Science Museum · Jundō-maru shaft and naval action, FAQ 1857",
+          "url": "https://qa.city.nagaoka.niigata.jp/faq/show/1857?category_id=483&site_domain=default"
+        },
+        {
+          "label": "Nagaoka City · 400-year history, PDF p.14 / printed p.25, Jundō-maru at Teradomari",
+          "url": "https://www.city.nagaoka.niigata.jp/dpage/nagaoka400/pdf/ayumi-full.pdf"
+        },
+        {
+          "label": "Niigata University repository · 荒木田岳, 濫觴期における地方統治と行政区画制, 2007, p.210: calendar equivalence",
+          "url": "https://niigata-u.repo.nii.ac.jp/record/29822/files/18_0007.pdf"
+        }
+      ]
+    },
+    "Q137822090": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "The item is individually included as the Gadeokdo naval engagement of 1597 identified by its Academy of Korean Studies reference E0000076: Won Gyun’s Joseon force fought Japanese naval forces near Gadeokdo after the Angolpo encounter. It is distinct from the later seventh-month operations and the battle of Chilcheollyang already catalogued as Q483088. The source item’s 1957-07-14 is rejected by the companion metadata review. The institution gives the traditional sixth month, nineteenth day; only the independently established year 1597 is published until conversion to the atlas calendar is verified. The island locator is explicitly withdrawn; no fleet totals or loss counts are inferred.",
+      "sources": [
+        {
+          "label": "Academy of Korean Studies · Gadeokdo naval battle, E0000076",
+          "url": "https://encykorea.aks.ac.kr/Article/E0000076"
+        },
+        {
+          "label": "National Institute of Korean History · Won Gyun, section 5: sixth-month engagement distinguished from seventh-month operations",
+          "url": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_n307400"
+        }
+      ]
+    },
+    "Q51103517": {
+      "type": "naval",
+      "expectedInstanceOf": [
+        "Q876274"
+      ],
+      "note": "Individually reviewed inclusion of the air attack on the mutinous Chilean squadron in Coquimbo Bay on 6 September 1931. The Chilean national heritage museum reproduces eyewitness accounts of fighting between government aircraft and the ships and distinguishes the roughly half-hour action from the wider naval mutiny. The date is retained: the museum-hosted chapter p.171 explicitly places the action on Sunday 6 September; the short web article’s Saturday wording is a weekday typo. This does not promote the broad naval-warfare class. The city coordinate inherited from Coquimbo Q3871 is withdrawn by the companion metadata review. No fleet-wide revolt total, aircraft-versus-ship ratio, losses or precise ship position is inferred. The existing Q5722370 homonym is a separate Uruguayan battle, not this Chilean action.",
+      "sources": [
+        {
+          "label": "Museo Histórico Gabriel González Videla · Historia de acorazados y aviones, 31 August 2020; eyewitness accounts of the 6 September 1931 action",
+          "url": "https://www.museohistoricolaserena.gob.cl/noticias/historia-de-acorazados-y-aviones"
+        },
+        {
+          "label": "Museo Histórico Gabriel González Videla · Coquimbo, Historia e Identidad; chapter 7, PDF p.22 / printed p.171, Sunday 6 September 1931 action",
+          "url": "https://www.museohistoricolaserena.gob.cl/sites/www.museohistoricolaserena.gob.cl/files/images/articles-96988_archivo_01.pdf"
+        }
+      ]
+    }
+  }
+}

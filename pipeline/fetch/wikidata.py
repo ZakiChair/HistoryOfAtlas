@@ -100,7 +100,7 @@ def acquire():
     classes = ' '.join('wd:' + qid for qid in sorted({row['class']['value'].rsplit('/', 1)[-1] for row in taxonomy}))
     candidates = set()
     for offset in range(0, 1000000, 25000):
-        sparql = 'SELECT DISTINCT ?item WHERE {VALUES ?class {' + classes + '} ?item wdt:P31 ?class. } LIMIT 25000' + (f' OFFSET {offset}' if offset else '')
+        sparql = 'SELECT DISTINCT ?item WHERE {VALUES ?class {' + classes + '} ?item wdt:P31 ?class. } ORDER BY ?item LIMIT 25000' + (f' OFFSET {offset}' if offset else '')
         rows = query(f'discovery-{offset:06}', sparql)
         candidates.update(row['item']['value'].rsplit('/', 1)[-1] for row in rows)
         if len(rows) < 25000:
@@ -108,6 +108,8 @@ def acquire():
         # The public endpoint can be in outage mode at one request per minute.
         if not (RAW / f'discovery-{offset + 25000:06}.json').exists():
             time.sleep(65)
+    else:
+        raise RuntimeError('Candidate discovery exceeded its safety limit; no incomplete acquisition will be published.')
     ids = sorted(candidates, key=lambda qid: int(qid[1:]))
     (RAW / 'candidate-ids.json').write_text(json.dumps(ids))
     geolocated_query = 'SELECT DISTINCT ?item WHERE {hint:Query hint:optimizer "None". VALUES ?class {' + classes + '} ?item wdt:P31 ?class. ?item (wdt:P585|wdt:P580) ?date. ?item (wdt:P625|wdt:P276/wdt:P625) ?coord. } LIMIT 25000'

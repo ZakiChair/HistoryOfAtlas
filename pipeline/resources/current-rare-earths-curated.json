@@ -1,0 +1,429 @@
+{
+  "sources": [
+    {
+      "id": "lynas-operations-2026",
+      "name": "Lynas Rare Earths — Annual Report FY 2026",
+      "url": "https://wcsecure.weblink.com.au/pdf/LYC/03126303.pdf",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    },
+    {
+      "id": "china-ree-government-2026",
+      "name": "China government — operating Maoniuping and Bayan Obo rare-earth mines, March 2026",
+      "url": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    },
+    {
+      "id": "weishanhu-inspection-2026",
+      "name": "Jining Emergency Management Bureau — Weishanhu underground mine inspection, 13 June 2026",
+      "url": "https://safety.jining.gov.cn/art/2026/6/13/art_9586_2709664.html",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    },
+    {
+      "id": "dalucao-operator-2026",
+      "name": "Sichuan Natural Resources Investment Group — Dalucao mine production inspection, 23 January 2026",
+      "url": "https://scnrig.com.cn/infoList.aspx?id=23227&t=12",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    },
+    {
+      "id": "serra-verde-operations-2026",
+      "name": "Serra Verde — Pela Ema operating mine, 20 April 2026",
+      "url": "https://svpm.com.br/en/serra-verde-agreedusarareearth/",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    },
+    {
+      "id": "lovozero-operations-2026",
+      "name": "Russian Ministry of Industry — Lovozero/Karnasurt operating mine, 31 August 2026",
+      "url": "https://crp.gov.ru/news/na-predpriyatii-gornorudnogo-diviziona-rosatoma-v-opytno-promyshlennuyu-ekspluatatsiyu-vnedren-pervy/",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    },
+    {
+      "id": "irel-operations-2026",
+      "name": "India Department of Atomic Energy — integrated rare-earth sand mining operations, 2 April 2026",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+      "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+      "year": 2026
+    }
+  ],
+  "sites": [
+    {
+      "id": "current-ree:mount-weld",
+      "name": "Mount Weld",
+      "coordinates": [
+        122.5333,
+        -28.8667
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "Australia",
+      "sourceId": "lynas-operations-2026",
+      "sourceUrl": "https://wcsecure.weblink.com.au/pdf/LYC/03126303.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://wcsecure.weblink.com.au/pdf/LYC/03126303.pdf",
+          "description": "Lynas FY 2026 report confirms continued mining at Mount Weld, supplying its downstream plants. Only the mine is mapped; Malaysian and Kalgoorlie processing facilities are not counted as additional mines.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:maoniuping",
+      "name": "Maoniuping",
+      "coordinates": [
+        101.98,
+        28.46
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "China",
+      "sourceId": "china-ree-government-2026",
+      "sourceUrl": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://pubs.usgs.gov/of/2026/1018/ofr20261018_pamphlet.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+          "description": "A March 2026 government report explicitly identifies Maoniuping as a producing rare-earth mine. The new reserve estimate is not used as evidence of a new opening.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:bayan-obo",
+      "name": "Bayan Obo — rare-earth operation",
+      "coordinates": [
+        109.97,
+        41.8
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "China",
+      "sourceId": "china-ree-government-2026",
+      "sourceUrl": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://pubs.usgs.gov/of/2026/1018/ofr20261018_pamphlet.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+          "description": "The March 2026 government comparison identifies Bayan Obo and Maoniuping as producing rare-earth mines. This rare-earth observation applies to 2026 only; it does not backdate rare-earth recovery across the older iron-mining period.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:weishanhu",
+      "name": "Weishanhu",
+      "coordinates": [
+        116.99,
+        34.87
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "China",
+      "sourceId": "weishanhu-inspection-2026",
+      "sourceUrl": "https://safety.jining.gov.cn/art/2026/6/13/art_9586_2709664.html",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://pubs.usgs.gov/of/2026/1018/ofr20261018_pamphlet.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://safety.jining.gov.cn/art/2026/6/13/art_9586_2709664.html",
+          "description": "The local mining-safety authority records a June 2026 visit to Shandong Weishanhu Rare Earth and inspection of underground working areas. This is an operating-site observation, without an assumed production quantity.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:dalucao",
+      "name": "Dalucao",
+      "coordinates": [
+        101.9552777778,
+        27.2063888889
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "China",
+      "sourceId": "dalucao-operator-2026",
+      "sourceUrl": "https://scnrig.com.cn/infoList.aspx?id=23227&t=12",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.mindat.org/loc-134931.html",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://scnrig.com.cn/infoList.aspx?id=23227&t=12",
+          "description": "The state-owned mining group describes its January 2026 visit to Dalucao rare-earth mine staff and production-safety work. The current mine observation is separate from plans to enlarge processing capacity.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:pela-ema",
+      "name": "Pela Ema — Serra Verde",
+      "coordinates": [
+        -48.51371,
+        -13.49427
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "Brazil",
+      "sourceId": "serra-verde-operations-2026",
+      "sourceUrl": "https://svpm.com.br/en/serra-verde-agreedusarareearth/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.mindat.org/loc-420336.html",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2024,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://svpm.com.br/en/serra-verde-agreedusarareearth/",
+          "description": "Serra Verde dates commercial production at Pela Ema to early 2024 and confirms the mine and processing operation continues in April 2026. Future capacity targets and the Round Top development project are excluded.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:lovozero",
+      "name": "Lovozero — Karnasurt",
+      "coordinates": [
+        34.75,
+        67.7833333333333
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "Russia",
+      "sourceId": "lovozero-operations-2026",
+      "sourceUrl": "https://crp.gov.ru/news/na-predpriyatii-gornorudnogo-diviziona-rosatoma-v-opytno-promyshlennuyu-ekspluatatsiyu-vnedren-pervy/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://crp.gov.ru/news/na-predpriyatii-gornorudnogo-diviziona-rosatoma-v-opytno-promyshlennuyu-ekspluatatsiyu-vnedren-pervy/",
+          "description": "The August 2026 government report describes underground work at Karnasurt and identifies Lovozersky GOK as mining and concentrating rare-earth-bearing loparite. The Solikamsk downstream refinery is not counted as another mine.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:oscom",
+      "name": "OSCOM — Chatrapur",
+      "coordinates": [
+        84.95,
+        19.3
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "India",
+      "sourceId": "irel-operations-2026",
+      "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+          "description": "The April 2026 parliamentary answer confirms IREL operates three integrated beach-sand mining and mineral-processing locations for its monazite/rare-earth chain. This is a current operation observation; downstream extraction and refining plants are not added as separate mines.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:chavara",
+      "name": "Chavara",
+      "coordinates": [
+        76.5,
+        9.0
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "India",
+      "sourceId": "irel-operations-2026",
+      "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+          "description": "The April 2026 parliamentary answer confirms IREL operates three integrated beach-sand mining and mineral-processing locations for its monazite/rare-earth chain. This is a current operation observation; downstream extraction and refining plants are not added as separate mines.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "current-ree:manavalakurichi",
+      "name": "Manavalakurichi",
+      "coordinates": [
+        77.25,
+        8.1667
+      ],
+      "categories": [
+        "rare-earths"
+      ],
+      "country": "India",
+      "sourceId": "irel-operations-2026",
+      "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 2026,
+          "toYear": 2026,
+          "categories": [
+            "rare-earths"
+          ],
+          "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+          "description": "The April 2026 parliamentary answer confirms IREL operates three integrated beach-sand mining and mineral-processing locations for its monazite/rare-earth chain. This is a current operation observation; downstream extraction and refining plants are not added as separate mines.",
+          "approximate": true
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "reviewedAt": "2026-09-23",
+    "sites": [
+      {
+        "siteId": "current-ree:mount-weld",
+        "operatingEvidenceUrl": "https://wcsecure.weblink.com.au/pdf/LYC/03126303.pdf",
+        "coordinateEvidenceUrl": "https://mrdata.usgs.gov/major-deposits/",
+        "notes": "USGS major-deposits record 54 supplies an approximate deposit coordinate. Lynas annual report pp 3 and 16 confirms mining; year ended 30 June 2026, no future mine-life forecast used."
+      },
+      {
+        "siteId": "current-ree:maoniuping",
+        "operatingEvidenceUrl": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+        "coordinateEvidenceUrl": "https://pubs.usgs.gov/of/2026/1018/ofr20261018_pamphlet.pdf",
+        "notes": "USGS OFR 2026-1018 table 5 gives the mine coordinates as of its 2023 geospatial compilation; independent 2026 government text establishes current operation."
+      },
+      {
+        "siteId": "current-ree:bayan-obo",
+        "operatingEvidenceUrl": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+        "coordinateEvidenceUrl": "https://pubs.usgs.gov/of/2026/1018/ofr20261018_pamphlet.pdf",
+        "notes": "Complex-level rare-earth observation represented at the Main Mine and merged into its existing iron record. No production quantities assigned among the Main, East or West pits. USGS 2026 table 5 coordinate is 109.97, 41.80; Main GEM coordinate retained on merge."
+      },
+      {
+        "siteId": "current-ree:weishanhu",
+        "operatingEvidenceUrl": "https://safety.jining.gov.cn/art/2026/6/13/art_9586_2709664.html",
+        "coordinateEvidenceUrl": "https://pubs.usgs.gov/of/2026/1018/ofr20261018_pamphlet.pdf",
+        "notes": "USGS OFR 2026-1018 table 5 supplies the named mine coordinate, not the similarly named lake or a county centroid."
+      },
+      {
+        "siteId": "current-ree:dalucao",
+        "operatingEvidenceUrl": "https://scnrig.com.cn/infoList.aspx?id=23227&t=12",
+        "coordinateEvidenceUrl": "https://www.mindat.org/loc-134931.html",
+        "notes": "Published mineral-locality coordinate from Mindat, marked approximate. The operator EIA locates the project at Dalucao village, Cida township, Dechang County (PDF page 91), consistent with this locality. The unrelated Guizhou village called Dalucao is excluded. Additional primary EIA: https://www.scdzkc.com/Uploadfiles/Files/2023-1-6/2023161615187806.pdf"
+      },
+      {
+        "siteId": "current-ree:pela-ema",
+        "operatingEvidenceUrl": "https://svpm.com.br/en/serra-verde-agreedusarareearth/",
+        "coordinateEvidenceUrl": "https://www.mindat.org/loc-420336.html",
+        "notes": "Published Mindat mine coordinate, marked approximate. The operator RIMA page 13 maps the Pela Ema deposit and planned mine sequence; it corroborates the deposit locality, without making this a surveyed active-pit point. The Minaçu office/city coordinate is not used. Primary map: https://www.dfc.gov/sites/default/files/esia/2025/serraverde/Project/05_Local%20Language%20Summary%20of%20ESIA%20%28RIMA%29_508.pdf"
+      },
+      {
+        "siteId": "current-ree:lovozero",
+        "operatingEvidenceUrl": "https://crp.gov.ru/news/na-predpriyatii-gornorudnogo-diviziona-rosatoma-v-opytno-promyshlennuyu-ekspluatatsiyu-vnedren-pervy/",
+        "coordinateEvidenceUrl": "https://mrdata.usgs.gov/major-deposits/",
+        "notes": "USGS major-deposits record 1673 locates the Lovozero mineral district; this coarse published deposit coordinate is approximate and is not a surveyed mine portal."
+      },
+      {
+        "siteId": "current-ree:oscom",
+        "operatingEvidenceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+        "coordinateEvidenceUrl": "https://mrdata.usgs.gov/major-deposits/",
+        "notes": "IREL identifies this unit at https://www.irel.co.in/oscom. USGS major-deposits record 272 supplies the approximate mineral-sands location. Monazite recovery is described in IREL annual reporting; associated uranium/thorium are not assigned as mined outputs."
+      },
+      {
+        "siteId": "current-ree:chavara",
+        "operatingEvidenceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+        "coordinateEvidenceUrl": "https://mrdata.usgs.gov/major-deposits/",
+        "notes": "IREL identifies this unit at https://www.irel.co.in/chavara-mineral-division. USGS major-deposits record 273 supplies the approximate mineral-sands location. Monazite recovery is described in IREL annual reporting; associated uranium/thorium are not assigned as mined outputs."
+      },
+      {
+        "siteId": "current-ree:manavalakurichi",
+        "operatingEvidenceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+        "coordinateEvidenceUrl": "https://mrdata.usgs.gov/major-deposits/",
+        "notes": "IREL identifies this unit at https://www.irel.co.in/manavalakurichi-mineral-division. USGS major-deposits record 274 supplies the approximate mineral-sands location. Monazite recovery is described in IREL annual reporting; associated uranium/thorium are not assigned as mined outputs."
+      }
+    ],
+    "alreadyCovered": [
+      {
+        "name": "Mountain Pass",
+        "siteId": "current-major:mountain-pass",
+        "reason": "Existing current-major contribution already contains operator-confirmed 2026 concentrate output."
+      }
+    ],
+    "deferred": [
+      {
+        "name": "Jianghua",
+        "reason": "China Rare Earth Group 2026 half-year report confirms mining; exact representative mine coordinate requires further review. No outfall or township position substituted.",
+        "sourceUrl": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-08/845fb369-5f0c-48cb-861f-8558bf59881b.PDF"
+      },
+      {
+        "name": "Vietnam / other proposed REE projects",
+        "reason": "No reviewed source establishes current extraction at an individually located operation; projects and national reserve estimates are excluded."
+      }
+    ],
+    "temporalRule": "Dated current operating statements qualify as approximate annual observations. Published quantities are not required. A modern statement never backdates a commodity into an existing mine lifetime."
+  }
+}

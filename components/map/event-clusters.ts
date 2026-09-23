@@ -4,6 +4,7 @@ import { wrapLongitude } from '@/lib/map-boundaries';
 import { MAX_CLUSTER_INPUT, type ClusterResponse, type ScreenEvent } from './cluster-events';
 import { EMPTY_FEATURE_FILTER } from './style-filters';
 import { queryViewportFeatures } from './query-viewport';
+import { hasResourceAt } from './resource-hit';
 
 export const EVENT_QUERY_LAYER = 'event-cluster-query';
 const SOURCE = 'event-clusters';
@@ -209,7 +210,13 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
     dirty = false;
     // Opacity-zero circle layers are queryable; visibility:none layers are not.
     // https://maplibre.org/maplibre-gl-js/docs/API/classes/Map/#queryrenderedfeatures
-    const features = queryViewportFeatures(map, [EVENT_QUERY_LAYER]);
+    // A reloading tile can still expose its previous bucket. Reapply the current
+    // layer filter at query time before publishing a new cluster generation.
+    const features = queryViewportFeatures(
+      map,
+      [EVENT_QUERY_LAYER],
+      map.getFilter(EVENT_QUERY_LAYER) ?? undefined,
+    );
     if (features.length > MAX_CLUSTER_INPUT) return;
     const points: ScreenEvent[] = [];
     const center = map.getCenter().lng;
@@ -253,6 +260,7 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
   };
 
   const click = (event: MapLayerMouseEvent) => {
+    if (hasResourceAt(map, event.point)) return;
     if (!active) return;
     const feature = event.features?.[0];
     if (!feature || feature.geometry.type !== 'Point') return;

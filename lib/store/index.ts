@@ -48,6 +48,14 @@ export interface AtlasState {
   campaignStep: number;
   storyId: string | null;
   storyStep: number;
+  battlesVisible: boolean;
+  resourcesVisible: boolean;
+  battleMode: boolean;
+  battlePlaying: boolean;
+  battleSpeed: 0.5 | 1 | 2;
+  /** Requested seek position. The renderer owns its frame clock. */
+  battleProgress: number;
+  battleRevision: number;
 }
 
 export const DEFAULT_ATLAS_STATE: AtlasState = {
@@ -73,6 +81,13 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   campaignStep: 0,
   storyId: null,
   storyStep: 0,
+  battlesVisible: true,
+  resourcesVisible: false,
+  battleMode: false,
+  battlePlaying: false,
+  battleSpeed: 1,
+  battleProgress: 0,
+  battleRevision: 0,
 };
 export const DEFAULT_STATE = DEFAULT_ATLAS_STATE;
 
@@ -197,6 +212,25 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
     state.campaignPlaying = false;
     state.entityFollowing = false;
   }
+  state.battlesVisible = query.get('battles') !== '0';
+  state.resourcesVisible = query.get('resources') === '1';
+  state.battleMode = query.get('battle') === '1' && state.battlesVisible;
+  if (!state.battlesVisible && query.get('battle') === '1') state.selectedEvent = null;
+  state.battleProgress = finiteNumber(query.get('bphase'), 0, 0, 1);
+  const battleSpeed = Number(query.get('bspeed'));
+  if (battleSpeed === 0.5 || battleSpeed === 1 || battleSpeed === 2)
+    state.battleSpeed = battleSpeed;
+  // Opening a shared reconstruction always starts paused, including reduced-motion users.
+  if (state.battleMode) {
+    state.selectedEntity = null;
+    state.selectedPerson = null;
+    state.selectedWar = null;
+    state.campaignId = null;
+    state.storyId = null;
+    state.playing = false;
+    state.campaignPlaying = false;
+    state.entityFollowing = false;
+  }
   return state;
 }
 
@@ -226,6 +260,13 @@ export function serializeAtlasUrl(state: AtlasState): string {
     query.set('to', String(state.range[1]));
   }
   if (state.trails) query.set('trails', '1');
+  if (!state.battlesVisible) query.set('battles', '0');
+  if (state.resourcesVisible) query.set('resources', '1');
+  if (state.battleMode) {
+    query.set('battle', '1');
+    query.set('bphase', String(state.battleProgress));
+    query.set('bspeed', String(state.battleSpeed));
+  }
   if (state.playing) query.set('play', '1');
   if (state.entityFollowing && state.selectedEntity) query.set('follow', '1');
   if (state.campaignPlaying && state.campaignId) query.set('cplay', '1');
@@ -264,6 +305,12 @@ export interface AtlasActions {
   setCampaignStep: (step: number) => void;
   setStory: (id: string | null, step?: number) => void;
   setStoryStep: (step: number) => void;
+  setBattlesVisible: (visible: boolean) => void;
+  setResourcesVisible: (visible: boolean) => void;
+  setBattleMode: (enabled: boolean) => void;
+  setBattlePlaying: (playing: boolean) => void;
+  setBattleSpeed: (speed: AtlasState['battleSpeed']) => void;
+  setBattleProgress: (progress: number) => void;
   patchState: (patch: Partial<AtlasState>) => void;
   hydrateFromUrl: (url: string | URLSearchParams) => void;
   reset: () => void;
@@ -271,6 +318,21 @@ export interface AtlasActions {
 
 /** Context playback never survives leaving its source, and only one clock runs at a time. */
 function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<AtlasState> {
+  if (!(patch.battlesVisible ?? state.battlesVisible))
+    patch = {
+      ...patch,
+      battleMode: false,
+      battlePlaying: false,
+      // A reconstruction selection must not turn into a dossier when its layer closes.
+      ...(state.battleMode || patch.battleMode ? { selectedEvent: null } : {}),
+    };
+  if (
+    state.battleMode &&
+    patch.year !== undefined &&
+    patch.year !== state.year &&
+    patch.selectedEvent === undefined
+  )
+    patch = { ...patch, selectedEvent: null };
   const next = { ...state, ...patch };
   const changedEntity =
     patch.selectedEntity !== undefined && patch.selectedEntity !== state.selectedEntity;
@@ -310,19 +372,58 @@ function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<A
   }
   if (!next.selectedEntity) next.entityFollowing = false;
   if (!next.campaignId) next.campaignPlaying = false;
+  if (
+    (changedEntity && next.selectedEntity) ||
+    Boolean(patch.selectedPerson) ||
+    (changedCampaign && next.campaignId) ||
+    (changedStory && next.storyId)
+  )
+    next.battleMode = false;
+  if (patch.battleMode === true || (patch.battlePlaying === true && next.battleMode)) {
+    next.playing = false;
+    next.campaignPlaying = false;
+    next.entityFollowing = false;
+  }
+  if (
+    !next.battleMode ||
+    next.playing ||
+    next.campaignPlaying ||
+    next.entityFollowing ||
+    changedCampaign ||
+    changedStory ||
+    changedEntity ||
+    Boolean(patch.selectedPerson) ||
+    (patch.year !== undefined && patch.year !== state.year)
+  )
+    next.battlePlaying = false;
+  const changedBattle =
+    patch.selectedEvent !== undefined && patch.selectedEvent !== state.selectedEvent;
+  if (changedBattle) {
+    next.battlePlaying = false;
+    next.battleProgress = 0;
+    next.battleRevision = state.battleRevision + 1;
+  }
+  if (patch.battleProgress !== undefined) {
+    next.battleProgress = finiteNumber(patch.battleProgress, 0, 0, 1);
+    next.battleRevision = state.battleRevision + 1;
+  }
   return {
     ...patch,
     selectedPerson: next.selectedPerson,
     playing: next.playing,
     entityFollowing: next.entityFollowing,
     campaignPlaying: next.campaignPlaying,
+    battleMode: next.battleMode,
+    battlePlaying: next.battlePlaying,
+    battleProgress: next.battleProgress,
+    battleRevision: next.battleRevision,
   };
 }
 
 export const useAtlasStore = create<AtlasState & AtlasActions>()(
   subscribeWithSelector((set) => ({
     ...createInitialAtlasState(),
-    setYear: (year) => set((state) => ({ year: yearNumber(year, state.year) })),
+    setYear: (year) => set((state) => playbackPatch(state, { year: yearNumber(year, state.year) })),
     setCamera: (camera) => set((state) => ({ camera: normalizeCamera(camera, state.camera) })),
     setFilters: (filters) =>
       set((state) => ({ filters: normalizeFilters({ ...state.filters, ...filters }) })),
@@ -362,6 +463,35 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
         }),
       ),
     setStoryStep: (step) => set({ storyStep: Math.max(0, Math.floor(step)) }),
+    setBattlesVisible: (battlesVisible) => set((state) => playbackPatch(state, { battlesVisible })),
+    setResourcesVisible: (resourcesVisible) => set({ resourcesVisible }),
+    setBattleMode: (battleMode) =>
+      set((state) =>
+        playbackPatch(state, {
+          battleMode,
+          battlePlaying: false,
+          ...(battleMode
+            ? {
+                battlesVisible: true,
+                selectedEvent: null,
+                selectedEntity: null,
+                selectedPerson: null,
+                selectedWar: null,
+                campaignId: null,
+                storyId: null,
+                battleProgress: 0,
+                mode: 'events' as const,
+              }
+            : state.battleMode
+              ? { selectedEvent: null }
+              : {}),
+        }),
+      ),
+    setBattlePlaying: (battlePlaying) => set((state) => playbackPatch(state, { battlePlaying })),
+    setBattleSpeed: (battleSpeed) => {
+      if (battleSpeed === 0.5 || battleSpeed === 1 || battleSpeed === 2) set({ battleSpeed });
+    },
+    setBattleProgress: (battleProgress) => set((state) => playbackPatch(state, { battleProgress })),
     patchState: (patch) =>
       set((state) => ({
         ...playbackPatch(state, patch),
@@ -370,7 +500,8 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
         ...(patch.filters ? { filters: normalizeFilters(patch.filters) } : {}),
         ...(patch.range !== undefined ? { range: normalizeRange(patch.range) } : {}),
       })),
-    hydrateFromUrl: (url) => set(parseAtlasUrl(url)),
+    hydrateFromUrl: (url) =>
+      set((state) => ({ ...parseAtlasUrl(url), battleRevision: state.battleRevision + 1 })),
     reset: () => set(createInitialAtlasState()),
   })),
 );

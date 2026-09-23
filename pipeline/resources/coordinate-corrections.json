@@ -1,0 +1,20 @@
+[
+  {
+    "siteId": "gcmt:M0056",
+    "coordinates": [148.950644, -23.406874],
+    "sourceUrl": "https://linkeddata.pid.geoscience.gov.au/collections/mi/items/333308?f=json",
+    "reason": "Geoscience Australia mineral deposit MI333308 identifies Jellinbah East, Queensland, as an operating black-coal mine and supplies this GeoJSON point (published positional accuracy 100 m). The operator confirms Jellinbah Mine near Bluff on the Tropic of Capricorn: https://jellinbah.com.au/jellinbah-mine/. GEM's current Jellinbah page independently gives the same WGS84 point. Replace the imported [148.47, 22.285], which places the Australian mine north of the equator. Both coordinates come from the primary government's published geometry; this is not an inferred latitude sign flip. Verified 2026-09-23; operating dates are unchanged."
+  },
+  {
+    "siteId": "current-ree:mount-weld",
+    "coordinates": [122.547523, -28.859949],
+    "sourceUrl": "https://services.ga.gov.au/gis/rest/services/AustralianOperatingMines/MapServer/0",
+    "reason": "Use current Geoscience Australia operating-mine point instead of legacy USGS district coordinate for the same Mount Weld identity."
+  },
+  {
+    "siteId": "goget:L100000320669",
+    "coordinates": [-91.9896395, 26.0366148],
+    "sourceUrl": "https://gis.boem.gov/arcgis/rest/services/BOEM_BSEE/GOA_Layers/MapServer/6/query?f=json&where=PROT_NUMBER%3D%27NG15-05%27+AND+BLOCK_NUMBER%3D%27++964%27&outFields=PROT_NUMBER%2CBLOCK_NUMBER&returnGeometry=true&outSR=4326",
+    "reason": "Kosmos explicitly locates its separate 2023 Tiberius oil discovery in Keathley Canyon block 964. Its position can use this block centroid, but its discovery history must not be merged with the 2008 Hadrian South gas field. Primary operator evidence: https://investors.kosmosenergy.com/news-releases/news-release-details/kosmos-energy-ltd-oil-discovery-us-gulf-mexico. Replace the imported GEM position 170.49 km from the stated block. The official block centroid is an approximate representative location, not an exact well position; discovery and production dates are unchanged. Reviewed 2026-09-23."
+  }
+]

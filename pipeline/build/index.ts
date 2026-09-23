@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { createHash, randomUUID } from 'node:crypto';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -795,6 +795,14 @@ export async function buildEvents(
       ],
     };
     await json(join(output, 'quality.json'), { ...report, rejected: undefined });
+    // Independently acquired map layers survive replacement of the core event corpus.
+    for (const layer of ['battles', 'resources']) {
+      try {
+        await cp(join(published, layer), join(output, layer), { recursive: true });
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      }
+    }
     if (options.verify) {
       const verification = await verifyIdenticalTrees(output, published);
       await json(

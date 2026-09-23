@@ -1,0 +1,770 @@
+[
+  {
+    "mineId": "aitik",
+    "siteId": "fineprint:COM00013.00",
+    "aliases": [
+      "Aitik"
+    ],
+    "name": "Aitik",
+    "distanceKm": 0.59,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "aktogay",
+    "siteId": "fineprint:COM00015.00",
+    "aliases": [
+      "Aktogay"
+    ],
+    "name": "Aktogay",
+    "distanceKm": 4.43,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "antapaccay",
+    "siteId": "fineprint:COM00049.00",
+    "aliases": [
+      "Antapaccay"
+    ],
+    "name": "Antapaccay",
+    "distanceKm": 10.36,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "batu-hijau",
+    "siteId": "fineprint:COM00104.00",
+    "aliases": [
+      "Batu Hijau"
+    ],
+    "name": "Batu Hijau",
+    "distanceKm": 1.26,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "bhp-escondida",
+    "siteId": "current-major:escondida",
+    "aliases": [
+      "Escondida"
+    ],
+    "name": "Escondida",
+    "distanceKm": 0.21,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "bhp-spence",
+    "siteId": "current-major:spence",
+    "aliases": [
+      "Spence"
+    ],
+    "name": "Spence",
+    "distanceKm": 7.22,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "bingham-canyon",
+    "siteId": "fineprint:COM00133.00",
+    "aliases": [
+      "Bingham Canyon"
+    ],
+    "name": "Bingham Canyon",
+    "distanceKm": 0.87,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "boliden-area",
+    "siteId": "fineprint:COM01276.00",
+    "aliases": [
+      "Boliden Area",
+      "The Boliden Area"
+    ],
+    "name": "The Boliden Area",
+    "distanceKm": 14.42,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "brucejack",
+    "siteId": "mincan:216",
+    "aliases": [
+      "Brucejack"
+    ],
+    "name": "Brucejack",
+    "distanceKm": 3.0,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "carlin",
+    "siteId": "fineprint:COM00205.00",
+    "aliases": [
+      "Carlin"
+    ],
+    "name": "Carlin",
+    "distanceKm": 11.97,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "carmen-de-andacollo",
+    "siteId": "fineprint:COM00207.00",
+    "aliases": [
+      "Carmen de Andacollo"
+    ],
+    "name": "Carmen de Andacollo",
+    "distanceKm": 3.03,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "centinela",
+    "siteId": "fineprint:COM00220.00",
+    "aliases": [
+      "Centinela"
+    ],
+    "name": "Centinela",
+    "distanceKm": 11.85,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "cmoc-brazil",
+    "siteId": "fineprint:COM00212.00",
+    "aliases": [
+      "CMOC Brazil (Catalao)",
+      "Catalao"
+    ],
+    "name": "Catalao",
+    "distanceKm": 14.97,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "collahuasi-anglo",
+    "siteId": "fineprint:COM00276.00",
+    "aliases": [
+      "Collahuasi"
+    ],
+    "name": "Collahuasi",
+    "distanceKm": 6.16,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "collahuasi-glencore",
+    "siteId": "fineprint:COM00276.00",
+    "aliases": [
+      "Collahuasi"
+    ],
+    "name": "Collahuasi",
+    "distanceKm": 6.16,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "cortez",
+    "siteId": "fineprint:COM00294.00",
+    "aliases": [
+      "Cortez"
+    ],
+    "name": "Cortez",
+    "distanceKm": 9.23,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "cuajone",
+    "siteId": "fineprint:COM00305.00",
+    "aliases": [
+      "Cuajone"
+    ],
+    "name": "Cuajone",
+    "distanceKm": 0.57,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "el-soldado",
+    "siteId": "fineprint:COM00381.00",
+    "aliases": [
+      "El Soldado"
+    ],
+    "name": "El Soldado",
+    "distanceKm": 8.32,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "escondida",
+    "siteId": "current-major:escondida",
+    "aliases": [
+      "Escondida"
+    ],
+    "name": "Escondida",
+    "distanceKm": 0.21,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "fcx-grasberg",
+    "siteId": "current-major:grasberg",
+    "aliases": [
+      "Grasberg"
+    ],
+    "name": "Grasberg",
+    "distanceKm": 1.12,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "garpenberg",
+    "siteId": "fineprint:COM00442.00",
+    "aliases": [
+      "Garpenberg"
+    ],
+    "name": "Garpenberg",
+    "distanceKm": 2.87,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "hudbay-constancia",
+    "siteId": "fineprint:COM00283.00",
+    "aliases": [
+      "Constancia"
+    ],
+    "name": "Constancia",
+    "distanceKm": 7.54,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "jabal-sayid",
+    "siteId": "fineprint:COM00586.00",
+    "aliases": [
+      "Jabal Sayid"
+    ],
+    "name": "Jabal Sayid",
+    "distanceKm": 19.15,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "kamoa-kakula",
+    "siteId": "current-major:kamoa-kakula",
+    "aliases": [
+      "Kamoa-Kakula"
+    ],
+    "name": "Kamoa-Kakula copper complex",
+    "distanceKm": 3.3,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "kamoa-zijin",
+    "siteId": "current-major:kamoa-kakula",
+    "aliases": [
+      "Kamoa",
+      "Kamoa-Kakula"
+    ],
+    "name": "Kamoa-Kakula copper complex",
+    "distanceKm": 3.3,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "kibali",
+    "siteId": "fineprint:COM00642.00",
+    "aliases": [
+      "Kibali"
+    ],
+    "name": "Kibali",
+    "distanceKm": 11.54,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "kinsevere",
+    "siteId": "fineprint:COM00649.00",
+    "aliases": [
+      "Kinsevere"
+    ],
+    "name": "Kinsevere",
+    "distanceKm": 1.65,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "la-caridad",
+    "siteId": "fineprint:COM00693.00",
+    "aliases": [
+      "La Caridad"
+    ],
+    "name": "La Caridad",
+    "distanceKm": 17.68,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "las-bambas",
+    "siteId": "fineprint:COM00708.00",
+    "aliases": [
+      "Las Bambas"
+    ],
+    "name": "Las Bambas",
+    "distanceKm": 3.32,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "los-pelambres",
+    "siteId": "fineprint:COM00747.00",
+    "aliases": [
+      "Los Pelambres"
+    ],
+    "name": "Los Pelambres",
+    "distanceKm": 0.68,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "lumwana",
+    "siteId": "fineprint:COM00754.00",
+    "aliases": [
+      "Lumwana"
+    ],
+    "name": "Lumwana",
+    "distanceKm": 6.96,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "lundin-candelaria",
+    "siteId": "fineprint:COM00197.00",
+    "aliases": [
+      "Candelaria"
+    ],
+    "name": "Candelaria",
+    "distanceKm": 1.62,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "lundin-neves-corvo",
+    "siteId": "fineprint:COM00889.00",
+    "aliases": [
+      "Neves Corvo",
+      "Neves-Corvo"
+    ],
+    "name": "Neves Corvo",
+    "distanceKm": 1.81,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "mcarthur-river",
+    "siteId": "fineprint:COM00785.00",
+    "aliases": [
+      "McArthur River"
+    ],
+    "name": "McArthur River",
+    "distanceKm": 2.88,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "murrin-murrin",
+    "siteId": "current-major:murrin-murrin",
+    "aliases": [
+      "Murrin Murrin"
+    ],
+    "name": "Murrin Murrin",
+    "distanceKm": 5.83,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "mutanda",
+    "siteId": "fineprint:COM00876.00",
+    "aliases": [
+      "Mutanda"
+    ],
+    "name": "Mutanda",
+    "distanceKm": 18.59,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "new-afton",
+    "siteId": "mincan:190",
+    "aliases": [
+      "New Afton"
+    ],
+    "name": "New Afton",
+    "distanceKm": 1.57,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "newgold-rainy-river",
+    "siteId": "mincan:214",
+    "aliases": [
+      "Rainy River"
+    ],
+    "name": "Rainy River",
+    "distanceKm": 10.7,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "newmont-ahafo",
+    "siteId": "west-africa:ahafo-south",
+    "aliases": [
+      "Ahafo South"
+    ],
+    "name": "Ahafo South",
+    "distanceKm": 6.05,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "newmont-akyem",
+    "siteId": "west-africa:akyem",
+    "aliases": [
+      "Akyem"
+    ],
+    "name": "Akyem",
+    "distanceKm": 16.88,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "newmont-eleonore",
+    "siteId": "mincan:204",
+    "aliases": [
+      "Eleonore"
+    ],
+    "name": "Éléonore",
+    "distanceKm": 6.63,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "north-mara",
+    "siteId": "fineprint:COM00916.00",
+    "aliases": [
+      "North Mara"
+    ],
+    "name": "North Mara",
+    "distanceKm": 9.32,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "northparkes",
+    "siteId": "fineprint:COM00922.00",
+    "aliases": [
+      "Northparkes"
+    ],
+    "name": "Northparkes",
+    "distanceKm": 3.5,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "oyu-tolgoi",
+    "siteId": "current-major:oyu-tolgoi",
+    "aliases": [
+      "Oyu Tolgoi"
+    ],
+    "name": "Oyu Tolgoi",
+    "distanceKm": 3.13,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "penoles-fresnillo",
+    "siteId": "fineprint:COM00429.00",
+    "aliases": [
+      "Fresnillo"
+    ],
+    "name": "Fresnillo",
+    "distanceKm": 0.92,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "porgera",
+    "siteId": "fineprint:COM01008.00",
+    "aliases": [
+      "Porgera"
+    ],
+    "name": "Porgera",
+    "distanceKm": 0.51,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "pueblo-viejo",
+    "siteId": "fineprint:COM01052.00",
+    "aliases": [
+      "Pueblo Viejo"
+    ],
+    "name": "Pueblo Viejo",
+    "distanceKm": 12.23,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "quebrada-blanca",
+    "siteId": "fineprint:COM01056.00",
+    "aliases": [
+      "Quebrada Blanca"
+    ],
+    "name": "Quebrada Blanca",
+    "distanceKm": 3.3,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "red-chris",
+    "siteId": "mincan:207",
+    "aliases": [
+      "Red Chris"
+    ],
+    "name": "Red Chris",
+    "distanceKm": 1.13,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "red-dog",
+    "siteId": "fineprint:COM01072.00",
+    "aliases": [
+      "Red Dog"
+    ],
+    "name": "Red Dog",
+    "distanceKm": 0.85,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "rosebery",
+    "siteId": "fineprint:COM01097.00",
+    "aliases": [
+      "Rosebery"
+    ],
+    "name": "Rosebery",
+    "distanceKm": 0.1,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "s32-cannington",
+    "siteId": "fineprint:COM00198.00",
+    "aliases": [
+      "Cannington"
+    ],
+    "name": "Cannington",
+    "distanceKm": 2.7,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "s32-cerro-matoso",
+    "siteId": "fineprint:COM00228.00",
+    "aliases": [
+      "Cerro Matoso"
+    ],
+    "name": "Cerro Matoso",
+    "distanceKm": 3.64,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "sierra-gorda",
+    "siteId": "fineprint:COM01188.00",
+    "aliases": [
+      "Sierra Gorda"
+    ],
+    "name": "Sierra Gorda",
+    "distanceKm": 4.19,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "somincor",
+    "siteId": "fineprint:COM00889.00",
+    "aliases": [
+      "Neves Corvo",
+      "Neves-Corvo",
+      "Somincor"
+    ],
+    "name": "Neves Corvo",
+    "distanceKm": 1.81,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "ssw-beatrix",
+    "siteId": "fineprint:COM00110.00",
+    "aliases": [
+      "Beatrix"
+    ],
+    "name": "Beatrix",
+    "distanceKm": 2.13,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "ssw-driefontein",
+    "siteId": "fineprint:COM00344.00",
+    "aliases": [
+      "Driefontein"
+    ],
+    "name": "Driefontein",
+    "distanceKm": 1.54,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "ssw-kloof",
+    "siteId": "fineprint:COM00657.00",
+    "aliases": [
+      "Kloof"
+    ],
+    "name": "Kloof",
+    "distanceKm": 7.03,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "tara",
+    "siteId": "fineprint:COM01261.00",
+    "aliases": [
+      "Tara"
+    ],
+    "name": "Tara",
+    "distanceKm": 7.24,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "toquepala",
+    "siteId": "fineprint:COM01290.00",
+    "aliases": [
+      "Toquepala"
+    ],
+    "name": "Toquepala",
+    "distanceKm": 0.9,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "vale-sossego",
+    "siteId": "fineprint:COM01209.00",
+    "aliases": [
+      "Sossego"
+    ],
+    "name": "Sossego",
+    "distanceKm": 2.99,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "wetar",
+    "siteId": "fineprint:COM01366.00",
+    "aliases": [
+      "Wetar"
+    ],
+    "name": "Wetar",
+    "distanceKm": 22.54,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "zijin-akyem",
+    "siteId": "west-africa:akyem",
+    "aliases": [
+      "Akyem"
+    ],
+    "name": "Akyem",
+    "distanceKm": 0.6,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "zijin-duobaoshan",
+    "siteId": "fineprint:COM00357.00",
+    "aliases": [
+      "Duobaoshan"
+    ],
+    "name": "Duobaoshan",
+    "distanceKm": 0.52,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "zijin-kolwezi",
+    "siteId": "fineprint:COM00662.00",
+    "aliases": [
+      "Kolwezi"
+    ],
+    "name": "Kolwezi",
+    "distanceKm": 4.78,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "zijin-porgera",
+    "siteId": "fineprint:COM01008.00",
+    "aliases": [
+      "Porgera"
+    ],
+    "name": "Porgera",
+    "distanceKm": 0.51,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "zijin-zeravshan",
+    "siteId": "fineprint:COM01418.00",
+    "aliases": [
+      "Zeravshan"
+    ],
+    "name": "Zeravshan",
+    "distanceKm": 1.72,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "zijin-zijinshan",
+    "siteId": "fineprint:COM01430.00",
+    "aliases": [
+      "Zijinshan"
+    ],
+    "name": "Zijinshan",
+    "distanceKm": 1.9,
+    "reason": "Reviewed same named mine or mining complex in the same country and coherent geography; retain the independently sourced atlas coordinate. No coordinate is imported from the report index."
+  },
+  {
+    "mineId": "antamina-glencore",
+    "siteId": "current-major:antamina",
+    "aliases": [
+      "Antamina"
+    ],
+    "name": "Antamina",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "antamina-teck",
+    "siteId": "current-major:antamina",
+    "aliases": [
+      "Antamina"
+    ],
+    "name": "Antamina",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "fcx-morenci",
+    "siteId": "current-major:morenci",
+    "aliases": [
+      "Morenci"
+    ],
+    "name": "Morenci",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "fcx-cerro-verde",
+    "siteId": "current-major:cerro-verde",
+    "aliases": [
+      "Cerro Verde"
+    ],
+    "name": "Cerro Verde",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "kansanshi",
+    "siteId": "current-major:kansanshi",
+    "aliases": [
+      "Kansanshi"
+    ],
+    "name": "Kansanshi",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "newmont-lihir",
+    "siteId": "current-major:lihir",
+    "aliases": [
+      "Lihir"
+    ],
+    "name": "Lihir",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "newmont-cadia",
+    "siteId": "current-major:cadia",
+    "aliases": [
+      "Cadia"
+    ],
+    "name": "Cadia",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "newmont-boddington",
+    "siteId": "current-major:boddington",
+    "aliases": [
+      "Boddington"
+    ],
+    "name": "Boddington",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  },
+  {
+    "mineId": "cmoc-tfm",
+    "siteId": "current-major:tenke-fungurume",
+    "aliases": [
+      "Tenke Fungurume",
+      "TFM"
+    ],
+    "name": "Tenke Fungurume",
+    "reason": "Same named mine already identified against primary operator reporting in current-major-mines.json; retain its sourced coordinate."
+  }
+]

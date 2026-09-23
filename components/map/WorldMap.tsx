@@ -11,16 +11,19 @@ import type {
 import { useAtlasStore } from '@/lib/store';
 import { useI18n } from '@/lib/i18n';
 import { getEvent, readJson, type DataManifest } from '@/lib/data-client';
-import { temporalWindow } from '@/lib/map-time';
 import { selectEventArchive } from '@/lib/event-archives';
 import { boundaryFrames, wrapLongitude } from '@/lib/map-boundaries';
 import { createPlaybackMapGate } from '@/lib/playback-readiness';
+import { publishBattleRenderStatus } from '@/lib/battles/status';
 import type { GeographyManifest } from '@/lib/geography';
 import { addEventSprites } from './markers';
 import { EMPTY_FEATURE_FILTER } from './style-filters';
+import { eventFilter, selectedEventFilter } from './event-filters';
 import { queryViewportFeatures } from './query-viewport';
 import { createRenderQueue } from './render-queue';
 import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from './event-clusters';
+import { hasResourceAt } from './resource-hit';
+import { useResourceStore } from '@/lib/resources/store';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 type AtlasState = ReturnType<typeof useAtlasStore.getState>;
@@ -41,40 +44,6 @@ const eventColor = [
   '#db9d85',
   '#d2bf9b',
 ];
-
-function eventFilter(state: AtlasState): FilterSpecification {
-  const window = temporalWindow(state.speed, state.playing);
-  const from = state.range?.[0] ?? state.year - window;
-  const to = state.range?.[1] ?? state.year + window;
-  const result: unknown[] = [
-    'all',
-    ['<=', ['get', 'start'], to],
-    ['>=', ['get', 'end'], from],
-    [
-      '>=',
-      ['get', 'importance'],
-      state.selectedWar
-        ? state.filters.minImportance
-        : Math.max(state.filters.minImportance, Math.max(0, 75 - state.camera.zoom * 10)),
-    ],
-  ];
-  if (state.filters.types.length)
-    result.push(['in', ['get', 'type'], ['literal', state.filters.types]]);
-  if (state.filters.eras.length)
-    result.push(['in', ['get', 'era'], ['literal', state.filters.eras]]);
-  if (state.filters.regions.length)
-    result.push(['in', ['get', 'region'], ['literal', state.filters.regions]]);
-  if (state.selectedWar)
-    result.push([
-      'any',
-      ['==', ['get', 'parentWar'], state.selectedWar],
-      ['==', ['get', 'id'], state.selectedWar],
-      ['in', `|${state.selectedWar}|`, ['coalesce', ['get', 'wars'], '']],
-    ]);
-  if (state.filters.entity)
-    result.push(['in', `|${state.filters.entity}|`, ['coalesce', ['get', 'entities'], '']]);
-  return result as FilterSpecification;
-}
 
 function makeStyle(
   manifest: GeographyManifest,
@@ -198,7 +167,49 @@ export default function WorldMap() {
         let styleReady = false;
         let movingFromStore = false;
         let reconcilingInitialState = false;
-        let overlayCleanup: (() => void) | undefined;
+        let campaignOverlay:
+          ReturnType<(typeof import('./campaign-overlay'))['startCampaignOverlay']> | undefined;
+        let battleOverlay:
+          ReturnType<(typeof import('./battle-overlay'))['startBattleOverlay']> | undefined;
+        let battleOverlayLoading = false;
+        let resourceOverlay:
+          ReturnType<(typeof import('./resource-overlay'))['startResourceOverlay']> | undefined;
+        let resourceOverlayLoading = false;
+        let adjustingBattlePadding = false;
+        const frameBattlefield = (state: AtlasState) => {
+          const focused = state.battlesVisible && state.battleMode && Boolean(state.selectedEvent);
+          const narrow = map.getContainer().clientWidth <= 580;
+          const padding = focused
+            ? narrow
+              ? {
+                  top: 20,
+                  right: 0,
+                  bottom: Math.min(360, window.innerHeight * 0.44) + 20,
+                  left: 0,
+                }
+              : {
+                  top: 20,
+                  right: 60,
+                  bottom: 20,
+                  left: Math.min(370, map.getContainer().clientWidth * 0.3),
+                }
+            : { top: 0, right: 0, bottom: 0, left: 0 };
+          const previous = map.getPadding();
+          if (
+            Object.entries(padding).every(
+              ([key, value]) => previous[key as keyof typeof padding] === value,
+            )
+          )
+            return;
+          // Padding moves the screen centre without changing the historical coordinate in shared URLs.
+          adjustingBattlePadding = true;
+          try {
+            map.setPadding(padding);
+          } finally {
+            adjustingBattlePadding = false;
+          }
+        };
+        map.on('resize', () => frameBattlefield(useAtlasStore.getState()));
         let overlayToken = 0;
         let boundaryUse = 0;
         let ghostToken = 0;
@@ -440,6 +451,8 @@ export default function WorldMap() {
             },
           });
           const click = (event: MapLayerMouseEvent) => {
+            if (hasResourceAt(map, event.point)) return;
+            if (useAtlasStore.getState().battleMode) return;
             if (!currentBoundarySources.includes(id)) return;
             if (eventClustering?.hasFeatureAt(event.point)) return;
             if (
@@ -525,6 +538,7 @@ export default function WorldMap() {
 
         const apply = (state: AtlasState, previous?: AtlasState) => {
           if (!styleReady) return;
+          frameBattlefield(state);
           if (state.playing && !previous?.playing) cancelGhost();
           if (
             !previous ||
@@ -553,6 +567,8 @@ export default function WorldMap() {
               state.speed !== previous.speed ||
               state.playing !== previous.playing ||
               state.mode !== previous.mode ||
+              state.battleMode !== previous.battleMode ||
+              state.battlesVisible !== previous.battlesVisible ||
               state.projection !== previous.projection
             )
               eventClustering?.invalidate();
@@ -569,20 +585,31 @@ export default function WorldMap() {
             map.setLayoutProperty(
               'event-heat',
               'visibility',
-              state.mode === 'heatmap' ? 'visible' : 'none',
+              state.mode === 'heatmap' && !state.battleMode ? 'visible' : 'none',
             );
             for (const id of ['event-halo', 'event-points', 'event-icons', 'event-symbols'])
               map.setLayoutProperty(
                 id,
                 'visibility',
-                state.mode === 'heatmap' || eventClustering?.isActive() ? 'none' : 'visible',
+                state.battleMode || state.mode === 'heatmap' || eventClustering?.isActive()
+                  ? 'none'
+                  : 'visible',
               );
-            map.setLayoutProperty('event-trails', 'visibility', state.trails ? 'visible' : 'none');
+            map.setLayoutProperty(
+              'event-trails',
+              'visibility',
+              state.trails && !state.battleMode ? 'visible' : 'none',
+            );
+            map.setLayoutProperty(
+              'event-selected',
+              'visibility',
+              state.battleMode ? 'none' : 'visible',
+            );
             map.setFilter(
               'event-trails',
               eventFilter({ ...state, range: [state.year - 100, state.year - 1] }),
             );
-            map.setFilter('event-selected', ['==', ['get', 'id'], state.selectedEvent ?? '']);
+            map.setFilter('event-selected', selectedEventFilter(state));
             if (!previous || state.locale !== previous.locale)
               map.setLayoutProperty('event-icons', 'text-field', [
                 'coalesce',
@@ -592,6 +619,49 @@ export default function WorldMap() {
           }
           if (!previous || state.projection !== previous.projection)
             map.setProjection({ type: state.projection });
+          if (state.battlesVisible && state.battleMode && !battleOverlay && !battleOverlayLoading) {
+            battleOverlayLoading = true;
+            void import('./battle-overlay')
+              .then(({ startBattleOverlay }) => {
+                if (disposed) return;
+                battleOverlay = startBattleOverlay(map, useAtlasStore.getState, reduced);
+                battleOverlay.update(appliedState ?? state);
+              })
+              .catch((cause) => {
+                if (disposed) return;
+                console.warn('Battle reconstruction could not be loaded', cause);
+                const current = useAtlasStore.getState();
+                publishBattleRenderStatus({
+                  status: 'error',
+                  eventId: current.selectedEvent ?? undefined,
+                  progress: current.battleProgress,
+                  models: 0,
+                  error: String(cause),
+                });
+              })
+              .finally(() => {
+                battleOverlayLoading = false;
+              });
+          }
+          battleOverlay?.update(state);
+          if (state.resourcesVisible && !resourceOverlay && !resourceOverlayLoading) {
+            resourceOverlayLoading = true;
+            useResourceStore.setState({ status: 'loading', error: null });
+            void import('./resource-overlay')
+              .then(({ startResourceOverlay }) => {
+                if (disposed) return;
+                resourceOverlay = startResourceOverlay(map, reduced);
+                const current = useAtlasStore.getState();
+                resourceOverlay.update(current.resourcesVisible, current.year, current.range);
+              })
+              .catch((cause) => {
+                if (!disposed) useResourceStore.setState({ status: 'error', error: String(cause) });
+              })
+              .finally(() => {
+                resourceOverlayLoading = false;
+              });
+          }
+          resourceOverlay?.update(state.resourcesVisible, state.year, state.range);
           if (!previous || state.theme !== previous.theme) {
             const dark = state.theme === 'dark';
             map.setPaintProperty('ocean', 'background-color', dark ? '#0b2636' : '#c9d9db');
@@ -642,17 +712,10 @@ export default function WorldMap() {
           ) {
             const token = ++overlayToken;
             void import('./campaign-overlay')
-              .then(async ({ attachCampaignOverlay }) => {
+              .then(({ startCampaignOverlay }) => {
                 if (disposed || token !== overlayToken) return;
-                overlayCleanup?.();
-                const detach = await attachCampaignOverlay(
-                  map,
-                  state,
-                  reduced,
-                  () => !disposed && token === overlayToken,
-                );
-                if (disposed || token !== overlayToken) detach();
-                else overlayCleanup = detach;
+                campaignOverlay ??= startCampaignOverlay(map, reduced);
+                return campaignOverlay.update(state);
               })
               .catch((cause) => console.warn('Campaign could not be loaded', cause));
           }
@@ -666,7 +729,10 @@ export default function WorldMap() {
             appliedState = state;
           },
           isReady: () => {
-            const loaded = territoriesLoaded() && (!eventsReady || map.isSourceLoaded('events'));
+            const loaded =
+              territoriesLoaded() &&
+              (!eventsReady || map.isSourceLoaded('events')) &&
+              (resourceOverlay?.isReady() ?? true);
             if (loaded) playbackGate.ready();
             return loaded;
           },
@@ -805,13 +871,20 @@ export default function WorldMap() {
               });
               eventsReady = true;
               eventClustering = attachEventClustering(map, {
-                getState: useAtlasStore.getState,
+                getState: () => {
+                  const state = useAtlasStore.getState();
+                  return {
+                    playing: state.playing,
+                    mode: state.battleMode ? 'heatmap' : state.mode,
+                  };
+                },
                 selectEvent: selectMapEvent,
                 reducedMotion: reduced,
               });
               appliedState = undefined;
               renderQueue.submit(useAtlasStore.getState(), true);
               map.on('click', 'event-points', (event) => {
+                if (hasResourceAt(map, event.point)) return;
                 const id = event.features?.[0]?.properties?.id;
                 if (!id) return;
                 selectMapEvent(String(id));
@@ -828,7 +901,7 @@ export default function WorldMap() {
             });
         });
         map.on('moveend', () => {
-          if (!styleReady || reconcilingInitialState) return;
+          if (!styleReady || reconcilingInitialState || adjustingBattlePadding) return;
           const center = map.getCenter();
           movingFromStore = true;
           useAtlasStore.setState({
@@ -899,10 +972,17 @@ export default function WorldMap() {
             );
           renderQueue.submit(state, interrupt);
         });
+        const unsubscribeResources = useResourceStore.subscribe((state, previous) => {
+          if (state.revision !== previous.revision && !resourceOverlay && styleReady)
+            renderQueue.submit(useAtlasStore.getState(), true);
+        });
         cleanup = () => {
           unsubscribe();
+          unsubscribeResources();
           renderQueue.dispose();
-          overlayCleanup?.();
+          campaignOverlay?.dispose();
+          battleOverlay?.dispose();
+          resourceOverlay?.dispose();
           eventClustering?.destroy();
           cancelGhost();
           map.off('sourcedata', retirePreviousTerritories);

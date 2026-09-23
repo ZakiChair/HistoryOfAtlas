@@ -1,4 +1,4 @@
-import type { Map as MapInstance, MapGeoJSONFeature } from 'maplibre-gl';
+import type { FilterSpecification, Map as MapInstance, MapGeoJSONFeature } from 'maplibre-gl';
 
 /**
  * Large query rectangles undercount features on MapLibre's globe projection.
@@ -6,8 +6,13 @@ import type { Map as MapInstance, MapGeoJSONFeature } from 'maplibre-gl';
  * layer filters. Call after a rendered frame, at a bounded cadence; no source
  * corpus is downloaded.
  */
-export function queryViewportFeatures(map: MapInstance, layers: string[]): MapGeoJSONFeature[] {
-  if (map.getProjection().type !== 'globe') return map.queryRenderedFeatures({ layers });
+export function queryViewportFeatures(
+  map: MapInstance,
+  layers: string[],
+  filter?: FilterSpecification,
+): MapGeoJSONFeature[] {
+  const options = { layers, ...(filter ? { filter } : {}) };
+  if (map.getProjection().type !== 'globe') return map.queryRenderedFeatures(options);
   const { clientWidth: width, clientHeight: height } = map.getCanvas();
   const features: MapGeoJSONFeature[] = [];
   const seen = new Set<string>();
@@ -18,7 +23,7 @@ export function queryViewportFeatures(map: MapInstance, layers: string[]): MapGe
           [x, y],
           [Math.min(width, x + 256), Math.min(height, y + 256)],
         ],
-        { layers },
+        options,
       );
       for (const feature of results) {
         const id = feature.properties.id ?? feature.id;

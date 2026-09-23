@@ -1,0 +1,24 @@
+{
+  "retrievedAt": "2026-09-23",
+  "license": "NLOD 2.0",
+  "files": [
+    {
+      "file": "sodir-known-discoveries.json.gz",
+      "url": "https://factmaps.sodir.no/api/rest/services/DataService/Data/FeatureServer/7000/query?where=1%3D1&outFields=*&returnGeometry=false&returnCentroid=true&outSR=4326&f=json",
+      "records": 648,
+      "sha256": "42a2d23ebf54b76a705ac632ee3e6f316f167c2d4149844443b3d808e651dcb7"
+    },
+    {
+      "file": "sodir-known-fields.json.gz",
+      "url": "https://factmaps.sodir.no/api/rest/services/DataService/Data/FeatureServer/7100/query?where=1%3D1&outFields=*&returnGeometry=false&returnCentroid=true&outSR=4326&f=json",
+      "records": 142,
+      "sha256": "78f96479c3e4070a0abcc0d69b3bb4e943088e0dbe28f55d048e222d0b1957ec"
+    },
+    {
+      "file": "sodir-known-wells.json.gz",
+      "url": "https://factmaps.sodir.no/api/rest/services/DataService/Data/FeatureServer/5000/query?where=wlbNpdidWellbore+IN+%2857%2C267%2C478%2C489%2C1053%2C1343%2C1822%2C2269%2C2297%2C2632%2C2719%2C2867%2C3062%2C3176%2C3229%2C3573%2C3703%2C4489%2C4727%2C5814%2C6055%2C6153%2C7522%2C8102%2C8167%2C8910%2C9336%2C9985%2C10184%2C10186%2C10200%2C10212%2C10242%2C10279%2C10288%2C10290%2C10332%2C10350%2C10354%2C10398%2C10417%2C10421%2C10422%2C10456%2C10514%2C10531%2C10552%2C10577%2C10604%29&outFields=wlbNpdidWellbore%2CwlbWellboreName%2CwlbFactPageUrl&returnGeometry=true&outSR=4326&f=json",
+      "records": 49,
+      "sha256": "a589510c1a5b2fb2a135cfdb3df92f20bc2d5d3bf2ebced3981a5c91f19294f3"
+    }
+  ]
+}

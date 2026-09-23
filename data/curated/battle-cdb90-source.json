@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "repository": "https://github.com/jrnold/CDB90",
+  "commit": "e0b35ec4d798cec3bb4e6970c0f6bb7aa69e2f4c",
+  "license": "ODC-BY-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/by/1-0/",
+  "originalDataLicense": "Public Domain",
+  "attribution": "CDB90 (CAA Database of Battles, Version 1990), tidy data maintained by Jeffrey B. Arnold. Original US Army Concepts Analysis Agency data; revised data licensed ODC-BY.",
+  "resources": [
+    {
+      "path": "README.md",
+      "sha256": "bf61ebe604e13e842484aa293a76ac49100b8a9e09a9088001d91d499edfa4a3",
+      "bytes": 4360
+    },
+    {
+      "path": "datapackage.json",
+      "sha256": "bdad6243ea88c7765395c2781a50aecf28b9d92299a3e3405220a56265c92950",
+      "bytes": 33374
+    },
+    {
+      "path": "data/battles.csv",
+      "sha256": "5746563869cd2b9f01ebc59ffb3bd01c1bdfa72b8675f89e50d61b6f5bacce68",
+      "bytes": 192722
+    },
+    {
+      "path": "data/belligerents.csv",
+      "sha256": "06710007912656a8b0257582f6fbb480af005bef922bfb27ff7c7ef0934f7e08",
+      "bytes": 176505
+    },
+    {
+      "path": "data/battle_durations.csv",
+      "sha256": "5a81b6f313530e58c22ed05b4c0ca47d8758a9f62584df1a10872663b7355667",
+      "bytes": 51677
+    },
+    {
+      "path": "data/active_periods.csv",
+      "sha256": "aa5543e390d472f85598463b99915bde530c8e235cddb11cddf6a903e64ee861",
+      "bytes": 86560
+    },
+    {
+      "path": "data/enum_codead.csv",
+      "sha256": "2df7c8429e948abead1b55c099b285aa5de2a16a78d63a8712344549f962f1b5",
+      "bytes": 169
+    },
+    {
+      "path": "src-data/M000121/README.TXT",
+      "sha256": "3e1d4a27dee8f6fa0907e998eff226a89fae99193c750539155771b01252e5e6",
+      "bytes": 14011
+    },
+    {
+      "path": "src-data/M000121/CDB90DEF.csv",
+      "sha256": "ba2b2b8790c8c306ebef18718972a343754ad0b6d31ad7f7b560d52da6bb8dca",
+      "bytes": 15873
+    }
+  ]
+}

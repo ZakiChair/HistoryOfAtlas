@@ -33,12 +33,20 @@ type GeoManifest = {
 };
 
 export default async function AboutPage() {
-  const [quality, geography] = await Promise.all([
+  const [quality, geography, battles] = await Promise.all([
     readFile(path.join(process.cwd(), 'public/data/quality.json'), 'utf8').then(
       (text) => JSON.parse(text) as Quality,
     ),
     readFile(path.join(process.cwd(), 'public/geo/manifest.json'), 'utf8').then(
       (text) => JSON.parse(text) as GeoManifest,
+    ),
+    readFile(path.join(process.cwd(), 'public/data/battles/index.json'), 'utf8').then(
+      (text) =>
+        (
+          JSON.parse(text) as {
+            counts: { total: number; mappable: number; documented: number; unmapped: number };
+          }
+        ).counts,
     ),
   ]);
   const number = (value: number) => new Intl.NumberFormat('en').format(value);
@@ -102,6 +110,45 @@ export default async function AboutPage() {
           </p>
         )}
         <section>
+          <span className="eyebrow">BATTLES IN 3D</span>
+          <h2>Historical evidence, illustrative movement</h2>
+          <p>
+            The battle catalogue contains {number(battles.total)} sourced engagements, including
+            battles, sieges and naval actions. {number(battles.mappable)} have a usable date and
+            location; the remaining {number(battles.unmapped)} stay available as catalogue records.
+            This measures the sources ingested, not every battle that has ever happened.
+          </p>
+          <p>
+            Armies are anchored to the event’s recorded coordinates, or its associated place where
+            explicitly indicated. Formations, movements and the timing of losses are illustrative.
+            Authored 3D equipment models use dated museum references and reviewed participant
+            profiles; they do not establish an exact uniform or an army’s composition.
+          </p>
+          <p>
+            Where comparable per-army strengths exist, both sides share one disclosed
+            people-per-model or ships-per-model scale, rounded to whole models. Unknown strengths
+            use symbolic representatives. Source ranges stay visible; any display midpoint is
+            identified. Losses use only reviewed quantities, with deaths treated as a subset of
+            casualties. Captured or missing soldiers are identified in the source notes, and
+            army-level counts are never inferred by splitting a battle total.
+          </p>
+          <p>
+            {number(battles.documented)} engagements currently have reviewed per-army numbers for
+            proportional scenes. The catalogue retains other quantitative source statements with
+            their units, qualifiers and references, even when those statements cannot safely
+            determine the size of an army.
+          </p>
+          <a className="source-link" href="/data/battles/coverage.json">
+            Battle coverage and limitations ↗
+          </a>
+          <a className="source-link" href="/data/battles/candidates.json">
+            Individual source-candidate audit ↗
+          </a>
+          <Link className="source-link" href="/?battle=1">
+            Open 3D battles ↗
+          </Link>
+        </section>
+        <section>
           <span className="eyebrow">03 / PROVENANCE</span>
           <h2>Open sources, distinct licences</h2>
           <div className="document-grid">
@@ -114,6 +161,22 @@ export default async function AboutPage() {
               </p>
               <a className="source-link" href="https://www.wikidata.org/wiki/Wikidata:Licensing">
                 Wikidata · CC0 licence ↗
+              </a>
+            </div>
+            <div className="document-card">
+              <h3>CDB90 · historical army estimates</h3>
+              <p>
+                Selected army strengths and casualties come from the CAA Database of Battles,
+                Version 1990, maintained as tidy data by Jeffrey B. Arnold. Original US Army
+                Concepts Analysis Agency data are public domain; the revised database is licensed
+                ODC-BY. Imported records retain their original force designations and uncertainty
+                margins. Personnel casualties do not establish a death toll.
+              </p>
+              <a className="source-link" href="https://github.com/jrnold/CDB90">
+                CDB90 · source and attribution ↗
+              </a>
+              <a className="source-link" href="https://opendatacommons.org/licenses/by/1-0/">
+                Open Data Commons Attribution licence ↗
               </a>
             </div>
             {geography.sources.map((source) => (

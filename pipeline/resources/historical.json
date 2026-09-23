@@ -1,0 +1,602 @@
+{
+  "sources": [
+    {
+      "id": "historical-rros-mining-district",
+      "name": "UNESCO — Røros mining district",
+      "url": "https://whc.unesco.org/en/list/55/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. UNESCO representative coordinate of the mining district and cultural landscape, not an individual shaft. Town foundation in 1646 is not used."
+    },
+    {
+      "id": "historical-zollverein",
+      "name": "Zollverein Foundation — Zollverein",
+      "url": "https://www.zollverein.de/zollverein-unesco-world-heritage-site/history/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. The founding and shaft-sinking date 1847 is deliberately not treated as first extraction."
+    },
+    {
+      "id": "historical-kennecott",
+      "name": "U.S. National Park Service — Kennecott",
+      "url": "https://www.nps.gov/wrst/learn/management/upload/Kennecott-Preliminary-Assessment-Report-508-reduced-for-web.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. USGS major-deposits approximate deposit location. First shipment corroborated by https://www.nps.gov/wrst/learn/historyculture/kennecott-mines-national-historic-landmark.htm. Earlier development/mining before 1911 is not inferred; temporary closure preserved."
+    },
+    {
+      "id": "historical-sado-aikawa-gold-mine",
+      "name": "Sado Kinzan — Sado — Aikawa Gold Mine",
+      "url": "https://www.sado-kinzan.com/en/knowledge/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. USGS Sado deposit location, approximate. Niigata prefecture chronology corroborates 1601 full-scale development and 1989 cessation: https://www.pref.niigata.lg.jp/site/sado-goldmine-en/sg-228.html"
+    },
+    {
+      "id": "historical-hashima",
+      "name": "Sites of Japan’s Meiji Industrial Revolution — Hashima",
+      "url": "https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Coordinates extracted from the official heritage page Google Maps marker (spot01). Earlier intermittent workings are omitted."
+    },
+    {
+      "id": "historical-britannia-copper-mine",
+      "name": "British Columbia Geological Survey — Britannia copper mine",
+      "url": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1958.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Primary heritage record coordinate (PlaceLatitude/PlaceLongitude) represents the mine concentrator. Museum overview says 1904–1974, but this first delivery includes only independently verified extraction phase; later restart phases need explicit review."
+    },
+    {
+      "id": "historical-chuquicamata",
+      "name": "Codelco — Chuquicamata",
+      "url": "https://www.codelco.com/chuquicamata",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. 2025 is the last directly attested production year, not a closure date. No prehistoric continuity is inferred. Start of industrial exploitation corroborated by https://www.codelco.com/en/operaciones/chuquicamata/98-anos-chuquicamata"
+    },
+    {
+      "id": "historical-ranger",
+      "name": "Energy Resources of Australia — Ranger",
+      "url": "https://www.energyres.com.au/about/history/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Approximate NT Geological Survey Ranger 1 No 3 coordinate. This district marker groups separately documented Pit 1 and Pit 3 phases; 2013–2021 stockpile processing is not extraction."
+    },
+    {
+      "id": "historical-quincy-copper-mine",
+      "name": "U.S. National Park Service — Quincy copper mine",
+      "url": "https://www.nps.gov/articles/the-no-2-quincy-shaft-rockhouse-9-240-feet-into-the-earth-teaching-with-historic-places.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Library of Congress HAER MI-2 site coordinate. Initial exploration from 1846 omitted conservatively because later NPS nomination distinguishes production from establishment; 1856 beginning supported by https://irma.nps.gov/DataStore/DownloadFile/713970. Reclamation processing after 1945 omitted."
+    },
+    {
+      "id": "historical-great-orme-bronze-age-mine",
+      "name": "Great Orme archaeological research, Antiquity — Great Orme Bronze Age mine",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/356E30145B1F6597D8AAA0DDBE69BD51/S0003598X19001303a.pdf/div-class-title-boom-and-bust-in-bronze-age-britain-major-copper-production-from-the-great-orme-mine-and-european-trade-span-class-italic-c-span-1600-1400-bc-div.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. RCAHMW National Grid SH7707683100 converted from EPSG:27700 to WGS84 using pyproj. Astronomical years: 1700 BCE=-1699; 900 BCE=-899. Archaeological interval explicitly approximate; later mining not bridged."
+    },
+    {
+      "id": "historical-las-medulas",
+      "name": "UNESCO — Las Médulas",
+      "url": "https://whc.unesco.org/en/list/803/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. UNESCO coordinate of component 803-001, main gold-mining zone. 1–200 is a conservative century-level display interval, not precise opening/closure; undated early-third-century tail is omitted."
+    },
+    {
+      "id": "historical-falun-copper-mining-area",
+      "name": "UNESCO and Falun Mine Museum — Falun copper mining area",
+      "url": "https://whc.unesco.org/en/list/1027/",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Start normalized to the ninth-century boundary and must display as approximate, not an exact opening year. December 1992 end independently documented by the mine museum: https://www.falugruva.se/en/om-oss/. UNESCO point represents the mining area."
+    },
+    {
+      "id": "historical-rossing-uranium-mine",
+      "name": "Rössing Uranium — Rössing uranium mine",
+      "url": "https://www.rossing.com/wp-content/uploads/2025/06/RUL-SUSTAINABILITY-AND-PERFORMANCE-REPORT-2024.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. USGS major-deposit coordinate, approximate. End year is latest attested production in the consulted report, not a closure date."
+    },
+    {
+      "id": "historical-greenbushes-lithium-mine",
+      "name": "Greenbushes Technical Report Summary, SEC filing — Greenbushes lithium mine",
+      "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000024/exhibit961greenbushes202.htm",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. USGS major-deposit coordinate, approximate. Earlier tin/tantalum operations are not assigned to lithium. Tantalum underground care-and-maintenance phases are not lithium closures. End year is latest attested production, not a closure date."
+    },
+    {
+      "id": "historical-kiruna-kiirunavaara-iron-mine",
+      "name": "LKAB and Geological Survey of Sweden — Kiruna — Kiirunavaara iron mine",
+      "url": "https://minedocs.com/26/Kiruna-Summary-Technical-Report-12312023.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Operator-authored primary technical report hosted on MineDocs; LKAB report archive: https://lkab.mediaflowportal.com/documents/folder/231556/. Coordinate from SGU 2001 mineral map, entry 53 ORED00012, RT90 national grid northing 7533200 / easting 1684670 transformed to WGS84 (EPSG:3021 to EPSG:4326). Representative deposit point, approximate. USGS original point not reused because it is too far south. End year is latest attested production in this report, not closure. Iron and apatite have separate documented periods. Future rare-earth projects are not treated as historical extraction. Coordinate grid confirmed as RT90 in the accompanying SGU report."
+    },
+    {
+      "id": "historical-khouribga-phosphate-mining-district",
+      "name": "OCP Group and IFC — Khouribga phosphate mining district",
+      "url": "https://www.ocpgroup.ma/en/who-we-are/our-journey",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. Approximate USGS point for the Oulad Abdoun mining district, which groups several successive workings. Earlier underground phase and recent observation are retained separately; the 1994–2023 open-pit period is left unfilled here pending a continuous operational chronology. Additional operator overview: https://www.ocpgroup.ma/en/what-we-do/industrial-operations."
+    },
+    {
+      "id": "historical-rektorn-iron-and-apatite-mine",
+      "name": "Geological Survey of Sweden — Rektorn iron and apatite mine",
+      "url": "https://resource.sgu.se/dokument/publikation/ba/ba56beskrivning/ba56-beskrivning.pdf",
+      "license": "Factual metadata; original source content retains its own copyright",
+      "year": 2026,
+      "description": "Historical chronology consulted in September 2026; sourceYear is the evidence-review snapshot, not the original publication date. SGU 2001 mineral map entry 42, ORED00095: RT90 northing 7537520 / easting 1686270, converted to WGS84 (EPSG:3021 to EPSG:4326). Deposit point, approximate. Category must be evaluated per period: phosphate is not shown across the entire iron-mining interval."
+    }
+  ],
+  "sites": [
+    {
+      "id": "historical:rros-mining-district",
+      "name": "Røros mining district",
+      "coordinates": [11.385555555555555, 62.573888888888895],
+      "categories": ["copper"],
+      "country": "Norway",
+      "sourceId": "historical-rros-mining-district",
+      "sourceUrl": "https://whc.unesco.org/en/list/55/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/55/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1644,
+          "toYear": 1977,
+          "sourceUrl": "https://whc.unesco.org/en/list/55/",
+          "description": "Copper mines exploited for 333 years until 1977; documented discovery and extraction history begins in 1644."
+        }
+      ]
+    },
+    {
+      "id": "historical:zollverein",
+      "name": "Zollverein",
+      "coordinates": [7.046111111111111, 51.49138888888889],
+      "categories": ["coal"],
+      "country": "Germany",
+      "sourceId": "historical-zollverein",
+      "sourceUrl": "https://www.zollverein.de/zollverein-unesco-world-heritage-site/history/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/975/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1851,
+          "toYear": 1986,
+          "sourceUrl": "https://www.zollverein.de/zollverein-unesco-world-heritage-site/history/",
+          "description": "First coal extracted in 1851; shafts closed on 23 December 1986."
+        }
+      ]
+    },
+    {
+      "id": "historical:kennecott",
+      "name": "Kennecott",
+      "coordinates": [-142.84, 61.528],
+      "categories": ["copper"],
+      "country": "United States",
+      "sourceId": "historical-kennecott",
+      "sourceUrl": "https://www.nps.gov/wrst/learn/management/upload/Kennecott-Preliminary-Assessment-Report-508-reduced-for-web.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1911,
+          "toYear": 1932,
+          "sourceUrl": "https://www.nps.gov/wrst/learn/management/upload/Kennecott-Preliminary-Assessment-Report-508-reduced-for-web.pdf",
+          "description": "Industrial copper extraction and shipment; mines temporarily closed in 1932."
+        },
+        {
+          "fromYear": 1935,
+          "toYear": 1938,
+          "sourceUrl": "https://www.nps.gov/wrst/learn/management/upload/Kennecott-Preliminary-Assessment-Report-508-reduced-for-web.pdf",
+          "description": "Mines reopened in 1935 and closed in October 1938."
+        }
+      ]
+    },
+    {
+      "id": "historical:sado-aikawa-gold-mine",
+      "name": "Sado — Aikawa Gold Mine",
+      "coordinates": [138.2661, 38.0439],
+      "categories": ["gold", "silver"],
+      "country": "Japan",
+      "sourceId": "historical-sado-aikawa-gold-mine",
+      "sourceUrl": "https://www.sado-kinzan.com/en/knowledge/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1601,
+          "toYear": 1989,
+          "sourceUrl": "https://www.sado-kinzan.com/en/knowledge/",
+          "description": "Aikawa gold and silver operation founded in 1601; source documents 388 years of production and suspension in March 1989."
+        }
+      ]
+    },
+    {
+      "id": "historical:hashima",
+      "name": "Hashima",
+      "coordinates": [129.738414, 32.627712],
+      "categories": ["coal"],
+      "country": "Japan",
+      "sourceId": "historical-hashima",
+      "sourceUrl": "https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1890,
+          "toYear": 1974,
+          "sourceUrl": "https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html",
+          "description": "Mitsubishi full-scale undersea coal exploitation began in 1890; island colliery closed in January 1974."
+        }
+      ]
+    },
+    {
+      "id": "historical:britannia-copper-mine",
+      "name": "Britannia copper mine",
+      "coordinates": [-123.12139, 49.37212],
+      "categories": ["copper"],
+      "country": "Canada",
+      "sourceId": "historical-britannia-copper-mine",
+      "sourceUrl": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1958.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=7561",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1905,
+          "toYear": 1958,
+          "sourceUrl": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1958.pdf",
+          "description": "Provincial mining report records 53 years of continuous operation before production stopped on 12 March 1958."
+        }
+      ]
+    },
+    {
+      "id": "historical:chuquicamata",
+      "name": "Chuquicamata",
+      "coordinates": [-68.9, -22.275],
+      "categories": ["copper"],
+      "country": "Chile",
+      "sourceId": "historical-chuquicamata",
+      "sourceUrl": "https://www.codelco.com/chuquicamata",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1915,
+          "toYear": 2025,
+          "sourceUrl": "https://www.codelco.com/chuquicamata",
+          "description": "Operator records operation since 1915 and copper production in 2025."
+        }
+      ]
+    },
+    {
+      "id": "historical:ranger",
+      "name": "Ranger",
+      "coordinates": [132.92, -12.68],
+      "categories": ["uranium"],
+      "country": "Australia",
+      "sourceId": "historical-ranger",
+      "sourceUrl": "https://www.energyres.com.au/about/history/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://geoscience.nt.gov.au/gemis/ntgsjspui/bitstream/1/81483/1/GNT_Ch03_CommRev.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1981,
+          "toYear": 1994,
+          "sourceUrl": "https://www.energyres.com.au/about/history/",
+          "description": "Pit 1 operational mining began in 1981 and ended in December 1994."
+        },
+        {
+          "fromYear": 1997,
+          "toYear": 2012,
+          "sourceUrl": "https://www.energyres.com.au/about/history/",
+          "description": "Pit 3 extraction ran from July 1997 to November 2012."
+        }
+      ]
+    },
+    {
+      "id": "historical:quincy-copper-mine",
+      "name": "Quincy copper mine",
+      "coordinates": [-88.575161, 47.136593],
+      "categories": ["copper"],
+      "country": "United States",
+      "sourceId": "historical-quincy-copper-mine",
+      "sourceUrl": "https://www.nps.gov/articles/the-no-2-quincy-shaft-rockhouse-9-240-feet-into-the-earth-teaching-with-historic-places.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://www.loc.gov/resource/hhh.mi0086.sheet/?sp=1",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1856,
+          "toYear": 1931,
+          "sourceUrl": "https://www.nps.gov/articles/the-no-2-quincy-shaft-rockhouse-9-240-feet-into-the-earth-teaching-with-historic-places.htm",
+          "description": "Conservative production phase from the profitable Pewabic-lode era; copper production stopped in 1931."
+        },
+        {
+          "fromYear": 1937,
+          "toYear": 1945,
+          "sourceUrl": "https://www.nps.gov/articles/the-no-2-quincy-shaft-rockhouse-9-240-feet-into-the-earth-teaching-with-historic-places.htm",
+          "description": "Reopened in 1937; underground copper mining stopped in 1945."
+        }
+      ]
+    },
+    {
+      "id": "historical:great-orme-bronze-age-mine",
+      "name": "Great Orme Bronze Age mine",
+      "coordinates": [-3.8472935594, 53.3304912522],
+      "categories": ["copper"],
+      "country": "United Kingdom",
+      "sourceId": "historical-great-orme-bronze-age-mine",
+      "sourceUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/356E30145B1F6597D8AAA0DDBE69BD51/S0003598X19001303a.pdf/div-class-title-boom-and-bust-in-bronze-age-britain-major-copper-production-from-the-great-orme-mine-and-european-trade-span-class-italic-c-span-1600-1400-bc-div.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://coflein.gov.uk/en/sites/33779",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": -1699,
+          "toYear": -899,
+          "sourceUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/356E30145B1F6597D8AAA0DDBE69BD51/S0003598X19001303a.pdf/div-class-title-boom-and-bust-in-bronze-age-britain-major-copper-production-from-the-great-orme-mine-and-european-trade-span-class-italic-c-span-1600-1400-bc-div.pdf",
+          "description": "Nineteen radiocarbon dates suggest mining for approximately eight centuries, circa 1700–900 BCE.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:las-medulas",
+      "name": "Las Médulas",
+      "coordinates": [-6.77075, 42.46938888888889],
+      "categories": ["gold"],
+      "country": "Spain",
+      "sourceId": "historical-las-medulas",
+      "sourceUrl": "https://whc.unesco.org/en/list/803/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/803/maps/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1,
+          "toYear": 200,
+          "sourceUrl": "https://whc.unesco.org/en/list/803/",
+          "description": "Roman hydraulic gold extraction during the first two centuries CE; UNESCO places the beginning in the first century and abandonment in the early third.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:falun-copper-mining-area",
+      "name": "Falun copper mining area",
+      "coordinates": [15.630830000000001, 60.60472],
+      "categories": ["copper"],
+      "country": "Sweden",
+      "sourceId": "historical-falun-copper-mining-area",
+      "sourceUrl": "https://whc.unesco.org/en/list/1027/",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://whc.unesco.org/en/list/1027/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 801,
+          "toYear": 1992,
+          "sourceUrl": "https://whc.unesco.org/en/list/1027/",
+          "description": "Copper production documented since at least the ninth century, continuing into the late twentieth century.",
+          "approximate": true
+        }
+      ]
+    },
+    {
+      "id": "historical:rossing-uranium-mine",
+      "name": "Rössing uranium mine",
+      "coordinates": [15.01667, -22.41667],
+      "categories": ["uranium"],
+      "country": "Namibia",
+      "sourceId": "historical-rossing-uranium-mine",
+      "sourceUrl": "https://www.rossing.com/wp-content/uploads/2025/06/RUL-SUSTAINABILITY-AND-PERFORMANCE-REPORT-2024.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1976,
+          "toYear": 2024,
+          "sourceUrl": "https://www.rossing.com/wp-content/uploads/2025/06/RUL-SUSTAINABILITY-AND-PERFORMANCE-REPORT-2024.pdf",
+          "description": "Operator history records commercial uranium mining from 1976 and 48 years of continuous production through the 2024 reporting year."
+        }
+      ]
+    },
+    {
+      "id": "historical:greenbushes-lithium-mine",
+      "name": "Greenbushes lithium mine",
+      "coordinates": [116.0653, -33.8594],
+      "categories": ["lithium"],
+      "country": "Australia",
+      "sourceId": "historical-greenbushes-lithium-mine",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000024/exhibit961greenbushes202.htm",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1983,
+          "toYear": 2024,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000024/exhibit961greenbushes202.htm",
+          "description": "Technical Report Summary, sections 5.1.3 and 13: lithium mining began in 1983 and remained in operation in 2024, with production reported for that year."
+        }
+      ]
+    },
+    {
+      "id": "historical:kiruna-kiirunavaara-iron-mine",
+      "name": "Kiruna — Kiirunavaara iron mine",
+      "coordinates": [20.191925488, 67.833198624],
+      "categories": ["iron", "phosphate"],
+      "country": "Sweden",
+      "sourceId": "historical-kiruna-kiirunavaara-iron-mine",
+      "sourceUrl": "https://minedocs.com/26/Kiruna-Summary-Technical-Report-12312023.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://resource.sgu.se/produkter/ba/ba56-3-karta.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1898,
+          "toYear": 2023,
+          "sourceUrl": "https://minedocs.com/26/Kiruna-Summary-Technical-Report-12312023.pdf",
+          "description": "LKAB Summary Technical Report for 2023, section 5.1: continuous iron-ore production since 1898, with annual mined production through 2023.",
+          "categories": ["iron"]
+        },
+        {
+          "fromYear": 1985,
+          "toYear": 1988,
+          "sourceUrl": "https://resource.sgu.se/dokument/publikation/ba/ba56beskrivning/ba56-beskrivning.pdf",
+          "description": "SGU 2001 Table 5 records separate apatite production during 1985–1988, based on Swedish mining production statistics.",
+          "categories": ["phosphate"]
+        }
+      ]
+    },
+    {
+      "id": "historical:khouribga-phosphate-mining-district",
+      "name": "Khouribga phosphate mining district",
+      "coordinates": [-6.95, 32.9],
+      "categories": ["phosphate"],
+      "country": "Morocco",
+      "sourceId": "historical-khouribga-phosphate-mining-district",
+      "sourceUrl": "https://www.ocpgroup.ma/en/who-we-are/our-journey",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://mrdata.usgs.gov/major-deposits/",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1921,
+          "toYear": 1993,
+          "sourceUrl": "https://www.ocpgroup.ma/en/who-we-are/our-journey",
+          "description": "OCP chronology documents phosphate extraction from 1921 and the underground phase ending in late 1993, before replacement by Sidi Chennane open-pit operations in 1994."
+        },
+        {
+          "fromYear": 2024,
+          "toYear": 2024,
+          "sourceUrl": "https://www.ocpgroup.ma/en/press-release/ifc-and-ocp-group-launch-project-address-water-shortage-morocco-and-food-insecurity",
+          "description": "Dated September 2024 operator/IFC release attests the active Khouribga production operations; this observation does not infer intervening years."
+        }
+      ]
+    },
+    {
+      "id": "historical:rektorn-iron-and-apatite-mine",
+      "name": "Rektorn iron and apatite mine",
+      "coordinates": [20.237135056, 67.870795272],
+      "categories": ["iron", "phosphate"],
+      "country": "Sweden",
+      "sourceId": "historical-rektorn-iron-and-apatite-mine",
+      "sourceUrl": "https://resource.sgu.se/dokument/publikation/ba/ba56beskrivning/ba56-beskrivning.pdf",
+      "sourceYear": 2026,
+      "coordinateSourceUrl": "https://resource.sgu.se/produkter/ba/ba56-3-karta.pdf",
+      "accuracy": "approximate",
+      "periods": [
+        {
+          "fromYear": 1925,
+          "toYear": 1961,
+          "sourceUrl": "https://resource.sgu.se/dokument/publikation/ba/ba56beskrivning/ba56-beskrivning.pdf",
+          "description": "SGU 2001 Table 5 lists iron-ore production in the closed Rektorn mine during 1925–1961, from Swedish Mining Inspectorate final mine records.",
+          "categories": ["iron"]
+        },
+        {
+          "fromYear": 1942,
+          "toYear": 1946,
+          "sourceUrl": "https://resource.sgu.se/dokument/publikation/ba/ba56beskrivning/ba56-beskrivning.pdf",
+          "description": "The same SGU production table separately records apatite extraction during 1942–1946; the report describes wartime apatite production for fertilizer.",
+          "categories": ["phosphate"]
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "name": "Røros mining district",
+      "notes": "UNESCO representative coordinate of the mining district and cultural landscape, not an individual shaft. Town foundation in 1646 is not used."
+    },
+    {
+      "name": "Zollverein",
+      "notes": "The founding and shaft-sinking date 1847 is deliberately not treated as first extraction."
+    },
+    {
+      "name": "Kennecott",
+      "notes": "USGS major-deposits approximate deposit location. First shipment corroborated by https://www.nps.gov/wrst/learn/historyculture/kennecott-mines-national-historic-landmark.htm. Earlier development/mining before 1911 is not inferred; temporary closure preserved.",
+      "matchedSiteId": "usgs:469"
+    },
+    {
+      "name": "Sado — Aikawa Gold Mine",
+      "notes": "USGS Sado deposit location, approximate. Gold only because silver is not among existing categories. Niigata prefecture chronology corroborates 1601 full-scale development and 1989 cessation: https://www.pref.niigata.lg.jp/site/sado-goldmine-en/sg-228.html",
+      "matchedSiteId": "usgs:301"
+    },
+    {
+      "name": "Hashima",
+      "notes": "Coordinates extracted from the official heritage page Google Maps marker (spot01). Earlier intermittent workings are omitted."
+    },
+    {
+      "name": "Britannia copper mine",
+      "notes": "Primary heritage record coordinate (PlaceLatitude/PlaceLongitude) represents the mine concentrator. Museum overview says 1904–1974, but this first delivery includes only independently verified extraction phase; later restart phases need explicit review."
+    },
+    {
+      "name": "Chuquicamata",
+      "notes": "2025 is the last directly attested production year, not a closure date. No prehistoric continuity is inferred. Start of industrial exploitation corroborated by https://www.codelco.com/en/operaciones/chuquicamata/98-anos-chuquicamata",
+      "matchedSiteId": "usgs:1102"
+    },
+    {
+      "name": "Ranger",
+      "notes": "Approximate NT Geological Survey Ranger 1 No 3 coordinate. This district marker groups separately documented Pit 1 and Pit 3 phases; 2013–2021 stockpile processing is not extraction."
+    },
+    {
+      "name": "Quincy copper mine",
+      "notes": "Library of Congress HAER MI-2 site coordinate. Initial exploration from 1846 omitted conservatively because later NPS nomination distinguishes production from establishment; 1856 beginning supported by https://irma.nps.gov/DataStore/DownloadFile/713970. Reclamation processing after 1945 omitted."
+    },
+    {
+      "name": "Great Orme Bronze Age mine",
+      "notes": "RCAHMW National Grid SH7707683100 converted from EPSG:27700 to WGS84 using pyproj. Astronomical years: 1700 BCE=-1699; 900 BCE=-899. Archaeological interval explicitly approximate; later mining not bridged."
+    },
+    {
+      "name": "Las Médulas",
+      "notes": "UNESCO coordinate of component 803-001, main gold-mining zone. 1–200 is a conservative century-level display interval, not precise opening/closure; undated early-third-century tail is omitted."
+    },
+    {
+      "name": "Falun copper mining area",
+      "notes": "Start normalized to the ninth-century boundary and must display as approximate, not an exact opening year. December 1992 end independently documented by the mine museum: https://www.falugruva.se/en/om-oss/. UNESCO point represents the mining area."
+    },
+    {
+      "name": "Rössing uranium mine",
+      "matchedSiteId": "usgs:2594",
+      "notes": "USGS major-deposit coordinate, approximate. End year is latest attested production in the consulted report, not a closure date."
+    },
+    {
+      "name": "Greenbushes lithium mine",
+      "matchedSiteId": "usgs:44",
+      "notes": "USGS major-deposit coordinate, approximate. Earlier tin/tantalum operations are not assigned to lithium. Tantalum underground care-and-maintenance phases are not lithium closures. End year is latest attested production, not a closure date."
+    },
+    {
+      "name": "Kiruna — Kiirunavaara iron mine",
+      "matchedSiteId": "usgs:1838",
+      "notes": "Operator-authored primary technical report hosted on MineDocs; LKAB report archive: https://lkab.mediaflowportal.com/documents/folder/231556/. Coordinate from SGU 2001 mineral map, entry 53 ORED00012, RT90 national grid northing 7533200 / easting 1684670 transformed to WGS84 (EPSG:3021 to EPSG:4326). Representative deposit point, approximate. USGS original point not reused because it is too far south. End year is latest attested production in this report, not closure. Iron and apatite have separate documented periods. Future rare-earth projects are not treated as historical extraction. Coordinate grid confirmed as RT90 in the accompanying SGU report."
+    },
+    {
+      "name": "Khouribga phosphate mining district",
+      "matchedSiteId": "usgs:2541",
+      "notes": "Approximate USGS point for the Oulad Abdoun mining district, which groups several successive workings. Earlier underground phase and recent observation are retained separately; the 1994–2023 open-pit period is left unfilled here pending a continuous operational chronology. Additional operator overview: https://www.ocpgroup.ma/en/what-we-do/industrial-operations."
+    },
+    {
+      "name": "Rektorn iron and apatite mine",
+      "notes": "SGU 2001 mineral map entry 42, ORED00095: RT90 northing 7537520 / easting 1686270, converted to WGS84 (EPSG:3021 to EPSG:4326). Deposit point, approximate. Category must be evaluated per period: phosphate is not shown across the entire iron-mining interval."
+    }
+  ]
+}

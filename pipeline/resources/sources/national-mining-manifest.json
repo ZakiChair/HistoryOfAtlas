@@ -1,0 +1,26 @@
+{
+  "downloadedAt": "2026-09-23",
+  "files": [
+    {
+      "file": "national-australia-operating-2025.json.gz",
+      "url": "https://services.ga.gov.au/gis/rest/services/AustralianOperatingMines/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+      "observedYear": 2025,
+      "records": 347,
+      "sha256": "d398a069f105d772196ac0fe7f1da1e3446e587188572a23b587ad292e07b50c"
+    },
+    {
+      "file": "national-canada-metals-2026.json.gz",
+      "url": "https://maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/900A_and_top_100_en/MapServer/3/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+      "observedYear": 2026,
+      "records": 81,
+      "sha256": "84519d4ec4e6dc77ffb3ba436327df0bdc5bb73cb8e109fcdd8d1ee740d0ea17"
+    },
+    {
+      "file": "national-canada-nonmetals-2026.json.gz",
+      "url": "https://maps-cartes.services.geo.ca/server_serveur/rest/services/NRCan/900A_and_top_100_en/MapServer/4/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+      "observedYear": 2026,
+      "records": 83,
+      "sha256": "e65184d1139325d6cf0cc32f347ac18fa6ca7e9451e3768331084a3ffadd30c3"
+    }
+  ]
+}

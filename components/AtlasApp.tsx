@@ -28,6 +28,7 @@ import {
   Info,
   Footprints,
   History,
+  Swords,
 } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { createAtlasUrlSync } from '@/lib/store/url-sync';
@@ -41,8 +42,10 @@ import type { GeographyManifest } from '@/lib/geography';
 import type { HistoricalEvent } from '@/lib/schema';
 import { openEvent } from '@/lib/navigation';
 import { surroundingSnapshots } from '@/lib/map-time';
+import { battleText } from '@/lib/battles/i18n';
 import Timeline from './timeline/Timeline';
 import { IconButton } from './ui/IconButton';
+import MapLayers from './map/MapLayers';
 
 const WorldMap = dynamic(() => import('./map/WorldMap'), { ssr: false });
 const EventList = dynamic(() => import('./panels/EventList'));
@@ -53,6 +56,7 @@ const Filters = dynamic(() => import('./panels/Filters'));
 const CampaignPanel = dynamic(() => import('./panels/CampaignPanel'));
 const StoryPanel = dynamic(() => import('./story/StoryPanel'));
 const SearchDialog = dynamic(() => import('./search/SearchDialog'));
+const BattlePanel = dynamic(() => import('./panels/BattlePanel'));
 
 type Territory = { id: string; name: string; color: string; areaKm2: number };
 
@@ -246,6 +250,14 @@ export default function AtlasApp() {
   const [territories, setTerritories] = useState<Territory[]>([]),
     [toast, setToast] = useState(''),
     [intro, setIntro] = useState(false);
+  const battleMode = useAtlasStore((state) => state.battleMode);
+  const resourcesVisible = useAtlasStore((state) => state.resourcesVisible);
+  useEffect(() => {
+    if (battleMode) {
+      setSidebarOpen(true);
+      setTab('explore');
+    }
+  }, [battleMode]);
 
   useEffect(() => {
     useAtlasStore.getState().hydrateFromUrl(window.location.search);
@@ -278,6 +290,7 @@ export default function AtlasApp() {
           playing: false,
           campaignPlaying: false,
           entityFollowing: false,
+          battlePlaying: false,
         });
       }
     };
@@ -406,12 +419,12 @@ export default function AtlasApp() {
     const state = useAtlasStore.getState();
     state.setCamera({ zoom: Math.max(0, Math.min(18, state.camera.zoom + amount)) });
   };
-  const hasDetail = Boolean(selectedPerson || selectedEntity || selectedEvent);
+  const hasDetail = Boolean(selectedPerson || selectedEntity || (!battleMode && selectedEvent));
   return (
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation}>
         <main
-          className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''}`}
+          className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''} ${battleMode ? 'battle-mode' : ''} ${resourcesVisible ? 'resources-visible' : ''}`}
         >
           <h1 className="sr-only">
             HistoryOfAtlas — {t('L’histoire à travers les cartes', 'History through maps')}
@@ -434,8 +447,9 @@ export default function AtlasApp() {
               {(['explore', 'campaigns', 'stories'] as const).map((item) => (
                 <button
                   key={item}
-                  className={tab === item ? 'active' : ''}
+                  className={!battleMode && tab === item ? 'active' : ''}
                   onClick={() => {
+                    useAtlasStore.getState().setBattleMode(false);
                     setTab(item);
                     setSidebarOpen(true);
                   }}
@@ -443,6 +457,13 @@ export default function AtlasApp() {
                   {t(item)}
                 </button>
               ))}
+              <button
+                className={battleMode ? 'active' : ''}
+                onClick={() => useAtlasStore.getState().setBattleMode(true)}
+                data-testid="battle-mode-nav"
+              >
+                {battleText(locale, 'mode')}
+              </button>
             </nav>
             <div className="header-actions">
               <div className="search-shortcut">
@@ -476,11 +497,7 @@ export default function AtlasApp() {
               </Link>
             </div>
           </header>
-          <div className="map-topline">
-            <span className="live-dot" />
-            {t('5 500 ans de territoires en mouvement', '5,500 years of changing territories')}
-            <span className="topline-rule" />
-          </div>
+          <MapLayers />
           <AnimatePresence initial={false}>
             {sidebarOpen && (
               <m.aside
@@ -496,11 +513,13 @@ export default function AtlasApp() {
                 <div className="exploration-top">
                   <span className="notebook-label">
                     <span />
-                    {tab === 'explore'
-                      ? t('Explorer l’atlas', 'Explore the atlas')
-                      : tab === 'campaigns'
-                        ? t('campaigns')
-                        : t('stories')}
+                    {battleMode
+                      ? battleText(locale, 'mode')
+                      : tab === 'explore'
+                        ? t('Explorer l’atlas', 'Explore the atlas')
+                        : tab === 'campaigns'
+                          ? t('campaigns')
+                          : t('stories')}
                   </span>
                   <button
                     className="icon-button panel-collapse"
@@ -513,16 +532,27 @@ export default function AtlasApp() {
                 <div className="mobile-tabs">
                   {(['explore', 'campaigns', 'stories'] as const).map((item) => (
                     <button
-                      className={tab === item ? 'active' : ''}
+                      className={!battleMode && tab === item ? 'active' : ''}
                       key={item}
-                      onClick={() => setTab(item)}
+                      onClick={() => {
+                        useAtlasStore.getState().setBattleMode(false);
+                        setTab(item);
+                      }}
                     >
                       {t(item)}
                     </button>
                   ))}
+                  <button
+                    className={battleMode ? 'active' : ''}
+                    onClick={() => useAtlasStore.getState().setBattleMode(true)}
+                  >
+                    {battleText(locale, 'mode')}
+                  </button>
                 </div>
                 <div className="exploration-scroll">
-                  {tab === 'explore' ? (
+                  {battleMode ? (
+                    <BattlePanel />
+                  ) : tab === 'explore' ? (
                     <>
                       {mode === 'list' ? (
                         <>
@@ -562,14 +592,32 @@ export default function AtlasApp() {
                   )}
                 </div>
                 <div className="discovery-actions">
-                  <button onClick={() => void surprise()}>
-                    <Shuffle size={15} />
-                    {t('Au hasard', 'Surprise me')}
-                  </button>
-                  <button onClick={() => void surprise(true)}>
-                    <CalendarDays size={15} />
-                    {t('Ce jour-là', 'On this day')}
-                  </button>
+                  {battleMode ? (
+                    <button
+                      className="battle-leave"
+                      onClick={() => {
+                        useAtlasStore.getState().patchState({
+                          battleMode: false,
+                          selectedEvent: null,
+                          camera: { ...useAtlasStore.getState().camera, zoom: 4, pitch: 0 },
+                        });
+                      }}
+                    >
+                      <ChevronLeft size={15} />
+                      {battleText(locale, 'leave')}
+                    </button>
+                  ) : (
+                    <>
+                      <button onClick={() => void surprise()}>
+                        <Shuffle size={15} />
+                        {t('Au hasard', 'Surprise me')}
+                      </button>
+                      <button onClick={() => void surprise(true)}>
+                        <CalendarDays size={15} />
+                        {t('Ce jour-là', 'On this day')}
+                      </button>
+                    </>
+                  )}
                 </div>
               </m.aside>
             )}
@@ -590,6 +638,15 @@ export default function AtlasApp() {
             aria-label={t('Commandes de la carte', 'Map controls')}
           >
             <div className="tool-group">
+              <IconButton
+                label={battleText(locale, 'mode')}
+                aria-pressed={battleMode}
+                className={battleMode ? 'active' : ''}
+                data-testid="battle-mode-toggle"
+                onClick={() => useAtlasStore.getState().setBattleMode(!battleMode)}
+              >
+                <Swords size={20} />
+              </IconButton>
               <IconButton
                 label={projection === 'globe' ? t('flatMap') : t('globe')}
                 onClick={() =>
@@ -714,7 +771,7 @@ export default function AtlasApp() {
             <PersonPanel key={selectedPerson} />
           ) : selectedEntity ? (
             <EntityPanel key={selectedEntity} />
-          ) : selectedEvent ? (
+          ) : selectedEvent && !battleMode ? (
             <EventPanel key={selectedEvent} />
           ) : null}
           <MapCaption geo={geo} />

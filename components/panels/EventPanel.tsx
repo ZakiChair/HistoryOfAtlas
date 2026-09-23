@@ -36,6 +36,8 @@ import type { Locale } from '@/lib/types';
 import EventSources from './EventSources';
 import EncyclopediaContent from './EncyclopediaContent';
 import EventPeople from './EventPeople';
+import { focusBattle } from '@/lib/battles/navigation';
+import { battleText } from '@/lib/battles/i18n';
 
 const TYPE_ICONS = {
   battle: Swords,
@@ -262,6 +264,12 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
         <div className="detail-precision">
           {t('Précision', 'Precision')} : {PRECISION_LABELS[event.datePrecision][locale]}
         </div>
+        {(['battle', 'siege', 'naval'] as string[]).includes(event.type) && event.coords && (
+          <button className="primary-button event-battle-button" onClick={() => focusBattle(event)}>
+            <Swords size={16} />
+            {battleText(locale, 'mode')}
+          </button>
+        )}
         {(event.place?.name || event.coords) && (
           <div className="detail-meta">
             <MapPin size={14} />

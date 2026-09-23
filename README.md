@@ -8,6 +8,16 @@ The main boundary layer uses Seshat **Cliopatria**: 13,380 dated polity geometry
 
 The published corpus contains **20,037 dated, geolocated events**, 240 editorial QIDs, 40 documented chronological sequences and 10 guided stories. Annual navigation loads temporal event tiles; it does not fetch the all-era archive at startup. See [verification and measured limits](docs/QA.md) before interpreting the performance targets as achieved guarantees.
 
+Open **3D battles** to search the complete ingested battle catalogue, then select a battlefield, play or scrub its illustrative reconstruction, and zoom in to inspect articulated equipment models. Source-backed army and casualty counts use a common disclosed scale; missing counts remain unknown. The [battle coverage report](public/data/battles/coverage.json) accounts for every acquired source candidate, including records without a usable date or location. Model equipment and movements are illustrative, not an exact tactical reconstruction.
+
+The current battle catalogue contains **23,606 records**, of which **16,860** have usable dates and locations. **202** records have comparable opposing-force quantities; **198** of these can be animated on the map. Some comparisons cover documented subsets while other formations remain unquantified. The [readiness audit](data/reports/battle-readiness.json) distinguishes this from complete force, equipment and loss coverage. Individually [reviewed inclusions](docs/battle-inclusions-review-2026-09-21.md) recover sourced engagements omitted by the discovery taxonomy; neither the acquisition count nor this review establishes exhaustive historical coverage.
+
+The map's **Battles** and **Strategic resources** controls independently show or hide each layer. Hiding battles also stops their 3D playback and removes battle, siege and naval markers from event views. Both choices persist in shared URLs. Resources load only when enabled and follow the **selected year or date range**, from documented discovery or the earliest available attestation. Known resources stay visible after closure, including deposits never exploited; discovery and production are shown separately. Production shutdowns remain gaps in the evidence; approximate dates carry **≈**. Each marker opens its dated evidence and coordinate source. The legend counts sites in the chosen period and distinguishes them from total dataset coverage. Coverage is partial, especially for early periods; missing records do not establish absence of exploitation. See the [resource provenance](public/data/resources/README.md) for coverage and source limitations.
+
+Resources use distinct pictograms shared by the map and legend, with adjacent icons for sites with several known resources by the selected period. Groups display their most frequent resource and the number of sites; clicking the icon or count zooms in. Select a resource in the legend to show only its sites and pictograms, or **All resources** to restore the complete layer. The choice survives year changes and layer toggles; legend counts continue to describe all sites in the selected period. These symbols indicate known resource categories, not current extraction, production quantities or remaining reserves.
+
+The mineral catalogue combines MinCan, FINEPRINT, the GEM iron tracker, recent national producing-mine registers and reviewed operator/heritage records, including Mali's gold mines, uranium operations and rare-earth sites. All 45 resource categories have representative pictograms and sourced locations. The expanded layer includes non-producing oil/gas discoveries and USGS/ICMM mineral occurrences. Unknown discovery dates use a labelled documentary attestation; operating-register and satellite evidence never invent discovery dates. During playback, the last resource frame remains visible until the updated source is rendered, avoiding the symbol fade restart that previously made icons blink.
+
 ## Run
 
 ```sh
@@ -38,6 +48,15 @@ This downloads cached raw sources into `data/raw`, normalizes dates and records,
 - [Geography manifest](public/geo/manifest.json): dated tile shards, snapshots, source revisions and limitations.
 - `pnpm data:build --offline`: rebuild events from an existing raw cache without acquisition.
 - `pnpm data:geo`: rebuild the complete geography independently.
+- `pnpm data:battles:acquire`: resume all battle candidates, linked places/participants and source-language labels, respecting source rate limits.
+- `pnpm data:battles:cdb90 --fetch`: reproduce the reviewed CDB90 import from its pinned, checksummed source snapshot; `--check` verifies it without rewriting artifacts. See [the source review](docs/battle-cdb90-matching-review-2026-09-21.md).
+- `pnpm data:battles`: publish the battle catalogue from the local cache and reviewed profiles, independently of the core event tiles.
+- `pnpm data:battles:check`: validate every published battle, quantity, source, candidate classification and unchanged original coordinate/date. This requires a complete acquisition report, but no raw cache.
+- `pnpm exec tsx pipeline/battles/readiness.ts`: regenerate the evidence and model-selection audit, including hashes of its current inputs.
+- `pnpm data:resources`: reproduce the resource snapshot offline from the committed source extracts; [provenance and acquisition](pipeline/resources/README.md).
+- `pnpm data:resources:check`: validate resource coordinates, categories, identifiers and source attribution.
+
+After rebuilding the core events, run `pnpm data:battles` to refresh the independent battle catalogue. Core event publication preserves existing battle and resource artifacts. Reproduce the authored GLBs in an isolated Blender process with `blender --background --factory-startup --python scripts/generate-battle-models.py -- --all`; equipment evidence and model constraints are documented in [the unit guide](docs/battle-units.md).
 
 ## Application
 
@@ -79,13 +98,16 @@ Replace the example origin with the real deployment origin. The multistage image
 
 ## Sources and licences
 
-| Source                                                                              | Licence                                                                             |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing)                        | CC0                                                                                 |
-| [Cliopatria / Seshat](https://github.com/Seshat-Global-History-Databank/cliopatria) | CC BY 4.0                                                                           |
-| [Historical Basemaps](https://github.com/aourednik/historical-basemaps)             | GPL-3.0; licence and complete corresponding source distributed with map adaptations |
-| [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/)               | Public domain                                                                       |
-| [Wikipedia / Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use)  | Applicable CC BY-SA text terms; individual image licences                           |
+| Source                                                                              | Licence                                                                                                                                   |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing)                        | CC0                                                                                                                                       |
+| [Cliopatria / Seshat](https://github.com/Seshat-Global-History-Databank/cliopatria) | CC BY 4.0                                                                                                                                 |
+| [Historical Basemaps](https://github.com/aourednik/historical-basemaps)             | GPL-3.0; licence and complete corresponding source distributed with map adaptations                                                       |
+| [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/)               | Public domain                                                                                                                             |
+| [Wikipedia / Wikimedia](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use)  | Applicable CC BY-SA text terms; individual image licences                                                                                 |
+| [USGS major mineral deposits](https://mrdata.usgs.gov/major-deposits/)              | Public domain; source metadata declares no use constraints                                                                                |
+| [Global Energy Monitor](https://globalenergymonitor.org/creative-commons-license/)  | CC BY 4.0; normalized and filtered public map extracts                                                                                    |
+| [SODIR and reviewed historical mining sources](public/data/resources/README.md)     | Norwegian Licence for Open Government Data for SODIR; individual historical evidence and coordinate sources are attributed in each record |
 
 Do not treat this mixed collection as a single CC0 dataset. The application displays attributions and provides direct links to source records.
 

@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-21",
+  "battleId": "Q5037019",
+  "decision": "hold-position",
+  "metadataPatch": null,
+  "publicSnapshotSha256": "9b5a96b397dd1102c3659e2d89f6631619d3aa17e7e7a437376a16970490196e",
+  "finding": "A primary printed report supplies an action-time bearing and an estimated distance, but not a uniquely recoverable geographical point.",
+  "verifiedObservation": {
+    "observer": "Lieutenant James McDonald, senior surviving officer of HMS Penguin",
+    "documentDate": "1815-04-06",
+    "actionDate": "1815-03-23",
+    "timeAsPrinted": "1.50 P.M.",
+    "landmarkAsPrinted": "the island",
+    "bearingAsPrinted": "S.W.",
+    "distanceAsPrinted": "three or four miles",
+    "page": "Appendix No. 111, p.cci; scan leaf 750",
+    "imageInspected": true
+  },
+  "sources": [
+    {
+      "label": "McDonald official letter, first printed in William James, A Full and Correct Account (1817), Appendix No. 111, pp.cc–ccii; McGill University Library copy",
+      "url": "https://archive.org/details/McGillLibrary-rbsc_lc_account-naval-occurences_Lande00467-16048/page/n750/mode/1up"
+    },
+    {
+      "label": "Naval Historical Center, NH 55463 extended caption; lithograph after William Skiddy sketch, U.S. Naval Academy Museum",
+      "url": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/h55000/h55463l.htm"
+    },
+    {
+      "label": "Biddle to Decatur, 25 March 1815, in James (1817), Appendix No. 112, pp.ccii–ccv",
+      "url": "https://archive.org/details/McGillLibrary-rbsc_lc_account-naval-occurences_Lande00467-16048/page/n751/mode/1up"
+    },
+    {
+      "label": "U.S. Department of State, William Skiddy affidavit, 18 December 1865, FRUS 1866 Part I, document 25",
+      "url": "https://history.state.gov/historicaldocuments/frus1866p1/d25"
+    },
+    {
+      "label": "National Archives, Special List 44, named Navy vessels",
+      "url": "https://www.archives.gov/research/military/logbooks/special-list-44-named"
+    }
+  ],
+  "holdReasons": [
+    "No named cape, summit, extremity or measured reference position identifies what part of the island was sighted or used for the distance.",
+    "The letter does not identify true versus compass bearing, magnetic correction or a surveyed angular precision.",
+    "Distance is an estimated 3–4 miles, not an exact range; the unit is not explicitly qualified in the printed phrase.",
+    "A point 3.5 nautical miles northeast of the island centroid would introduce unsupported reference, unit and bearing assumptions.",
+    "The 6 April letter-heading position is later than the combat and is not substituted for 23 March.",
+    "Skiddy’s 1865 coordinates describe the island, not a ship fix at the action."
+  ],
+  "nextEvidenceNeeded": "An action log entry with a named landmark/range or latitude/longitude fix, or an attributable contemporary chart plotting the engagement. NARA RG 24 Entry 118 / NAID 581208 is a concrete archive lead; the online Special List 44 Hornet rows leave the early log dates blank and do not confirm a March 1815 volume.",
+  "unchanged": [
+    "dates",
+    "coordinates absent",
+    "participants",
+    "strength",
+    "casualties",
+    "deaths",
+    "totals",
+    "unassigned"
+  ],
+  "validation": {
+    "noExecutableMetadataPatch": true,
+    "battleDatePreserved": true,
+    "missingCoordinatesPreserved": true,
+    "curatedAndPublicUnmodified": true,
+    "publicSnapshotByteIdentical": true,
+    "cachedSourceHashesVerified": 7,
+    "mapRenderingTested": false
+  },
+  "reportType": "diagnostic-location-evidence-review",
+  "executable": false,
+  "integrationPolicy": "Diagnostic only. This report is not an input to the battle metadata pipeline and proposes no coordinates or executable patch. Retain the current unmapped record.",
+  "observedMetadata": {
+    "start": {
+      "year": 1815,
+      "month": 3,
+      "day": 23
+    },
+    "end": null,
+    "coords": null
+  },
+  "sourceFiles": [
+    {
+      "url": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/h55000/h55463l.htm",
+      "sha256": "ca93cf0d70e0fd9a696d700e237818500b94c45b6a590be56887b6a3ff939a8b",
+      "bytes": 4550
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1866p1/d25",
+      "sha256": "0a43624f73cba4fa4dfa4ff95175497a74022f6bb0f66e8e085fdd59944fd776",
+      "bytes": 37919
+    },
+    {
+      "url": "https://www.archives.gov/research/military/logbooks/special-list-44-named",
+      "sha256": "97046ceec54ee3dbe2a67dc81e6ce96a7a8ea8705377e01492025befeb10feff",
+      "bytes": 1750691
+    },
+    {
+      "url": "https://archive.org/download/McGillLibrary-rbsc_lc_account-naval-occurences_Lande00467-16048/rbsc_lc_account-naval-occurences_Lande00467_djvu.txt",
+      "sha256": "cc694cd55ed09a4a71e134dea8bf9fe4629fd631462c766c4076bc94ad9da94d",
+      "bytes": 1204044
+    },
+    {
+      "url": "https://archive.org/download/McGillLibrary-rbsc_lc_account-naval-occurences_Lande00467-16048/page/n750.jpg",
+      "sha256": "ac9c94f50f4aced7617e35ae220a1af037d43aa5edcac8dfcfba221323321d54",
+      "bytes": 1063987
+    },
+    {
+      "url": "https://www.tristan.it/TRISTAN/tristanlibri/tristan_annals.pdf",
+      "sha256": "96b7419de233234cdfc1b3fd5cf57e147872a6f17c423bb3ebc695e1f1574809",
+      "bytes": 858939
+    },
+    {
+      "url": "https://archive.org/download/McGillLibrary-rbsc_lc_account-naval-occurences_Lande00467-16048/page/n749.jpg",
+      "sha256": "d23bd3dc1b38b4beb9159998afbd031227c26a6bf1c4736db45d656e554baf56",
+      "bytes": 1032211
+    }
+  ],
+  "sourceFilePolicy": "Hashes identify the bytes read in this review. Raw HTML, OCR, PDF and page images remain temporary research caches and are not included in this report or checked into the repository. Future publisher responses may differ.",
+  "auditDocument": "../../docs/battle-hornet-penguin-location-review-2026-09-21.md"
+}

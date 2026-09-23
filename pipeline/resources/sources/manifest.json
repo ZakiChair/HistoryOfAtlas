@@ -1,0 +1,40 @@
+{
+  "downloadedAt": "2026-09-23",
+  "files": [
+    {
+      "file": "usgs.json.gz",
+      "url": "https://www.datacommons.psu.edu/download/canary/canary-downloads/other-minerals/mineral-resource-online-spatial-data-usgs/mineral-resource-occurrences/major-mineral-deposits-of-the-world/ofr20051294-csv.zip",
+      "sourceSha256": "76456294a5d96b90f49ce88371e0be3ee8ab03ff6afcaa3c2de53d962a369685",
+      "extractSha256": "e7451cbb822284312fabc04ef545196ce20518ac15c234076d45b86bdc80873a",
+      "rows": 3168
+    },
+    {
+      "file": "goget.json.gz",
+      "url": "https://publicgemdata.nyc3.cdn.digitaloceanspaces.com/interim_maps/goget_map_2026-03.geojson",
+      "sourceSha256": "a91682aff0a60cc143d09c7f6c0c4d8236af6c523e1330ccf5a9329e531261f7",
+      "extractSha256": "4bd432460545b8eebbb0cf6657e70cf4f0875e4a2c75e8f05de555ec859ffb03",
+      "rows": 7673
+    },
+    {
+      "file": "gcmt.json.gz",
+      "url": "https://publicgemdata.nyc3.cdn.digitaloceanspaces.com/Current_maps/gcmt-smp/gcmt-smp_map_2026-08.geojson",
+      "sourceSha256": "56679de78a7405a513b13b364486bcd44b7bc63cc89c5f21ffb892b4fdaf7958",
+      "extractSha256": "8f0dffe39afd31c82fcc7472c756dabb8b9f78ee555f9aee0d3c91c8db42b942",
+      "rows": 7436
+    },
+    {
+      "file": "sodir-production.json.gz",
+      "url": "https://factpages.sodir.no/public?/Factpages/external/tableview/field_production_yearly&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=not_used&CultureCode=en&rs:Format=CSV&Top100=false",
+      "sourceSha256": "3c0641a455496b7b981be61965d18d91777ddf77efc8b297eae7c8396f67df1c",
+      "extractSha256": "cfbf501f71f2116e3d6efcd8d786b97be9ad4c301f222294a5331dca6316c678",
+      "rows": 2414
+    },
+    {
+      "file": "sodir-fields.json.gz",
+      "url": "https://factmaps.sodir.no/api/rest/services/DataService/Data/FeatureServer/7100/query?where=1%3D1&outFields=fldNpdidField%2CfldName%2CfldFactPageUrl&returnGeometry=false&returnCentroid=true&outSR=4326&f=json",
+      "sourceSha256": "819c70e0bd1aea31c094d188ad47a149963ff99ecd513732c8c95c715c1af85e",
+      "extractSha256": "0f544bd06839b7d44470883db9c0b48d0c40698e3f61fe0ffed46b716c622b8b",
+      "rows": 142
+    }
+  ]
+}

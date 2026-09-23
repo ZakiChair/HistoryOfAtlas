@@ -1,0 +1,161 @@
+{
+  "scope": "Read-only sample audit of 15 imported CDB90 profiles against original and revised CSV fields, review crosswalk, and targeted battlefield-authority sources. This is not independent certification of every source number.",
+  "sampleSourceIds": [
+    1,
+    6,
+    21,
+    32,
+    50,
+    62,
+    70,
+    138,
+    155,
+    156,
+    179,
+    192,
+    232,
+    234,
+    267
+  ],
+  "records": [
+    {
+      "sourceId": 192,
+      "battleId": "Q233360",
+      "decision": "rejected",
+      "appendNote": "Independent numerical QC: original CDB90 already attaches 4,233 casualties to Rosecrans's US Army of the Mississippi and 2,520 to Van Dorn's Confederate Army of Western Tennessee. NPS's official Mississippi battle listing for Corinth, October 3–4, gives Union losses of 355 killed, 1,841 wounded and 324 missing (2,520). This is a material side-allocation conflict, apparently swapped casualty totals, not a parser defect. Hold pending an explicitly sourced correction; do not silently swap or average.",
+      "sources": [
+        "https://www.nps.gov/civilwar/mississippi.htm",
+        "https://www.battlefields.org/learn/civil-war/battles/corinth"
+      ]
+    },
+    {
+      "sourceId": 179,
+      "battleId": "Q2125491",
+      "decision": "rejected",
+      "appendNote": "Independent force-scope QC: original CDB90 has Confederate Valley Army initial strength 16,000 versus the 1,063-man Union outpost. NPS distinguishes Front Royal forces engaged as Confederate 3,000 versus Union 1,063 and describes Jackson's wider army at roughly 17,000. CDB's code-1 whole-army strength therefore does not establish 16,000 combatants at this particular engagement. Hold the proportional full-battle scene until the force scope is curated, rather than treating an initial army total as a battle-engaged total.",
+      "sources": [
+        "https://home.nps.gov/articles/000/jackson1862-valley-campaign.htm",
+        "https://www.nps.gov/articles/000/battle-of-front-royal.htm"
+      ]
+    },
+    {
+      "sourceId": 267,
+      "battleId": "Q2003949",
+      "decision": "rejected",
+      "appendNote": "Conservative force-scope quarantine: CDB90 labels its German code-3 estimate of 250,000 (minus 60% stated possible deviation) as First Army. The bounded review did not establish that this total represents personnel engaged at Le Cateau rather than the broader parent army. The official cemetery account describes British II Corps with French cavalry and approximately 40,000 Allied troops. The CHACR battlefield guide identifies particular German corps/divisions and British II Corps with attached formations and French cavalry, but supplies no personnel total establishing CDB's 250,000 as battle-engaged strength. Hold as unresolved scope, not a proven false number; do not substitute a new count without a reviewed source.",
+      "sources": [
+        "https://kriegsgraeberstaetten.volksbund.de/en/military-cemetery/le-cateau-brit-friedhof",
+        "https://chacr.org.uk/wp-content/uploads/2021/09/The-Western-Front-Vol1.pdf"
+      ],
+      "sourceNote": "CHACR guide printed p. 19, principal forces engaged. Its note also independently traces the disputed 8,970 German casualties to a 1933 War Office study, so casualty disagreement alone is not grounds for silently correcting this entry."
+    },
+    {
+      "sourceId": 204,
+      "battleId": "Q2237043",
+      "decision": "rejected",
+      "appendNote": "Hold pending corrected force identity and count-scope review. CDB90 calls the New Market sides CS ARMY OF NORTHERN VIRGINIA (initial strength 5,000; casualties 577) and US ARMY OF THE POTOMAC (5,150; 831). NPS identifies Breckinridge's assembled Valley brigades and VMI cadets versus Sigel's Department of West Virginia army. Estimate variation alone is not the reason for this hold: the displayed commands are misleading, and their association with the tabulated initial strengths needs explicit review.",
+      "sources": [
+        "https://www.nps.gov/articles/000/battle-of-new-market.htm"
+      ]
+    },
+    {
+      "sourceId": 193,
+      "battleId": "Q1631029",
+      "decision": "rejected",
+      "appendNote": "Hold for reviewed historical force label and count scope. The source Confederate name at Perryville is CS ARMY OF TENNESSEE (-), whereas the US Army's staff-ride handbook identifies Bragg's 1862 force as Army of the Mississippi. This is a source display-identity problem that may be correctable while preserving original NAM as a qualifier; it does not by itself prove the source's 16,000 Confederate initial strength false. The Union source estimate is 36,940 initial personnel, which also requires careful reserve/engagement interpretation before a replacement is approved.",
+      "sources": [
+        "https://www.armyupress.army.mil/Portals/7/educational-services/staff-rides/StaffRideHB_Perryville.pdf"
+      ]
+    },
+    {
+      "sourceId": 209,
+      "battleId": "Q4801174",
+      "decision": "rejected",
+      "appendNote": "Hold pending a reviewed aggregate identity. CDB90 gives 63,797 total-engaged personnel to US ARMY OF THE JAMES for Petersburg's June 15–18 opening assaults. NPS identifies Smith's XVIII Corps on June 15, subsequently reinforced by Army of the Potomac corps; the larger multi-day total cannot be displayed as Army of the James alone without resolving that scope. The source's Confederate aggregate PETERSBURG GARRISSON (+) and all raw estimates should remain preserved, not silently reassigned.",
+      "sources": [
+        "https://home.nps.gov/pete/learn/historyculture/the-opening-assaults.htm",
+        "https://www.nps.gov/pete/learn/historyculture/united-states-colored-troops-in-opening-assaults.htm"
+      ]
+    },
+    {
+      "sourceId": 217,
+      "battleId": "Q194329",
+      "decision": "rejected",
+      "appendNote": "Hold pending reviewed Union aggregate identity and count scope. CDB90 labels 30,000 initial personnel at Five Forks as US V CORPS. NPS describes the assault by Warren's V Corps together with Sheridan's cavalry, and distinguishes their actions. The source total may concern that larger combined force rather than V Corps alone; do not present it as a verified corps strength or silently split it between formations. Estimate variation alone is not the reason for this hold.",
+      "sources": [
+        "https://www.nps.gov/pete/learn/historyculture/battle-of-five-forks.htm",
+        "https://www.nps.gov/articles/000/battle-of-five-forks.htm"
+      ]
+    }
+  ],
+  "reviewOnly": [
+    {
+      "sourceId": 187,
+      "battleId": "Q1934345",
+      "finding": "Malvern Hill source initial-strength estimates are 82,507 Confederate and 78,902 Union. NPS explicitly describes nearly 70,000 Union infantry, mostly held in reserve behind the hill, and less than a third of the Union army actually fighting. Unlike Front Royal's distant parent-army question, substantial reserves were physically at Malvern Hill. Retention is defensible only as initial force including reserves, not total soldiers engaged or firing. Equipment assignment does not independently validate strength scope.",
+      "sources": [
+        "https://www.nps.gov/rich/learn/historyculture/mhbull.htm"
+      ]
+    },
+    {
+      "sourceId": 182,
+      "battleId": "Q2602211",
+      "finding": "Port Republic source defender US V CORPS is a broad historical command label for Tyler's small force from Shields's division. NPS identifies about 3,500 men under Tyler; CDB's 3,000 is of that detachment order, so this review does not establish a whole-corps count inflation. A future display-name correction should distinguish the field detachment while preserving original NAM.",
+      "sources": [
+        "https://home.nps.gov/articles/000/battle-of-port-republic.htm"
+      ]
+    }
+  ],
+  "remainingSample": [
+    {
+      "sourceId": 1,
+      "finding": "Nieuwpoort: original army designations and Maurice/Albert commanders align with Dutch Republic/Hispanic Monarchy; no modern-state or person substitution detected."
+    },
+    {
+      "sourceId": 6,
+      "finding": "Breitenfeld: Swedish-Saxon and Imperial-League aggregates correctly remain single local forces, despite incomplete derived actors."
+    },
+    {
+      "sourceId": 21,
+      "finding": "Marston Moor: original NAM distinguishes parliamentary and royalist sides despite erroneous derived actors; original coalition total remains one local parliamentary force."
+    },
+    {
+      "sourceId": 32,
+      "finding": "Vienna: both multi-polity armies remain local aggregates, without allocating the same total to each listed polity."
+    },
+    {
+      "sourceId": 50,
+      "finding": "Blenheim: combined Franco-Bavarian and Allied identities are retained as single forces. High losses remain personnel casualties rather than inferred deaths."
+    },
+    {
+      "sourceId": 62,
+      "finding": "Prestonpans: 1745 Kingdom of Great Britain identity is temporally appropriate. High 1,800/2,200 loss ratio remains casualties, not deaths."
+    },
+    {
+      "sourceId": 70,
+      "finding": "Leuthen: Kingdom of Prussia and Habsburg Monarchy identities are appropriate. Prussian casualty estimate is wide (-47% lower deviation); retained as CDB evidence rather than a consensus figure."
+    },
+    {
+      "sourceId": 138,
+      "finding": "Leipzig: both sides code 3, with initial plus reinforcements exactly matching source totals. Allied coalition stays aggregated. French side retains the source French Army designation in qualifiers and one count."
+    },
+    {
+      "sourceId": 155,
+      "finding": "Ayacucho: actual named historical military forces, United Liberating Army of Peru and Royal Army of Peru, align with original Sucre/La Serna sides; no modern Peru/Spain substitution."
+    },
+    {
+      "sourceId": 156,
+      "finding": "San Jacinto: 1,600/1,600 Mexican loss estimate and source final-strength zero do not become 1,600 deaths; parser keeps deaths empty and source -70% casualty uncertainty. High ratio alone is not evidence of unit or scope corruption."
+    },
+    {
+      "sourceId": 232,
+      "finding": "Majuba Hill: reused United Kingdom of Great Britain and Ireland is period-appropriate. Large casualty ratio and broad +85% force margin are kept explicitly."
+    },
+    {
+      "sourceId": 234,
+      "finding": "Omdurman: source British Army label remains a local military force with review note identifying Anglo-Egyptian scope; combined estimate is not allocated to the British polity alone."
+    }
+  ],
+  "systemicFinding": "CDB strength code describes initial/average/total-engaged accounting, not assurance that the named parent army is wholly present in the specific mapped action. Exact article and dates cannot alone prove force scope. Original NAM is safer than derived actors (Marston Moor demonstrates a real actors error), but can still be a broad headquarters label. No global parser sign, row-order, casualty/death or identity-classification defect was found in this sample. Original-source discrepancies must be quarantined case by case rather than 'corrected' generically. No anachronistic reused identity was found in the 15 sampled profiles.",
+  "followupScope": "Late-equipment review added four crosswalk holds for source force-name or aggregate-scope conflicts (193, 204, 209, 217), not for mere variation in estimates. Original source rows and numbers remain pinned. Malvern Hill 187 and Port Republic 182 retain approved import status; qualifications are recorded without changing their estimates."
+}
