@@ -63,6 +63,7 @@ const sources: ResourceSource[] = [
 const contributions = [
   'historical',
   'historical-expanded',
+  'historical-world',
   'modern-minerals',
   'west-africa',
   'current-major-mines',

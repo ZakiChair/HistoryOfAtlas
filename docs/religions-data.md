@@ -1,6 +1,6 @@
 # Corpus historique des traditions religieuses
 
-`public/data/religions/history.json` est un corpus éditorial bilingue, consulté et vérifié le **23 septembre 2026**. Il contient **16 traditions, 92 étapes, 54 zones schématiques, 23 relations de transmission et 103 sources**. Ses premiers et derniers jalons sont respectivement 3200 av. J.-C. et 1958.
+`public/data/religions/history.json` est un corpus éditorial bilingue, consulté et vérifié le **23 septembre 2026**, puis complété le **24 septembre 2026** de 39 étapes de diffusion postérieures à 1600, chacune revérifiée sur ses sources par un relecteur indépendant. Il contient **16 traditions, 131 étapes, 54 zones schématiques, 27 relations de transmission et 148 sources**. Ses premiers et derniers jalons sont respectivement 3200 av. J.-C. et 1988.
 
 La couche affiche les **repères historiques cumulés jusqu’à l’année sélectionnée**. Un marqueur, un trait ou une zone conservé à une date ultérieure signifie que cette attestation a déjà eu lieu. Il ne démontre ni une pratique toujours vivante, ni une présence continue, ni une majorité religieuse, ni une frontière. Les traditions peuvent se superposer géographiquement et chronologiquement.
 
@@ -10,20 +10,20 @@ La couche affiche les **repères historiques cumulés jusqu’à l’année sél
 | ---------------- | ------------------------------------- | -----: | ----: | --------: |
 | `mesopotamian`   | Traditions mésopotamiennes            |      4 |     2 |         0 |
 | `egyptian`       | Traditions de l’Égypte ancienne       |      4 |     2 |         1 |
-| `hinduism`       | Traditions védiques et hindoues       |      8 |     4 |         1 |
+| `hinduism`       | Traditions védiques et hindoues       |     10 |     4 |         1 |
 | `andean`         | Traditions andines et incas           |      4 |     3 |         1 |
-| `zoroastrianism` | Zoroastrisme                          |      4 |     2 |         1 |
+| `zoroastrianism` | Zoroastrisme                          |      6 |     2 |         1 |
 | `greco-roman`    | Traditions grecques et romaines       |      4 |     3 |         1 |
-| `judaism`        | Judaïsme                              |      6 |     1 |         2 |
-| `jainism`        | Jaïnisme                              |      4 |     2 |         0 |
-| `daoism`         | Traditions taoïstes                   |      4 |     2 |         0 |
-| `confucianism`   | Traditions confucéennes               |      4 |     2 |         0 |
-| `buddhism`       | Bouddhismes                           |     11 |     9 |         6 |
-| `christianity`   | Christianismes                        |     13 |     7 |         4 |
-| `islam`          | Islam                                 |     10 |     9 |         3 |
-| `shinto`         | Cultes des kami et shinto             |      3 |     2 |         0 |
-| `yoruba-orisha`  | Traditions yoruba, òrìṣà et diasporas |      5 |     3 |         2 |
-| `sikhism`        | Sikhisme                              |      4 |     1 |         1 |
+| `judaism`        | Judaïsme                              |     11 |     1 |         4 |
+| `jainism`        | Jaïnisme                              |      5 |     2 |         0 |
+| `daoism`         | Traditions taoïstes                   |      6 |     2 |         0 |
+| `confucianism`   | Traditions confucéennes               |      5 |     2 |         0 |
+| `buddhism`       | Bouddhismes                           |     15 |     9 |         7 |
+| `christianity`   | Christianismes                        |     21 |     7 |         4 |
+| `islam`          | Islam                                 |     16 |     9 |         3 |
+| `shinto`         | Cultes des kami et shinto             |      6 |     2 |         0 |
+| `yoruba-orisha`  | Traditions yoruba, òrìṣà et diasporas |      7 |     3 |         3 |
+| `sikhism`        | Sikhisme                              |      7 |     1 |         1 |
 
 Les catégories sont des outils de lecture. « Traditions andines » rassemble des cultures distinctes : aucune filiation Chavín → Tiwanaku → Inca n’est tracée. Les traditions gréco-romaines, mésopotamiennes et égyptiennes sont également plurielles. Le classement des traditions confucéennes comme religion, éthique ou philosophie dépend du contexte. Les communautés diasporiques ne sont pas considérées comme des copies inchangées d’une tradition d’origine.
 

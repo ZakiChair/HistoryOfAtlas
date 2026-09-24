@@ -1382,6 +1382,1415 @@
       "coordinateSourceUrl": "https://www.cirkwi.com/fr/point-interet/1627601-site-historique-des-hauteurs-de-spicheren",
       "note": "The inherited location near Gravelotte is replaced with the published locator for the historic Hauteurs de Spicheren sector. The Forbach tourism office and the municipality identify these heights with the fighting of 6 August 1870. This site reference does not define the full battlefield or a specific regiment position. The existing date, army identities, equipment, strengths and losses are retained; no numerical statements from the tourism or municipal pages are adopted.",
       "coordinateBasis": "Forbach Tourisme publishes the Site historique des hauteurs de Spicheren through the attributed SITLOR record on Cirkwi, with explicit latitude 49.2042714 and longitude 6.9665873. These round to [6.9666,49.2043]. This is a Hauteurs sector reference point, not a surveyed troop position, exact regimental placement or centre of the entire engagement. The official tourism and municipal accounts independently establish the combat sector. No positional accuracy radius is claimed, and the visitor site is not used to locate a particular 1870 formation or to assign later memorial equipment."
+    },
+    "Q328768": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1426,
+          "month": 9,
+          "day": 27
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        7.6627,
+        53.2114
+      ],
+      "sources": [
+        {
+          "label": "Neue Deutsche Biographie 26 (2016), pp. 556–557 · Heinrich Schmidt, Ukena, Focko: the Bremen-led noble army defeated bei Detern",
+          "url": "https://www.deutsche-biographie.de/sfz131568.html"
+        },
+        {
+          "label": "Ostfriesische Landschaft · Historische Ortsdatenbank, Detern (Samtgemeinde Jümme): scattered settlement about 1.5 km east of Stickhausen and just under 14 km east of Leer; its bibliography lists H. A. Korte's historical novella 'Die Deterner Schlacht am 26. September 1426'",
+          "url": "https://bibliothek.ostfriesischelandschaft.de/wp-content/uploads/sites/3/dateiarchiv/3229/Detern.pdf"
+        },
+        {
+          "label": "GeoNames 2937944 · Detern, populated place (PPLA4), published latitude and longitude",
+          "url": "https://sws.geonames.org/2937944/about.rdf"
+        },
+        {
+          "label": "OpenStreetMap · node 240088890, Detern place=village",
+          "url": "https://api.openstreetmap.org/api/0.6/node/240088890"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/2937944/about.rdf",
+      "note": "The Neue Deutsche Biographie states that Focko Ukena defeated the noble army brought by Archbishop Nikolaus of Bremen 'bei Detern'. The locator is the gazetteer point for the village of Detern, used as a sector reference; the Ostfriesische Landschaft describes Detern as a scattered settlement, and no fetched source fixes the field of battle. Both fetched non-gazetteer sources date the battle 26 September 1426 (the NDB text and the title of the novella listed in the Ostfriesische Landschaft bibliography), against the catalogue's and Wikidata's 27 September; because the sources disagree, the existing date is retained and the one-day discrepancy is flagged for a date review. Strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "GeoNames 2937944 (Detern, feature code P.PPLA4) publishes latitude 53.21144 and longitude 7.66269, rounded to [7.6627,53.2114]. OpenStreetMap place node 240088890 (Detern, place=village, wikidata Q559632) lies about 0.5 km east at 53.2109195, 7.6700309, corroborating the named place. Independently of the gazetteers, the Ostfriesische Landschaft places Detern about 1.5 km east of Stickhausen and just under 14 km east of Leer; the GeoNames point is about 1.3 km east of the OSM Stickhausen village node and about 13.9 km east of the OSM Leer boundary centre. This is a village reference for an engagement documented only as 'bei Detern'; it is not a surveyed battlefield, a troop position or the centre of the fighting. No accuracy radius is claimed."
+    },
+    "Q484029": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1593,
+          "month": 2,
+          "day": 27
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        126.9003,
+        37.7043
+      ],
+      "sources": [
+        {
+          "label": "Korea Heritage Service · Historic Site 144, Goyang Byeokjegwan Guesthouse Site, published location",
+          "url": "https://www.heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1333101440000&pageNo=1_1_2_0"
+        },
+        {
+          "label": "Korea Heritage Service · heritage description: site of the Byeokjegwan battle between the Ming army under Li Rusong and the Japanese",
+          "url": "https://www.heritage.go.kr/DATA1/heritage/hub_img/html/cul_1333101440000.html"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1333101440000&pageNo=1_1_2_0",
+      "coordinateBasis": "The Korea Heritage Service record for Goyang Byeokjegwan Guesthouse Site (Historic Site 144; 4,399 m²; 34-16 Byeokjegwan-ro, Deogyang-gu, Goyang) publishes its location-button parameters as longitude 126.900348095671 and latitude 37.7043209726772, rounded to [126.9003,37.7043]. Its official description states that the place was also the site of the Byeokjegwan battle between the Ming army under Li Rusong (Yi Yeo-song) and the Japanese. The same description dates the present guesthouse site to the 1625 relocation of Goyang county, so this is the state-designated named-site reference, not a proven 1593 position, a Ming or Japanese unit position, or the extent of the fighting. No accuracy radius is claimed.",
+      "note": "Add a named-site reference from the Korea Heritage Service record for the Byeokjegwan guesthouse site, whose official description identifies the place as the site of the Byeokjegwan battle between Ming and Japanese forces. The point marks the designated site, whose present remains belong to a 1625 rebuilding; it does not define the battlefield or any formation. The existing 27 February 1593 date is retained and no end date is added. Strengths, losses and equipment are not inferred."
+    },
+    "Q589285": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1591,
+          "month": 3,
+          "day": 12
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -0.2203,
+        16.6563
+      ],
+      "sources": [
+        {
+          "label": "OpenStreetMap · node 2162066832, Tondibi (place=hamlet, Cercle de Gao, Mali; NGA GNS UFI -1076277), published location",
+          "url": "https://www.openstreetmap.org/node/2162066832"
+        },
+        {
+          "label": "L. Kaba · Archers, Musketeers, and Mosquitoes: The Moroccan Invasion of the Sudan and the Songhay Resistance (1591–1612), Journal of African History 22 (1981): battle of Tondibi, March 1591",
+          "url": "https://doi.org/10.1017/S0021853700019861"
+        },
+        {
+          "label": "R. Reid · Tondibi, Battle of (1591), The Encyclopedia of War (Wiley, 2011), abstract via Crossref: fought on the northeast bend of the Niger",
+          "url": "https://api.crossref.org/works/10.1002/9781444338232.wbeow638"
+        },
+        {
+          "label": "Wikipedia (en) · Battle of Tondibi, permanent revision 1370591218 (secondary pointer: Tankondibogho near Tondibi, just north of Gao, citing Gomez 2018 and Kaba 1981)",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Tondibi&oldid=1370591218"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/2162066832",
+      "note": "The scholarly literature names the March 1591 defeat of Askia Ishaq II’s Songhay army by Judar Pasha’s Moroccan force after Tondibi, on the Niger bend north of Gao. The atlas point marks Tondibi hamlet as a village-sector reference; the Wikipedia summary, citing Gomez (2018), places the meeting at Tankondibogho near Tondibi, which no gazetteer consulted locates. The existing date (12 March 1591) is retained; the 13 March given by the Wikipedia summary is not adopted. Strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "OpenStreetMap node 2162066832 (place=hamlet, name Tondibi, Cercle de Gao, Mali; tagged with NGA GNS feature UFI -1076277) is at latitude 16.6563239, longitude -0.2202997, rounded to [-0.2203,16.6563]. It is the only Tondibi settlement the gazetteer returns in Mali and lies on the Niger north of Gao, consistent with Reid’s “northeast bend of the Niger” and the Wikipedia summary “near Tondibi, just north of Gao”. This is an eponymous village reference, not the exact field at Tankondibogho (not located), the Songhay or Moroccan lines, or a surveyed centre. No accuracy radius is claimed."
+    },
+    "Q696795": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1260,
+          "month": 7
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        16.9046,
+        48.2224
+      ],
+      "sources": [
+        {
+          "label": "Museum Niederösterreich · Gedächtnis des Landes · Groißenbrunn, place of the decisive battle of 12 July 1260",
+          "url": "https://www.gedaechtnisdeslandes.at/orte/ort/groissenbrunn"
+        },
+        {
+          "label": "OpenStreetMap · node 88154682, Groißenbrunn (place=village), published location",
+          "url": "https://www.openstreetmap.org/node/88154682"
+        },
+        {
+          "label": "LIT Verlag · Hermann Klima, Die Schlacht bei Groißenbrunn anno 1260 (2010): battle of 12 July 1260 in the Marchfeld",
+          "url": "https://lit-verlag.de/isbn/978-3-643-50149-3/"
+        },
+        {
+          "label": "OpenStreetMap · node 2324030046, Schlacht bei Kressenbrunn Denkmal (historic=memorial on the L5, Groißenbrunn), inscription commemorating the battle of 12 July 1260",
+          "url": "https://www.openstreetmap.org/node/2324030046"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/88154682",
+      "note": "Kressenbrunn is the medieval name of Groißenbrunn in the south-eastern Marchfeld, Lower Austria. Museum Niederösterreich identifies the village as the place of the decisive battle between Béla IV of Hungary and Ottokar II of Bohemia, and Klima’s monograph situates the 1260 events in the Marchfeld landscape. The point marks the village as a sector reference, not the full battlefield or any camp position. The existing month-precision date (July 1260) is retained; the museum’s day, 12 July, is not added. Strengths, losses and equipment are not inferred, and the museum’s casualty figure is not adopted.",
+      "coordinateBasis": "OpenStreetMap node 88154682 (place=village, name Groißenbrunn) is at latitude 48.2223664, longitude 16.9046470, rounded to [16.9046,48.2224]. Museum Niederösterreich’s Gedächtnis des Landes identifies Groißenbrunn, first recorded in 1115 as “Chressinprunen”, as the place of the decisive battle between Béla IV and Ottokar II on 12 July 1260. This is a village-sector reference, not the Bohemian main camp struck by the Hungarian attack or a surveyed battlefield centre. It is also not the separate battle memorial beside the L5 road (OpenStreetMap node 2324030046, about 100 m south-east of the village node), whose inscription commemorates the battle at Groissenbrunn between Ottokar II and Béla IV on 12 July 1260. No accuracy radius is claimed."
+    },
+    "Q715416": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1972,
+          "month": 4,
+          "day": 13
+        },
+        "end": {
+          "year": 1972,
+          "month": 7,
+          "day": 20
+        },
+        "coords": null
+      },
+      "coords": [
+        106.6059,
+        11.6471
+      ],
+      "note": "Reviewed location: the 1972 siege centred on the town of An Lộc, capital of Bình Long Province. Indiana University Press describes Willbanks's study as the account of the 60-day siege of An Lộc in Bình Long province; the cited Wikipedia revision places the battle at An Lộc, provincial capital, 13 April–20 July 1972. The point is the GeoNames populated place Bình Long, which lists An Loc among its names. It is a town reference, not the perimeter, a troop position or the outlying Highway 13 fighting. The existing dates are retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "GeoNames 1580349 · Bình Long populated place (alternate names An Loc, Hớn Quản), coordinates 11.64711, 106.60586",
+          "url": "https://www.geonames.org/1580349/binh-long.html"
+        },
+        {
+          "label": "GeoNames full-text search for An Loc, Vietnam · Bình Long listed with alternate name An Loc",
+          "url": "https://www.geonames.org/search.html?q=An+Loc&country=VN"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · relation 21109835, Khu phố An Lộc (An Lộc quarter), Bình Long, centre 11.6526, 106.6025",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=R21109835&format=jsonv2"
+        },
+        {
+          "label": "Indiana University Press · Willbanks, The Battle of An Loc: the 60-day siege of An Loc in Binh Long province",
+          "url": "https://iupress.org/9780253018991/the-battle-of-an-loc/"
+        },
+        {
+          "label": "Wikipedia · Battle of An Lộc (revision 1376491686): An Lộc, capital of Bình Long Province, 13 April–20 July 1972",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_An_L%E1%BB%99c&oldid=1376491686"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.geonames.org/1580349/binh-long.html",
+      "coordinateBasis": "GeoNames record 1580349 (populated place Bình Long, population 15,000) publishes GeoCoordinates latitude 11.64711 and longitude 106.60586; its full-text search entry lists An Loc and Hớn Quản among the alternate names of the same place. Rounded to [106.6059,11.6471]. This is a town reference point for the besieged provincial capital, not a surveyed defensive perimeter, a unit position or the centre of the wider Bình Long fighting. The OSM quarter Khu phố An Lộc (relation 21109835), with the Bình Long market inside it, has its Nominatim centre about 0.7 km north-west of the point, and the OSM place=town node Bình Long is about 0.6 km away, both inside the old town. The present-day administrative ward polygon (OSM Phường An Lộc, centroid about 4.5 km north) is not used. No positional accuracy radius is claimed."
+    },
+    "Q743734": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1812,
+          "month": 8,
+          "day": 12
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        24.3099,
+        52.4235
+      ],
+      "note": "Reviewed location: the cited English and Russian Wikipedia revisions place the battle of 12 August 1812 (31 July Old Style) at Gorodechno, then a small town in Kobrinsky uyezd and now in Pruzhany District, Brest Region, where Tormasov held a defensive position behind a marshy tributary of the Mukhavets. Two encyclopaedias transcribed on Wikisource name the same place. The Brockhaus–Efron dictionary (1893) places the battle of 31 July 1812 (Julian) at Gorodechna in Kobrin uyezd, Grodno governorate. The Sytin Military Encyclopedia (1911–1915) sets Tormasov's position on the heights along the right bank of the small Gorodechna river, with the Bolshoye Poddubye crossing 4 versts west of the town. The English Wikipedia revision gives infobox coordinates 52°25′25.37″N 24°18′35.92″E, about 30 m from the stored point. The point is the gazetteer position of that village (Belarusian Гарадзечна). It is a sector reference for the Russian position named by the sources, not Schwarzenberg's detachment turning the Russian left, the allied attack positions or the full battlefield. The existing date is retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "GeoNames 628204 · Haradzyechna (Gorodechno, Гарадзечна), populated place, Brest Region, 52.4235 N, 24.3099 E",
+          "url": "https://www.geonames.org/628204/haradzyechna.html"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · relation 7467844, Гарадзечна, Shaniawski selsoviet, Pruzhany District, Brest Region",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=R7467844&format=jsonv2"
+        },
+        {
+          "label": "Военная энциклопедия Сытина (1911–1915), т. 8, с. 412–413, «Городечна» (ru.wikisource revision 4598459): battle of 31 July 1812 at Gorodechna, Kobrin uyezd; Russian position on the heights along the right bank of the small Gorodechna river, a tributary of the Mukhavets",
+          "url": "https://ru.wikisource.org/w/index.php?title=%D0%92%D0%AD/%D0%92%D0%A2/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B5%D1%87%D0%BD%D0%B0&oldid=4598459"
+        },
+        {
+          "label": "Энциклопедический словарь Брокгауза и Ефрона, т. IX (1893), с. 303, «Городечна» (ru.wikisource revision 5105340): battle of 31 July 1812 at Gorodechna, Kobrin uyezd, Grodno governorate",
+          "url": "https://ru.wikisource.org/w/index.php?title=%D0%AD%D0%A1%D0%91%D0%95/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B5%D1%87%D0%BD%D0%B0&oldid=5105340"
+        },
+        {
+          "label": "Wikipedia · Battle of Gorodechno (revision 1370441857): at Gorodechno, now Pruzhany District, Brest Region",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Gorodechno&oldid=1370441857"
+        },
+        {
+          "label": "Russian Wikipedia · Сражение под Городечно (revision 154892238): 31 July (12 August) 1812; Tormasov's defensive position at Gorodechno",
+          "url": "https://ru.wikipedia.org/w/index.php?title=%D0%A1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B4_%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D0%B5%D1%87%D0%BD%D0%BE&oldid=154892238"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.geonames.org/628204/haradzyechna.html",
+      "coordinateBasis": "GeoNames 628204, Haradzyechna (alternate names Gorodechno, Гарадзечна) in Brest Region, publishes latitude 52.4235 and longitude 24.3099. The OSM hamlet boundary Гарадзечна in Pruzhany District (relation 7467844) has its Nominatim centre at 52.4238513, 24.3101915, about 45 m away, confirming this is the Pruzhany District village and not the homonyms in Navahrudak or Valozhyn districts. Stored as [24.3099,52.4235]. This is a village reference for the Russian defensive position, not a surveyed line, a dam crossing or any regiment's position, and it does not represent the detachment sent round the Russian left through the forest. No positional accuracy radius is claimed."
+    },
+    "Q747266": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1829,
+          "month": 2,
+          "day": 26
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -79.1097,
+        -3.1076
+      ],
+      "note": "The official development plan of the parish of Victoria del Portete, published in the Registro Oficial, describes the Templete del Portete de Tarqui on the Portete–Tinajillas knot as the memorial raised to those who fought the Battle of Tarqui, inaugurated in 1936 under Sucre's instruction to build an obelisk at the Portete de Tarqui. The parish's official history states that the battle was fought across its plains, hills and ravines. The atlas point is the gazetteer node for the Templete, a battlefield-sector reference beside the El Portete hamlet, not a troop position or the full extent of the fighting. The existing date is retained: both official sources give 27 February 1829, a discrepancy left for a separate date review. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "GAD Parroquial Victoria del Portete · Actualización del PDOT 2024–2027, Registro Oficial Edición Especial 1923 (11 December 2024), p. 229: Templete del Portete de Tarqui",
+          "url": "https://gadvictoriadelportete.gob.ec/azuay/wp-content/uploads/2025/03/PDOT-REGISTRO-OFICIAL.pdf"
+        },
+        {
+          "label": "GAD Parroquial Victoria del Portete · Historia de la parroquia: battle fought in its plains, hills and ravines",
+          "url": "https://gadvictoriadelportete.gob.ec/azuay/historia/"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 7017521012, Templete de la Batalla de Tarqui (historic=monument; OSM name truncated to 'Tarqu'), published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N7017521012&format=jsonv2"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 874868461, El Portete hamlet, Victoria del Portete",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N874868461&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Tarqui, revision 1370590606",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Tarqui&oldid=1370590606"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N7017521012&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 7017521012 (historic=monument, tagged name 'Templete de la Batalla de Tarqu', truncated in OpenStreetMap, Victoria del Portete / Girón) returns latitude -3.1075632 and longitude -79.1096587, rounded to [-79.1097,-3.1076]. The parish PDOT identifies the Templete as the obelisk ordered by Sucre for the Portete de Tarqui; the El Portete hamlet node lies about 400 m to the north-east. This is a memorial and battlefield-sector reference, not a surveyed position of either army or the centre of the engagement. No positional accuracy radius is claimed."
+    },
+    "Q1650099": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1208
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -19.1384,
+        65.7418
+      ],
+      "note": "The Icelandic Wikipedia, drawing on Sturlunga saga, places the 1208 battle between Kolbeinn Tumason's following and Bishop Guðmundur Arason's men on the lands of the farm Víðines in Hjaltadalur, close to the episcopal seat at Hólar; the Skagafjörður archives catalogue a work titled Víðinesbardagi í Hjaltadal 1208. The atlas point is the gazetteer feature for the Víðines farmyard in Skagafjörður. It is a farm-sector reference, not a surveyed field position, and the existing year-precision date is retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "Wikipedia (Icelandic, secondary pointer) · Víðinesbardagi, revision 1870136: fought in the land of Víðines in Hjaltadalur near Hólar",
+          "url": "https://is.wikipedia.org/w/index.php?title=V%C3%AD%C3%B0inesbardagi&oldid=1870136"
+        },
+        {
+          "label": "Héraðsskjalasafn / Listasafn Skagfirðinga · catalogue item LS250, Víðinesbardagi 1208 (Víðinesbardagi í Hjaltadal)",
+          "url": "https://atom.skagafjordur.is/index.php/vi-inesbardagi-1208"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · way 730892869, Víðines farmyard, Skagafjörður, published centre latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=W730892869&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Víðines, revision 1366179106",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_V%C3%AD%C3%B0ines&oldid=1366179106"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=W730892869&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap way 730892869 (landuse=farmyard, name Víðines, Skagafjörður, postcode 551) returns the centre latitude 65.7417943 and longitude -19.1384252, rounded to [-19.1384,65.7418]. The farm lies in Hjaltadalur about 1.5 km from Hólar; other places named Víðines, at Kjalarnes and Bifröst, are not used. This is a farm reference point, not a surveyed position of the 1208 fighting; no accuracy radius is claimed."
+    },
+    "Q1764599": {
+      "expected": {
+        "start": {
+          "year": 1940,
+          "month": 4,
+          "day": 9
+        },
+        "end": null,
+        "coords": null
+      },
+      "reviewedAt": "2026-09-24",
+      "coords": [
+        9.7,
+        67.3667
+      ],
+      "sources": [
+        {
+          "label": "Naval History Homepage · Royal Navy day-by-day, April 1940: Renown’s engagement with Scharnhorst and Gneisenau at 0337/9th in 67-22N, 09-42E",
+          "url": "https://www.naval-history.net/xDKWW2-4004-13APR02.htm"
+        },
+        {
+          "label": "T. K. Derry, The Campaign in Norway (HMSO official history, 1952), ch. III (HyperWar transcription) · Renown's squadron sighted Gneisenau and Scharnhorst about 50 miles west of Skomvær Light, 9 April 1940",
+          "url": "https://www.ibiblio.org/hyperwar/UN/UK/UK-NWE-Norway/UK-NWE-Norway-3.html"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 439809666, Skomvær fyr (lighthouse), Røst",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N439809666&format=json"
+        },
+        {
+          "label": "Wikipedia (permanent revision, secondary pointer) · Action off Lofoten, 9 April 1940",
+          "url": "https://en.wikipedia.org/w/index.php?title=Action_off_Lofoten&oldid=1370426906"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.naval-history.net/xDKWW2-4004-13APR02.htm",
+      "note": "The action of 9 April 1940 is located at the published position where Renown and her destroyers engaged Gneisenau and Scharnhorst, as given in the Naval History Homepage day-by-day record of Royal Navy operations. The point marks the opening of the engagement, not its later course. The existing date is retained. Strengths, losses and equipment are not inferred from these sources.",
+      "coordinateBasis": "The Naval History Homepage record for April 1940 states that at 0337 on 9 April Renown and nine destroyers encountered Gneisenau and Scharnhorst 'and an action ensued in 67-22N, 09-42E'. Converted arithmetically (22′ = 0.3667°, 42′ = 0.7°) to [9.7,67.3667]. The British official history (Derry, The Campaign in Norway) independently places the sighting 'about 50 miles west of Skomvaer Light'; the point lies about 50 nautical miles (93 km) west of OpenStreetMap node 439809666, Skomvær fyr (67.4109, 11.8749), which agrees. This is a published opening-action position at minute precision, not a sea or fjord centroid; it does not represent the later running pursuit or any individual ship track. No accuracy radius is claimed."
+    },
+    "Q2226033": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1075,
+          "month": 6,
+          "day": 9
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        10.6339,
+        51.1298
+      ],
+      "sources": [
+        {
+          "label": "Regesta Imperii · RI III,2,3 n. 741, Heinrich IV., 1075 Juni 9, bei Homburg an der Unstrut",
+          "url": "https://www.regesta-imperii.de/regesten/3-2-3-heinrich-vi/nr/1075-06-09_1_0_3_2_3_741_741.html?tx_hisodat_sources%5Baction%5D=show&tx_hisodat_sources%5Bcontroller%5D=Sources&cHash=f8c25f3c245309d830283ccb5c6655cb"
+        },
+        {
+          "label": "Alle Burgen · Burg Homburg (#7872), vanished castle about 1,000 m south of Thamsbrück above the Unstrut floodplain",
+          "url": "https://www.alleburgen.de/bd.php?id=7872"
+        },
+        {
+          "label": "OpenStreetMap · node 2146023970, Homburg (historic=archaeological_site, fortification), published location",
+          "url": "https://www.openstreetmap.org/node/2146023970"
+        },
+        {
+          "label": "Wikipedia (de) · Homburg an der Unstrut, permanent revision 262590321 (secondary pointer: site and alternative battle name)",
+          "url": "https://de.wikipedia.org/w/index.php?title=Homburg_an_der_Unstrut&oldid=262590321"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.openstreetmap.org/node/2146023970",
+      "note": "Regesta Imperii records the battle of 9 June 1075 “bei Homburg an der Unstrut”: the royal army of Henry IV, having advanced to Behringen near the Saxon camp, attacked the surprised Saxons, many of whom drowned in the Unstrut during their flight. The atlas point marks the vanished Homburg castle and monastery site south of Thamsbrück as a sector reference only. German Wikipedia also records the alternative name “Schlacht bei Hohenburg und Nägelstedt”, so the precise battlefield is not fixed. The existing date is retained. Strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "OpenStreetMap node 2146023970 (historic=archaeological_site, archaeological_site=fortification, name Homburg, linked to Wikidata Q1625884) is at latitude 51.1298387, longitude 10.6339308, rounded to [10.6339,51.1298]. Alle Burgen places the vanished Burg Homburg about 1,000 m south of Thamsbrück on the steep slope above the Unstrut floodplain, with a later monastery on the same site; the OSM point lies about 1.1 km south of the Thamsbrück village node. Regesta Imperii identifies the battle’s “Hoenburg” with this completely vanished castle on the Unstrut near Langensalza. The point is the eponymous castle-site reference, not the Saxon camp, the royal approach from Behringen or the Unstrut where fleeing Saxons drowned. The battlefield extent is not established and no accuracy radius is claimed."
+    },
+    "Q2236788": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1232,
+          "month": 6,
+          "day": 15
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        33.2681,
+        35.2974
+      ],
+      "sources": [
+        {
+          "label": "La Monte (tr.), Philip de Novare, The Wars of Frederick II against the Ibelins in Syria and Cyprus (1936), introduction and ch. CXXVI: battle at Agridi, a casale at the foot of the mountain below Dieudamor, 15 June 1232",
+          "url": "https://archive.org/details/in.ernet.dli.2015.168249"
+        },
+        {
+          "label": "GeoNames 146856 · Agírda, populated place (PPL), alternate names Agridhi and Ağırdağ, published latitude and longitude",
+          "url": "https://sws.geonames.org/146856/about.rdf"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/146856/about.rdf",
+      "note": "Philip de Novare's account, in La Monte's 1936 translation, has the Cypriot host march onto the plain below the Lombard camp besieging Dieudamor (identified in the translator's notes as the castle of St Hilarion) and come between that camp and the casale of Agridi 'at the foot of the mountain', where battle was joined; the translator's introduction dates the victory at Agridi to 15 June, and a footnote cites the Gestes and Eracles for 'Tuesday, the fifteenth of June'. The locator is the gazetteer point for the village of Agírda, which GeoNames also names Agridhi, used as a sector reference. The existing date is retained. Strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "GeoNames 146856 (Agírda, feature code P.PPL; alternate names include Agridhi, Aghirda and Ağırdağ) publishes latitude 35.29742 and longitude 33.26805, rounded to [33.2681,35.2974]. Nominatim returns the Ağırdağ village boundary relation 16272303 (wikidata Q4692682) about 0.1 km away. The identification of the medieval casale with the present village rests on this gazetteer name link, not on excavation or survey; it is consistent with Novare's description, since the point lies about 2.0 km south-west of St Hilarion Castle (Nominatim relation 2740924, 35.3121991, 33.2810729) at the foot of the range. The point is a village reference for the plain between Agridi and the Lombard camp; it is not a surveyed battlefield, a troop position or the mountain path to Dieudamor. No accuracy radius is claimed."
+    },
+    "Q2236937": {
+      "expected": {
+        "start": {
+          "year": 1813,
+          "month": 8,
+          "day": 27
+        },
+        "end": null,
+        "coords": null
+      },
+      "reviewedAt": "2026-09-24",
+      "coords": [
+        12.5179,
+        52.1445
+      ],
+      "sources": [
+        {
+          "label": "TMB Tourismus-Marketing Brandenburg · Die Schlacht bei Hagelberg: 27 August 1813, published location, Old Monument as the main site of the combat",
+          "url": "https://www.reiseland-brandenburg.de/poi/flaeming/historische-baudenkmaeler-und-staetten/die-schlacht-bei-hagelberg/"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 4464604291, Altes Hagelbergdenkmal (1849 war memorial for 27 August 1813), Lübnitz, Bad Belzig",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N4464604291&format=json"
+        },
+        {
+          "label": "Kulturfeste im Land Brandenburg · Die Schlacht bei Hagelberg: engagement at the Hagelberg and its two memorials",
+          "url": "https://kulturfeste.de/orte/potsdam-mittelmark/hagelberg/die_schlacht_bei_hagelberg/"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.reiseland-brandenburg.de/poi/flaeming/historische-baudenkmaeler-und-staetten/die-schlacht-bei-hagelberg/",
+      "note": "The engagement of 27 August 1813 is located at the Old Hagelberg Monument, which the Brandenburg state tourism board describes as marking the main site of the combat on the village road between Lübnitz and Hagelberg. The point is a memorial-sector reference, not a regimental position or the full battlefield. The existing date is retained and no end date is added. Strengths, losses and equipment are not inferred from these sources.",
+      "coordinateBasis": "The TMB page 'Die Schlacht bei Hagelberg' publishes schema.org GeoCoordinates latitude 52.144532089749 and longitude 12.517916479888, rounded to [12.5179,52.1445]. The same page says the Old Monument between Lübnitz and Hagelberg 'zeigt den Hauptort des damaligen Gefechts an'. Although its address field names the summit cross, the published point lies about 6 m from OpenStreetMap node 4464604291, Altes Hagelbergdenkmal (52.1445464, 12.5178266), and about 650 m north of the Hagelberg summit. This is a memorial-based sector reference, not a surveyed troop position or the extent of the fighting. The 1955 memorial and the summit are not used, and no accuracy radius is claimed."
+    },
+    "Q2237506": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1896,
+          "month": 6,
+          "day": 7
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        30.5786,
+        20.9027
+      ],
+      "note": "Churchill's contemporary account of the action of 7 June 1896 places the Dervish camp in and beside the village of Firket, which stretched nearly a mile along the Nile below Firket mountain, and describes the Egyptian brigades clearing the village to the water's edge. The atlas point is the gazetteer node for the Ferka (Firket) village; the neighbouring peak carries the alternative name Jebel Firket. It is a village-sector reference, not the fortified ridge, the desert column's hills or the pursuit to Mograka and Suarda. The existing date is retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "Winston S. Churchill · The River War (Project Gutenberg eBook 4943), chapter VI: Firket, June 7, 1896",
+          "url": "https://www.gutenberg.org/cache/epub/4943/pg4943.txt"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 4307686547, Ferka village (GNS populated place), Halfa, Northern State, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N4307686547&format=jsonv2&namedetails=1&extratags=1"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 4307686549, Jabal Ferka, alternative name Jebel Firket (GNS mountain)",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N4307686549&format=jsonv2&namedetails=1&extratags=1"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Ferkeh, revision 1375371835",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Ferkeh&oldid=1375371835"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N4307686547&format=jsonv2&namedetails=1&extratags=1",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 4307686547 (place=village, name:fr Ferka, name:en Ferka East, GNS populated place) returns latitude 20.9026620 and longitude 30.5786263, rounded to [30.5786,20.9027]. The adjacent GNS mountain node 4307686549 lists Jebel Firket and Jebel Ferka as alternative names, tying the Ferka spelling to Firket; the peak lies about 3 km north-east of the village, matching Churchill's description of the mountain on the left of the southward march with the village beyond. This is a village-sector reference, not a surveyed Dervish or Egyptian position, and no accuracy radius is claimed."
+    },
+    "Q2444941": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1581,
+          "month": 9,
+          "day": 30
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        6.3958,
+        53.2617
+      ],
+      "sources": [
+        {
+          "label": "De Verhalen van Groningen (story platform of Erfgoed in Groningen) · De slag bij Noordhorn, 30 september 1581: battle between Verdugo's troops and the States army bij Noordhorn",
+          "url": "https://www.deverhalenvangroningen.nl/alle-verhalen/de-slag-bij-noordhorn-30-september-1581"
+        },
+        {
+          "label": "Wikipedia (secondary pointer, permanent revision 1370451843) · Battle of Noordhorn: fought 30 September 1581; Verdugo's army deployed before the village of Noordhorn, Norreys' army over the dike of Niezijl",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Noordhorn&oldid=1370451843"
+        },
+        {
+          "label": "GeoNames 2749875 · Noordhorn, populated place (PPL), published latitude and longitude",
+          "url": "https://sws.geonames.org/2749875/about.rdf"
+        },
+        {
+          "label": "OpenStreetMap · node 48295689, Noordhorn place=village",
+          "url": "https://api.openstreetmap.org/api/0.6/node/48295689"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/2749875/about.rdf",
+      "note": "The Groningen heritage story platform (Erfgoed in Groningen) places the battle of 30 September 1581 between Verdugo's royalist troops and the States army 'bij Noordhorn' and states that Verdugo advanced from the Noordhorn fortification where the Fortuna mill now stands. The Wikipedia revision cited as a secondary pointer has Verdugo's army deployed before the village of Noordhorn and Norreys' army over the dike of Niezijl, so the fighting may extend west of the village towards Niezijl. The locator is the gazetteer point for Noordhorn village, used as a sector reference; the fetched sources do not fix the field of the engagement. The existing date is retained. Troop figures quoted on the story page from Verdugo's account are not adopted; strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "GeoNames 2749875 (Noordhorn, feature code P.PPL) publishes latitude 53.26167 and longitude 6.39583, rounded to [6.3958,53.2617]. OpenStreetMap place node 48295689 (Noordhorn, place=village, wikidata Q3030548) lies about 0.25 km south at 53.2594179, 6.3957891; Nominatim returns the same position for the Noordhorn village boundary relation 1467960. This is a village reference for a battle documented 'bij Noordhorn'; it is not the field of the engagement, a troop position, or the site of Verdugo's fortification at the present Fortuna mill, which is not used. The village of Niezijl, named for the States army's dike line, lies about 3.8 km west (Nominatim relation 1467963). No accuracy radius is claimed."
+    },
+    "Q2704829": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 67,
+          "month": 7,
+          "day": 24
+        },
+        "end": {
+          "year": 67,
+          "month": 7,
+          "day": 20
+        },
+        "coords": null
+      },
+      "start": {
+        "year": 67,
+        "month": 6
+      },
+      "coords": [
+        35.2776,
+        32.8323
+      ],
+      "sources": [
+        {
+          "label": "Pleiades · place 678201, Iotapata / Jotapata / Yodfat: representative point and located sites (DARE; Tel Yodfat)",
+          "url": "https://pleiades.stoa.org/places/678201/json"
+        },
+        {
+          "label": "Pleiades · Iotapata, place 678201",
+          "url": "https://pleiades.stoa.org/places/678201"
+        },
+        {
+          "label": "G. J. Goldberg · Josephus’ War Chronology, the Galilean campaign of 67 CE: siege begins 8–10 June (21 Artemisius), town falls 20 July (1 Panemus)",
+          "url": "https://josephus.org/FlJosephus2/warChronology5Pg2.htm"
+        },
+        {
+          "label": "Josephus · Jewish War 3.141 (Whiston tr., Perseus): Josephus enters Jotapata on 21 Artemisius",
+          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0148%3Abook%3D3%3Asection%3D141"
+        },
+        {
+          "label": "Josephus · Jewish War 3.316 (Whiston tr., Perseus): forty-seventh day of the siege",
+          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0148%3Abook%3D3%3Asection%3D316"
+        },
+        {
+          "label": "Josephus · Jewish War 3.336 (Whiston tr., Perseus): Jotapata taken on the first day of Panemus, thirteenth year of Nero",
+          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0148%3Abook%3D3%3Asection%3D336"
+        },
+        {
+          "label": "Wikipedia (en) · Siege of Yodfat, permanent revision 1374535091 (secondary pointer: infobox 24 May – 20 July 67; body “early June 67”)",
+          "url": "https://en.wikipedia.org/w/index.php?title=Siege_of_Yodfat&oldid=1374535091"
+        },
+        {
+          "label": "Adan-Bayewitz and Aviam · Iotapata, Josephus, and the siege of 67: preliminary report on the 1992–94 seasons, Journal of Roman Archaeology 10 (1997), 131–165",
+          "url": "https://doi.org/10.1017/S1047759400014768"
+        }
+      ],
+      "coordinateSourceUrl": "https://pleiades.stoa.org/places/678201/json",
+      "note": "The inherited start (24 July 67) fell after the inherited end (20 July 67). Josephus dates his entry into Jotapata to 21 Artemisius, counts a siege of forty-seven days and dates the capture to 1 Panemus in Nero’s thirteenth year. G. J. Goldberg’s chronology converts these to 8–10 June and 20 July 67. The start is corrected to month precision (June 67), because the conversion of Macedonian months is approximate and the source gives a range of days; the existing 20 July end is retained. The Wikipedia infobox gives 24 May, whereas its text says early June; that variant is not adopted. Pleiades locates ancient Iotapata at Tel Yodfat, where excavations have documented the siege of 67. Strengths, losses and equipment are not inferred, and the figures reported by Josephus are not adopted.",
+      "coordinateBasis": "Pleiades place 678201 (Iotapata, also Jotapata and Yodfat) publishes reprPoint [35.2776164,32.83226775], based on its DARE location [35.2775,32.832222] (accuracy 10 m) and its OpenStreetMap location of Tel Yodfat [35.2777328,32.8323135] (accuracy 20 m). Rounded to [35.2776,32.8323]. This is a representative point for the hilltop town besieged in 67, not the Roman camp, the siege ramp or the cave where Josephus hid. The gazetteer accuracy values describe the digitised location, not the extent of the siege works."
+    },
+    "Q2889955": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1895,
+          "month": 1,
+          "day": 15
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        39.4244,
+        14.7018
+      ],
+      "sources": [
+        {
+          "label": "Treccani · Enciclopedia Italiana, Coatit: on 15 January 1895 the Italian column shelled the Tigrayan camp in the Senafè basin near the village",
+          "url": "https://www.treccani.it/enciclopedia/coatit_%28Enciclopedia-Italiana%29/"
+        },
+        {
+          "label": "Encyclopaedia Britannica (1911), vol. 1 p. 125 via Wikisource · At Koatit and Senafé (13th to 15th January 1895)",
+          "url": "https://en.wikisource.org/wiki/Page:EB1911_-_Volume_01.djvu/125"
+        },
+        {
+          "label": "OpenStreetMap via Nominatim · node 321223133, Senafe (place=town), published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N321223133&format=jsonv2"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N321223133&format=jsonv2",
+      "coordinateBasis": "The Enciclopedia Italiana entry Coatit states that on the evening of 15 January 1895 the pursuing Italian column reached the northern edge of the Senafè basin, in sight of the Tigrayan force camped in the basin near the village, and that the Ciccodicola battery shelled the camp from near Amba Tericà. The OpenStreetMap gazetteer node for the town of Senafe (node 321223133, place=town, resolved through Nominatim) gives latitude 14.7017550 and longitude 39.4243820, rounded to [39.4244,14.7018]. This is a village-sector reference for the camp area, not the Amba Tericà battery position or a surveyed camp location. No accuracy radius is claimed.",
+      "note": "Add a village-sector reference for the action of 15 January 1895 at Senafé, where the Enciclopedia Italiana places the Tigrayan camp shelled by the pursuing Italian column; the 1911 Britannica also names Senafé. The existing date is retained and no end date is added. Casualty figures in these sources are not adopted. Strengths, losses and equipment are not inferred."
+    },
+    "Q3062332": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1756,
+          "month": 9,
+          "day": 8
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -79.5213,
+        40.8136
+      ],
+      "sources": [
+        {
+          "label": "ExplorePAHistory (WITF, Inc.) · Kittanning historical marker, dedicated 28 November 1946: Delaware town situated here until destroyed by Armstrong's expedition in 1756, marker map position",
+          "url": "https://explorepahistory.com/hmarker.php?markerId=1-A-220"
+        },
+        {
+          "label": "GeoNames 5196357 · Kittanning, Pennsylvania (PPLA2), published latitude and longitude",
+          "url": "https://sws.geonames.org/5196357/about.rdf"
+        }
+      ],
+      "coordinateSourceUrl": "https://explorepahistory.com/hmarker.php?markerId=1-A-220",
+      "note": "The catalogued event is the dawn attack on the town of Kittanning on 8 September 1756, not the expedition's marches. The Pennsylvania marker record states that Kittanning, the most notable Delaware town west of the Alleghenies, was situated at the marker site until Armstrong's expedition destroyed it, and its narrative dates the surprise dawn raid to 8 September 1756. The locator is the marker position, used as a town-site reference for the attack; the approach and return marches are not represented. The existing date is retained. Strengths, losses, captives and equipment are not inferred.",
+      "coordinateBasis": "ExplorePAHistory's record for the Kittanning marker dedicated on 28 November 1946 (S. Water St. and west end of the Market St. Bridge) embeds the map position latitude 40.81358 and longitude -79.52127, rounded to [-79.5213,40.8136]. The marker text says the Delaware town was 'situated here'. GeoNames 5196357 places present Kittanning about 0.3 km north at 40.81645, -79.52199. This is a roadside marker for the town site, not a surveyed village boundary or any troop position. No accuracy radius is claimed."
+    },
+    "Q3512730": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1796,
+          "month": 10,
+          "day": 3
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        19.1541,
+        42.4336
+      ],
+      "note": "A Montenegrin history article states that the 1796 battle took place in the village of Kruse, between Podgorica and Cetinje, and Wikipedia locates the battle at Krusi in the Lješanska nahija. The atlas point is the gazetteer node for the village of Kruse in the Capital City of Podgorica. It is a village-sector reference; no memorial is used as the position. The existing date is retained despite differing Old Style and New Style statements in the sources. Strengths, losses and equipment are not inferred; the article's numbers are not adopted.",
+      "sources": [
+        {
+          "label": "Crnogorski Portal · Ilija Despotović, Bojevi na Martinićima i Krusima (2020): battle in the village of Kruse between Podgorica and Cetinje",
+          "url": "https://www.crnogorskiportal.me/sadrzaj/146"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 2250816933, Kruse village, Glavni grad Podgorica, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N2250816933&format=jsonv2&namedetails=1&extratags=1"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Krusi, revision 1370267471",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Krusi&oldid=1370267471"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N2250816933&format=jsonv2&namedetails=1&extratags=1",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 2250816933 (place=village, name Kruse / Крусе, linked to Wikidata Q3199986, Glavni grad Podgorica) returns latitude 42.4336138 and longitude 19.1540975, rounded to [19.1541,42.4336]. The Montenegrin article names the village of Kruse as the battle site. This is a named-village reference point, not a surveyed troop position or a centre of the whole engagement. No positional accuracy radius is claimed."
+    },
+    "Q3634917": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1704,
+          "month": 12,
+          "day": 6
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        76.4129,
+        30.8981
+      ],
+      "sources": [
+        {
+          "label": "District Administration Rupnagar (Government of Punjab) · Sri Chamkaur Sahib: Gurudwara Katalgarh Sahib built where the Guru’s elder sons and followers fell fighting the Mughal army",
+          "url": "https://rupnagar.nic.in/tourist-place/sri-chamkaur-sahib/"
+        },
+        {
+          "label": "OpenStreetMap via Nominatim · way 366390453, Gurudwara Sri Katalgarh Sahib, Chamkaur Sahib, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=W366390453&format=jsonv2"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=W366390453&format=jsonv2",
+      "coordinateBasis": "The Rupnagar district administration states that Gurudwara Katalgarh Sahib at Chamkaur Sahib was built at the site where Baba Ajit Singh, Baba Jhujhar Singh and their followers fell fighting against the Mughal army. The OpenStreetMap gazetteer record for this named gurdwara (way 366390453, resolved through Nominatim) gives latitude 30.8981021 and longitude 76.4128502, rounded to [76.4129,30.8981]. This is a memorial-site reference for documented fighting, not the position of the Guru’s enclosure, a surveyed Mughal position or the centre of the whole engagement. No accuracy radius is claimed.",
+      "note": "Add a site reference for the Chamkaur engagement: the Rupnagar district administration identifies Gurudwara Katalgarh Sahib as built where the Guru’s two elder sons and their companions fell fighting the Mughal army. The point marks that memorial site, not the full engagement area. The district page gives no date, so the existing 6 December 1704 date is retained. The page’s count of companions is not used as a strength. Strengths, losses and equipment are not inferred."
+    },
+    "Q4071923": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1915,
+          "month": 8,
+          "day": 6
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        22.6321,
+        53.4855
+      ],
+      "sources": [
+        {
+          "label": "Narodowy Instytut Dziedzictwa · zabytek.pl · pozycja zarzeczna, Osowiec-Twierdza, register of monuments (INSPIRE id PL.1.9.ZIPOZ.NID_N_20_BL.18711), published map point",
+          "url": "https://zabytek.pl/pl/obiekty/g-255265"
+        },
+        {
+          "label": "S. A. Khmelkov · Bor’ba za Osovets (Voenizdat, 1939), ch. 4: gas assault of 6 August 1915 and counterattack sent from the Zarechnaya position",
+          "url": "https://militera.lib.ru/h/hmelkov_sa/04.html"
+        },
+        {
+          "label": "S. A. Khmelkov · Bor’ba za Osovets (Voenizdat, 1939), ch. 2: Sosnenskaya forward position, Białogrądy–Sośnia, and its rail link to the Zarechnaya position",
+          "url": "https://militera.lib.ru/h/hmelkov_sa/02.html"
+        },
+        {
+          "label": "Narodowy Instytut Dziedzictwa · zabytek.pl · The Osowiec Fortress, sieges of 1914–1915",
+          "url": "https://zabytek.pl/en/obiekty/osowiec-twierdza-twierdza-osowiec"
+        }
+      ],
+      "coordinateSourceUrl": "https://zabytek.pl/pl/obiekty/g-255265",
+      "note": "Khmelkov, a participant, describes the German chlorine–bromine gas assault on Osowiec at 04:00 on 6 August 1915 and the counterattack of the 226th Zemlyansky Regiment, whose 13th company charged men of the 18th Landwehr Regiment beside the railway; by 11:00 the Sosnenskaya position was cleared. The atlas point is the heritage-registered Zarechnaya position of the fortress, from which the counterattack companies were sent; it is a sector reference and does not locate the forward trenches or any exact company position. The existing date is retained. Strengths, losses and equipment are not inferred; the monograph’s casualty statements are not adopted.",
+      "coordinateBasis": "The NID heritage-register entry “pozycja zarzeczna” (defensive architecture, 1882–1892, Osowiec-Twierdza 8a; INSPIRE id PL.1.9.ZIPOZ.NID_N_20_BL.18711) publishes the map point latitude 53.485486608183, longitude 22.632117036248, rounded to [22.6321,53.4855]. Khmelkov (1939, ch. 4) states that the chief of the 2nd defence section sent the 8th, 13th and 14th companies of the 226th Zemlyansky Regiment from the Zarechnaya position to counterattack, and that this position was the objective of the German assault columns. The point therefore marks the registered position from which the counterattack set out. It is not the Sosnenskaya forward position, which Khmelkov (ch. 2) places 3–3.5 km north-west of the fortress place d’armes between Białogrądy and Sośnia, where the 13th company charged beside the railway; no published coordinate for that line was found. The register does not state how its point was derived, and no accuracy radius is claimed."
+    },
+    "Q4087294": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1995,
+          "month": 3,
+          "day": 10
+        },
+        "end": {
+          "year": 1996,
+          "month": 5,
+          "day": 24
+        },
+        "coords": null
+      },
+      "coords": [
+        45.1973,
+        43.1599
+      ],
+      "sources": [
+        {
+          "label": "Reuters via ReliefWeb · A chronology of conflict in Chechnya (20 August 1996): battle for the rebel stronghold of Bamut; Russian troops seize Bamut, 24 May 1996",
+          "url": "https://reliefweb.int/report/russian-federation/chronology-conflict-chechnya"
+        },
+        {
+          "label": "GeoNames 572706 · Bamut, populated place (PPL), published latitude and longitude",
+          "url": "https://sws.geonames.org/572706/about.rdf"
+        },
+        {
+          "label": "OpenStreetMap · node 1539258328, Bamut place=village",
+          "url": "https://api.openstreetmap.org/api/0.6/node/1539258328"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/572706/about.rdf",
+      "note": "A Reuters chronology republished by ReliefWeb reports the battle for the separatist stronghold of Bamut and its seizure by Russian troops on 24 May 1996 after a year's fighting. That chronology confirms the end date but does not give the 10 March 1995 start, which is retained from the catalogue without independent confirmation here. The locator is the gazetteer point for Bamut village, used as a sector reference for the prolonged fighting for the village and its adjacent heights; the fetched sources do not map any position in or around it. Casualty figures quoted in the chronology are not adopted; strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "GeoNames 572706 (Bamut, feature code P.PPL; alternate names include Nizhniy Bamut and Бамут) publishes latitude 43.15986 and longitude 45.19734, rounded to [45.1973,43.1599]. OpenStreetMap place node 1539258328 (Бамут / Bamut, place=village, wikidata Q4077181) lies about 1.4 km north-east at 43.16983, 45.207268, corroborating the named village. This is a village reference; it does not locate the surrounding positions, any unit or the centre of the fighting. No accuracy radius is claimed."
+    },
+    "Q4087414": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1900,
+          "month": 8,
+          "day": 5
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        117.1226,
+        39.2357
+      ],
+      "sources": [
+        {
+          "label": "National Army Museum · The Boxer Rebellion: Chinese defeats at Peitsang (Beicang) and Yangtsun (Yangcun), 5-6 August 1900",
+          "url": "https://www.nam.ac.uk/explore/boxer-rebellion"
+        },
+        {
+          "label": "GeoNames 1816781 · Beicang, Tianjin (PPLA4), alternate name Pei-ts'ang, published latitude and longitude",
+          "url": "https://sws.geonames.org/1816781/about.rdf"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/1816781/about.rdf",
+      "note": "The National Army Museum names Peitsang (Beicang) as the place of a Chinese defeat on the allied march from Tianjin to Beijing, alongside Yangtsun on 5-6 August 1900. The locator is the gazetteer point for Beicang, whose alternate names include the older romanisation Pei-ts'ang, used as a sector reference; the fetched sources do not map the Chinese entrenchments or the allied lines of attack. The existing date of 5 August 1900 is retained. Strengths, losses and equipment are not inferred.",
+      "coordinateBasis": "GeoNames 1816781 (Beicang, Tianjin, feature code P.PPLA4; alternate names Beicang Zhen, Pei-ts'ang, 北仓, 北仓镇) publishes latitude 39.2357 and longitude 117.12262, rounded to [117.1226,39.2357]. Nominatim returns the 北仓镇 (Beicang town) boundary relation 18798650 about 0.6 km away at 39.2361921, 117.1158422. The National Army Museum equates Peitsang with Beicang. This is the seat point of the present town, used as a sector reference for the 1900 engagement; it is not a surveyed entrenchment, a troop position or the centre of the fighting. No accuracy radius is claimed."
+    },
+    "Q4087418": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": -72
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        14.4292,
+        40.8226
+      ],
+      "note": "Reviewed location: Appian (Civil Wars 1.116) states that Spartacus and his companions took refuge on Mount Vesuvius and that the first forces sent against them were beaten; Plutarch (Crassus 9) describes the Roman siege of their hill, with a single narrow ascent, and the descent by vine ladders that routed the besiegers. Frontinus (Strategemata I.5.21) names the place: Spartacus was 'besieged on the slopes of Vesuvius' by Clodius and escaped down the steepest, unguarded side. The cited Wikipedia revision places this siege on Mount Vesuvius. The point is the gazetteer position of the Vesuvius summit, used as a mountain reference. The existing year (-72, i.e. 73 BC in astronomical numbering) is retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "GeoNames 3164481 · Vesuvius (Vesuvio), volcano, elevation 1281 m, 40.82261 N, 14.4292 E",
+          "url": "https://www.geonames.org/3164481/vesuvius.html"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 12995577013, Vesuvio peak, Ottaviano",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N12995577013&format=jsonv2"
+        },
+        {
+          "label": "Appian, Civil Wars I.116 (Loeb, via LacusCurtius, University of Chicago): Spartacus took refuge on Mount Vesuvius",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Appian/Civil_Wars/1*.html"
+        },
+        {
+          "label": "Plutarch, Life of Crassus 9 (Loeb, 1916, via LacusCurtius, University of Chicago): siege on a hill with one narrow ascent; escape by vine ladders",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Crassus*.html"
+        },
+        {
+          "label": "Frontinus, Strategemata I.5.21 (Loeb, via LacusCurtius, University of Chicago): Spartacus, besieged on the slopes of Vesuvius, escaped by osier ropes and routed Clodius's cohorts",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Frontinus/Strategemata/1*.html"
+        },
+        {
+          "label": "Wikipedia · Battle of Mount Vesuvius (revision 1370450649): the praetor's militia besieged the escaped slaves on Mount Vesuvius",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Mount_Vesuvius&oldid=1370450649"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.geonames.org/3164481/vesuvius.html",
+      "coordinateBasis": "GeoNames 3164481, Vesuvius (feature class volcano, elevation 1281 m, Ottaviano, Province of Naples), publishes latitude 40.82261 and longitude 14.4292; OSM peak node 12995577013 (Vesuvio) coincides. Stored as [14.4292,40.8226]. This is a mountain reference for the named site, not the rebels' camp, the single ascent held by the Romans, the cliff face they descended or the Roman camp; the ancient sources do not locate any of these on the mountain. The present-day summit is used only as the gazetteer anchor of the named mountain. No positional accuracy radius is claimed."
+    },
+    "Q4087483": {
+      "expected": {
+        "start": {
+          "year": 1900,
+          "month": 8,
+          "day": 6
+        },
+        "end": null,
+        "coords": null
+      },
+      "reviewedAt": "2026-09-24",
+      "coords": [
+        117.0603,
+        39.3639
+      ],
+      "sources": [
+        {
+          "label": "GeoNames 1787646 · Yangcun (alternate name Yang-ts’un), populated place, Tianjin",
+          "url": "https://sws.geonames.org/1787646/about.rdf"
+        },
+        {
+          "label": "General Chaffee’s report on the China Relief Expedition, 1 September 1900 (Wikisource transcription, permanent revision) · action at Yang-tsun",
+          "url": "https://en.wikisource.org/w/index.php?title=General_Chaffee%27s_Report_on_the_China_Relief_Expedition&oldid=10779873"
+        },
+        {
+          "label": "Wikipedia (permanent revision, secondary pointer) · Battle of Yangcun, 6 August 1900",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Yangcun&oldid=1370595214"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/1787646/about.rdf",
+      "note": "The engagement is located at Yangcun (Yang-tsun) on the Tianjin–Beijing route, the Chinese defensive position named in General Chaffee’s report. The point is a town-scale reference; the report places the fighting on the approaches in front of the railway bridge and through villages east of the town, which are not separately located. The existing date is retained. Strengths, losses and equipment are not inferred from these sources.",
+      "coordinateBasis": "GeoNames 1787646 lists Yangcun, with the historical romanisation Yang-ts’un among its alternate names, as a populated place in Tianjin at latitude 39.36389, longitude 117.06028, rounded to [117.0603,39.3639]. Chaffee's report places the Chinese position about a mile and a half from Yangtsun in front of the railway bridge where the railway and river road converge, and the American advance continuing through villages east of Yang-tsun to nearly the north end of the town. The point is therefore a town-scale sector reference; it is not the railway bridge, the embankment assault or any unit position, and the growth of the modern town makes its centre only approximate for 1900. No accuracy radius is claimed."
+    },
+    "Q4337454": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1654
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        30.2588,
+        53.5179
+      ],
+      "note": "The Belarusian Wikipedia describes the Russian and Cossack siege of the fortified town of Bykhaw, then Stary Bykhaw, beginning in 1654 and lasting into 1655; that article is the only fetched source for the siege itself. The official Bykhaw district page documents the town's bastioned fortifications and castle, built from 1611 and completed by 1637, standing as the town's fortress at the time of the war; it dates its reported wartime damage to the castle to 1659, which is not used for this siege. The atlas point is the gazetteer feature for Bykhaw Castle, a fortress reference for the besieged town. It does not locate the besiegers' lines or the full circuit of the town defences. The existing year-precision start is retained and no end date is added. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "Bykhaw District Executive Committee · Замок (castle and bastioned town fortifications built 1611–1637), archived 14 May 2023",
+          "url": "https://web.archive.org/web/20230514094304/https://bykhov.gov.by/region/istoricheskie-ob-ekty/itemlist/category/677-zamok"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · way 370853847, Быхаўскі замак (historic=castle), Bykhaw, published centre latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=W370853847&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (Belarusian, secondary pointer) · Абарона Быхава (1654—1655), revision 5193210",
+          "url": "https://be.wikipedia.org/w/index.php?title=%D0%90%D0%B1%D0%B0%D1%80%D0%BE%D0%BD%D0%B0_%D0%91%D1%8B%D1%85%D0%B0%D0%B2%D0%B0_(1654%E2%80%941655)&oldid=5193210"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=W370853847&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap way 370853847 (historic=castle, name Быхаўскі замак, Bykhaw, linked to Wikidata Q3920389) returns the centre latitude 53.5179060 and longitude 30.2588188, rounded to [30.2588,53.5179]. The district page establishes that the castle, completed by 1637, formed part of the town's fortifications before the siege. This is a fortress reference point, not a besieger position or the town's whole bastioned perimeter. No accuracy radius is claimed."
+    },
+    "Q4438409": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1758,
+          "month": 9,
+          "day": 28
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        12.7652,
+        52.8142
+      ],
+      "sources": [
+        {
+          "label": "KulturNav · Swedish state museums dataset Krig och slag: Slaget vid Fehrbellin, 28 September 1758",
+          "url": "https://kulturnav.org/1cf78c25-c4c4-4d70-8e47-efb8b58a454a"
+        },
+        {
+          "label": "Wikipedia (secondary pointer), revision 1370110227 · Battle of Fehrbellin (1758): storming of the Swedish-held town",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Fehrbellin_(1758)&oldid=1370110227"
+        },
+        {
+          "label": "OpenStreetMap · node 240064305, Fehrbellin (place=town), published latitude and longitude",
+          "url": "https://api.openstreetmap.org/api/0.6/node/240064305.json"
+        }
+      ],
+      "coordinateSourceUrl": "https://api.openstreetmap.org/api/0.6/node/240064305.json",
+      "coordinateBasis": "The OpenStreetMap place node for the town of Fehrbellin (node 240064305, place=town, the place linked to the municipal boundary in Nominatim) gives latitude 52.8142217 and longitude 12.7652143, rounded to [12.7652,52.8142]. The Swedish state museums’ KulturNav authority identifies the battle as fought at Fehrbellin; the cited Wikipedia revision, used only as a secondary pointer, describes a storming of the town at its gates, streets and Rhin bridge. This is a town-centre reference, not the western gate, the bridge or any unit position. No accuracy radius is claimed.",
+      "note": "Add a town-level reference for the Prussian assault on Swedish-held Fehrbellin, identified as the battle of 28 September 1758 by the Swedish state museums’ KulturNav authority. The point is the town, not a gate or bridge position. The existing date is retained. Numbers in the secondary article are not adopted. Strengths, losses and equipment are not inferred."
+    },
+    "Q4438410": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1857,
+          "month": 6,
+          "day": 30
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        81.0356,
+        26.8751
+      ],
+      "note": "The Imperial Gazetteer of India (1908) places Sir Henry Lawrence's engagement against the advancing rebel force at Chinhat, a village on the Faizabad road eight miles from the Lucknow Residency. The atlas point is the gazetteer node for that village. Accounts also name the adjoining hamlet of Ismailganj where contact was made, so this is a village-sector reference, not the rebel line, the British column or the full retreat route. The existing 30 June 1857 date is retained. Strengths, losses and equipment are not inferred; the gazetteer's figure for the rebel force is not adopted.",
+      "sources": [
+        {
+          "label": "Imperial Gazetteer of India, vol. 16 (1908), p. 192, Lucknow City · Chinhat, a village on the Fyzabad road, eight miles from the Residency (Digital South Asia Library)",
+          "url": "https://dsal.uchicago.edu/cgi-bin/reference/gazetteer/query.py?object=198&bookid=DS405.1.I34_V16&display_type=page_display"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 2215421389, Chinhat village, Lucknow district, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N2215421389&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Chinhat, revision 1370437078",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Chinhat&oldid=1370437078"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N2215421389&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 2215421389 (place=village, name Chinhat, Lucknow) returns latitude 26.8751435 and longitude 81.0355588, rounded to [81.0356,26.8751]. The Imperial Gazetteer page image names Chinhat as the spot where battle was given and puts it eight miles from the Residency, consistent with this node. This is a named-village reference point, not a surveyed troop position, the Ismailganj hamlet itself or a centre of the whole engagement. No positional accuracy radius is claimed."
+    },
+    "Q4438412": {
+      "expected": {
+        "start": {
+          "year": 1878,
+          "month": 1,
+          "day": 8
+        },
+        "end": {
+          "year": 1878,
+          "month": 1,
+          "day": 9
+        },
+        "coords": null
+      },
+      "reviewedAt": "2026-09-24",
+      "coords": [
+        25.3334,
+        42.7001
+      ],
+      "sources": [
+        {
+          "label": "Община Казанлък (Kazanlak Municipality) · 9 January 2014 commemoration: Golyama Kosmatka mound as Redoubt No. 1 and Vessel Pasha’s command post in the Sheynovo fortified camp",
+          "url": "https://www.kazanlak.bg/v-sheynovo-i-shipka-otbelyazaha-136-godini-ot-boevete-za-osvobozhdenieto-na-balgariya"
+        },
+        {
+          "label": "Национален парк-музей „Шипка-Бузлуджа“ · 138 години от боевете при Шипка-Шейново: fighting for the fortified camp near Shipka and Sheynovo, 8–9 January 1878",
+          "url": "https://www.shipkamuseum.org/2016/01/08/138-years-shipka-sheinovo/"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · way 203172707, Golyama Kosmatka tumulus (archaeological site), Shipka",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=W203172707&format=json"
+        },
+        {
+          "label": "Wikidata Q3992623 · Golyama Kosmatka / Tomb of Seuthes III, coordinate location",
+          "url": "https://www.wikidata.org/wiki/Q3992623"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=W203172707&format=json",
+      "note": "The inherited record has no coordinates. The Shipka–Buzludzha National Park-Museum describes the fighting of 8–9 January 1878 for the fortified Ottoman camp near Shipka and Sheynovo, with Radetzky’s frontal attack on the pass as a separate sector. The point is placed at Redoubt No. 1 on the Golyama Kosmatka mound, which Kazanlak Municipality identifies as the key work of the Sheynovo camp and Vessel Pasha’s command post. It does not represent the pass positions or the flanking columns. The existing dates are retained. Strengths, losses and equipment are not inferred from these sources.",
+      "coordinateBasis": "Kazanlak Municipality states that Redoubt No. 1, the most important part of the Sheynovo fortified camp and Vessel Pasha’s command post during the two days of fighting in January 1878, stood at the Golyama Kosmatka mound between Shipka and Sheynovo. OpenStreetMap way 203172707, tagged as the Golyama Kosmatka tumulus and linked to Wikidata Q3992623, has the Nominatim centroid latitude 42.7001058, longitude 25.3334304, rounded to [25.3334,42.7001]; Wikidata gives 42.6999, 25.3334 for the same mound. This is a redoubt-sector reference inside the fortified camp, not the position of an attacking column, the Shipka Pass front or the full extent of the operation. The later Victory Monument near Sheynovo is not used, and no accuracy radius is claimed."
+    },
+    "Q4871667": {
+      "expected": {
+        "start": {
+          "year": 1951,
+          "month": 3,
+          "day": 23
+        },
+        "end": {
+          "year": 1951,
+          "month": 3,
+          "day": 28
+        },
+        "coords": null
+      },
+      "reviewedAt": "2026-09-24",
+      "coords": [
+        106.5926,
+        21.0586
+      ],
+      "sources": [
+        {
+          "label": "GeoNames 1574873 · Thị Trấn Mạo Khê, populated place, Đông Triều, Quảng Ninh",
+          "url": "https://sws.geonames.org/1574873/about.rdf"
+        },
+        {
+          "label": "Uông Bí City portal · Chiến dịch Hoàng Hoa Thám năm 1951: the French post at Mạo Khê attacked in the 1951 campaign",
+          "url": "https://uongbi.gov.vn/chien-dich-hoang-hoa-tham-nam-1951-p13n89113.html"
+        },
+        {
+          "label": "Chemins de mémoire (French Ministry of the Armed Forces) · Jean de Lattre de Tassigny: victories of Vinh Yen and Mao Khé in Tonkin",
+          "url": "https://www.cheminsdememoire.gouv.fr/fr/jean-de-lattre-de-tassigny"
+        },
+        {
+          "label": "Wikipedia (permanent revision, secondary pointer) · Battle of Mạo Khê: town, outposts, coal mine and church positions",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_M%E1%BA%A1o_Kh%C3%AA&oldid=1375665095"
+        }
+      ],
+      "coordinateSourceUrl": "https://sws.geonames.org/1574873/about.rdf",
+      "note": "The engagement is located at the township of Mạo Khê in present Quảng Ninh province, whose French post the Uông Bí municipal history names as a target of the 1951 Hoàng Hoa Thám campaign and which the French Ministry of the Armed Forces names among de Lattre’s victories in Tonkin. The point is a township reference, not the separate outpost, mine or church positions. The existing dates are retained. Strengths, losses and equipment are not inferred from these sources.",
+      "coordinateBasis": "GeoNames feature 1574873, Thị Trấn Mạo Khê (populated place, Đông Triều, Quảng Ninh), publishes latitude 21.05858 and longitude 106.59255, rounded to [106.5926,21.0586]. This is a township-scale sector reference: the Wikipedia pointer describes surrounding outposts, a coal-mine position about 1 km north and a fortified church east of the town, none of which is located individually. It is not a surveyed post, a unit position or the extent of the engagement. The much larger present Mạo Khê ward and its movable map label are not used, and no accuracy radius is claimed."
+    },
+    "Q5423108": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1700,
+          "month": 8,
+          "day": 4
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        12.5378,
+        55.9832
+      ],
+      "note": "Fryxell's history of Charles XII states that Stuart chose the land of Toberup (also written Tiberup) north of Humlebæk, between Helsingør and Copenhagen, as the landing place. Swedish troops came ashore there against Danish entrenchments on the beach. The atlas point is the gazetteer node for the village of Tibberup in Helsingør municipality, a sector reference for the landing beach on the Øresund shore just to the east. It is not a surveyed boat-landing point, a Danish battery position or the later Swedish camp. The existing Gregorian date is retained; the Swedish-calendar 25 July in the source corresponds to it. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "Anders Fryxell · Berättelser ur svenska historien, vol. 21 (Karl den tolftes historia), p. 89: landing place at Toberup north of Humlebæk (Project Runeberg)",
+          "url": "https://runeberg.org/svhistfry/21/0097.html"
+        },
+        {
+          "label": "Anders Fryxell · Berättelser ur svenska historien, vol. 21, p. 90: the landing against the Danish shore entrenchments (Project Runeberg)",
+          "url": "https://runeberg.org/svhistfry/21/0098.html"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 1594641238, Tibberup village, Helsingør Kommune, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N1594641238&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (Swedish, secondary pointer) · Landstigningen vid Humlebæk, revision 59250311: landing in front of the Tiberup slopes north of Humlebæk",
+          "url": "https://sv.wikipedia.org/w/index.php?title=Landstigningen_vid_Humleb%C3%A6k&oldid=59250311"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Landing at Humlebæk, revision 1370626507",
+          "url": "https://en.wikipedia.org/w/index.php?title=Landing_at_Humleb%C3%A6k&oldid=1370626507"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N1594641238&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 1594641238 (place=village, name Tibberup, Helsingør Kommune, linked to Wikidata Q12343163) returns latitude 55.9831821 and longitude 12.5378199, rounded to [12.5378,55.9832]. Fryxell names Toberup, alias Tiberup, north of Humlebæk as the landing ground. A different Tibberup in Gribskov municipality is not used. The village node is a named-place sector reference about 1 km inland of the landing shore, not a surveyed beach position; no accuracy radius is claimed."
+    },
+    "Q5722624": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1896,
+          "month": 1,
+          "day": 17
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -83.6775,
+        22.367
+      ],
+      "note": "Radio Habana Cuba describes Antonio Maceo's invading column camping at the settlement of Las Taironas on 17 January 1896 and meeting a Spanish force that held positions on the nearby road from Pinar del Río to La Coloma, including a bridge, buildings and roadside ditches. The Calendario Cubano entry quotes the invasion diaries placing the combat at Las Taironas at the gates of Pinar del Río. The atlas point is the gazetteer node for the Las Taironas hamlet south-east of the city; it is a settlement-sector reference, not the Spanish road position or either column's line. The existing date is retained. Strengths, losses and equipment are not inferred; figures quoted in the sources are not adopted.",
+      "sources": [
+        {
+          "label": "Radio Habana Cuba · Rafael de la Morena, La batalla de Las Taironas, 15 January 2019 (archived)",
+          "url": "https://web.archive.org/web/20211028033851/https://www.radiohc.cu/de-interes/caleidoscopio/181043-la-batalla-de-las-taironas"
+        },
+        {
+          "label": "Calendario Cubano · 17 de enero: combate en Las Taironas, with extracts from the Nodarse invasion diary",
+          "url": "https://calendariocubano.com/01/17/"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 4953853632, Las Taironas hamlet, La Paz, Pinar del Río, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N4953853632&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Las Taironas, revision 1375835248",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Las_Taironas&oldid=1375835248"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N4953853632&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 4953853632 (place=hamlet, name Las Taironas, La Paz, Pinar del Río) returns latitude 22.3670260 and longitude -83.6775424, rounded to [-83.6775,22.3670]. The hamlet lies about 6 km south-south-east of Pinar del Río, towards La Coloma, consistent with the Radio Habana Cuba account of a Spanish force blocking the nearby Pinar del Río–La Coloma road. This is a named-settlement reference, not a surveyed position of the fighting; no accuracy radius is claimed."
+    },
+    "Q12678149": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1311,
+          "month": 4,
+          "day": 7
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        21.4308,
+        54.0918
+      ],
+      "sources": [
+        {
+          "label": "Muzeum Warmii i Mazur · 1311 battle near Wopławki; 1936 memorial stone on Krwawa Góra",
+          "url": "https://muzeum.olsztyn.pl/4356,vi-inscenizacja-bitwy-pod-woplawkami.html"
+        },
+        {
+          "label": "GDOŚ natural-monument register (WFS) · glacial erratic PL.ZIPOP.1393.PP.2808032.773, established 1952-12-29, published point",
+          "url": "https://sdi.gdos.gov.pl/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=GDOS:PomnikiPrzyrodyPunktowe&SRSNAME=EPSG:4326&BBOX=54.07,21.40,54.11,21.46,urn:ogc:def:crs:EPSG::4326&OUTPUTFORMAT=application/json"
+        },
+        {
+          "label": "Encyklopedia Warmii i Mazur · glacial erratic near Góry: 1311 battle memorial, natural monument since 1952, N 54.091900° E 21.430883°",
+          "url": "https://encyklopedia.warmia.mazury.pl/index.php/G%C5%82az_narzutowy_ko%C5%82o_osady_G%C3%B3ry"
+        }
+      ],
+      "coordinateSourceUrl": "https://sdi.gdos.gov.pl/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=GDOS:PomnikiPrzyrodyPunktowe&SRSNAME=EPSG:4326&BBOX=54.07,21.40,54.11,21.46,urn:ogc:def:crs:EPSG::4326&OUTPUTFORMAT=application/json",
+      "coordinateBasis": "The GDOŚ natural-monument WFS returns feature PL.ZIPOP.1393.PP.2808032.773 (object: glacial erratic, single object, established 1952-12-29, no name) at longitude 21.430819443501466, latitude 54.09180284543056, rounded to [21.4308,54.0918]. The Encyklopedia Warmii i Mazur describes the boulder near Góry, inscribed with 1311 and crossed swords and protected as a natural monument since 1952, at N 54.091900° E 21.430883°, about 12 m away. The Muzeum Warmii i Mazur states that Krwawa Góra near Wopławki and its surroundings witnessed the 1311 fighting and that the stone was set there in 1936 to commemorate the battle. This is a 1936 memorial on the named hill, not a 1311 camp or unit position. No accuracy radius is claimed.",
+      "note": "Add a site reference for the 1311 battle near Wopławki: the regional museum states that Krwawa Góra near the village and its surroundings witnessed the fighting and that the commemorative stone was set there in 1936; the national register locates that boulder. The memorial is not treated as a surveyed position of the Lithuanian camp or the Teutonic assaults. The existing 7 April 1311 date, also given by the regional encyclopedia, is retained. Strengths, losses and equipment are not inferred."
+    },
+    "Q12748965": {
+      "expected": {
+        "start": {
+          "year": 1941,
+          "month": 9,
+          "day": 21
+        },
+        "end": {
+          "year": 1941,
+          "month": 9,
+          "day": 26
+        },
+        "coords": null
+      },
+      "reviewedAt": "2026-09-24",
+      "coords": [
+        19.6954,
+        44.7572
+      ],
+      "sources": [
+        {
+          "label": "Biblioteka Znaci · Bitka za Šabac 1941: chronology of the attack on Šabac, 21–25 September 1941",
+          "url": "https://znaci.org/odrednica.php?slug=bitka-za-sabac-1941"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 254036931, place=city Šabac (Шабац), Serbia",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N254036931&format=json"
+        },
+        {
+          "label": "GeoNames 3191376 · Šabac, seat of a second-order administrative division",
+          "url": "https://sws.geonames.org/3191376/about.rdf"
+        },
+        {
+          "label": "Wikipedia (permanent revision, secondary pointer) · Attack on Šabac, German garrison attacked 21–26 September 1941",
+          "url": "https://en.wikipedia.org/w/index.php?title=Attack_on_%C5%A0abac&oldid=1370429658"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N254036931&format=json",
+      "note": "The September 1941 attack is located at the town of Šabac, the German-held garrison town attacked by the insurgent detachments. The Znaci chronology records the attack launched at 23:00 on 21 September and a renewed attack on 22 September that reached the town centre before being driven back. The point is a town-scale reference, not a unit position. The existing start and end dates are retained. Strengths, losses and equipment are not inferred from these sources.",
+      "coordinateBasis": "OpenStreetMap place node 254036931 for the city of Šabac is published by Nominatim at latitude 44.7571535, longitude 19.6953972, rounded to [19.6954,44.7572]. GeoNames 3191376 places the same town about 1.2 km further south (44.74667, 19.69), so the point is a town-scale reference only. The Znaci chronology names Šabac itself as the objective and records insurgent units reaching the town centre on 22 September 1941. The point is not a German garrison position, an attackers’ line or the extent of the fighting, and it does not represent the surrounding Mačva villages. No accuracy radius is claimed."
+    },
+    "Q13403439": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1944,
+          "month": 6,
+          "day": 4
+        },
+        "end": {
+          "year": 1944,
+          "month": 9,
+          "day": 7
+        },
+        "coords": null
+      },
+      "coords": [
+        98.9056,
+        24.7396
+      ],
+      "note": "Reviewed location: Songshan (Mount Song) in Lameng township, Longling County, Yunnan, the fortified mountain attacked by the Chinese Expeditionary Force from 4 June 1944 until its capture on 7 September 1944, as dated on the Longling County government portal. The Baoshan government records the battle site as a national key cultural relic protection unit. The point is the OpenStreetMap feature for that named battle site at Dayakou, on the Burma Road loop around the mountain. It is a site reference, not the summit bunker, a trench line or any unit position. The existing dates are retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "OpenStreetMap Nominatim · way 737447143, 松山战役旧址 (Songshan battle site), Dayakou village, Longling County",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=W737447143&format=jsonv2"
+        },
+        {
+          "label": "Longling County government portal (Civil Affairs Bureau) · 松山战役介绍: Songshan in Lameng township; attack from 4 June 1944, ended 7 September 1944; Burma Road via Dayakou around Songshan",
+          "url": "https://www.longling.gov.cn/info/35894/4369779.htm"
+        },
+        {
+          "label": "Baoshan municipal government · Songshan in Lameng township, 32 km from the county seat; national key cultural relic protection unit",
+          "url": "https://www.baoshan.gov.cn/info/5189/10124304.htm"
+        },
+        {
+          "label": "Baoshan Culture and Tourism Bureau · Longling Songshan battle site memorial park: main-peak bunker, Daorenping and tunnel remains",
+          "url": "https://www.baoshan.gov.cn/info/7792/2345424.htm"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=W737447143&format=jsonv2",
+      "coordinateBasis": "Nominatim returns OSM way 737447143, named 松山战役旧址 (Songshan battle former site) and tagged tourism=museum, hamlet 大垭口村, Longling County, with centre latitude 24.7396283 and longitude 98.9055720 and a bounding box of roughly 200 m. Rounded to [98.9056,24.7396]. This is the named heritage-site feature at Dayakou, which Longling County places on the Burma Road loop around Songshan, used as a sector reference for the Songshan siege; it is not the summit, the main-peak bunker destroyed on 20 August, a trench or a Chinese or Japanese unit position. The separate memorial hall and relic exhibition features nearby are not used. No positional accuracy radius is claimed."
+    },
+    "Q29654893": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": -416
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        22.5862,
+        37.52
+      ],
+      "sources": [
+        {
+          "label": "Pleiades · place 570306, Hysiai: Argive frontier citadel south of Achladokampos, destroyed by the Lacedaemonians in 417 B.C.",
+          "url": "https://pleiades.stoa.org/places/570306"
+        },
+        {
+          "label": "Pleiades · place 570306 JSON: representative location, OSM location of Hysiai, accuracy 20 m",
+          "url": "https://pleiades.stoa.org/places/570306/json"
+        },
+        {
+          "label": "Thucydides 5.83, trans. R. Crawley (Perseus Digital Library) · the Lacedaemonians capture the Argive town Hysiae",
+          "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0200:book=5:chapter=83"
+        }
+      ],
+      "coordinateSourceUrl": "https://pleiades.stoa.org/places/570306/json",
+      "coordinateBasis": "Pleiades place 570306 (Hysiai, the Argive frontier citadel south of modern Achladokampos) has one representative location, the OSM location of Hysiai, at [22.5862423,37.5200016] with accuracy value 20 m and certain association; the place reprPoint is identical. Rounded to [22.5862,37.52]. This is a site reference for the captured citadel, not a surveyed Spartan position. Pleiades 540831, the Boeotian Hysiai near Kriekouki, is a different place and is not used.",
+      "note": "Add the site of Argive Hysiae. Thucydides (5.83) records that the Lacedaemonians under Agis captured the Argive town of Hysiae and killed the freemen they took; Pleiades identifies the citadel south of Achladokampos and dates its destruction to 417 BC, consistent with the stored astronomical year −416. The date is retained. Strengths, losses and equipment are not inferred."
+    },
+    "Q42376385": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1411
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        28.4035,
+        41.1859
+      ],
+      "sources": [
+        {
+          "label": "TDV İslâm Ansiklopedisi · Mûsâ Çelebi: first encounter at İnceğiz near Çatalca (spring 815/1412)",
+          "url": "https://islamansiklopedisi.org.tr/musa-celebi"
+        },
+        {
+          "label": "OpenStreetMap · node 1503833682, İnceğiz (place=village), Çatalca, published latitude and longitude",
+          "url": "https://api.openstreetmap.org/api/0.6/node/1503833682.json"
+        }
+      ],
+      "coordinateSourceUrl": "https://api.openstreetmap.org/api/0.6/node/1503833682.json",
+      "coordinateBasis": "The TDV İslâm Ansiklopedisi article on Mûsâ Çelebi places the first encounter between Mûsâ and Mehmed Çelebi at İnceğiz near Çatalca. The OpenStreetMap gazetteer node for the village of İnceğiz, Çatalca (node 1503833682, place=village, the label node of the İnceğiz Mahallesi boundary) gives latitude 41.1859009 and longitude 28.4035095, rounded to [28.4035,41.1859]. This is a village reference for the named place, not a surveyed battlefield or army position. No accuracy radius is claimed.",
+      "note": "Add a village-level reference for İnceğiz near Çatalca, where the TDV İslâm Ansiklopedisi places the first clash between Mûsâ Çelebi and Mehmed Çelebi. TDV dates that encounter to spring 815 AH / 1412, whereas the catalogue gives 1411; the catalogue year is retained pending a dedicated date review. Strengths, losses and equipment are not inferred."
+    },
+    "Q55460370": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1896,
+          "month": 7,
+          "day": 5
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        -75.6858,
+        20.1253
+      ],
+      "note": "Sierra Maestra, the provincial newspaper of Santiago de Cuba, states that General José Maceo was gravely wounded in the battle of Loma del Gato on 5 July 1896 and died hours later at La Soledad de Ti Arriba, near Songo-La Maya, and refers to the obelisk at Loma del Gato marking where he fell. The atlas point is the gazetteer node for the Loma del Gato hamlet in Songo-La Maya. It is a named-place sector reference, not the spot where Maceo fell, a Spanish or Cuban position, or the extent of the action. The existing date is retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "Sierra Maestra (Santiago de Cuba) · Rafael Carela Ramos, Aniversario 125 de la caída en combate del general José Maceo, 3 July 2021 (archived)",
+          "url": "https://web.archive.org/web/20220504123746/http://www.sierramaestra.cu/index.php/santiago-de-cuba/historia/38799-aniversario-125-de-la-caida-en-combate-del-general-jose-maceo"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 5873644189, Loma del Gato hamlet, Songo - La Maya, Santiago de Cuba, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N5873644189&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Loma del Gato, revision 1375835326",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Loma_del_Gato&oldid=1375835326"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N5873644189&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 5873644189 (place=hamlet, name Loma del Gato, municipality Songo - La Maya) returns latitude 20.1252947 and longitude -75.6857666, rounded to [-75.6858,20.1253]. A separately mapped monument to José Maceo lies about 400 m to the west-south-west and is not used. A 1077 m peak also named Loma del Gato west of Santiago de Cuba is rejected because the source places Maceo's death hours later near Songo-La Maya. This is a named-hamlet reference, not a surveyed combat position; no accuracy radius is claimed."
+    },
+    "Q55647639": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1757,
+          "month": 11
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        74.8998,
+        31.5203
+      ],
+      "note": "The Encyclopaedia of Sikhism (Punjabi University, Patiala) states that Jahan Khan's troops lay in wait for Baba Dip Singh's force near Gohlvar village, 8 km beyond Tarn Taran, where a fierce action took place. The fighting then carried on towards Ramsar and the precincts of the Harimandar in Amritsar, where Dip Singh fell. The atlas point anchors the Gohlvar action using the gazetteer node for Gohlwar village. It does not locate the later stages in Amritsar, either force's position or the full engagement. The existing month-precision date is retained; the encyclopaedia gives 11 November 1757. Strengths, losses and equipment are not inferred; the encyclopaedia's figure for the Sikh force is not adopted.",
+      "sources": [
+        {
+          "label": "Harbans Singh (ed.) · The Encyclopaedia of Sikhism, vol. I (Punjabi University, Patiala), entry Dip Singh Shahid, Baba, pp. 587–588: action near Gohlvar village, 8 km beyond Tarn Taran (Internet Archive full text)",
+          "url": "https://archive.org/download/TheEncyclopediaOfSikhism-VolumeIA-d/TheEncyclopediaOfSikhism-VolumeIA-d_djvu.txt"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 6055870855, Gohlwar village, Tarn Taran tahsil, published latitude and longitude",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N6055870855&format=jsonv2"
+        },
+        {
+          "label": "Wikipedia (secondary pointer) · Battle of Amritsar (1757), also called Battle of Gohalwar, revision 1372776617",
+          "url": "https://en.wikipedia.org/w/index.php?title=Battle_of_Amritsar_(1757)&oldid=1372776617"
+        }
+      ],
+      "coordinateSourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=N6055870855&format=jsonv2",
+      "coordinateBasis": "Nominatim lookup of OpenStreetMap node 6055870855 (place=village, name Gohlwar, Urdu گوہلور, Tarn Taran tahsil) returns latitude 31.5203494 and longitude 74.8998069, rounded to [74.8998,31.5203]. This lies about 8 km north of Tarn Taran on the way to Amritsar, matching the encyclopaedia's 'Gohlvar village, 8 km ahead'. This is a village reference for the opening action, not the Harimandar precinct where the fighting ended or a surveyed troop position. No accuracy radius is claimed."
+    },
+    "Q65089139": {
+      "reviewedAt": "2026-09-24",
+      "expected": {
+        "start": {
+          "year": 1191
+        },
+        "end": null,
+        "coords": null
+      },
+      "coords": [
+        76.9283,
+        29.8015
+      ],
+      "note": "Reviewed location: Haryana Tourism states that Taraori, a small town in Karnal district, was the battleground of two decisive battles between Prithviraj Chauhan and Muhammad Ghori in 1191 and 1192. The cited Wikipedia revision identifies Tarain with modern Taraori. The point is the gazetteer position of Taraori town. It is a town reference for a battle fought near it, not a surveyed battlefield, a camp or any army position, and Haryana Tourism attributes the 1192 battle to the same town. The existing year-precision date is retained. Strengths, losses and equipment are not inferred.",
+      "sources": [
+        {
+          "label": "GeoNames 1254413 · Tirāwari (Taraori), populated place, Nilokheri, Karnal District, 29.80147 N, 76.92825 E",
+          "url": "https://www.geonames.org/1254413/tirawari.html"
+        },
+        {
+          "label": "OpenStreetMap Nominatim · node 2634530968, Taraori town, Nilokheri, Karnal",
+          "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N2634530968&format=jsonv2"
+        },
+        {
+          "label": "Haryana Tourism · Taraori Sarai: Taraori a battle ground of the 1191 and 1192 battles between Prithvi Raj Chauhan and Mohmad Ghori",
+          "url": "https://haryanatourism.gov.in/places_of_interest/taraori-sarai/"
+        },
+        {
+          "label": "Wikipedia · First Battle of Tarain (revision 1370618992): near Tarain (modern Taraori in Haryana), 1191",
+          "url": "https://en.wikipedia.org/w/index.php?title=First_Battle_of_Tarain&oldid=1370618992"
+        }
+      ],
+      "coordinateSourceUrl": "https://www.geonames.org/1254413/tirawari.html",
+      "coordinateBasis": "GeoNames 1254413, Tirāwari (alternate name Taraori; population 25,944, Nilokheri subdivision, Karnal District), publishes latitude 29.80147 and longitude 76.92825, displayed as 29.8015, 76.9283. OSM place node 2634530968 for Taraori town lies about 150 m away. Stored as [76.9283,29.8015]. This is a town reference for the battleground named by Haryana Tourism, not a surveyed battlefield, Prithviraj's or Muhammad's line, or the Mughal-era sarai used as the tourism landmark. No positional accuracy radius is claimed."
     }
   }
 }

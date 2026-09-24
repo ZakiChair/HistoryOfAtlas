@@ -9,6 +9,11 @@ const dataset = ResourceDatasetSchema.parse(
     readFileSync(new URL('../../public/data/resources/sites.json', import.meta.url), 'utf8'),
   ),
 );
+// The legend lists sources by name: two sources with one name would be indistinguishable links.
+const sourceNames = dataset.sources.map((source) => source.name);
+const repeatedNames = sourceNames.filter((name, index) => sourceNames.indexOf(name) !== index);
+if (repeatedNames.length)
+  throw new Error(`Resource sources share a name: ${[...new Set(repeatedNames)].join('; ')}`);
 const categories = new Set(dataset.sites.flatMap((site) => site.categories));
 for (const category of ['oil', 'gas', 'coal', 'copper', 'gold', 'uranium', 'lithium'] as const) {
   if (!categories.has(category)) throw new Error(`No resource sites for ${category}`);
