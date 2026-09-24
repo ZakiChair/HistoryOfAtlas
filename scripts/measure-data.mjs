@@ -27,7 +27,8 @@ const LAYERS = [
   {
     label: 'Religions (dated history)',
     files: ['data/religions/history.json'],
-    budgetGzipBytes: 34_000,
+    // 131 milestones after the 24 September 2026 data wave (45.9 kB) plus room for growth.
+    budgetGzipBytes: 52_000,
   },
 ];
 

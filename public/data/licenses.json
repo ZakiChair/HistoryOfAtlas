@@ -139,6 +139,70 @@
         "sites": 0
       },
       {
+        "id": "historical-world-sw-burra-monster-mine",
+        "name": "Australian Heritage Database — Australian Cornish Mining Sites: Burra (National Heritage List, place 106304)",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=106304",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-kapunda-copper",
+        "name": "Australian Heritage Database — Australian Cornish Mining Sites: Burra (place 106304), South Australian mining context",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=106304",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-moonta-mines",
+        "name": "Australian Heritage Database — Australian Cornish Mining Sites: Moonta (National Heritage List, place 106096)",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=106096",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-wallaroo-mines",
+        "name": "Australian Heritage Database — Australian Cornish Mining Sites: Moonta (National Heritage List, place 106096), historical context",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=106096",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-castlemaine-mount-alexander",
+        "name": "Australian Heritage Database — Castlemaine Diggings National Heritage Park (National Heritage List, place 105683)",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=105683",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-ballarat",
+        "name": "Australian Heritage Database — Castlemaine Diggings National Heritage Park (place 105683), history section · cited for Ballarat goldfield",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=105683",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-sw-ophir-goldfield",
+        "name": "Australian Heritage Database — Castlemaine Diggings National Heritage Park (place 105683), history section · cited for Ophir goldfield",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=105683",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-broken-hill",
+        "name": "Australian Heritage Database — City of Broken Hill (National Heritage List, place 105861)",
+        "url": "https://www.environment.gov.au/cgi-bin/ahdb/search.pl?mode=place_detail;place_id=105861",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
         "id": "wa-b2gold-fekola",
         "name": "B2Gold — Fekola technical report and operating results",
         "url": "https://s204.q4cdn.com/324791784/files/doc_downloads/2025/10/22/Fekola-Technical_Report-December-31-2023.pdf",
@@ -212,9 +276,25 @@
         "sites": 0
       },
       {
+        "id": "historical-world-sw-update-luanshya-roan-antelope",
+        "name": "Brian Siegel, \"Water Spirits and Mermaids: The Copperbelt Case\" (Southeastern Regional Seminar in African Studies, April 2000), archived",
+        "url": "https://web.archive.org/web/2010/http://www.ecu.edu/african/sersas/Siegel400.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-britannia-copper-mine",
         "name": "British Columbia Geological Survey — Britannia copper mine",
         "url": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1958.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-coloma-sutters-mill",
+        "name": "California State Parks — Marshall Gold Discovery State Historic Park",
+        "url": "https://www.parks.ca.gov/?page_id=484",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
@@ -250,7 +330,7 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "year": 2024,
-        "sites": 566
+        "sites": 565
       },
       {
         "id": "current-major-cmoc",
@@ -269,10 +349,34 @@
         "sites": 1
       },
       {
+        "id": "historical-world-sw-chanarcillo-silver",
+        "name": "Consejo de Monumentos Nacionales de Chile — Juan Godoy (monumento público)",
+        "url": "https://www.monumentos.gob.cl/monumentos/monumentos-publicos/juan-godoy",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-de-beers-kimberley",
+        "name": "De Beers Group — Our history & heritage",
+        "url": "https://www.debeersgroup.com/about-us/our-history",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "current-uranium-denison",
         "name": "Denison Mines — Q2 2026 MD&A, McClean North extraction",
         "url": "https://www.sec.gov/Archives/edgar/data/1063259/000106325926000029/a2026-06dmcmda.htm",
         "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-drake-well-oil-creek",
+        "name": "Drake Well Museum and Park — official site",
+        "url": "https://www.drakewell.org/",
+        "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
       },
@@ -382,6 +486,14 @@
         "sites": 0
       },
       {
+        "id": "historical-world-sw-update-mount-isa",
+        "name": "Glencore Australia — Mount Isa Mines: Our history",
+        "url": "https://www.glencore.com.au/operations-and-projects/metals/mount-isa-mines/who-we-are/our-history",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
         "id": "gem-gcmt",
         "name": "Global Energy Monitor — Global Coal Mine Tracker, August 2026",
         "url": "https://globalenergymonitor.org/projects/global-coal-mine-tracker",
@@ -433,9 +545,97 @@
         "sites": 0
       },
       {
+        "id": "historical-world-sw-update-kalgoorlie",
+        "name": "Heritage Council of Western Australia inHerit — Hannan's North Heritage Mine (place 07255)",
+        "url": "https://inherit.dplh.wa.gov.au/public/inventory/details/f9a8979c-ca02-47a3-8d22-2c1426b459a9",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-sw-update-denniston",
+        "name": "Heritage New Zealand Pouhere Taonga — List entry 7049, Denniston",
+        "url": "https://www.heritage.org.nz/list-details/7049/Listing",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-sw-gabriels-gully",
+        "name": "Heritage New Zealand Pouhere Taonga — List entry 7789, Gabriel's Gully",
+        "url": "https://www.heritage.org.nz/list-details/7789/Listing",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-almaden-expanded",
         "name": "Historical exploitation evidence — Almadén mercury mine",
         "url": "https://www.minasalmaden.com/parque_minero_almaden.aspx?lang=es-ES",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-alsace-potash",
+        "name": "Historical exploitation evidence — Alsace potash basin (Mines de potasse d'Alsace, Wittelsheim)",
+        "url": "https://web.archive.org/web/20200629071229/http://www.mining-enc.ru:80/v/verxnerejnskij-solenosnyj-bassejn/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-bahrain-awali",
+        "name": "Historical exploitation evidence — Bahrain (Awali) oil field, Well No. 1 at Jebel Dukhan",
+        "url": "https://www.bapco.net/en/about-us/history",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-balakhany",
+        "name": "Historical exploitation evidence — Balakhany (Balaxanı) oil field, Baku",
+        "url": "https://azer.com/aiweb/categories/magazine/ai102_folder/102_articles/102_oil_chronology.html",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-banska-stiavnica",
+        "name": "Historical exploitation evidence — Banská Štiavnica gold-silver mining district",
+        "url": "https://web.archive.org/web/20260515131648/http://www.mining-enc.ru/b/banska-shtyavnica/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-berchtesgaden",
+        "name": "Historical exploitation evidence — Berchtesgaden salt mine",
+        "url": "https://www.salzbergwerk.de/en/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-berezovsky-gold",
+        "name": "Historical exploitation evidence — Berezovskoe gold deposit (Beryozovsky, Urals)",
+        "url": "https://web.archive.org/web/20200802015006/http://www.mining-enc.ru:80/b/berezovskoe-mestorozhdenie/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-bibi-heybat",
+        "name": "Historical exploitation evidence — Bibi-Heybat oil field, Baku",
+        "url": "https://azer.com/aiweb/categories/magazine/ai102_folder/102_articles/102_oil_chronology.html",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-bobrka",
+        "name": "Historical exploitation evidence — Bóbrka oil mine",
+        "url": "https://bobrka.pl/",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
@@ -465,6 +665,38 @@
         "sites": 1
       },
       {
+        "id": "historical-world-digboi",
+        "name": "Historical exploitation evidence — Digboi oil field",
+        "url": "https://web.archive.org/web/20080127142641/http://www.oil-india.com/company.aspx",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-grangesberg",
+        "name": "Historical exploitation evidence — Grängesberg-Risberg iron ore deposit",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn349",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-grozny-starye-promysly",
+        "name": "Historical exploitation evidence — Grozny oil region, Starye Promysly (Old Fields)",
+        "url": "https://web.archive.org/web/20211115135421/https://monographies.ru/ru/book/section?id=16179",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-gumeshevsky",
+        "name": "Historical exploitation evidence — Gumeshevsky copper mine (Polevskoy)",
+        "url": "https://web.archive.org/web/20241009230646/http://mining-enc.ru/g/gumeshevskij-rudnik/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-hallstatt-prehistoric-expanded",
         "name": "Historical exploitation evidence — Hallstatt — prehistoric salt mining district",
         "url": "https://www.nhm.at/hallstatt/en/site",
@@ -473,9 +705,129 @@
         "sites": 1
       },
       {
+        "id": "historical-world-hutti",
+        "name": "Historical exploitation evidence — Hutti gold mine",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn471",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-iwami-ginzan-expanded",
         "name": "Historical exploitation evidence — Iwami Ginzan silver mine",
         "url": "https://whc.unesco.org/en/list/1246/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-jachymov",
+        "name": "Historical exploitation evidence — Jáchymov (Joachimsthal) silver and uranium mining district",
+        "url": "https://www.mestojachymov.cz/mesto/historie-mesta/vyznamne-jachymovske-letopocty/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-jinguashi",
+        "name": "Historical exploitation evidence — Jinguashi (Chinkuashih) gold-copper mine",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn1062",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-kemerovo-krasnaya-gorka",
+        "name": "Historical exploitation evidence — Kemerovo — Krasnaya Gorka (Volkov's 1721 coal find, Kuznetsk basin)",
+        "url": "https://web.archive.org/web/20260419203322/http://www.mining-enc.ru/k/kuzneckij-ugolnyj-bassejn/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-kizel",
+        "name": "Historical exploitation evidence — Kizel coal basin (Kizel)",
+        "url": "https://web.archive.org/web/20210127032003/http://www.mining-enc.ru/k/kizelovskij-ugolnyj-bassejn/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-krestovozdvizhensky-diamonds",
+        "name": "Historical exploitation evidence — Krestovozdvizhensky placers (Promysla) — first Russian diamond",
+        "url": "https://web.archive.org/web/20201029130927/http://www.mining-enc.ru/u/uralskij-almazonosnyj-rajon/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-kudako",
+        "name": "Historical exploitation evidence — Kudako oil field (Kievskoye, Kuban)",
+        "url": "https://web.archive.org/web/20140223031105/http://kulturnoe-nasledie.ru/monuments.php?id=2301726000",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-baskunchak",
+        "name": "Historical exploitation evidence — Lake Baskunchak salt works",
+        "url": "https://web.archive.org/web/20230813203404/http://www.mining-enc.ru/b/baskunchak/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-lavrion",
+        "name": "Historical exploitation evidence — Lavrion (Laurium) lead-silver mines",
+        "url": "https://web.archive.org/web/20200220103430/http://www.mining-enc.ru:80/l/lavrionskie-rudniki",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-lysychansk",
+        "name": "Historical exploitation evidence — Lysychansk (Lisichya Balka) coal workings",
+        "url": "https://web.archive.org/web/20260419211217/http://www.mining-enc.ru/d/doneckij-ugolnyj-bassejn/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-miike",
+        "name": "Historical exploitation evidence — Miike coal mine (Ōmuta / Arao)",
+        "url": "https://kunishitei.bunka.go.jp/heritage/detail/401/3311",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-miri-canada-hill",
+        "name": "Historical exploitation evidence — Miri oil field — Canada Hill (Oil Well No. 1)",
+        "url": "https://web.archive.org/web/20120422042409/http://www.mining-enc.ru:80/m/malajziya/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-nerchinsky-zavod",
+        "name": "Historical exploitation evidence — Nerchinsk mining district — Nerchinsky Zavod silver works",
+        "url": "https://web.archive.org/web/20120512025921/http://mining-enc.ru/n/nerchinskij-gornopromyshlennyj-okrug/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-parys-mountain",
+        "name": "Historical exploitation evidence — Parys Mountain (Mynydd Parys) copper mines",
+        "url": "https://parysmountain.co.uk/history/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-pechelbronn",
+        "name": "Historical exploitation evidence — Pechelbronn oil field",
+        "url": "https://web.archive.org/web/20090725054948/http://www.musee-du-petrole.com/site%20anglais/page%204.htm",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
@@ -497,9 +849,33 @@
         "sites": 1
       },
       {
+        "id": "historical-world-sadon",
+        "name": "Historical exploitation evidence — Sadon lead-zinc-silver deposit (North Ossetia)",
+        "url": "https://web.archive.org/web/20200207003138/http://mining-enc.ru:80/s/sadonskij-svincovo-cinkovyj-kombinat/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sala",
+        "name": "Historical exploitation evidence — Sala silver mine",
+        "url": "https://www.salasilvergruva.se/historia-och-fakta/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-salins-les-bains-expanded",
         "name": "Historical exploitation evidence — Salins-les-Bains — Grande Saline",
         "url": "https://whc.unesco.org/en/list/203/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-shorsu",
+        "name": "Historical exploitation evidence — Shorsu oil field (Fergana)",
+        "url": "https://web.archive.org/web/20230711224440/http://www.mining-enc.ru/f/ferganskaya-neftegazonosnaya-oblast/",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
@@ -521,9 +897,41 @@
         "sites": 1
       },
       {
+        "id": "historical-world-tikhvin-bauxite",
+        "name": "Historical exploitation evidence — Tikhvin bauxite deposits (Boksitogorsk)",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn1089",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-salina-turda",
+        "name": "Historical exploitation evidence — Turda salt mine (Salina Turda)",
+        "url": "https://www.salinaturda.eu/en/locatie/terezia-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-wieliczka-expanded",
         "name": "Historical exploitation evidence — Wieliczka salt mine",
         "url": "https://whc.unesco.org/en/list/32/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-wietze",
+        "name": "Historical exploitation evidence — Wietze oil field",
+        "url": "https://www.erdoelmuseum.de/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-xikuangshan",
+        "name": "Historical exploitation evidence — Xikuangshan antimony deposit",
+        "url": "https://web.archive.org/web/20201127200945/http://www.mining-enc.ru/s/siguanshan/",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
@@ -559,7 +967,7 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "year": 2026,
-        "sites": 1928
+        "sites": 1925
       },
       {
         "id": "current-major-igo",
@@ -578,12 +986,36 @@
         "sites": 3
       },
       {
+        "id": "historical-world-kryvyi-rih-knowledge",
+        "name": "IntechOpen — History and Current State of Mining in the Kryvyi Rih Iron Ore Deposit",
+        "url": "https://www.intechopen.com/chapters/75169",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "current-major-ivanhoe",
         "name": "Ivanhoe Mines — 2025 results presentation",
         "url": "https://www.ivanhoemines.com/wp-content/uploads/20260219-FY-2025-Results-Presentation-VF.pdf",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 0
+      },
+      {
+        "id": "historical-world-ikuno-knowledge",
+        "name": "Japan Heritage Old Silver Mine Carriage Road (Hyogo) — History of Ikuno",
+        "url": "https://www.gin-basha.jp/en/about/history/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-ashio-knowledge",
+        "name": "Japan National Tourism Organization — Ashio Copper Mine",
+        "url": "https://www.japan.travel/en/japans-local-treasures/ashio-copper-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
       },
       {
         "id": "wa-fineprint",
@@ -601,7 +1033,7 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "year": 2023,
-        "sites": 111
+        "sites": 110
       },
       {
         "id": "weishanhu-inspection-2026",
@@ -618,6 +1050,14 @@
         "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
         "year": 2026,
         "sites": 17
+      },
+      {
+        "id": "historical-world-gora-blagodat-knowledge",
+        "name": "Kushva town chronicle (Nakanune.ru, archived) — Gora Blagodat magnetite deposit",
+        "url": "https://web.archive.org/web/20160304112046/http://www.nakanune.ru/articles/kushvinskaja_blagodat_",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
       },
       {
         "id": "current-major-lithium-argentina",
@@ -644,6 +1084,70 @@
         "sites": 0
       },
       {
+        "id": "historical-world-degtyarsk-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Degtyarsk deposit",
+        "url": "https://web.archive.org/web/20241009232106/http://mining-enc.ru/d/degtyarskoe-mestorozhdenie/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-karaganda-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Karaganda coal basin",
+        "url": "https://web.archive.org/web/20241009213256/http://mining-enc.ru/k/karagandinskij-ugolnyj-bassejn/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-gubkin-korobkovo-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Kursk Magnetic Anomaly",
+        "url": "https://web.archive.org/web/20250124074340/http://www.mining-enc.ru/k/kurskaya-magnitnaya-anomaliya/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-bodaibo-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Lena goldfields (Lenskie priiski)",
+        "url": "https://web.archive.org/web/20200427154952/http://www.mining-enc.ru:80/l/lenskie-priiski/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-tkibuli-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Tkibuli-Shaori coal deposit",
+        "url": "https://web.archive.org/web/20240623214732/http://www.mining-enc.ru/t/tkibuli-shaurskoe-mestorozhdenie",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-verkhnekamsk-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Verkhnekamsk salt basin",
+        "url": "https://web.archive.org/web/20241006081000/http://www.mining-enc.ru/v/verxnekamskij-solenosnyj-bassejn/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-zmeinogorsk-knowledge",
+        "name": "Mining Encyclopedia (Gornaya entsiklopediya, Moscow: Sovetskaya Entsiklopediya, 1984–1991), online edition — Zmeinogorsk mine",
+        "url": "https://web.archive.org/web/20120511213831/http://mining-enc.ru/z/zmeinogorskij-rudnik/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-mesabi-mountain-iron",
+        "name": "MNopedia (Minnesota Historical Society) — Mesabi Iron Range",
+        "url": "https://www.mnopedia.org/place/mesabi-iron-range",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "current-major-mp-materials",
         "name": "MP Materials — 2025 annual and Q2 2026 results",
         "url": "https://www.mpmaterials.com/news/mp-materials-reports-second-quarter-2026-results",
@@ -660,6 +1164,38 @@
         "sites": 1
       },
       {
+        "id": "historical-world-sw-kolmanskop-diamonds",
+        "name": "Namdeb Diamond Corporation — Namdeb at a glance (history)",
+        "url": "https://namdeb.com/profile/about-us/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-butte",
+        "name": "National Park Service — Keweenaw National Historical Park: Timeline of Michigan Copper Mining 1851 to 1900 · cited for Butte copper",
+        "url": "https://www.nps.gov/kewe/learn/historyculture/copper-mining-timeline-page-2.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-calumet-hecla",
+        "name": "National Park Service — Keweenaw National Historical Park: Timeline of Michigan Copper Mining 1851 to 1900 · cited for Calumet and Hecla copper",
+        "url": "https://www.nps.gov/kewe/learn/historyculture/copper-mining-timeline-page-2.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-cliff-mine",
+        "name": "National Park Service — Keweenaw National Historical Park: Timeline of Michigan Copper Mining, Prehistory to 1850",
+        "url": "https://www.nps.gov/kewe/learn/historyculture/copper-mining-timeline.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "national-canada-2026",
         "name": "Natural Resources Canada — principal producing mines, February 2026",
         "url": "https://open.canada.ca/data/en/dataset/000183ed-8864-42f0-ae43-c4313a860720",
@@ -669,12 +1205,36 @@
         "sites": 93
       },
       {
+        "id": "historical-world-sw-dahlonega-georgia-gold",
+        "name": "New Georgia Encyclopedia — Gold Rush (David Williams, Valdosta State University)",
+        "url": "https://www.georgiaencyclopedia.org/articles/history-archaeology/gold-rush/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-kongsberg-knowledge",
+        "name": "New Mexico Bureau of Geology — Kongsberg silver mines (Mineral Symposium abstract)",
+        "url": "https://geoinfo.nmt.edu/museum/nmms/abstracts/view.cfm?aid=508",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "current-major-newmont",
         "name": "Newmont — 2025 annual results",
         "url": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 0
+      },
+      {
+        "id": "historical-world-sw-reed-gold-mine",
+        "name": "North Carolina Historic Sites — Reed Gold Mine: History",
+        "url": "https://historicsites.nc.gov/all-sites/reed-gold-mine/history",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
       },
       {
         "id": "sodir-production",
@@ -695,9 +1255,49 @@
         "sites": 291
       },
       {
+        "id": "historical-world-sw-hill-end-goldfield",
+        "name": "NSW National Parks and Wildlife Service — Hill End Historic Site: learn more",
+        "url": "https://www.nationalparks.nsw.gov.au/visit-a-park/parks/hill-end-historic-site/learn-more",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "historical-khouribga-phosphate-mining-district",
         "name": "OCP Group and IFC — Khouribga phosphate mining district",
         "url": "https://www.ocpgroup.ma/en/who-we-are/our-journey",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-glenn-pool",
+        "name": "Oklahoma Historical Society — Encyclopedia of Oklahoma History and Culture: Glenn Pool Oil Field",
+        "url": "https://www.okhistory.org/publications/enc/entry?entry=GL007",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-bartlesville-nellie-johnstone",
+        "name": "Oklahoma Historical Society — Encyclopedia of Oklahoma History and Culture: Nellie Johnstone Number One",
+        "url": "https://www.okhistory.org/publications/enc/entry?entry=NE003",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-comstock-lode",
+        "name": "Online Nevada Encyclopedia (Nevada Humanities) — Comstock Lode",
+        "url": "https://www.onlinenevada.org/articles/comstock-lode",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-khewra-knowledge",
+        "name": "Pakistan Mineral Development Corporation — Khewra Salt Mines",
+        "url": "https://www.pmdc.gov.pk/tourist/",
         "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
@@ -707,6 +1307,150 @@
         "name": "Paladin Energy — Langer Heinrich June 2026 quarterly report",
         "url": "https://www.paladinenergy.com/wp-content/uploads/2026/07/61334849.pdf",
         "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-barberton-de-kaap",
+        "name": "Pan African Resources — A history of Barberton gold mining",
+        "url": "https://www.panafricanresources.com/blog/par-history/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-witwatersrand-main-reef",
+        "name": "Pan African Resources — A history of South African gold mining",
+        "url": "https://www.panafricanresources.com/blog/par-history/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-sheba-mine",
+        "name": "Pan African Resources — Sheba Mine; Barberton Mines",
+        "url": "https://www.panafricanresources.com/mining-operations/sheba/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-premier-cullinan",
+        "name": "Petra Diamonds — Cullinan Mine; De Beers Group — Our history & heritage",
+        "url": "https://www.petradiamonds.com/our-business/our-operations/cullinan-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-kalmakyr-knowledge",
+        "name": "Porter GeoConsultancy — Almalyk (Kal'makyr)",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn984",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-bawdwin-knowledge",
+        "name": "Porter GeoConsultancy — Bawdwin",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn244",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-bayan-obo-knowledge",
+        "name": "Porter GeoConsultancy — Bayan Obo",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn191",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-bor-knowledge",
+        "name": "Porter GeoConsultancy — Bor porphyry and high-sulphidation Cu-Au",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn978",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-mahd-adh-dhahab-knowledge",
+        "name": "Porter GeoConsultancy — Central Arabian gold region: Mahd Adh Dhahab",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn1642",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-dalnegorsk-knowledge",
+        "name": "Porter GeoConsultancy — Dal'negorsk",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn1677",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-freiberg-knowledge",
+        "name": "Porter GeoConsultancy — Erzgebirge (Krušné hory): Freiberg",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn1240",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-lepanto-knowledge",
+        "name": "Porter GeoConsultancy — Lepanto, Mankayan District",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn057",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-nikopol-knowledge",
+        "name": "Porter GeoConsultancy — Nikopol Basin manganese",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn1817",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-norilsk-knowledge",
+        "name": "Porter GeoConsultancy — Norilsk–Talnakh",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn174",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-gruvberget-knowledge",
+        "name": "Porter GeoConsultancy — Norrbotten Region: Gruvberget",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn700",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-ridder-knowledge",
+        "name": "Porter GeoConsultancy — Ridder-Sokolnoe",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn280",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-rio-tinto-knowledge",
+        "name": "Porter GeoConsultancy — Rio Tinto Mines",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn316",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sibay-knowledge",
+        "name": "Porter GeoConsultancy — Sibay (Sibai)",
+        "url": "https://portergeo.com.au/database/mineinfo.php?mineid=mn283",
+        "license": "Factual metadata; original source content retains its own copyright",
         "year": 2026,
         "sites": 1
       },
@@ -725,6 +1469,22 @@
         "license": "Factual report metadata; original company reports retain their copyright. Index supplied for research and educational use; index code MIT.",
         "year": 2026,
         "sites": 45
+      },
+      {
+        "id": "historical-world-sw-mount-morgan",
+        "name": "Queensland Government — Mount Morgan remediation project (abandoned mines)",
+        "url": "https://www.qld.gov.au/environment/land/management/abandoned-mines/remediation-projects/mount-morgan",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-gympie-goldfield",
+        "name": "Queensland State Archives — Gold at Gympie (Stories from the Archives)",
+        "url": "https://blogs.archives.qld.gov.au/2021/08/30/gold-at-gympie/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
       },
       {
         "id": "combined-mineral-evidence-2026",
@@ -823,12 +1583,124 @@
         "sites": 1
       },
       {
+        "id": "historical-world-sw-update-thio-nickel",
+        "name": "Société Le Nickel (Eramet) — Thio : une longévité exceptionnelle; Notre histoire",
+        "url": "https://sln.eramet.com/sln/nous-connaitre/thio-une-longevite-exceptionnelle/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-shinkolobwe",
+        "name": "Society for the History of Discoveries — 2012 meeting abstracts: Donald D. Hogarth, \"Robert Rich Sharp (1881–1958): prospector, engineer and discoverer of the Shinkolobwe radium-uranium ore-body\" (archived)",
+        "url": "https://web.archive.org/web/20130126221513/http://www.sochistdisc.org/2012_meeting_abstracts.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-charters-towers",
+        "name": "State Library of Queensland — Charters Towers: 'The World'",
+        "url": "https://www.slq.qld.gov.au/blog/charters-towers-world",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-chiatura-knowledge",
+        "name": "State Representative Administration of Imereti — Chiatura",
+        "url": "https://imereti.gov.ge/eng/static/19/chiatura",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
         "id": "stimson-rare-earths-2026",
         "name": "Stimson Center — satellite-observed rare-earth mining in Southeast Asia",
         "url": "https://www.stimson.org/2025/mining-in-mainland-southeast-asia-river-basins-dashboard/",
         "license": "Public factual mine observations; Stimson requests attribution. Underlying Planet Labs imagery is not redistributed.",
         "year": 2026,
         "sites": 620
+      },
+      {
+        "id": "historical-world-besshi-knowledge",
+        "name": "Sumitomo Group Public Affairs Committee — Besshi Copper Mines",
+        "url": "https://www.sumitomo.gr.jp/english/history/besshidouzan/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-thames-goldfield",
+        "name": "Te Ara — Encyclopedia of New Zealand (Ministry for Culture and Heritage) — Hauraki–Coromandel places: Thames; Hauraki–Coromandel region: Gold mining",
+        "url": "https://teara.govt.nz/en/hauraki-coromandel-places/page-2",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-coromandel-goldfield",
+        "name": "Te Ara — Encyclopedia of New Zealand (Ministry for Culture and Heritage) — Hauraki–Coromandel region: Gold mining",
+        "url": "https://teara.govt.nz/en/hauraki-coromandel-region/page-8",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-waihi-martha",
+        "name": "Te Ara — Encyclopedia of New Zealand (Ministry for Culture and Heritage) — Hauraki–Coromandel region: Gold mining (Waihī)",
+        "url": "https://teara.govt.nz/en/hauraki-coromandel-region/page-8",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-ducktown-copper-basin",
+        "name": "Tennessee Encyclopedia (Tennessee Historical Society) — Ducktown Basin Museum",
+        "url": "https://tennesseeencyclopedia.net/entries/ducktown-basin-museum/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-sw-east-texas-oilfield",
+        "name": "Texas State Historical Association — Handbook of Texas: East Texas Oilfield",
+        "url": "https://www.tshaonline.org/handbook/entries/east-texas-oilfield",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-spindletop",
+        "name": "Texas State Historical Association — Handbook of Texas: Spindletop Oilfield",
+        "url": "https://www.tshaonline.org/handbook/entries/spindletop-oilfield",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-klondike",
+        "name": "The Canadian Encyclopedia — Klondike Gold Rush; UNESCO — Tr'ondëk-Klondike",
+        "url": "https://www.thecanadianencyclopedia.ca/en/article/klondike-gold-rush",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-hollinger-porcupine",
+        "name": "The Canadian Encyclopedia — Timmins",
+        "url": "https://www.thecanadianencyclopedia.ca/en/article/timmins",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-huancavelica-mercury",
+        "name": "U.S. Geological Survey Bulletin 975-A — Geology of the Huancavelica Quicksilver District, Peru (Yates, Kent and Concha, 1951)",
+        "url": "https://pubs.usgs.gov/bul/0975a/report.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
       },
       {
         "id": "historical-kennecott",
@@ -871,6 +1743,54 @@
         "sites": 1
       },
       {
+        "id": "historical-world-sw-diamantina-diamonds",
+        "name": "UNESCO World Heritage Centre — Historic Centre of the Town of Diamantina (890)",
+        "url": "https://whc.unesco.org/en/list/890/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-zacatecas",
+        "name": "UNESCO World Heritage Centre — Historic Centre of Zacatecas (676)",
+        "url": "https://whc.unesco.org/en/list/676/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-guanajuato",
+        "name": "UNESCO World Heritage Centre — Historic Town of Guanajuato and Adjacent Mines (482)",
+        "url": "https://whc.unesco.org/en/list/482/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-ouro-preto-gold",
+        "name": "UNESCO World Heritage Centre — Historic Town of Ouro Preto (124)",
+        "url": "https://whc.unesco.org/en/list/124/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-mount-lyell",
+        "name": "University of Tasmania — Companion to Tasmanian History: Mount Lyell",
+        "url": "https://www.utas.edu.au/library/companion_to_tasmanian_history/M/Mt%20Lyell.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-mount-bischoff",
+        "name": "University of Tasmania Library Special & Rare Collections — Mount Bischoff Tin Mine administrative history",
+        "url": "https://heritage.utas.edu.au/index.php/discovery-of-mt-bischoff-tin-mine",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
         "id": "current-uranium-ur-energy",
         "name": "Ur-Energy — actual Q2 2026 uranium recovery",
         "url": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
@@ -885,7 +1805,7 @@
         "license": "Public domain (USGS)",
         "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
         "year": 2009,
-        "sites": 2533
+        "sites": 2496
       },
       {
         "id": "usgs-current-us-2026",
@@ -895,6 +1815,54 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
         "year": 2026,
         "sites": 44
+      },
+      {
+        "id": "historical-world-sw-bendigo-victoria-hill",
+        "name": "Victorian Heritage Database — Victoria Hill Quartz Gold Mines, Ironbark (place 8329, Heritage Inventory H7724-0026)",
+        "url": "https://vhd.heritagecouncil.vic.gov.au/places/8329",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-nauru-phosphate",
+        "name": "Wikipedia (secondary source) — Nauru, permanent revision 1375324590",
+        "url": "https://en.wikipedia.org/w/index.php?title=Nauru&oldid=1375324590",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-obuasi",
+        "name": "Wikipedia (secondary source) — Obuasi Gold Mine, permanent revision 1368236252",
+        "url": "https://en.wikipedia.org/w/index.php?title=Obuasi_Gold_Mine&oldid=1368236252",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-world-sw-oil-springs-ontario",
+        "name": "Wikipedia (secondary source) — Oil Springs, Ontario, permanent revision 1303445330",
+        "url": "https://en.wikipedia.org/w/index.php?title=Oil_Springs%2C_Ontario&oldid=1303445330",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-sw-update-tsumeb",
+        "name": "Wikipedia (secondary source) — Tsumeb, permanent revision 1345750043",
+        "url": "https://en.wikipedia.org/w/index.php?title=Tsumeb&oldid=1345750043",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-world-kamaishi-knowledge",
+        "name": "World Heritage Council for the Sites of Japan's Meiji Industrial Revolution — Hashino Iron Mining and Smelting Site",
+        "url": "https://www.japansmeijiindustrialrevolution.com/en/site/kamaishi/component.html",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
       },
       {
         "id": "historical-zollverein",
@@ -910,13 +1878,13 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "sources": 7,
-        "sites": 16596
+        "sites": 16591
       },
       {
         "license": "Public domain (USGS)",
         "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
         "sources": 1,
-        "sites": 2533
+        "sites": 2496
       },
       {
         "license": "Public domain — U.S. federal government data",
@@ -942,15 +1910,15 @@
         "sites": 419
       },
       {
+        "license": "Factual metadata; original source content retains its own copyright",
+        "sources": 185,
+        "sites": 167
+      },
+      {
         "license": "Open Government Licence — Canada",
         "licenseUrl": "https://open.canada.ca/en/open-government-licence-canada",
         "sources": 1,
         "sites": 93
-      },
-      {
-        "license": "Factual metadata; original source content retains its own copyright",
-        "sources": 64,
-        "sites": 62
       },
       {
         "license": "Factual report metadata; original company reports retain their copyright. Index supplied for research and educational use; index code MIT.",
@@ -994,6 +1962,12 @@
     },
     "references": [
       {
+        "id": "aia-jodensavanne",
+        "title": "Archaeological Institute of America — Interactive Dig: Jodensavanne, Suriname",
+        "url": "https://www.archaeological.org/interactive-dig/jodensavanne-suriname/",
+        "milestones": 1
+      },
+      {
         "id": "art-institute-parliament",
         "title": "Art Institute of Chicago — Museum Studies 36/2, Parliament of Religions",
         "url": "https://www.artic.edu/files/d6d34ab7-f17c-4939-b2aa-f8c5a71495a5/AIC_MuseumStudies_36-2_UPDF.pdf",
@@ -1024,15 +1998,57 @@
         "milestones": 1
       },
       {
+        "id": "parks-weaverville",
+        "title": "California State Parks — Weaverville Joss House State Historic Park",
+        "url": "https://www.parks.ca.gov/?page_id=457",
+        "milestones": 1
+      },
+      {
         "id": "cambridge-alexandria",
         "title": "Cambridge University Press — The Cambridge Dictionary of Jewish History and Culture, Alexandria",
         "url": "https://assets.cambridge.org/97805218/25979/excerpt/9780521825979_excerpt.pdf",
         "milestones": 1
       },
       {
+        "id": "crhp-khalsa-diwan",
+        "title": "Canada’s Historic Places (Canadian Register) — Khalsa Diwan Society Gurdwara, Vancouver",
+        "url": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=22922",
+        "milestones": 1
+      },
+      {
+        "id": "cbck-early-church",
+        "title": "Catholic Bishops’ Conference of Korea — Development of the Early Catholic Church in Korea",
+        "url": "https://www.cbck.or.kr/en/CatholicChurchInKorea/History/1176?page=2",
+        "milestones": 1
+      },
+      {
+        "id": "cipdh-zanzibar",
+        "title": "CIPDH–UNESCO, Memorias situadas — Christ Church Anglican Cathedral (former slave market), Zanzibar",
+        "url": "https://www.cipdh.gob.ar/memorias-situadas/en/lugar-de-memoria/catedral-anglicana-iglesia-de-cristo-antiguo-mercado-de-esclavos-de-zanzibar/",
+        "milestones": 1
+      },
+      {
+        "id": "conib-kahal-zur-israel",
+        "title": "Confederação Israelita do Brasil (CONIB) — Kahal Zur Israel synagogue, Recife",
+        "url": "https://conib.org.br/noticias/todas-as-noticias/38630-sinagoga-kahal-zur-israel-de-recife-pode-se-tornar-patrimonio-do-brasil.html",
+        "milestones": 1
+      },
+      {
+        "id": "snoa-history",
+        "title": "Congregation Mikvé Israel-Emanuel, Curaçao — About us and congregation history",
+        "url": "https://snoa.com/about-us/",
+        "milestones": 1
+      },
+      {
         "id": "cordoba-synagogue",
         "title": "Córdoba municipal tourism — Synagogue, dated 1315",
         "url": "https://www.turismodecordoba.org/repositorio/2019/201907301435300000001564490130.1919.pdf?cache=1564490130.3006",
+        "milestones": 1
+      },
+      {
+        "id": "lii-lukumi",
+        "title": "Cornell Legal Information Institute — Church of the Lukumi Babalu Aye v. City of Hialeah, 508 U.S. 520 (1993)",
+        "url": "https://www.law.cornell.edu/supct/html/91-948.ZO.html",
         "milestones": 1
       },
       {
@@ -1156,6 +2172,36 @@
         "milestones": 1
       },
       {
+        "id": "he-blog-gurdwaras",
+        "title": "Historic England, Heritage Calling — A brief history of gurdwaras in England",
+        "url": "https://heritagecalling.com/2022/07/14/a-brief-history-of-gurdwaras-in-england/",
+        "milestones": 1
+      },
+      {
+        "id": "he-blog-mosques",
+        "title": "Historic England, Heritage Calling — The history of the English mosque",
+        "url": "https://heritagecalling.com/2022/05/02/history-of-the-british-mosque/",
+        "milestones": 1
+      },
+      {
+        "id": "hhf-abcfm-bicentennial",
+        "title": "Historic Hawaiʻi Foundation — Bicentennial of the arrival of ABCFM missionaries and three historic churches",
+        "url": "https://historichawaii.org/article/bicentennial-of-the-arrival-of-abmc-missionaries-and-establishment-of-three-historic-churches/",
+        "milestones": 1
+      },
+      {
+        "id": "hongwanji-hawaii-history",
+        "title": "Honpa Hongwanji Mission of Hawaii — History",
+        "url": "https://hongwanjihawaii.com/history/",
+        "milestones": 1
+      },
+      {
+        "id": "iarccum-namugongo",
+        "title": "IARCCUM — Paul VI, Address at the Anglican Martyrs’ Shrine, Namugongo (1969)",
+        "url": "https://iarccum.org/doc/1600/",
+        "milestones": 1
+      },
+      {
         "id": "iccrom-wadi-natrun",
         "title": "ICCROM archives — Wadi El-Natrun, Monastery of Saint Macarius",
         "url": "https://archives.iccrom.org/oggetti/40782-wadi-el-natrun-mra-egy-nat-001",
@@ -1165,6 +2211,12 @@
         "id": "ise-sengu",
         "title": "Ise Jingu — Rituals and Ceremonies: Shikinen Sengu",
         "url": "https://www.isejingu.or.jp/en/ritual/index.html",
+        "milestones": 1
+      },
+      {
+        "id": "izumo-hawaii-history",
+        "title": "Izumo Taishakyo Mission of Hawaii — History",
+        "url": "https://www.izumotaishahawaii.com/about/history",
         "milestones": 1
       },
       {
@@ -1192,9 +2244,39 @@
         "milestones": 1
       },
       {
+        "id": "ko-hk-cemeteries",
+        "title": "Ko Tim-keung — early Hong Kong cemeteries, with the Parsee cemetery at Happy Valley (PDF hosted at cultus.hk)",
+        "url": "https://www.cultus.hk/cemetery_lecture/KoTK.pdf",
+        "milestones": 1
+      },
+      {
         "id": "korea-sosu",
         "title": "Korea.net — Seowon, Neo-Confucian academies",
         "url": "https://www.korea.net/NewsFocus/Culture/view?articleId=170992",
+        "milestones": 1
+      },
+      {
+        "id": "koreanet-gospel-trail",
+        "title": "Korea.net — The Gospel Trail: from Myeongdong Cathedral to St. Andrew Kim Dae-geon’s tomb",
+        "url": "https://www.korea.net/NewsFocus/Society/view?articleId=120738",
+        "milestones": 1
+      },
+      {
+        "id": "loc-nigeria-sokoto",
+        "title": "Library of Congress, Nigeria: A Country Study (1991) — Usman dan Fodio and the Sokoto Caliphate (countrystudies.us transcription)",
+        "url": "https://countrystudies.us/nigeria/9.htm",
+        "milestones": 1
+      },
+      {
+        "id": "lbv-about",
+        "title": "London Buddhist Vihara — The London Buddhist Vihara",
+        "url": "https://www.londonbuddhistvihara.org/",
+        "milestones": 1
+      },
+      {
+        "id": "maharashtra-hazur-sahib",
+        "title": "Maharashtra Tourism Department — Hazur Sahib Gurudwara, Nanded",
+        "url": "https://maharashtratourism.gov.in/temple/hazur-sahib-gurudwara/",
         "milestones": 1
       },
       {
@@ -1204,15 +2286,57 @@
         "milestones": 1
       },
       {
+        "id": "meijijingu-establishment",
+        "title": "Meiji Jingu — Establishment of Meiji Jingu",
+        "url": "https://www.meijijingu.or.jp/en/about/establishment/",
+        "milestones": 1
+      },
+      {
+        "id": "misiones-san-ignacio",
+        "title": "Ministerio de Turismo de la Provincia de Misiones — Reducción de San Ignacio Miní",
+        "url": "https://misiones.tur.ar/sanignaciomini/",
+        "milestones": 1
+      },
+      {
         "id": "ui-capitoline-jupiter",
         "title": "Musei Capitolini — Jupiter of the Capitol and the Olympian model",
         "url": "https://www.museicapitolini.org/sites/default/files/f_file/4.%20The%20display%20of%20the%20Colossus%20at%20Villa%20Caffarelli.pdf",
         "milestones": 1
       },
       {
+        "id": "nagasaki-koshibyo",
+        "title": "Nagasaki Confucius Shrine (Koshibyo) — About Confucius and the shrine, with chronology",
+        "url": "https://nagasaki-koushibyou.com/koushiabout.html",
+        "milestones": 1
+      },
+      {
+        "id": "discover-nagasaki-oura",
+        "title": "Nagasaki Prefecture Tourism Association — Oura Cathedral and the discovery of the Hidden Christians",
+        "url": "https://www.discover-nagasaki.com/en/featured-topics/shin-kirishitan/5",
+        "milestones": 1
+      },
+      {
+        "id": "nalis-temple-sea",
+        "title": "NALIS Trinidad and Tobago — Sewdass Sadhu Shiv Mandir, Temple in the Sea",
+        "url": "https://www.nalis.gov.tt/blog/sewdass-sadhu-shiv-mandir-temple-in-the-sea/",
+        "milestones": 1
+      },
+      {
         "id": "ui-unesco-old-oyo",
         "title": "National Commission for Museums and Monuments / UNESCO — Old Oyo",
         "url": "https://whc.unesco.org/en/tentativelists/489/",
+        "milestones": 1
+      },
+      {
+        "id": "nttt-temple-sea",
+        "title": "National Trust of Trinidad and Tobago — Siewdass Sadhu Temple in the Sea",
+        "url": "https://nationaltrust.tt/location/siewdass-sadhu-temple-in-the-sea/",
+        "milestones": 1
+      },
+      {
+        "id": "doc-oihi",
+        "title": "New Zealand Department of Conservation — Oihi Mission Station 1814–1832, Historic Heritage Assessment",
+        "url": "https://www.doc.govt.nz/globalassets/documents/conservation/historic/by-region/northland/oihi-mission-station-historic-assessment.pdf",
         "milestones": 1
       },
       {
@@ -1246,6 +2370,12 @@
         "milestones": 1
       },
       {
+        "id": "rec-ztfe",
+        "title": "Religious Education Council of England and Wales — Zoroastrian Trust Funds of Europe",
+        "url": "https://religiouseducationcouncil.org.uk/member/zoroastrian-trust-funds-of-europe/",
+        "milestones": 1
+      },
+      {
         "id": "ui-museum-philae",
         "title": "Rosicrucian Egyptian Museum — Temple of Isis at Philae",
         "url": "https://www.egyptianmuseum.org/explore/greco-and-roman-period-monuments-philae",
@@ -1258,6 +2388,12 @@
         "milestones": 1
       },
       {
+        "id": "salvador-opo-afonja",
+        "title": "Salvador official tourism, Capital Afro — Terreiro do Ilê Axé Opô Afonjá",
+        "url": "https://www.salvadordabahia.com/capitalafro/destaques/terreiro-do-ile-axe-opo-afonja/",
+        "milestones": 1
+      },
+      {
         "id": "sgpc-nanak",
         "title": "SGPC — Guru Nanak Sahib",
         "url": "https://old.sgpc.net/gurus/gurunanak.asp",
@@ -1267,6 +2403,24 @@
         "id": "silpakorn-sukhothai",
         "title": "Silpakorn University, NAJUA — Engendering the Sukhothai beliefs",
         "url": "https://so04.tci-thaijo.org/index.php/NAJUA-Arch/article/download/247830/168271",
+        "milestones": 1
+      },
+      {
+        "id": "roots-naraina-pillai",
+        "title": "Singapore National Heritage Board (Roots.sg) — Naraina Pillai and the Sri Mariamman Temple",
+        "url": "https://www.roots.gov.sg/stories-landing/stories/naraina-pillai/story",
+        "milestones": 1
+      },
+      {
+        "id": "roots-sultan-mosque",
+        "title": "Singapore National Heritage Board (Roots.sg) — Sultan Mosque",
+        "url": "https://www.roots.gov.sg/places/places-landing/Places/national-monuments/sultan-mosque",
+        "milestones": 1
+      },
+      {
+        "id": "roots-thian-hock-keng",
+        "title": "Singapore National Heritage Board (Roots.sg) — Thian Hock Keng",
+        "url": "https://www.roots.gov.sg/en/places/places-landing/Places/national-monuments/thian-hock-keng",
         "milestones": 1
       },
       {
@@ -1288,9 +2442,45 @@
         "milestones": 1
       },
       {
+        "id": "saho-auwal",
+        "title": "South African History Online — Auwal Masjid, Cape Town",
+        "url": "https://sahistory.org.za/place/auwal-masjid-cape-town",
+        "milestones": 1
+      },
+      {
+        "id": "slnsw-york-street",
+        "title": "State Library of New South Wales — York Street Synagogue, Sydney",
+        "url": "https://www.sl.nsw.gov.au/stories/york-street-synagogue-sydney",
+        "milestones": 1
+      },
+      {
+        "id": "spbmuseum-datsan",
+        "title": "State Museum of the History of St Petersburg — St Petersburg Datsan",
+        "url": "https://www.spbmuseum.ru/exhibits_and_exhibitions/temporary_exhibitions/48012/?lang_ui=en",
+        "milestones": 1
+      },
+      {
+        "id": "storyofleicester-jain",
+        "title": "Story of Leicester (Leicester City Council) — Jain Centre",
+        "url": "https://www.storyofleicester.info/faith-belief/jain-centre/",
+        "milestones": 1
+      },
+      {
         "id": "ui-wenger-osogbo",
         "title": "Susanne Wenger Foundation — Restoration work in Osogbo, 1958–1959",
         "url": "https://susannewengerfoundation.at/en/susanne-wenger-1915-2009",
+        "milestones": 1
+      },
+      {
+        "id": "dos-great-synagogue",
+        "title": "The Dictionary of Sydney (archived 2021) — Great Synagogue",
+        "url": "https://dictionaryofsydney.org/building/great_synagogue",
+        "milestones": 1
+      },
+      {
+        "id": "vatican-namugongo",
+        "title": "The Holy See — Paul VI, Homily at the Shrine of Namugongo, 2 August 1969",
+        "url": "https://www.vatican.va/content/paul-vi/en/homilies/1969/documents/hf_p-vi_hom_19690802.html",
         "milestones": 1
       },
       {
@@ -1411,6 +2601,24 @@
         "id": "tokyo-yushima",
         "title": "Tokyo Metropolitan Government — Yushima Seido",
         "url": "https://www.gotokyo.org/en/spot/271/index.html",
+        "milestones": 1
+      },
+      {
+        "id": "nps-mother-mosque",
+        "title": "U.S. National Park Service — Iowa: The Mother Mosque of America",
+        "url": "https://www.nps.gov/articles/mothermosque.htm",
+        "milestones": 1
+      },
+      {
+        "id": "nps-valero",
+        "title": "U.S. National Park Service — Mission San Antonio de Valero, 3rd site (the Alamo)",
+        "url": "https://www.nps.gov/places/mission-san-antonio-de-valero-3rd-site-the-alamo.htm",
+        "milestones": 1
+      },
+      {
+        "id": "nps-touro",
+        "title": "U.S. National Park Service — Touro Synagogue",
+        "url": "https://www.nps.gov/places/touro-synagogue.htm",
         "milestones": 1
       },
       {
@@ -1594,9 +2802,27 @@
         "milestones": 1
       },
       {
+        "id": "uh-izumo-thesis",
+        "title": "University of Hawaiʻi at Mānoa ScholarSpace — MA thesis on the Izumo Taishakyo Mission of Hawaii",
+        "url": "https://scholarspace.manoa.hawaii.edu/bitstreams/3acfc04e-c288-45f9-ab3a-9a27801e089a/download",
+        "milestones": 1
+      },
+      {
+        "id": "compas-lamu",
+        "title": "University of Oxford, COMPAS — Understanding a diaspora through Lamu Maulid",
+        "url": "https://www.compas.ox.ac.uk/article/understanding-a-diaspora-through-lamu-maulid",
+        "milestones": 1
+      },
+      {
         "id": "vietnam-hanoi",
         "title": "Vietnam National Authority of Tourism — Six heritage sites of Hanoi",
         "url": "https://beta-v1.vietnam.travel/things-to-do/hanoi-six-heritage-sites",
+        "milestones": 1
+      },
+      {
+        "id": "visitberlin-buddhist-house",
+        "title": "visitBerlin (official Berlin tourism) — Das Buddhistische Haus, Frohnau",
+        "url": "https://www.visitberlin.de/en/maison-bouddhiste",
         "milestones": 1
       },
       {
@@ -1606,9 +2832,21 @@
         "milestones": 1
       },
       {
+        "id": "sapporo-hokkaido-shrine",
+        "title": "Welcome to Sapporo (official Sapporo tourism) — Hokkaido Shrine",
+        "url": "https://www.sapporo.travel/en/spot/facility/hokkaido_shrine/",
+        "milestones": 1
+      },
+      {
         "id": "yale-dura-synagogue",
         "title": "Yale University Art Gallery — Dura-Europos synagogue",
         "url": "https://duraeuropos.artgallery.yale.edu/Synagogue",
+        "milestones": 1
+      },
+      {
+        "id": "ztfe-history",
+        "title": "Zoroastrian Trust Funds of Europe — Who we are",
+        "url": "https://www.ztfe.com/who-we-are.html",
         "milestones": 1
       }
     ]

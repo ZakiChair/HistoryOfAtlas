@@ -7974,6 +7974,958 @@
   ],
   "knowledgeObservations": [
     {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-mount-bischoff",
+      "applied": [
+        {
+          "siteId": "icmm-occurrence:ICMM06462",
+          "fromYear": 1871,
+          "kind": "discovery",
+          "categories": [
+            "tin"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-waihi-martha",
+      "applied": [
+        {
+          "siteId": "fineprint:COM01350.00",
+          "fromYear": 1878,
+          "kind": "discovery",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-denniston",
+      "applied": [
+        {
+          "siteId": "gcmt:M1448",
+          "fromYear": 1879,
+          "kind": "attestation",
+          "categories": [
+            "coal"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-ballarat",
+      "applied": [
+        {
+          "siteId": "ga-operating:761",
+          "fromYear": 1851,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-broken-hill",
+      "applied": [
+        {
+          "siteId": "fineprint:COM00172.00",
+          "fromYear": 1883,
+          "kind": "discovery",
+          "categories": [
+            "silver",
+            "lead",
+            "zinc"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-kalgoorlie",
+      "applied": [
+        {
+          "siteId": "fineprint:COM00611.00",
+          "fromYear": 1893,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-charters-towers",
+      "applied": [
+        {
+          "siteId": "icmm-occurrence:ICMM06209",
+          "fromYear": 1872,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-mount-lyell",
+      "applied": [
+        {
+          "siteId": "fineprint:COM00863.00",
+          "fromYear": 1882,
+          "kind": "discovery",
+          "categories": [
+            "gold"
+          ]
+        },
+        {
+          "siteId": "fineprint:COM00863.00",
+          "fromYear": 1893,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-klondike",
+      "applied": [
+        {
+          "siteId": "mincan:86",
+          "fromYear": 1896,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-butte",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:526",
+          "fromYear": 1881,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-calumet-hecla",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:472",
+          "fromYear": 1864,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-zacatecas",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1253",
+          "fromYear": 1546,
+          "kind": "discovery",
+          "categories": [
+            "silver"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-guanajuato",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1197",
+          "fromYear": 1550,
+          "kind": "discovery",
+          "categories": [
+            "silver"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-de-beers-kimberley",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2717",
+          "fromYear": 1871,
+          "kind": "discovery",
+          "categories": [
+            "diamond"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-premier-cullinan",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2724",
+          "fromYear": 1902,
+          "kind": "discovery",
+          "categories": [
+            "diamond"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-hollinger-porcupine",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1025",
+          "fromYear": 1909,
+          "kind": "discovery",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-comstock-lode",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:543",
+          "fromYear": 1859,
+          "kind": "discovery",
+          "categories": [
+            "silver",
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-mesabi-mountain-iron",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:686",
+          "fromYear": 1890,
+          "kind": "discovery",
+          "categories": [
+            "iron"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-ducktown-copper-basin",
+      "applied": [
+        {
+          "siteId": "icmm-occurrence:ICMM02658",
+          "fromYear": 1849,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-mount-isa",
+      "applied": [
+        {
+          "siteId": "ga-operating:1008",
+          "fromYear": 1923,
+          "kind": "discovery",
+          "categories": [
+            "zinc",
+            "lead"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-barberton-de-kaap",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2808",
+          "fromYear": 1883,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-sheba-mine",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2792",
+          "fromYear": 1885,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-witwatersrand-main-reef",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2772",
+          "fromYear": 1886,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-thio-nickel",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:393",
+          "fromYear": 1875,
+          "kind": "attestation",
+          "categories": [
+            "nickel"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-obuasi",
+      "applied": [
+        {
+          "siteId": "west-africa:obuasi",
+          "fromYear": 1897,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-tsumeb",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2575",
+          "fromYear": 1905,
+          "kind": "attestation",
+          "categories": [
+            "copper",
+            "lead",
+            "zinc"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-luanshya-roan-antelope",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:3034",
+          "fromYear": 1928,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sw-update-shinkolobwe",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2246",
+          "fromYear": 1915,
+          "kind": "discovery",
+          "categories": [
+            "uranium"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-kongsberg-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1518",
+          "fromYear": 1623,
+          "kind": "discovery",
+          "categories": [
+            "silver"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-chiatura-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1343",
+          "fromYear": 1879,
+          "kind": "attestation",
+          "categories": [
+            "manganese"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-nikopol-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1870",
+          "fromYear": 1883,
+          "kind": "discovery",
+          "categories": [
+            "manganese"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1870",
+          "fromYear": 1886,
+          "kind": "attestation",
+          "categories": [
+            "manganese"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-kryvyi-rih-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1867",
+          "fromYear": 1839,
+          "kind": "attestation",
+          "categories": [
+            "iron"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1867",
+          "fromYear": 1881,
+          "kind": "attestation",
+          "categories": [
+            "iron"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-besshi-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:294",
+          "fromYear": 1690,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-ashio-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:296",
+          "fromYear": 1610,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-ikuno-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:310",
+          "fromYear": 1542,
+          "kind": "attestation",
+          "categories": [
+            "silver"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-kamaishi-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:304",
+          "fromYear": 1727,
+          "kind": "attestation",
+          "categories": [
+            "iron"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:304",
+          "fromYear": 1858,
+          "kind": "attestation",
+          "categories": [
+            "iron"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-khewra-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:411",
+          "fromYear": 1872,
+          "kind": "attestation",
+          "categories": [
+            "salt"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-bawdwin-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:81",
+          "fromYear": 1500,
+          "kind": "attestation",
+          "categories": [
+            "silver"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:81",
+          "fromYear": 1914,
+          "kind": "attestation",
+          "categories": [
+            "lead",
+            "zinc"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-freiberg-knowledge",
+      "applied": [
+        {
+          "siteId": "icmm-occurrence:ICMM05690",
+          "fromYear": 1168,
+          "kind": "attestation",
+          "categories": [
+            "silver"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-norilsk-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1698",
+          "fromYear": 1920,
+          "kind": "attestation",
+          "categories": [
+            "nickel",
+            "copper"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1698",
+          "fromYear": 1935,
+          "kind": "attestation",
+          "categories": [
+            "nickel",
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-rio-tinto-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1829",
+          "fromYear": 1556,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1829",
+          "fromYear": 1727,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-mahd-adh-dhahab-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2618",
+          "fromYear": -960,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:2618",
+          "fromYear": 1932,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:2618",
+          "fromYear": 1939,
+          "kind": "attestation",
+          "categories": [
+            "gold",
+            "silver"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-lepanto-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:439",
+          "fromYear": 1400,
+          "kind": "attestation",
+          "categories": [
+            "copper",
+            "gold"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:439",
+          "fromYear": 1865,
+          "kind": "attestation",
+          "categories": [
+            "copper",
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-sibay-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1736",
+          "fromYear": 1913,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-bor-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1808",
+          "fromYear": 1903,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-bayan-obo-knowledge",
+      "applied": [
+        {
+          "siteId": "gem-giomt:P100000128233",
+          "fromYear": 1927,
+          "kind": "discovery",
+          "categories": [
+            "iron"
+          ]
+        },
+        {
+          "siteId": "gem-giomt:P100000128233",
+          "fromYear": 1935,
+          "kind": "discovery",
+          "categories": [
+            "rare-earths"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-gruvberget-knowledge",
+      "applied": [
+        {
+          "siteId": "icmm-occurrence:ICMM13235",
+          "fromYear": 1644,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-ridder-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1465",
+          "fromYear": 1784,
+          "kind": "discovery",
+          "categories": [
+            "lead"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-kalmakyr-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1886",
+          "fromYear": 1926,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-dalnegorsk-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2012",
+          "fromYear": 1946,
+          "kind": "discovery",
+          "categories": [
+            "boron"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-gora-blagodat-knowledge",
+      "applied": [
+        {
+          "siteId": "gem-giomt:P100000128139",
+          "fromYear": 1735,
+          "kind": "discovery",
+          "categories": [
+            "iron"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-karaganda-knowledge",
+      "applied": [
+        {
+          "siteId": "icmm-occurrence:ICMM08372",
+          "fromYear": 1833,
+          "kind": "discovery",
+          "categories": [
+            "coal"
+          ]
+        },
+        {
+          "siteId": "icmm-occurrence:ICMM08372",
+          "fromYear": 1854,
+          "kind": "attestation",
+          "categories": [
+            "coal"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-bodaibo-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1571",
+          "fromYear": 1840,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-zmeinogorsk-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1807",
+          "fromYear": 1725,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1807",
+          "fromYear": 1736,
+          "kind": "attestation",
+          "categories": [
+            "silver"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1807",
+          "fromYear": 1744,
+          "kind": "attestation",
+          "categories": [
+            "gold"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-verkhnekamsk-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:2033",
+          "fromYear": 1925,
+          "kind": "discovery",
+          "categories": [
+            "potash"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-gubkin-korobkovo-knowledge",
+      "applied": [
+        {
+          "siteId": "gem-giomt:P100000128717",
+          "fromYear": 1931,
+          "kind": "discovery",
+          "categories": [
+            "iron"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-tkibuli-knowledge",
+      "applied": [
+        {
+          "siteId": "gcmt:M1635",
+          "fromYear": 1847,
+          "kind": "attestation",
+          "categories": [
+            "coal"
+          ]
+        },
+        {
+          "siteId": "gcmt:M1635",
+          "fromYear": 1897,
+          "kind": "attestation",
+          "categories": [
+            "coal"
+          ]
+        }
+      ]
+    },
+    {
+      "contribution": "historical-world",
+      "sourceId": "historical-world-degtyarsk-knowledge",
+      "applied": [
+        {
+          "siteId": "usgs-occurrence:1585",
+          "fromYear": 1888,
+          "kind": "discovery",
+          "categories": [
+            "copper"
+          ]
+        },
+        {
+          "siteId": "usgs-occurrence:1585",
+          "fromYear": 1914,
+          "kind": "attestation",
+          "categories": [
+            "copper"
+          ]
+        }
+      ]
+    },
+    {
       "contribution": "sodir-discoveries",
       "sourceId": "sodir-discoveries-2026",
       "applied": [
@@ -46840,6 +47792,10 @@
     {
       "name": "historical-expanded",
       "inputSites": 13
+    },
+    {
+      "name": "historical-world",
+      "inputSites": 63
     },
     {
       "name": "modern-minerals",
