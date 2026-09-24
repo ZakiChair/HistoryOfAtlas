@@ -214,12 +214,12 @@ const copy = {
     ru: 'Религии',
   },
   layerBattles: {
-    fr: 'Les batailles datées et localisées. Avec les batailles en 3D, certaines s’ouvrent en reconstitution.',
-    en: 'Dated, located battles. With 3D battles, some open as a reconstruction.',
-    de: 'Datierte und verortete Schlachten. Mit den 3D-Schlachten öffnen sich einige als Rekonstruktion.',
-    es: 'Batallas fechadas y localizadas. Con las batallas en 3D, algunas se abren como reconstrucción.',
-    zh: '有日期和地点的战役。在 3D 战役中，部分战役可以打开三维重建。',
-    ru: 'Датированные битвы с указанием места. В режиме 3D некоторые открываются как реконструкция.',
+    fr: 'Les conflits datés et localisés : batailles, sièges, guerres, campagnes et conquêtes (les traités restent visibles). Avec les batailles en 3D, certaines s’ouvrent en reconstitution.',
+    en: 'Dated, located conflicts: battles, sieges, wars, campaigns and conquests (treaties stay visible). With 3D battles, some open as a reconstruction.',
+    de: 'Datierte und verortete Konflikte: Schlachten, Belagerungen, Kriege, Feldzüge und Eroberungen (Verträge bleiben sichtbar). Mit den 3D-Schlachten öffnen sich einige als Rekonstruktion.',
+    es: 'Conflictos fechados y localizados: batallas, asedios, guerras, campañas y conquistas (los tratados siguen visibles). Con las batallas en 3D, algunas se abren como reconstrucción.',
+    zh: '有日期和地点的冲突：战役、围城、战争、战事与征服（条约仍会显示）。在 3D 战役中，部分战役可以打开三维重建。',
+    ru: 'Датированные конфликты с указанием места: битвы, осады, войны, кампании и завоевания (договоры остаются видимыми). В режиме 3D некоторые битвы открываются как реконструкция.',
   },
   layerResources: {
     fr: 'Les mines et gisements connus à l’année choisie, avec leurs sources.',

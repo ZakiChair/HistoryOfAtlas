@@ -18,7 +18,8 @@ export const EVENT_TYPE_COLORS: Readonly<Record<EventType, string>> = {
   naval: '#f88ac0',
   war: '#ac204c',
   campaign: '#aa5628',
-  treaty: '#fe8c98',
+  // Treaties are not conflicts: a diplomatic teal keeps them apart from the conflict reds.
+  treaty: '#2ac0a8',
   conquest: '#a43c7a',
 };
 
@@ -30,10 +31,14 @@ export const EVENT_COLOR_EXPRESSION = [
   EVENT_TYPE_COLORS.battle,
 ] as unknown as ExpressionSpecification;
 
-/** Group discs keep a dark fill; their ring carries the event family instead of the UI amber. */
+/**
+ * Group discs keep a dark fill; their ring carries the event family instead of the UI amber.
+ * With the Battles toggle off every conflict is hidden, so groups only hold treaties.
+ */
 export const EVENT_GROUP_COLORS = {
   fill: '#193948',
   ring: EVENT_TYPE_COLORS.battle,
+  ringWithoutConflicts: EVENT_TYPE_COLORS.treaty,
 } as const;
 
 /** 3D battle mode points: battles with sourced forces, and the illustrative remainder. */

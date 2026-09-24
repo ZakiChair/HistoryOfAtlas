@@ -127,6 +127,13 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
 
   const showClusters = (show: boolean) => {
     active = show;
+    map.setPaintProperty(
+      GROUPS,
+      'circle-stroke-color',
+      useAtlasStore.getState().battlesVisible
+        ? EVENT_GROUP_COLORS.ring
+        : EVENT_GROUP_COLORS.ringWithoutConflicts,
+    );
     for (const id of [GROUPS, SINGLETONS]) {
       map.setPaintProperty(id, 'circle-opacity', show ? 0.96 : 0);
       map.setPaintProperty(id, 'circle-stroke-opacity', show ? 0.9 : 0);

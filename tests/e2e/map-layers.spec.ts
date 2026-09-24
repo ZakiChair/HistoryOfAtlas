@@ -1244,7 +1244,7 @@ test('the heatmap key never sits under an open dossier or over the compass', asy
   await expect(key).toBeHidden();
 });
 
-test('the ordinary map removes battle points from clustering while retaining other event types', async ({
+test('the ordinary map removes conflict points from clustering while retaining treaties', async ({
   page,
 }, testInfo) => {
   type ClusterPoint = { id: string; type: string };
@@ -1302,14 +1302,16 @@ test('the ordinary map removes battle points from clustering while retaining oth
   });
   await page.goto('/?lang=en&y=1812&z=1.8&lon=18&lat=32&from=1700&to=2000');
   await mapReady(page);
-  const isBattle = (point: ClusterPoint) => ['battle', 'siege', 'naval'].includes(point.type);
-  const isOther = (point: ClusterPoint) => ['treaty', 'war', 'campaign'].includes(point.type);
+  // The Battles toggle hides every armed conflict; only treaties remain.
+  const isBattle = (point: ClusterPoint) =>
+    ['battle', 'siege', 'naval', 'war', 'campaign', 'conquest'].includes(point.type);
+  const isOther = (point: ClusterPoint) => point.type === 'treaty';
   await expect.poll(() => batches.at(-1)?.some(isBattle) ?? false, { timeout: 30_000 }).toBe(true);
   const initial = batches.at(-1)!;
   const otherTypes = [...new Set(initial.filter(isOther).map((point) => point.type))];
   expect(
     otherTypes.length,
-    'The viewport must include other conflict events to test selective hiding',
+    'The viewport must include treaties to test selective hiding',
   ).toBeGreaterThan(0);
   const beforeHide = batches.length;
 
@@ -1325,8 +1327,8 @@ test('the ordinary map removes battle points from clustering while retaining oth
       contentType: 'application/json',
     });
   }
-  // Tile refinement can change individual viewport hits; the remaining event
-  // categories must remain queryable after the battle-only filter is applied.
+  // Tile refinement can change individual viewport hits; the remaining
+  // treaties must remain queryable after the conflict filter is applied.
   expect([
     ...new Set(
       batches

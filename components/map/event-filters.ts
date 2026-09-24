@@ -1,11 +1,12 @@
 import type { ExpressionSpecification, FilterSpecification } from 'maplibre-gl';
 import type { AtlasState } from '@/lib/store';
 import { temporalWindow } from '@/lib/map-time';
-import { BATTLE_EVENT_TYPES } from '@/lib/event-visibility';
+import { CONFLICT_EVENT_TYPES } from '@/lib/event-visibility';
 
-const WITHOUT_BATTLES: ExpressionSpecification = [
+// Hiding battles hides every armed conflict, so no conflict marker remains on the map.
+const WITHOUT_CONFLICTS: ExpressionSpecification = [
   '!',
-  ['in', ['get', 'type'], ['literal', BATTLE_EVENT_TYPES]],
+  ['in', ['get', 'type'], ['literal', CONFLICT_EVENT_TYPES]],
 ];
 
 /**
@@ -64,7 +65,7 @@ export function eventFilter(
     ['>=', ['get', 'end'], from],
     ['>=', ['get', 'importance'], minimumEventImportance(state, purpose)],
   ];
-  if (!state.battlesVisible) result.push(WITHOUT_BATTLES);
+  if (!state.battlesVisible) result.push(WITHOUT_CONFLICTS);
   if (state.filters.types.length)
     result.push(['in', ['get', 'type'], ['literal', state.filters.types]]);
   if (state.filters.eras.length)
@@ -87,5 +88,5 @@ export function eventFilter(
 export function selectedEventFilter(state: AtlasState): FilterSpecification {
   const id = state.selectedEvent ?? (state.storyId ? state.highlightedEvent : null);
   const selected: ExpressionSpecification = ['==', ['get', 'id'], id ?? ''];
-  return state.battlesVisible ? selected : ['all', selected, WITHOUT_BATTLES];
+  return state.battlesVisible ? selected : ['all', selected, WITHOUT_CONFLICTS];
 }
