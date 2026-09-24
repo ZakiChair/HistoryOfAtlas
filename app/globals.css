@@ -3304,6 +3304,9 @@ ul {
   .timeline-speeds button {
     min-width: 26px;
   }
+  .timeline-era {
+    min-width: 24px;
+  }
   .timeline-era-bands {
     margin-top: 12px;
   }
@@ -4002,6 +4005,20 @@ ul {
   .atlas-app .map-tools,
   .atlas-app .reopen-panel {
     top: max(112px, calc(var(--map-layers-bottom, 104px) + 8px));
+  }
+  .detail-is-open .map-tools {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: calc(100% - 24px);
+    gap: 6px;
+  }
+  .detail-is-open .event-panel,
+  .detail-is-open .entity-panel {
+    /* Reserve two tool rows and their gaps above the mobile drawer. */
+    max-height: calc(
+      100svh - var(--timeline-height) - max(212px, calc(var(--map-layers-bottom, 104px) + 108px))
+    );
   }
   .religions-visible .war-context {
     top: 220px;
