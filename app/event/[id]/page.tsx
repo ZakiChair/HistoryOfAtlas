@@ -1,40 +1,53 @@
 import type { Metadata } from 'next';
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import LocaleLink from '@/components/ui/LocaleLink';
 import type { HistoricalEvent } from '@/lib/schema';
 import { formatDateRange } from '@/lib/histdate';
-import { hasStaticEventPage } from '@/lib/seo';
+import {
+  readCuratedIds,
+  readEvent,
+  readWarEvents,
+  readWars,
+  warNeighbours,
+  type WarNeighbours,
+} from '@/lib/archive';
+import {
+  breadcrumbJsonLd,
+  eventJsonLd,
+  jsonLdGraph,
+  serializeJsonLd,
+  type BreadcrumbItem,
+} from '@/lib/jsonld';
+import {
+  commonsImageUrl,
+  errorReportUrl,
+  getEventMapUrl,
+  getEventPermalink,
+  hasStaticEventPage,
+  siteOrigin,
+} from '@/lib/seo';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 const directory = path.join(process.cwd(), 'public/data/events');
 
-async function readEvent(id: string): Promise<HistoricalEvent | null> {
-  if (!/^Q[1-9]\d*$/.test(id)) return null;
-  try {
-    return JSON.parse(
-      await readFile(path.join(directory, `${id}.json`), 'utf8'),
-    ) as HistoricalEvent;
-  } catch {
-    return null;
-  }
-}
-
 export async function generateStaticParams() {
-  const events = await Promise.all(
-    (await readdir(directory))
-      .filter((file) => /^Q\d+\.json$/.test(file))
-      .map((file) => readEvent(file.slice(0, -5))),
-  );
-  const curated = JSON.parse(
-    await readFile(path.join(process.cwd(), 'public/data/curated.json'), 'utf8'),
-  ) as { id: string }[];
-  const selected = new Set(curated.map((event) => event.id));
+  const [events, curated] = await Promise.all([
+    readdir(directory).then((files) =>
+      Promise.all(
+        files
+          .filter((file) => /^Q\d+\.json$/.test(file))
+          .map((file) => readEvent(file.slice(0, -5))),
+      ),
+    ),
+    readCuratedIds(),
+  ]);
   return events
     .filter((event): event is HistoricalEvent =>
-      Boolean(event && hasStaticEventPage(event, selected)),
+      Boolean(event && hasStaticEventPage(event, curated)),
     )
     .map((event) => ({ id: event.id }));
 }
@@ -48,6 +61,7 @@ export async function generateMetadata({
   if (!event) return { title: 'Event not found — HistoryOfAtlas' };
   const name = event.name.en;
   const description = `${name} · ${formatDateRange(event.start, event.end, 'en', event.datePrecision)}. See dates, documented participants and sources, then explore this event on the historical map.`;
+  const image = commonsImageUrl(event.image);
   return {
     title: `${name} — HistoryOfAtlas`,
     description,
@@ -55,24 +69,79 @@ export async function generateMetadata({
     openGraph: {
       title: name,
       description,
+      url: `/event/${event.id}/`,
       siteName: 'HistoryOfAtlas',
       locale: 'en_US',
       type: 'article',
-      images: ['/opengraph-image'],
+      images: image ? [{ url: image, alt: name }] : ['/opengraph-image'],
     },
   };
+}
+
+interface ParentWar {
+  id: string;
+  name?: string;
+  /** Archive page of the conflict, when one is exported. */
+  path?: string;
+  mapUrl: string;
+  neighbours: WarNeighbours<HistoricalEvent> | null;
+}
+
+/** A conflict record also has a chronology page listing its documented events. */
+async function readOwnWarPath(event: HistoricalEvent): Promise<string | undefined> {
+  return (await readWars()).some((war) => war.id === event.id) ? `/war/${event.id}/` : undefined;
+}
+
+async function readParentWar(event: HistoricalEvent): Promise<ParentWar | null> {
+  if (!event.parentWar) return null;
+  const [wars, members] = await Promise.all([readWars(), readWarEvents(event.parentWar)]);
+  const war = wars.find((item) => item.id === event.parentWar);
+  const query = new URLSearchParams({ war: event.parentWar, y: String(event.start.year) });
+  return {
+    id: event.parentWar,
+    ...(war ? { name: war.name.en, path: `/war/${war.id}/` } : {}),
+    mapUrl: `/?${query}`,
+    neighbours: members ? warNeighbours(members, event.id) : null,
+  };
+}
+
+function NeighbourLink({
+  label,
+  event,
+  curated,
+}: {
+  label: string;
+  event: HistoricalEvent;
+  curated: ReadonlySet<string>;
+}) {
+  const href = getEventPermalink(event, curated);
+  const external = !href.startsWith('/event/');
+  return (
+    <div className="document-card">
+      <span className="eyebrow">{label}</span>
+      <p>
+        <Link href={href}>
+          {event.name.en}
+          {external ? ' ↗' : ''}
+        </Link>
+      </p>
+      <p>{formatDateRange(event.start, event.end, 'en', event.datePrecision)}</p>
+    </div>
+  );
 }
 
 export default async function EventPage({ params }: { params: Promise<{ id: string }> }) {
   const event = await readEvent((await params).id);
   if (!event) notFound();
+  const [parentWar, ownWarPath, curated] = await Promise.all([
+    readParentWar(event),
+    readOwnWarPath(event),
+    readCuratedIds(),
+  ]);
+  const origin = siteOrigin();
+  const pagePath = `/event/${event.id}/`;
   const name = event.name.en;
-  const query = new URLSearchParams({ y: String(event.start.year), e: event.id });
-  if (event.coords) {
-    query.set('lon', String(event.coords[0]));
-    query.set('lat', String(event.coords[1]));
-    query.set('z', '5');
-  }
+  const mapUrl = getEventMapUrl(event);
   const sources = [...event.sources];
   for (const [language, url] of Object.entries(event.wikipedia ?? {})) {
     if (url && !sources.some((source) => source.url === url))
@@ -84,16 +153,42 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
     calendar: event.calendar,
     showCalendar: true,
   });
+  const breadcrumb: BreadcrumbItem[] = [
+    { name: 'HistoryOfAtlas', path: '/' },
+    ...(parentWar?.path && parentWar.name ? [{ name: parentWar.name, path: parentWar.path }] : []),
+    { name, path: pagePath },
+  ];
+  const jsonLd = jsonLdGraph(
+    eventJsonLd(event, {
+      origin,
+      path: pagePath,
+      ...(parentWar
+        ? {
+            superEvent: {
+              id: parentWar.id,
+              name: parentWar.name ?? parentWar.id,
+              ...(parentWar.path ? { path: parentWar.path } : {}),
+            },
+          }
+        : {}),
+    }),
+    breadcrumbJsonLd(origin, breadcrumb),
+  );
+  const neighbours = parentWar?.neighbours;
   return (
     <main className="document-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
+      />
       <header className="document-header">
-        <Link className="back-link" href="/">
+        <LocaleLink className="back-link" href="/">
           ← Back to the atlas
-        </Link>
+        </LocaleLink>
         <span className="eyebrow">THE ATLAS ARCHIVES · {event.id}</span>
         <h1>{name}</h1>
         <p>{date}</p>
-        <Link className="primary-button" href={`/?${query}`}>
+        <Link className="primary-button" href={mapUrl}>
           Explore this event in history ↗
         </Link>
       </header>
@@ -173,10 +268,29 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
                   <dd>{event.casualties.toLocaleString('en')}</dd>
                 </>
               )}
+              {parentWar && (
+                <>
+                  <dt>Part of</dt>
+                  <dd>
+                    {parentWar.path ? (
+                      <Link href={parentWar.path}>{parentWar.name}</Link>
+                    ) : (
+                      parentWar.id
+                    )}
+                  </dd>
+                </>
+              )}
             </dl>
-            {event.parentWar && (
-              <Link className="source-link" href={`/?war=${event.parentWar}&y=${event.start.year}`}>
-                Explore the related conflict · {event.parentWar} ↗
+            {parentWar && (
+              <Link className="source-link" href={parentWar.mapUrl}>
+                {parentWar.name
+                  ? `${parentWar.name} on the map ↗`
+                  : `Explore the related conflict · ${parentWar.id} ↗`}
+              </Link>
+            )}
+            {ownWarPath && (
+              <Link className="source-link" href={ownWarPath}>
+                Chronology of this conflict →
               </Link>
             )}
           </section>
@@ -206,12 +320,36 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
             </p>
           </section>
         </div>
+        {neighbours && (neighbours.previous || neighbours.next) && (
+          <nav aria-labelledby="war-sequence-title">
+            <span className="eyebrow">
+              {neighbours.position} / {neighbours.total} IN THIS CONFLICT
+            </span>
+            <h2 id="war-sequence-title">
+              {parentWar?.path ? (
+                <Link href={parentWar.path}>{parentWar.name}</Link>
+              ) : (
+                'Within this conflict'
+              )}
+            </h2>
+            <div className="document-grid">
+              {neighbours.previous ? (
+                <NeighbourLink label="← PREVIOUS" event={neighbours.previous} curated={curated} />
+              ) : (
+                <div />
+              )}
+              {neighbours.next && (
+                <NeighbourLink label="NEXT →" event={neighbours.next} curated={curated} />
+              )}
+            </div>
+          </nav>
+        )}
         {Boolean(event.people?.length) && (
           <section>
             <h2>People and command</h2>
             <ul>
               {event.people!.map((person, index) => {
-                const personQuery = new URLSearchParams(query);
+                const personQuery = new URLSearchParams(mapUrl.split('?')[1]);
                 personQuery.set('person', person.personId);
                 return (
                   <li key={`${person.statementId}-${person.personId}-${index}`}>
@@ -250,6 +388,20 @@ export default async function EventPage({ params }: { params: Promise<{ id: stri
           <Link className="source-link" href="/about/">
             Understand dates, uncertainty and licences →
           </Link>
+          <a
+            className="source-link"
+            href={errorReportUrl({
+              name,
+              id: event.id,
+              kind: 'event',
+              year: event.start.year,
+              url: `${origin}${pagePath}`,
+            })}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Report an error on this page ↗
+          </a>
         </section>
       </article>
     </main>

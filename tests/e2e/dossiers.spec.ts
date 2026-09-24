@@ -37,6 +37,11 @@ test('battle to commander preserves the map and returns to the battle after a bi
   );
   const eventPanel = page.getByTestId('event-panel');
   await expect(eventPanel.getByTestId('event-people')).toBeAttached();
+  // Waterloo is a sourced reconstruction: its 3D entry says so once the small list arrives.
+  await expect(eventPanel.getByTestId('event-battle-button')).toHaveAttribute(
+    'data-documented',
+    'true',
+  );
   const beforeYear = new URL(page.url()).searchParams.get('y');
   await eventPanel
     .getByRole('button', { name: new RegExp(commander!.name.fr ?? commander!.name.en, 'i') })

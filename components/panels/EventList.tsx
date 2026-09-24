@@ -9,7 +9,8 @@ import { filterEvents, temporalWindow } from '@/lib/map-time';
 import { openEvent } from '@/lib/navigation';
 import { isEventLayerVisible } from '@/lib/event-visibility';
 import type { HistoricalEvent } from '@/lib/schema';
-import { EventIcon } from '../ui/EventIcon';
+import { EventIcon, EventSwatch } from '../ui/EventIcon';
+import Localized from '../ui/Localized';
 
 export default function EventList({ full = false }: { full?: boolean }) {
   const year = useAtlasStore((s) => s.year),
@@ -80,7 +81,8 @@ export default function EventList({ full = false }: { full?: boolean }) {
     >
       <div className="section-heading">
         <h2>{t('Autour de cette année', 'Around this year')}</h2>
-        <span className="count-badge" aria-live="polite">
+        {/* Playback changes the count every frame: keep it quiet until playback stops. */}
+        <span className="count-badge" aria-live={playing ? 'off' : 'polite'}>
           {visible.length}
         </span>
       </div>
@@ -113,11 +115,17 @@ export default function EventList({ full = false }: { full?: boolean }) {
         {visible.slice(0, full ? limit : 6).map((event) => (
           <li key={event.id}>
             <button onClick={() => openEvent(event)} className="event-row">
-              <span className={`event-type-icon type-${event.type}`}>
+              <span className="event-type-icon">
                 <EventIcon type={event.type} />
+                <EventSwatch type={event.type} />
               </span>
               <span className="event-row-copy">
-                <strong>{event.name[locale] ?? event.name.en}</strong>
+                <Localized
+                  as="strong"
+                  value={event.name}
+                  locale={locale}
+                  enLanguage={event.nameLanguage}
+                />
                 <span>
                   {formatYear(event.start.year, locale)}
                   <span className="event-row-region">{REGION_LABELS[event.region]?.[locale]}</span>

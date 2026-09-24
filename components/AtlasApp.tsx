@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useCallback, useEffect, useId, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { AnimatePresence, LazyMotion, domAnimation, m, MotionConfig } from 'framer-motion';
 import {
   Search,
@@ -29,20 +29,34 @@ import {
   Footprints,
   History,
   Swords,
+  CircleHelp,
 } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { createAtlasUrlSync } from '@/lib/store/url-sync';
 import { useI18n, translateCopy } from '@/lib/i18n';
 import { isLocale, LOCALES, LOCALE_LABELS } from '@/lib/types';
-import { CURRENT_YEAR, getEra } from '@/lib/eras';
+import { getEra } from '@/lib/eras';
 import { formatYear } from '@/lib/histdate';
 import { useJson } from '@/lib/data-client/hooks';
 import { getManifest, readJson, type DataManifest } from '@/lib/data-client';
 import type { GeographyManifest } from '@/lib/geography';
 import type { HistoricalEvent } from '@/lib/schema';
-import { openEvent } from '@/lib/navigation';
+import { openEvent, withLocale } from '@/lib/navigation';
+import { useDocumentTitle } from '@/lib/use-document-title';
 import { surroundingSnapshots } from '@/lib/map-time';
 import { battleText } from '@/lib/battles/i18n';
+import {
+  INTRO_YEARS,
+  LANDING_YEAR,
+  PHONE_QUERY,
+  introSeen,
+  isLandingQuery,
+  landingCamera,
+  opensNotebook,
+  rememberIntroSeen,
+  rememberStartCardDismissed,
+  startCardDismissed,
+} from '@/lib/first-visit';
 import Timeline from './timeline/Timeline';
 import { IconButton } from './ui/IconButton';
 import MapLayers from './map/MapLayers';
@@ -57,6 +71,10 @@ const CampaignPanel = dynamic(() => import('./panels/CampaignPanel'));
 const StoryPanel = dynamic(() => import('./story/StoryPanel'));
 const SearchDialog = dynamic(() => import('./search/SearchDialog'));
 const BattlePanel = dynamic(() => import('./panels/BattlePanel'));
+const DensityKey = dynamic(() => import('./map/DensityKey'));
+const YearAnnouncer = dynamic(() => import('./ui/YearAnnouncer'), { ssr: false });
+const StartCard = dynamic(() => import('./StartCard'), { ssr: false });
+const HelpSheet = dynamic(() => import('./HelpSheet'), { ssr: false });
 
 type Territory = { id: string; name: string; color: string; areaKm2: number };
 
@@ -150,7 +168,7 @@ function Overview({
                 }
               >
                 <span className="territory-color" style={{ background: item.color }} />
-                <span>{item.name}</span>
+                <span lang="en">{item.name}</span>
                 <ArrowUpRight size={13} />
               </button>
             </li>
@@ -175,7 +193,7 @@ function Overview({
                 'Des archives ouvertes, des sources consultables',
                 'Open archives, accessible sources',
               )}
-          <Link prefetch={false} href="/about/">
+          <Link prefetch={false} href={withLocale('/about/', locale)}>
             {t('Comprendre les données', 'Understand the data')}
             <ArrowUpRight size={11} />
           </Link>
@@ -219,7 +237,7 @@ function MapCaption({ geo }: { geo: GeographyManifest | null }) {
           {t('Contours approximatifs', 'Approximate boundaries')}
           {sourceDates && ` · ${t('sources', 'sources')} ${sourceDates}`}
         </span>
-        <Link prefetch={false} href="/about/">
+        <Link prefetch={false} href={withLocale('/about/', locale)}>
           {source} · Natural Earth
         </Link>
       </div>
@@ -229,6 +247,7 @@ function MapCaption({ geo }: { geo: GeographyManifest | null }) {
 
 export default function AtlasApp() {
   const { locale, t, setLocale, dir } = useI18n();
+  useDocumentTitle();
   const theme = useAtlasStore((s) => s.theme),
     projection = useAtlasStore((s) => s.projection),
     mode = useAtlasStore((s) => s.mode),
@@ -250,6 +269,11 @@ export default function AtlasApp() {
   const [territories, setTerritories] = useState<Territory[]>([]),
     [toast, setToast] = useState(''),
     [intro, setIntro] = useState(false);
+  const [startCard, setStartCard] = useState(false),
+    [helpOpen, setHelpOpen] = useState(false);
+  // Read before the URL sync writes the state back: only an address that names no view (a bare
+  // one, or one with just a language or tracking parameters) is a first visit.
+  const landing = useRef(false);
   const battleMode = useAtlasStore((state) => state.battleMode);
   const resourcesVisible = useAtlasStore((state) => state.resourcesVisible);
   const religionsVisible = useAtlasStore((state) => state.religionsVisible);
@@ -261,7 +285,11 @@ export default function AtlasApp() {
   }, [battleMode]);
 
   useEffect(() => {
+    landing.current = isLandingQuery(window.location.search);
     useAtlasStore.getState().hydrateFromUrl(window.location.search);
+    // Phones show the map first; a link to something the notebook shows keeps it open.
+    if (window.matchMedia(PHONE_QUERY).matches && !opensNotebook(useAtlasStore.getState()))
+      setSidebarOpen(false);
     setHydrated(true);
     const urlSync = createAtlasUrlSync({
       getState: useAtlasStore.getState,
@@ -323,35 +351,59 @@ export default function AtlasApp() {
   }, [campaignId, storyId]);
   useEffect(() => {
     let timer: ReturnType<typeof setInterval> | undefined;
+    const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // A first visit ends on 1812 and offers three ways in, unless the reader closed them before.
+    const land = () => {
+      if (landing.current && !startCardDismissed()) setStartCard(true);
+    };
+    const finish = () => {
+      clearInterval(timer);
+      timer = undefined;
+      setIntro(false);
+      land();
+    };
     const start = () => {
-      if (
-        location.search ||
-        sessionStorage.getItem('atlas-intro') ||
-        matchMedia('(prefers-reduced-motion: reduce)').matches
-      )
-        return;
-      sessionStorage.setItem('atlas-intro', 'seen');
+      // A reader who chose a year, a record or a layer before the map was ready has left the
+      // landing: the URL sync has written their view, and the montage must not replace it.
+      if (!isLandingQuery(window.location.search)) landing.current = false;
+      if (!landing.current || timer || introSeen() || reducedMotion()) return;
+      rememberIntroSeen();
       setIntro(true);
-      const years = [-3500, -2300, -330, 117, 800, 1206, 1492, 1812, 1914, 1945, CURRENT_YEAR];
       let step = 0;
-      useAtlasStore.getState().setYear(years[step]);
+      useAtlasStore.getState().setYear(INTRO_YEARS[step]);
       timer = setInterval(() => {
         step++;
-        if (step >= years.length) {
-          clearInterval(timer);
-          setIntro(false);
+        const state = useAtlasStore.getState();
+        if (step >= INTRO_YEARS.length - 1) {
+          state.patchState({
+            year: LANDING_YEAR,
+            camera: landingCamera(matchMedia(PHONE_QUERY).matches),
+          });
+          finish();
           return;
         }
-        const state = useAtlasStore.getState();
-        state.patchState({ year: years[step], camera: { ...state.camera, lon: -30 + step * 4.8 } });
+        state.patchState({
+          year: INTRO_YEARS[step],
+          camera: { ...state.camera, lon: -30 + step * 4.8 },
+        });
       }, 220);
     };
-    const stop = () => {
-      if (timer) {
-        clearInterval(timer);
-        setIntro(false);
-      }
+    const stop = (event: Event) => {
+      if (!timer) return;
+      // An interrupted montage still lands on its year, unless the reader is choosing one on the
+      // timeline. The camera stays where the reader took it.
+      const choosingYear =
+        (event.target instanceof Element && event.target.closest('.timeline')) ||
+        (event instanceof KeyboardEvent && ['ArrowLeft', 'ArrowRight'].includes(event.key));
+      if (!choosingYear) useAtlasStore.getState().setYear(LANDING_YEAR);
+      finish();
     };
+    // Without the montage (seen this session, or reduced motion) the first view jumps straight
+    // to its landing and the start card shows at once.
+    if (landing.current && (introSeen() || reducedMotion())) {
+      useAtlasStore.getState().setCamera(landingCamera(matchMedia(PHONE_QUERY).matches));
+      land();
+    }
     window.addEventListener('atlas:ready', start);
     window.addEventListener('pointerdown', stop);
     window.addEventListener('keydown', stop);
@@ -421,21 +473,28 @@ export default function AtlasApp() {
     state.setCamera({ zoom: Math.max(0, Math.min(18, state.camera.zoom + amount)) });
   };
   const hasDetail = Boolean(selectedPerson || selectedEntity || (!battleMode && selectedEvent));
+  // The start card waits while the reader is already inside a record, a campaign or a story.
+  const contextOpen = hasDetail || battleMode || Boolean(campaignId || storyId || selectedWar);
+  const dismissStartCard = () => {
+    rememberStartCardDismissed();
+    setStartCard(false);
+  };
   return (
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation}>
         <main
-          className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''} ${battleMode ? 'battle-mode' : ''} ${resourcesVisible ? 'resources-visible' : ''} ${religionsVisible ? 'religions-visible' : ''}`}
+          className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''} ${battleMode ? 'battle-mode' : ''} ${resourcesVisible ? 'resources-visible' : ''} ${religionsVisible ? 'religions-visible' : ''} ${hydrated ? '' : 'is-hydrating'}`}
         >
           <h1 className="sr-only">
             HistoryOfAtlas — {t('L’histoire à travers les cartes', 'History through maps')}
           </h1>
-          <a className="skip-link" href="#atlas-explore">
+          {/* A folded notebook is not in the page: skip to the button that opens it. */}
+          <a className="skip-link" href={sidebarOpen ? '#atlas-explore' : '#atlas-reopen'}>
             {t('skipToContent')}
           </a>
           {hydrated && <WorldMap />}
           <header className="atlas-header">
-            <Link href={locale === 'en' ? '/' : `/?lang=${locale}`} className="brand">
+            <Link href={withLocale('/', locale)} className="brand">
               <CompassRose small />
               <span>
                 HistoryOfAtlas
@@ -493,12 +552,29 @@ export default function AtlasApp() {
                   </option>
                 ))}
               </select>
-              <Link prefetch={false} href="/about/" className="about-link" aria-label={t('about')}>
+              <button
+                type="button"
+                className="help-trigger"
+                aria-label={t('Aide et raccourcis', 'Help and shortcuts')}
+                aria-haspopup="dialog"
+                aria-expanded={helpOpen}
+                data-testid="help-trigger"
+                onClick={() => setHelpOpen(true)}
+              >
+                <CircleHelp size={19} aria-hidden="true" />
+              </button>
+              <Link
+                prefetch={false}
+                href={withLocale('/about/', locale)}
+                className="about-link"
+                aria-label={t('about')}
+              >
                 <Info size={18} />
               </Link>
             </div>
           </header>
           <MapLayers />
+          {startCard && !contextOpen && <StartCard onDismiss={dismissStartCard} />}
           <AnimatePresence initial={false}>
             {sidebarOpen && (
               <m.aside
@@ -625,11 +701,14 @@ export default function AtlasApp() {
           </AnimatePresence>
           {!sidebarOpen && (
             <button
+              id="atlas-reopen"
               className="reopen-panel"
               onClick={() => setSidebarOpen(true)}
               aria-label={t('Ouvrir le carnet', 'Open notebook')}
             >
               <BookOpen size={18} />
+              {/* Shown on phones, where the folded notebook becomes a bar under the map. */}
+              <span className="reopen-label">{t('Ouvrir le carnet', 'Open notebook')}</span>
               <ChevronRight size={14} />
             </button>
           )}
@@ -662,8 +741,14 @@ export default function AtlasApp() {
               <IconButton
                 label={
                   boundarySource === 'cliopatria'
-                    ? t('Comparer les instantanés historiques', 'Compare historical snapshots')
-                    : t('Afficher les territoires datés', 'Show dated territories')
+                    ? t(
+                        'Source des frontières : Cliopatria (passer à Historical Basemaps)',
+                        'Boundary source: Cliopatria (switch to Historical Basemaps)',
+                      )
+                    : t(
+                        'Source des frontières : Historical Basemaps (revenir à Cliopatria)',
+                        'Boundary source: Historical Basemaps (switch back to Cliopatria)',
+                      )
                 }
                 aria-pressed={boundarySource === 'historical-basemaps'}
                 className={boundarySource === 'historical-basemaps' ? 'active' : ''}
@@ -760,6 +845,18 @@ export default function AtlasApp() {
             <div className="war-context">
               <Route size={14} />
               {t('Conflit sélectionné', 'Selected conflict')}
+              <span
+                className="war-track-key"
+                role="img"
+                aria-label={t(
+                  'Couleur des points : du début du conflit (clair) à sa fin (foncé)',
+                  'Point colour: from the start of the conflict (light) to its end (dark)',
+                )}
+              >
+                {t('Début', 'Start')}
+                <i />
+                {t('Fin', 'End')}
+              </span>
               <button
                 aria-label={t('Quitter le conflit', 'Leave conflict')}
                 onClick={() => useAtlasStore.setState({ selectedWar: null, range: null })}
@@ -776,13 +873,8 @@ export default function AtlasApp() {
             <EventPanel key={selectedEvent} />
           ) : null}
           <MapCaption geo={geo} />
+          {mode === 'heatmap' && !battleMode && <DensityKey />}
           <Timeline density={manifest?.density} territorialDensity={geo?.temporal?.density} />
-          {intro && (
-            <div className="intro-note">
-              {t('Un monde, des milliers de frontières.', 'One world, thousands of borders.')}
-              <button onClick={() => setIntro(false)}>{t('Explorer', 'Explore')}</button>
-            </div>
-          )}
           {toast && (
             <div className="toast" role="status">
               {toast}
@@ -792,6 +884,22 @@ export default function AtlasApp() {
             </div>
           )}
           {searchOpen && <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />}
+          {helpOpen && (
+            <HelpSheet
+              open={helpOpen}
+              onOpenChange={setHelpOpen}
+              onShowStart={
+                contextOpen
+                  ? undefined
+                  : () => {
+                      // On a phone the card sits where the open notebook would be.
+                      if (matchMedia(PHONE_QUERY).matches) setSidebarOpen(false);
+                      setStartCard(true);
+                    }
+              }
+            />
+          )}
+          {hydrated && <YearAnnouncer territories={territories.length} muted={intro} />}
         </main>
       </LazyMotion>
     </MotionConfig>

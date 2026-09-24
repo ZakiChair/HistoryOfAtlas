@@ -1,0 +1,1616 @@
+{
+  "version": 1,
+  "notice": "The atlas combines sources under different terms; it is not a single CC0 dataset. Each record keeps its own attribution and links back to its source.",
+  "project": {
+    "code": {
+      "license": "MIT",
+      "licenseUrl": "https://opensource.org/license/mit",
+      "text": "https://github.com/ZakiChair/HistoryOfAtlas/blob/main/LICENSE"
+    },
+    "content": {
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "text": "https://github.com/ZakiChair/HistoryOfAtlas/blob/main/DATA-LICENSE.md",
+      "attribution": "HistoryOfAtlas contributors",
+      "scope": "Content written for the atlas: curated reviews and corrections, religion milestones, descriptions, generalized regions and diffusion links, map symbology"
+    },
+    "note": "Third-party data keeps its original licence. 3D models whose origin is not documented in their own metadata are not covered until their provenance has been confirmed."
+  },
+  "datasets": [
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "scope": "Events, dates, coordinates, participants, people, offices and conflict links"
+    },
+    {
+      "id": "natural-earth-coastline-validation",
+      "name": "Natural Earth · coastline validation",
+      "url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "license": "Public domain",
+      "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "scope": "Validation mask for event coordinates"
+    },
+    {
+      "id": "cdb90",
+      "name": "CDB90 · CAA Database of Battles, Version 1990",
+      "url": "https://github.com/jrnold/CDB90",
+      "license": "ODC-BY-1.0",
+      "licenseUrl": "https://opendatacommons.org/licenses/by/1-0/",
+      "scope": "Selected army strengths and casualties (original data: Public Domain)",
+      "revision": "e0b35ec4d798cec3bb4e6970c0f6bb7aa69e2f4c",
+      "attribution": "CDB90 (CAA Database of Battles, Version 1990), tidy data maintained by Jeffrey B. Arnold. Original US Army Concepts Analysis Agency data; revised data licensed ODC-BY."
+    },
+    {
+      "id": "geo-historical-basemaps",
+      "name": "Historical Basemaps · A. Ourednik et contributeurs",
+      "url": "https://github.com/aourednik/historical-basemaps",
+      "license": "GPL-3.0-only",
+      "licenseUrl": "/geo/HISTORICAL-BASEMAPS-LICENSE.txt",
+      "scope": "Historical boundary snapshots (secondary reference)",
+      "revision": "da7a4b735ecef70aebdc9c73e409d8a2500d50f3"
+    },
+    {
+      "id": "geo-natural-earth",
+      "name": "Natural Earth",
+      "url": "https://www.naturalearthdata.com/",
+      "license": "Public domain",
+      "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "scope": "Coastlines, rivers and physical basemap",
+      "revision": "ca96624a56bd078437bca8184e78163e5039ad19"
+    },
+    {
+      "id": "geo-cliopatria",
+      "name": "Cliopatria · Seshat Global History Databank",
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "Dated polity boundaries",
+      "revision": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "attribution": "https://doi.org/10.1038/s41597-025-04516-9"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "url": "https://www.wikipedia.org/",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Summaries loaded on demand and attributed in each record"
+    },
+    {
+      "id": "wikimedia-commons",
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/",
+      "license": "Licence stated on each file page",
+      "licenseUrl": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "scope": "Illustrations loaded from Commons, each under its own licence"
+    },
+    {
+      "id": "font-cormorant",
+      "name": "Cormorant",
+      "url": "https://github.com/CatharsisFonts/Cormorant",
+      "license": "SIL Open Font License 1.1",
+      "licenseUrl": "/fonts/cormorantgaramond-OFL.txt",
+      "scope": "Display typeface, hosted locally"
+    },
+    {
+      "id": "font-manrope",
+      "name": "Manrope",
+      "url": "https://github.com/googlefonts/manrope",
+      "license": "SIL Open Font License 1.1",
+      "licenseUrl": "/fonts/manrope-OFL.txt",
+      "scope": "Interface typeface, hosted locally"
+    }
+  ],
+  "resources": {
+    "sources": [
+      {
+        "id": "current-major-albemarle",
+        "name": "Albemarle — 2025 Form 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591326000018/alb-20251231.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-allied-gold",
+        "name": "Allied Gold — 2025 annual information form",
+        "url": "https://www.sec.gov/Archives/edgar/data/1993344/000162828026022512/a991-alliedx2026aif.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "wa-morila",
+        "name": "AngloGold Ashanti and Firefinch — Morila mining phases",
+        "url": "https://www.sec.gov/Archives/edgar/data/1067428/000120561318000073/aga_mineral.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-asante",
+        "name": "Asante Gold — Bibiani and Chirano operating disclosures",
+        "url": "https://www.asantegold.com/news-releases/asante-provides-financial-and-operating-results-for-the-quarter-ended-october-31-2025",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "wa-b2gold-fekola",
+        "name": "B2Gold — Fekola technical report and operating results",
+        "url": "https://s204.q4cdn.com/324791784/files/doc_downloads/2025/10/22/Fekola-Technical_Report-December-31-2023.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-syama",
+        "name": "Ballo et al. and Resolute Mining — Syama",
+        "url": "https://www.rml.com.au/wp-content/uploads/2026/03/Resolute-2025-Annual-Report.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-barrick-mali",
+        "name": "Barrick — Loulo-Gounkoto operating history and 2025 AIF",
+        "url": "https://www.sec.gov/Archives/edgar/data/756894/000119312526079253/d833573dex991.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "wa-barrick-tongon",
+        "name": "Barrick — Tongon operating history and 2025 divestment",
+        "url": "https://www.barrick.com/English/news/news-details/2025/barrick-announces-sale-of-interest-in-tongon-for-up-to-305-million/default.aspx",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-major-bhp-annual",
+        "name": "BHP — Annual Report 2025",
+        "url": "https://www.bhp.com/ar2025",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "current-major-bhp",
+        "name": "BHP — FY2025 operational review",
+        "url": "https://www.bhp.com/es/-/media/documents/media/reports-and-presentations/2025/250718_bhpoperationalreviewfortheyearended30june2025.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "current-uranium-bhp",
+        "name": "BHP — Operational review to 31 March 2026",
+        "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260422_bhpoperationalreviewfortheninemonthsended31march2026.pdf",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "boem-fields-2026",
+        "name": "BOEM — Gulf of Mexico discovered oil and gas fields",
+        "url": "https://www.boem.gov/oil-gas-energy/resource-evaluation/ocs-operations-field-directory",
+        "license": "Public domain — U.S. federal government data",
+        "licenseUrl": "https://www.boem.gov/about-boem/copyright-restrictions-and-permissions",
+        "year": 2026,
+        "sites": 1191
+      },
+      {
+        "id": "current-uranium-boss",
+        "name": "Boss Energy — Honeymoon operating results to 30 June 2026",
+        "url": "https://bossenergy.com/honeymoon-project",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-britannia-copper-mine",
+        "name": "British Columbia Geological Survey — Britannia copper mine",
+        "url": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1958.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-major-cameco",
+        "name": "Cameco — 2025 annual report and observed 2026 production",
+        "url": "https://www.cameco.com/invest/financial-information/annual-reports/2025",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "current-uranium-cgn",
+        "name": "CGN / Swakop Uranium — Husab 2025 results and 2026 mine operations",
+        "url": "https://en.cgnpc.com.cn/encgn/pressReleases/2026-09/21/content_3c397abe0c6b460383b87a48e154c210.shtml",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "china-ree-government-2026",
+        "name": "China government — operating Maoniuping and Bayan Obo rare-earth mines, March 2026",
+        "url": "https://sti.xizang.gov.cn/xwzx/gnkjdt/202603/t20260324_530803.html",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "mincan-2024",
+        "name": "Clara Dallaire-Fortier — MinCan, March 2024",
+        "url": "https://figshare.com/articles/dataset/Principal_Productive_Mines_of_Canada/23740071",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2024,
+        "sites": 566
+      },
+      {
+        "id": "current-major-cmoc",
+        "name": "CMOC — 2025 ESG report",
+        "url": "https://en.cmoc.com/uploadfile/attachment/CMOCEN2025ESG2026033010011000.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-chuquicamata",
+        "name": "Codelco — Chuquicamata",
+        "url": "https://www.codelco.com/chuquicamata",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-uranium-denison",
+        "name": "Denison Mines — Q2 2026 MD&A, McClean North extraction",
+        "url": "https://www.sec.gov/Archives/edgar/data/1063259/000106325926000029/a2026-06dmcmda.htm",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-uranium-encore",
+        "name": "enCore Energy — actual Q2 2026 uranium recovery",
+        "url": "https://encore.mediaroom.com/2026-08-13-enCore-Energy-Reports-Q2-2026-Financial-Results",
+        "license": "Factual metadata; original operator reports retain their copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-endeavour-hounde",
+        "name": "Endeavour Mining — Houndé",
+        "url": "https://www.endeavourmining.com/our-portfolio/hounde-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-endeavour-ity",
+        "name": "Endeavour Mining — Ity",
+        "url": "https://www.endeavourmining.com/our-portfolio/ity-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-kalana",
+        "name": "Endeavour Mining — Kalana pre-feasibility technical report",
+        "url": "https://edv-14806-s3.s3.eu-west-2.amazonaws.com/files/7017/1770/6900/edv-kalana-pfs-technical-report.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-endeavour-lafigue",
+        "name": "Endeavour Mining — Lafigué",
+        "url": "https://www.endeavourmining.com/our-portfolio/lafigue-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-endeavour-mana",
+        "name": "Endeavour Mining — Mana",
+        "url": "https://www.endeavourmining.com/our-portfolio/mana-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-endeavour-sabodala-massawa",
+        "name": "Endeavour Mining — Sabodala-Massawa",
+        "url": "https://www.endeavourmining.com/our-portfolio/sabodala-massawa-mine/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-ranger",
+        "name": "Energy Resources of Australia — Ranger",
+        "url": "https://www.energyres.com.au/about/history/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-major-first-quantum",
+        "name": "First Quantum Minerals — 2025 preliminary production",
+        "url": "https://www.first-quantum.com/news/first-quantum-minerals-announces-2025-preliminary-production-and-2026-2028-guidance/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-major-freeport",
+        "name": "Freeport-McMoRan — 2025 Form 10-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000012/fcx-20251231.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-rektorn-iron-and-apatite-mine",
+        "name": "Geological Survey of Sweden — Rektorn iron and apatite mine",
+        "url": "https://resource.sgu.se/dokument/publikation/ba/ba56beskrivning/ba56-beskrivning.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "national-australia-2026",
+        "name": "Geoscience Australia — Operating Mines 2025, latest status reviewed September 2026",
+        "url": "https://services.ga.gov.au/gis/rest/services/AustralianOperatingMines/MapServer/0",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2026,
+        "sites": 157
+      },
+      {
+        "id": "current-major-glencore",
+        "name": "Glencore — 2025 production report",
+        "url": "https://www.glencore.com/.rest/api/v1/documents/static/a8114247-02e8-4bd8-bc04-81f411ba631c/GLEN_2025-FY-Production-Report.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "gem-gcmt",
+        "name": "Global Energy Monitor — Global Coal Mine Tracker, August 2026",
+        "url": "https://globalenergymonitor.org/projects/global-coal-mine-tracker",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2026,
+        "sites": 6910
+      },
+      {
+        "id": "gem-giomt-2026",
+        "name": "Global Energy Monitor — Global Iron Ore Mines Tracker, September 2026",
+        "url": "https://globalenergymonitor.org/projects/global-iron-ore-mines-tracker",
+        "license": "Tracker data: CC BY 4.0; factual dates from separately cited GEM wiki revisions (original wiki text: CC BY-NC-SA 4.0)",
+        "licenseUrl": "https://globalenergymonitor.org/creative-commons-license",
+        "year": 2026,
+        "sites": 687
+      },
+      {
+        "id": "gem-goget",
+        "name": "Global Energy Monitor — Global Oil and Gas Extraction Tracker, March 2026",
+        "url": "https://globalenergymonitor.org/projects/global-oil-gas-extraction-tracker",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2026,
+        "sites": 6917
+      },
+      {
+        "id": "wa-goldfields-tarkwa",
+        "name": "Gold Fields — Tarkwa 2025 technical report summary",
+        "url": "https://www.sec.gov/Archives/edgar/data/1172724/000162828026021904/exhibit962_tarkwatrs.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-great-orme-bronze-age-mine",
+        "name": "Great Orme archaeological research, Antiquity — Great Orme Bronze Age mine",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/356E30145B1F6597D8AAA0DDBE69BD51/S0003598X19001303a.pdf/div-class-title-boom-and-bust-in-bronze-age-britain-major-copper-production-from-the-great-orme-mine-and-european-trade-span-class-italic-c-span-1600-1400-bc-div.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-greenbushes-lithium-mine",
+        "name": "Greenbushes Technical Report Summary, SEC filing — Greenbushes lithium mine",
+        "url": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000024/exhibit961greenbushes202.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "historical-almaden-expanded",
+        "name": "Historical exploitation evidence — Almadén mercury mine",
+        "url": "https://www.minasalmaden.com/parque_minero_almaden.aspx?lang=es-ES",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-bochnia-expanded",
+        "name": "Historical exploitation evidence — Bochnia salt mine",
+        "url": "https://www.pgi.gov.pl/aktualnosci/display/13358-sol-kamienna-jakiej-nie-znamy-z-wizyta-w-kopalni-soli-bochnia.html",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-cornwall-camborne-redruth-expanded",
+        "name": "Historical exploitation evidence — Camborne and Redruth — historic copper and tin mining district",
+        "url": "https://whc.unesco.org/en/list/1215/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-cerro-rico-potosi-expanded",
+        "name": "Historical exploitation evidence — Cerro Rico de Potosí — silver mining district",
+        "url": "https://whc.unesco.org/en/list/420/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-hallstatt-prehistoric-expanded",
+        "name": "Historical exploitation evidence — Hallstatt — prehistoric salt mining district",
+        "url": "https://www.nhm.at/hallstatt/en/site",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-iwami-ginzan-expanded",
+        "name": "Historical exploitation evidence — Iwami Ginzan silver mine",
+        "url": "https://whc.unesco.org/en/list/1246/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-rammelsberg-expanded",
+        "name": "Historical exploitation evidence — Rammelsberg mining district",
+        "url": "https://whc.unesco.org/en/list/623/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-rosia-montana-expanded",
+        "name": "Historical exploitation evidence — Roșia Montană — Roman gold mines",
+        "url": "https://whc.unesco.org/en/list/1552/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-salins-les-bains-expanded",
+        "name": "Historical exploitation evidence — Salins-les-Bains — Grande Saline",
+        "url": "https://whc.unesco.org/en/list/203/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-cornwall-st-just-expanded",
+        "name": "Historical exploitation evidence — St Just — historic copper and tin mining district",
+        "url": "https://whc.unesco.org/en/list/1215/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-tarnowskie-gory-expanded",
+        "name": "Historical exploitation evidence — Tarnowskie Góry lead, silver and zinc mining district",
+        "url": "https://unesco.tarnowskiegory.pl/historia/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-wieliczka-expanded",
+        "name": "Historical exploitation evidence — Wieliczka salt mine",
+        "url": "https://whc.unesco.org/en/list/32/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-yanfolila",
+        "name": "Hummingbird Resources and Mali EITI — Yanfolila",
+        "url": "https://wp-hummingbirdresources-2020.s3.eu-west-2.amazonaws.com/media/2024/02/121-Conference-Corporate-Presentation-Feb-2024-V3.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-iamgold-essakane",
+        "name": "IAMGOLD — Essakane 15-year operating history",
+        "url": "https://www.iamgold.com/English/investors/news-releases/news-releases-details/2026/Essakane-Celebrates-15-Years-of-Mining-Excellence-/default.aspx",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-yatela",
+        "name": "IAMGOLD — Yatela extraction suspension",
+        "url": "https://www.sec.gov/Archives/edgar/data/1203464/000119312513429382/d623780dex991.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "icmm-occurrences-2026",
+        "name": "ICMM — known mining locations, July 2026 catalogue",
+        "url": "https://www.icmm.com/website/data/2026/global-mining-dataset-1-5.xlsx?cb=142831",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2026,
+        "sites": 1928
+      },
+      {
+        "id": "current-major-igo",
+        "name": "IGO — March 2026 Quarterly Activities Report",
+        "url": "https://www.igo.com.au/site/PDF/dc4f0f43-c5fc-4422-a75f-9c84dc120b6c/March2026QuarterlyActivitiesReport",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "irel-operations-2026",
+        "name": "India Department of Atomic Energy — integrated rare-earth sand mining operations, 2 April 2026",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2248437&lang=1&reg=1",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 3
+      },
+      {
+        "id": "current-major-ivanhoe",
+        "name": "Ivanhoe Mines — 2025 results presentation",
+        "url": "https://www.ivanhoemines.com/wp-content/uploads/20260219-FY-2025-Results-Presentation-VF.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "wa-fineprint",
+        "name": "Jasansky et al. — Global mining production dataset (2022)",
+        "url": "https://zenodo.org/records/7369478",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2026,
+        "sites": 7
+      },
+      {
+        "id": "fineprint-2023",
+        "name": "Jasansky, Lieber, Giljum & Maus — Global coal and metal mine production, version 1.0.3",
+        "url": "https://zenodo.org/records/7369478",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "year": 2023,
+        "sites": 111
+      },
+      {
+        "id": "weishanhu-inspection-2026",
+        "name": "Jining Emergency Management Bureau — Weishanhu underground mine inspection, 13 June 2026",
+        "url": "https://safety.jining.gov.cn/art/2026/6/13/art_9586_2709664.html",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-uranium-kazatomprom",
+        "name": "Kazatomprom — H1 2026 results and SRK January 2026 producing-property audit",
+        "url": "https://www.kazatomprom.kz/storage/9f/6m_2026_ofr_eng.pdf",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 17
+      },
+      {
+        "id": "current-major-lithium-argentina",
+        "name": "Lithium Argentina — 2025 annual and Q2 2026 results",
+        "url": "https://investors.lithium-argentina.com/news-releases/news-release-details/lithium-argentina-reports-second-quarter-2026-results",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-kiruna-kiirunavaara-iron-mine",
+        "name": "LKAB and Geological Survey of Sweden — Kiruna — Kiirunavaara iron mine",
+        "url": "https://minedocs.com/26/Kiruna-Summary-Technical-Report-12312023.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "lynas-operations-2026",
+        "name": "Lynas Rare Earths — Annual Report FY 2026",
+        "url": "https://wcsecure.weblink.com.au/pdf/LYC/03126303.pdf",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "current-major-mp-materials",
+        "name": "MP Materials — 2025 annual and Q2 2026 results",
+        "url": "https://www.mpmaterials.com/news/mp-materials-reports-second-quarter-2026-results",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-idrija-expanded",
+        "name": "Municipality of Idrija — Mercury heritage nomination",
+        "url": "https://idrija.si/files/other/news/54/599691.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "national-canada-2026",
+        "name": "Natural Resources Canada — principal producing mines, February 2026",
+        "url": "https://open.canada.ca/data/en/dataset/000183ed-8864-42f0-ae43-c4313a860720",
+        "license": "Open Government Licence — Canada",
+        "licenseUrl": "https://open.canada.ca/en/open-government-licence-canada",
+        "year": 2026,
+        "sites": 93
+      },
+      {
+        "id": "current-major-newmont",
+        "name": "Newmont — 2025 annual results",
+        "url": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "sodir-production",
+        "name": "Norwegian Offshore Directorate — annual field production, September 2026",
+        "url": "https://factpages.sodir.no/en/field/TableView/Production/Saleable/Yearly",
+        "license": "Norwegian Licence for Open Government Data (NLOD) 2.0",
+        "licenseUrl": "https://data.norge.no/nlod/en/2.0",
+        "year": 2026,
+        "sites": 128
+      },
+      {
+        "id": "sodir-discoveries-2026",
+        "name": "Norwegian Offshore Directorate — discovered fields and deposits, September 2026",
+        "url": "https://factpages.sodir.no/en/discovery/TableView/Overview",
+        "license": "Norwegian Licence for Open Government Data (NLOD) 2.0",
+        "licenseUrl": "https://data.norge.no/nlod/en/2.0",
+        "year": 2026,
+        "sites": 291
+      },
+      {
+        "id": "historical-khouribga-phosphate-mining-district",
+        "name": "OCP Group and IFC — Khouribga phosphate mining district",
+        "url": "https://www.ocpgroup.ma/en/who-we-are/our-journey",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-uranium-paladin",
+        "name": "Paladin Energy — Langer Heinrich June 2026 quarterly report",
+        "url": "https://www.paladinenergy.com/wp-content/uploads/2026/07/61334849.pdf",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "wa-pdi-2026",
+        "name": "Predictive Discovery / Robex — March 2026 quarterly activities report",
+        "url": "https://company-announcements.afr.com/asx/pdi/cc34921f-4287-11f1-a82c-cad0a84b142a.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "reported-mine-production-2026",
+        "name": "Primary operator quarterly production reports — World Mining Monitor index",
+        "url": "https://github.com/kadoa-org/world-mining-monitor/tree/4ab9b84e59193d235feafc974d97696987f8ea53",
+        "license": "Factual report metadata; original company reports retain their copyright. Index supplied for research and educational use; index code MIT.",
+        "year": 2026,
+        "sites": 45
+      },
+      {
+        "id": "combined-mineral-evidence-2026",
+        "name": "Reconciled MinCan/FINEPRINT and GEM iron ore mine evidence",
+        "url": "https://zenodo.org/records/7369478",
+        "license": "See individual cited period sources: MinCan/FINEPRINT and GEM tracker CC BY 4.0; original GEM wiki text CC BY-NC-SA 4.0",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-major-rio",
+        "name": "Rio Tinto — Q4 2025 and Q2 2026 operations reviews",
+        "url": "https://www.riotinto.com/en/news/releases/2026/rio-tinto-releases-second-quarter-2026-production-results",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 4
+      },
+      {
+        "id": "wa-robex",
+        "name": "Robex Resources — 2025 prospectus independent technical reports",
+        "url": "https://robexgold.com/wp-content/uploads/2025/05/Robex_Prospectus_-PR-_may8-2025-2.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "wa-historical-goldfields",
+        "name": "Robyn d’Avignon, Philip D. Curtin and Nehemia Levtzion — West African goldfields",
+        "url": "https://www.dukeupress.edu/a-ritual-geology",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "current-uranium-rosatom",
+        "name": "Rosatom mining division — current Russian uranium operations 2026",
+        "url": "https://atommedia.online/press-releases/na-podzemnom-rudnike-8-predpriyatiya-gornorudnogo-diviziona-rosatoma-dosrochno-vveden-v-ekspluatatsi/",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "current-uranium-rossing",
+        "name": "Rössing Uranium — 2025 actual output and 2026 operator snapshot",
+        "url": "https://www.rossing.com/about-us/",
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-rossing-uranium-mine",
+        "name": "Rössing Uranium — Rössing uranium mine",
+        "url": "https://www.rossing.com/wp-content/uploads/2025/06/RUL-SUSTAINABILITY-AND-PERFORMANCE-REPORT-2024.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 0
+      },
+      {
+        "id": "lovozero-operations-2026",
+        "name": "Russian Ministry of Industry — Lovozero/Karnasurt operating mine, 31 August 2026",
+        "url": "https://crp.gov.ru/news/na-predpriyatii-gornorudnogo-diviziona-rosatoma-v-opytno-promyshlennuyu-ekspluatatsiyu-vnedren-pervy/",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-sado-aikawa-gold-mine",
+        "name": "Sado Kinzan — Sado — Aikawa Gold Mine",
+        "url": "https://www.sado-kinzan.com/en/knowledge/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "serra-verde-operations-2026",
+        "name": "Serra Verde — Pela Ema operating mine, 20 April 2026",
+        "url": "https://svpm.com.br/en/serra-verde-agreedusarareearth/",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "dalucao-operator-2026",
+        "name": "Sichuan Natural Resources Investment Group — Dalucao mine production inspection, 23 January 2026",
+        "url": "https://scnrig.com.cn/infoList.aspx?id=23227&t=12",
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-hashima",
+        "name": "Sites of Japan’s Meiji Industrial Revolution — Hashima",
+        "url": "https://www.japansmeijiindustrialrevolution.com/en/site/nagasaki/component04.html",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "stimson-rare-earths-2026",
+        "name": "Stimson Center — satellite-observed rare-earth mining in Southeast Asia",
+        "url": "https://www.stimson.org/2025/mining-in-mainland-southeast-asia-river-basins-dashboard/",
+        "license": "Public factual mine observations; Stimson requests attribution. Underlying Planet Labs imagery is not redistributed.",
+        "year": 2026,
+        "sites": 620
+      },
+      {
+        "id": "historical-kennecott",
+        "name": "U.S. National Park Service — Kennecott",
+        "url": "https://www.nps.gov/wrst/learn/management/upload/Kennecott-Preliminary-Assessment-Report-508-reduced-for-web.pdf",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-quincy-copper-mine",
+        "name": "U.S. National Park Service — Quincy copper mine",
+        "url": "https://www.nps.gov/articles/the-no-2-quincy-shaft-rockhouse-9-240-feet-into-the-earth-teaching-with-historic-places.htm",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-las-medulas",
+        "name": "UNESCO — Las Médulas",
+        "url": "https://whc.unesco.org/en/list/803/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-rros-mining-district",
+        "name": "UNESCO — Røros mining district",
+        "url": "https://whc.unesco.org/en/list/55/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "historical-falun-copper-mining-area",
+        "name": "UNESCO and Falun Mine Museum — Falun copper mining area",
+        "url": "https://whc.unesco.org/en/list/1027/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      },
+      {
+        "id": "current-uranium-ur-energy",
+        "name": "Ur-Energy — actual Q2 2026 uranium recovery",
+        "url": "https://www.ur-energy.com/news-media/press-releases/detail/409/ur-energy-reports-second-quarter-2026-results",
+        "license": "Factual metadata; original operator reports retain their copyright",
+        "year": 2026,
+        "sites": 2
+      },
+      {
+        "id": "usgs-occurrences-2009",
+        "name": "USGS — Major mineral deposits, 2009 compilation",
+        "url": "https://mrdata.usgs.gov/major-deposits/",
+        "license": "Public domain (USGS)",
+        "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "year": 2009,
+        "sites": 2533
+      },
+      {
+        "id": "usgs-current-us-2026",
+        "name": "USGS — United States mines, 2026 assumed-active register",
+        "url": "https://doi.org/10.5066/P1BUPUAM",
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "year": 2026,
+        "sites": 44
+      },
+      {
+        "id": "historical-zollverein",
+        "name": "Zollverein Foundation — Zollverein",
+        "url": "https://www.zollverein.de/zollverein-unesco-world-heritage-site/history/",
+        "license": "Factual metadata; original source content retains its own copyright",
+        "year": 2026,
+        "sites": 1
+      }
+    ],
+    "licenses": [
+      {
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sources": 7,
+        "sites": 16596
+      },
+      {
+        "license": "Public domain (USGS)",
+        "licenseUrl": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "sources": 1,
+        "sites": 2533
+      },
+      {
+        "license": "Public domain — U.S. federal government data",
+        "licenseUrl": "https://www.boem.gov/about-boem/copyright-restrictions-and-permissions",
+        "sources": 1,
+        "sites": 1191
+      },
+      {
+        "license": "Tracker data: CC BY 4.0; factual dates from separately cited GEM wiki revisions (original wiki text: CC BY-NC-SA 4.0)",
+        "licenseUrl": "https://globalenergymonitor.org/creative-commons-license",
+        "sources": 1,
+        "sites": 687
+      },
+      {
+        "license": "Public factual mine observations; Stimson requests attribution. Underlying Planet Labs imagery is not redistributed.",
+        "sources": 1,
+        "sites": 620
+      },
+      {
+        "license": "Norwegian Licence for Open Government Data (NLOD) 2.0",
+        "licenseUrl": "https://data.norge.no/nlod/en/2.0",
+        "sources": 2,
+        "sites": 419
+      },
+      {
+        "license": "Open Government Licence — Canada",
+        "licenseUrl": "https://open.canada.ca/en/open-government-licence-canada",
+        "sources": 1,
+        "sites": 93
+      },
+      {
+        "license": "Factual metadata; original source content retains its own copyright",
+        "sources": 64,
+        "sites": 62
+      },
+      {
+        "license": "Factual report metadata; original company reports retain their copyright. Index supplied for research and educational use; index code MIT.",
+        "sources": 1,
+        "sites": 45
+      },
+      {
+        "license": "CC0 1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sources": 1,
+        "sites": 44
+      },
+      {
+        "license": "Factual metadata; original reports retain their copyright. Independent coordinate sources are attributed separately.",
+        "sources": 8,
+        "sites": 23
+      },
+      {
+        "license": "Public factual operating observations; original documents retain their publishers’ copyright. No original prose or imagery redistributed.",
+        "sources": 7,
+        "sites": 8
+      },
+      {
+        "license": "Factual metadata; original operator reports retain their copyright",
+        "sources": 2,
+        "sites": 3
+      },
+      {
+        "license": "See individual cited period sources: MinCan/FINEPRINT and GEM tracker CC BY 4.0; original GEM wiki text CC BY-NC-SA 4.0",
+        "sources": 1,
+        "sites": 1
+      }
+    ]
+  },
+  "religions": {
+    "corpus": {
+      "scope": "Tradition descriptions, milestone texts and hand-generalized regions written for the atlas",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Project content. Cited references are listed for verification only; their content is not redistributed."
+    },
+    "references": [
+      {
+        "id": "art-institute-parliament",
+        "title": "Art Institute of Chicago — Museum Studies 36/2, Parliament of Religions",
+        "url": "https://www.artic.edu/files/d6d34ab7-f17c-4939-b2aa-f8c5a71495a5/AIC_MuseumStudies_36-2_UPDF.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "augustinians-mexico-philippines",
+        "title": "Augustinian Province of Santo Niño de Cebu — Half a Millennia of Apostolic and Cultural Influence",
+        "url": "https://augustiniansphilippines.net/augustinians-in-the-philippines-half-a-millennia-of-apostolic-and-cultural-influence/",
+        "milestones": 1
+      },
+      {
+        "id": "anu-kutai",
+        "title": "Australian National University Press — The Earliest Indic State: Kutai",
+        "url": "https://press.anu.edu.au/downloads/press/p69411/mobile/ch15s02.html",
+        "milestones": 1
+      },
+      {
+        "id": "bm-jerusalem-chronicle",
+        "title": "British Museum — Babylonian Chronicle, campaign of 597 BCE",
+        "url": "https://www.britishmuseum.org/collection/object/W_1896-0409-51",
+        "milestones": 1
+      },
+      {
+        "id": "ui-bm-ife",
+        "title": "British Museum — Ife head and the city’s sacred kingship",
+        "url": "https://www.britishmuseum.org/collection/object/E_Af1939-34-1",
+        "milestones": 1
+      },
+      {
+        "id": "cambridge-alexandria",
+        "title": "Cambridge University Press — The Cambridge Dictionary of Jewish History and Culture, Alexandria",
+        "url": "https://assets.cambridge.org/97805218/25979/excerpt/9780521825979_excerpt.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "cordoba-synagogue",
+        "title": "Córdoba municipal tourism — Synagogue, dated 1315",
+        "url": "https://www.turismodecordoba.org/repositorio/2019/201907301435300000001564490130.1919.pdf?cache=1564490130.3006",
+        "milestones": 1
+      },
+      {
+        "id": "ui-egypt-abu-simbel",
+        "title": "Egyptian Ministry of Tourism and Antiquities — Abu Simbel",
+        "url": "https://egymonuments.gov.eg/archaeological-sites/abu-simbel/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-egypt-karnak",
+        "title": "Egyptian Ministry of Tourism and Antiquities — Karnak",
+        "url": "https://egymonuments.gov.eg/archaeological-sites/karnak/",
+        "milestones": 2
+      },
+      {
+        "id": "ui-egypt-philae",
+        "title": "Egyptian Ministry of Tourism and Antiquities — Philae",
+        "url": "https://egymonuments.gov.eg/archaeological-sites/philae/",
+        "milestones": 1
+      },
+      {
+        "id": "britannica-hindu-spread",
+        "title": "Encyclopaedia Britannica — Hinduism in Southeast Asia and the Pacific",
+        "url": "https://www.britannica.com/topic/Hinduism/The-spread-of-Hinduism-in-Southeast-Asia-and-the-Pacific",
+        "milestones": 1
+      },
+      {
+        "id": "iranica-bombay",
+        "title": "Encyclopaedia Iranica — Bombay, Zoroastrian community",
+        "url": "https://www.iranicaonline.org/articles/bombay-persian-communities-of/",
+        "milestones": 1
+      },
+      {
+        "id": "iranica-eastern-christianity",
+        "title": "Encyclopaedia Iranica — Christianity in Central Asia and Chinese Turkestan",
+        "url": "https://www.iranicaonline.org/articles/christianity-iii/",
+        "milestones": 2
+      },
+      {
+        "id": "iranica-ctesiphon-church",
+        "title": "Encyclopaedia Iranica — Isaac, Bishop of Seleucia-Ctesiphon",
+        "url": "https://www.iranicaonline.org/articles/isaac-bishop-of-seleucia-ctesiphon/",
+        "milestones": 1
+      },
+      {
+        "id": "iranica-parsis",
+        "title": "Encyclopaedia Iranica — Parsi communities I: Early history",
+        "url": "https://www.iranicaonline.org/articles/parsi-communities-i-early-history/",
+        "milestones": 1
+      },
+      {
+        "id": "iranica-zoroaster",
+        "title": "Encyclopaedia Iranica — Zoroaster II: General Survey",
+        "url": "https://www.iranicaonline.org/articles/zoroaster-ii-general-survey/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-fundaj-casa-branca",
+        "title": "Fundação Joaquim Nabuco — Terreiro Casa Branca (Ilê Axé Iyá Nassô Oká)",
+        "url": "https://pesquisaescolar.fundaj.gov.br/pt-br/artigo/terreiro-casa-branca-ile-axe-iya-nasso-oka/",
+        "milestones": 1
+      },
+      {
+        "id": "harvard-mahavira",
+        "title": "Harvard Pluralism Project — Bhagavan Mahavira",
+        "url": "https://pluralism.org/bhagavan-mahavira",
+        "milestones": 1
+      },
+      {
+        "id": "harvard-buddhism",
+        "title": "Harvard Pluralism Project — Buddhism timeline",
+        "url": "https://pluralism.org/buddhism",
+        "milestones": 3
+      },
+      {
+        "id": "harvard-american-west",
+        "title": "Harvard Pluralism Project — Buddhists in the American West",
+        "url": "https://pluralism.org/buddhists-in-the-american-west",
+        "milestones": 2
+      },
+      {
+        "id": "harvard-christianity",
+        "title": "Harvard Pluralism Project — Christianity timeline",
+        "url": "https://pluralism.org/christianity",
+        "milestones": 4
+      },
+      {
+        "id": "harvard-hinduism",
+        "title": "Harvard Pluralism Project — Hinduism timeline",
+        "url": "https://pluralism.org/hinduism",
+        "milestones": 3
+      },
+      {
+        "id": "harvard-islam",
+        "title": "Harvard Pluralism Project — Islam timeline",
+        "url": "https://pluralism.org/islam",
+        "milestones": 1
+      },
+      {
+        "id": "harvard-sikh-arrivals",
+        "title": "Harvard Pluralism Project — Sikh First Arrivals",
+        "url": "https://pluralism.org/first-arrivals",
+        "milestones": 1
+      },
+      {
+        "id": "harvard-sikhism",
+        "title": "Harvard Pluralism Project — Sikhism timeline",
+        "url": "https://pluralism.org/sikhism",
+        "milestones": 3
+      },
+      {
+        "id": "harvard-buddhist-expansion",
+        "title": "Harvard Pluralism Project — The Expansion of Buddhism",
+        "url": "https://pluralism.org/the-expansion-of-buddhism",
+        "milestones": 3
+      },
+      {
+        "id": "heidelberg-pengcheng",
+        "title": "Heidelberg University — Li Qun He, Buddhist State Monasteries in Early Medieval China",
+        "url": "https://archiv.ub.uni-heidelberg.de/volltextserver/17285/1/heliqun05082014.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "iccrom-wadi-natrun",
+        "title": "ICCROM archives — Wadi El-Natrun, Monastery of Saint Macarius",
+        "url": "https://archives.iccrom.org/oggetti/40782-wadi-el-natrun-mra-egy-nat-001",
+        "milestones": 1
+      },
+      {
+        "id": "ise-sengu",
+        "title": "Ise Jingu — Rituals and Ceremonies: Shikinen Sengu",
+        "url": "https://www.isejingu.or.jp/en/ritual/index.html",
+        "milestones": 1
+      },
+      {
+        "id": "jck-amsterdam",
+        "title": "Jewish Cultural Quarter — Portuguese Synagogue history",
+        "url": "https://jck.nl/verhalen-en-verdieping/portugese-synagoge-geschiedenis",
+        "milestones": 1
+      },
+      {
+        "id": "karnataka-shravanabelagola",
+        "title": "Karnataka Tourism — Shravanabelagola",
+        "url": "https://karnatakatourism.org/en/attractions/shravanabelagola",
+        "milestones": 1
+      },
+      {
+        "id": "kasuga-history",
+        "title": "Kasuga Taisha — History",
+        "url": "https://www.kasugataisha.or.jp/en/about_en/",
+        "milestones": 1
+      },
+      {
+        "id": "kenyon-china-christianity",
+        "title": "Kenyon College — Martin Palmer, early Christianity in China",
+        "url": "https://www2.kenyon.edu/Depts/Religion/Fac/Adler/Reln270/Palmer-DaQin.htm",
+        "milestones": 1
+      },
+      {
+        "id": "korea-sosu",
+        "title": "Korea.net — Seowon, Neo-Confucian academies",
+        "url": "https://www.korea.net/NewsFocus/Culture/view?articleId=170992",
+        "milestones": 1
+      },
+      {
+        "id": "max-planck-buddhist-knowledge",
+        "title": "Max Planck Research Library — The Spread of Buddhism as Globalization of Knowledge",
+        "url": "https://www.mprl-series.mpg.de/studies/1/14/index.html",
+        "milestones": 1
+      },
+      {
+        "id": "ui-capitoline-jupiter",
+        "title": "Musei Capitolini — Jupiter of the Capitol and the Olympian model",
+        "url": "https://www.museicapitolini.org/sites/default/files/f_file/4.%20The%20display%20of%20the%20Colossus%20at%20Villa%20Caffarelli.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-old-oyo",
+        "title": "National Commission for Museums and Monuments / UNESCO — Old Oyo",
+        "url": "https://whc.unesco.org/en/tentativelists/489/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-penn-abydos",
+        "title": "Penn Museum — Abydos: archaeology of royal and ritual landscapes",
+        "url": "https://www.penn.museum/research/project.php?pid=19",
+        "milestones": 2
+      },
+      {
+        "id": "ui-penn-abydos-funerary",
+        "title": "Penn Museum — Early kings and funerary enclosures at Abydos",
+        "url": "https://www.penn.museum/about/press-room/press-releases/archaeologists-discover-evidence-that-courtiers-were-sacrificed-to-accompany-early-egyptian-kings-into-the-afterlife",
+        "milestones": 1
+      },
+      {
+        "id": "ui-peru-pachacamac",
+        "title": "Peruvian Ministry of Culture — Pachacamac archaeological sanctuary",
+        "url": "https://pachacamac.cultura.pe/bienvenidos-al-santuario-arqueologico-de-pachacamac",
+        "milestones": 1
+      },
+      {
+        "id": "ui-peru-pachacamac-inca",
+        "title": "Peruvian Ministry of Culture — Pachacamac: Inca, Late Horizon (1470–1533)",
+        "url": "https://pachacamac.cultura.pe/node/175",
+        "milestones": 1
+      },
+      {
+        "id": "ui-sicily-akragas",
+        "title": "Regione Siciliana — Archaeological Park of the Valley of the Temples",
+        "url": "https://parchiarcheologici.regione.sicilia.it/en/parco-archeologico-della-valle-dei-templi/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-museum-philae",
+        "title": "Rosicrucian Egyptian Museum — Temple of Isis at Philae",
+        "url": "https://www.egyptianmuseum.org/explore/greco-and-roman-period-monuments-philae",
+        "milestones": 1
+      },
+      {
+        "id": "sahapedia-tamil-bhakti",
+        "title": "Sahapedia — Imagining the Divine: Temple Stories and Tevaram Hymns",
+        "url": "https://www.sahapedia.org/imagining-divine-temple-stories-and-tevaram-hymns",
+        "milestones": 1
+      },
+      {
+        "id": "sgpc-nanak",
+        "title": "SGPC — Guru Nanak Sahib",
+        "url": "https://old.sgpc.net/gurus/gurunanak.asp",
+        "milestones": 1
+      },
+      {
+        "id": "silpakorn-sukhothai",
+        "title": "Silpakorn University, NAJUA — Engendering the Sukhothai beliefs",
+        "url": "https://so04.tci-thaijo.org/index.php/NAJUA-Arch/article/download/247830/168271",
+        "milestones": 1
+      },
+      {
+        "id": "ui-smithsonian-santeria",
+        "title": "Smithsonian Folklife Festival — Santería, David Brown (1989)",
+        "url": "https://festival.si.edu/articles/1989/santeria",
+        "milestones": 1
+      },
+      {
+        "id": "ui-smithsonian-havana",
+        "title": "Smithsonian Folkways — Havana, 1957: historical notes on Lukumí cabildos",
+        "url": "https://folkways-media.si.edu/docs/folkways/artwork/SFW40489.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "soas-jain-mathura",
+        "title": "SOAS University of London — Centre of Jaina Studies Newsletter 13, Mathura objects",
+        "url": "https://www.soas.ac.uk/sites/default/files/2022-11/Centre%20of%20Jaina%20Studies%20Issue%2013%20-%20March%202019.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "ui-wenger-osogbo",
+        "title": "Susanne Wenger Foundation — Restoration work in Osogbo, 1958–1959",
+        "url": "https://susannewengerfoundation.at/en/susanne-wenger-1915-2009",
+        "milestones": 1
+      },
+      {
+        "id": "met-silk-buddhism",
+        "title": "The Met — Buddhism along the Silk Road, 5th–8th Century",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2012/buddhism",
+        "milestones": 2
+      },
+      {
+        "id": "met-byzantium-islam",
+        "title": "The Met — Byzantium and Islam: Age of Transition",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam",
+        "milestones": 1
+      },
+      {
+        "id": "met-judean-diaspora",
+        "title": "The Met — Cyrus and the Judean Diaspora",
+        "url": "https://www.metmuseum.org/perspectives/cyrus-and-the-judean-diaspora",
+        "milestones": 2
+      },
+      {
+        "id": "met-daoism",
+        "title": "The Met — Daoism and Daoist Art",
+        "url": "https://www.metmuseum.org/essays/daoism-and-daoist-art",
+        "milestones": 1
+      },
+      {
+        "id": "met-aksum",
+        "title": "The Met — Foundations of Aksumite Civilization and Its Christian Legacy",
+        "url": "https://www.metmuseum.org/essays/foundations-of-aksumite-civilization-and-its-christian-legacy-1st-7th-century",
+        "milestones": 1
+      },
+      {
+        "id": "met-umayyad-iberia",
+        "title": "The Met — Iberian Peninsula, 500–1000",
+        "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/06/eusi.html",
+        "milestones": 1
+      },
+      {
+        "id": "met-patan",
+        "title": "The Met — Jain temple meeting hall, Patan, dated 1596",
+        "url": "https://www.metmuseum.org/art/collection/search/39317",
+        "milestones": 1
+      },
+      {
+        "id": "met-kongo-christianity",
+        "title": "The Met — Kongo Christian Art: Crosses",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2015/kongo/blog/posts/kongo-christian-art",
+        "milestones": 2
+      },
+      {
+        "id": "met-kongo-expeditions",
+        "title": "The Met — Kongo: Power and Majesty, historical background",
+        "url": "https://www.metmuseum.org/press-releases/kongo-2015-exhibitions",
+        "milestones": 1
+      },
+      {
+        "id": "met-korea-buddhism",
+        "title": "The Met — Korean Buddhist Sculpture, 5th–9th Century",
+        "url": "https://www.metmuseum.org/essays/korean-buddhist-sculpture-5th-9th-century",
+        "milestones": 2
+      },
+      {
+        "id": "met-shinto",
+        "title": "The Met — Shinto",
+        "url": "https://www.metmuseum.org/essays/shinto",
+        "milestones": 1
+      },
+      {
+        "id": "met-safavids",
+        "title": "The Met — The Art of the Safavids before 1600",
+        "url": "https://www.metmuseum.org/essays/the-art-of-the-safavids-before-1600",
+        "milestones": 1
+      },
+      {
+        "id": "met-birth-islam",
+        "title": "The Met — The Birth of Islam",
+        "url": "https://www.metmuseum.org/essays/the-birth-of-islam",
+        "milestones": 2
+      },
+      {
+        "id": "met-sasanians",
+        "title": "The Met — The Sasanians",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/topical-essays/posts/sasanians",
+        "milestones": 1
+      },
+      {
+        "id": "ui-met-babylon",
+        "title": "The Metropolitan Museum of Art — Babylon",
+        "url": "https://www.metmuseum.org/essays/babylon",
+        "milestones": 1
+      },
+      {
+        "id": "ui-met-nippur",
+        "title": "The Metropolitan Museum of Art — Inscribed tablet, Inanna temple at Nippur",
+        "url": "https://www.metmuseum.org/art/collection/search/325500",
+        "milestones": 2
+      },
+      {
+        "id": "ui-met-sango",
+        "title": "The Metropolitan Museum of Art — Shango ritual staff and the eighteenth-century Oyo court",
+        "url": "https://www.metmuseum.org/art/collection/search/314326",
+        "milestones": 1
+      },
+      {
+        "id": "ui-met-ur",
+        "title": "The Metropolitan Museum of Art — Ur: The Ziggurat",
+        "url": "https://www.metmuseum.org/essays/ur-the-ziggurat",
+        "milestones": 1
+      },
+      {
+        "id": "ui-met-uruk",
+        "title": "The Metropolitan Museum of Art — Uruk: The First City",
+        "url": "https://www.metmuseum.org/essays/uruk-the-first-city",
+        "milestones": 1
+      },
+      {
+        "id": "tokyo-yushima",
+        "title": "Tokyo Metropolitan Government — Yushima Seido",
+        "url": "https://www.gotokyo.org/en/spot/271/index.html",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-wudang",
+        "title": "UNESCO — Ancient Building Complex in the Wudang Mountains",
+        "url": "https://whc.unesco.org/en/list/705",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-agrigento",
+        "title": "UNESCO — Archaeological Area of Agrigento",
+        "url": "https://whc.unesco.org/en/list/831/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-delphi",
+        "title": "UNESCO — Archaeological Site of Delphi",
+        "url": "https://whc.unesco.org/en/list/393/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-olympia",
+        "title": "UNESCO — Archaeological Site of Olympia",
+        "url": "https://whc.unesco.org/en/list/517/",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-baekje",
+        "title": "UNESCO — Baekje Historic Areas",
+        "url": "https://whc.unesco.org/en/list/1477",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-bagan",
+        "title": "UNESCO — Bagan",
+        "url": "https://whc.unesco.org/en/list/1588",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-philippines",
+        "title": "UNESCO — Baroque Churches of the Philippines",
+        "url": "https://whc.unesco.org/en/list/677",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-sanchi",
+        "title": "UNESCO — Buddhist Monuments at Sanchi",
+        "url": "https://whc.unesco.org/en/list/524",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-chavin",
+        "title": "UNESCO — Chavín Archaeological Site",
+        "url": "https://whc.unesco.org/en/list/330/",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-cusco",
+        "title": "UNESCO — City of Cuzco",
+        "url": "https://whc.unesco.org/en/list/273/",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-popocatepetl",
+        "title": "UNESCO — Earliest 16th-Century Monasteries on the Slopes of Popocatepetl",
+        "url": "https://whc.unesco.org/en/list/702",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-cordoba",
+        "title": "UNESCO — Historic Centre of Cordoba",
+        "url": "https://whc.unesco.org/en/list/313",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-sukhothai",
+        "title": "UNESCO — Historic Town of Sukhothai and Associated Historic Towns",
+        "url": "https://whc.unesco.org/en/list/574",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-kairouan",
+        "title": "UNESCO — Kairouan",
+        "url": "https://whc.unesco.org/en/list/499",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-kyiv",
+        "title": "UNESCO — Kyiv: Saint-Sophia and Kyiv-Pechersk Lavra",
+        "url": "https://whc.unesco.org/en/list/527",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-wittenberg",
+        "title": "UNESCO — Luther Memorials in Eisleben and Wittenberg",
+        "url": "https://whc.unesco.org/en/list/783",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-qingcheng",
+        "title": "UNESCO — Mount Qingcheng and Dujiangyan",
+        "url": "https://whc.unesco.org/en/list/1001",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-osogbo",
+        "title": "UNESCO — Osun-Osogbo Sacred Grove",
+        "url": "https://whc.unesco.org/en/list/1118/",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-prambanan",
+        "title": "UNESCO — Prambanan Temple Compounds",
+        "url": "https://whc.unesco.org/en/list/642",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-kilwa",
+        "title": "UNESCO — Ruins of Kilwa Kisiwani and Songo Mnara",
+        "url": "https://whc.unesco.org/en/list/144",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-anuradhapura",
+        "title": "UNESCO — Sacred City of Anuradhapura",
+        "url": "https://whc.unesco.org/en/list/200",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-kii",
+        "title": "UNESCO — Sacred Sites and Pilgrimage Routes in the Kii Mountain Range",
+        "url": "https://whc.unesco.org/en/list/1142",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-seowon",
+        "title": "UNESCO — Seowon, Korean Neo-Confucian Academies",
+        "url": "https://whc.unesco.org/en/list/1498",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-qufu",
+        "title": "UNESCO — Temple and Cemetery of Confucius and the Kong Family Mansion in Qufu",
+        "url": "https://whc.unesco.org/en/list/704",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-ahwar",
+        "title": "UNESCO — The Ahwar of Southern Iraq: Uruk, Ur and Eridu",
+        "url": "https://whc.unesco.org/en/list/1481/",
+        "milestones": 2
+      },
+      {
+        "id": "unesco-timbuktu",
+        "title": "UNESCO — Timbuktu",
+        "url": "https://whc.unesco.org/en/list/119",
+        "milestones": 1
+      },
+      {
+        "id": "ui-unesco-tiwanaku",
+        "title": "UNESCO — Tiwanaku: Spiritual and Political Centre of the Tiwanaku Culture",
+        "url": "https://whc.unesco.org/en/list/567/",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-angkor",
+        "title": "UNESCO / ICOMOS — Angkor evaluation",
+        "url": "https://whc.unesco.org/archive/advisory_body_evaluation/668.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-melaka",
+        "title": "UNESCO / ICOMOS — Melaka and George Town evaluation",
+        "url": "https://whc.unesco.org/document/152086",
+        "milestones": 1
+      },
+      {
+        "id": "unesco-qutb",
+        "title": "UNESCO / ICOMOS — Qutb Minar and its monuments",
+        "url": "https://whc.unesco.org/archive/advisory_body_evaluation/233.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "vietnam-hanoi",
+        "title": "Vietnam National Authority of Tourism — Six heritage sites of Hanoi",
+        "url": "https://beta-v1.vietnam.travel/things-to-do/hanoi-six-heritage-sites",
+        "milestones": 1
+      },
+      {
+        "id": "chicago-vedanta",
+        "title": "Vivekananda Vedanta Society of Chicago — Vivekananda in Chicago",
+        "url": "https://www.chicagovedanta.org/chicago",
+        "milestones": 1
+      },
+      {
+        "id": "yale-dura-synagogue",
+        "title": "Yale University Art Gallery — Dura-Europos synagogue",
+        "url": "https://duraeuropos.artgallery.yale.edu/Synagogue",
+        "milestones": 1
+      }
+    ]
+  }
+}

@@ -13,7 +13,13 @@ vi.mock('../../lib/store', () => ({
   useAtlasStore: (selector: (value: object) => unknown) =>
     selector({ battlesVisible: false, resourcesVisible: true, year: state.year, range: null }),
 }));
-vi.mock('../../lib/i18n', () => ({ useI18n: () => ({ locale: state.locale }) }));
+vi.mock('../../lib/i18n', () => ({
+  useI18n: () => ({
+    locale: state.locale,
+    // MapLayers names the event key toggle through t(); these tests do not assert that label.
+    t: (french: string, english: string) => (state.locale === 'fr' ? french : english),
+  }),
+}));
 vi.mock('../../lib/resources/store', () => ({
   useResourceStore: (selector: (value: object) => unknown) =>
     selector({ status: 'ready', selected: state.selected, sources: [], categoryCounts: {} }),

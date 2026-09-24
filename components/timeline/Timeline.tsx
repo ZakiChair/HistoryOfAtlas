@@ -104,6 +104,8 @@ export default function Timeline({
   const playing = useAtlasStore((state) => state.playing);
   const speed = useAtlasStore((state) => state.speed);
   const range = useAtlasStore((state) => state.range);
+  // A battle scene is one date: the frieze only shows the year, with no second Play button.
+  const battleMode = useAtlasStore((state) => state.battleMode);
   const setYear = useAtlasStore((state) => state.setYear);
   const setPlaying = useAtlasStore((state) => state.setPlaying);
   const setSpeed = useAtlasStore((state) => state.setSpeed);
@@ -135,6 +137,8 @@ export default function Timeline({
         state.setPlaying(false);
         state.setYear(state.year + (event.key === 'ArrowRight' ? 1 : -1));
       } else if (event.code === 'Space') {
+        // A battle scene has its own animation; the chronology does not play behind it.
+        if (state.battleMode) return;
         event.preventDefault();
         state.setPlaying(!state.playing);
       }
@@ -236,76 +240,80 @@ export default function Timeline({
           )}
           <span className="timeline-era-name">{era.name[locale]}</span>
         </div>
-        <div className="timeline-controls">
-          <div className="timeline-playback">
-            <button
-              className="timeline-step"
-              aria-label={t('previousYear')}
-              onClick={() => {
-                setPlaying(false);
-                setYear(year - 1);
-              }}
-              disabled={year <= MIN_YEAR}
-            >
-              <ChevronLeft size={19} />
-            </button>
-            <button
-              className="timeline-play"
-              aria-label={t(playing ? 'pause' : 'play')}
-              onClick={togglePlaying}
-              data-testid="timeline-play"
-            >
-              {playing ? (
-                <Pause size={18} fill="currentColor" />
-              ) : (
-                <Play size={18} fill="currentColor" />
-              )}
-            </button>
-            <button
-              className="timeline-step"
-              aria-label={t('nextYear')}
-              onClick={() => {
-                setPlaying(false);
-                setYear(year + 1);
-              }}
-              disabled={year >= CURRENT_YEAR}
-            >
-              <ChevronRight size={19} />
-            </button>
-          </div>
-          <div className="timeline-speeds" role="group" aria-label={t('speed')}>
-            {SPEEDS.map((value) => (
+        {!battleMode && (
+          <div className="timeline-controls">
+            <div className="timeline-playback">
               <button
-                key={value}
-                aria-pressed={speed === value}
-                aria-label={`${value}× — ${value} ${t('ans par seconde', 'years per second')}`}
-                className={speed === value ? 'active' : ''}
-                onClick={() => setSpeed(value)}
+                className="timeline-step"
+                aria-label={t('previousYear')}
+                onClick={() => {
+                  setPlaying(false);
+                  setYear(year - 1);
+                }}
+                disabled={year <= MIN_YEAR}
               >
-                {value}×
+                <ChevronLeft size={19} />
               </button>
-            ))}
+              <button
+                className="timeline-play"
+                aria-label={t(playing ? 'pause' : 'play')}
+                onClick={togglePlaying}
+                data-testid="timeline-play"
+              >
+                {playing ? (
+                  <Pause size={18} fill="currentColor" />
+                ) : (
+                  <Play size={18} fill="currentColor" />
+                )}
+              </button>
+              <button
+                className="timeline-step"
+                aria-label={t('nextYear')}
+                onClick={() => {
+                  setPlaying(false);
+                  setYear(year + 1);
+                }}
+                disabled={year >= CURRENT_YEAR}
+              >
+                <ChevronRight size={19} />
+              </button>
+            </div>
+            <div className="timeline-speeds" role="group" aria-label={t('speed')}>
+              {SPEEDS.map((value) => (
+                <button
+                  key={value}
+                  aria-pressed={speed === value}
+                  aria-label={`${value}× — ${value} ${t('ans par seconde', 'years per second')}`}
+                  className={speed === value ? 'active' : ''}
+                  onClick={() => setSpeed(value)}
+                >
+                  {value}×
+                </button>
+              ))}
+            </div>
+            <button
+              className={`timeline-range-toggle ${range ? 'active' : ''}`}
+              aria-label={t('range')}
+              aria-pressed={!!range}
+              onClick={() =>
+                setRange(
+                  range ? null : [Math.max(MIN_YEAR, year - 50), Math.min(CURRENT_YEAR, year + 50)],
+                )
+              }
+            >
+              <SlidersHorizontal size={14} />
+              <span>{t('range')}</span>
+            </button>
           </div>
-          <button
-            className={`timeline-range-toggle ${range ? 'active' : ''}`}
-            aria-label={t('range')}
-            aria-pressed={!!range}
-            onClick={() =>
-              setRange(
-                range ? null : [Math.max(MIN_YEAR, year - 50), Math.min(CURRENT_YEAR, year + 50)],
-              )
-            }
-          >
-            <SlidersHorizontal size={14} />
-            <span>{t('range')}</span>
-          </button>
-        </div>
-        <div className="timeline-context">
-          <span className="timeline-status-dot" />
-          {playing
-            ? t('Lecture · rythme adaptatif', 'Playing · adaptive pace')
-            : t('Glissez pour voyager dans le temps', 'Drag to travel through time')}
-        </div>
+        )}
+        {!battleMode && (
+          <div className="timeline-context">
+            <span className="timeline-status-dot" />
+            {playing
+              ? t('Lecture · rythme adaptatif', 'Playing · adaptive pace')
+              : t('Glissez pour voyager dans le temps', 'Drag to travel through time')}
+          </div>
+        )}
       </div>
       <div className="timeline-visual">
         <DensityHistogram
@@ -395,7 +403,7 @@ export default function Timeline({
           </span>
         ))}
       </div>
-      {range && (
+      {range && !battleMode && (
         <div className="timeline-range">
           <span>{formatYear(range[0], locale)}</span>
           <Slider.Root

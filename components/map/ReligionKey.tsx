@@ -129,6 +129,15 @@ export default function ReligionKey({
         </li>
         <li>
           <Swatch color={color}>
+            {/* Same opacity as a milestone attested 1,500 years or more before the date. */}
+            <g transform={SYMBOL_BOX} opacity={0.45}>
+              <Medallion symbol={symbol} />
+            </g>
+          </Swatch>
+          <span>{t('legendAge')}</span>
+        </li>
+        <li>
+          <Swatch color={color}>
             <g transform={SYMBOL_BOX}>
               <circle
                 cx={CENTRE}

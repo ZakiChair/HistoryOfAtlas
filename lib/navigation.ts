@@ -2,7 +2,9 @@ import { useAtlasStore } from './store';
 import type { HistoricalEvent, Campaign } from './schema';
 import { getEvent } from './data-client';
 import { focusBattle } from './battles/navigation';
-import { isBattleEventType } from './event-visibility';
+import { isBattleEventType, isConflictEventType } from './event-visibility';
+
+export { withLocale } from './locale-href';
 
 type NavigableEvent = Pick<HistoricalEvent, 'id' | 'start' | 'coords'> &
   Partial<Pick<HistoricalEvent, 'type'>>;
@@ -60,7 +62,8 @@ export function openEvent(
   }
   state.patchState({
     battleMode: false,
-    ...(isBattleEventType(event.type) ? { battlesVisible: true } : {}),
+    // Opening a conflict shows the layer that draws it again.
+    ...(isConflictEventType(event.type) ? { battlesVisible: true } : {}),
     year: event.start.year,
     selectedEvent: options.showDetails === false ? null : event.id,
     selectedEntity: null,

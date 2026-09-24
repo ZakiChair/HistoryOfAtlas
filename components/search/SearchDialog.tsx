@@ -1,15 +1,98 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
-import { Search, X, Globe2, UserRound, ArrowUpRight, LoaderCircle } from 'lucide-react';
+import {
+  Search,
+  X,
+  Globe2,
+  UserRound,
+  ArrowUpRight,
+  LoaderCircle,
+  Landmark,
+  Route,
+} from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
-import { localizedName, useI18n } from '@/lib/i18n';
+import { EVENT_TYPE_LABELS, localizedName, useI18n } from '@/lib/i18n';
 import { formatYear } from '@/lib/histdate';
-import { createEventNavigation, openPerson } from '@/lib/navigation';
-import type { SearchRecord } from '@/lib/search-records';
+import { getCampaigns } from '@/lib/data-client';
+import { createEventNavigation, openCampaign, openPerson } from '@/lib/navigation';
+import { useReligionStore } from '@/lib/religions/store';
+import { SEARCH_KINDS, type SearchKind, type SearchRecord } from '@/lib/search-records';
+import type { Locale } from '@/lib/types';
 import { EventIcon } from '../ui/EventIcon';
 
-type Result = Pick<SearchRecord, 'id' | 'targetId' | 'kind' | 'name' | 'year' | 'coords' | 'type'>;
+type Result = Pick<
+  SearchRecord,
+  | 'id'
+  | 'targetId'
+  | 'parentId'
+  | 'kind'
+  | 'name'
+  | 'year'
+  | 'approximate'
+  | 'coords'
+  | 'type'
+  | 'context'
+>;
+type Counts = Record<SearchKind, number>;
+
+/** Where keyboard focus lands once the dialog has closed on a result. */
+const DESTINATIONS: Record<SearchKind, string> = {
+  event: '[data-testid="event-panel"]',
+  entity: '[data-testid="entity-panel"]',
+  person: '[data-testid="person-panel"]',
+  religion: '[data-testid="religion-detail"], [data-testid="religions-panel"]',
+  campaign: '.campaign-panel',
+};
+
+/** Show a tradition or one of its milestones on the map with the religion layer filtered to it. */
+function showReligion(result: Result) {
+  const tradition = result.type === 'tradition' ? result.targetId : result.parentId;
+  if (!tradition) return;
+  const atlas = useAtlasStore.getState();
+  const horizon = atlas.range ? Math.max(...atlas.range) : atlas.year;
+  // A milestone sets the date; a tradition only moves forward to its first attestation, so a
+  // later date keeps showing everything attested by then.
+  const moveYear =
+    result.year !== undefined && (result.type !== 'tradition' || horizon < result.year);
+  atlas.patchState({
+    religionsVisible: true,
+    religionFilter: tradition,
+    playing: false,
+    campaignPlaying: false,
+    entityFollowing: false,
+    battlePlaying: false,
+    ...(moveYear ? { year: result.year, range: null } : {}),
+    ...(result.coords
+      ? {
+          camera: {
+            ...atlas.camera,
+            lon: result.coords[0],
+            lat: result.coords[1],
+            zoom: result.type === 'tradition' ? 3 : Math.max(4.5, atlas.camera.zoom),
+          },
+        }
+      : {}),
+  });
+  const religions = useReligionStore.getState();
+  religions.select(null);
+  religions.setPanelOpen(true);
+  if (result.type === 'tradition') return;
+  const milestone = result.targetId;
+  void import('@/lib/religions/client')
+    .then(({ getReligionDataset }) => getReligionDataset())
+    .then((dataset) => {
+      const stage = dataset.milestones.find((item) => item.id === milestone);
+      const state = useAtlasStore.getState();
+      // The reader may have moved on while the catalogue was loading.
+      if (stage && state.religionsVisible && state.religionFilter === stage.traditionId)
+        useReligionStore.getState().select(stage);
+    })
+    .catch(() => {
+      /* The religion layer reports its own loading error and offers a retry. */
+    });
+}
+
 export default function SearchDialog({
   open,
   onOpenChange,
@@ -21,15 +104,26 @@ export default function SearchDialog({
   const eventNavigation = useMemo(() => createEventNavigation(), []);
   useEffect(() => () => eventNavigation.cancel(), [eventNavigation]);
   const [query, setQuery] = useState(''),
+    [kind, setKind] = useState<SearchKind | null>(null),
     [results, setResults] = useState<Result[]>([]),
+    [counts, setCounts] = useState<Counts | null>(null),
     [busy, setBusy] = useState(true),
     [error, setError] = useState(false),
     [active, setActive] = useState(0);
   const [partial, setPartial] = useState(false);
   const worker = useRef<Worker | null>(null),
-    latestQuery = useRef('');
+    latestQuery = useRef(''),
+    latestKind = useRef<SearchKind | null>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
-  const destination = useRef<Result['kind'] | null>(null);
+  const destination = useRef<string | null>(null);
+  // Later choices, and closing the dialog, supersede a campaign still loading.
+  const selection = useRef(0);
+  useEffect(
+    () => () => {
+      selection.current += 1;
+    },
+    [],
+  );
   useEffect(() => {
     let instance: Worker;
     try {
@@ -48,7 +142,9 @@ export default function SearchDialog({
       message: MessageEvent<{
         type: string;
         query: string;
+        kind: SearchKind | null;
         results: Result[];
+        counts: Counts;
         loaded: number;
         total: number;
       }>,
@@ -58,8 +154,13 @@ export default function SearchDialog({
         setBusy(false);
       }
       if (message.data.type === 'warning') setPartial(true);
-      if (message.data.type === 'results' && message.data.query === latestQuery.current) {
+      if (
+        message.data.type === 'results' &&
+        message.data.query === latestQuery.current &&
+        message.data.kind === latestKind.current
+      ) {
         setResults(message.data.results);
+        setCounts(message.data.counts);
         setBusy(message.data.loaded < message.data.total);
       }
     };
@@ -71,11 +172,13 @@ export default function SearchDialog({
   }, []);
   useEffect(() => {
     latestQuery.current = query;
+    latestKind.current = kind;
     setActive(0);
-    worker.current?.postMessage({ type: 'search', query });
-  }, [query]);
+    worker.current?.postMessage({ type: 'search', query, kind });
+  }, [query, kind]);
   const select = async (result: Result) => {
     eventNavigation.cancel();
+    const request = ++selection.current;
     if (result.kind === 'person') {
       openPerson(result.targetId ?? result.id, { preserveContext: false });
     } else if (result.kind === 'entity') {
@@ -89,6 +192,23 @@ export default function SearchDialog({
           ? { camera: { ...state.camera, lon: result.coords[0], lat: result.coords[1], zoom: 3 } }
           : {}),
       });
+    } else if (result.kind === 'religion') {
+      showReligion(result);
+    } else if (result.kind === 'campaign') {
+      let campaigns: Awaited<ReturnType<typeof getCampaigns>>;
+      try {
+        campaigns = await getCampaigns();
+      } catch {
+        if (request === selection.current) setError(true);
+        return;
+      }
+      if (request !== selection.current) return;
+      const campaign = campaigns.find((item) => item.id === result.targetId);
+      if (!campaign) {
+        setError(true);
+        return;
+      }
+      openCampaign(campaign);
     } else {
       try {
         if (!(await eventNavigation.open(result.id))) return;
@@ -97,9 +217,52 @@ export default function SearchDialog({
         return;
       }
     }
-    destination.current = result.kind;
+    destination.current = DESTINATIONS[result.kind];
     onOpenChange(false);
   };
+  const kindLabel = (value: SearchKind | null) => {
+    switch (value) {
+      case 'event':
+        return t('Événements', 'Events');
+      case 'entity':
+        return t('Territoires', 'Territories');
+      case 'person':
+        return t('Personnages', 'People');
+      case 'religion':
+        return t('Religions', 'Religions');
+      case 'campaign':
+        return t('Campagnes', 'Campaigns');
+      default:
+        return t('Tous les types', 'All types');
+    }
+  };
+  const typeLabel = (result: Result) => {
+    switch (result.kind) {
+      case 'person':
+        return t('Personnage historique', 'Historical figure');
+      case 'entity':
+        return t('Territoire', 'Territory');
+      case 'religion':
+        return result.type === 'tradition'
+          ? t('Tradition religieuse', 'Religious tradition')
+          : t('Étape religieuse attestée', 'Attested religious milestone');
+      case 'campaign':
+        return t('Campagne étape par étape', 'Campaign, step by step');
+      default:
+        return (EVENT_TYPE_LABELS as Record<string, Record<Locale, string> | undefined>)[
+          result.type
+        ]?.[locale];
+    }
+  };
+  const kindsWithResults = counts ? SEARCH_KINDS.filter((value) => counts[value] > 0) : [];
+  // Filters appear once a query spans several kinds, and stay while one is applied.
+  const filters =
+    query.trim() && (kindsWithResults.length > 1 || kind)
+      ? [
+          null,
+          ...SEARCH_KINDS.filter((value) => value === kind || kindsWithResults.includes(value)),
+        ]
+      : [];
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
@@ -115,15 +278,16 @@ export default function SearchDialog({
             event.preventDefault();
             if (destination.current) {
               // The destination may already be mounted; its mount effect will not run again.
-              const panel = document.querySelector<HTMLElement>(
-                `[data-testid="${destination.current}-panel"]`,
-              );
+              const panel = document.querySelector<HTMLElement>(destination.current);
               const target =
                 panel?.querySelector<HTMLElement>('[tabindex="-1"]') ??
                 panel?.querySelector<HTMLElement>('button');
-              target?.focus({ preventScroll: true });
-              return;
+              if (target) {
+                target.focus({ preventScroll: true });
+                return;
+              }
             }
+            // A destination that mounts later focuses itself; until then focus stays reachable.
             if (returnFocus.current?.isConnected) returnFocus.current.focus();
           }}
         >
@@ -135,7 +299,10 @@ export default function SearchDialog({
             <input
               autoComplete="off"
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => {
+                setQuery(event.target.value);
+                if (!event.target.value.trim()) setKind(null);
+              }}
               placeholder={t(
                 'Une bataille, un dirigeant, un empire…',
                 'A battle, a leader, an empire…',
@@ -167,6 +334,27 @@ export default function SearchDialog({
               'Explore documented names and places across every era.',
             )}
           </p>
+          {filters.length > 0 && counts && (
+            <div
+              className="search-kinds"
+              role="group"
+              aria-label={t('Filtrer par type', 'Filter by type')}
+              data-testid="search-kinds"
+            >
+              {filters.map((value) => (
+                <button
+                  key={value ?? 'all'}
+                  type="button"
+                  aria-pressed={kind === value}
+                  data-testid={`search-kind-${value ?? 'all'}`}
+                  onClick={() => setKind(value)}
+                >
+                  {kindLabel(value)}
+                  {value && <span>{counts[value].toLocaleString(locale)}</span>}
+                </button>
+              ))}
+            </div>
+          )}
           {error && (
             <p role="alert" className="empty-state">
               {t(
@@ -205,6 +393,10 @@ export default function SearchDialog({
                       <UserRound size={19} />
                     ) : result.kind === 'entity' ? (
                       <Globe2 size={19} />
+                    ) : result.kind === 'religion' ? (
+                      <Landmark size={19} />
+                    ) : result.kind === 'campaign' ? (
+                      <Route size={19} />
                     ) : (
                       <EventIcon type={result.type} size={19} />
                     )}
@@ -212,10 +404,16 @@ export default function SearchDialog({
                   <span>
                     <strong>{localizedName(result.name, locale)}</strong>
                     <small>
-                      {result.year !== undefined && formatYear(result.year, locale)}
-                      {result.kind === 'person' &&
-                        `${result.year !== undefined ? ' · ' : ''}${t('Personnage historique', 'Historical figure')}`}
-                      {result.kind === 'entity' && ` · ${t('Territoire', 'Territory')}`}
+                      {[
+                        // A tradition's first attestation is not a founding date.
+                        result.year !== undefined && result.type !== 'tradition'
+                          ? `${result.approximate ? '≈ ' : ''}${formatYear(result.year, locale)}`
+                          : null,
+                        typeLabel(result),
+                        result.context ? localizedName(result.context, locale) : null,
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
                     </small>
                   </span>
                   <ArrowUpRight size={16} />

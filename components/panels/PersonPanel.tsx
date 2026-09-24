@@ -13,8 +13,9 @@ import {
 import { useJson } from '@/lib/data-client/hooks';
 import { formatHistDate, formatYear } from '@/lib/histdate';
 import { localizedName, useI18n, translateCopy } from '@/lib/i18n';
-import { createEventNavigation } from '@/lib/navigation';
+import { createEventNavigation, withLocale } from '@/lib/navigation';
 import type { Person, PersonEventLink, PersonTenure, Source, SourcedDate } from '@/lib/schema';
+import { getPersonMapUrl } from '@/lib/seo';
 import { serializeAtlasUrl, useAtlasStore } from '@/lib/store';
 import type { Locale } from '@/lib/types';
 import EncyclopediaContent from './EncyclopediaContent';
@@ -221,6 +222,7 @@ function PersonDetail({ person }: { person: Person }) {
   const [tenureLimit, setTenureLimit] = useState(12);
   const [share, setShare] = useState<'idle' | 'copied' | 'manual'>('idle');
   const [shareUrl, setShareUrl] = useState('');
+  const [shareKind, setShareKind] = useState<'record' | 'view'>('record');
   const hasSource = useAtlasStore((state) =>
     Boolean(state.selectedEvent || state.selectedEntity || state.campaignId || state.storyId),
   );
@@ -238,8 +240,14 @@ function PersonDetail({ person }: { person: Person }) {
     locale !== 'en' && person.name[locale] ? locale : (person.nameLanguage ?? 'en');
   const conquests = person.events.filter((event) => event.type === 'conquest');
   const otherEvents = person.events.filter((event) => event.type !== 'conquest');
-  async function sharePerson() {
-    const url = `${location.origin}${location.pathname}${serializeAtlasUrl(useAtlasStore.getState())}`;
+  /** The record link opens this profile alone; a view link restores the sharer's whole map. */
+  async function sharePerson(kind: 'record' | 'view') {
+    const path =
+      kind === 'record'
+        ? withLocale(getPersonMapUrl(person.id), locale)
+        : `${location.pathname}${serializeAtlasUrl(useAtlasStore.getState())}`;
+    const url = `${location.origin}${path}`;
+    setShareKind(kind);
     setShareUrl(url);
     try {
       await window.navigator.clipboard.writeText(url);
@@ -365,11 +373,20 @@ function PersonDetail({ person }: { person: Person }) {
             {t('Revenir au contexte', 'Back to context')}
           </button>
         )}
-        <button className="secondary-button" onClick={() => void sharePerson()}>
-          {share === 'copied' ? <Check size={14} /> : <LinkIcon size={14} />}
-          {share === 'copied'
+        <button className="secondary-button" onClick={() => void sharePerson('record')}>
+          {share === 'copied' && shareKind === 'record' ? (
+            <Check size={14} />
+          ) : (
+            <LinkIcon size={14} />
+          )}
+          {share === 'copied' && shareKind === 'record'
             ? t('Lien copié', 'Link copied')
             : t('Partager cette fiche', 'Share this profile')}
+        </button>
+        <button className="text-button" onClick={() => void sharePerson('view')}>
+          {share === 'copied' && shareKind === 'view'
+            ? t('Vue copiée', 'View copied')
+            : t('Copier cette vue exacte', 'Copy this exact view')}
         </button>
         <span className="sr-only" role="status">
           {share === 'copied' ? t('Le lien a été copié.', 'The link has been copied.') : ''}

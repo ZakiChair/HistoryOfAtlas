@@ -140,6 +140,14 @@ const copy = {
     '没有可靠的发现日期时，以首次记载为准。开采时期单独列出，不填补记录空缺；≈ 表示近似日期。',
     'Если дата открытия не подтверждена, используется первое свидетельство. Периоды добычи показаны отдельно, без заполнения пробелов; ≈ означает приблизительную дату.',
   ],
+  catalogueSnapshots: [
+    'The jumps in 2009 and 2026 are catalogue snapshot dates (USGS 2009, GEM and ICMM 2026): thousands of sites without an earlier sourced date appear then, not a sudden wave of discoveries.',
+    'Les sauts de 2009 et de 2026 sont des dates d’instantané de catalogue (USGS 2009, GEM et ICMM 2026) : des milliers de sites sans date sourcée antérieure y apparaissent, ce n’est pas une vague soudaine de découvertes.',
+    'Die Sprünge 2009 und 2026 sind Stichtage von Katalogen (USGS 2009, GEM und ICMM 2026): Tausende Standorte ohne früheres belegtes Datum erscheinen dann, keine plötzliche Welle von Entdeckungen.',
+    'Los saltos de 2009 y 2026 son fechas de corte de catálogos (USGS 2009, GEM e ICMM 2026): miles de sitios sin una fecha documentada anterior aparecen entonces; no es una ola repentina de descubrimientos.',
+    '2009年和2026年的跃增来自目录快照日期（USGS 2009，GEM与ICMM 2026）：数千个没有更早可靠日期的地点在这些年份出现，并非突然的大量发现。',
+    'Скачки в 2009 и 2026 годах — это даты срезов каталогов (USGS 2009, GEM и ICMM 2026): тысячи объектов без более ранней подтверждённой даты появляются именно тогда, а не в результате внезапной волны открытий.',
+  ],
   knowledge: [
     'Known since',
     'Connue depuis',

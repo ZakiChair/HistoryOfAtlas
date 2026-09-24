@@ -28,8 +28,14 @@ import {
   useI18n,
   translateCopy,
 } from '@/lib/i18n';
-import { openEvent } from '@/lib/navigation';
-import { getEventPermalink } from '@/lib/seo';
+import { openEvent, withLocale } from '@/lib/navigation';
+import {
+  errorReportUrl,
+  getEventMapUrl,
+  getEventPermalink,
+  hasStaticEventPage,
+  siteOrigin,
+} from '@/lib/seo';
 import { serializeAtlasUrl, useAtlasStore } from '@/lib/store';
 import type { HistoricalEvent } from '@/lib/schema';
 import type { Locale } from '@/lib/types';
@@ -38,6 +44,7 @@ import EncyclopediaContent from './EncyclopediaContent';
 import EventPeople from './EventPeople';
 import { focusBattle } from '@/lib/battles/navigation';
 import { battleText } from '@/lib/battles/i18n';
+import { loadDocumentedBattles, peekDocumentedBattles } from '@/lib/battles/documented-client';
 
 const TYPE_ICONS = {
   battle: Swords,
@@ -181,12 +188,49 @@ function WarNavigation({ event, locale }: { event: HistoricalEvent; locale: Loca
   );
 }
 
+/** Names the 3D scene for what it is: sourced forces, or an illustration with unknown forces. */
+function BattleSceneButton({ event, locale }: { event: HistoricalEvent; locale: Locale }) {
+  // Synchronous once any dossier has loaded the list, so the label never changes after paint.
+  const [ids, setIds] = useState(peekDocumentedBattles);
+  useEffect(() => {
+    if (ids) return;
+    let live = true;
+    loadDocumentedBattles().then(
+      (next) => {
+        if (live) setIds(next);
+      },
+      () => {
+        /* Unknown stays neutral: never mislabel a sourced scene, never hide the 3D entry. */
+      },
+    );
+    return () => {
+      live = false;
+    };
+  }, [ids]);
+  const documented = ids ? ids.has(event.id) : null;
+  return (
+    <button
+      className={`${documented ? 'primary-button' : 'secondary-button'} event-battle-button`}
+      data-testid="event-battle-button"
+      data-documented={documented ?? undefined}
+      onClick={() => focusBattle(event)}
+    >
+      <Swords size={16} aria-hidden="true" />
+      {battleText(
+        locale,
+        documented === null ? 'view' : documented ? 'viewSourced' : 'viewIllustrative',
+      )}
+    </button>
+  );
+}
+
 function EventDetail({ event }: { event: HistoricalEvent }) {
   const { locale, t } = useI18n();
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => heading.current?.focus({ preventScroll: true }), []);
   const [shareState, setShareState] = useState<'idle' | 'copied' | 'manual'>('idle');
   const [shareUrl, setShareUrl] = useState('');
+  const [shareKind, setShareKind] = useState<'record' | 'view'>('record');
   const Icon = TYPE_ICONS[event.type];
   const name = localizedName(event.name, locale);
   const titleLanguage =
@@ -211,8 +255,24 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
     .map((side) => ({ side, members: event.belligerents.filter((member) => member.side === side) }))
     .filter((group) => group.members.length > 0);
 
-  async function share() {
-    const url = `${window.location.origin}${window.location.pathname}${serializeAtlasUrl(useAtlasStore.getState())}`;
+  /** The record link opens its archive page and illustrated preview; a view link restores everything. */
+  const recordPath = hasStaticEventPage(event)
+    ? `/event/${event.id}/`
+    : withLocale(getEventMapUrl(event), locale);
+  const reportUrl = errorReportUrl({
+    name: event.name.en || name,
+    id: event.id,
+    kind: 'event',
+    year: event.start.year,
+    url: `${siteOrigin()}${getEventPermalink(event)}`,
+  });
+  async function share(kind: 'record' | 'view') {
+    const path =
+      kind === 'record'
+        ? recordPath
+        : `${window.location.pathname}${serializeAtlasUrl(useAtlasStore.getState())}`;
+    const url = `${window.location.origin}${path}`;
+    setShareKind(kind);
     setShareUrl(url);
     try {
       await navigator.clipboard.writeText(url);
@@ -265,10 +325,7 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
           {t('Précision', 'Precision')} : {PRECISION_LABELS[event.datePrecision][locale]}
         </div>
         {(['battle', 'siege', 'naval'] as string[]).includes(event.type) && event.coords && (
-          <button className="primary-button event-battle-button" onClick={() => focusBattle(event)}>
-            <Swords size={16} />
-            {battleText(locale, 'mode')}
-          </button>
+          <BattleSceneButton event={event} locale={locale} />
         )}
         {(event.place?.name || event.coords) && (
           <div className="detail-meta">
@@ -410,17 +467,33 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
         <p className="detail-precision">
           {t('Importance cartographique', 'Map display importance')} :{' '}
           {Math.round(event.importance)}/100 ·{' '}
-          <a href="/about/">{t('Méthode de calcul', 'Scoring method')}</a>
+          <a href={withLocale('/about/', locale)}>{t('Méthode de calcul', 'Scoring method')}</a>
+        </p>
+        <p className="detail-precision">
+          <a href={reportUrl} target="_blank" rel="noreferrer" data-testid="event-report-error">
+            {t('Signaler une erreur', 'Report an error')}
+            <span className="sr-only">{t(' (GitHub, nouvel onglet)', ' (GitHub, new tab)')}</span>
+            <ArrowUpRight size={11} aria-hidden="true" />
+          </a>
         </p>
       </div>
       <footer className="panel-footer">
-        <button className="secondary-button" onClick={() => void share()}>
-          {shareState === 'copied' ? <Check size={14} /> : <LinkIcon size={14} />}
-          {shareState === 'copied'
+        <button className="secondary-button" onClick={() => void share('record')}>
+          {shareState === 'copied' && shareKind === 'record' ? (
+            <Check size={14} />
+          ) : (
+            <LinkIcon size={14} />
+          )}
+          {shareState === 'copied' && shareKind === 'record'
             ? t('Lien copié', 'Link copied')
-            : t('Partager cette vue', 'Share this view')}
+            : t('Partager cette fiche', 'Share this record')}
         </button>
-        <a className="text-button" href={getEventPermalink(event)}>
+        <button className="text-button" onClick={() => void share('view')}>
+          {shareState === 'copied' && shareKind === 'view'
+            ? t('Vue copiée', 'View copied')
+            : t('Copier cette vue exacte', 'Copy this exact view')}
+        </button>
+        <a className="text-button" href={withLocale(getEventPermalink(event), locale)}>
           {t('Fiche permanente', 'Permanent page')}
           <ArrowUpRight size={14} />
         </a>

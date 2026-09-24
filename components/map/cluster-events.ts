@@ -94,5 +94,18 @@ export function clusterEvents(
   return clusters;
 }
 
+/**
+ * Keeps the clusters that the zoom-thinned markers also show. A group led by a marker-visible
+ * event keeps its full count, minor members included; a minor event alone, or a group of minor
+ * events only, is dropped, because it would appear at rest and vanish at every pan. Each
+ * cluster is seeded by its most important member, so the representative decides.
+ */
+export function visibleClusters(
+  clusters: readonly EventCluster[],
+  markerFloor: number,
+): EventCluster[] {
+  return clusters.filter((cluster) => cluster.representative.importance >= markerFloor);
+}
+
 export type ClusterRequest = { token: number; points: ScreenEvent[] };
 export type ClusterResponse = { token: number; clusters: EventCluster[]; overflow?: boolean };

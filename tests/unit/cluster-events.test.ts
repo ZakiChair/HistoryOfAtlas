@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { clusterEvents, type ScreenEvent } from '../../components/map/cluster-events';
+import {
+  clusterEvents,
+  visibleClusters,
+  type ScreenEvent,
+} from '../../components/map/cluster-events';
 
 // Screen-space fixtures; no historical data or coordinates enter the production corpus.
 const point = (id: string, x: number, y: number, importance = 50): ScreenEvent => ({
@@ -68,5 +72,24 @@ describe('screen-space event clustering', () => {
     expect(clusterEvents([])).toEqual([]);
     expect(clusterEvents([point('Q1', NaN, 0), point('invalid', 0, 0)])).toEqual([]);
     expect(() => clusterEvents([], 0)).toThrow();
+  });
+
+  it('keeps groups led by a marker-visible event and drops minor-only symbols', () => {
+    const clusters = clusterEvents([
+      point('Q1', 0, 0, 12), // minor, joins the major group below
+      point('Q2', 10, 0, 80),
+      point('Q3', 300, 0, 30), // minor and alone
+      point('Q4', 600, 0, 20), // two minor events only
+      point('Q5', 610, 0, 25),
+    ]);
+    // Each cluster is led by its most important member.
+    for (const cluster of clusters)
+      expect(cluster.representative.importance).toBe(
+        Math.max(...cluster.ids.map((id) => ({ Q1: 12, Q2: 80, Q3: 30, Q4: 20, Q5: 25 })[id] ?? 0)),
+      );
+    const shown = visibleClusters(clusters, 57);
+    expect(shown.map((cluster) => [cluster.id, cluster.count])).toEqual([['Q2', 2]]);
+    // With no marker thinning every cluster remains.
+    expect(visibleClusters(clusters, 0)).toHaveLength(3);
   });
 });

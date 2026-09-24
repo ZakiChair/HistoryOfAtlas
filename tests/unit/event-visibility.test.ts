@@ -38,9 +38,10 @@ describe('battle layer filtering across map presentations', () => {
     ['battle', false],
     ['siege', false],
     ['naval', false],
+    ['war', false],
+    ['campaign', false],
+    ['conquest', false],
     ['treaty', true],
-    ['war', true],
-    ['campaign', true],
   ])('applies the same visibility for %s to the list, map and selection halo', (type, visible) => {
     expect(isEventLayerVisible(String(type), false)).toBe(visible);
     for (const filter of [eventFilter(state), selectedEventFilter(state)]) {
@@ -51,8 +52,8 @@ describe('battle layer filtering across map presentations', () => {
     }
   });
 
-  it('restores each battle category when its layer is shown again', () => {
-    for (const type of ['battle', 'siege', 'naval']) {
+  it('restores each conflict category when its layer is shown again', () => {
+    for (const type of ['battle', 'siege', 'naval', 'war', 'campaign', 'conquest']) {
       expect(isEventLayerVisible(type, true)).toBe(true);
       for (const filter of [
         eventFilter({ ...state, battlesVisible: true }),

@@ -1,8 +1,11 @@
 import type { ReligionDataset, ReligionMilestone, ReligionText } from './types';
 import type { Locale } from '@/lib/types';
 
+/** Religion texts are written in French and English; other interfaces read the English text. */
+export const religionLanguage = (locale: Locale): 'fr' | 'en' => (locale === 'fr' ? 'fr' : 'en');
+
 export const religionLabel = (value: ReligionText, locale: Locale): string =>
-  locale === 'fr' ? value.fr : value.en;
+  value[religionLanguage(locale)];
 
 /** Cumulative historical attestations, never a claim about current adherence. */
 export function religionMilestonesAt(

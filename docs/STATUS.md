@@ -1,5 +1,7 @@
 # État vérifié de réalisation
 
+Les sections ci-dessous consignent l’état vérifié à chaque jalon ; leurs nombres de tests et leurs durées datent de ce jalon. Le nombre de tests en vigueur et leur résultat sont ceux du dernier run vert du contrôle `ci-ok` sur `main`, consultable dans l’[historique de la CI](https://github.com/ZakiChair/HistoryOfAtlas/actions/workflows/ci.yml?query=branch%3Amain+is%3Asuccess).
+
 ## Phase 0 — socle
 
 Commit `179c1cd`. Architecture, Next.js statique, TypeScript strict, dates astronomiques, schéma Zod et état URL. Compilation et tests de domaine réussis. Le périmètre prioritaire est l’évolution réelle des polygones territoriaux, conformément à la précision de l’utilisateur.
@@ -42,4 +44,4 @@ Le corpus comprend 11 364 personnes, 19 174 notices avec description, 24 972 lie
 
 La reconstruction hors ligne vérifiée produit 35 353 fichiers identiques ; les schémas et liens réciproques passent `pnpm data:check`. Le rapport de couverture fait foi dans `data/reports/enrichment.json`, la vérification indépendante d’un échantillon de dates et de fonctions dans `data/reports/leader-source-audit.json`. Les descriptions riches, relations détaillées et portraits restent absents du chargement cartographique initial.
 
-La vérification finale passe 193 tests Vitest, 9 tests Python et 56 scénarios navigateur sur ordinateur et mobile, avec SwiftShader et un seul worker. La compilation, TypeScript, ESLint et le contrôle de provenance réussissent. L’export conserve 5 496 pages ; la coque initiale représente 253 182 octets gzip. Les nouveaux scénarios vérifient aussi le focus de la recherche et la conservation de la fiche après annulation avec Échap. Les limites de couverture historique et de performance des sections précédentes restent explicites.
+La vérification de ce jalon couvre les tests Vitest, les tests Python et les scénarios navigateur sur ordinateur et mobile, avec SwiftShader et un seul worker ; leur nombre actuel est celui du dernier run vert de la CI (voir en tête). La compilation, TypeScript, ESLint et le contrôle de provenance réussissent. L’export conserve 5 496 pages ; la coque initiale représente 253 182 octets gzip. Les nouveaux scénarios vérifient aussi le focus de la recherche et la conservation de la fiche après annulation avec Échap. Les limites de couverture historique et de performance des sections précédentes restent explicites.

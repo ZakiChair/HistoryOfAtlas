@@ -120,6 +120,42 @@ const THEME_PAINT = {
   light: { casing: '#2b2a22', casingOpacity: 0.3, hatch: 0.7 },
 } as const;
 const emblemOffset = (filter: string | null) => fanOffset(filter ? 'fanOwn' : 'fan');
+/** Opacity by years since attestation: older milestones recede instead of reading as present. */
+const AGE_FADE = [
+  [0, 1],
+  [500, 0.8],
+  [1500, 0.45],
+] as const;
+/** Diffusion links are momentary movements, so they fade twice as fast as attestations. */
+const ROUTE_FADE_RATE = 2;
+const religionHorizon = (state: AtlasState) =>
+  state.range ? Math.max(...state.range) : state.year;
+
+/** `scale` × the age fade of each feature at `horizon`, evaluated per feature by MapLibre. */
+export function religionAgeOpacity(horizon: number, scale = 1, rate = 1): ExpressionSpecification {
+  return [
+    'interpolate',
+    ['linear'],
+    ['-', horizon, ['get', 'year']],
+    ...AGE_FADE.flatMap(([age, opacity]) => [
+      age / rate,
+      Math.round(opacity * scale * 1000) / 1000,
+    ]),
+  ] as ExpressionSpecification;
+}
+
+/** Paint-only age fade for every religion layer; the selection keeps full opacity. */
+export function religionAgePaint(horizon: number, theme: AtlasState['theme']) {
+  const paint = THEME_PAINT[theme];
+  return [
+    [RELIGION_POINTS, 'icon-opacity', religionAgeOpacity(horizon)],
+    [RELIGION_AREAS, 'fill-opacity', religionAgeOpacity(horizon, paint.hatch)],
+    [OUTLINES, 'line-opacity', religionAgeOpacity(horizon, 0.9)],
+    [CASING, 'line-opacity', religionAgeOpacity(horizon, paint.casingOpacity, ROUTE_FADE_RATE)],
+    [RELIGION_ROUTES, 'line-opacity', religionAgeOpacity(horizon, 0.95, ROUTE_FADE_RATE)],
+    [ARROWS, 'icon-opacity', religionAgeOpacity(horizon, 1, ROUTE_FADE_RATE)],
+  ] as const;
+}
 
 /**
  * Stable fan index for milestones drawn at the same place. Later milestones are only
@@ -267,6 +303,7 @@ export function startReligionOverlay(map: MapInstance) {
   let loading = false;
   let disposed = false;
   let filterKey = '';
+  let ageKey = '';
   let theme: AtlasState['theme'] | undefined;
   let emblemFilter: string | null = null;
 
@@ -300,8 +337,14 @@ export function startReligionOverlay(map: MapInstance) {
     if (state.theme !== theme) {
       theme = state.theme;
       map.setPaintProperty(CASING, 'line-color', THEME_PAINT[theme].casing);
-      map.setPaintProperty(CASING, 'line-opacity', THEME_PAINT[theme].casingOpacity);
-      map.setPaintProperty(RELIGION_AREAS, 'fill-opacity', THEME_PAINT[theme].hatch);
+    }
+    // Paint only, with the date filter below: older attestations fade without rewriting
+    // or hiding the geometry. Hidden layers wait until they are shown again.
+    const age = `${religionHorizon(state)}:${state.theme}`;
+    if (active && age !== ageKey) {
+      ageKey = age;
+      for (const [id, property, value] of religionAgePaint(religionHorizon(state), state.theme))
+        map.setPaintProperty(id, property, value);
     }
     const key = `${state.range ? Math.max(...state.range) : state.year}:${state.religionFilter ?? ''}`;
     if (active && key !== filterKey) {
@@ -329,6 +372,7 @@ export function startReligionOverlay(map: MapInstance) {
   const clear = () => {
     installed = false;
     filterKey = '';
+    ageKey = '';
     for (const id of [...LAYERS].reverse()) if (map.getLayer(id)) map.removeLayer(id);
     if (map.getSource(RELIGION_SOURCE)) map.removeSource(RELIGION_SOURCE);
     sprites.dispose();

@@ -99,7 +99,8 @@ describe('rendered viewport queries on a globe', () => {
         queryViewportFeatures(map, ['event-cluster-query'], eventFilter(state)).map(
           (item) => item.properties.id,
         ),
-      ).toEqual(['Q2', 'Q5', 'Q6']);
+        // Hiding battles hides every armed conflict: only the treaty remains.
+      ).toEqual(['Q2']);
       expect(
         queryViewportFeatures(
           map,

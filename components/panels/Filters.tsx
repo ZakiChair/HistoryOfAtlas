@@ -9,7 +9,7 @@ import { getEventsInRange } from '@/lib/data-client';
 import { temporalWindow } from '@/lib/map-time';
 import { isEventLayerVisible } from '@/lib/event-visibility';
 import type { HistoricalEvent } from '@/lib/schema';
-import { EventIcon } from '../ui/EventIcon';
+import { EventIcon, EventSwatch } from '../ui/EventIcon';
 
 export default function Filters() {
   const filters = useAtlasStore((s) => s.filters),
@@ -86,6 +86,7 @@ export default function Filters() {
                 })
               }
             >
+              <EventSwatch type={type} />
               <EventIcon type={type} />
               <span>{EVENT_TYPE_LABELS[type][locale]}</span>
             </button>

@@ -1,18 +1,27 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, BookOpen } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { localizedLanguage, localizedName, useI18n } from '@/lib/i18n';
 import { useJson } from '@/lib/data-client/hooks';
 import { getEvent } from '@/lib/data-client';
+import { formatYear } from '@/lib/histdate';
 import { openEvent } from '@/lib/navigation';
 import type { Story } from '@/lib/schema';
+import {
+  sortStoriesChronologically,
+  storyBoundaryEvents,
+  storyRange,
+  type StoryRange,
+} from '@/lib/story-order';
 
 async function activateStep(story: Story, index: number, showDetails = false) {
   index = Math.max(0, Math.min(story.steps.length - 1, index));
   useAtlasStore.getState().patchState({
     storyId: story.id,
     storyStep: index,
+    // The step is ringed on the map even though its dossier stays closed.
+    highlightedEvent: story.steps[index].eventId,
     campaignId: null,
     selectedWar: null,
     playing: false,
@@ -21,6 +30,30 @@ async function activateStep(story: Story, index: number, showDetails = false) {
   const current = useAtlasStore.getState();
   if (current.storyId === story.id && current.storyStep === index)
     openEvent(event, { preserveContext: true, showDetails });
+}
+
+/** Dates come from each story's first and last events; undated stories remain listed. */
+function useStoryRanges(stories: Story[] | null | undefined) {
+  const [ranges, setRanges] = useState<ReadonlyMap<string, StoryRange> | null>(null);
+  useEffect(() => {
+    if (!stories) return;
+    let active = true;
+    void Promise.all(
+      stories.map(async (story) => {
+        const events = await Promise.allSettled(storyBoundaryEvents(story).map(getEvent));
+        const range = storyRange(
+          events.flatMap((result) => (result.status === 'fulfilled' ? [result.value] : [])),
+        );
+        return range ? ([[story.id, range]] as const) : [];
+      }),
+    ).then((entries) => {
+      if (active) setRanges(new Map(entries.flat()));
+    });
+    return () => {
+      active = false;
+    };
+  }, [stories]);
+  return ranges;
 }
 
 export default function StoryPanel() {
@@ -34,6 +67,19 @@ export default function StoryPanel() {
   const container = useRef<HTMLDivElement>(null);
   const [navigationError, setNavigationError] = useState(false);
   const story = stories?.find((item) => item.id === id);
+  const ranges = useStoryRanges(story ? undefined : stories);
+  const catalog = useMemo(
+    () => (stories && ranges ? sortStoriesChronologically(stories, ranges) : null),
+    [stories, ranges],
+  );
+  const highlighted =
+    story?.steps[Math.max(0, Math.min(story.steps.length - 1, activeStep))]?.eventId ?? null;
+  const storedHighlight = useAtlasStore((s) => s.highlightedEvent);
+  // Also covers a story restored from the URL, which opens without activating a step.
+  useEffect(() => {
+    if (storedHighlight !== highlighted) useAtlasStore.setState({ highlightedEvent: highlighted });
+  }, [highlighted, storedHighlight]);
+  useEffect(() => () => useAtlasStore.setState({ highlightedEvent: null }), []);
   useEffect(() => {
     if (!story || !container.current || detailOpen) return;
     const requestedStep = useAtlasStore.getState().storyStep;
@@ -151,8 +197,9 @@ export default function StoryPanel() {
               'Scroll through a story. The map follows you from place to place, from border to border.',
             )}
           </p>
+          {!catalog && <p className="loading-line">{t('loading')}…</p>}
           <div className="story-catalog">
-            {stories?.map((item, index) => (
+            {catalog?.map((item, index) => (
               <button
                 className="story-card"
                 key={item.id}
@@ -166,7 +213,14 @@ export default function StoryPanel() {
                   {localizedName(item.title, locale)}
                 </strong>
                 <span>
-                  {item.steps.length} {t('étapes documentées', 'documented steps')}
+                  <span>
+                    {ranges?.get(item.id) && (
+                      <span className="story-card-dates">
+                        {formatStoryRange(ranges.get(item.id)!, locale)}
+                      </span>
+                    )}
+                    {item.steps.length} {t('étapes documentées', 'documented steps')}
+                  </span>
                   <ArrowUpRight size={15} />
                 </span>
               </button>
@@ -176,4 +230,11 @@ export default function StoryPanel() {
       )}
     </section>
   );
+}
+
+function formatStoryRange(range: StoryRange, locale: Parameters<typeof formatYear>[1]): string {
+  const start = formatYear(range.start.year, locale);
+  return range.start.year === range.end.year
+    ? start
+    : `${start} — ${formatYear(range.end.year, locale)}`;
 }

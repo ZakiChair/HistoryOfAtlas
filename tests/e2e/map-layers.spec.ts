@@ -200,6 +200,11 @@ async function openCenteredSite(page: Page, site: ResourceSite) {
   // At pitch/bearing zero the sourced camera centre is the centre of the map canvas.
   // Retry the user action while MapLibre's GeoJSON worker makes the source queryable.
   await expect(async () => {
+    // A click that lands before the site is queryable selects the territory beneath it. On
+    // phones that drawer covers the canvas centre, so close it before the next attempt.
+    const territory = page.getByTestId('entity-panel');
+    if (await territory.isVisible())
+      await territory.getByRole('button', { name: 'Close territory panel', exact: true }).click();
     await canvas.click({ position: { x: bounds!.width / 2, y: bounds!.height / 2 } });
     await expect(
       page.getByTestId('resource-detail').getByRole('heading', { name: site.name, exact: true }),
@@ -250,6 +255,10 @@ test('layer controls defer resource data, share both choices and keep the notebo
   page.on('request', (request) => requested.push(new URL(request.url()).pathname));
   await page.goto('/?lang=en&y=1500&projection=mercator');
   await mapReady(page);
+  // Phones start with the notebook folded; open it to check it stays usable beside the layers.
+  const reopen = page.getByRole('button', { name: 'Open notebook', exact: true });
+  if (await reopen.isVisible()) await reopen.click();
+  await expect(page.locator('.exploration-panel')).toBeVisible();
   const battles = page.getByTestId('battles-layer-toggle');
   const resources = page.getByTestId('resources-layer-toggle');
   await expect(battles).toHaveAttribute('aria-pressed', 'true');
@@ -1137,9 +1146,12 @@ test('a failed resource request can be retried without disabling the map or losi
   page,
 }) => {
   let requests = 0;
+  // The client already retries a 5xx twice with backoff; the outage outlasts those attempts.
+  const automaticAttempts = 3;
   await page.route(`**${RESOURCE_PATH}`, async (route) => {
     requests += 1;
-    if (requests === 1) await route.fulfill({ status: 503, body: 'Temporarily unavailable' });
+    if (requests <= automaticAttempts)
+      await route.fulfill({ status: 503, body: 'Temporarily unavailable' });
     else await route.continue();
   });
   await page.goto('/?lang=en&y=1500');
@@ -1147,6 +1159,7 @@ test('a failed resource request can be retried without disabling the map or losi
   await page.getByTestId('resources-layer-toggle').click();
   const status = page.getByTestId('resources-status');
   await expect(status.getByRole('alert')).toContainText('Resource locations could not be loaded.');
+  expect(requests).toBe(automaticAttempts);
   await expect(page.getByTestId('resources-layer-toggle')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.getByTestId('year-slider')).toBeVisible();
   await status.getByRole('button', { name: 'Try again', exact: true }).click();
@@ -1155,7 +1168,7 @@ test('a failed resource request can be retried without disabling the map or losi
   await expect(page.getByTestId('resource-legend')).toContainText(
     `${knownSiteIds(1500).length.toLocaleString('en')} sites known by this period`,
   );
-  expect(requests).toBe(2);
+  expect(requests).toBe(automaticAttempts + 1);
   await expect.poll(() => new URL(page.url()).searchParams.get('resources')).toBe('1');
 });
 
@@ -1216,7 +1229,22 @@ test('resource information remains actionable above an open historical dossier',
   await expect.poll(() => new URL(page.url()).searchParams.get('e')).toBe('Q48314');
 });
 
-test('the ordinary map removes battle points from clustering while retaining other event types', async ({
+test('the heatmap key never sits under an open dossier or over the compass', async ({ page }) => {
+  // Tall enough that the compass is shown (it is hidden below 760px).
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/?mode=heatmap&y=1815&lon=4.4122&lat=50.6781&z=4.5&lang=en');
+  await mapReady(page);
+  const key = page.getByTestId('density-key');
+  await expect(key).toBeVisible();
+  await expect(page.locator('.world-compass')).toBeHidden();
+  await page.goto('/?mode=heatmap&e=Q48314&y=1815&lon=4.4122&lat=50.6781&z=4.5&lang=en');
+  await mapReady(page);
+  await expect(page.getByTestId('event-panel')).toBeVisible();
+  await expect(key).toBeAttached();
+  await expect(key).toBeHidden();
+});
+
+test('the ordinary map removes conflict points from clustering while retaining treaties', async ({
   page,
 }, testInfo) => {
   type ClusterPoint = { id: string; type: string };
@@ -1274,14 +1302,16 @@ test('the ordinary map removes battle points from clustering while retaining oth
   });
   await page.goto('/?lang=en&y=1812&z=1.8&lon=18&lat=32&from=1700&to=2000');
   await mapReady(page);
-  const isBattle = (point: ClusterPoint) => ['battle', 'siege', 'naval'].includes(point.type);
-  const isOther = (point: ClusterPoint) => ['treaty', 'war', 'campaign'].includes(point.type);
+  // The Battles toggle hides every armed conflict; only treaties remain.
+  const isBattle = (point: ClusterPoint) =>
+    ['battle', 'siege', 'naval', 'war', 'campaign', 'conquest'].includes(point.type);
+  const isOther = (point: ClusterPoint) => point.type === 'treaty';
   await expect.poll(() => batches.at(-1)?.some(isBattle) ?? false, { timeout: 30_000 }).toBe(true);
   const initial = batches.at(-1)!;
   const otherTypes = [...new Set(initial.filter(isOther).map((point) => point.type))];
   expect(
     otherTypes.length,
-    'The viewport must include other conflict events to test selective hiding',
+    'The viewport must include treaties to test selective hiding',
   ).toBeGreaterThan(0);
   const beforeHide = batches.length;
 
@@ -1297,8 +1327,8 @@ test('the ordinary map removes battle points from clustering while retaining oth
       contentType: 'application/json',
     });
   }
-  // Tile refinement can change individual viewport hits; the remaining event
-  // categories must remain queryable after the battle-only filter is applied.
+  // Tile refinement can change individual viewport hits; the remaining
+  // treaties must remain queryable after the conflict filter is applied.
   expect([
     ...new Set(
       batches

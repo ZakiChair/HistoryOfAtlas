@@ -3,6 +3,7 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { BattleIndexSchema, BattleRecordSchema } from '../../lib/battles/schema';
+import { documentedBattleIds } from '../../lib/battles/documented';
 import { loadBattleProfiles } from './profiles';
 import { checkCdb90Artifacts } from './cdb90-check';
 import { BattleMetadataFileSchema } from './metadata';
@@ -288,6 +289,11 @@ assert.deepEqual(
 );
 for (const field of ['total', 'mappable', 'documented', 'unmapped'] as const)
   assert.equal(coverage[field], index.counts[field], `Coverage/index ${field} mismatch`);
+assert.deepEqual(
+  JSON.parse(await readFile(join(output, 'documented.json'), 'utf8')),
+  documentedBattleIds(index.battles),
+  'documented.json must list exactly the documented battles of the index',
+);
 evidence.withComparableArmies = documented;
 assert.deepEqual(coverage.reasonCounts, reasons, 'Coverage reasons do not match the catalog');
 assert.deepEqual(

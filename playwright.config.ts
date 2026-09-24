@@ -12,6 +12,10 @@ export const getGraphicsArguments = (mode = process.env.PLAYWRIGHT_GPU ?? 'softw
         '--use-angle=swiftshader',
         '--enable-unsafe-swiftshader',
       ];
+// Per-battle scene sweeps replay one browser scene per catalogued battle. Their assertions
+// concern published data and the 3D scene, not the viewport, so they run on desktop only.
+const DESKTOP_ONLY_BATTLE_SWEEPS =
+  /battle-(?:catalogue-scenes|equipment-scenes|land-equipment|reviewed-metadata)\.spec\.ts$/;
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
@@ -20,7 +24,9 @@ export default defineConfig({
   timeout: 60_000,
   expect: { timeout: 15_000 },
   forbidOnly: Boolean(process.env.CI),
-  retries: process.env.CI ? 2 : 0,
+  // One retry absorbs a software-GPU hiccup; a shard stops early once a regression is clear.
+  retries: process.env.CI ? 1 : 0,
+  maxFailures: process.env.CI ? 10 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: { baseURL, trace: 'retain-on-failure', screenshot: 'only-on-failure' },
@@ -36,6 +42,7 @@ export default defineConfig({
     },
     {
       name: 'mobile-chromium',
+      testIgnore: DESKTOP_ONLY_BATTLE_SWEEPS,
       use: {
         ...devices['Pixel 7'],
         launchOptions: {

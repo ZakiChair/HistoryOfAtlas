@@ -156,7 +156,12 @@ for (const projection of ['globe', 'mercator']) {
     expect(Number(await map.getAttribute('data-battle-models'))).toBeGreaterThan(20);
     expect(models.some((url) => url.includes('napoleonic'))).toBe(true);
     await expect(page.getByTestId('battle-play')).toHaveText('Animate armies');
-    await expect(page.getByTestId('timeline-play')).toHaveAttribute('aria-label', 'Play timeline');
+    // One Play button: the frieze reduces to the battle's year in battle mode.
+    await expect(page.getByTestId('timeline-play')).toHaveCount(0);
+    await expect(page.getByTestId('year-slider')).toHaveAttribute(
+      'aria-valuetext',
+      String(battle.start!.year),
+    );
     const canvas = page.locator('.maplibregl-canvas');
     const before = await canvas.screenshot();
     await page.getByTestId('battle-play').click();
@@ -293,7 +298,9 @@ test('space controls the selected reconstruction without advancing historical ti
   await page.getByTestId('battle-detail').getByRole('heading', { level: 2 }).focus();
   await page.keyboard.press('Space');
   await expect(page.getByTestId('battle-play')).toHaveText('Pause animation');
-  await expect(page.getByTestId('timeline-play')).toHaveAttribute('aria-label', 'Play timeline');
+  // The chronology stays paused and offers no competing Play button in battle mode.
+  await expect(page.getByTestId('timeline-play')).toHaveCount(0);
+  expect(new URL(page.url()).searchParams.has('play')).toBe(false);
   await page.keyboard.press('Space');
   await expect(page.getByTestId('battle-play')).toHaveText('Animate armies');
   await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-valuetext', '1815');

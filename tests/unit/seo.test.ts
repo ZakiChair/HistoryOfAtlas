@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { getEventPermalink, hasStaticEventPage } from '@/lib/seo';
+import {
+  commonsImageUrl,
+  errorReportUrl,
+  getEventMapUrl,
+  getEventPermalink,
+  getPersonMapUrl,
+  hasStaticEventPage,
+} from '@/lib/seo';
 import type { HistoricalEvent } from '@/lib/schema';
 
 const lowImportance = {
@@ -42,4 +49,63 @@ describe('permanent event URLs', () => {
       expect(getEventPermalink({ ...lowImportance, type, importance: 0 })).toBe('/event/Q178912/');
     },
   );
+});
+
+describe('shareable links', () => {
+  it('links a person without copying the sharer’s whole view', () => {
+    expect(getPersonMapUrl('Q517')).toBe('/?person=Q517');
+  });
+  it('opens the map at the event without an archive page', () => {
+    expect(getEventMapUrl(lowImportance)).toBe(getEventPermalink(lowImportance));
+  });
+});
+
+describe('preview images', () => {
+  it('requests a 1200 px rendition of Commons files', () => {
+    expect(
+      commonsImageUrl('https://commons.wikimedia.org/wiki/Special:FilePath/A%20b.jpg?width=960'),
+    ).toBe('https://commons.wikimedia.org/wiki/Special:FilePath/A%20b.jpg?width=1200');
+    expect(commonsImageUrl('https://commons.wikimedia.org/wiki/Special:FilePath/A.jpg', 640)).toBe(
+      'https://commons.wikimedia.org/wiki/Special:FilePath/A.jpg?width=640',
+    );
+  });
+  it('passes other images through and drops invalid values', () => {
+    expect(commonsImageUrl('https://upload.wikimedia.org/a.jpg')).toBe(
+      'https://upload.wikimedia.org/a.jpg',
+    );
+    expect(commonsImageUrl('not a url')).toBeUndefined();
+    expect(commonsImageUrl(undefined)).toBeUndefined();
+  });
+});
+
+describe('error reports', () => {
+  it('prefills a GitHub issue with the identifier, displayed year and link', () => {
+    const url = new URL(
+      errorReportUrl({
+        name: 'Battle of Gaugamela',
+        id: 'Q188129',
+        kind: 'event',
+        year: -330,
+        url: 'https://atlas.example/event/Q188129/',
+      }),
+    );
+    expect(`${url.origin}${url.pathname}`).toBe(
+      'https://github.com/ZakiChair/HistoryOfAtlas/issues/new',
+    );
+    expect(url.searchParams.get('title')).toBe('Correction: Battle of Gaugamela (Q188129)');
+    const body = url.searchParams.get('body')!;
+    expect(body).toContain('[Q188129](https://www.wikidata.org/wiki/Q188129)');
+    expect(body).toContain('331 BCE (astronomical -330)');
+    expect(body).toContain('https://atlas.example/event/Q188129/');
+    expect(body).toContain('corrected at the source');
+  });
+  it('quotes non-Wikidata identifiers and omits unknown fields', () => {
+    const body = new URL(
+      errorReportUrl({ name: 'Kennecott', id: 'usgs-mrds', kind: 'resource' }),
+    ).searchParams.get('body')!;
+    expect(body).toContain('`usgs-mrds`');
+    expect(body).not.toContain('Displayed year');
+    expect(body).not.toContain('Link:');
+    expect(body).not.toContain('Wikidata');
+  });
 });

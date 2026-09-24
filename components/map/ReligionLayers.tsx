@@ -4,10 +4,11 @@ import { useEffect, useRef } from 'react';
 import { ArrowLeft, ArrowUpRight, X } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
-import { religionLabel, religionMilestonesAt } from '@/lib/religions/time';
+import { religionLanguage, religionMilestonesAt } from '@/lib/religions/time';
 import { religionText } from '@/lib/religions/i18n';
 import type { ReligionMilestone } from '@/lib/religions/types';
 import { formatYear } from '@/lib/histdate';
+import Localized from '../ui/Localized';
 import ReligionKey, { TraditionIcon } from './ReligionKey';
 
 export default function ReligionLayers({
@@ -83,7 +84,7 @@ export default function ReligionLayers({
         <span>{t('through').replace('{year}', formatYear(horizon, locale))}</span>
         {filter && (
           <span className="religion-active-filter">
-            {tradition ? religionLabel(tradition.names, locale) : filter}
+            {tradition ? <Localized value={tradition.names} locale={locale} /> : filter}
           </span>
         )}
         {(status === 'idle' || status === 'loading') && <span role="status">{t('loading')}</span>}
@@ -120,7 +121,7 @@ export default function ReligionLayers({
         >
           <div className="religion-card-heading">
             <h2 id={`${panelId}-heading`} ref={heading} tabIndex={-1}>
-              {selected ? religionLabel(selected.title, locale) : t('title')}
+              {selected ? <Localized value={selected.title} locale={locale} /> : t('title')}
             </h2>
             <button type="button" className="icon-button" aria-label={t('close')} onClick={onClose}>
               <X size={16} aria-hidden="true" />
@@ -140,7 +141,7 @@ export default function ReligionLayers({
                 {tradition && (
                   <p className="religion-tradition-name">
                     <TraditionIcon tradition={tradition} />
-                    {religionLabel(tradition.names, locale)}
+                    <Localized value={tradition.names} locale={locale} />
                   </p>
                 )}
                 <p className="religion-stage-date">
@@ -148,7 +149,7 @@ export default function ReligionLayers({
                   {selected.approximate && <abbr title={t('approximate')}>≈ </abbr>}
                   {formatYear(selected.year, locale)}
                 </p>
-                <p>{religionLabel(selected.description, locale)}</p>
+                <Localized as="p" value={selected.description} locale={locale} />
                 <h3>{t('mechanisms')}</h3>
                 <ul className="religion-mechanisms">
                   {selected.mechanisms.map((mechanism) => (
@@ -157,7 +158,7 @@ export default function ReligionLayers({
                 </ul>
                 {selected.area && (
                   <p className="religion-area-caption">
-                    {t('areas')} · {religionLabel(selected.area.label, locale)}
+                    {t('areas')} · <Localized value={selected.area.label} locale={locale} />
                   </p>
                 )}
                 <h3>{t('sources')}</h3>
@@ -227,7 +228,7 @@ export default function ReligionLayers({
                       onClick={() => useAtlasStore.getState().setReligionFilter(item.id)}
                     >
                       <TraditionIcon tradition={item} />
-                      <span>{religionLabel(item.names, locale)}</span>
+                      <Localized value={item.names} locale={locale} />
                       <span className="religion-tradition-count">
                         {allVisible.filter((stage) => stage.traditionId === item.id).length}
                       </span>
@@ -236,9 +237,12 @@ export default function ReligionLayers({
                 </div>
                 {filter && !tradition && status === 'ready' && <p>{t('unknown')}</p>}
                 {tradition && (
-                  <p className="religion-tradition-description">
-                    {religionLabel(tradition.description, locale)}
-                  </p>
+                  <Localized
+                    as="p"
+                    className="religion-tradition-description"
+                    value={tradition.description}
+                    locale={locale}
+                  />
                 )}
               </>
             )}
@@ -263,7 +267,7 @@ export default function ReligionLayers({
                           {formatYear(stage.year, locale)}
                         </span>
                         <span>
-                          {religionLabel(stage.title, locale)}
+                          <Localized value={stage.title} locale={locale} />
                           {stage.year > horizon && <small>{t('future')}</small>}
                         </span>
                       </button>
@@ -272,7 +276,12 @@ export default function ReligionLayers({
                 </ol>
               </>
             )}
-            <p className="religion-coverage">{t('coverage')}</p>
+            <p className="religion-coverage">
+              {t('coverage')}
+              {religionLanguage(locale) !== locale && (
+                <span data-testid="religion-language-note"> {t('englishFallback')}</span>
+              )}
+            </p>
           </div>
         </section>
       )}

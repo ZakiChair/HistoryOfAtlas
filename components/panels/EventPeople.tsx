@@ -1,9 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import { ArrowRight, ArrowUpRight, UsersRound } from 'lucide-react';
 import { localizedName, useI18n } from '@/lib/i18n';
 import { openPerson } from '@/lib/navigation';
 import type { HistoricalEvent } from '@/lib/schema';
+
+/** Participation lists reach several hundred names on world wars: show a first handful. */
+const EVENT_PEOPLE_LIMIT = 8;
+const EVENT_PEOPLE_STEP = 24;
 
 export default function EventPeople({
   people,
@@ -13,7 +18,9 @@ export default function EventPeople({
   participants?: HistoricalEvent['belligerents'];
 }) {
   const { locale, t } = useI18n();
+  const [participationLimit, setParticipationLimit] = useState(EVENT_PEOPLE_LIMIT);
   if (!people.length) return null;
+  // Documented command stays complete; only the long participation list is shortened.
   const commanders = people.filter((person) => person.role === 'commander');
   const others = people.filter((person) => person.role === 'participant');
   return (
@@ -22,10 +29,15 @@ export default function EventPeople({
         <UsersRound size={14} /> {t('Les personnes de cette histoire', 'People in this history')}
       </h3>
       {[
-        { label: t('Commandement documenté', 'Documented command'), entries: commanders },
+        {
+          label: t('Commandement documenté', 'Documented command'),
+          entries: commanders,
+          hidden: 0,
+        },
         {
           label: t('Participations documentées', 'Documented participation'),
-          entries: others,
+          entries: others.slice(0, participationLimit),
+          hidden: Math.max(0, others.length - participationLimit),
         },
       ]
         .filter((group) => group.entries.length)
@@ -79,6 +91,14 @@ export default function EventPeople({
                 );
               })}
             </ul>
+            {group.hidden > 0 && (
+              <button
+                className="text-button people-more"
+                onClick={() => setParticipationLimit((count) => count + EVENT_PEOPLE_STEP)}
+              >
+                {t('Afficher davantage', 'Show more')} ({group.hidden})
+              </button>
+            )}
           </div>
         ))}
     </section>
