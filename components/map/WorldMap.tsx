@@ -24,6 +24,8 @@ import { createRenderQueue } from './render-queue';
 import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from './event-clusters';
 import { hasResourceAt } from './resource-hit';
 import { useResourceStore } from '@/lib/resources/store';
+import { hasReligionAt } from './religion-hit';
+import { useReligionStore } from '@/lib/religions/store';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 type AtlasState = ReturnType<typeof useAtlasStore.getState>;
@@ -175,6 +177,9 @@ export default function WorldMap() {
         let resourceOverlay:
           ReturnType<(typeof import('./resource-overlay'))['startResourceOverlay']> | undefined;
         let resourceOverlayLoading = false;
+        let religionOverlay:
+          ReturnType<(typeof import('./religion-overlay'))['startReligionOverlay']> | undefined;
+        let religionOverlayLoading = false;
         let adjustingBattlePadding = false;
         const frameBattlefield = (state: AtlasState) => {
           const focused = state.battlesVisible && state.battleMode && Boolean(state.selectedEvent);
@@ -451,7 +456,7 @@ export default function WorldMap() {
             },
           });
           const click = (event: MapLayerMouseEvent) => {
-            if (hasResourceAt(map, event.point)) return;
+            if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
             if (useAtlasStore.getState().battleMode) return;
             if (!currentBoundarySources.includes(id)) return;
             if (eventClustering?.hasFeatureAt(event.point)) return;
@@ -662,6 +667,23 @@ export default function WorldMap() {
               });
           }
           resourceOverlay?.update(state.resourcesVisible, state.year, state.range);
+          if (state.religionsVisible && !religionOverlay && !religionOverlayLoading) {
+            religionOverlayLoading = true;
+            useReligionStore.setState({ status: 'loading', error: null });
+            void import('./religion-overlay')
+              .then(({ startReligionOverlay }) => {
+                if (disposed) return;
+                religionOverlay = startReligionOverlay(map);
+                religionOverlay.update(useAtlasStore.getState());
+              })
+              .catch((cause) => {
+                if (!disposed) useReligionStore.setState({ status: 'error', error: String(cause) });
+              })
+              .finally(() => {
+                religionOverlayLoading = false;
+              });
+          }
+          religionOverlay?.update(state);
           if (!previous || state.theme !== previous.theme) {
             const dark = state.theme === 'dark';
             map.setPaintProperty('ocean', 'background-color', dark ? '#0b2636' : '#c9d9db');
@@ -732,7 +754,8 @@ export default function WorldMap() {
             const loaded =
               territoriesLoaded() &&
               (!eventsReady || map.isSourceLoaded('events')) &&
-              (resourceOverlay?.isReady() ?? true);
+              (resourceOverlay?.isReady() ?? true) &&
+              (religionOverlay?.isReady() ?? true);
             if (loaded) playbackGate.ready();
             return loaded;
           },
@@ -884,7 +907,7 @@ export default function WorldMap() {
               appliedState = undefined;
               renderQueue.submit(useAtlasStore.getState(), true);
               map.on('click', 'event-points', (event) => {
-                if (hasResourceAt(map, event.point)) return;
+                if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
                 const id = event.features?.[0]?.properties?.id;
                 if (!id) return;
                 selectMapEvent(String(id));
@@ -976,13 +999,19 @@ export default function WorldMap() {
           if (state.revision !== previous.revision && !resourceOverlay && styleReady)
             renderQueue.submit(useAtlasStore.getState(), true);
         });
+        const unsubscribeReligions = useReligionStore.subscribe((state, previous) => {
+          if (state.revision !== previous.revision && !religionOverlay && styleReady)
+            renderQueue.submit(useAtlasStore.getState(), true);
+        });
         cleanup = () => {
           unsubscribe();
           unsubscribeResources();
+          unsubscribeReligions();
           renderQueue.dispose();
           campaignOverlay?.dispose();
           battleOverlay?.dispose();
           resourceOverlay?.dispose();
+          religionOverlay?.dispose();
           eventClustering?.destroy();
           cancelGhost();
           map.off('sourcedata', retirePreviousTerritories);

@@ -252,6 +252,7 @@ export default function AtlasApp() {
     [intro, setIntro] = useState(false);
   const battleMode = useAtlasStore((state) => state.battleMode);
   const resourcesVisible = useAtlasStore((state) => state.resourcesVisible);
+  const religionsVisible = useAtlasStore((state) => state.religionsVisible);
   useEffect(() => {
     if (battleMode) {
       setSidebarOpen(true);
@@ -424,7 +425,7 @@ export default function AtlasApp() {
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation}>
         <main
-          className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''} ${battleMode ? 'battle-mode' : ''} ${resourcesVisible ? 'resources-visible' : ''}`}
+          className={`atlas-app ${sidebarOpen ? 'sidebar-is-open' : ''} ${hasDetail ? 'detail-is-open' : ''} ${battleMode ? 'battle-mode' : ''} ${resourcesVisible ? 'resources-visible' : ''} ${religionsVisible ? 'religions-visible' : ''}`}
         >
           <h1 className="sr-only">
             HistoryOfAtlas — {t('L’histoire à travers les cartes', 'History through maps')}

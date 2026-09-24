@@ -1,0 +1,4950 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "anu-kutai",
+      "title": "Australian National University Press — The Earliest Indic State: Kutai",
+      "url": "https://press.anu.edu.au/downloads/press/p69411/mobile/ch15s02.html"
+    },
+    {
+      "id": "art-institute-parliament",
+      "title": "Art Institute of Chicago — Museum Studies 36/2, Parliament of Religions",
+      "url": "https://www.artic.edu/files/d6d34ab7-f17c-4939-b2aa-f8c5a71495a5/AIC_MuseumStudies_36-2_UPDF.pdf"
+    },
+    {
+      "id": "augustinians-mexico-philippines",
+      "title": "Augustinian Province of Santo Niño de Cebu — Half a Millennia of Apostolic and Cultural Influence",
+      "url": "https://augustiniansphilippines.net/augustinians-in-the-philippines-half-a-millennia-of-apostolic-and-cultural-influence/"
+    },
+    {
+      "id": "bm-jerusalem-chronicle",
+      "title": "British Museum — Babylonian Chronicle, campaign of 597 BCE",
+      "url": "https://www.britishmuseum.org/collection/object/W_1896-0409-51"
+    },
+    {
+      "id": "britannica-hindu-spread",
+      "title": "Encyclopaedia Britannica — Hinduism in Southeast Asia and the Pacific",
+      "url": "https://www.britannica.com/topic/Hinduism/The-spread-of-Hinduism-in-Southeast-Asia-and-the-Pacific"
+    },
+    {
+      "id": "cambridge-alexandria",
+      "title": "Cambridge University Press — The Cambridge Dictionary of Jewish History and Culture, Alexandria",
+      "url": "https://assets.cambridge.org/97805218/25979/excerpt/9780521825979_excerpt.pdf"
+    },
+    {
+      "id": "chicago-vedanta",
+      "title": "Vivekananda Vedanta Society of Chicago — Vivekananda in Chicago",
+      "url": "https://www.chicagovedanta.org/chicago"
+    },
+    {
+      "id": "cordoba-synagogue",
+      "title": "Córdoba municipal tourism — Synagogue, dated 1315",
+      "url": "https://www.turismodecordoba.org/repositorio/2019/201907301435300000001564490130.1919.pdf?cache=1564490130.3006"
+    },
+    {
+      "id": "harvard-american-west",
+      "title": "Harvard Pluralism Project — Buddhists in the American West",
+      "url": "https://pluralism.org/buddhists-in-the-american-west"
+    },
+    {
+      "id": "harvard-buddhism",
+      "title": "Harvard Pluralism Project — Buddhism timeline",
+      "url": "https://pluralism.org/buddhism"
+    },
+    {
+      "id": "harvard-buddhist-expansion",
+      "title": "Harvard Pluralism Project — The Expansion of Buddhism",
+      "url": "https://pluralism.org/the-expansion-of-buddhism"
+    },
+    {
+      "id": "harvard-christianity",
+      "title": "Harvard Pluralism Project — Christianity timeline",
+      "url": "https://pluralism.org/christianity"
+    },
+    {
+      "id": "harvard-hinduism",
+      "title": "Harvard Pluralism Project — Hinduism timeline",
+      "url": "https://pluralism.org/hinduism"
+    },
+    {
+      "id": "harvard-islam",
+      "title": "Harvard Pluralism Project — Islam timeline",
+      "url": "https://pluralism.org/islam"
+    },
+    {
+      "id": "harvard-mahavira",
+      "title": "Harvard Pluralism Project — Bhagavan Mahavira",
+      "url": "https://pluralism.org/bhagavan-mahavira"
+    },
+    {
+      "id": "harvard-sikh-arrivals",
+      "title": "Harvard Pluralism Project — Sikh First Arrivals",
+      "url": "https://pluralism.org/first-arrivals"
+    },
+    {
+      "id": "harvard-sikhism",
+      "title": "Harvard Pluralism Project — Sikhism timeline",
+      "url": "https://pluralism.org/sikhism"
+    },
+    {
+      "id": "heidelberg-pengcheng",
+      "title": "Heidelberg University — Li Qun He, Buddhist State Monasteries in Early Medieval China",
+      "url": "https://archiv.ub.uni-heidelberg.de/volltextserver/17285/1/heliqun05082014.pdf"
+    },
+    {
+      "id": "iccrom-wadi-natrun",
+      "title": "ICCROM archives — Wadi El-Natrun, Monastery of Saint Macarius",
+      "url": "https://archives.iccrom.org/oggetti/40782-wadi-el-natrun-mra-egy-nat-001"
+    },
+    {
+      "id": "iranica-bombay",
+      "title": "Encyclopaedia Iranica — Bombay, Zoroastrian community",
+      "url": "https://www.iranicaonline.org/articles/bombay-persian-communities-of/"
+    },
+    {
+      "id": "iranica-ctesiphon-church",
+      "title": "Encyclopaedia Iranica — Isaac, Bishop of Seleucia-Ctesiphon",
+      "url": "https://www.iranicaonline.org/articles/isaac-bishop-of-seleucia-ctesiphon/"
+    },
+    {
+      "id": "iranica-eastern-christianity",
+      "title": "Encyclopaedia Iranica — Christianity in Central Asia and Chinese Turkestan",
+      "url": "https://www.iranicaonline.org/articles/christianity-iii/"
+    },
+    {
+      "id": "iranica-parsis",
+      "title": "Encyclopaedia Iranica — Parsi communities I: Early history",
+      "url": "https://www.iranicaonline.org/articles/parsi-communities-i-early-history/"
+    },
+    {
+      "id": "iranica-zoroaster",
+      "title": "Encyclopaedia Iranica — Zoroaster II: General Survey",
+      "url": "https://www.iranicaonline.org/articles/zoroaster-ii-general-survey/"
+    },
+    {
+      "id": "ise-sengu",
+      "title": "Ise Jingu — Rituals and Ceremonies: Shikinen Sengu",
+      "url": "https://www.isejingu.or.jp/en/ritual/index.html"
+    },
+    {
+      "id": "jck-amsterdam",
+      "title": "Jewish Cultural Quarter — Portuguese Synagogue history",
+      "url": "https://jck.nl/verhalen-en-verdieping/portugese-synagoge-geschiedenis"
+    },
+    {
+      "id": "karnataka-shravanabelagola",
+      "title": "Karnataka Tourism — Shravanabelagola",
+      "url": "https://karnatakatourism.org/en/attractions/shravanabelagola"
+    },
+    {
+      "id": "kasuga-history",
+      "title": "Kasuga Taisha — History",
+      "url": "https://www.kasugataisha.or.jp/en/about_en/"
+    },
+    {
+      "id": "kenyon-china-christianity",
+      "title": "Kenyon College — Martin Palmer, early Christianity in China",
+      "url": "https://www2.kenyon.edu/Depts/Religion/Fac/Adler/Reln270/Palmer-DaQin.htm"
+    },
+    {
+      "id": "korea-sosu",
+      "title": "Korea.net — Seowon, Neo-Confucian academies",
+      "url": "https://www.korea.net/NewsFocus/Culture/view?articleId=170992"
+    },
+    {
+      "id": "max-planck-buddhist-knowledge",
+      "title": "Max Planck Research Library — The Spread of Buddhism as Globalization of Knowledge",
+      "url": "https://www.mprl-series.mpg.de/studies/1/14/index.html"
+    },
+    {
+      "id": "met-aksum",
+      "title": "The Met — Foundations of Aksumite Civilization and Its Christian Legacy",
+      "url": "https://www.metmuseum.org/essays/foundations-of-aksumite-civilization-and-its-christian-legacy-1st-7th-century"
+    },
+    {
+      "id": "met-birth-islam",
+      "title": "The Met — The Birth of Islam",
+      "url": "https://www.metmuseum.org/essays/the-birth-of-islam"
+    },
+    {
+      "id": "met-byzantium-islam",
+      "title": "The Met — Byzantium and Islam: Age of Transition",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam"
+    },
+    {
+      "id": "met-daoism",
+      "title": "The Met — Daoism and Daoist Art",
+      "url": "https://www.metmuseum.org/essays/daoism-and-daoist-art"
+    },
+    {
+      "id": "met-judean-diaspora",
+      "title": "The Met — Cyrus and the Judean Diaspora",
+      "url": "https://www.metmuseum.org/perspectives/cyrus-and-the-judean-diaspora"
+    },
+    {
+      "id": "met-kongo-christianity",
+      "title": "The Met — Kongo Christian Art: Crosses",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2015/kongo/blog/posts/kongo-christian-art"
+    },
+    {
+      "id": "met-kongo-expeditions",
+      "title": "The Met — Kongo: Power and Majesty, historical background",
+      "url": "https://www.metmuseum.org/press-releases/kongo-2015-exhibitions"
+    },
+    {
+      "id": "met-korea-buddhism",
+      "title": "The Met — Korean Buddhist Sculpture, 5th–9th Century",
+      "url": "https://www.metmuseum.org/essays/korean-buddhist-sculpture-5th-9th-century"
+    },
+    {
+      "id": "met-patan",
+      "title": "The Met — Jain temple meeting hall, Patan, dated 1596",
+      "url": "https://www.metmuseum.org/art/collection/search/39317"
+    },
+    {
+      "id": "met-safavids",
+      "title": "The Met — The Art of the Safavids before 1600",
+      "url": "https://www.metmuseum.org/essays/the-art-of-the-safavids-before-1600"
+    },
+    {
+      "id": "met-sasanians",
+      "title": "The Met — The Sasanians",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/topical-essays/posts/sasanians"
+    },
+    {
+      "id": "met-shinto",
+      "title": "The Met — Shinto",
+      "url": "https://www.metmuseum.org/essays/shinto"
+    },
+    {
+      "id": "met-silk-buddhism",
+      "title": "The Met — Buddhism along the Silk Road, 5th–8th Century",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2012/buddhism"
+    },
+    {
+      "id": "met-umayyad-iberia",
+      "title": "The Met — Iberian Peninsula, 500–1000",
+      "url": "https://82nd-and-fifth.metmuseum.org/toah/ht/06/eusi.html"
+    },
+    {
+      "id": "sahapedia-tamil-bhakti",
+      "title": "Sahapedia — Imagining the Divine: Temple Stories and Tevaram Hymns",
+      "url": "https://www.sahapedia.org/imagining-divine-temple-stories-and-tevaram-hymns"
+    },
+    {
+      "id": "sgpc-nanak",
+      "title": "SGPC — Guru Nanak Sahib",
+      "url": "https://old.sgpc.net/gurus/gurunanak.asp"
+    },
+    {
+      "id": "silpakorn-sukhothai",
+      "title": "Silpakorn University, NAJUA — Engendering the Sukhothai beliefs",
+      "url": "https://so04.tci-thaijo.org/index.php/NAJUA-Arch/article/download/247830/168271"
+    },
+    {
+      "id": "soas-jain-mathura",
+      "title": "SOAS University of London — Centre of Jaina Studies Newsletter 13, Mathura objects",
+      "url": "https://www.soas.ac.uk/sites/default/files/2022-11/Centre%20of%20Jaina%20Studies%20Issue%2013%20-%20March%202019.pdf"
+    },
+    {
+      "id": "tokyo-yushima",
+      "title": "Tokyo Metropolitan Government — Yushima Seido",
+      "url": "https://www.gotokyo.org/en/spot/271/index.html"
+    },
+    {
+      "id": "ui-bm-ife",
+      "title": "British Museum — Ife head and the city’s sacred kingship",
+      "url": "https://www.britishmuseum.org/collection/object/E_Af1939-34-1"
+    },
+    {
+      "id": "ui-capitoline-jupiter",
+      "title": "Musei Capitolini — Jupiter of the Capitol and the Olympian model",
+      "url": "https://www.museicapitolini.org/sites/default/files/f_file/4.%20The%20display%20of%20the%20Colossus%20at%20Villa%20Caffarelli.pdf"
+    },
+    {
+      "id": "ui-egypt-abu-simbel",
+      "title": "Egyptian Ministry of Tourism and Antiquities — Abu Simbel",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/abu-simbel/"
+    },
+    {
+      "id": "ui-egypt-karnak",
+      "title": "Egyptian Ministry of Tourism and Antiquities — Karnak",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/karnak/"
+    },
+    {
+      "id": "ui-egypt-philae",
+      "title": "Egyptian Ministry of Tourism and Antiquities — Philae",
+      "url": "https://egymonuments.gov.eg/archaeological-sites/philae/"
+    },
+    {
+      "id": "ui-fundaj-casa-branca",
+      "title": "Fundação Joaquim Nabuco — Terreiro Casa Branca (Ilê Axé Iyá Nassô Oká)",
+      "url": "https://pesquisaescolar.fundaj.gov.br/pt-br/artigo/terreiro-casa-branca-ile-axe-iya-nasso-oka/"
+    },
+    {
+      "id": "ui-met-babylon",
+      "title": "The Metropolitan Museum of Art — Babylon",
+      "url": "https://www.metmuseum.org/essays/babylon"
+    },
+    {
+      "id": "ui-met-nippur",
+      "title": "The Metropolitan Museum of Art — Inscribed tablet, Inanna temple at Nippur",
+      "url": "https://www.metmuseum.org/art/collection/search/325500"
+    },
+    {
+      "id": "ui-met-sango",
+      "title": "The Metropolitan Museum of Art — Shango ritual staff and the eighteenth-century Oyo court",
+      "url": "https://www.metmuseum.org/art/collection/search/314326"
+    },
+    {
+      "id": "ui-met-ur",
+      "title": "The Metropolitan Museum of Art — Ur: The Ziggurat",
+      "url": "https://www.metmuseum.org/essays/ur-the-ziggurat"
+    },
+    {
+      "id": "ui-met-uruk",
+      "title": "The Metropolitan Museum of Art — Uruk: The First City",
+      "url": "https://www.metmuseum.org/essays/uruk-the-first-city"
+    },
+    {
+      "id": "ui-museum-philae",
+      "title": "Rosicrucian Egyptian Museum — Temple of Isis at Philae",
+      "url": "https://www.egyptianmuseum.org/explore/greco-and-roman-period-monuments-philae"
+    },
+    {
+      "id": "ui-penn-abydos",
+      "title": "Penn Museum — Abydos: archaeology of royal and ritual landscapes",
+      "url": "https://www.penn.museum/research/project.php?pid=19"
+    },
+    {
+      "id": "ui-penn-abydos-funerary",
+      "title": "Penn Museum — Early kings and funerary enclosures at Abydos",
+      "url": "https://www.penn.museum/about/press-room/press-releases/archaeologists-discover-evidence-that-courtiers-were-sacrificed-to-accompany-early-egyptian-kings-into-the-afterlife"
+    },
+    {
+      "id": "ui-peru-pachacamac",
+      "title": "Peruvian Ministry of Culture — Pachacamac archaeological sanctuary",
+      "url": "https://pachacamac.cultura.pe/bienvenidos-al-santuario-arqueologico-de-pachacamac"
+    },
+    {
+      "id": "ui-peru-pachacamac-inca",
+      "title": "Peruvian Ministry of Culture — Pachacamac: Inca, Late Horizon (1470–1533)",
+      "url": "https://pachacamac.cultura.pe/node/175"
+    },
+    {
+      "id": "ui-sicily-akragas",
+      "title": "Regione Siciliana — Archaeological Park of the Valley of the Temples",
+      "url": "https://parchiarcheologici.regione.sicilia.it/en/parco-archeologico-della-valle-dei-templi/"
+    },
+    {
+      "id": "ui-smithsonian-havana",
+      "title": "Smithsonian Folkways — Havana, 1957: historical notes on Lukumí cabildos",
+      "url": "https://folkways-media.si.edu/docs/folkways/artwork/SFW40489.pdf"
+    },
+    {
+      "id": "ui-smithsonian-santeria",
+      "title": "Smithsonian Folklife Festival — Santería, David Brown (1989)",
+      "url": "https://festival.si.edu/articles/1989/santeria"
+    },
+    {
+      "id": "ui-unesco-agrigento",
+      "title": "UNESCO — Archaeological Area of Agrigento",
+      "url": "https://whc.unesco.org/en/list/831/"
+    },
+    {
+      "id": "ui-unesco-ahwar",
+      "title": "UNESCO — The Ahwar of Southern Iraq: Uruk, Ur and Eridu",
+      "url": "https://whc.unesco.org/en/list/1481/"
+    },
+    {
+      "id": "ui-unesco-chavin",
+      "title": "UNESCO — Chavín Archaeological Site",
+      "url": "https://whc.unesco.org/en/list/330/"
+    },
+    {
+      "id": "ui-unesco-cusco",
+      "title": "UNESCO — City of Cuzco",
+      "url": "https://whc.unesco.org/en/list/273/"
+    },
+    {
+      "id": "ui-unesco-delphi",
+      "title": "UNESCO — Archaeological Site of Delphi",
+      "url": "https://whc.unesco.org/en/list/393/"
+    },
+    {
+      "id": "ui-unesco-old-oyo",
+      "title": "National Commission for Museums and Monuments / UNESCO — Old Oyo",
+      "url": "https://whc.unesco.org/en/tentativelists/489/"
+    },
+    {
+      "id": "ui-unesco-olympia",
+      "title": "UNESCO — Archaeological Site of Olympia",
+      "url": "https://whc.unesco.org/en/list/517/"
+    },
+    {
+      "id": "ui-unesco-osogbo",
+      "title": "UNESCO — Osun-Osogbo Sacred Grove",
+      "url": "https://whc.unesco.org/en/list/1118/"
+    },
+    {
+      "id": "ui-unesco-tiwanaku",
+      "title": "UNESCO — Tiwanaku: Spiritual and Political Centre of the Tiwanaku Culture",
+      "url": "https://whc.unesco.org/en/list/567/"
+    },
+    {
+      "id": "ui-wenger-osogbo",
+      "title": "Susanne Wenger Foundation — Restoration work in Osogbo, 1958–1959",
+      "url": "https://susannewengerfoundation.at/en/susanne-wenger-1915-2009"
+    },
+    {
+      "id": "unesco-angkor",
+      "title": "UNESCO / ICOMOS — Angkor evaluation",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/668.pdf"
+    },
+    {
+      "id": "unesco-anuradhapura",
+      "title": "UNESCO — Sacred City of Anuradhapura",
+      "url": "https://whc.unesco.org/en/list/200"
+    },
+    {
+      "id": "unesco-baekje",
+      "title": "UNESCO — Baekje Historic Areas",
+      "url": "https://whc.unesco.org/en/list/1477"
+    },
+    {
+      "id": "unesco-bagan",
+      "title": "UNESCO — Bagan",
+      "url": "https://whc.unesco.org/en/list/1588"
+    },
+    {
+      "id": "unesco-cordoba",
+      "title": "UNESCO — Historic Centre of Cordoba",
+      "url": "https://whc.unesco.org/en/list/313"
+    },
+    {
+      "id": "unesco-kairouan",
+      "title": "UNESCO — Kairouan",
+      "url": "https://whc.unesco.org/en/list/499"
+    },
+    {
+      "id": "unesco-kii",
+      "title": "UNESCO — Sacred Sites and Pilgrimage Routes in the Kii Mountain Range",
+      "url": "https://whc.unesco.org/en/list/1142"
+    },
+    {
+      "id": "unesco-kilwa",
+      "title": "UNESCO — Ruins of Kilwa Kisiwani and Songo Mnara",
+      "url": "https://whc.unesco.org/en/list/144"
+    },
+    {
+      "id": "unesco-kyiv",
+      "title": "UNESCO — Kyiv: Saint-Sophia and Kyiv-Pechersk Lavra",
+      "url": "https://whc.unesco.org/en/list/527"
+    },
+    {
+      "id": "unesco-melaka",
+      "title": "UNESCO / ICOMOS — Melaka and George Town evaluation",
+      "url": "https://whc.unesco.org/document/152086"
+    },
+    {
+      "id": "unesco-philippines",
+      "title": "UNESCO — Baroque Churches of the Philippines",
+      "url": "https://whc.unesco.org/en/list/677"
+    },
+    {
+      "id": "unesco-popocatepetl",
+      "title": "UNESCO — Earliest 16th-Century Monasteries on the Slopes of Popocatepetl",
+      "url": "https://whc.unesco.org/en/list/702"
+    },
+    {
+      "id": "unesco-prambanan",
+      "title": "UNESCO — Prambanan Temple Compounds",
+      "url": "https://whc.unesco.org/en/list/642"
+    },
+    {
+      "id": "unesco-qingcheng",
+      "title": "UNESCO — Mount Qingcheng and Dujiangyan",
+      "url": "https://whc.unesco.org/en/list/1001"
+    },
+    {
+      "id": "unesco-qufu",
+      "title": "UNESCO — Temple and Cemetery of Confucius and the Kong Family Mansion in Qufu",
+      "url": "https://whc.unesco.org/en/list/704"
+    },
+    {
+      "id": "unesco-qutb",
+      "title": "UNESCO / ICOMOS — Qutb Minar and its monuments",
+      "url": "https://whc.unesco.org/archive/advisory_body_evaluation/233.pdf"
+    },
+    {
+      "id": "unesco-sanchi",
+      "title": "UNESCO — Buddhist Monuments at Sanchi",
+      "url": "https://whc.unesco.org/en/list/524"
+    },
+    {
+      "id": "unesco-seowon",
+      "title": "UNESCO — Seowon, Korean Neo-Confucian Academies",
+      "url": "https://whc.unesco.org/en/list/1498"
+    },
+    {
+      "id": "unesco-sukhothai",
+      "title": "UNESCO — Historic Town of Sukhothai and Associated Historic Towns",
+      "url": "https://whc.unesco.org/en/list/574"
+    },
+    {
+      "id": "unesco-timbuktu",
+      "title": "UNESCO — Timbuktu",
+      "url": "https://whc.unesco.org/en/list/119"
+    },
+    {
+      "id": "unesco-wittenberg",
+      "title": "UNESCO — Luther Memorials in Eisleben and Wittenberg",
+      "url": "https://whc.unesco.org/en/list/783"
+    },
+    {
+      "id": "unesco-wudang",
+      "title": "UNESCO — Ancient Building Complex in the Wudang Mountains",
+      "url": "https://whc.unesco.org/en/list/705"
+    },
+    {
+      "id": "vietnam-hanoi",
+      "title": "Vietnam National Authority of Tourism — Six heritage sites of Hanoi",
+      "url": "https://beta-v1.vietnam.travel/things-to-do/hanoi-six-heritage-sites"
+    },
+    {
+      "id": "yale-dura-synagogue",
+      "title": "Yale University Art Gallery — Dura-Europos synagogue",
+      "url": "https://duraeuropos.artgallery.yale.edu/Synagogue"
+    }
+  ],
+  "traditions": [
+    {
+      "id": "mesopotamian",
+      "names": {
+        "fr": "Traditions mésopotamiennes",
+        "en": "Mesopotamian traditions"
+      },
+      "description": {
+        "fr": "Cultes de cités et traditions royales variés, attestés par les sanctuaires et les objets archéologiques. Les étapes retenues ne fixent pas une naissance unique.",
+        "en": "Diverse city cults and royal traditions documented by sanctuaries and archaeological objects. Selected milestones do not establish a single founding moment."
+      },
+      "color": "#bb8a59",
+      "symbol": "cuneiform"
+    },
+    {
+      "id": "egyptian",
+      "names": {
+        "fr": "Traditions égyptiennes anciennes",
+        "en": "Ancient Egyptian traditions"
+      },
+      "description": {
+        "fr": "Cultes locaux, pratiques funéraires et sanctuaires royaux de la vallée du Nil, transformés au fil des dynasties.",
+        "en": "Local cults, funerary practices and royal sanctuaries of the Nile Valley, changing across successive dynasties."
+      },
+      "color": "#dcae43",
+      "symbol": "ankh"
+    },
+    {
+      "id": "hinduism",
+      "names": {
+        "fr": "Traditions védiques et hindoues",
+        "en": "Vedic and Hindu traditions"
+      },
+      "description": {
+        "fr": "Famille diverse de traditions rituelles, philosophiques et dévotionnelles, sans fondateur unique. Les cultes locaux et les autres religions continuent de coexister.",
+        "en": "Diverse ritual, philosophical and devotional traditions without a single founder. Local practices and other religions continue to coexist."
+      },
+      "color": "#ed9155",
+      "symbol": "om"
+    },
+    {
+      "id": "andean",
+      "names": {
+        "fr": "Traditions andines et incas",
+        "en": "Andean and Inca traditions"
+      },
+      "description": {
+        "fr": "Ensemble régional de traditions distinctes : Chavín, Tiwanaku et cultes incas. Leur regroupement géographique ne démontre pas une filiation religieuse continue.",
+        "en": "A regional grouping of distinct traditions: Chavín, Tiwanaku and Inca cults. Geographic grouping does not establish continuous religious descent."
+      },
+      "color": "#d87543",
+      "symbol": "andean-sun"
+    },
+    {
+      "id": "zoroastrianism",
+      "names": {
+        "fr": "Zoroastrisme",
+        "en": "Zoroastrianism"
+      },
+      "description": {
+        "fr": "Traditions iraniennes et parsies. La date et le lieu de la vie de Zarathoustra restent débattus.",
+        "en": "Iranian and Parsi traditions. The date and location of Zarathustra’s life remain debated."
+      },
+      "color": "#e5a94c",
+      "symbol": "faravahar"
+    },
+    {
+      "id": "greco-roman",
+      "names": {
+        "fr": "Traditions grecques et romaines",
+        "en": "Greek and Roman traditions"
+      },
+      "description": {
+        "fr": "Religions civiques et sanctuaires multiples du monde grec et romain. Les rapprochements culturels ne supposent pas une origine unique.",
+        "en": "Multiple civic religions and sanctuaries of the Greek and Roman worlds. Cultural connections do not imply a single origin."
+      },
+      "color": "#9286c4",
+      "symbol": "laurel"
+    },
+    {
+      "id": "judaism",
+      "names": {
+        "fr": "Judaïsme",
+        "en": "Judaism"
+      },
+      "description": {
+        "fr": "Traditions juives issues de l’histoire d’Israël et de Juda, transformées au fil des diasporas. Les premiers jalons ne fixent pas une fondation unique.",
+        "en": "Jewish traditions rooted in the history of Israel and Judah and transformed through diasporas. Early milestones do not establish a single founding event."
+      },
+      "color": "#5789d1",
+      "symbol": "menorah"
+    },
+    {
+      "id": "jainism",
+      "names": {
+        "fr": "Jaïnisme",
+        "en": "Jainism"
+      },
+      "description": {
+        "fr": "Traditions des Jina, dont les courants digambara et shvetambara. Mahavira est le dernier des vingt-quatre Tirthankara de la tradition.",
+        "en": "Traditions of the Jinas, including Digambara and Shvetambara communities. Mahavira is the last of the tradition’s twenty-four Tirthankaras."
+      },
+      "color": "#c9bb69",
+      "symbol": "ahimsa"
+    },
+    {
+      "id": "daoism",
+      "names": {
+        "fr": "Traditions taoïstes",
+        "en": "Daoist traditions"
+      },
+      "description": {
+        "fr": "Textes philosophiques, communautés rituelles et lignées religieuses chinoises. Leur formation est progressive et leur relation aux autres traditions étroite.",
+        "en": "Chinese philosophical texts, ritual communities and religious lineages. They developed gradually and interacted closely with other traditions."
+      },
+      "color": "#55b6ab",
+      "symbol": "yin-yang"
+    },
+    {
+      "id": "confucianism",
+      "names": {
+        "fr": "Traditions confucéennes",
+        "en": "Confucian traditions"
+      },
+      "description": {
+        "fr": "Enseignements éthiques, rites et institutions savantes de l’Asie orientale. Leur classement comme religion ou philosophie varie selon les contextes.",
+        "en": "Ethical teachings, rituals and scholarly institutions of East Asia. Their classification as religion or philosophy varies with context."
+      },
+      "color": "#bc786e",
+      "symbol": "confucian"
+    },
+    {
+      "id": "buddhism",
+      "names": {
+        "fr": "Bouddhismes",
+        "en": "Buddhist traditions"
+      },
+      "description": {
+        "fr": "Traditions theravada, mahayana et vajrayana, transmises et adaptées par des communautés diverses. Les routes résument des échanges documentés.",
+        "en": "Theravada, Mahayana and Vajrayana traditions, transmitted and adapted by diverse communities. Routes summarize documented exchanges."
+      },
+      "color": "#e3c153",
+      "symbol": "dharma-wheel"
+    },
+    {
+      "id": "christianity",
+      "names": {
+        "fr": "Christianismes",
+        "en": "Christian traditions"
+      },
+      "description": {
+        "fr": "Traditions issues des premiers disciples de Jésus : Églises orientales, orthodoxes, catholiques et protestantes notamment. Aucun jalon n’implique une conversion générale.",
+        "en": "Traditions emerging from Jesus’ first followers, including Eastern, Orthodox, Catholic and Protestant churches. No milestone implies universal conversion."
+      },
+      "color": "#ae83d8",
+      "symbol": "cross"
+    },
+    {
+      "id": "islam",
+      "names": {
+        "fr": "Islam",
+        "en": "Islam"
+      },
+      "description": {
+        "fr": "Traditions musulmanes diverses, notamment sunnites et chiites. Conquête politique, adoption religieuse et circulation des savoirs sont des phénomènes distincts.",
+        "en": "Diverse Muslim traditions, including Sunni and Shia communities. Political conquest, religious adoption and circulation of knowledge are distinct processes."
+      },
+      "color": "#4da995",
+      "symbol": "crescent"
+    },
+    {
+      "id": "shinto",
+      "names": {
+        "fr": "Cultes des kami et shinto",
+        "en": "Kami worship and Shinto"
+      },
+      "description": {
+        "fr": "Traditions japonaises des kami, sans fondation unique ; elles se sont longtemps entremêlées aux pratiques bouddhiques. Les jalons sont des attestations de sanctuaires.",
+        "en": "Japanese kami traditions without a single founding event; they were long intertwined with Buddhist practices. Milestones attest particular shrines."
+      },
+      "color": "#db7379",
+      "symbol": "torii"
+    },
+    {
+      "id": "yoruba-orisha",
+      "names": {
+        "fr": "Traditions yoruba / Òrìṣà et diasporas",
+        "en": "Yoruba / Òrìṣà traditions and diasporas"
+      },
+      "description": {
+        "fr": "Traditions plurielles d’Afrique occidentale et créations religieuses de leurs diasporas. Ife est un foyer attesté, sans date d’origine unique assignable ; les traversées atlantiques renvoient à la traite esclavagiste.",
+        "en": "Plural West African traditions and religious creations of their diasporas. Ife is an attested centre without an assignable single origin date; Atlantic connections refer to the slave trade."
+      },
+      "color": "#b75690",
+      "symbol": "orisha"
+    },
+    {
+      "id": "sikhism",
+      "names": {
+        "fr": "Sikhisme",
+        "en": "Sikhism"
+      },
+      "description": {
+        "fr": "Tradition des gurus du Pendjab et de leurs communautés diasporiques. Les jalons retracent des institutions et des migrations documentées.",
+        "en": "Tradition of the Punjab’s gurus and their diasporic communities. Milestones trace documented institutions and migrations."
+      },
+      "color": "#e9a83e",
+      "symbol": "khanda"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "mesopotamian-uruk",
+      "traditionId": "mesopotamian",
+      "kind": "origin",
+      "year": -3199,
+      "approximate": true,
+      "title": {
+        "fr": "Uruk : un foyer urbain sacré",
+        "en": "Uruk: an urban sacred centre"
+      },
+      "description": {
+        "fr": "Vers 3200 av. n. è., Uruk est une grande cité de la plaine alluviale. Ses ensembles sacrés participent aux traditions urbaines des IVe–IIIe millénaires ; ce repère n’est pas une date de création de la religion.",
+        "en": "Around 3200 BCE, Uruk was a major city of the alluvial plain. Its sacred complexes belong to urban traditions of the fourth–third millennia; this marker is not a founding date for religion."
+      },
+      "coordinates": [
+        45.636,
+        31.322
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "ui-met-uruk",
+        "ui-unesco-ahwar"
+      ]
+    },
+    {
+      "id": "egyptian-abydos",
+      "traditionId": "egyptian",
+      "kind": "origin",
+      "year": -2999,
+      "approximate": true,
+      "title": {
+        "fr": "Abydos : rites funéraires royaux",
+        "en": "Abydos: royal funerary rites"
+      },
+      "description": {
+        "fr": "Les tombes et enceintes des premiers souverains, vers 3000–2800 av. n. è., documentent des pratiques funéraires royales. Ce jalon ne date pas la naissance des croyances égyptiennes ni le début du culte d’Osiris.",
+        "en": "Tombs and enclosures of early rulers, around 3000–2800 BCE, document royal funerary practices. This milestone dates neither the beginning of Egyptian beliefs nor the start of Osiris worship."
+      },
+      "coordinates": [
+        31.919,
+        26.185
+      ],
+      "mechanisms": [
+        "emergence",
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-penn-abydos",
+        "ui-penn-abydos-funerary"
+      ]
+    },
+    {
+      "id": "mesopotamian-nippur",
+      "traditionId": "mesopotamian",
+      "kind": "spread",
+      "year": -2499,
+      "approximate": true,
+      "title": {
+        "fr": "Nippur : le temple d’Inanna",
+        "en": "Nippur: the temple of Inanna"
+      },
+      "description": {
+        "fr": "Une tablette trouvée dans le temple d’Inanna est datée d’environ 2600–2350 av. n. è. Le repère vers 2500 représente cette attestation du culte dans une autre cité mésopotamienne.",
+        "en": "A tablet excavated in Inanna’s temple is dated about 2600–2350 BCE. The marker around 2500 represents this attestation of worship in another Mesopotamian city."
+      },
+      "coordinates": [
+        45.235,
+        32.126
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "ui-met-nippur"
+      ]
+    },
+    {
+      "id": "egyptian-karnak",
+      "traditionId": "egyptian",
+      "kind": "spread",
+      "year": -2099,
+      "approximate": true,
+      "title": {
+        "fr": "Thèbes : premières traces à Karnak",
+        "en": "Thebes: early evidence at Karnak"
+      },
+      "description": {
+        "fr": "Le ministère égyptien situe les premiers vestiges sous Intef II, vers 2112–2063 av. n. è. Karnak devient un sanctuaire majeur d’Amon, agrandi par de nombreux souverains.",
+        "en": "Egypt’s antiquities ministry dates the earliest evidence to Intef II, around 2112–2063 BCE. Karnak became a major sanctuary of Amun, enlarged by many rulers."
+      },
+      "coordinates": [
+        32.657,
+        25.719
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-egypt-karnak",
+        "ui-penn-abydos"
+      ],
+      "area": {
+        "label": {
+          "fr": "Abydos–Thèbes — foyers de Haute-Égypte",
+          "en": "Abydos–Thebes — Upper Egyptian centres"
+        },
+        "ring": [
+          [
+            31.79,
+            26.32
+          ],
+          [
+            32.18,
+            26.31
+          ],
+          [
+            32.89,
+            25.84
+          ],
+          [
+            32.87,
+            25.59
+          ],
+          [
+            32.44,
+            25.6
+          ],
+          [
+            31.79,
+            26.12
+          ],
+          [
+            31.79,
+            26.32
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mesopotamian-ur",
+      "traditionId": "mesopotamian",
+      "kind": "spread",
+      "year": -2099,
+      "approximate": true,
+      "title": {
+        "fr": "Ur : temples et patronage d’Ur-Nammu",
+        "en": "Ur: temples and Ur-Nammu’s patronage"
+      },
+      "description": {
+        "fr": "Vers 2100 av. n. è., Ur-Nammu fait construire des temples et des ziggourats à Ur, Eridu, Uruk et Nippur. La zone situe les foyers méridionaux cités, sans restituer des frontières religieuses.",
+        "en": "Around 2100 BCE, Ur-Nammu built temples and ziggurats at Ur, Eridu, Uruk and Nippur. The area locates the named southern centres without reconstructing religious borders."
+      },
+      "coordinates": [
+        46.103,
+        30.962
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-met-ur",
+        "ui-unesco-ahwar"
+      ],
+      "area": {
+        "label": {
+          "fr": "Basse plaine mésopotamienne — foyers schématiques",
+          "en": "Lower Mesopotamian plain — schematic centres"
+        },
+        "ring": [
+          [
+            45.32,
+            31.64
+          ],
+          [
+            45.92,
+            31.61
+          ],
+          [
+            46.44,
+            31.11
+          ],
+          [
+            46.21,
+            30.67
+          ],
+          [
+            45.7,
+            30.85
+          ],
+          [
+            45.32,
+            31.64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hinduism-vedic-punjab",
+      "traditionId": "hinduism",
+      "kind": "origin",
+      "year": -1499,
+      "approximate": true,
+      "title": {
+        "fr": "Traditions védiques du nord-ouest",
+        "en": "Vedic traditions of the northwest"
+      },
+      "description": {
+        "fr": "Repère pour les transformations de 1500–1000 av. J.-C. : migrations indo-aryennes, hymnes et rites védiques. Il ne date ni tous les cultes indiens ni une religion hindoue déjà unifiée.",
+        "en": "A marker for changes in 1500–1000 BCE: Indo-Aryan migration, hymns and Vedic rituals. It does not date all Indian worship or an already unified Hindu religion."
+      },
+      "coordinates": [
+        73.6,
+        31.5
+      ],
+      "mechanisms": [
+        "emergence",
+        "migration"
+      ],
+      "sourceIds": [
+        "harvard-hinduism"
+      ],
+      "area": {
+        "label": {
+          "fr": "Région des rivières du Pendjab",
+          "en": "Punjab river region"
+        },
+        "ring": [
+          [
+            71.1,
+            29.5
+          ],
+          [
+            73.3,
+            29.3
+          ],
+          [
+            76.4,
+            30.6
+          ],
+          [
+            76,
+            32.8
+          ],
+          [
+            73.7,
+            33.5
+          ],
+          [
+            71.2,
+            32.3
+          ],
+          [
+            71.1,
+            29.5
+          ]
+        ]
+      }
+    },
+    {
+      "id": "egyptian-abu-simbel",
+      "traditionId": "egyptian",
+      "kind": "spread",
+      "year": -1263,
+      "approximate": true,
+      "title": {
+        "fr": "Abou Simbel : sanctuaire royal en Nubie",
+        "en": "Abu Simbel: a royal sanctuary in Nubia"
+      },
+      "description": {
+        "fr": "Vers 1264 av. n. è., Ramsès II fait édifier un temple à Amon-Rê, Rê-Horakhty, Ptah et au roi divinisé. Le lien depuis Thèbes schématise la présence du culte d’Amon dans ce programme royal méridional.",
+        "en": "Around 1264 BCE, Ramesses II commissioned a temple to Amun-Ra, Ra-Horakhty, Ptah and the deified king. The link from Thebes sketches Amun’s presence in this southern royal programme."
+      },
+      "coordinates": [
+        31.626,
+        22.336
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-egypt-abu-simbel",
+        "ui-egypt-karnak"
+      ],
+      "fromId": "egyptian-karnak"
+    },
+    {
+      "id": "andean-chavin",
+      "traditionId": "andean",
+      "kind": "origin",
+      "year": -1199,
+      "approximate": true,
+      "title": {
+        "fr": "Chavín : centre cérémoniel et pèlerinages",
+        "en": "Chavín: ceremonial centre and pilgrimage"
+      },
+      "description": {
+        "fr": "L’UNESCO situe ce foyer de culture et de culte aux XVe–Ve siècles av. n. è. Vers 1200 est un repère dans cette longue période ; ses échanges religieux concernent les Andes du nord et du centre du Pérou.",
+        "en": "UNESCO places this cultural and religious centre in the fifteenth–fifth centuries BCE. Around 1200 is a marker within that long period; its religious connections involved northern and central Peruvian Andes."
+      },
+      "coordinates": [
+        -77.177,
+        -9.594
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "ui-unesco-chavin"
+      ],
+      "area": {
+        "label": {
+          "fr": "Chavín et hautes terres d’Ancash — schéma",
+          "en": "Chavín and Ancash highlands — sketch"
+        },
+        "ring": [
+          [
+            -77.48,
+            -9.17
+          ],
+          [
+            -76.98,
+            -9.25
+          ],
+          [
+            -76.82,
+            -9.71
+          ],
+          [
+            -77.17,
+            -9.99
+          ],
+          [
+            -77.48,
+            -9.67
+          ],
+          [
+            -77.48,
+            -9.17
+          ]
+        ]
+      }
+    },
+    {
+      "id": "zoroastrianism-iranian-east",
+      "traditionId": "zoroastrianism",
+      "kind": "origin",
+      "year": -999,
+      "approximate": true,
+      "title": {
+        "fr": "Zarathoustra : chronologie débattue",
+        "en": "Zarathustra: a debated chronology"
+      },
+      "description": {
+        "fr": "Vers 1000 av. J.-C. est un repère de lecture : les propositions savantes s’étendent largement dans le IIe et le Ier millénaire. Le point représente le monde iranien oriental, pas un lieu de naissance établi.",
+        "en": "Around 1000 BCE is a display marker: scholarly proposals range widely across the second and first millennia. The point represents the eastern Iranian world, not an established birthplace."
+      },
+      "coordinates": [
+        64,
+        36
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "iranica-zoroaster"
+      ]
+    },
+    {
+      "id": "greco-roman-olympia",
+      "traditionId": "greco-roman",
+      "kind": "origin",
+      "year": -949,
+      "approximate": true,
+      "title": {
+        "fr": "Olympie : sanctuaire de Zeus",
+        "en": "Olympia: sanctuary of Zeus"
+      },
+      "description": {
+        "fr": "L’UNESCO situe l’émergence du centre de culte de Zeus au Xe siècle av. n. è. La date vers 950 représente cette fourchette, et non le commencement de toutes les religions grecques.",
+        "en": "UNESCO dates the emergence of Zeus’s cult centre to the tenth century BCE. The marker around 950 represents that range, not the beginning of all Greek religions."
+      },
+      "coordinates": [
+        21.63,
+        37.638
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "ui-unesco-olympia"
+      ],
+      "area": {
+        "label": {
+          "fr": "Olympie et vallée de l’Alphée — schéma",
+          "en": "Olympia and Alpheios valley — sketch"
+        },
+        "ring": [
+          [
+            21.38,
+            37.68
+          ],
+          [
+            21.62,
+            37.79
+          ],
+          [
+            21.88,
+            37.68
+          ],
+          [
+            21.84,
+            37.52
+          ],
+          [
+            21.55,
+            37.5
+          ],
+          [
+            21.38,
+            37.61
+          ],
+          [
+            21.38,
+            37.68
+          ]
+        ]
+      }
+    },
+    {
+      "id": "greco-roman-delphi",
+      "traditionId": "greco-roman",
+      "kind": "spread",
+      "year": -749,
+      "approximate": true,
+      "title": {
+        "fr": "Delphes : un sanctuaire d’Apollon",
+        "en": "Delphi: a sanctuary of Apollo"
+      },
+      "description": {
+        "fr": "Le sanctuaire et l’oracle d’Apollon se développent au VIIIe siècle av. n. è. Delphes devient un lieu de consultation et de rencontre du monde grec, sans qu’un transfert direct depuis Olympie soit établi ici.",
+        "en": "Apollo’s sanctuary and oracle developed in the eighth century BCE. Delphi became a place of consultation and encounter in the Greek world; no direct transfer from Olympia is asserted here."
+      },
+      "coordinates": [
+        22.501,
+        38.483
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "ui-unesco-delphi"
+      ],
+      "area": {
+        "label": {
+          "fr": "Delphes et versant du Parnasse — schéma",
+          "en": "Delphi and Parnassus foothills — sketch"
+        },
+        "ring": [
+          [
+            22.31,
+            38.49
+          ],
+          [
+            22.48,
+            38.65
+          ],
+          [
+            22.69,
+            38.58
+          ],
+          [
+            22.72,
+            38.4
+          ],
+          [
+            22.48,
+            38.35
+          ],
+          [
+            22.31,
+            38.42
+          ],
+          [
+            22.31,
+            38.49
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hinduism-upanishads",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": -699,
+      "approximate": true,
+      "title": {
+        "fr": "Les premières Upanishad",
+        "en": "The early Upanishads"
+      },
+      "description": {
+        "fr": "Les premiers textes se constituent au cours du Ier millénaire av. J.-C. Le point est un repère de la plaine gangétique, pas un atelier de rédaction précisément localisé.",
+        "en": "The early texts developed during the first millennium BCE. The point represents the Gangetic plain, not a precisely located place of composition."
+      },
+      "coordinates": [
+        83,
+        25.3
+      ],
+      "mechanisms": [
+        "reform"
+      ],
+      "sourceIds": [
+        "harvard-hinduism"
+      ]
+    },
+    {
+      "id": "judaism-jerusalem",
+      "traditionId": "judaism",
+      "kind": "origin",
+      "year": -599,
+      "approximate": true,
+      "title": {
+        "fr": "Juda à la fin du Premier Temple",
+        "en": "Judah in the late First Temple period"
+      },
+      "description": {
+        "fr": "Premier repère choisi ici : vers 600 av. J.-C., avant les prises babyloniennes de Jérusalem. Ce n’est ni une première attestation absolue ni la fondation du judaïsme, issu de traditions judéennes plus anciennes.",
+        "en": "The first marker selected here: around 600 BCE, before the Babylonian captures of Jerusalem. This is neither the earliest possible attestation nor Judaism’s foundation, which draws on older Judean traditions."
+      },
+      "coordinates": [
+        35.23,
+        31.78
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "bm-jerusalem-chronicle",
+        "met-judean-diaspora"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer judéen autour de Jérusalem",
+          "en": "Judean center around Jerusalem"
+        },
+        "ring": [
+          [
+            34.95,
+            31.4
+          ],
+          [
+            35.35,
+            31.4
+          ],
+          [
+            35.45,
+            31.8
+          ],
+          [
+            35.25,
+            32.1
+          ],
+          [
+            34.98,
+            31.9
+          ],
+          [
+            34.95,
+            31.4
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mesopotamian-babylon",
+      "traditionId": "mesopotamian",
+      "kind": "spread",
+      "year": -599,
+      "approximate": true,
+      "title": {
+        "fr": "Babylone : Marduk et les processions",
+        "en": "Babylon: Marduk and processions"
+      },
+      "description": {
+        "fr": "Le règne de Nabuchodonosor II, 604–562 av. n. è., transforme les temples et la voie processionnelle. Le culte de Marduk est antérieur ; la date vers 600 marque ce programme monumental.",
+        "en": "Nebuchadnezzar II’s reign, 604–562 BCE, transformed temples and the Processional Way. Marduk’s worship was older; the marker around 600 dates this monumental programme."
+      },
+      "coordinates": [
+        44.421,
+        32.543
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-met-babylon",
+        "ui-met-nippur"
+      ],
+      "area": {
+        "label": {
+          "fr": "Babylone et Nippur — corridor schématique",
+          "en": "Babylon and Nippur — schematic corridor"
+        },
+        "ring": [
+          [
+            44.13,
+            32.7
+          ],
+          [
+            44.61,
+            32.76
+          ],
+          [
+            45.46,
+            32.32
+          ],
+          [
+            45.4,
+            31.98
+          ],
+          [
+            44.88,
+            32.02
+          ],
+          [
+            44.13,
+            32.7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "judaism-babylonia",
+      "traditionId": "judaism",
+      "kind": "spread",
+      "year": -571,
+      "approximate": true,
+      "title": {
+        "fr": "Communautés judéennes en Babylonie",
+        "en": "Judean communities in Babylonia"
+      },
+      "description": {
+        "fr": "Des archives de 572/571 av. J.-C. attestent des déportés judéens et leurs descendants. Le point situe la Babylonie ; les villages documentés ne se réduisent pas à Babylone.",
+        "en": "Archives from 572/571 BCE attest Judean deportees and their descendants. The marker locates Babylonia; the documented villages were not confined to Babylon."
+      },
+      "coordinates": [
+        44.42,
+        32.54
+      ],
+      "mechanisms": [
+        "diaspora",
+        "conquest"
+      ],
+      "sourceIds": [
+        "met-judean-diaspora"
+      ],
+      "fromId": "judaism-jerusalem"
+    },
+    {
+      "id": "greco-roman-akragas",
+      "traditionId": "greco-roman",
+      "kind": "spread",
+      "year": -519,
+      "approximate": true,
+      "title": {
+        "fr": "Akragas : temples grecs en Sicile",
+        "en": "Akragas: Greek temples in Sicily"
+      },
+      "description": {
+        "fr": "Le parc archéologique date le temple d’Héraclès de la fin du VIe siècle av. n. è. Vers 520 représente cette période : la présence religieuse accompagne une cité issue de la colonisation grecque.",
+        "en": "The archaeological park dates the temple of Heracles to the late sixth century BCE. Around 520 represents that period: religious life developed in a city founded through Greek colonisation."
+      },
+      "coordinates": [
+        13.585,
+        37.29
+      ],
+      "mechanisms": [
+        "migration",
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-sicily-akragas",
+        "ui-unesco-agrigento"
+      ],
+      "area": {
+        "label": {
+          "fr": "Akragas et son littoral — schéma local",
+          "en": "Akragas and its coast — local sketch"
+        },
+        "ring": [
+          [
+            13.45,
+            37.36
+          ],
+          [
+            13.61,
+            37.39
+          ],
+          [
+            13.75,
+            37.28
+          ],
+          [
+            13.66,
+            37.15
+          ],
+          [
+            13.44,
+            37.21
+          ],
+          [
+            13.45,
+            37.36
+          ]
+        ]
+      }
+    },
+    {
+      "id": "daoism-classical",
+      "traditionId": "daoism",
+      "kind": "origin",
+      "year": -499,
+      "approximate": true,
+      "title": {
+        "fr": "Textes et courants de la Chine ancienne",
+        "en": "Texts and currents of ancient China"
+      },
+      "description": {
+        "fr": "Vers 500 av. J.-C. est un repère approximatif pour les premiers courants associés au taoïsme. Textes, auteurs et datations sont discutés ; le point ne localise pas la naissance de Laozi.",
+        "en": "Around 500 BCE is an approximate marker for early currents associated with Daoism. Texts, authors and dates are debated; the point does not locate Laozi’s birthplace."
+      },
+      "coordinates": [
+        112.5,
+        34.6
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "met-daoism"
+      ]
+    },
+    {
+      "id": "jainism-mahavira",
+      "traditionId": "jainism",
+      "kind": "origin",
+      "year": -499,
+      "approximate": true,
+      "title": {
+        "fr": "Mahavira et les communautés du Bihar",
+        "en": "Mahavira and the communities of Bihar"
+      },
+      "description": {
+        "fr": "Repère des VIe–Ve siècles av. J.-C., aux dates discutées. Mahavira enseigne dans la région du Bihar ; il s’inscrit dans une tradition qui reconnaît des maîtres antérieurs.",
+        "en": "A sixth–fifth-century BCE marker with debated dates. Mahavira taught in the Bihar region within a tradition recognizing earlier teachers."
+      },
+      "coordinates": [
+        85.13,
+        25.99
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "harvard-mahavira"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyers du Bihar ancien",
+          "en": "Centers of ancient Bihar"
+        },
+        "ring": [
+          [
+            84.4,
+            24.8
+          ],
+          [
+            85.7,
+            24.7
+          ],
+          [
+            86.1,
+            25.8
+          ],
+          [
+            85.7,
+            26.3
+          ],
+          [
+            84.5,
+            26.1
+          ],
+          [
+            84.4,
+            24.8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confucianism-qufu",
+      "traditionId": "confucianism",
+      "kind": "origin",
+      "year": -477,
+      "approximate": false,
+      "title": {
+        "fr": "Un sanctuaire à Confucius à Qufu",
+        "en": "A shrine to Confucius at Qufu"
+      },
+      "description": {
+        "fr": "Le temple commémoratif est établi en 478 av. J.-C., après la mort de Confucius. Ce premier jalon du corpus n’est pas la naissance de ses enseignements.",
+        "en": "The commemorative temple was established in 478 BCE, after Confucius’ death. This first corpus milestone is not the birth of his teachings."
+      },
+      "coordinates": [
+        116.986,
+        35.597
+      ],
+      "mechanisms": [
+        "emergence",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-qufu"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Qufu au Shandong",
+          "en": "Qufu center in Shandong"
+        },
+        "ring": [
+          [
+            116.68,
+            35.37
+          ],
+          [
+            117.18,
+            35.35
+          ],
+          [
+            117.31,
+            35.68
+          ],
+          [
+            117.04,
+            35.89
+          ],
+          [
+            116.7,
+            35.77
+          ],
+          [
+            116.68,
+            35.37
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-gangetic",
+      "traditionId": "buddhism",
+      "kind": "origin",
+      "year": -449,
+      "approximate": true,
+      "title": {
+        "fr": "Les premières communautés bouddhiques",
+        "en": "The early Buddhist communities"
+      },
+      "description": {
+        "fr": "Repère des VIe–Ve siècles av. J.-C. dans la plaine gangétique. La chronologie de la vie du Bouddha demeure débattue ; Sarnath représente ici la mémoire de son enseignement.",
+        "en": "A sixth–fifth-century BCE marker in the Gangetic plain. The Buddha’s lifetime remains debated; Sarnath here represents the memory of his teaching."
+      },
+      "coordinates": [
+        83.023,
+        25.381
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "harvard-buddhism"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyers de la moyenne plaine gangétique",
+          "en": "Centers of the middle Gangetic plain"
+        },
+        "ring": [
+          [
+            82.5,
+            24.9
+          ],
+          [
+            84.8,
+            24.4
+          ],
+          [
+            85.9,
+            25.1
+          ],
+          [
+            85.7,
+            26.4
+          ],
+          [
+            83.6,
+            27
+          ],
+          [
+            82.3,
+            26.2
+          ],
+          [
+            82.5,
+            24.9
+          ]
+        ]
+      }
+    },
+    {
+      "id": "egyptian-philae",
+      "traditionId": "egyptian",
+      "kind": "spread",
+      "year": -279,
+      "approximate": true,
+      "title": {
+        "fr": "Philae : Isis sous les Ptolémées",
+        "en": "Philae: Isis under the Ptolemies"
+      },
+      "description": {
+        "fr": "Le temple d’Isis commence vers 280 av. n. è., sous Ptolémée II. Le culte égyptien reçoit ainsi un nouveau patronage dynastique ; le point situe l’ancienne île de Philae, avant le déplacement moderne des monuments.",
+        "en": "Isis’s temple began around 280 BCE under Ptolemy II. Egyptian worship thus received renewed dynastic patronage; the point locates the original island of Philae before the monuments’ modern relocation."
+      },
+      "coordinates": [
+        32.889,
+        24.012
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-egypt-philae",
+        "ui-museum-philae"
+      ],
+      "area": {
+        "label": {
+          "fr": "Nil nubien — sanctuaires schématiques",
+          "en": "Nubian Nile — schematic sanctuaries"
+        },
+        "ring": [
+          [
+            31.46,
+            22.22
+          ],
+          [
+            31.85,
+            22.2
+          ],
+          [
+            32.3,
+            22.77
+          ],
+          [
+            32.69,
+            23.25
+          ],
+          [
+            33.06,
+            23.99
+          ],
+          [
+            32.8,
+            24.15
+          ],
+          [
+            32.39,
+            23.48
+          ],
+          [
+            31.99,
+            22.98
+          ],
+          [
+            31.55,
+            22.62
+          ],
+          [
+            31.46,
+            22.22
+          ]
+        ]
+      }
+    },
+    {
+      "id": "judaism-alexandria",
+      "traditionId": "judaism",
+      "kind": "spread",
+      "year": -274,
+      "approximate": true,
+      "title": {
+        "fr": "Diaspora d’Alexandrie au IIIe siècle av. J.-C.",
+        "en": "Alexandrian diaspora in the third century BCE"
+      },
+      "description": {
+        "fr": "Des inscriptions araméennes attestent une communauté au début du IIIe siècle av. J.-C. Alexandrie devient un foyer juif de langue grecque.",
+        "en": "Aramaic inscriptions attest a community in the early third century BCE. Alexandria became a center of Greek-speaking Jewish life."
+      },
+      "coordinates": [
+        29.92,
+        31.2
+      ],
+      "mechanisms": [
+        "migration",
+        "diaspora"
+      ],
+      "sourceIds": [
+        "cambridge-alexandria"
+      ]
+    },
+    {
+      "id": "buddhism-sanchi",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": -259,
+      "approximate": true,
+      "title": {
+        "fr": "Le patronage d’Ashoka à Sanchi",
+        "en": "Ashoka’s patronage at Sanchi"
+      },
+      "description": {
+        "fr": "Au IIIe siècle av. J.-C., le patronage maurya contribue à la formation du sanctuaire. La date situe cette phase, pas l’achèvement de tous les monuments.",
+        "en": "In the third century BCE, Mauryan patronage helped establish the sanctuary. The date marks this phase, not completion of all its monuments."
+      },
+      "coordinates": [
+        77.739,
+        23.48
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-sanchi"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Sanchi et Vidisha",
+          "en": "Sanchi and Vidisha center"
+        },
+        "ring": [
+          [
+            77.54,
+            23.28
+          ],
+          [
+            77.96,
+            23.27
+          ],
+          [
+            78.13,
+            23.52
+          ],
+          [
+            77.94,
+            23.75
+          ],
+          [
+            77.59,
+            23.69
+          ],
+          [
+            77.54,
+            23.28
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-anuradhapura",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": -249,
+      "approximate": true,
+      "title": {
+        "fr": "Le bouddhisme à Anuradhapura",
+        "en": "Buddhism at Anuradhapura"
+      },
+      "description": {
+        "fr": "Au IIIe siècle av. J.-C., des missions venues d’Inde et la tradition de Sanghamitta ancrent un foyer monastique à Anuradhapura. Le lien représente ces échanges indo-lankais.",
+        "en": "In the third century BCE, missions from India and the Sanghamitta tradition anchored a monastic center at Anuradhapura. The link represents these India–Sri Lanka exchanges."
+      },
+      "coordinates": [
+        80.383,
+        8.333
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-anuradhapura",
+        "harvard-buddhist-expansion"
+      ],
+      "fromId": "buddhism-gangetic",
+      "area": {
+        "label": {
+          "fr": "Région monastique d’Anuradhapura",
+          "en": "Anuradhapura monastic region"
+        },
+        "ring": [
+          [
+            80.15,
+            8.08
+          ],
+          [
+            80.54,
+            8.02
+          ],
+          [
+            80.68,
+            8.3
+          ],
+          [
+            80.53,
+            8.62
+          ],
+          [
+            80.18,
+            8.59
+          ],
+          [
+            80.06,
+            8.33
+          ],
+          [
+            80.15,
+            8.08
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-gandhara",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": -99,
+      "approximate": true,
+      "title": {
+        "fr": "Le Gandhara et les réseaux d’Asie centrale",
+        "en": "Gandhara and Central Asian networks"
+      },
+      "description": {
+        "fr": "Vers le Ier siècle av. J.-C., des communautés bouddhiques sont implantées au Gandhara. Les réseaux commerciaux relient ensuite ses foyers à l’Asie centrale et à la Chine.",
+        "en": "By around the first century BCE, Buddhist communities were established in Gandhara. Trade networks subsequently linked its centers to Central Asia and China."
+      },
+      "coordinates": [
+        71.58,
+        34.01
+      ],
+      "mechanisms": [
+        "trade",
+        "mission"
+      ],
+      "sourceIds": [
+        "met-silk-buddhism"
+      ],
+      "area": {
+        "label": {
+          "fr": "Gandhara et vallée du Swat",
+          "en": "Gandhara and Swat valley"
+        },
+        "ring": [
+          [
+            70.7,
+            33.7
+          ],
+          [
+            72.4,
+            33.6
+          ],
+          [
+            72.7,
+            34.4
+          ],
+          [
+            72.3,
+            35.4
+          ],
+          [
+            71.3,
+            35.2
+          ],
+          [
+            70.8,
+            34.5
+          ],
+          [
+            70.7,
+            33.7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "greco-roman-rome",
+      "traditionId": "greco-roman",
+      "kind": "spread",
+      "year": -68,
+      "approximate": true,
+      "title": {
+        "fr": "Rome : le modèle olympien de Jupiter",
+        "en": "Rome: Jupiter’s Olympian model"
+      },
+      "description": {
+        "fr": "Selon les musées du Capitole, la statue cultuelle de Jupiter renouvelée en 69 av. n. è. s’inspire du Zeus de Phidias à Olympie. Le trajet schématise cet emprunt artistique, pas une fondation de la religion romaine.",
+        "en": "According to the Capitoline Museums, Jupiter’s renewed cult statue in 69 BCE drew on Phidias’s Zeus at Olympia. The route sketches this artistic borrowing, not the founding of Roman religion."
+      },
+      "coordinates": [
+        12.482,
+        41.893
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-capitoline-jupiter"
+      ],
+      "fromId": "greco-roman-olympia"
+    },
+    {
+      "id": "christianity-jerusalem",
+      "traditionId": "christianity",
+      "kind": "origin",
+      "year": 30,
+      "approximate": true,
+      "title": {
+        "fr": "Les premiers disciples de Jésus",
+        "en": "Jesus’ early followers"
+      },
+      "description": {
+        "fr": "Vers 30, les disciples de Jésus constituent un mouvement issu du judaïsme. Jérusalem est un de ses premiers foyers.",
+        "en": "Around 30, Jesus’ followers formed a movement emerging within Judaism. Jerusalem was one of its early centers."
+      },
+      "coordinates": [
+        35.23,
+        31.78
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "harvard-christianity"
+      ]
+    },
+    {
+      "id": "christianity-corinth",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 55,
+      "approximate": true,
+      "title": {
+        "fr": "Les communautés des missions de Paul",
+        "en": "Communities of Paul’s missions"
+      },
+      "description": {
+        "fr": "Les lettres des années 50 attestent des communautés méditerranéennes, dont Corinthe. La liaison résume un réseau missionnaire, pas un trajet unique.",
+        "en": "Letters from the 50s attest Mediterranean communities, including Corinth. The link summarizes a missionary network, not one journey."
+      },
+      "coordinates": [
+        22.88,
+        37.91
+      ],
+      "mechanisms": [
+        "mission"
+      ],
+      "sourceIds": [
+        "harvard-christianity"
+      ],
+      "fromId": "christianity-jerusalem",
+      "area": {
+        "label": {
+          "fr": "Foyer de Corinthe et de l’isthme",
+          "en": "Corinth and the isthmus center"
+        },
+        "ring": [
+          [
+            22.64,
+            37.72
+          ],
+          [
+            23.08,
+            37.73
+          ],
+          [
+            23.22,
+            37.97
+          ],
+          [
+            22.98,
+            38.15
+          ],
+          [
+            22.65,
+            38.03
+          ],
+          [
+            22.64,
+            37.72
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-pengcheng",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 65,
+      "approximate": false,
+      "title": {
+        "fr": "Première mention écrite en Chine",
+        "en": "An early written witness in China"
+      },
+      "description": {
+        "fr": "Une mention de 65 associe le prince Ying de Chu à des moines et fidèles bouddhistes. Pengcheng est un repère de cette présence ; la transmission depuis l’ouest emprunte plusieurs relais.",
+        "en": "A record from 65 associates Prince Ying of Chu with Buddhist monks and lay followers. Pengcheng marks this presence; transmission from the west involved multiple intermediaries."
+      },
+      "coordinates": [
+        117.18,
+        34.26
+      ],
+      "mechanisms": [
+        "trade",
+        "mission"
+      ],
+      "sourceIds": [
+        "heidelberg-pengcheng",
+        "met-silk-buddhism"
+      ],
+      "fromId": "buddhism-gandhara"
+    },
+    {
+      "id": "jainism-mathura",
+      "traditionId": "jainism",
+      "kind": "spread",
+      "year": 100,
+      "approximate": true,
+      "title": {
+        "fr": "Témoignages jaïns à Mathura",
+        "en": "Jain evidence at Mathura"
+      },
+      "description": {
+        "fr": "Les objets des premiers siècles de notre ère attestent un centre de culte jaïn à Mathura, aux côtés d’autres traditions religieuses.",
+        "en": "Objects from the early centuries CE attest a Jain religious center at Mathura alongside other religious traditions."
+      },
+      "coordinates": [
+        77.67,
+        27.49
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "soas-jain-mathura"
+      ]
+    },
+    {
+      "id": "daoism-qingcheng",
+      "traditionId": "daoism",
+      "kind": "spread",
+      "year": 142,
+      "approximate": true,
+      "title": {
+        "fr": "Les Maîtres célestes au Sichuan",
+        "en": "The Celestial Masters in Sichuan"
+      },
+      "description": {
+        "fr": "L’année 142 est traditionnellement associée à Zhang Ling et aux débuts des Maîtres célestes. Le mont Qingcheng devient un important foyer de pratiques et de temples taoïstes.",
+        "en": "The year 142 is traditionally associated with Zhang Ling and the beginnings of the Celestial Masters. Mount Qingcheng became an important center of Daoist practices and temples."
+      },
+      "coordinates": [
+        103.56,
+        30.9
+      ],
+      "mechanisms": [
+        "reform",
+        "mission"
+      ],
+      "sourceIds": [
+        "unesco-qingcheng"
+      ],
+      "area": {
+        "label": {
+          "fr": "Mont Qingcheng et piémont occidental du Sichuan",
+          "en": "Mount Qingcheng and western Sichuan foothills"
+        },
+        "ring": [
+          [
+            103.27,
+            30.62
+          ],
+          [
+            103.74,
+            30.6
+          ],
+          [
+            103.91,
+            30.93
+          ],
+          [
+            103.63,
+            31.17
+          ],
+          [
+            103.3,
+            31.08
+          ],
+          [
+            103.27,
+            30.62
+          ]
+        ]
+      }
+    },
+    {
+      "id": "judaism-dura",
+      "traditionId": "judaism",
+      "kind": "spread",
+      "year": 244,
+      "approximate": true,
+      "title": {
+        "fr": "La synagogue de Doura-Europos",
+        "en": "The synagogue of Dura-Europos"
+      },
+      "description": {
+        "fr": "Le décor daté de 244–245 témoigne d’une communauté juive plus ancienne sur l’Euphrate. Il atteste un lieu de culte, sans dater l’arrivée des premiers habitants juifs.",
+        "en": "Decoration dated 244–245 witnesses an older Jewish community on the Euphrates. It attests a place of worship, not the arrival of the first Jewish residents."
+      },
+      "coordinates": [
+        40.73,
+        34.75
+      ],
+      "mechanisms": [
+        "diaspora"
+      ],
+      "sourceIds": [
+        "yale-dura-synagogue"
+      ]
+    },
+    {
+      "id": "zoroastrianism-sasanian-fars",
+      "traditionId": "zoroastrianism",
+      "kind": "spread",
+      "year": 250,
+      "approximate": true,
+      "title": {
+        "fr": "Patronage sassanide en Perse",
+        "en": "Sasanian patronage in Persia"
+      },
+      "description": {
+        "fr": "Au IIIe siècle, les souverains sassanides soutiennent les institutions zoroastriennes. Le foyer du Fars n’efface pas la pluralité religieuse de leur empire.",
+        "en": "In the third century, Sasanian rulers supported Zoroastrian institutions. The Fars center does not erase the religious diversity of their empire."
+      },
+      "coordinates": [
+        52.89,
+        29.99
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "met-sasanians"
+      ],
+      "area": {
+        "label": {
+          "fr": "Fars, foyer sassanide",
+          "en": "Fars, a Sasanian center"
+        },
+        "ring": [
+          [
+            51.5,
+            28.8
+          ],
+          [
+            53.1,
+            28.5
+          ],
+          [
+            54.1,
+            29.4
+          ],
+          [
+            53.7,
+            30.5
+          ],
+          [
+            52.2,
+            30.8
+          ],
+          [
+            51.4,
+            29.8
+          ],
+          [
+            51.5,
+            28.8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "christianity-milan",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 313,
+      "approximate": false,
+      "title": {
+        "fr": "La tolérance impériale de 313",
+        "en": "Imperial toleration in 313"
+      },
+      "description": {
+        "fr": "L’accord de Milan protège le culte chrétien. Le patronage impérial qui suit ne signifie pas conversion immédiate de la population.",
+        "en": "The agreement of Milan protected Christian worship. Subsequent imperial patronage did not mean immediate conversion of the population."
+      },
+      "coordinates": [
+        9.19,
+        45.46
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "harvard-christianity"
+      ]
+    },
+    {
+      "id": "christianity-aksum",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 350,
+      "approximate": true,
+      "title": {
+        "fr": "Le christianisme à la cour d’Aksum",
+        "en": "Christianity at the Aksumite court"
+      },
+      "description": {
+        "fr": "Au IVe siècle, le roi Ezana adopte le christianisme. D’abord lié à la cour, il s’enracine progressivement grâce à de nouveaux réseaux religieux.",
+        "en": "In the fourth century, King Ezana adopted Christianity. Initially associated with the court, it gradually took root through further religious networks."
+      },
+      "coordinates": [
+        38.72,
+        14.13
+      ],
+      "mechanisms": [
+        "patronage",
+        "mission"
+      ],
+      "sourceIds": [
+        "met-aksum"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer des hautes terres d’Aksum",
+          "en": "Aksum highland center"
+        },
+        "ring": [
+          [
+            38.37,
+            13.85
+          ],
+          [
+            39.04,
+            13.82
+          ],
+          [
+            39.19,
+            14.2
+          ],
+          [
+            38.88,
+            14.46
+          ],
+          [
+            38.42,
+            14.4
+          ],
+          [
+            38.37,
+            13.85
+          ]
+        ]
+      }
+    },
+    {
+      "id": "christianity-egypt-monasticism",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 350,
+      "approximate": true,
+      "title": {
+        "fr": "Les foyers monastiques d’Égypte",
+        "en": "Monastic centers in Egypt"
+      },
+      "description": {
+        "fr": "Au IVe siècle, les communautés monastiques s’implantent au Wadi Natrun, parmi les nombreux foyers ascétiques des déserts égyptiens.",
+        "en": "In the fourth century, monastic communities became established in Wadi Natrun, among the many ascetic centers of Egypt’s deserts."
+      },
+      "coordinates": [
+        30.35,
+        30.4
+      ],
+      "mechanisms": [
+        "reform"
+      ],
+      "sourceIds": [
+        "iccrom-wadi-natrun",
+        "harvard-christianity"
+      ],
+      "area": {
+        "label": {
+          "fr": "Région monastique du Wadi Natrun",
+          "en": "Wadi Natrun monastic region"
+        },
+        "ring": [
+          [
+            30.02,
+            30.22
+          ],
+          [
+            30.49,
+            30.14
+          ],
+          [
+            30.69,
+            30.4
+          ],
+          [
+            30.49,
+            30.63
+          ],
+          [
+            30.11,
+            30.59
+          ],
+          [
+            30.02,
+            30.22
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hinduism-kutai",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": 375,
+      "approximate": true,
+      "title": {
+        "fr": "Inscriptions et sacrifices à Kutai",
+        "en": "Inscriptions and sacrifice at Kutai"
+      },
+      "description": {
+        "fr": "Des inscriptions sanskrites de la seconde moitié du IVe siècle commémorent les sacrifices du roi Mulavarman. Elles documentent une appropriation locale de pratiques venues d’Inde.",
+        "en": "Sanskrit inscriptions from the later fourth century commemorate King Mulavarman’s sacrifices. They document local adoption of practices transmitted from India."
+      },
+      "coordinates": [
+        116.76,
+        -0.4
+      ],
+      "mechanisms": [
+        "trade",
+        "patronage"
+      ],
+      "sourceIds": [
+        "anu-kutai",
+        "britannica-hindu-spread"
+      ]
+    },
+    {
+      "id": "christianity-ctesiphon",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 410,
+      "approximate": false,
+      "title": {
+        "fr": "Un synode de l’Église de l’Orient",
+        "en": "A synod of the Church of the East"
+      },
+      "description": {
+        "fr": "Le synode de 410 réunit les évêques de l’Église de l’Orient à Séleucie-Ctésiphon. Ce foyer mésopotamien appartient aux réseaux qui portent ensuite des missions à travers l’Asie centrale.",
+        "en": "The 410 synod gathered bishops of the Church of the East in Seleucia-Ctesiphon. This Mesopotamian center belonged to networks that later carried missions across Central Asia."
+      },
+      "coordinates": [
+        44.56,
+        33.09
+      ],
+      "mechanisms": [
+        "patronage",
+        "reform"
+      ],
+      "sourceIds": [
+        "iranica-ctesiphon-church",
+        "iranica-eastern-christianity"
+      ]
+    },
+    {
+      "id": "andean-tiwanaku",
+      "traditionId": "andean",
+      "kind": "spread",
+      "year": 500,
+      "approximate": true,
+      "title": {
+        "fr": "Tiwanaku : centre spirituel de l’Altiplano",
+        "en": "Tiwanaku: a spiritual centre of the Altiplano"
+      },
+      "description": {
+        "fr": "Tiwanaku atteint son apogée entre 500 et 900 de n. è. Ce centre spirituel et politique du sud du lac Titicaca représente une tradition distincte ; aucune filiation directe depuis Chavín n’est tracée.",
+        "en": "Tiwanaku reached its height between 500 and 900 CE. This spiritual and political centre south of Lake Titicaca represents a distinct tradition; no direct lineage from Chavín is drawn."
+      },
+      "coordinates": [
+        -68.673,
+        -16.554
+      ],
+      "mechanisms": [
+        "emergence",
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-unesco-tiwanaku"
+      ],
+      "area": {
+        "label": {
+          "fr": "Sud du Titicaca — foyer tiwanaku schématique",
+          "en": "Southern Titicaca — schematic Tiwanaku centre"
+        },
+        "ring": [
+          [
+            -69.06,
+            -16.31
+          ],
+          [
+            -68.63,
+            -16.26
+          ],
+          [
+            -68.29,
+            -16.63
+          ],
+          [
+            -68.61,
+            -16.87
+          ],
+          [
+            -68.99,
+            -16.75
+          ],
+          [
+            -69.06,
+            -16.31
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-baekje",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 500,
+      "approximate": true,
+      "title": {
+        "fr": "Les foyers bouddhiques de Baekje",
+        "en": "Buddhist centers of Baekje"
+      },
+      "description": {
+        "fr": "Les sites des Ve–VIIe siècles documentent des échanges religieux avec la Chine puis le Japon. Gongju représente ici ce réseau coréen, déjà implanté avant cette étape.",
+        "en": "Fifth–seventh-century sites document religious exchange with China and later Japan. Gongju represents this Korean network, already established before this milestone."
+      },
+      "coordinates": [
+        127.12,
+        36.46
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-baekje",
+        "met-korea-buddhism"
+      ],
+      "fromId": "buddhism-pengcheng",
+      "area": {
+        "label": {
+          "fr": "Foyers de Gongju, Buyeo et Iksan",
+          "en": "Gongju, Buyeo and Iksan centers"
+        },
+        "ring": [
+          [
+            126.75,
+            35.84
+          ],
+          [
+            127.13,
+            35.78
+          ],
+          [
+            127.36,
+            36.26
+          ],
+          [
+            127.25,
+            36.65
+          ],
+          [
+            126.91,
+            36.64
+          ],
+          [
+            126.69,
+            36.2
+          ],
+          [
+            126.75,
+            35.84
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-asuka",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 552,
+      "approximate": true,
+      "title": {
+        "fr": "Transmission de Baekje vers le Japon",
+        "en": "Transmission from Baekje to Japan"
+      },
+      "description": {
+        "fr": "La date traditionnelle de 552 situe une ambassade bouddhique de Baekje auprès de la cour japonaise ; 538 est aussi proposé. Des contacts et des communautés existaient auparavant.",
+        "en": "The traditional date 552 marks a Buddhist embassy from Baekje to the Japanese court; 538 is also proposed. Contacts and communities already existed beforehand."
+      },
+      "coordinates": [
+        135.82,
+        34.48
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "harvard-buddhist-expansion",
+        "met-korea-buddhism"
+      ],
+      "fromId": "buddhism-baekje",
+      "area": {
+        "label": {
+          "fr": "Foyers d’Asuka et de la plaine de Nara",
+          "en": "Asuka and Nara plain centers"
+        },
+        "ring": [
+          [
+            135.65,
+            34.35
+          ],
+          [
+            135.9,
+            34.31
+          ],
+          [
+            136.02,
+            34.57
+          ],
+          [
+            135.94,
+            34.77
+          ],
+          [
+            135.7,
+            34.78
+          ],
+          [
+            135.61,
+            34.56
+          ],
+          [
+            135.65,
+            34.35
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-mecca",
+      "traditionId": "islam",
+      "kind": "origin",
+      "year": 610,
+      "approximate": true,
+      "title": {
+        "fr": "La prédication de Muhammad à La Mecque",
+        "en": "Muhammad’s preaching in Mecca"
+      },
+      "description": {
+        "fr": "Vers 610 débute la prédication de Muhammad selon la chronologie traditionnelle. Le jalon situe l’émergence de la communauté musulmane dans le Hedjaz.",
+        "en": "Muhammad’s preaching began around 610 according to the traditional chronology. This milestone locates the emergence of the Muslim community in the Hejaz."
+      },
+      "coordinates": [
+        39.826,
+        21.422
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "met-birth-islam"
+      ]
+    },
+    {
+      "id": "islam-medina",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 622,
+      "approximate": false,
+      "title": {
+        "fr": "L’hégire vers Médine",
+        "en": "The Hijra to Medina"
+      },
+      "description": {
+        "fr": "Muhammad et ses compagnons quittent La Mecque pour Médine en 622. La communauté s’y organise ; cette migration devient le repère initial du calendrier musulman.",
+        "en": "Muhammad and his companions left Mecca for Medina in 622. The community organized there; this migration became the starting reference of the Islamic calendar."
+      },
+      "coordinates": [
+        39.611,
+        24.468
+      ],
+      "mechanisms": [
+        "migration"
+      ],
+      "sourceIds": [
+        "met-birth-islam"
+      ],
+      "fromId": "islam-mecca",
+      "area": {
+        "label": {
+          "fr": "Foyer de l’oasis de Médine",
+          "en": "Medina oasis center"
+        },
+        "ring": [
+          [
+            39.42,
+            24.25
+          ],
+          [
+            39.77,
+            24.21
+          ],
+          [
+            39.9,
+            24.5
+          ],
+          [
+            39.75,
+            24.75
+          ],
+          [
+            39.45,
+            24.7
+          ],
+          [
+            39.32,
+            24.49
+          ],
+          [
+            39.42,
+            24.25
+          ]
+        ]
+      }
+    },
+    {
+      "id": "christianity-changan",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 635,
+      "approximate": false,
+      "title": {
+        "fr": "L’Église de l’Orient à Chang’an",
+        "en": "The Church of the East at Chang’an"
+      },
+      "description": {
+        "fr": "La stèle de 781 rapporte l’arrivée d’Alopen en 635. Le lien représente les réseaux de l’Église de l’Orient depuis la Mésopotamie vers la Chine, pas son itinéraire exact.",
+        "en": "The 781 stele records Alopen’s arrival in 635. The link represents Church of the East networks from Mesopotamia to China, not his exact itinerary."
+      },
+      "coordinates": [
+        108.94,
+        34.26
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "kenyon-china-christianity",
+        "iranica-eastern-christianity"
+      ],
+      "fromId": "christianity-ctesiphon"
+    },
+    {
+      "id": "islam-damascus",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 661,
+      "approximate": false,
+      "title": {
+        "fr": "Damas, capitale omeyyade",
+        "en": "Damascus, Umayyad capital"
+      },
+      "description": {
+        "fr": "Les conquêtes venues d’Arabie précèdent l’installation de la capitale omeyyade à Damas en 661. Le lien résume ce déplacement du pouvoir et des institutions ; il ne suppose pas une conversion générale.",
+        "en": "Conquests from Arabia preceded establishment of the Umayyad capital at Damascus in 661. The link summarizes this shift of power and institutions; it does not imply universal conversion."
+      },
+      "coordinates": [
+        36.307,
+        33.511
+      ],
+      "mechanisms": [
+        "patronage",
+        "conquest"
+      ],
+      "sourceIds": [
+        "harvard-islam",
+        "met-byzantium-islam"
+      ],
+      "fromId": "islam-medina",
+      "area": {
+        "label": {
+          "fr": "Foyer de Damas et de la Ghouta",
+          "en": "Damascus and Ghouta center"
+        },
+        "ring": [
+          [
+            36.08,
+            33.34
+          ],
+          [
+            36.55,
+            33.3
+          ],
+          [
+            36.69,
+            33.51
+          ],
+          [
+            36.45,
+            33.68
+          ],
+          [
+            36.14,
+            33.63
+          ],
+          [
+            36.08,
+            33.34
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-kairouan",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 670,
+      "approximate": false,
+      "title": {
+        "fr": "Kairouan, foyer du Maghreb",
+        "en": "Kairouan, a Maghreb center"
+      },
+      "description": {
+        "fr": "Fondée en 670 dans le contexte des conquêtes arabes, Kairouan devient un centre de savoir et de culte. Son rayonnement ne définit pas une frontière religieuse.",
+        "en": "Founded in 670 during the Arab conquests, Kairouan became a center of learning and worship. Its influence does not define a religious boundary."
+      },
+      "coordinates": [
+        10.1,
+        35.68
+      ],
+      "mechanisms": [
+        "conquest",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-kairouan"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Kairouan",
+          "en": "Kairouan center"
+        },
+        "ring": [
+          [
+            9.83,
+            35.44
+          ],
+          [
+            10.32,
+            35.43
+          ],
+          [
+            10.49,
+            35.72
+          ],
+          [
+            10.26,
+            35.95
+          ],
+          [
+            9.89,
+            35.88
+          ],
+          [
+            9.83,
+            35.44
+          ]
+        ]
+      }
+    },
+    {
+      "id": "shinto-ise",
+      "traditionId": "shinto",
+      "kind": "origin",
+      "year": 690,
+      "approximate": false,
+      "title": {
+        "fr": "Premier renouvellement attesté à Ise",
+        "en": "First attested rebuilding at Ise"
+      },
+      "description": {
+        "fr": "Premier repère choisi ici : le renouvellement rituel du sanctuaire intérieur en 690. Les cultes des kami sont antérieurs ; ce n’est ni leur première attestation absolue ni leur origine.",
+        "en": "The first marker selected here: ritual rebuilding of the Inner Shrine in 690. Kami worship is older; this is neither its earliest possible attestation nor its origin."
+      },
+      "coordinates": [
+        136.726,
+        34.455
+      ],
+      "mechanisms": [
+        "emergence",
+        "patronage"
+      ],
+      "sourceIds": [
+        "ise-sengu",
+        "met-shinto"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer d’Ise et vallée de l’Isuzu",
+          "en": "Ise center and Isuzu valley"
+        },
+        "ring": [
+          [
+            136.58,
+            34.3
+          ],
+          [
+            136.87,
+            34.31
+          ],
+          [
+            136.93,
+            34.51
+          ],
+          [
+            136.76,
+            34.62
+          ],
+          [
+            136.55,
+            34.53
+          ],
+          [
+            136.58,
+            34.3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hinduism-tamil-bhakti",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": 700,
+      "approximate": true,
+      "title": {
+        "fr": "Les dévotions bhakti tamoules",
+        "en": "Tamil bhakti traditions"
+      },
+      "description": {
+        "fr": "Du VIe au IXe siècle, les poètes nayanmar et alvar diffusent les dévotions à Shiva et Vishnu. Le repère indique le pays tamoul, non une unique origine urbaine.",
+        "en": "From the sixth to ninth centuries, Nayanmar and Alvar poets spread devotion to Shiva and Vishnu. The marker indicates Tamil country, not a single urban origin."
+      },
+      "coordinates": [
+        79.1,
+        11.4
+      ],
+      "mechanisms": [
+        "reform"
+      ],
+      "sourceIds": [
+        "sahapedia-tamil-bhakti"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyers du pays tamoul",
+          "en": "Centers of Tamil country"
+        },
+        "ring": [
+          [
+            77.3,
+            8.4
+          ],
+          [
+            78.1,
+            8.15
+          ],
+          [
+            79.4,
+            9.7
+          ],
+          [
+            80.2,
+            12.3
+          ],
+          [
+            79.4,
+            13.1
+          ],
+          [
+            78.1,
+            12.6
+          ],
+          [
+            77.4,
+            10.6
+          ],
+          [
+            77.3,
+            8.4
+          ]
+        ]
+      }
+    },
+    {
+      "id": "shinto-kasuga",
+      "traditionId": "shinto",
+      "kind": "spread",
+      "year": 768,
+      "approximate": false,
+      "title": {
+        "fr": "Le sanctuaire de Kasuga à Nara",
+        "en": "Kasuga shrine in Nara"
+      },
+      "description": {
+        "fr": "La fondation de 768 est soutenue par la cour et les Fujiwara. Le sanctuaire rassemble des kami associés à plusieurs sanctuaires plus anciens, sans religion territoriale exclusive.",
+        "en": "The 768 foundation was supported by the court and the Fujiwara. It gathered kami associated with several older shrines, without an exclusive territorial religion."
+      },
+      "coordinates": [
+        135.848,
+        34.681
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "kasuga-history"
+      ]
+    },
+    {
+      "id": "buddhism-samye",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 775,
+      "approximate": true,
+      "title": {
+        "fr": "Un premier monastère à Samyé",
+        "en": "An early monastery at Samye"
+      },
+      "description": {
+        "fr": "Au VIIIe siècle, le patronage royal et des maîtres venus d’Inde soutiennent le monachisme au Tibet. La date approximative situe la fondation de Samyé dans cette phase.",
+        "en": "In the eighth century, royal patronage and teachers from India supported monastic life in Tibet. The approximate date places Samye’s foundation within this phase."
+      },
+      "coordinates": [
+        91.502,
+        29.327
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "max-planck-buddhist-knowledge",
+        "harvard-buddhist-expansion"
+      ],
+      "fromId": "buddhism-gangetic",
+      "area": {
+        "label": {
+          "fr": "Foyer de Samyé, vallée du Yarlung",
+          "en": "Samye center, Yarlung valley"
+        },
+        "ring": [
+          [
+            90.9,
+            29.13
+          ],
+          [
+            91.7,
+            29.13
+          ],
+          [
+            92.02,
+            29.42
+          ],
+          [
+            91.65,
+            29.58
+          ],
+          [
+            91.11,
+            29.49
+          ],
+          [
+            90.9,
+            29.13
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-cordoba",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 785,
+      "approximate": true,
+      "title": {
+        "fr": "La grande mosquée de Cordoue",
+        "en": "The Great Mosque of Córdoba"
+      },
+      "description": {
+        "fr": "Abd al-Rahman Ier, issu des Omeyyades de Syrie, patronne la mosquée commencée en 785. Le lien représente cet héritage dynastique et culturel transmis via l’Afrique du Nord, pas un trajet direct.",
+        "en": "Abd al-Rahman I, of the Syrian Umayyads, sponsored the mosque begun in 785. The link represents dynastic and cultural heritage transmitted through North Africa, not a direct journey."
+      },
+      "coordinates": [
+        -4.779,
+        37.879
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-cordoba",
+        "met-umayyad-iberia"
+      ],
+      "fromId": "islam-damascus",
+      "area": {
+        "label": {
+          "fr": "Foyer de Cordoue, vallée du Guadalquivir",
+          "en": "Córdoba center, Guadalquivir valley"
+        },
+        "ring": [
+          [
+            -5.18,
+            37.67
+          ],
+          [
+            -4.65,
+            37.62
+          ],
+          [
+            -4.35,
+            37.85
+          ],
+          [
+            -4.61,
+            38.07
+          ],
+          [
+            -5.02,
+            38.01
+          ],
+          [
+            -5.18,
+            37.67
+          ]
+        ]
+      }
+    },
+    {
+      "id": "zoroastrianism-sanjan",
+      "traditionId": "zoroastrianism",
+      "kind": "spread",
+      "year": 850,
+      "approximate": true,
+      "title": {
+        "fr": "Implantations parsies au Gujarat",
+        "en": "Parsi settlement in Gujarat"
+      },
+      "description": {
+        "fr": "Repère médiéval approximatif, VIIIe–Xe siècles. Le récit tardif de Sanjan conserve la mémoire des migrations depuis l’Iran ; ses dates ne constituent pas une chronologie certaine.",
+        "en": "An approximate medieval marker, eighth–tenth centuries. The later Sanjan narrative preserves memories of migration from Iran; its dates are not a certain chronology."
+      },
+      "coordinates": [
+        72.8,
+        20.2
+      ],
+      "mechanisms": [
+        "migration",
+        "diaspora"
+      ],
+      "sourceIds": [
+        "iranica-parsis"
+      ],
+      "area": {
+        "label": {
+          "fr": "Littoral de Sanjan, Gujarat",
+          "en": "Sanjan coast, Gujarat"
+        },
+        "ring": [
+          [
+            72.69,
+            19.92
+          ],
+          [
+            73.04,
+            19.94
+          ],
+          [
+            73.1,
+            20.43
+          ],
+          [
+            72.81,
+            20.57
+          ],
+          [
+            72.67,
+            20.3
+          ],
+          [
+            72.69,
+            19.92
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hinduism-prambanan",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": 900,
+      "approximate": true,
+      "title": {
+        "fr": "Les sanctuaires de Prambanan",
+        "en": "The shrines of Prambanan"
+      },
+      "description": {
+        "fr": "Repère des IXe–Xe siècles pour le complexe de temples de Java central dédié à Shiva, Vishnu et Brahma. Des monuments bouddhiques voisins témoignent d’un paysage partagé.",
+        "en": "A ninth–tenth-century marker for Central Java’s temple complex dedicated to Shiva, Vishnu and Brahma. Neighboring Buddhist monuments attest a shared landscape."
+      },
+      "coordinates": [
+        110.492,
+        -7.752
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-prambanan"
+      ],
+      "area": {
+        "label": {
+          "fr": "Plaine de Prambanan, Java central",
+          "en": "Prambanan plain, Central Java"
+        },
+        "ring": [
+          [
+            110.3,
+            -7.9
+          ],
+          [
+            110.65,
+            -7.92
+          ],
+          [
+            110.78,
+            -7.7
+          ],
+          [
+            110.59,
+            -7.55
+          ],
+          [
+            110.36,
+            -7.64
+          ],
+          [
+            110.3,
+            -7.9
+          ]
+        ]
+      }
+    },
+    {
+      "id": "jainism-shravanabelagola",
+      "traditionId": "jainism",
+      "kind": "spread",
+      "year": 981,
+      "approximate": false,
+      "title": {
+        "fr": "Bahubali à Shravanabelagola",
+        "en": "Bahubali at Shravanabelagola"
+      },
+      "description": {
+        "fr": "Le ministre Chamundaraya fait ériger le monolithe de Bahubali en 981. Ce jalon documente le patronage d’un foyer jaïn du Karnataka.",
+        "en": "Minister Chamundaraya commissioned the Bahubali monolith in 981. This milestone documents patronage of a Jain center in Karnataka."
+      },
+      "coordinates": [
+        76.487,
+        12.859
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "karnataka-shravanabelagola"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Shravanabelagola",
+          "en": "Shravanabelagola center"
+        },
+        "ring": [
+          [
+            76.29,
+            12.71
+          ],
+          [
+            76.62,
+            12.69
+          ],
+          [
+            76.72,
+            12.91
+          ],
+          [
+            76.56,
+            13.06
+          ],
+          [
+            76.27,
+            12.98
+          ],
+          [
+            76.29,
+            12.71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "shinto-kumano",
+      "traditionId": "shinto",
+      "kind": "spread",
+      "year": 1000,
+      "approximate": true,
+      "title": {
+        "fr": "Les paysages sacrés de Kumano",
+        "en": "Kumano’s sacred landscapes"
+      },
+      "description": {
+        "fr": "Des sanctuaires attestés dès le IXe siècle et des pèlerinages ultérieurs composent un paysage de cultes des kami et de bouddhismes entremêlés. 1000 est un repère approximatif de cette formation.",
+        "en": "Shrines attested from the ninth century and later pilgrimage formed a landscape intertwining kami worship and Buddhism. 1000 is an approximate marker of this development."
+      },
+      "coordinates": [
+        135.773,
+        33.841
+      ],
+      "mechanisms": [
+        "patronage",
+        "migration"
+      ],
+      "sourceIds": [
+        "unesco-kii"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyers de Kumano dans la péninsule de Kii",
+          "en": "Kumano centers in the Kii peninsula"
+        },
+        "ring": [
+          [
+            135.43,
+            33.57
+          ],
+          [
+            135.89,
+            33.44
+          ],
+          [
+            136.15,
+            33.75
+          ],
+          [
+            136.02,
+            34.1
+          ],
+          [
+            135.64,
+            34.08
+          ],
+          [
+            135.39,
+            33.83
+          ],
+          [
+            135.43,
+            33.57
+          ]
+        ]
+      }
+    },
+    {
+      "id": "christianity-kyiv",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1030,
+      "approximate": true,
+      "title": {
+        "fr": "Les institutions chrétiennes de Kyiv",
+        "en": "Christian institutions in Kyiv"
+      },
+      "description": {
+        "fr": "La cathédrale Sainte-Sophie du début du XIe siècle matérialise les échanges avec Byzance. Le jalon atteste un foyer déjà christianisé, sans dater sa première conversion.",
+        "en": "Early eleventh-century Saint Sophia Cathedral materializes exchange with Byzantium. The milestone attests an already Christian center, not its first conversion."
+      },
+      "coordinates": [
+        30.514,
+        50.453
+      ],
+      "mechanisms": [
+        "patronage",
+        "mission"
+      ],
+      "sourceIds": [
+        "unesco-kyiv"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Kyiv sur le Dniepr",
+          "en": "Kyiv center on the Dnieper"
+        },
+        "ring": [
+          [
+            30.25,
+            50.18
+          ],
+          [
+            30.65,
+            50.16
+          ],
+          [
+            30.83,
+            50.48
+          ],
+          [
+            30.64,
+            50.69
+          ],
+          [
+            30.26,
+            50.62
+          ],
+          [
+            30.25,
+            50.18
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-bagan",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 1050,
+      "approximate": true,
+      "title": {
+        "fr": "Le patronage bouddhique à Bagan",
+        "en": "Buddhist patronage at Bagan"
+      },
+      "description": {
+        "fr": "Du XIe au XIIIe siècle, le paysage monumental de Bagan témoigne du patronage et des donations bouddhiques. 1050 est un repère dans cette phase, pas la première arrivée du bouddhisme en Birmanie.",
+        "en": "From the eleventh to thirteenth centuries, Bagan’s monumental landscape witnesses Buddhist patronage and donations. 1050 marks this phase, not Buddhism’s first arrival in Burma."
+      },
+      "coordinates": [
+        94.86,
+        21.17
+      ],
+      "mechanisms": [
+        "patronage",
+        "reform"
+      ],
+      "sourceIds": [
+        "unesco-bagan"
+      ],
+      "area": {
+        "label": {
+          "fr": "Paysage religieux de Bagan",
+          "en": "Bagan religious landscape"
+        },
+        "ring": [
+          [
+            94.76,
+            21.05
+          ],
+          [
+            94.95,
+            21.02
+          ],
+          [
+            95.05,
+            21.2
+          ],
+          [
+            94.98,
+            21.33
+          ],
+          [
+            94.8,
+            21.31
+          ],
+          [
+            94.73,
+            21.18
+          ],
+          [
+            94.76,
+            21.05
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confucianism-hanoi",
+      "traditionId": "confucianism",
+      "kind": "spread",
+      "year": 1070,
+      "approximate": false,
+      "title": {
+        "fr": "Le Temple de la Littérature à Hanoi",
+        "en": "The Temple of Literature in Hanoi"
+      },
+      "description": {
+        "fr": "La fondation datée de 1070 devient un foyer d’enseignement et de rites savants. Elle atteste une appropriation vietnamienne des traditions confucéennes, présentes auparavant.",
+        "en": "The foundation dated 1070 became a center of teaching and scholarly ritual. It attests Vietnamese adaptation of already present Confucian traditions."
+      },
+      "coordinates": [
+        105.836,
+        21.028
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "vietnam-hanoi"
+      ]
+    },
+    {
+      "id": "islam-kilwa",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1100,
+      "approximate": true,
+      "title": {
+        "fr": "Les mosquées du littoral swahili",
+        "en": "Mosques on the Swahili coast"
+      },
+      "description": {
+        "fr": "La grande mosquée de Kilwa remonte au XIe siècle et s’agrandit ensuite. Le port participe aux échanges de l’océan Indien ; cette attestation ne date pas le premier islam africain.",
+        "en": "Kilwa’s Great Mosque dates to the eleventh century and was later enlarged. The port participated in Indian Ocean exchange; this witness does not date Islam’s first African presence."
+      },
+      "coordinates": [
+        39.523,
+        -8.957
+      ],
+      "mechanisms": [
+        "trade",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-kilwa"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer côtier de Kilwa et Songo Mnara",
+          "en": "Kilwa and Songo Mnara coastal center"
+        },
+        "ring": [
+          [
+            39.4,
+            -9.16
+          ],
+          [
+            39.62,
+            -9.2
+          ],
+          [
+            39.7,
+            -8.92
+          ],
+          [
+            39.53,
+            -8.8
+          ],
+          [
+            39.37,
+            -8.97
+          ],
+          [
+            39.4,
+            -9.16
+          ]
+        ]
+      }
+    },
+    {
+      "id": "yoruba-ife",
+      "traditionId": "yoruba-orisha",
+      "kind": "origin",
+      "year": 1100,
+      "approximate": true,
+      "title": {
+        "fr": "Ife : un foyer de royauté sacrée",
+        "en": "Ife: a centre of sacred kingship"
+      },
+      "description": {
+        "fr": "Le British Museum décrit Ife comme un foyer spirituel majeur, florissant entre 1100 et 1400. Ce jalon représente cette période attestée ; les récits d’origine ne permettent pas de dater une naissance unique des traditions yoruba.",
+        "en": "The British Museum describes Ife as a major spiritual centre flourishing between 1100 and 1400. This marker represents that attested period; origin narratives cannot date a single beginning of Yoruba traditions."
+      },
+      "coordinates": [
+        4.56,
+        7.48
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "ui-bm-ife"
+      ]
+    },
+    {
+      "id": "hinduism-angkor",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": 1150,
+      "approximate": true,
+      "title": {
+        "fr": "Angkor Vat, sanctuaire de Vishnu",
+        "en": "Angkor Wat, a shrine to Vishnu"
+      },
+      "description": {
+        "fr": "Le temple du XIIe siècle illustre le patronage royal khmer du culte de Vishnu. Ses usages bouddhiques ultérieurs montrent que ces lieux changent de pratiques.",
+        "en": "The twelfth-century temple illustrates Khmer royal patronage of Vishnu worship. Its later Buddhist uses show how practices at such sites change."
+      },
+      "coordinates": [
+        103.867,
+        13.412
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-angkor"
+      ],
+      "area": {
+        "label": {
+          "fr": "Plaine d’Angkor",
+          "en": "Angkor plain"
+        },
+        "ring": [
+          [
+            103.65,
+            13.3
+          ],
+          [
+            103.98,
+            13.26
+          ],
+          [
+            104.1,
+            13.51
+          ],
+          [
+            103.9,
+            13.68
+          ],
+          [
+            103.63,
+            13.57
+          ],
+          [
+            103.65,
+            13.3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-delhi",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1198,
+      "approximate": false,
+      "title": {
+        "fr": "Un complexe de culte à Delhi",
+        "en": "A religious complex in Delhi"
+      },
+      "description": {
+        "fr": "La mosquée Quwwat-ul-Islam est construite entre 1192 et 1198 dans le contexte des conquêtes ghurides. Le site documente patronage, réemplois et tensions historiques.",
+        "en": "The Quwwat-ul-Islam mosque was built between 1192 and 1198 in the context of Ghurid conquest. The site documents patronage, reused materials and historical tensions."
+      },
+      "coordinates": [
+        77.185,
+        28.525
+      ],
+      "mechanisms": [
+        "conquest",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-qutb"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Delhi et Mehrauli",
+          "en": "Delhi and Mehrauli center"
+        },
+        "ring": [
+          [
+            76.98,
+            28.35
+          ],
+          [
+            77.33,
+            28.34
+          ],
+          [
+            77.44,
+            28.63
+          ],
+          [
+            77.27,
+            28.88
+          ],
+          [
+            76.99,
+            28.75
+          ],
+          [
+            76.98,
+            28.35
+          ]
+        ]
+      }
+    },
+    {
+      "id": "judaism-cordoba",
+      "traditionId": "judaism",
+      "kind": "spread",
+      "year": 1315,
+      "approximate": false,
+      "title": {
+        "fr": "Une synagogue médiévale à Cordoue",
+        "en": "A medieval synagogue in Córdoba"
+      },
+      "description": {
+        "fr": "L’inscription de construction de 1315 documente ce foyer séfarade, bien postérieur aux premières communautés juives ibériques.",
+        "en": "The 1315 building inscription documents this Sephardic center, long after the first Jewish communities in Iberia."
+      },
+      "coordinates": [
+        -4.78,
+        37.879
+      ],
+      "mechanisms": [
+        "diaspora"
+      ],
+      "sourceIds": [
+        "cordoba-synagogue"
+      ]
+    },
+    {
+      "id": "buddhism-sukhothai",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 1325,
+      "approximate": true,
+      "title": {
+        "fr": "Sukhothai et les échanges avec Sri Lanka",
+        "en": "Sukhothai and exchange with Sri Lanka"
+      },
+      "description": {
+        "fr": "Au XIVe siècle, des moines de Sukhothai étudient à Sri Lanka et en rapportent des traditions, des reliques et des modèles artistiques. Le lien représente ces échanges avec la tradition du Mahavihara.",
+        "en": "In the fourteenth century, monks from Sukhothai studied in Sri Lanka and brought back traditions, relics and artistic models. The link represents these exchanges with the Mahavihara tradition."
+      },
+      "coordinates": [
+        99.703,
+        17.017
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "silpakorn-sukhothai",
+        "unesco-sukhothai"
+      ],
+      "fromId": "buddhism-anuradhapura",
+      "area": {
+        "label": {
+          "fr": "Foyers de Sukhothai et Si Satchanalai",
+          "en": "Sukhothai and Si Satchanalai centers"
+        },
+        "ring": [
+          [
+            99.45,
+            16.78
+          ],
+          [
+            99.93,
+            16.76
+          ],
+          [
+            100.03,
+            17.24
+          ],
+          [
+            99.92,
+            17.63
+          ],
+          [
+            99.52,
+            17.55
+          ],
+          [
+            99.36,
+            17.15
+          ],
+          [
+            99.45,
+            16.78
+          ]
+        ]
+      }
+    },
+    {
+      "id": "daoism-wudang",
+      "traditionId": "daoism",
+      "kind": "spread",
+      "year": 1400,
+      "approximate": true,
+      "title": {
+        "fr": "Le patronage des monts Wudang",
+        "en": "Patronage in the Wudang Mountains"
+      },
+      "description": {
+        "fr": "Aux XIVe–XVIIe siècles, les Ming soutiennent un vaste ensemble de temples taoïstes. Le jalon de 1400 situe le début de cette phase de construction, sur des traditions plus anciennes.",
+        "en": "In the fourteenth–seventeenth centuries, Ming rulers supported a large complex of Daoist temples. The 1400 marker locates the beginning of this building phase within older traditions."
+      },
+      "coordinates": [
+        111.005,
+        32.4
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-wudang"
+      ],
+      "area": {
+        "label": {
+          "fr": "Monts Wudang",
+          "en": "Wudang Mountains"
+        },
+        "ring": [
+          [
+            110.7,
+            32.2
+          ],
+          [
+            111.22,
+            32.17
+          ],
+          [
+            111.39,
+            32.46
+          ],
+          [
+            111.13,
+            32.66
+          ],
+          [
+            110.75,
+            32.57
+          ],
+          [
+            110.7,
+            32.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "andean-cusco",
+      "traditionId": "andean",
+      "kind": "spread",
+      "year": 1450,
+      "approximate": true,
+      "title": {
+        "fr": "Cusco : sanctuaires de la capitale inca",
+        "en": "Cusco: sanctuaries of the Inca capital"
+      },
+      "description": {
+        "fr": "Au XVe siècle, Pachacutec réorganise Cusco, centre politique et religieux inca. Le Qoricancha, associé au Soleil, figure parmi ses grands sanctuaires ; vers 1450 représente cette transformation urbaine.",
+        "en": "In the fifteenth century, Pachacutec reorganised Cusco as an Inca political and religious centre. Qoricancha, associated with the Sun, was among its major sanctuaries; around 1450 represents this urban transformation."
+      },
+      "coordinates": [
+        -71.975,
+        -13.52
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-unesco-cusco"
+      ],
+      "area": {
+        "label": {
+          "fr": "Bassin de Cusco — foyer inca schématique",
+          "en": "Cusco basin — schematic Inca centre"
+        },
+        "ring": [
+          [
+            -72.2,
+            -13.48
+          ],
+          [
+            -71.99,
+            -13.34
+          ],
+          [
+            -71.73,
+            -13.5
+          ],
+          [
+            -71.8,
+            -13.66
+          ],
+          [
+            -72.06,
+            -13.68
+          ],
+          [
+            -72.2,
+            -13.48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-melaka",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1450,
+      "approximate": true,
+      "title": {
+        "fr": "Melaka, carrefour musulman maritime",
+        "en": "Melaka, a maritime Muslim crossroads"
+      },
+      "description": {
+        "fr": "Au XVe siècle, le sultanat fait de Melaka un foyer d’apprentissage musulman et de commerce. Les échanges maritimes participent à une islamisation régionale progressive.",
+        "en": "In the fifteenth century, the sultanate made Melaka a center of Muslim learning and trade. Maritime exchange contributed to gradual regional Islamization."
+      },
+      "coordinates": [
+        102.248,
+        2.195
+      ],
+      "mechanisms": [
+        "trade",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-melaka"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer du détroit autour de Melaka",
+          "en": "Straits center around Melaka"
+        },
+        "ring": [
+          [
+            102.05,
+            2.02
+          ],
+          [
+            102.35,
+            2.04
+          ],
+          [
+            102.47,
+            2.27
+          ],
+          [
+            102.24,
+            2.44
+          ],
+          [
+            102.06,
+            2.29
+          ],
+          [
+            102.05,
+            2.02
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-timbuktu",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1450,
+      "approximate": true,
+      "title": {
+        "fr": "Tombouctou, centre de savoir islamique",
+        "en": "Timbuktu, a center of Islamic learning"
+      },
+      "description": {
+        "fr": "Aux XVe–XVIe siècles, les mosquées et écoles font de Tombouctou un foyer savant majeur. Ce repère documente son rayonnement, non l’arrivée initiale de l’islam au Sahel.",
+        "en": "In the fifteenth–sixteenth centuries, mosques and schools made Timbuktu a major scholarly center. This marker documents its influence, not Islam’s first arrival in the Sahel."
+      },
+      "coordinates": [
+        -3.007,
+        16.773
+      ],
+      "mechanisms": [
+        "trade",
+        "patronage"
+      ],
+      "sourceIds": [
+        "unesco-timbuktu"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Tombouctou et accès au Niger",
+          "en": "Timbuktu center and access to the Niger"
+        },
+        "ring": [
+          [
+            -3.29,
+            16.54
+          ],
+          [
+            -2.79,
+            16.51
+          ],
+          [
+            -2.65,
+            16.82
+          ],
+          [
+            -2.86,
+            17.03
+          ],
+          [
+            -3.21,
+            16.98
+          ],
+          [
+            -3.29,
+            16.54
+          ]
+        ]
+      }
+    },
+    {
+      "id": "andean-pachacamac",
+      "traditionId": "andean",
+      "kind": "spread",
+      "year": 1470,
+      "approximate": true,
+      "title": {
+        "fr": "Pachacamac : ajout d’un temple inca du Soleil",
+        "en": "Pachacamac: an Inca Sun temple"
+      },
+      "description": {
+        "fr": "Le musée distingue une phase ychsma, 1100–1470, puis une phase inca, 1470–1533. Après l’incorporation par Túpac Yupanqui, un temple du Soleil est ajouté à ce sanctuaire préexistant ; le trajet schématise cette expansion.",
+        "en": "The museum distinguishes a Ychsma phase, 1100–1470, from an Inca phase, 1470–1533. After incorporation by Túpac Yupanqui, a Sun temple was added to this older sanctuary; the route sketches this expansion."
+      },
+      "coordinates": [
+        -76.898,
+        -12.257
+      ],
+      "mechanisms": [
+        "conquest",
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-peru-pachacamac",
+        "ui-peru-pachacamac-inca"
+      ],
+      "fromId": "andean-cusco"
+    },
+    {
+      "id": "christianity-lisbon-missions",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1483,
+      "approximate": true,
+      "title": {
+        "fr": "Lisbonne et les expéditions vers le Kongo",
+        "en": "Lisbon and expeditions to Kongo"
+      },
+      "description": {
+        "fr": "Dans les années 1480, les expéditions portugaises transportent au Kongo des objets chrétiens, dont une croix monumentale sculptée à Lisbonne. Ce jalon concerne un réseau maritime, pas l’arrivée du christianisme au Portugal.",
+        "en": "In the 1480s, Portuguese expeditions carried Christian objects to Kongo, including a monumental cross carved in Lisbon. This milestone concerns a maritime network, not Christianity’s arrival in Portugal."
+      },
+      "coordinates": [
+        -9.14,
+        38.71
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "met-kongo-expeditions",
+        "met-kongo-christianity"
+      ]
+    },
+    {
+      "id": "christianity-kongo",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1491,
+      "approximate": false,
+      "title": {
+        "fr": "Le baptême royal au Kongo",
+        "en": "Royal baptism in Kongo"
+      },
+      "description": {
+        "fr": "Le roi Nzinga a Nkuwu reçoit le baptême en 1491 après une mission portugaise. Les artistes et communautés du Kongo élaborent ensuite leurs propres formes chrétiennes.",
+        "en": "King Nzinga a Nkuwu was baptized in 1491 following a Portuguese mission. Kongo artists and communities subsequently developed their own Christian forms."
+      },
+      "coordinates": [
+        14.245,
+        -6.267
+      ],
+      "mechanisms": [
+        "mission",
+        "patronage"
+      ],
+      "sourceIds": [
+        "met-kongo-christianity"
+      ],
+      "fromId": "christianity-lisbon-missions",
+      "area": {
+        "label": {
+          "fr": "Foyer de Mbanza Kongo",
+          "en": "Mbanza Kongo center"
+        },
+        "ring": [
+          [
+            13.89,
+            -6.52
+          ],
+          [
+            14.52,
+            -6.59
+          ],
+          [
+            14.72,
+            -6.2
+          ],
+          [
+            14.43,
+            -5.94
+          ],
+          [
+            13.93,
+            -6.05
+          ],
+          [
+            13.89,
+            -6.52
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hinduism-north-bhakti",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": 1500,
+      "approximate": true,
+      "title": {
+        "fr": "Dévotions vernaculaires en Inde du Nord",
+        "en": "Vernacular devotion in northern India"
+      },
+      "description": {
+        "fr": "Entre les XIVe et XVIe siècles, les traditions bhakti gagnent de nouveaux publics en langues vernaculaires. La liaison résume une diffusion graduelle depuis les foyers méridionaux.",
+        "en": "Between the fourteenth and sixteenth centuries, bhakti traditions reached new audiences in vernacular languages. The link summarizes gradual transmission from southern centers."
+      },
+      "coordinates": [
+        83,
+        25.3
+      ],
+      "mechanisms": [
+        "reform"
+      ],
+      "sourceIds": [
+        "harvard-hinduism"
+      ],
+      "fromId": "hinduism-tamil-bhakti"
+    },
+    {
+      "id": "sikhism-punjab",
+      "traditionId": "sikhism",
+      "kind": "origin",
+      "year": 1500,
+      "approximate": true,
+      "title": {
+        "fr": "Guru Nanak et les premières communautés",
+        "en": "Guru Nanak and the early communities"
+      },
+      "description": {
+        "fr": "À la fin du XVe et au début du XVIe siècle, Nanak enseigne dans le Pendjab et au-delà. Le point est régional ; 1500 n’est pas une date unique de fondation.",
+        "en": "In the late fifteenth and early sixteenth centuries, Nanak taught in Punjab and beyond. The point is regional; 1500 is not a single founding date."
+      },
+      "coordinates": [
+        74,
+        31.5
+      ],
+      "mechanisms": [
+        "emergence"
+      ],
+      "sourceIds": [
+        "harvard-sikhism",
+        "sgpc-nanak"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyers du Pendjab central",
+          "en": "Centers of central Punjab"
+        },
+        "ring": [
+          [
+            73.3,
+            30.9
+          ],
+          [
+            74.6,
+            30.65
+          ],
+          [
+            75.5,
+            31.45
+          ],
+          [
+            75.25,
+            32.3
+          ],
+          [
+            74,
+            32.48
+          ],
+          [
+            73.32,
+            31.75
+          ],
+          [
+            73.3,
+            30.9
+          ]
+        ]
+      }
+    },
+    {
+      "id": "islam-tabriz",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1501,
+      "approximate": false,
+      "title": {
+        "fr": "Patronage chiite des premiers Safavides",
+        "en": "Shia patronage of the early Safavids"
+      },
+      "description": {
+        "fr": "En 1501, Ismaïl établit à Tabriz un pouvoir qui promeut le chiisme. Cette politique ne doit pas être confondue avec une conversion instantanée de l’ensemble de l’Iran.",
+        "en": "In 1501, Ismail established power in Tabriz and promoted Shiism. This policy must not be confused with instantaneous conversion across Iran."
+      },
+      "coordinates": [
+        46.291,
+        38.08
+      ],
+      "mechanisms": [
+        "patronage",
+        "conquest"
+      ],
+      "sourceIds": [
+        "met-safavids"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyer de Tabriz",
+          "en": "Tabriz center"
+        },
+        "ring": [
+          [
+            45.9,
+            37.83
+          ],
+          [
+            46.52,
+            37.8
+          ],
+          [
+            46.78,
+            38.11
+          ],
+          [
+            46.46,
+            38.37
+          ],
+          [
+            45.98,
+            38.3
+          ],
+          [
+            45.9,
+            37.83
+          ]
+        ]
+      }
+    },
+    {
+      "id": "christianity-wittenberg",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1517,
+      "approximate": false,
+      "title": {
+        "fr": "Un foyer de la Réforme à Wittenberg",
+        "en": "A Reformation center at Wittenberg"
+      },
+      "description": {
+        "fr": "Les thèses de Luther de 1517 deviennent un jalon majeur de la Réforme protestante. Elles transforment un paysage chrétien préexistant.",
+        "en": "Luther’s 1517 theses became a major milestone of the Protestant Reformation. They transformed an existing Christian landscape."
+      },
+      "coordinates": [
+        12.65,
+        51.866
+      ],
+      "mechanisms": [
+        "reform"
+      ],
+      "sourceIds": [
+        "unesco-wittenberg"
+      ]
+    },
+    {
+      "id": "christianity-popocatepetl",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1550,
+      "approximate": true,
+      "title": {
+        "fr": "Missions du XVIe siècle au Mexique",
+        "en": "Sixteenth-century missions in Mexico"
+      },
+      "description": {
+        "fr": "Les monastères autour du Popocatépetl documentent l’évangélisation coloniale et le travail des communautés locales. La zone désigne ce réseau, pas l’abandon général des traditions autochtones.",
+        "en": "Monasteries around Popocatepetl document colonial evangelization and local communities’ work. The area represents this network, not universal abandonment of Indigenous traditions."
+      },
+      "coordinates": [
+        -98.65,
+        18.88
+      ],
+      "mechanisms": [
+        "mission",
+        "conquest"
+      ],
+      "sourceIds": [
+        "unesco-popocatepetl"
+      ],
+      "area": {
+        "label": {
+          "fr": "Réseau des monastères du Popocatépetl",
+          "en": "Popocatepetl monastery network"
+        },
+        "ring": [
+          [
+            -99.15,
+            18.55
+          ],
+          [
+            -98.45,
+            18.5
+          ],
+          [
+            -98.2,
+            18.9
+          ],
+          [
+            -98.35,
+            19.2
+          ],
+          [
+            -98.8,
+            19.12
+          ],
+          [
+            -99.23,
+            18.85
+          ],
+          [
+            -99.15,
+            18.55
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confucianism-sosu",
+      "traditionId": "confucianism",
+      "kind": "spread",
+      "year": 1550,
+      "approximate": true,
+      "title": {
+        "fr": "Les académies néoconfucéennes de Corée",
+        "en": "Korea’s Neo-Confucian academies"
+      },
+      "description": {
+        "fr": "Au milieu du XVIe siècle, Sosu ouvre une phase de développement des seowon. Ces académies associent enseignement, commémoration des maîtres et pratiques rituelles.",
+        "en": "In the mid-sixteenth century, Sosu opened a phase of seowon development. These academies combined teaching, commemoration of teachers and ritual practices."
+      },
+      "coordinates": [
+        128.58,
+        36.926
+      ],
+      "mechanisms": [
+        "patronage",
+        "reform"
+      ],
+      "sourceIds": [
+        "unesco-seowon",
+        "korea-sosu"
+      ],
+      "area": {
+        "label": {
+          "fr": "Foyers des académies du Gyeongsang",
+          "en": "Gyeongsang academy centers"
+        },
+        "ring": [
+          [
+            128.15,
+            35.55
+          ],
+          [
+            128.93,
+            35.49
+          ],
+          [
+            129.3,
+            36.31
+          ],
+          [
+            128.98,
+            37.02
+          ],
+          [
+            128.41,
+            37.09
+          ],
+          [
+            128.07,
+            36.45
+          ],
+          [
+            128.15,
+            35.55
+          ]
+        ]
+      }
+    },
+    {
+      "id": "jainism-patan",
+      "traditionId": "jainism",
+      "kind": "spread",
+      "year": 1596,
+      "approximate": false,
+      "title": {
+        "fr": "Une salle de temple à Patan",
+        "en": "A temple hall at Patan"
+      },
+      "description": {
+        "fr": "La salle du temple Vadi Parshvanatha porte une date de dédicace de 1596. C’est une attestation matérielle du jaïnisme gujarati, pas sa date d’arrivée.",
+        "en": "The Vadi Parshvanatha temple hall bears a dedication date of 1596. It is material evidence of Gujarati Jainism, not its arrival date."
+      },
+      "coordinates": [
+        72.125,
+        23.855
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "met-patan"
+      ]
+    },
+    {
+      "id": "christianity-manila",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1600,
+      "approximate": true,
+      "title": {
+        "fr": "Les églises de la Manille coloniale",
+        "en": "Churches of colonial Manila"
+      },
+      "description": {
+        "fr": "Les églises coloniales attestent une implantation catholique. Le lien résume les réseaux missionnaires passant par le Mexique, dont les Augustins arrivés aux Philippines en 1565 ; ce n’est pas un départ identifié du Popocatépetl.",
+        "en": "Colonial churches attest Catholic settlement. The link summarizes missionary networks through Mexico, including Augustinians arriving in the Philippines in 1565; it is not an identified departure from Popocatepetl."
+      },
+      "coordinates": [
+        120.975,
+        14.588
+      ],
+      "mechanisms": [
+        "mission",
+        "conquest"
+      ],
+      "sourceIds": [
+        "unesco-philippines",
+        "augustinians-mexico-philippines"
+      ],
+      "fromId": "christianity-popocatepetl",
+      "area": {
+        "label": {
+          "fr": "Foyer de Manille",
+          "en": "Manila center"
+        },
+        "ring": [
+          [
+            120.96,
+            14.45
+          ],
+          [
+            121.12,
+            14.48
+          ],
+          [
+            121.15,
+            14.67
+          ],
+          [
+            121.02,
+            14.75
+          ],
+          [
+            120.95,
+            14.61
+          ],
+          [
+            120.96,
+            14.45
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sikhism-amritsar",
+      "traditionId": "sikhism",
+      "kind": "spread",
+      "year": 1604,
+      "approximate": false,
+      "title": {
+        "fr": "L’Adi Granth à Amritsar",
+        "en": "The Adi Granth at Amritsar"
+      },
+      "description": {
+        "fr": "En 1604, la compilation scripturaire est installée au Darbar Sahib. Amritsar consolide son rôle de foyer de la communauté des gurus.",
+        "en": "In 1604, the scriptural compilation was installed at Darbar Sahib. Amritsar consolidated its role as a center of the gurus’ community."
+      },
+      "coordinates": [
+        74.877,
+        31.62
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "harvard-sikhism"
+      ]
+    },
+    {
+      "id": "zoroastrianism-bombay",
+      "traditionId": "zoroastrianism",
+      "kind": "spread",
+      "year": 1673,
+      "approximate": false,
+      "title": {
+        "fr": "La communauté parsie de Bombay",
+        "en": "The Parsi community of Bombay"
+      },
+      "description": {
+        "fr": "Un rapport de 1673 décrit la présence parsie dans le port colonial. Des migrations depuis les communautés du Gujarat accompagnent son développement commercial.",
+        "en": "A 1673 report describes Parsi presence in the colonial port. Migration from Gujarat’s communities accompanied its commercial development."
+      },
+      "coordinates": [
+        72.83,
+        18.96
+      ],
+      "mechanisms": [
+        "migration",
+        "trade",
+        "diaspora"
+      ],
+      "sourceIds": [
+        "iranica-bombay"
+      ],
+      "fromId": "zoroastrianism-sanjan"
+    },
+    {
+      "id": "judaism-amsterdam",
+      "traditionId": "judaism",
+      "kind": "spread",
+      "year": 1675,
+      "approximate": false,
+      "title": {
+        "fr": "Les diasporas séfarades à Amsterdam",
+        "en": "Sephardic diasporas in Amsterdam"
+      },
+      "description": {
+        "fr": "La synagogue portugaise ouvre en 1675 pour une communauté issue des migrations ibériques. La liaison évoque cette diaspora, pas un voyage direct depuis Cordoue.",
+        "en": "The Portuguese Synagogue opened in 1675 for a community formed by Iberian migration. The link represents that diaspora, not a direct journey from Córdoba."
+      },
+      "coordinates": [
+        4.905,
+        52.367
+      ],
+      "mechanisms": [
+        "diaspora",
+        "migration"
+      ],
+      "sourceIds": [
+        "jck-amsterdam"
+      ],
+      "fromId": "judaism-cordoba"
+    },
+    {
+      "id": "confucianism-yushima",
+      "traditionId": "confucianism",
+      "kind": "spread",
+      "year": 1690,
+      "approximate": true,
+      "title": {
+        "fr": "Le sanctuaire confucéen de Yushima",
+        "en": "The Confucian sanctuary at Yushima"
+      },
+      "description": {
+        "fr": "L’établissement de Yushima Seido à Edo en 1690–1691 accompagne le patronage des Tokugawa. Le lieu devient aussi un centre de formation des administrateurs.",
+        "en": "Establishment of Yushima Seido in Edo in 1690–1691 accompanied Tokugawa patronage. It also became a center for training administrators."
+      },
+      "coordinates": [
+        139.768,
+        35.702
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "tokyo-yushima"
+      ]
+    },
+    {
+      "id": "sikhism-anandpur",
+      "traditionId": "sikhism",
+      "kind": "spread",
+      "year": 1699,
+      "approximate": false,
+      "title": {
+        "fr": "La formation du Khalsa",
+        "en": "The formation of the Khalsa"
+      },
+      "description": {
+        "fr": "Guru Gobind Singh institue le Khalsa à Anandpur en 1699. Cette transformation de la communauté ne représente pas l’apparition du sikhisme lui-même.",
+        "en": "Guru Gobind Singh instituted the Khalsa at Anandpur in 1699. This transformation of the community was not the emergence of Sikhism itself."
+      },
+      "coordinates": [
+        76.502,
+        31.235
+      ],
+      "mechanisms": [
+        "reform"
+      ],
+      "sourceIds": [
+        "harvard-sikhism"
+      ]
+    },
+    {
+      "id": "yoruba-oyo",
+      "traditionId": "yoruba-orisha",
+      "kind": "spread",
+      "year": 1750,
+      "approximate": true,
+      "title": {
+        "fr": "Oyo-Ile : cérémonies de Ṣàngó à la cour",
+        "en": "Oyo-Ile: court ceremonies for Ṣàngó"
+      },
+      "description": {
+        "fr": "Le Metropolitan Museum rattache le développement d’un cérémonial de Ṣàngó à la cour d’Oyo au XVIIIe siècle. Vers 1750 date cette forme de patronage, et non l’origine du culte ; le point vise l’ancienne capitale.",
+        "en": "The Metropolitan Museum links the development of Ṣàngó ceremonial forms to Oyo’s eighteenth-century court. Around 1750 dates this patronage, not the cult’s origin; the point marks the old capital."
+      },
+      "coordinates": [
+        4.3833,
+        8.9917
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-met-sango",
+        "ui-unesco-old-oyo"
+      ],
+      "area": {
+        "label": {
+          "fr": "Oyo-Ile — localisation de l’ancienne cité",
+          "en": "Oyo-Ile — location of the old city"
+        },
+        "ring": [
+          [
+            4.3333,
+            8.9333
+          ],
+          [
+            4.4333,
+            8.9333
+          ],
+          [
+            4.4333,
+            9.05
+          ],
+          [
+            4.3333,
+            9.05
+          ],
+          [
+            4.3333,
+            8.9333
+          ]
+        ]
+      }
+    },
+    {
+      "id": "yoruba-havana",
+      "traditionId": "yoruba-orisha",
+      "kind": "spread",
+      "year": 1825,
+      "approximate": true,
+      "title": {
+        "fr": "La Havane : cabildos lukumí",
+        "en": "Havana: Lukumí cabildos"
+      },
+      "description": {
+        "fr": "Des Yoruba réduits en esclavage arrivent massivement à Cuba entre 1790 et 1865. Des cabildos lukumí existent à La Havane au début du XIXe siècle et participent à la formation de la Regla de Ocha ; le trajet représente cette diaspora forcée.",
+        "en": "Large numbers of enslaved Yoruba reached Cuba between 1790 and 1865. Early nineteenth-century Lukumí cabildos in Havana helped shape Regla de Ocha; the route represents this forced diaspora."
+      },
+      "coordinates": [
+        -82.366,
+        23.136
+      ],
+      "mechanisms": [
+        "diaspora",
+        "migration"
+      ],
+      "sourceIds": [
+        "ui-smithsonian-santeria",
+        "ui-smithsonian-havana"
+      ],
+      "fromId": "yoruba-oyo",
+      "area": {
+        "label": {
+          "fr": "La Havane — foyer urbain lukumí schématique",
+          "en": "Havana — schematic urban Lukumí centre"
+        },
+        "ring": [
+          [
+            -82.51,
+            23.16
+          ],
+          [
+            -82.34,
+            23.2
+          ],
+          [
+            -82.2,
+            23.11
+          ],
+          [
+            -82.3,
+            23.01
+          ],
+          [
+            -82.48,
+            23.05
+          ],
+          [
+            -82.51,
+            23.16
+          ]
+        ]
+      }
+    },
+    {
+      "id": "yoruba-salvador",
+      "traditionId": "yoruba-orisha",
+      "kind": "spread",
+      "year": 1835,
+      "approximate": true,
+      "title": {
+        "fr": "Salvador : Casa Branca et le candomblé",
+        "en": "Salvador: Casa Branca and Candomblé"
+      },
+      "description": {
+        "fr": "La Fundação Joaquim Nabuco situe la fondation de Casa Branca dans les années 1830, d’après la tradition orale et les documents. Ce foyer bahianais témoigne de transformations religieuses de la diaspora ; le point représente Salvador, pas une implantation initiale exacte.",
+        "en": "Fundação Joaquim Nabuco places Casa Branca’s founding in the 1830s using oral tradition and documents. This Bahian centre reflects religious transformations in the diaspora; the point represents Salvador, not an exact original compound."
+      },
+      "coordinates": [
+        -38.51,
+        -12.973
+      ],
+      "mechanisms": [
+        "diaspora",
+        "migration"
+      ],
+      "sourceIds": [
+        "ui-fundaj-casa-branca"
+      ],
+      "fromId": "yoruba-ife",
+      "area": {
+        "label": {
+          "fr": "Salvador — foyer bahianais schématique",
+          "en": "Salvador — schematic Bahian centre"
+        },
+        "ring": [
+          [
+            -38.56,
+            -12.91
+          ],
+          [
+            -38.46,
+            -12.87
+          ],
+          [
+            -38.4,
+            -12.99
+          ],
+          [
+            -38.47,
+            -13.04
+          ],
+          [
+            -38.54,
+            -13
+          ],
+          [
+            -38.56,
+            -12.91
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buddhism-san-francisco",
+      "traditionId": "buddhism",
+      "kind": "spread",
+      "year": 1853,
+      "approximate": false,
+      "title": {
+        "fr": "Temples des migrants chinois en Californie",
+        "en": "Chinese migrant temples in California"
+      },
+      "description": {
+        "fr": "En 1853, un temple chinois de San Francisco associe des pratiques bouddhiques et taoïstes. La migration contribue à leur implantation américaine, sans effacer leur pluralité.",
+        "en": "In 1853, a Chinese temple in San Francisco combined Buddhist and Daoist practices. Migration helped establish them in America without erasing their diversity."
+      },
+      "coordinates": [
+        -122.407,
+        37.794
+      ],
+      "mechanisms": [
+        "migration",
+        "diaspora"
+      ],
+      "sourceIds": [
+        "harvard-american-west",
+        "harvard-buddhism"
+      ]
+    },
+    {
+      "id": "daoism-san-francisco",
+      "traditionId": "daoism",
+      "kind": "spread",
+      "year": 1853,
+      "approximate": false,
+      "title": {
+        "fr": "Pratiques taoïstes dans les temples chinois",
+        "en": "Daoist practices in Chinese temples"
+      },
+      "description": {
+        "fr": "Le temple chinois attesté à San Francisco en 1853 réunit notamment des pratiques taoïstes et bouddhiques. Il témoigne des traditions apportées par les migrants.",
+        "en": "The Chinese temple attested in San Francisco in 1853 included Daoist and Buddhist practices. It witnesses traditions brought by migrants."
+      },
+      "coordinates": [
+        -122.407,
+        37.794
+      ],
+      "mechanisms": [
+        "migration",
+        "diaspora"
+      ],
+      "sourceIds": [
+        "harvard-american-west",
+        "harvard-buddhism"
+      ]
+    },
+    {
+      "id": "hinduism-chicago",
+      "traditionId": "hinduism",
+      "kind": "spread",
+      "year": 1893,
+      "approximate": false,
+      "title": {
+        "fr": "Vivekananda au Parlement des religions",
+        "en": "Vivekananda at the Parliament of Religions"
+      },
+      "description": {
+        "fr": "À Chicago, Vivekananda et d’autres délégués hindous présentent leurs enseignements. Cet événement favorise ensuite des réseaux védantins en Amérique.",
+        "en": "In Chicago, Vivekananda and other Hindu delegates presented their teachings. The event subsequently fostered Vedanta networks in America."
+      },
+      "coordinates": [
+        -87.624,
+        41.879
+      ],
+      "mechanisms": [
+        "mission"
+      ],
+      "sourceIds": [
+        "art-institute-parliament",
+        "chicago-vedanta"
+      ]
+    },
+    {
+      "id": "sikhism-stockton",
+      "traditionId": "sikhism",
+      "kind": "spread",
+      "year": 1912,
+      "approximate": false,
+      "title": {
+        "fr": "Un gurdwara dans la diaspora californienne",
+        "en": "A gurdwara in the Californian diaspora"
+      },
+      "description": {
+        "fr": "Le gurdwara de Stockton est établi en 1912 par des migrants du Pendjab. Le trait résume cette origine diasporique, sans reconstruire leurs itinéraires individuels.",
+        "en": "Stockton’s gurdwara was established in 1912 by migrants from Punjab. The line summarizes this diasporic origin without reconstructing individual journeys."
+      },
+      "coordinates": [
+        -121.294,
+        37.948
+      ],
+      "mechanisms": [
+        "migration",
+        "diaspora"
+      ],
+      "sourceIds": [
+        "harvard-sikh-arrivals"
+      ],
+      "fromId": "sikhism-punjab"
+    },
+    {
+      "id": "yoruba-osogbo",
+      "traditionId": "yoruba-orisha",
+      "kind": "spread",
+      "year": 1958,
+      "approximate": true,
+      "title": {
+        "fr": "Osogbo : restauration des sanctuaires",
+        "en": "Osogbo: restoring sacred shrines"
+      },
+      "description": {
+        "fr": "En 1958–1959, Susanne Wenger et des artistes et fidèles locaux commencent des restaurations dans les bois sacrés. Il s’agit du renouvellement d’un lieu de culte ancien, consacré notamment à Ọ̀ṣun, pas de sa fondation.",
+        "en": "In 1958–1959, Susanne Wenger and local artists and devotees began restoring sacred-grove shrines. This renewed an older place of worship, particularly associated with Ọ̀ṣun, rather than founding it."
+      },
+      "coordinates": [
+        4.55222,
+        7.75556
+      ],
+      "mechanisms": [
+        "reform",
+        "patronage"
+      ],
+      "sourceIds": [
+        "ui-wenger-osogbo",
+        "ui-unesco-osogbo"
+      ]
+    }
+  ]
+}

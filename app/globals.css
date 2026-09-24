@@ -390,8 +390,20 @@ ul {
 }
 .map-layer-controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   gap: 6px;
+}
+.map-layer-group {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100%;
+}
+.map-layer-group .map-layer-toggle {
+  flex-shrink: 1;
+  overflow-wrap: anywhere;
 }
 .map-layer-toggle,
 .map-layer-legend-toggle {
@@ -3292,6 +3304,9 @@ ul {
   .timeline-speeds button {
     min-width: 26px;
   }
+  .timeline-era {
+    min-width: 24px;
+  }
   .timeline-era-bands {
     margin-top: 12px;
   }
@@ -3759,6 +3774,263 @@ ul {
   }
   .atlas-app .resource-layer-card {
     max-height: min(38svh, calc(100svh - var(--timeline-height) - 165px));
+  }
+}
+
+.religion-layer-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 10px;
+  margin-top: 5px;
+  max-width: min(570px, calc(100vw - 76px));
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.45;
+  text-shadow: 0 1px 3px var(--ink);
+}
+.religion-active-filter,
+.religion-layer-note button {
+  color: var(--gold);
+}
+.religion-layer-note button {
+  margin-inline-start: 5px;
+  text-decoration: underline;
+}
+.religion-layer-card {
+  position: fixed;
+  inset-block-start: 143px;
+  inset-inline-end: 82px;
+  width: 360px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100svh - var(--timeline-height) - 168px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.religion-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--line);
+}
+.religion-card-heading h2 {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.religion-card-heading > button {
+  flex-shrink: 0;
+}
+.religion-card-body {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 14px 15px 17px;
+  font-size: 11px;
+  line-height: 1.55;
+}
+.religion-card-body h3 {
+  margin: 18px 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.religion-display-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+}
+.religion-display-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  cursor: pointer;
+}
+.religion-display-options input {
+  accent-color: var(--gold);
+}
+.religion-traditions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+.religion-traditions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 8px;
+  min-height: 36px;
+  text-align: start;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 10px;
+  line-height: 1.35;
+}
+.religion-traditions button:first-child {
+  grid-column: 1 / -1;
+  justify-content: space-between;
+}
+.religion-traditions button[aria-pressed='true'] {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 7%, transparent);
+}
+.religion-tradition-count {
+  margin-inline-start: auto;
+  font-variant-numeric: tabular-nums;
+}
+.religion-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.religion-tradition-name,
+.religion-back {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.religion-back {
+  color: var(--gold);
+  font-size: 10px;
+  padding: 2px 0 8px;
+}
+.religion-tradition-name {
+  margin: 10px 0;
+}
+.religion-stage-date {
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.religion-mechanisms,
+.religion-sources,
+.religion-stages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.religion-mechanisms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.religion-mechanisms li {
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.religion-sources li + li {
+  margin-top: 7px;
+}
+.religion-sources a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+.religion-sources svg {
+  display: inline;
+  margin-inline-start: 3px;
+}
+.religion-stages li {
+  border-inline-start: 1px solid var(--line-strong);
+}
+.religion-stages button {
+  display: grid;
+  grid-template-columns: minmax(62px, auto) 1fr;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 8px;
+  text-align: start;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.religion-stages button[aria-current='step'] {
+  background: color-mix(in srgb, var(--gold) 9%, transparent);
+}
+.religion-stage-year {
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.religion-stage-future button {
+  color: var(--muted);
+}
+.religion-stages small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+}
+.religion-coverage {
+  padding-top: 12px;
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+}
+.atlas-app .reopen-panel {
+  top: max(145px, calc(var(--map-layers-bottom, 137px) + 8px));
+}
+@media (max-width: 580px) {
+  .map-layers {
+    width: calc(100% - 76px);
+    max-width: none;
+  }
+  .religion-layer-note {
+    font-size: 8px;
+  }
+  .atlas-app .resource-layer-card,
+  .atlas-app .religion-layer-card {
+    position: absolute;
+    inset-block-start: calc(100% + 8px);
+    inset-inline: 0;
+    width: calc(100vw - 20px);
+    max-width: none;
+    max-height: min(38svh, calc(100svh - var(--timeline-height) - 250px));
+  }
+  .sidebar-is-open .resource-layer-card,
+  .sidebar-is-open .religion-layer-card {
+    max-height: min(38svh, calc(100svh - var(--timeline-height) - 500px));
+  }
+  .atlas-app .map-tools,
+  .atlas-app .reopen-panel {
+    top: max(112px, calc(var(--map-layers-bottom, 104px) + 8px));
+  }
+  .detail-is-open .map-tools {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: calc(100% - 24px);
+    gap: 6px;
+  }
+  .detail-is-open .event-panel,
+  .detail-is-open .entity-panel {
+    /* Reserve two tool rows and their gaps above the mobile drawer. */
+    max-height: calc(
+      100svh - var(--timeline-height) - max(212px, calc(var(--map-layers-bottom, 104px) + 108px))
+    );
+  }
+  .religions-visible .war-context {
+    top: 220px;
+  }
+}
+@media (max-width: 580px) and (max-height: 700px) {
+  .atlas-app:has(.religion-layer-card) .exploration-panel {
+    visibility: hidden;
+  }
+  .atlas-app .resource-layer-card,
+  .atlas-app .religion-layer-card {
+    max-height: min(38svh, calc(100svh - var(--timeline-height) - 250px));
   }
 }
 

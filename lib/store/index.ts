@@ -50,6 +50,10 @@ export interface AtlasState {
   storyStep: number;
   battlesVisible: boolean;
   resourcesVisible: boolean;
+  religionsVisible: boolean;
+  religionFilter: string | null;
+  religionRoutesVisible: boolean;
+  religionAreasVisible: boolean;
   battleMode: boolean;
   battlePlaying: boolean;
   battleSpeed: 0.5 | 1 | 2;
@@ -83,6 +87,10 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   storyStep: 0,
   battlesVisible: true,
   resourcesVisible: false,
+  religionsVisible: false,
+  religionFilter: null,
+  religionRoutesVisible: true,
+  religionAreasVisible: true,
   battleMode: false,
   battlePlaying: false,
   battleSpeed: 1,
@@ -112,6 +120,10 @@ function yearNumber(value: unknown, fallback = DEFAULT_ATLAS_STATE.year): number
 function identifier(value: unknown, qid = true): string | null {
   if (typeof value !== 'string' || value.length > 200) return null;
   return (qid ? /^Q[1-9]\d*$/.test(value) : /^[\p{L}\p{N}_.: -]+$/u.test(value)) ? value : null;
+}
+
+function religionIdentifier(value: unknown): string | null {
+  return typeof value === 'string' && /^[a-z][a-z0-9-]{0,63}$/.test(value) ? value : null;
 }
 
 function members<T extends string>(value: unknown, valid: readonly T[]): T[] {
@@ -214,6 +226,10 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   }
   state.battlesVisible = query.get('battles') !== '0';
   state.resourcesVisible = query.get('resources') === '1';
+  state.religionsVisible = query.get('religions') === '1';
+  state.religionFilter = religionIdentifier(query.get('religion'));
+  state.religionRoutesVisible = query.get('rpaths') !== '0';
+  state.religionAreasVisible = query.get('rareas') !== '0';
   state.battleMode = query.get('battle') === '1' && state.battlesVisible;
   if (!state.battlesVisible && query.get('battle') === '1') state.selectedEvent = null;
   state.battleProgress = finiteNumber(query.get('bphase'), 0, 0, 1);
@@ -262,6 +278,11 @@ export function serializeAtlasUrl(state: AtlasState): string {
   if (state.trails) query.set('trails', '1');
   if (!state.battlesVisible) query.set('battles', '0');
   if (state.resourcesVisible) query.set('resources', '1');
+  if (state.religionsVisible) query.set('religions', '1');
+  const religionFilter = religionIdentifier(state.religionFilter);
+  if (religionFilter) query.set('religion', religionFilter);
+  if (!state.religionRoutesVisible) query.set('rpaths', '0');
+  if (!state.religionAreasVisible) query.set('rareas', '0');
   if (state.battleMode) {
     query.set('battle', '1');
     query.set('bphase', String(state.battleProgress));
@@ -307,6 +328,10 @@ export interface AtlasActions {
   setStoryStep: (step: number) => void;
   setBattlesVisible: (visible: boolean) => void;
   setResourcesVisible: (visible: boolean) => void;
+  setReligionsVisible: (visible: boolean) => void;
+  setReligionFilter: (tradition: string | null) => void;
+  setReligionRoutesVisible: (visible: boolean) => void;
+  setReligionAreasVisible: (visible: boolean) => void;
   setBattleMode: (enabled: boolean) => void;
   setBattlePlaying: (playing: boolean) => void;
   setBattleSpeed: (speed: AtlasState['battleSpeed']) => void;
@@ -465,6 +490,11 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
     setStoryStep: (step) => set({ storyStep: Math.max(0, Math.floor(step)) }),
     setBattlesVisible: (battlesVisible) => set((state) => playbackPatch(state, { battlesVisible })),
     setResourcesVisible: (resourcesVisible) => set({ resourcesVisible }),
+    setReligionsVisible: (religionsVisible) => set({ religionsVisible }),
+    setReligionFilter: (religionFilter) =>
+      set({ religionFilter: religionIdentifier(religionFilter) }),
+    setReligionRoutesVisible: (religionRoutesVisible) => set({ religionRoutesVisible }),
+    setReligionAreasVisible: (religionAreasVisible) => set({ religionAreasVisible }),
     setBattleMode: (battleMode) =>
       set((state) =>
         playbackPatch(state, {
@@ -499,6 +529,9 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
         ...(patch.camera ? { camera: normalizeCamera(patch.camera, state.camera) } : {}),
         ...(patch.filters ? { filters: normalizeFilters(patch.filters) } : {}),
         ...(patch.range !== undefined ? { range: normalizeRange(patch.range) } : {}),
+        ...(patch.religionFilter !== undefined
+          ? { religionFilter: religionIdentifier(patch.religionFilter) }
+          : {}),
       })),
     hydrateFromUrl: (url) =>
       set((state) => ({ ...parseAtlasUrl(url), battleRevision: state.battleRevision + 1 })),
