@@ -200,6 +200,11 @@ async function openCenteredSite(page: Page, site: ResourceSite) {
   // At pitch/bearing zero the sourced camera centre is the centre of the map canvas.
   // Retry the user action while MapLibre's GeoJSON worker makes the source queryable.
   await expect(async () => {
+    // A click that lands before the site is queryable selects the territory beneath it. On
+    // phones that drawer covers the canvas centre, so close it before the next attempt.
+    const territory = page.getByTestId('entity-panel');
+    if (await territory.isVisible())
+      await territory.getByRole('button', { name: 'Close territory panel', exact: true }).click();
     await canvas.click({ position: { x: bounds!.width / 2, y: bounds!.height / 2 } });
     await expect(
       page.getByTestId('resource-detail').getByRole('heading', { name: site.name, exact: true }),
