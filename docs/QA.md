@@ -2,6 +2,10 @@
 
 Les assertions historiques des tests de navigation utilisent les fichiers du pipeline : l’événement de Waterloo est recherché dans le lot du XIXe siècle, et la campagne est choisie dans le catalogue produit. Les quelques objets synthétiques des tests unitaires vérifient uniquement des contrats logiciels ; ils ne sont jamais distribués dans le corpus.
 
+## Suivi continu
+
+Chaque PR et chaque commit de `main` passent par `.github/workflows/ci.yml`. Le contrôle `ci-ok` n’est vert que si le job `static` (TypeScript, Vitest, ESLint, tests Python, contrôles des données, dépendances) et les huit shards Playwright réussissent. Le nombre de tests, leur durée et les budgets mesurés en vigueur sont ceux du dernier run vert, consultable dans l’[historique de la CI](https://github.com/ZakiChair/HistoryOfAtlas/actions/workflows/ci.yml?query=branch%3Amain+is%3Asuccess). Les chiffres des sections datées ci-dessous décrivent l’état à ces dates.
+
 ## Dossiers de batailles et de personnes — 21 septembre 2026
 
 Le corpus enrichi contient **20 415 notices**, dont 20 037 événements datés et géolocalisés, **11 364 personnes** et **22 066 fonctions**. Les 24 972 liens événement/personne sont validés dans les deux sens avec le même identifiant d’assertion, le même rôle et la même propriété source. Les 1 405 catalogues politiques passent également leur schéma. La commande `pnpm data:check` effectue ce contrôle sans dépendre du cache brut ni du réseau. La reconstruction hors ligne produit 35 353 fichiers identiques ; son empreinte est conservée dans `data/reports/idempotence.json`.
@@ -10,7 +14,7 @@ Les contrôles de domaine couvrent les calendriers, les dates approximatives ou 
 
 Les nouveaux scénarios navigateur contrôlent la navigation bataille → commandant → retour, les biographies ouvertes depuis un territoire, les liens profonds bilingues, l’absence de téléchargement des biographies avant sélection, l’attribution des résumés Wikipédia et la conservation du focus clavier. La réponse Wikipédia utilisée pour rendre le test reproductible est une capture réelle et attribuée dans `tests/fixtures/wikipedia/`. Le chargement du résumé a aussi été observé directement avec l’API publique pour une bataille et une personne.
 
-La version finale passe **193 tests Vitest, 9 tests Python et 56 tests E2E**. La suite navigateur complète utilise SwiftShader, un seul worker et les profils ordinateur et Pixel 7 émulé ; elle se termine sans échec ni nouvelle tentative en 6,6 minutes. Les six scénarios de lecture automatique contrôlent toujours les polygones effectivement rendus. Les tests clavier ont d’abord reproduit deux défauts : le focus perdu après une sélection déjà en cache, puis la fermeture de la fiche derrière la recherche lors d’un appui sur Échap. Leurs assertions passent après correction, en conservant aussi le paramètre `person` dans l’URL.
+Les tests Vitest, les tests Python et la suite navigateur passent à ce jalon ; leur nombre et leur durée actuels sont ceux du dernier run vert de la CI (voir « Suivi continu »). La suite navigateur utilise SwiftShader, un seul worker et les profils ordinateur et Pixel 7 émulé. Les six scénarios de lecture automatique contrôlent toujours les polygones effectivement rendus. Les tests clavier ont d’abord reproduit deux défauts : le focus perdu après une sélection déjà en cache, puis la fermeture de la fiche derrière la recherche lors d’un appui sur Échap. Leurs assertions passent après correction, en conservant aussi le paramètre `person` dans l’URL.
 
 TypeScript, ESLint et l’export de 5 496 pages réussissent. La coque initiale mesure **253 182 octets gzip** ; cette mesure exclut toujours le moteur cartographique et les biographies différés. Le rapport `data/reports/dossiers-verification.json` conserve le protocole, le corpus et les empreintes des fichiers contrôlés.
 
@@ -37,6 +41,11 @@ pnpm lint
 pnpm build
 pnpm preview
 pnpm test:e2e --workers=1
+# Coque JavaScript, polyfills noModule exclus (après pnpm build ; --write met à jour le rapport hors CI).
+# Un arbre non validé est noté `<sha>-dirty` : régénérer le rapport après le commit du code.
+pnpm measure:bundle
+# Données téléchargées au premier affichage de chaque couche, sans compilation préalable.
+node scripts/measure-data.mjs
 # Benchmark séparé : GPU natif par défaut, un seul worker, mêmes seuils stricts.
 pnpm test:performance
 # Comparaison explicite avec le rendu logiciel, dont les échecs sont conservés :

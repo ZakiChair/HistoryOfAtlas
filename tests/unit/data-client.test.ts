@@ -177,7 +177,7 @@ describe('lazy data loading and provenance-preserving summaries', () => {
       }),
     );
     const { readJson } = await import('../../lib/data-client');
-    const first = readJson('/data/retry.json');
+    const first = readJson('/data/retry.json', { retries: 0 });
     const duplicate = readJson('/data/retry.json');
     expect(first).toBe(duplicate);
     await expect(first).rejects.toThrow('503');
@@ -296,5 +296,135 @@ describe('lazy data loading and provenance-preserving summaries', () => {
       ),
     ).resolves.toBeNull();
     expect(fetcher).not.toHaveBeenCalled();
+  });
+});
+
+/** A body delivered in blocks, each after `delays[i]` ms; `null` never delivers the block. */
+function streamedResponse(text: string, delays: (number | null)[], cancelled = { value: false }) {
+  const bytes = new TextEncoder().encode(text);
+  const size = Math.ceil(bytes.byteLength / delays.length);
+  let index = 0;
+  return new Response(
+    new ReadableStream<Uint8Array>({
+      async pull(controller) {
+        const delay = delays[index];
+        if (delay === undefined) return controller.close();
+        if (delay === null) return new Promise<void>(() => {});
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        controller.enqueue(bytes.slice(index * size, (index + 1) * size));
+        index++;
+      },
+      cancel() {
+        cancelled.value = true;
+      },
+    }),
+    { headers: { 'Content-Type': 'application/json' } },
+  );
+}
+
+describe('downloads on slow and unreliable networks', () => {
+  beforeEach(() => vi.resetModules());
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.unstubAllGlobals();
+  });
+
+  it('completes a slow transfer that keeps receiving bytes long after the old 12 s cut-off', async () => {
+    vi.useFakeTimers();
+    const payload = { sites: Array.from({ length: 50 }, (_, id) => ({ id })) };
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => streamedResponse(JSON.stringify(payload), Array(8).fill(5_000))),
+    );
+    const { readJson } = await import('../../lib/data-client');
+    const result = readJson('/data/slow.json');
+    await vi.advanceTimersByTimeAsync(41_000);
+    await expect(result).resolves.toEqual(payload);
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('abandons a transfer that stops sending bytes and cancels its stream', async () => {
+    vi.useFakeTimers();
+    const cancelled = { value: false };
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => streamedResponse('{"sites":[1,2,3]}', [0, null], cancelled)),
+    );
+    const { readJson } = await import('../../lib/data-client');
+    const settled = vi.fn();
+    const result = readJson('/data/stalled.json', { retries: 0 });
+    result.catch(settled);
+    await vi.advanceTimersByTimeAsync(14_000);
+    expect(settled).not.toHaveBeenCalled();
+    const rejection = expect(result).rejects.toThrow('No data received for 15000 ms');
+    await vi.advanceTimersByTimeAsync(2_000);
+    await rejection;
+    expect(cancelled.value).toBe(true);
+  });
+
+  it('abandons a request whose response never starts, then resumes on a later attempt', async () => {
+    vi.useFakeTimers();
+    let attempts = 0;
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => (++attempts === 1 ? new Promise<Response>(() => {}) : jsonResponse({ ok: 1 }))),
+    );
+    const { readJson } = await import('../../lib/data-client');
+    const result = readJson('/data/unanswered.json');
+    await vi.advanceTimersByTimeAsync(15_000 + 1_500);
+    await expect(result).resolves.toEqual({ ok: 1 });
+    expect(attempts).toBe(2);
+  });
+
+  it('retries server errors and dropped connections, then keeps the cached result', async () => {
+    const failures = [
+      () => jsonResponse({}, 503),
+      () => Promise.reject(new TypeError('Failed to fetch')),
+    ];
+    let attempts = 0;
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => failures[attempts++]?.() ?? jsonResponse({ sourced: true })),
+    );
+    const { readJson } = await import('../../lib/data-client');
+    await expect(readJson('/data/flaky.json', { backoffMs: [0] })).resolves.toEqual({
+      sourced: true,
+    });
+    await expect(readJson('/data/flaky.json')).resolves.toEqual({ sourced: true });
+    expect(attempts).toBe(3);
+  });
+
+  it('gives up after the last retry and lets the next reader start again', async () => {
+    let attempts = 0;
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => (++attempts <= 3 ? jsonResponse({}, 502) : jsonResponse({ back: true }))),
+    );
+    const { readJson } = await import('../../lib/data-client');
+    await expect(readJson('/data/outage.json', { backoffMs: [0] })).rejects.toThrow('502');
+    expect(attempts).toBe(3);
+    await expect(readJson('/data/outage.json')).resolves.toEqual({ back: true });
+    expect(attempts).toBe(4);
+  });
+
+  it.each([
+    ['a missing file', () => jsonResponse({}, 404), /404/],
+    ['an unparsable body', () => new Response('<!doctype html>', { status: 200 }), /JSON/],
+  ])('never retries %s, which a new attempt would not change', async (_, respond, error) => {
+    const fetcher = vi.fn(async () => respond());
+    vi.stubGlobal('fetch', fetcher);
+    const { readJson } = await import('../../lib/data-client');
+    await expect(readJson('/data/final.json', { backoffMs: [0] })).rejects.toThrow(error);
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
+  it('leaves third-party requests to their own fallbacks instead of retrying them', async () => {
+    const fetcher = vi.fn(async () => jsonResponse({}, 503));
+    vi.stubGlobal('fetch', fetcher);
+    const { readJson } = await import('../../lib/data-client');
+    await expect(readJson('https://en.wikipedia.org/api/rest_v1/page/summary/X')).rejects.toThrow(
+      '503',
+    );
+    expect(fetcher).toHaveBeenCalledTimes(1);
   });
 });

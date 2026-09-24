@@ -120,6 +120,22 @@ describe('battle reconstruction navigation and clocks', () => {
     });
   });
 
+  it('clears a period on entering the catalogue, whose timeline hides the period controls', () => {
+    const state = useAtlasStore.getState();
+    state.setYear(1800);
+    state.setRange([1750, 1850]);
+    state.setBattleMode(true);
+    expect(useAtlasStore.getState()).toMatchObject({ battleMode: true, range: null, year: 1800 });
+    // A shared battle link cannot carry a hidden period either.
+    const shared = parseAtlasUrl('?battle=1&y=1800&from=1700&to=1900');
+    expect(shared).toMatchObject({ battleMode: true, range: null });
+    const query = new URLSearchParams(serializeAtlasUrl(shared));
+    expect(query.has('from')).toBe(false);
+    expect(query.has('to')).toBe(false);
+    // Outside battle mode the period is still restored.
+    expect(parseAtlasUrl('?y=1800&from=1700&to=1900').range).toEqual([1700, 1900]);
+  });
+
   it('restoring another shared phase for the same battle always issues a seek', () => {
     const state = useAtlasStore.getState();
     state.hydrateFromUrl('?battle=1&e=Q48314&bphase=0.2');

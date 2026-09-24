@@ -297,6 +297,7 @@ describe('reviewed battle metadata', () => {
           unmapped: 1,
           battles: [{ ...record, documented: false }],
         },
+        '/public/data/battles/documented.json': { version: 1, ids: [] },
         '/public/data/battles/events/Q1.json': record,
         '/public/data/events/Q1.json': original,
         '/public/data/battles/coverage.json': {

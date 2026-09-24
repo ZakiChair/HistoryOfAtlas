@@ -14,6 +14,7 @@ import ResourceIcon from './ResourceIcon';
 import { useReligionStore } from '@/lib/religions/store';
 
 const ReligionLayers = dynamic(() => import('./ReligionLayers'), { ssr: false });
+const EventKey = dynamic(() => import('./EventKey'), { ssr: false });
 const religionLabels = {
   fr: ['Religions', 'Explorer les religions'],
   en: ['Religions', 'Explore religions'],
@@ -24,7 +25,7 @@ const religionLabels = {
 };
 
 export default function MapLayers() {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
   const text = (key: ResourceCopyKey) => resourceText(locale, key);
   const battlesVisible = useAtlasStore((state) => state.battlesVisible);
   const resourcesVisible = useAtlasStore((state) => state.resourcesVisible);
@@ -41,6 +42,9 @@ export default function MapLayers() {
   const sources = useResourceStore((state) => state.sources);
   const categoryCounts = useResourceStore((state) => state.categoryCounts);
   const [legendOpen, setLegendOpen] = useState(false);
+  const [eventKeyOpen, setEventKeyOpen] = useState(false);
+  const eventKeyButton = useRef<HTMLButtonElement>(null);
+  const eventKeyId = useId();
   const container = useRef<HTMLDivElement>(null);
   const legendButton = useRef<HTMLButtonElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -90,12 +94,15 @@ export default function MapLayers() {
     const unsubscribeReligions = useReligionStore.subscribe((state, previous) => {
       if (state.panelOpen && !previous.panelOpen) {
         setLegendOpen(false);
+        setEventKeyOpen(false);
         useResourceStore.getState().select(null);
       }
     });
     const unsubscribeResources = useResourceStore.subscribe((state, previous) => {
-      if (state.selected && state.selected !== previous.selected)
+      if (state.selected && state.selected !== previous.selected) {
         useReligionStore.getState().setPanelOpen(false);
+        setEventKeyOpen(false);
+      }
     });
     return () => {
       unsubscribeReligions();
@@ -112,23 +119,50 @@ export default function MapLayers() {
     useReligionStore.getState().setPanelOpen(false);
     religionLegendButton.current?.focus();
   };
+  const closeEventKey = () => {
+    setEventKeyOpen(false);
+    eventKeyButton.current?.focus();
+  };
 
   return (
     <div className="map-layers" data-testid="map-layers" ref={container}>
       <div className="map-layer-controls" role="group" aria-label={text('layers')}>
-        <button
-          type="button"
-          className="map-layer-toggle"
-          aria-pressed={battlesVisible}
-          data-testid="battles-layer-toggle"
-          onClick={() => useAtlasStore.getState().setBattlesVisible(!battlesVisible)}
-        >
-          <Swords size={15} aria-hidden="true" />
-          <span>{text('battles')}</span>
-          <span className="map-layer-check" aria-hidden="true">
-            {battlesVisible && <Check size={11} />}
-          </span>
-        </button>
+        <div className="map-layer-group">
+          <button
+            type="button"
+            className="map-layer-toggle"
+            aria-pressed={battlesVisible}
+            data-testid="battles-layer-toggle"
+            onClick={() => useAtlasStore.getState().setBattlesVisible(!battlesVisible)}
+          >
+            <Swords size={15} aria-hidden="true" />
+            <span>{text('battles')}</span>
+            <span className="map-layer-check" aria-hidden="true">
+              {battlesVisible && <Check size={11} />}
+            </span>
+          </button>
+          {/* Treaties, wars and campaigns stay on the map without battles: the key always applies. */}
+          <button
+            type="button"
+            className="map-layer-legend-toggle"
+            data-testid="events-legend-toggle"
+            aria-label={t('Légende des événements', 'Event key')}
+            aria-expanded={eventKeyOpen}
+            aria-controls={eventKeyId}
+            ref={eventKeyButton}
+            onClick={() => {
+              if (eventKeyOpen) closeEventKey();
+              else {
+                setLegendOpen(false);
+                useResourceStore.getState().select(null);
+                useReligionStore.getState().setPanelOpen(false);
+                setEventKeyOpen(true);
+              }
+            }}
+          >
+            <ChevronDown size={16} aria-hidden="true" />
+          </button>
+        </div>
         <div className="map-layer-group">
           <button
             type="button"
@@ -162,6 +196,7 @@ export default function MapLayers() {
                 if (detailsOpen) closeDetails();
                 else {
                   useReligionStore.getState().setPanelOpen(false);
+                  setEventKeyOpen(false);
                   setLegendOpen(true);
                 }
               }}
@@ -237,6 +272,7 @@ export default function MapLayers() {
         </div>
       )}
       {religionsVisible && <ReligionLayers panelId={religionPanelId} onClose={closeReligions} />}
+      {eventKeyOpen && <EventKey panelId={eventKeyId} onClose={closeEventKey} />}
       {detailsOpen && (
         <section
           id={panelId}
@@ -252,7 +288,8 @@ export default function MapLayers() {
         >
           <div className="resource-card-heading">
             <h2 id={headingId} ref={heading} tabIndex={-1}>
-              {selected ? selected.name : text('legend')}
+              {/* Catalogue names, countries and notes are published in English only. */}
+              {selected ? <span lang="en">{selected.name}</span> : text('legend')}
             </h2>
             <button
               type="button"
@@ -287,7 +324,7 @@ export default function MapLayers() {
                   {selected.country && (
                     <div>
                       <dt>{text('location')}</dt>
-                      <dd>{selected.country}</dd>
+                      <dd lang="en">{selected.country}</dd>
                     </div>
                   )}
                   <div>
@@ -317,7 +354,9 @@ export default function MapLayers() {
                         {evidence.categories.map((category) => text(category)).join(' · ')}
                       </span>
                       {evidence.description && (
-                        <p className="resource-period-description">{evidence.description}</p>
+                        <p className="resource-period-description" lang="en">
+                          {evidence.description}
+                        </p>
                       )}
                       <a
                         className="resource-source-link"
@@ -359,7 +398,9 @@ export default function MapLayers() {
                         </span>
                       )}
                       {period.description && (
-                        <p className="resource-period-description">{period.description}</p>
+                        <p className="resource-period-description" lang="en">
+                          {period.description}
+                        </p>
                       )}
                       <a
                         className="resource-source-link"
@@ -465,6 +506,7 @@ export default function MapLayers() {
                 <p className="resource-coverage">{text('choose')}</p>
                 <p className="resource-coverage">{text('clusters')}</p>
                 <p className="resource-coverage">{text('chronologyNote')}</p>
+                <p className="resource-coverage">{text('catalogueSnapshots')}</p>
                 <p className="resource-coverage">{text('coverage')}</p>
                 <details className="resource-sources">
                   <summary>{text('sources')}</summary>

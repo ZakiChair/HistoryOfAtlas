@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { ArrowUpRight, Play, Pause, SkipForward, SkipBack, X, Route } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { localizedLanguage, localizedName, useI18n } from '@/lib/i18n';
-import { formatYear } from '@/lib/histdate';
+import { formatHistDate, formatYear } from '@/lib/histdate';
 import { useJson } from '@/lib/data-client/hooks';
 import { openCampaign } from '@/lib/navigation';
 import type { Campaign } from '@/lib/schema';
@@ -29,6 +29,8 @@ export default function CampaignPanel() {
     [],
   );
   const selected = campaigns?.find((item) => item.id === campaignId);
+  const currentIndex = selected ? Math.max(0, Math.min(selected.steps.length - 1, step)) : 0;
+  const current = selected?.steps[currentIndex];
   useEffect(() => {
     if (!loading && !selected) setPlaying(false);
   }, [loading, selected, setPlaying]);
@@ -90,41 +92,56 @@ export default function CampaignPanel() {
             {formatYear(selected.steps[0].date.year, locale)} —{' '}
             {formatYear(selected.steps.at(-1)!.date.year, locale)}
           </p>
-          {selected.people?.length ? <EventPeople people={selected.people} /> : null}
-          <div className="campaign-controls">
-            <button
-              className="icon-button"
-              aria-label={t('previousStep')}
-              disabled={step === 0}
-              onClick={() => openCampaign(selected, step - 1)}
-            >
-              <SkipBack size={17} />
-            </button>
-            <button
-              className="primary-button"
-              onClick={() => {
-                if (step >= selected.steps.length - 1) openCampaign(selected, 0);
-                setPlaying(!playing);
-              }}
-            >
-              {playing ? <Pause size={15} /> : <Play size={15} />}
-              {playing ? t('Pause', 'Pause') : t('Lire la campagne', 'Play campaign')}
-            </button>
-            <button
-              className="icon-button"
-              aria-label={t('nextStep')}
-              disabled={step >= selected.steps.length - 1}
-              onClick={() => openCampaign(selected, step + 1)}
-            >
-              <SkipForward size={17} />
-            </button>
+          <div className="campaign-sticky" data-testid="campaign-sticky">
+            <div className="campaign-controls">
+              <button
+                className="icon-button"
+                aria-label={t('previousStep')}
+                disabled={step === 0}
+                onClick={() => openCampaign(selected, step - 1)}
+              >
+                <SkipBack size={17} />
+              </button>
+              <button
+                className="primary-button"
+                onClick={() => {
+                  if (step >= selected.steps.length - 1) openCampaign(selected, 0);
+                  setPlaying(!playing);
+                }}
+              >
+                {playing ? <Pause size={15} /> : <Play size={15} />}
+                {playing ? t('Pause', 'Pause') : t('Lire la campagne', 'Play campaign')}
+              </button>
+              <button
+                className="icon-button"
+                aria-label={t('nextStep')}
+                disabled={step >= selected.steps.length - 1}
+                onClick={() => openCampaign(selected, step + 1)}
+              >
+                <SkipForward size={17} />
+              </button>
+            </div>
+            {current && (
+              <p className="campaign-current">
+                <small>
+                  {t('Étape {current} sur {total}', 'Step {current} of {total}', {
+                    current: currentIndex + 1,
+                    total: selected.steps.length,
+                  })}{' '}
+                  · {formatHistDate(current.date, locale)}
+                </small>
+                <strong lang={current.name ? localizedLanguage(current.name, locale) : undefined}>
+                  {current.name ? localizedName(current.name, locale) : current.label}
+                </strong>
+              </p>
+            )}
           </div>
-          {selected.steps[step]?.eventId && (
+          {current?.eventId && (
             <button
               className="text-button"
               onClick={() => {
                 setPlaying(false);
-                useAtlasStore.getState().selectEvent(selected.steps[step].eventId ?? null);
+                useAtlasStore.getState().selectEvent(current.eventId ?? null);
               }}
             >
               {t('Lire la fiche de cette étape', 'Read this step’s event')}
@@ -167,6 +184,9 @@ export default function CampaignPanel() {
             {t('Consulter la source', 'Read the source')}
             <ArrowUpRight size={14} />
           </a>
+          {selected.people?.length ? (
+            <EventPeople key={selected.id} people={selected.people} />
+          ) : null}
         </>
       ) : (
         <div className="campaign-catalog">

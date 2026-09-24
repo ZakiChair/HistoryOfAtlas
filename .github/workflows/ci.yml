@@ -1,6 +1,9 @@
 name: Validate HistoryOfAtlas
 on:
+  # Pull requests are validated through their own event; branch pushes other than main
+  # would only run the same commit twice.
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
     inputs:
@@ -11,9 +14,68 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: historyofatlas-${{ github.ref }}
-  cancel-in-progress: true
+  # A group holds one pending run and a newer one replaces it, whatever cancel-in-progress says.
+  # Each main commit (and event) gets its own group, so every commit on main keeps its verdict
+  # and main runs do not queue behind each other; superseded pull request runs are cancelled.
+  group: historyofatlas-${{ github.ref == 'refs/heads/main' && format('main-{0}-{1}', github.event_name, github.sha) || github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
+  static:
+    # Checks that do not need a production build run once, beside the browser shards.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Unit tests
+        run: pnpm test
+      - name: Lint
+        run: pnpm lint
+      - name: Geography source and artifact invariants
+        run: python3 -m unittest discover -s pipeline/geography -p 'test_*.py'
+      - name: People acquisition invariants
+        run: python3 -m unittest discover -s pipeline/fetch -p 'test_*.py'
+      - name: Battle acquisition invariants
+        run: python3 -m unittest discover -s pipeline/battles -p 'test_*.py'
+      - name: Resource importer invariants
+        run: python3 -m unittest discover -s tests/unit -p 'test_*.py'
+      - name: Published dossier provenance and reciprocal links
+        run: pnpm data:check
+      - name: Complete battle catalogue, quantities and geographic provenance
+        run: pnpm data:battles:check
+      - name: Resource chronology, source hashes and current mineral coverage
+        run: pnpm data:resources:check
+      - name: First-load data per layer (warning only)
+        run: node scripts/measure-data.mjs
+      # Keep last: the ignore list lives in a runner-local pnpm-workspace.yaml, which must not
+      # influence the steps above.
+      - name: Production dependency advisories
+        # `pnpm audit --ignore <id>` only records the ignore and exits 0 without auditing, so the
+        # ignores go in auditConfig, read by pnpm from pnpm-workspace.yaml. The repository has no
+        # such file; if one is added, move auditConfig into it and drop the heredoc.
+        # Ignored: image-size <=2.0.2, high, no patched release. Reached only through
+        # @deck.gl/geo-layers > @deck.gl/mesh-layers > @loaders.gl/gltf > @loaders.gl/textures >
+        # texture-compressor; the atlas uses TripsLayer and never loads compressed textures.
+        #   GHSA-w3rx-r6r6-pgpr (CVE-2025-71330), GHSA-5p2g-fcmc-qvqq (CVE-2025-71329)
+        # Remove each ignore once deck.gl or loaders.gl drop the dependency or image-size is fixed.
+        run: |
+          test ! -e pnpm-workspace.yaml
+          cat > pnpm-workspace.yaml <<'EOF'
+          auditConfig:
+            ignoreGhsas:
+              - GHSA-w3rx-r6r6-pgpr
+              - GHSA-5p2g-fcmc-qvqq
+          EOF
+          pnpm audit --prod --audit-level high --ignore-registry-errors
+
   quality:
     runs-on: ubuntu-latest
     strategy:
@@ -31,33 +93,33 @@ jobs:
           cache: pnpm
       - name: Install locked dependencies
         run: pnpm install --frozen-lockfile
-      - name: Typecheck
-        run: pnpm typecheck
-      - name: Unit tests
-        run: pnpm test
-      - name: Geography source and artifact invariants
-        run: python3 -m unittest discover -s pipeline/geography -p 'test_*.py'
-      - name: People acquisition invariants
-        run: python3 -m unittest discover -s pipeline/fetch -p 'test_*.py'
-      - name: Battle acquisition invariants
-        run: python3 -m unittest discover -s pipeline/battles -p 'test_*.py'
-      - name: Published dossier provenance and reciprocal links
-        run: pnpm data:check
-      - name: Complete battle catalogue, quantities and geographic provenance
-        run: pnpm data:battles:check
-      - name: Resource chronology, source hashes and current mineral coverage
-        run: pnpm data:resources:check
-      - name: Lint
-        run: pnpm lint
       - name: Static production build
         run: pnpm build
         env:
           NEXT_PUBLIC_SITE_URL: http://localhost:3000
           NEXT_TELEMETRY_DISABLED: 1
       - name: Initial JavaScript transfer budget
+        # The export is identical on every shard; one measurement and one summary suffice.
+        if: matrix.shard == 1
         run: pnpm measure:bundle
+      - name: Resolve the Playwright version
+        id: playwright
+        run: echo "version=$(pnpm exec playwright --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"
+      - name: Restore Playwright browsers
+        id: browsers
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright.outputs.version }}
       - name: Install Chromium and system dependencies
+        # System packages are not cached; a restored browser is not downloaded again.
         run: pnpm exec playwright install --with-deps chromium
+      - name: Save Playwright browsers
+        if: matrix.shard == 1 && steps.browsers.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright.outputs.version }}
       - name: Browser and accessibility tests
         run: pnpm test:e2e --shard=${{ matrix.shard }}/8 --workers=1
       - name: Preserve browser and Lighthouse reports
@@ -72,6 +134,21 @@ jobs:
             data/reports/bundle.json
           if-no-files-found: ignore
           retention-days: 14
+
+  ci-ok:
+    # The single required check: green only when the static job and every shard succeeded.
+    if: always()
+    needs: [static, quality]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require the static checks and all browser shards
+        env:
+          STATIC_RESULT: ${{ needs.static.result }}
+          QUALITY_RESULT: ${{ needs.quality.result }}
+        run: |
+          echo "static: $STATIC_RESULT, browser shards: $QUALITY_RESULT"
+          test "$STATIC_RESULT" = success && test "$QUALITY_RESULT" = success
 
   hardware-budgets:
     if: github.event_name == 'workflow_dispatch' && inputs.gpu_audit

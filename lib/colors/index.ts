@@ -46,13 +46,3 @@ export function contrastingTextColor(hex: string): '#0b1220' | '#ffffff' {
   const luminance = 0.2126 * channels[0]! + 0.7152 * channels[1]! + 0.0722 * channels[2]!;
   return luminance > 0.19 ? '#0b1220' : '#ffffff';
 }
-
-export const EVENT_COLORS = {
-  battle: '#d6ac6b',
-  siege: '#d28a73',
-  naval: '#79b7c8',
-  war: '#c78082',
-  campaign: '#a99bc8',
-  treaty: '#a4b58c',
-  conquest: '#c8a077',
-} as const;

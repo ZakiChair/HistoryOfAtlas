@@ -29,6 +29,7 @@ const fr = {
   legendDot: 'Étape là où les symboles se serrent : zoomez pour voir son emblème',
   legendArea: 'Zone approximative de présence attestée',
   legendRoute: 'Lien schématique de diffusion',
+  legendAge: 'Attestation plus ancienne : plus pâle (les liens pâlissent plus vite)',
   coverage:
     'Attestations historiques cumulées jusqu’à la date choisie, pas une carte de la pratique actuelle ou majoritaire. Ces repères sont sélectionnés et non exhaustifs. Les zones indiquent une présence attestée sans exclure d’autres traditions. Les liens sont schématiques, pas des itinéraires exacts.',
   emergence: 'Émergence',
@@ -39,6 +40,7 @@ const fr = {
   conquest: 'Conquêtes',
   diaspora: 'Diaspora',
   reform: 'Réforme',
+  englishFallback: 'Textes historiques affichés en anglais quand aucune traduction n’est sourcée.',
 };
 export type ReligionCopyKey = keyof typeof fr;
 const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
@@ -72,6 +74,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     legendDot: 'Milestone where symbols crowd: zoom in to see its emblem',
     legendArea: 'Approximate zone of attested presence',
     legendRoute: 'Schematic route of spread',
+    legendAge: 'Older attestation: paler (links fade faster)',
     coverage:
       'Historical attestations accumulated through the selected date, not a map of current or majority religious practice. These milestones are selected and not exhaustive. Areas show attested presence without excluding other traditions. Links are schematic, not exact itineraries.',
     emergence: 'Emergence',
@@ -82,6 +85,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     conquest: 'Conquest',
     diaspora: 'Diaspora',
     reform: 'Reform',
+    englishFallback: 'Historical texts are shown in English when no translation is sourced.',
   },
   de: {
     title: 'Religionen und Ausbreitung',
@@ -112,6 +116,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     legendDot: 'Station, wo sich Symbole drängen: Zoomen Sie hinein, um ihr Emblem zu sehen',
     legendArea: 'Ungefähres Gebiet belegter Präsenz',
     legendRoute: 'Schematische Verbindung der Ausbreitung',
+    legendAge: 'Ältere Bezeugung: blasser (Verbindungen verblassen schneller)',
     coverage:
       'Historische Belege, bis zum gewählten Datum gesammelt, keine Karte heutiger oder mehrheitlicher Religionsausübung. Die Auswahl ist nicht vollständig. Gebiete zeigen belegte Präsenz, ohne andere Traditionen auszuschließen. Verbindungen sind schematisch, keine genauen Reiserouten.',
     emergence: 'Entstehung',
@@ -122,6 +127,8 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     conquest: 'Eroberung',
     diaspora: 'Diaspora',
     reform: 'Reform',
+    englishFallback:
+      'Historische Texte erscheinen auf Englisch, solange keine Übersetzung belegt ist.',
   },
   es: {
     title: 'Religiones y difusión',
@@ -152,6 +159,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     legendDot: 'Etapa donde se agolpan los símbolos: acerca la vista para ver su emblema',
     legendArea: 'Zona aproximada de presencia documentada',
     legendRoute: 'Enlace esquemático de difusión',
+    legendAge: 'Constancia más antigua: más pálida (los enlaces se desvanecen antes)',
     coverage:
       'Testimonios históricos acumulados hasta la fecha elegida, no un mapa de la práctica religiosa actual o mayoritaria. La selección no es exhaustiva. Las zonas indican presencia documentada sin excluir otras tradiciones. Los enlaces son esquemáticos, no itinerarios exactos.',
     emergence: 'Surgimiento',
@@ -162,6 +170,8 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     conquest: 'Conquistas',
     diaspora: 'Diáspora',
     reform: 'Reforma',
+    englishFallback:
+      'Los textos históricos se muestran en inglés cuando no hay una traducción documentada.',
   },
   zh: {
     title: '宗教与传播',
@@ -192,6 +202,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     legendDot: '符号密集处的节点：放大即可看到其徽记',
     legendArea: '有记载存在的大致区域',
     legendRoute: '示意性的传播连线',
+    legendAge: '较早的记载：颜色更淡（连线淡化更快）',
     coverage:
       '截至所选日期累计的历史记载，并非当今或主流宗教实践的地图。节点为精选，并不完整。区域表示有记载的存在，不排除其他传统。连线为示意，并非精确路线。',
     emergence: '形成',
@@ -202,6 +213,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     conquest: '征服',
     diaspora: '侨民传播',
     reform: '改革',
+    englishFallback: '若无有据可查的译文，历史文本以英文显示。',
   },
   ru: {
     title: 'Религии и распространение',
@@ -232,6 +244,7 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     legendDot: 'Этап там, где знаки теснятся: приблизьте, чтобы увидеть эмблему',
     legendArea: 'Примерная область засвидетельствованного присутствия',
     legendRoute: 'Схематичная связь распространения',
+    legendAge: 'Более раннее свидетельство: бледнее (связи бледнеют быстрее)',
     coverage:
       'Исторические свидетельства, накопленные до выбранной даты, а не карта современной или преобладающей религиозной практики. Выборка не исчерпывающая. Области показывают засвидетельствованное присутствие, не исключая другие традиции. Связи схематичны, это не точные маршруты.',
     emergence: 'Возникновение',
@@ -242,6 +255,8 @@ const copy: Record<Locale, Record<ReligionCopyKey, string>> = {
     conquest: 'Завоевание',
     diaspora: 'Диаспора',
     reform: 'Реформа',
+    englishFallback:
+      'Исторические тексты показаны на английском, пока нет подтверждённого перевода.',
   },
 };
 

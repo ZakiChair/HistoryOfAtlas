@@ -250,6 +250,10 @@ test('layer controls defer resource data, share both choices and keep the notebo
   page.on('request', (request) => requested.push(new URL(request.url()).pathname));
   await page.goto('/?lang=en&y=1500&projection=mercator');
   await mapReady(page);
+  // Phones start with the notebook folded; open it to check it stays usable beside the layers.
+  const reopen = page.getByRole('button', { name: 'Open notebook', exact: true });
+  if (await reopen.isVisible()) await reopen.click();
+  await expect(page.locator('.exploration-panel')).toBeVisible();
   const battles = page.getByTestId('battles-layer-toggle');
   const resources = page.getByTestId('resources-layer-toggle');
   await expect(battles).toHaveAttribute('aria-pressed', 'true');
@@ -1137,9 +1141,12 @@ test('a failed resource request can be retried without disabling the map or losi
   page,
 }) => {
   let requests = 0;
+  // The client already retries a 5xx twice with backoff; the outage outlasts those attempts.
+  const automaticAttempts = 3;
   await page.route(`**${RESOURCE_PATH}`, async (route) => {
     requests += 1;
-    if (requests === 1) await route.fulfill({ status: 503, body: 'Temporarily unavailable' });
+    if (requests <= automaticAttempts)
+      await route.fulfill({ status: 503, body: 'Temporarily unavailable' });
     else await route.continue();
   });
   await page.goto('/?lang=en&y=1500');
@@ -1147,6 +1154,7 @@ test('a failed resource request can be retried without disabling the map or losi
   await page.getByTestId('resources-layer-toggle').click();
   const status = page.getByTestId('resources-status');
   await expect(status.getByRole('alert')).toContainText('Resource locations could not be loaded.');
+  expect(requests).toBe(automaticAttempts);
   await expect(page.getByTestId('resources-layer-toggle')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.getByTestId('year-slider')).toBeVisible();
   await status.getByRole('button', { name: 'Try again', exact: true }).click();
@@ -1155,7 +1163,7 @@ test('a failed resource request can be retried without disabling the map or losi
   await expect(page.getByTestId('resource-legend')).toContainText(
     `${knownSiteIds(1500).length.toLocaleString('en')} sites known by this period`,
   );
-  expect(requests).toBe(2);
+  expect(requests).toBe(automaticAttempts + 1);
   await expect.poll(() => new URL(page.url()).searchParams.get('resources')).toBe('1');
 });
 
@@ -1214,6 +1222,21 @@ test('resource information remains actionable above an open historical dossier',
   await expect(legend).not.toBeAttached();
   await expect(dossier).toBeVisible();
   await expect.poll(() => new URL(page.url()).searchParams.get('e')).toBe('Q48314');
+});
+
+test('the heatmap key never sits under an open dossier or over the compass', async ({ page }) => {
+  // Tall enough that the compass is shown (it is hidden below 760px).
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/?mode=heatmap&y=1815&lon=4.4122&lat=50.6781&z=4.5&lang=en');
+  await mapReady(page);
+  const key = page.getByTestId('density-key');
+  await expect(key).toBeVisible();
+  await expect(page.locator('.world-compass')).toBeHidden();
+  await page.goto('/?mode=heatmap&e=Q48314&y=1815&lon=4.4122&lat=50.6781&z=4.5&lang=en');
+  await mapReady(page);
+  await expect(page.getByTestId('event-panel')).toBeVisible();
+  await expect(key).toBeAttached();
+  await expect(key).toBeHidden();
 });
 
 test('the ordinary map removes battle points from clustering while retaining other event types', async ({

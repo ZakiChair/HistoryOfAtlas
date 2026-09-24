@@ -1,4 +1,5 @@
-import { expect, test, type APIRequestContext, type Page } from '@playwright/test';
+import { expect, test, type APIRequestContext, type Locator, type Page } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 import type { Campaign, HistoricalEvent, Story } from '../../lib/schema';
 
 async function sourcedEvent(request: APIRequestContext): Promise<HistoricalEvent> {
@@ -29,6 +30,29 @@ async function editYear(page: Page, value: string) {
   await page.getByRole('textbox', { name: /^(Année|Year)$/ }).press('Enter');
 }
 
+/** Phones show the map first: open the folded notebook when a test reads its contents. */
+async function openNotebook(page: Page) {
+  // The notebook state is settled once the atlas has read its URL.
+  await expect(page.locator('.atlas-app:not(.is-hydrating)')).toBeAttached();
+  const reopen = page.getByRole('button', { name: /^(Ouvrir le carnet|Open notebook)$/ });
+  if (await reopen.isVisible()) await reopen.click();
+  await expect(page.locator('.exploration-panel')).toBeVisible();
+}
+
+/** The control is drawn on top at its centre, not covered by a drawer, a card or the timeline. */
+async function expectOnTop(control: Locator) {
+  const box = await control.boundingBox();
+  expect(box).toBeTruthy();
+  const onTop = await control.evaluate(
+    (element, point) => {
+      const hit = document.elementFromPoint(point.x, point.y);
+      return Boolean(hit && element.contains(hit));
+    },
+    { x: box!.x + box!.width / 2, y: box!.y + box!.height / 2 },
+  );
+  expect(onTop, (await control.getAttribute('aria-label')) ?? 'control').toBe(true);
+}
+
 test.beforeEach(async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
 });
@@ -53,6 +77,7 @@ test('normal timeline navigation loads temporal tiles rather than the all-era ar
   // Wait for the actual map data before checking the deferred notebook. This is
   // a data-loading invariant; hardware timing is covered by the separate audits.
   await expect.poll(() => requested.has(first.path), { timeout: 30_000 }).toBe(true);
+  await openNotebook(page);
   await expect(page.locator('.territory-list button').first()).toBeAttached();
   expect(requested.has(manifest.eventsPmtiles)).toBe(false);
   expect([...requested].some((path) => path.startsWith('/data/chunks/'))).toBe(false);
@@ -226,6 +251,7 @@ test('a rendered polity opens sourced area observations and can be followed and 
   await page.goto(
     `/?lang=fr&y=${event.start.year}&lon=${event.coords![0]}&lat=${event.coords![1]}&z=3&projection=mercator`,
   );
+  await openNotebook(page);
   await expect(page.locator('.territory-list button').first()).toBeVisible();
   const candidates = await page.evaluate(() =>
     (window as unknown as { qaPolities: Territory[] }).qaPolities.slice(0, 5),
@@ -339,6 +365,7 @@ test('a sourced guided story drives the timeline through its documented steps', 
       .map(async (step) => (await request.get(`/data/events/${step.eventId}.json`)).json()),
   );
   await page.goto('/?lang=fr');
+  await openNotebook(page);
   await page.getByRole('button', { name: 'Parcours', exact: true }).click();
   await page
     .locator('.story-card')
@@ -582,4 +609,159 @@ test('mobile event drawer and timeline remain usable without horizontal overflow
   await slider.focus();
   await slider.press('ArrowRight');
   await expect(slider).toHaveAttribute('aria-valuetext', String(event.start.year + 1));
+});
+
+test('on a phone the map comes first, with its tools above the folded notebook', async ({
+  page,
+}) => {
+  // iPhone 13 once the browser bars are drawn.
+  await page.setViewportSize({ width: 390, height: 664 });
+  await page.goto('/?lang=fr&y=1812');
+  await expect(page.locator('.world-map-wrap')).toHaveAttribute('data-ready', 'true', {
+    timeout: 45_000,
+  });
+  const reopen = page.getByRole('button', { name: 'Ouvrir le carnet', exact: true });
+  await expect(reopen).toBeVisible();
+  await expect(page.locator('.exploration-panel')).not.toBeAttached();
+  const bar = await reopen.boundingBox();
+  expect(bar!.height).toBeGreaterThanOrEqual(44);
+  expect(bar!.height).toBeLessThanOrEqual(60);
+
+  // Zoom, compass, theme and fullscreen stay reachable just above the folded notebook.
+  const toolbar = page.getByRole('toolbar', { name: 'Commandes de la carte', exact: true });
+  const tools = await toolbar.getByRole('button').all();
+  expect(tools.length).toBeGreaterThan(8);
+  for (const tool of tools) await expectOnTop(tool);
+  await expectOnTop(reopen);
+  const toolsBox = await toolbar.boundingBox();
+  expect(toolsBox!.y + toolsBox!.height).toBeLessThanOrEqual(bar!.y);
+
+  // The layer chips share one row, which scrolls sideways when the labels are long.
+  const chipRows = await page
+    .locator('.map-layer-controls button')
+    .evaluateAll(
+      (buttons) =>
+        new Set(buttons.map((button) => Math.round(button.getBoundingClientRect().top))).size,
+    );
+  expect(chipRows).toBe(1);
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
+    .toBe(true);
+
+  // More than half of the screen shows the map itself, not controls drawn over it.
+  const mapShare = await page.evaluate(() => {
+    const canvas = document.querySelector('.maplibregl-canvas');
+    let map = 0;
+    let total = 0;
+    for (let y = 2; y < innerHeight; y += 4)
+      for (let x = 2; x < innerWidth; x += 4) {
+        total++;
+        if (document.elementFromPoint(x, y) === canvas) map++;
+      }
+    return map / total;
+  });
+  expect(mapShare).toBeGreaterThan(0.5);
+
+  await reopen.click();
+  await expect(page.locator('.exploration-panel')).toBeVisible();
+  await expect(page.locator('.territory-list button').first()).toBeAttached();
+  // A link to something the notebook shows keeps it open.
+  await page.goto('/?lang=fr&y=1812&mode=list');
+  await expect(page.locator('.exploration-panel')).toBeVisible();
+  await expect(page.locator('.event-list-full')).toBeVisible();
+});
+
+test('a first visit lands on 1812 with three ways in and a help sheet', async ({ page }) => {
+  await page.goto('/');
+  const card = page.getByTestId('start-card');
+  await expect(card).toBeVisible();
+  await expect(card.getByRole('heading', { name: 'Where to begin?', exact: true })).toBeVisible();
+  await expect(card.locator('.start-door')).toHaveCount(3);
+  await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-valuetext', '1812');
+  const audit = await new AxeBuilder({ page })
+    .include('[data-testid="start-card"]')
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+    .analyze();
+  expect(audit.violations).toEqual([]);
+
+  const help = page.getByRole('button', { name: 'Help and shortcuts', exact: true });
+  await help.click();
+  const sheet = page.getByRole('dialog', { name: 'How to read the atlas', exact: true });
+  await expect(sheet).toBeVisible();
+  await expect(sheet).toContainText('timeline');
+  const shortcuts = sheet.getByTestId('help-shortcuts');
+  for (const key of ['Space', '←', '→', '⌘ K', 'Ctrl K', 'Esc'])
+    await expect(shortcuts.locator('kbd').filter({ hasText: key })).toBeVisible();
+  const layers = sheet.getByTestId('help-layers');
+  for (const layer of ['Battles', 'Strategic resources', 'Religions'])
+    await expect(layers.locator('dt').filter({ hasText: layer })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(sheet).not.toBeAttached();
+  await expect(help).toBeFocused();
+  // Closing the sheet leaves the start card in place; closing the card is remembered.
+  await expect(card).toBeVisible();
+  await card.getByRole('button', { name: 'Close and explore freely', exact: true }).click();
+  await expect(card).not.toBeAttached();
+  // Focus goes back to the header rather than falling to the page body.
+  await expect(help).toBeFocused();
+  expect(await page.evaluate(() => localStorage.getItem('atlas-start-card'))).toBe('dismissed');
+  await page.goto('/');
+  await expect(page.locator('.world-map-wrap')).toHaveAttribute('data-ready', 'true', {
+    timeout: 45_000,
+  });
+  await expect(page.getByTestId('start-card')).not.toBeAttached();
+  // The three ways in stay available from the help sheet.
+  await help.click();
+  await page.getByRole('button', { name: 'Show the three ways in again', exact: true }).click();
+  await expect(page.getByTestId('start-card')).toBeVisible();
+});
+
+for (const door of [
+  {
+    id: 'campaign',
+    query: { campaign: 'Q78994' },
+    panel: '.campaign-panel',
+  },
+  {
+    id: 'battle',
+    query: { battle: '1', e: 'Q48314', y: '1815' },
+    panel: '[data-testid="battle-detail"]',
+  },
+  {
+    id: 'religion',
+    query: { religions: '1', religion: 'buddhism', y: '-449' },
+    panel: '[data-testid="religions-layer-toggle"][aria-pressed="true"]',
+  },
+]) {
+  test(`the ${door.id} way in opens its shareable view`, async ({ page }) => {
+    await page.goto('/');
+    await page.getByTestId(`start-door-${door.id}`).click();
+    await expect(page.getByTestId('start-card')).not.toBeAttached();
+    await expect
+      .poll(() => {
+        const query = new URL(page.url()).searchParams;
+        return Object.fromEntries(Object.keys(door.query).map((key) => [key, query.get(key)]));
+      })
+      .toEqual(door.query);
+    await expect(page.locator(door.panel)).toBeVisible({ timeout: 30_000 });
+    expect(await page.evaluate(() => localStorage.getItem('atlas-start-card'))).toBe('dismissed');
+  });
+}
+
+test('the opening montage lands on 1812 over Europe, then offers the ways in', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/');
+  await expect(page.getByTestId('start-card')).toBeVisible({ timeout: 45_000 });
+  await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-valuetext', '1812');
+  await expect
+    .poll(
+      () => {
+        const query = new URL(page.url()).searchParams;
+        const lon = Number(query.get('lon'));
+        const lat = Number(query.get('lat'));
+        return query.get('y') === '1812' && lon > -10 && lon < 30 && lat > 40 && lat < 60;
+      },
+      { timeout: 15_000 },
+    )
+    .toBe(true);
 });

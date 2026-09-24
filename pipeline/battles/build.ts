@@ -24,6 +24,7 @@ import {
   battleMedium,
 } from './normalize';
 import { hasComparableOpposingForces } from '../../lib/battles/simulation';
+import { documentedBattleIds } from '../../lib/battles/documented';
 import { applyBattleEquipment, BattleEquipmentFileSchema } from './equipment';
 import { loadBattleProfiles } from './profiles';
 import { applyBattleMetadata, BattleMetadataFileSchema } from './metadata';
@@ -312,6 +313,8 @@ await json(
   join(staged, 'index.json'),
   BattleIndexSchema.parse({ version: 1, counts, battles: index, unmapped: counts.unmapped }),
 );
+// A few kilobytes, so an event dossier can label its 3D scene without the full index.
+await json(join(staged, 'documented.json'), documentedBattleIds(index));
 await json(join(staged, 'candidates.json'), { version: 1, candidates: candidateAudit });
 const reasonCounts: Record<string, number> = {};
 for (const battle of ordered)

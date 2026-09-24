@@ -1,0 +1,33 @@
+version: 2
+updates:
+  # pnpm uses the npm ecosystem; Dependabot updates package.json and pnpm-lock.yaml together.
+  # A dependency joins the first group whose patterns match it, so the order below matters.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 10
+    groups:
+      next:
+        patterns: [next, eslint-config-next, react, react-dom, '@types/react', '@types/react-dom']
+      maplibre:
+        # MapLibre 6 is pinned exactly: its worker modules are copied to a versioned URL.
+        patterns: [maplibre-gl, pmtiles]
+      deck-gl:
+        patterns: ['@deck.gl/*']
+      three:
+        # The runtime and its type definitions are pinned to the same release.
+        patterns: [three, '@types/three']
+      tooling:
+        dependency-type: development
+        patterns: ['*']
+
+  # Workflow actions are pinned by commit SHA; Dependabot rewrites the SHA and version comment.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ['*']

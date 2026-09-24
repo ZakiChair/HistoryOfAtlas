@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     description: 'History through maps',
     siteName: 'HistoryOfAtlas',
     type: 'website',
+    // Pages are rendered in English; declare other locales only once they have their own URLs.
     locale: 'en_US',
-    alternateLocale: ['fr_FR', 'de_DE', 'es_ES', 'zh_CN', 'ru_RU'],
     images: ['/opengraph-image'],
   },
 };

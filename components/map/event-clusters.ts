@@ -1,11 +1,20 @@
 import type { GeoJSONSource, Map as MapInstance, MapLayerMouseEvent, PointLike } from 'maplibre-gl';
 import type { FeatureCollection, Point } from 'geojson';
 import { wrapLongitude } from '@/lib/map-boundaries';
-import { MAX_CLUSTER_INPUT, type ClusterResponse, type ScreenEvent } from './cluster-events';
+import {
+  MAX_CLUSTER_INPUT,
+  visibleClusters,
+  type ClusterResponse,
+  type ScreenEvent,
+} from './cluster-events';
+import { clusterCountsThinned, minimumEventImportance } from './event-filters';
 import { EMPTY_FEATURE_FILTER } from './style-filters';
 import { queryViewportFeatures } from './query-viewport';
 import { hasResourceAt } from './resource-hit';
 import { hasReligionAt } from './religion-hit';
+import { translateCopy } from '@/lib/i18n';
+import { useAtlasStore } from '@/lib/store';
+import { EVENT_COLOR_EXPRESSION, EVENT_GROUP_COLORS } from '@/lib/colors/semantic';
 
 export const EVENT_QUERY_LAYER = 'event-cluster-query';
 const SOURCE = 'event-clusters';
@@ -62,8 +71,8 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
     filter: ['>', ['get', 'count'], 1],
     paint: {
       'circle-radius': ['step', ['get', 'count'], 15, 10, 18, 100, 22, 1000, 27],
-      'circle-color': '#193948',
-      'circle-stroke-color': '#d4b880',
+      'circle-color': EVENT_GROUP_COLORS.fill,
+      'circle-stroke-color': EVENT_GROUP_COLORS.ring,
       'circle-stroke-width': 1.6,
       'circle-opacity': 0,
       'circle-stroke-opacity': 0,
@@ -79,21 +88,7 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
     filter: ['==', ['get', 'count'], 1],
     paint: {
       'circle-radius': ['interpolate', ['linear'], ['get', 'importance'], 0, 3, 100, 6],
-      'circle-color': [
-        'match',
-        ['get', 'type'],
-        'siege',
-        '#d99386',
-        'naval',
-        '#92c7d8',
-        'treaty',
-        '#b8c990',
-        'campaign',
-        '#cba9da',
-        'war',
-        '#db9d85',
-        '#e7bd78',
-      ],
+      'circle-color': EVENT_COLOR_EXPRESSION,
       'circle-stroke-width': 1.4,
       'circle-stroke-color': '#fff0c8',
       'circle-opacity': 0,
@@ -168,10 +163,13 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
       map.triggerRepaint();
       return;
     }
-    if (overflow || !clusters.length) return;
+    if (overflow) return;
+    // The marker layers' own threshold (store camera, synced at moveend), so rest and motion agree.
+    const shown = visibleClusters(clusters, minimumEventImportance(useAtlasStore.getState()));
+    if (!shown.length) return;
     const data: FeatureCollection<Point> = {
       type: 'FeatureCollection',
-      features: clusters.map((cluster) => {
+      features: shown.map((cluster) => {
         const center =
           cluster.count === 1
             ? { lng: cluster.representative.lon, lat: cluster.representative.lat }
@@ -280,7 +278,24 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
   };
   const leave = () => {
     map.getCanvas().style.cursor = '';
+    map.getCanvas().removeAttribute('title');
   };
+  // Group discs are WebGL features with no DOM node: the pointer tooltip names what they count.
+  const describe = (event: MapLayerMouseEvent) => {
+    const count = Number(event.features?.[0]?.properties?.count);
+    const canvas = map.getCanvas();
+    if (!active || !(count > 1)) {
+      canvas.removeAttribute('title');
+      return;
+    }
+    const state = useAtlasStore.getState();
+    const values = { count: count.toLocaleString(state.locale) };
+    // Over a wide period the counts cover only the major events the markers show.
+    canvas.title = clusterCountsThinned(state)
+      ? translateCopy(state.locale, '{count} événements majeurs', '{count} major events', values)
+      : translateCopy(state.locale, '{count} événements', '{count} events', values);
+  };
+  map.on('mousemove', GROUPS, describe);
   map.on('idle', idle);
   map.on('movestart', invalidate);
   map.on('resize', invalidate);
@@ -302,6 +317,7 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
       map.off('idle', idle);
       map.off('movestart', invalidate);
       map.off('resize', invalidate);
+      map.off('mousemove', GROUPS, describe);
       for (const id of [GROUPS, SINGLETONS]) {
         map.off('click', id, click);
         map.off('mouseenter', id, enter);

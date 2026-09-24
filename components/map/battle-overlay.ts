@@ -26,6 +26,7 @@ import { focusBattle } from '@/lib/battles/navigation';
 import { publishBattleRenderStatus, type BattleRenderStatus } from '@/lib/battles/status';
 import { isPlaybackMapReady } from '@/lib/playback-readiness';
 import { temporalWindow } from '@/lib/map-time';
+import { BATTLE_MODE_COLORS, SELECTION_COLORS } from '@/lib/colors/semantic';
 import type { useAtlasStore } from '@/lib/store';
 import { queryViewportFeatures } from './query-viewport';
 import { hasResourceAt } from './resource-hit';
@@ -672,7 +673,12 @@ export function startBattleOverlay(
           source: SOURCE,
           paint: {
             'circle-radius': ['interpolate', ['linear'], ['zoom'], 0, 2.5, 6, 5, 14, 7],
-            'circle-color': ['case', ['get', 'documented'], '#e8c784', '#aebcbc'],
+            'circle-color': [
+              'case',
+              ['get', 'documented'],
+              BATTLE_MODE_COLORS.documented,
+              BATTLE_MODE_COLORS.undocumented,
+            ],
             'circle-stroke-width': 1,
             'circle-stroke-color': '#172c35',
             'circle-opacity': 0.9,
@@ -686,7 +692,7 @@ export function startBattleOverlay(
           paint: {
             'circle-radius': 11,
             'circle-color': 'transparent',
-            'circle-stroke-color': '#ffe2a3',
+            'circle-stroke-color': SELECTION_COLORS.battle,
             'circle-stroke-width': 2,
           },
         });

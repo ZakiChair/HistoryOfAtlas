@@ -22,6 +22,7 @@ import { ERA_IDS, REGION_IDS } from '../../lib/types';
 import { buildWarGroups } from './war-groups';
 import { verifyIdenticalTrees } from './verify';
 import { temporalShards } from './shards';
+import { padDegenerateArchiveBounds } from './pmtiles';
 import { buildPeople, compactEvent as compact } from '../normalize/enrichment';
 
 const SOURCE = { label: 'Wikidata', url: 'https://www.wikidata.org/', license: 'CC0-1.0' };
@@ -601,6 +602,8 @@ export async function buildEvents(
         );
         if (result.status !== 0)
           throw new Error(`tippecanoe failed: ${result.error?.message ?? result.stderr}`);
+        // A shard whose events share one place gets point bounds, which the pmtiles client rejects.
+        padDegenerateArchiveBounds(join(output, destination));
       };
       compileTiles(
         'events.pmtiles',

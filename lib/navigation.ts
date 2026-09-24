@@ -4,6 +4,8 @@ import { getEvent } from './data-client';
 import { focusBattle } from './battles/navigation';
 import { isBattleEventType } from './event-visibility';
 
+export { withLocale } from './locale-href';
+
 type NavigableEvent = Pick<HistoricalEvent, 'id' | 'start' | 'coords'> &
   Partial<Pick<HistoricalEvent, 'type'>>;
 

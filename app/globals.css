@@ -346,6 +346,12 @@ ul {
   padding: 10px 16px;
   border-radius: 4px;
 }
+.map-error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
 .loading-globe {
   width: 64px;
   height: 64px;
@@ -928,28 +934,27 @@ ul {
 .event-row:hover {
   background: var(--hover);
 }
+/* Neutral icon: the type colour is the map's dot (.event-swatch) on the corner, amber stays selection. */
 .event-type-icon {
+  position: relative;
   width: 28px;
   height: 31px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #c3ad85;
-  border: 1px solid #d4b88020;
+  color: var(--muted);
+  border: 1px solid var(--line-strong);
   border-radius: 4px;
 }
 .event-type-icon svg {
   width: 14px;
   height: 14px;
 }
-.type-naval {
-  color: #9ac3cc;
-  border-color: #9ac3cc20;
-}
-.type-siege {
-  color: #b5b696;
-  border-color: #b5b69620;
+.event-type-icon .event-swatch {
+  position: absolute;
+  top: -3px;
+  right: -3px;
 }
 .event-row-copy {
   display: flex;
@@ -1213,6 +1218,22 @@ ul {
   display: flex;
   padding: 3px;
   color: var(--muted);
+}
+/* Chronological ramp of war tracks. Keep in sync with WAR_TRACK_RAMP in lib/colors/semantic.ts. */
+.war-track-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 9px;
+  white-space: nowrap;
+}
+.war-track-key i {
+  width: 34px;
+  height: 5px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #f4bfff, #928fff, #6e3cbe);
+  box-shadow: 0 0 0 1px rgb(12 33 44 / 60%);
 }
 
 .timeline {
@@ -1945,6 +1966,34 @@ ul {
   width: 13px;
   height: 13px;
 }
+/* The map's event dot (lib/colors/semantic.ts): colour confirms the type, the icon names it. */
+.event-swatch {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.4px rgb(255 240 200 / 70%);
+}
+.event-key-list {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+.event-key-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.event-key-symbol {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
 .type-filters button[aria-pressed='true'] {
   border-color: var(--gold);
   background: var(--gold-wash);
@@ -2039,6 +2088,38 @@ ul {
   justify-content: space-between;
   gap: 5px;
 }
+/* The main action and the current step stay in view while the step list scrolls. */
+.campaign-sticky {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  margin: 0 -6px;
+  padding: 8px 6px 10px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+.campaign-current {
+  margin-top: 9px;
+  min-width: 0;
+}
+.campaign-current small {
+  display: block;
+  color: var(--dim);
+  font-size: 9px;
+}
+.campaign-current strong {
+  display: block;
+  overflow: hidden;
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.campaign-sticky + .text-button {
+  margin-top: 10px;
+}
 .campaign-steps {
   list-style: none;
   margin: 22px 0;
@@ -2131,6 +2212,10 @@ ul {
   justify-content: space-between;
   color: var(--dim);
   font-size: 9px;
+}
+.story-card-dates {
+  color: var(--gold);
+  margin-right: 10px;
 }
 .story-card:hover strong {
   color: var(--gold);
@@ -2262,6 +2347,35 @@ ul {
 .search-results button > svg {
   color: var(--gold);
 }
+.search-kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 23px 10px;
+}
+.search-kinds button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+}
+.search-kinds button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.search-kinds button[aria-pressed='true'] {
+  border-color: var(--gold);
+  background: var(--gold-wash);
+  color: var(--paper);
+}
+.search-kinds button > span {
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
 .search-suggestions {
   display: flex;
   flex-wrap: wrap;
@@ -2305,7 +2419,6 @@ ul {
 .search-dialog > .notice {
   margin: 12px 23px;
 }
-.intro-note,
 .toast {
   position: fixed;
   z-index: 45;
@@ -2325,18 +2438,6 @@ ul {
   color: var(--paper);
   font-size: 12px;
   line-height: 1.6;
-}
-.intro-note {
-  font:
-    400 25px 'Cormorant',
-    Georgia,
-    serif;
-}
-.intro-note button {
-  font:
-    500 10px 'Manrope',
-    sans-serif;
-  color: var(--gold);
 }
 .toast button {
   display: flex;
@@ -2483,6 +2584,57 @@ ul {
   padding-top: 40px;
   border-top: 1px solid var(--line);
   margin-top: 50px;
+}
+.document-table {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 24px 0 30px;
+  border-top: 1px solid var(--line-strong);
+}
+.document-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.document-table caption {
+  caption-side: bottom;
+  text-align: left;
+  color: var(--dim);
+  font-size: 11px;
+  padding-top: 10px;
+}
+.document-table th,
+.document-table td {
+  padding: 8px 14px 8px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.document-table th {
+  color: var(--paper);
+  font-weight: 500;
+}
+.document-table th:first-child {
+  text-align: left;
+  white-space: normal;
+  min-width: 11em;
+}
+.document-table a {
+  color: var(--gold);
+}
+.document-details {
+  margin: 12px 0 24px;
+  font-size: 12px;
+}
+.document-details summary {
+  cursor: pointer;
+  color: var(--gold);
+}
+.document-details ul {
+  margin-top: 12px;
+  padding-left: 20px;
 }
 
 @media (min-width: 1500px) {
@@ -2942,8 +3094,8 @@ ul {
   .detail-is-open .exploration-panel {
     display: none;
   }
+  /* Placed just above the drawer, with the drawer's height (see --phone-drawer-height). */
   .detail-is-open .map-attribution {
-    bottom: calc(var(--timeline-height) + 48svh + 17px);
     font-size: 6px;
   }
   .detail-is-open .map-coordinate {
@@ -3130,16 +3282,15 @@ ul {
   .search-suggestions {
     padding: 15px 16px 25px;
   }
-  .intro-note,
+  .search-kinds {
+    padding-inline: 16px;
+  }
   .toast {
     bottom: calc(var(--timeline-height) + 290px);
     font-size: 11px;
     padding: 12px 15px;
     width: calc(100vw - 30px);
     max-width: none;
-  }
-  .intro-note {
-    font-size: 20px;
   }
   .document-page {
     padding: 29px 22px 65px;
@@ -3270,18 +3421,6 @@ ul {
   }
 }
 
-:root[data-theme='light'] .event-type-icon {
-  color: #77602f;
-  border-color: #81642e35;
-}
-:root[data-theme='light'] .type-naval {
-  color: #476d78;
-  border-color: #476d7835;
-}
-:root[data-theme='light'] .type-siege {
-  color: #5b6d41;
-  border-color: #5b6d4135;
-}
 :root[data-theme='light'] .timeline-speeds button.active,
 :root[data-theme='light'] .type-filters button[aria-pressed='true'] {
   color: #725522;
@@ -3713,6 +3852,67 @@ ul {
   width: 100%;
   margin: 18px 0;
 }
+.battle-illustrative-badge {
+  display: inline-block;
+  margin-inline-start: 6px;
+  padding: 0 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  font-size: 8px;
+  letter-spacing: 0.4px;
+}
+.density-key {
+  position: absolute;
+  z-index: 5;
+  right: 25px;
+  bottom: calc(var(--timeline-height) + 36px);
+  width: 190px;
+  margin: 0;
+  padding: 9px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.45;
+  pointer-events: none;
+}
+.density-key figcaption {
+  color: var(--paper);
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+.density-key-ramp {
+  height: 8px;
+  border-radius: 2px;
+  border: 1px solid var(--line-strong);
+}
+.density-key-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+.density-key p {
+  margin: 6px 0 0;
+}
+/* An open dossier (z-index 12, right 85–437px) would cover most of the key. */
+.detail-is-open .density-key {
+  display: none;
+}
+/* The key's box holds the decorative compass on tall desktop viewports. */
+.atlas-app:not(.detail-is-open):has(.density-key) .world-compass {
+  display: none;
+}
+@media (max-width: 580px) {
+  .density-key {
+    right: 16px;
+    width: min(190px, calc(100vw - 32px));
+  }
+  /* The open notebook sheet (z-index 8) covers the key's corner on phones. */
+  .sidebar-is-open .density-key {
+    display: none;
+  }
+}
 .battle-mode .exploration-scroll {
   scroll-behavior: auto;
 }
@@ -4081,12 +4281,23 @@ ul {
     max-width: calc(100% - 24px);
     gap: 6px;
   }
+  .detail-is-open {
+    /* Above the mobile drawer: two tool rows, their gaps, then the source line, whose link stays
+       at least 12px from the tools (WCAG 2.5.8 target spacing). */
+    --phone-drawer-height: min(
+      48svh,
+      calc(
+        100svh - var(--timeline-height) - max(232px, calc(var(--map-layers-bottom, 104px) + 128px))
+      )
+    );
+  }
   .detail-is-open .event-panel,
   .detail-is-open .entity-panel {
-    /* Reserve two tool rows and their gaps above the mobile drawer. */
-    max-height: calc(
-      100svh - var(--timeline-height) - max(212px, calc(var(--map-layers-bottom, 104px) + 108px))
-    );
+    max-height: var(--phone-drawer-height);
+  }
+  /* The source line follows the drawer's real top, including when the drawer is capped. */
+  .detail-is-open .map-attribution {
+    bottom: calc(var(--timeline-height) + 17px + var(--phone-drawer-height));
   }
   .religions-visible .war-context {
     top: 220px;
@@ -4379,5 +4590,408 @@ ul {
   .resource-layer-note,
   .religion-layer-note {
     font-size: 9px;
+  }
+}
+
+/* First visit: help button, start card and help sheet. On phones the map comes first: the
+   notebook folds into a bar above the timeline, with the map tools just above it. */
+.help-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  min-height: 36px;
+  flex-shrink: 0;
+  color: var(--muted);
+}
+.help-trigger:hover,
+.help-trigger[aria-expanded='true'] {
+  color: var(--gold);
+}
+.reopen-label {
+  display: none;
+}
+.start-card {
+  position: fixed;
+  z-index: 45;
+  left: 385px;
+  right: 90px;
+  bottom: calc(var(--timeline-height) + 40px);
+  max-width: 640px;
+  max-height: calc(100svh - var(--header-height) - var(--timeline-height) - 60px);
+  margin-inline: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  color: var(--paper);
+}
+.start-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.start-card h2 {
+  margin-top: 5px;
+  font:
+    400 27px/1.05 'Cormorant',
+    Georgia,
+    serif;
+  letter-spacing: -0.3px;
+}
+.start-card-lead {
+  margin: 8px 0 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.start-doors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 8px;
+}
+.start-door {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: start;
+}
+.start-door:hover {
+  border-color: var(--gold);
+}
+.start-door > svg {
+  flex-shrink: 0;
+  color: var(--dim);
+}
+.start-door > svg:first-child {
+  color: var(--gold);
+}
+.start-door > span {
+  flex: 1;
+  min-width: 0;
+}
+.start-door strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.start-door:hover strong {
+  color: var(--gold);
+}
+.start-door small {
+  display: block;
+  margin-top: 4px;
+  color: var(--dim);
+  font-size: 9px;
+  line-height: 1.5;
+}
+.start-card-help {
+  margin-top: 12px;
+  color: var(--dim);
+  font-size: 9px;
+  line-height: 1.6;
+}
+.help-sheet {
+  position: fixed;
+  z-index: 61;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(420px, 100vw);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 20px 24px 28px;
+  border-left: 1px solid var(--line-strong);
+  background: var(--panel);
+  box-shadow: 0 24px 90px #00000055;
+  color: var(--paper);
+}
+.help-sheet-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.help-sheet h2 {
+  font:
+    400 29px/1.05 'Cormorant',
+    Georgia,
+    serif;
+}
+.help-lead {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.help-sheet section {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.help-sheet h3 {
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.help-list {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+.help-terms {
+  display: grid;
+  gap: 10px;
+}
+.help-terms > div {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+.help-terms dt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+}
+.help-terms dt > svg {
+  color: var(--gold);
+}
+.help-terms dd {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.help-sheet kbd {
+  min-width: 24px;
+  padding: 2px 6px;
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  color: var(--paper);
+  font:
+    600 10px 'Manrope',
+    sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+.help-note {
+  margin-top: 10px;
+  color: var(--dim);
+  font-size: 10px;
+  line-height: 1.6;
+}
+.help-show-start {
+  margin-top: 18px;
+}
+@media (min-width: 1500px) {
+  .start-card {
+    left: 410px;
+  }
+}
+@media (max-width: 1120px) {
+  .start-card {
+    left: 322px;
+    right: 72px;
+  }
+}
+@media (max-width: 580px) {
+  .atlas-app {
+    --phone-bar-height: 48px;
+    --phone-bar-width: 172px;
+    --phone-tools-height: 36px;
+  }
+  /* Before hydration the phone notebook state is unknown, and a folding notebook leaves at once:
+     neither flashes over the map. */
+  .atlas-app.is-hydrating .exploration-panel,
+  .atlas-app:not(.sidebar-is-open) .exploration-panel {
+    visibility: hidden;
+  }
+  .atlas-header .help-trigger {
+    width: 30px;
+  }
+  /* Layer chips stay on one row that scrolls sideways; the map stays usable between them. */
+  .atlas-app .map-layers {
+    width: calc(100% - 20px);
+    pointer-events: none;
+  }
+  .atlas-app .map-layers > * {
+    pointer-events: auto;
+  }
+  .atlas-app .map-layers > .map-layer-controls {
+    pointer-events: none;
+  }
+  .map-layer-controls {
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin: -2px;
+    padding: 2px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .map-layer-controls::-webkit-scrollbar {
+    display: none;
+  }
+  .map-layer-controls > * {
+    flex-shrink: 0;
+    pointer-events: auto;
+  }
+  .map-layer-toggle,
+  .map-layer-legend-toggle {
+    min-height: 32px;
+  }
+  .map-layer-toggle {
+    gap: 4px;
+    padding-inline: 6px;
+    white-space: nowrap;
+  }
+  .map-attribution {
+    pointer-events: none;
+  }
+  .map-attribution a {
+    pointer-events: auto;
+  }
+  /* Between the tools and the drawer, the 6px source link gets a 24px-tall touch target without
+     moving the line. */
+  .detail-is-open .map-attribution a {
+    padding-block: 8px;
+    margin-block: -8px;
+  }
+  .atlas-app:not(.sidebar-is-open) .map-coordinate {
+    display: none;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .reopen-panel {
+    top: auto;
+    left: 10px;
+    bottom: calc(var(--timeline-height) + 10px);
+    width: var(--phone-bar-width);
+    height: var(--phone-bar-height);
+    padding: 0 14px;
+    gap: 10px;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .reopen-label {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    color: var(--paper);
+    font-size: 11px;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode)
+    .reopen-panel
+    > svg:last-child {
+    flex-shrink: 0;
+    transform: rotate(-90deg);
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .map-tools {
+    top: auto;
+    left: 10px;
+    right: 10px;
+    bottom: calc(var(--timeline-height) + 18px + var(--phone-bar-height));
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5px;
+    pointer-events: none;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .map-tools > * {
+    pointer-events: auto;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .map-tools .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .map-attribution {
+    left: calc(20px + var(--phone-bar-width));
+    right: 12px;
+    bottom: calc(var(--timeline-height) + 10px);
+    min-height: var(--phone-bar-height);
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    row-gap: 2px;
+  }
+  .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .density-key {
+    bottom: calc(
+      var(--timeline-height) + 26px + var(--phone-bar-height) + var(--phone-tools-height)
+    );
+  }
+  .start-card {
+    left: 10px;
+    right: 10px;
+    bottom: calc(var(--timeline-height) + 10px);
+    max-width: none;
+    max-height: calc(100svh - var(--header-height) - var(--timeline-height) - 64px);
+    padding: 13px 14px 12px;
+  }
+  .sidebar-is-open .start-card {
+    display: none;
+  }
+  .start-card h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+  }
+  /* The close button already says it: the card keeps to the doors and leaves more map. */
+  .start-card-lead {
+    display: none;
+  }
+  .start-doors {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .start-door {
+    align-items: center;
+    padding: 9px 11px;
+  }
+  .start-door small {
+    margin-top: 2px;
+  }
+  .start-card-help {
+    display: none;
+  }
+  .help-sheet {
+    top: auto;
+    left: 0;
+    width: 100%;
+    max-height: 88svh;
+    padding: 16px 18px 24px;
+    border-top: 1px solid var(--line-strong);
+    border-left: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  .help-terms > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
+@media (max-width: 370px) {
+  .atlas-header .header-actions {
+    gap: 4px;
+  }
+  .atlas-header .brand > span {
+    font-size: 20px;
   }
 }

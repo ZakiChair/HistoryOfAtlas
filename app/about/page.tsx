@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import Link from 'next/link';
+import LocaleLink from '@/components/ui/LocaleLink';
+import { ERAS } from '@/lib/eras';
+import { datasetJsonLd, jsonLdGraph, licenseDatasetParts, serializeJsonLd } from '@/lib/jsonld';
+import type { LicenseManifest } from '@/lib/licenses';
+import { REPOSITORY_URL, siteOrigin } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 export const metadata: Metadata = {
@@ -32,8 +37,70 @@ type GeoManifest = {
   }[];
 };
 
+type EventManifest = {
+  builtAt: string;
+  chunks: { path: string; start: number; end: number; count: number }[];
+};
+type CoverageMatrix = {
+  cells: Record<string, Record<string, number>>;
+  regions: Record<string, number>;
+  eras: Record<string, number>;
+  total: number;
+  range: [number, number];
+};
+
+const DATA = path.join(process.cwd(), 'public');
+async function readJson<T>(relative: string): Promise<T> {
+  return JSON.parse(await readFile(path.join(DATA, relative), 'utf8')) as T;
+}
+
+/** Region × era counts over the same accepted events as the quality report. */
+async function readCoverage(): Promise<CoverageMatrix> {
+  const manifest = await readJson<EventManifest>('data/manifest.json');
+  const chunks = await Promise.all(
+    manifest.chunks.map((chunk) =>
+      readJson<{ region: string; era: string }[]>(chunk.path.replace(/^\//, '')),
+    ),
+  );
+  const matrix: CoverageMatrix = {
+    cells: {},
+    regions: {},
+    eras: {},
+    total: 0,
+    range: [
+      Math.min(...manifest.chunks.map((chunk) => chunk.start)),
+      Math.max(...manifest.chunks.map((chunk) => chunk.end)),
+    ],
+  };
+  for (const event of chunks.flat()) {
+    const row = (matrix.cells[event.region] ??= {});
+    row[event.era] = (row[event.era] ?? 0) + 1;
+    matrix.regions[event.region] = (matrix.regions[event.region] ?? 0) + 1;
+    matrix.eras[event.era] = (matrix.eras[event.era] ?? 0) + 1;
+    matrix.total += 1;
+  }
+  return matrix;
+}
+
+/** A blank correction form for readers who arrive from this page rather than a record. */
+function correctionFormUrl(): string {
+  const body = [
+    '**Record name and identifier (QID, resource sourceId or territory):**',
+    '',
+    '**Displayed year:**',
+    '',
+    '**Link to the page or shared view:**',
+    '',
+    '**What is wrong?**',
+    '',
+    '**Verifiable reference (link, publication, page):**',
+    '',
+  ].join('\n');
+  return `${REPOSITORY_URL}/issues/new?${new URLSearchParams({ title: 'Correction: ', body })}`;
+}
+
 export default async function AboutPage() {
-  const [quality, geography, battles] = await Promise.all([
+  const [quality, geography, battles, licenses, religions, coverage] = await Promise.all([
     readFile(path.join(process.cwd(), 'public/data/quality.json'), 'utf8').then(
       (text) => JSON.parse(text) as Quality,
     ),
@@ -48,8 +115,43 @@ export default async function AboutPage() {
           }
         ).counts,
     ),
+    readJson<LicenseManifest>('data/licenses.json'),
+    readJson<{ traditions: unknown[]; milestones: unknown[] }>('data/religions/history.json'),
+    readCoverage(),
   ]);
   const number = (value: number) => new Intl.NumberFormat('en').format(value);
+  const origin = siteOrigin();
+  const resourceSites = licenses.resources.licenses.reduce((sum, group) => sum + group.sites, 0);
+  const citedMilestones = licenses.religions.references.reduce(
+    (sum, reference) => sum + reference.milestones,
+    0,
+  );
+  const jsonLd = jsonLdGraph(
+    datasetJsonLd({
+      origin,
+      path: '/about/',
+      name: 'HistoryOfAtlas — dated, geolocated historical events and boundaries',
+      description: `${number(quality.geolocatedDatedEvents)} dated, geolocated battles, sieges, wars, treaties and conquests from Wikidata, with dated polity boundaries, sourced strategic resources and documented religious milestones. Each record keeps its own source and licence.`,
+      dateModified: quality.builtAt,
+      temporalCoverage: coverage.range,
+      keywords: ['history', 'historical atlas', 'battles', 'wars', 'borders', 'Wikidata'],
+      repository: REPOSITORY_URL,
+      parts: [
+        ...licenseDatasetParts(licenses.datasets, origin),
+        {
+          name: 'Strategic resources',
+          description: `${number(resourceSites)} dated resource sites from ${licenses.resources.sources.length} sources, each under its own terms`,
+          url: `${origin}/about/#sources`,
+        },
+        {
+          name: 'Religions',
+          description: `${religions.traditions.length} traditions and ${religions.milestones.length} dated milestones checked against ${licenses.religions.references.length} references`,
+          url: `${origin}/about/#sources`,
+          license: licenses.religions.corpus.licenseUrl,
+        },
+      ],
+    }),
+  );
   const regions: Record<string, string> = {
     europe: 'Europe',
     africa: 'Africa',
@@ -62,10 +164,14 @@ export default async function AboutPage() {
   };
   return (
     <main className="document-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
+      />
       <header className="document-header">
-        <Link className="back-link" href="/">
+        <LocaleLink className="back-link" href="/">
           ← Back to the atlas
-        </Link>
+        </LocaleLink>
         <span className="eyebrow">BEHIND THE MAPS</span>
         <h1>
           History deserves
@@ -239,6 +345,100 @@ export default async function AboutPage() {
             </div>
           </div>
         </section>
+        <section id="sources" aria-labelledby="sources-title">
+          <span className="eyebrow">SOURCES & LICENCES</span>
+          <h2 id="sources-title">Sources and licences</h2>
+          <p>
+            {licenses.notice} The complete list, with every licence and link, is published as a
+            manifest regenerated from the data at each release.
+          </p>
+          <p>
+            The application code is released under the {licenses.project.code.license} licence.
+            Content written for the atlas (curated reviews and corrections, religion milestones,
+            descriptions, generalized regions and diffusion links, map symbology) is released under{' '}
+            {licenses.project.content.license}; credit it as “{licenses.project.content.attribution}
+            ”. {licenses.project.note}
+          </p>
+          <a className="source-link" href="/data/licenses.json">
+            Open the licence manifest ↗
+          </a>
+          <a className="source-link" href={licenses.project.code.text}>
+            Code licence · {licenses.project.code.license} ↗
+          </a>
+          <a className="source-link" href={licenses.project.content.text}>
+            Content licence · {licenses.project.content.license} ↗
+          </a>
+          <h3>Strategic resources</h3>
+          <p>
+            The resources layer places {number(resourceSites)} dated mines, oil and gas fields and
+            deposits from {licenses.resources.sources.length} sources. A site appears from its
+            documented discovery or earliest attestation; production periods stay separate. Each
+            marker names its source and licence.
+          </p>
+          <div
+            className="document-table"
+            role="region"
+            aria-labelledby="resource-licences-caption"
+            tabIndex={0}
+          >
+            <table>
+              <caption id="resource-licences-caption">Resource sites by source licence</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Licence or terms</th>
+                  <th scope="col">Sources</th>
+                  <th scope="col">Sites</th>
+                </tr>
+              </thead>
+              <tbody>
+                {licenses.resources.licenses.map((group) => (
+                  <tr key={group.license}>
+                    <th scope="row">
+                      {group.licenseUrl ? (
+                        <a href={group.licenseUrl}>{group.license}</a>
+                      ) : (
+                        group.license
+                      )}
+                    </th>
+                    <td>{number(group.sources)}</td>
+                    <td>{number(group.sites)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <details className="document-details">
+            <summary>All {licenses.resources.sources.length} resource sources</summary>
+            <ul>
+              {licenses.resources.sources.map((source) => (
+                <li key={source.id}>
+                  <a href={source.url}>{source.name}</a> · {source.license} · {number(source.sites)}{' '}
+                  site{source.sites === 1 ? '' : 's'}
+                </li>
+              ))}
+            </ul>
+          </details>
+          <h3>Religions</h3>
+          <p>
+            The religions layer follows {religions.traditions.length} traditions through{' '}
+            {religions.milestones.length} dated milestones, hand-generalized regions and diffusion
+            links written for the atlas. Each milestone cites at least one of{' '}
+            {licenses.religions.references.length} references ({number(citedMilestones)} citations
+            in total), listed for verification; their content is not redistributed. Regions are
+            geographic guides, not exact borders.
+          </p>
+          <details className="document-details">
+            <summary>All {licenses.religions.references.length} religion references</summary>
+            <ul>
+              {licenses.religions.references.map((reference) => (
+                <li key={reference.id}>
+                  <a href={reference.url}>{reference.title}</a> · {reference.milestones} milestone
+                  {reference.milestones === 1 ? '' : 's'}
+                </li>
+              ))}
+            </ul>
+          </details>
+        </section>
         <section>
           <span className="eyebrow">04 / TIME & BOUNDARIES</span>
           <h2>Precision is not certainty</h2>
@@ -278,13 +478,50 @@ export default async function AboutPage() {
             visible points measures available documentation, not the amount of violence in a region
             or period.
           </p>
-          <div className="document-grid">
-            {Object.entries(quality.coverage.byRegion).map(([region, count]) => (
-              <div className="document-card" key={region}>
-                <h3>{regions[region] ?? region}</h3>
-                <p>{number(count)} events in this build</p>
-              </div>
-            ))}
+          <div
+            className="document-table"
+            role="region"
+            aria-labelledby="coverage-caption"
+            tabIndex={0}
+          >
+            <table>
+              <caption id="coverage-caption">
+                Events in this build by region and era ({number(coverage.total)} in total)
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Region</th>
+                  {ERAS.map((era) => (
+                    <th scope="col" key={era.id}>
+                      {era.name.en}
+                    </th>
+                  ))}
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(coverage.regions)
+                  .sort(([, a], [, b]) => b - a)
+                  .map(([region, total]) => (
+                    <tr key={region}>
+                      <th scope="row">{regions[region] ?? region}</th>
+                      {ERAS.map((era) => (
+                        <td key={era.id}>{number(coverage.cells[region]?.[era.id] ?? 0)}</td>
+                      ))}
+                      <td>{number(total)}</td>
+                    </tr>
+                  ))}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row">All regions</th>
+                  {ERAS.map((era) => (
+                    <td key={era.id}>{number(coverage.eras[era.id] ?? 0)}</td>
+                  ))}
+                  <td>{number(coverage.total)}</td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
           <p>
             Coordinates obtained from an associated place identify that place; they do not establish
@@ -330,9 +567,15 @@ export default async function AboutPage() {
           <p>
             To report an error, include the shared link, event QID or territorial observation
             identifier, displayed year and a verifiable reference. Factual corrections should first
-            be submitted to the relevant source.
+            be submitted to the relevant source. Archive pages and event records in the atlas also
+            have a “Report an error” link that fills these details in for you.
           </p>
           <ul>
+            <li>
+              <a className="source-link" href={correctionFormUrl()}>
+                Report an error in the atlas ↗
+              </a>
+            </li>
             <li>
               <a className="source-link" href="https://www.wikidata.org/wiki/Wikidata:Introduction">
                 Correct a Wikidata statement ↗

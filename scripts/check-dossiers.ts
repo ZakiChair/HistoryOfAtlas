@@ -1,6 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { HistoricalEventSchema, PersonSchema, PolityLeadersSchema } from '../lib/schema';
+import { invalidArchiveBounds } from '../pipeline/build/pmtiles';
 
 const directory = join(process.cwd(), 'public/data');
 async function records<T>(folder: string, parse: (record: unknown) => T): Promise<T[]> {
@@ -85,6 +86,13 @@ if (issues.length)
   throw new Error(
     `${issues.length} dossier integrity failures:\n${issues.slice(0, 30).join('\n')}`,
   );
+// The pmtiles client logs an error for zero-area bounds; no published archive may carry them.
+const archives = await invalidArchiveBounds(join(process.cwd(), 'public'));
+if (!archives.archives) throw new Error('No PMTiles archive was found under public/.');
+if (archives.issues.length)
+  throw new Error(
+    `${archives.issues.length} PMTiles archives have invalid bounds:\n${archives.issues.map((issue) => `public/${issue}`).join('\n')}`,
+  );
 console.log(
   JSON.stringify({
     events: events.length,
@@ -93,5 +101,7 @@ console.log(
     polityCatalogs: polities.length,
     provenance: 'validated',
     reciprocalLinks: 'validated',
+    pmtilesArchives: archives.archives,
+    pmtilesBounds: 'validated',
   }),
 );

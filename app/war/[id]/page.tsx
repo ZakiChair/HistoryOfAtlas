@@ -1,40 +1,44 @@
 import type { Metadata } from 'next';
-import { readFile } from 'node:fs/promises';
-import path from 'node:path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import LocaleLink from '@/components/ui/LocaleLink';
 import type { HistoricalEvent } from '@/lib/schema';
-import type { HistDate } from '@/lib/histdate';
 import { formatDateRange } from '@/lib/histdate';
+import { readCuratedIds, readEvent, readWarEvents, readWars, type WarRecord } from '@/lib/archive';
+import {
+  breadcrumbJsonLd,
+  eventJsonLd,
+  jsonLdGraph,
+  serializeJsonLd,
+  type EventLike,
+} from '@/lib/jsonld';
+import { commonsImageUrl, errorReportUrl, hasStaticEventPage, siteOrigin } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
-type War = {
-  id: string;
-  name: { fr?: string; en: string };
-  start: HistDate;
-  end?: HistDate;
-  count: number;
-  path: string;
-  source: string;
-};
-const root = path.join(process.cwd(), 'public/data');
-async function readWars(): Promise<War[]> {
-  return JSON.parse(await readFile(path.join(root, 'wars.json'), 'utf8')) as War[];
+
+/** Keeps the structured data small on conflicts with hundreds of documented events. */
+const MAX_JSON_LD_SUB_EVENTS = 100;
+
+async function readWar(id: string): Promise<WarRecord | undefined> {
+  return (await readWars()).find((item) => item.id === id);
 }
+
 export async function generateStaticParams() {
   return (await readWars()).map((war) => ({ id: war.id }));
 }
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const war = (await readWars()).find((item) => item.id === id);
+  const war = await readWar(id);
   if (!war) return { title: 'Conflict not found — HistoryOfAtlas' };
   const name = war.name.en;
   const description = `${name}: ${war.count} documented events, their chronology and sources in HistoryOfAtlas.`;
+  const image = commonsImageUrl((await readEvent(war.id))?.image);
   return {
     title: `${name} — HistoryOfAtlas`,
     description,
@@ -42,32 +46,77 @@ export async function generateMetadata({
     openGraph: {
       title: name,
       description,
+      url: `/war/${id}/`,
       siteName: 'HistoryOfAtlas',
       locale: 'en_US',
       type: 'article',
-      images: ['/opengraph-image'],
+      images: image ? [{ url: image, alt: name }] : ['/opengraph-image'],
     },
   };
 }
 
+function eventMapUrl(event: HistoricalEvent, war: WarRecord): string {
+  const query = new URLSearchParams({ e: event.id, war: war.id, y: String(event.start.year) });
+  if (event.coords) {
+    query.set('lon', String(event.coords[0]));
+    query.set('lat', String(event.coords[1]));
+    query.set('z', '5');
+  }
+  return `/?${query}`;
+}
+
 export default async function WarPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const war = (await readWars()).find((item) => item.id === id);
+  const war = await readWar(id);
   if (!war) notFound();
-  const events = JSON.parse(
-    await readFile(path.join(root, 'wars', `${war.id}.json`), 'utf8'),
-  ) as HistoricalEvent[];
+  const [events, record, curated] = await Promise.all([
+    readWarEvents(war.id).then((items) => items ?? []),
+    readEvent(war.id),
+    readCuratedIds(),
+  ]);
+  const origin = siteOrigin();
+  const pagePath = `/war/${war.id}/`;
   const name = war.name.en;
+  const archived = new Set(
+    events.filter((event) => hasStaticEventPage(event, curated)).map((event) => event.id),
+  );
+  const summary: EventLike = record ?? {
+    id: war.id,
+    name: war.name,
+    start: war.start,
+    ...(war.end ? { end: war.end } : {}),
+    datePrecision: 'year',
+  };
+  const jsonLd = jsonLdGraph(
+    eventJsonLd(summary, {
+      origin,
+      path: pagePath,
+      subEvents: events
+        .filter((event) => archived.has(event.id))
+        .slice(0, MAX_JSON_LD_SUB_EVENTS)
+        .map((event) => ({ id: event.id, name: event.name.en, path: `/event/${event.id}/` })),
+    }),
+    breadcrumbJsonLd(origin, [
+      { name: 'HistoryOfAtlas', path: '/' },
+      { name, path: pagePath },
+    ]),
+  );
+  const introduction = record?.summary?.en ?? record?.description?.en;
   return (
     <main className="document-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
+      />
       <header className="document-header">
-        <Link className="back-link" href="/">
+        <LocaleLink className="back-link" href="/">
           ← Back to the atlas
-        </Link>
+        </LocaleLink>
         <span className="eyebrow">CONFLICTS & TIMELINES · {war.id}</span>
         <h1>{name}</h1>
         <p>
           {war.count} documented event{war.count === 1 ? '' : 's'} in this record
+          {archived.size > 0 ? ` · ${archived.size} with an archive page` : ''}
         </p>
         <Link
           className="primary-button"
@@ -77,6 +126,12 @@ export default async function WarPage({ params }: { params: Promise<{ id: string
         </Link>
       </header>
       <article className="document-body">
+        {introduction && <p>{introduction}</p>}
+        {record && hasStaticEventPage(record, curated) && (
+          <Link className="source-link" href={`/event/${record.id}/`}>
+            Dates, participants and sources of this conflict →
+          </Link>
+        )}
         <section>
           <h2>Related events</h2>
           <p>
@@ -91,12 +146,17 @@ export default async function WarPage({ params }: { params: Promise<{ id: string
                   {formatDateRange(event.start, event.end, 'en', event.datePrecision)}
                 </span>
                 <h3>
-                  <Link
-                    href={`/?e=${event.id}&war=${war.id}&y=${event.start.year}${event.coords ? `&lon=${event.coords[0]}&lat=${event.coords[1]}&z=5` : ''}`}
-                  >
-                    {event.name.en} ↗
-                  </Link>
+                  {archived.has(event.id) ? (
+                    <Link href={`/event/${event.id}/`}>{event.name.en}</Link>
+                  ) : (
+                    <Link href={eventMapUrl(event, war)}>{event.name.en} ↗</Link>
+                  )}
                 </h3>
+                {archived.has(event.id) && (
+                  <Link className="source-link" href={eventMapUrl(event, war)}>
+                    On the map ↗
+                  </Link>
+                )}{' '}
                 <a
                   className="source-link"
                   href={`https://www.wikidata.org/wiki/${event.id}`}
@@ -117,10 +177,24 @@ export default async function WarPage({ params }: { params: Promise<{ id: string
           </p>
           <a className="source-link" href={war.source} target="_blank" rel="noreferrer">
             Wikidata · {war.id} ↗
-          </a>
+          </a>{' '}
           <Link className="source-link" href="/about/">
             Read the methodology →
-          </Link>
+          </Link>{' '}
+          <a
+            className="source-link"
+            href={errorReportUrl({
+              name,
+              id: war.id,
+              kind: 'war',
+              year: war.start.year,
+              url: `${origin}${pagePath}`,
+            })}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Report an error on this page ↗
+          </a>
         </section>
       </article>
     </main>

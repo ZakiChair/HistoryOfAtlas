@@ -670,11 +670,16 @@ export default function BattlePanel() {
                       {localizedName(battle.name, locale)}
                     </strong>
                     <small>
-                      {!battle.start || !battle.coords
-                        ? text('unmapped')
-                        : battle.documented
-                          ? text('documented')
-                          : text(battleCategory(battle))}
+                      {!battle.start || !battle.coords ? (
+                        text('unmapped')
+                      ) : battle.documented ? (
+                        text('documented')
+                      ) : (
+                        <>
+                          {text(battleCategory(battle))}
+                          <span className="battle-illustrative-badge">{text('illustrative')}</span>
+                        </>
+                      )}
                     </small>
                   </span>
                   <ArrowUpRight size={14} aria-hidden="true" />

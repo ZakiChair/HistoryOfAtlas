@@ -9,7 +9,7 @@ import type {
   VectorTileSource,
 } from 'maplibre-gl';
 import { useAtlasStore } from '@/lib/store';
-import { useI18n } from '@/lib/i18n';
+import { translateCopy, useI18n } from '@/lib/i18n';
 import { getEvent, readJson, type DataManifest } from '@/lib/data-client';
 import { selectEventArchive } from '@/lib/event-archives';
 import { boundaryFrames, wrapLongitude } from '@/lib/map-boundaries';
@@ -18,7 +18,8 @@ import { publishBattleRenderStatus } from '@/lib/battles/status';
 import type { GeographyManifest } from '@/lib/geography';
 import { addEventSprites } from './markers';
 import { EMPTY_FEATURE_FILTER } from './style-filters';
-import { eventFilter, selectedEventFilter } from './event-filters';
+import { clusterFilterPurpose, eventFilter, selectedEventFilter } from './event-filters';
+import { HEAT_COLOR, HEAT_RADIUS } from './heat-style';
 import { queryViewportFeatures } from './query-viewport';
 import { createRenderQueue } from './render-queue';
 import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from './event-clusters';
@@ -26,26 +27,11 @@ import { hasResourceAt } from './resource-hit';
 import { useResourceStore } from '@/lib/resources/store';
 import { hasReligionAt } from './religion-hit';
 import { useReligionStore } from '@/lib/religions/store';
+import { EVENT_COLOR_EXPRESSION, SELECTION_COLORS } from '@/lib/colors/semantic';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 type AtlasState = ReturnType<typeof useAtlasStore.getState>;
-const eventColor = [
-  'match',
-  ['get', 'type'],
-  'battle',
-  '#e7bd78',
-  'siege',
-  '#d99386',
-  'naval',
-  '#92c7d8',
-  'treaty',
-  '#b8c990',
-  'campaign',
-  '#cba9da',
-  'war',
-  '#db9d85',
-  '#d2bf9b',
-];
+const eventColor = EVENT_COLOR_EXPRESSION;
 
 function makeStyle(
   manifest: GeographyManifest,
@@ -119,12 +105,23 @@ function makeStyle(
   };
 }
 
+/** Hidden description of the canvas: purpose and keyboard shortcuts. */
+const MAP_DESCRIPTION_ID = 'atlas-map-description';
+
 export default function WorldMap() {
   const { t } = useI18n();
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapInstance | null>(null);
   const [error, setError] = useState(false);
   const [ready, setReady] = useState(false);
+  // Each attempt mounts a fresh map, playback gate and overlays, as a remount would.
+  const [attempt, setAttempt] = useState(0);
+  const mapLabel = t('Carte historique interactive', 'Interactive historical map');
+
+  // MapLibre names its canvas only when it is created; follow later language changes.
+  useEffect(() => {
+    mapRef.current?.getCanvas().setAttribute('aria-label', mapLabel);
+  }, [mapLabel, ready]);
 
   useEffect(() => {
     let disposed = false;
@@ -158,7 +155,16 @@ export default function WorldMap() {
           attributionControl: false,
           canvasContextAttributes: { antialias: true },
           fadeDuration: reduced ? 0 : 350,
+          // The focusable canvas is the map's only landmark; name it in the reader's language.
+          locale: {
+            'Map.Title': translateCopy(
+              initial.locale,
+              'Carte historique interactive',
+              'Interactive historical map',
+            ),
+          },
         });
+        map.getCanvas().setAttribute('aria-describedby', MAP_DESCRIPTION_ID);
         mapRef.current = map;
         let currentBoundarySources: string[] = [];
         let lastYear = initial.year;
@@ -578,15 +584,12 @@ export default function WorldMap() {
             )
               eventClustering?.invalidate();
             const filter = eventFilter(state);
-            for (const id of [
-              'event-halo',
-              'event-points',
-              'event-icons',
-              'event-symbols',
-              'event-heat',
-              EVENT_QUERY_LAYER,
-            ])
+            for (const id of ['event-halo', 'event-points', 'event-icons', 'event-symbols'])
               map.setFilter(id, filter);
+            // Heat aggregates every event above the reader's threshold; cluster counts do too
+            // unless the period is too wide to query at every idle (clusterFilterPurpose).
+            map.setFilter('event-heat', eventFilter(state, 'density'));
+            map.setFilter(EVENT_QUERY_LAYER, eventFilter(state, clusterFilterPurpose(state)));
             map.setLayoutProperty(
               'event-heat',
               'visibility',
@@ -796,23 +799,9 @@ export default function WorldMap() {
                 paint: {
                   'heatmap-weight': ['/', ['get', 'importance'], 100],
                   'heatmap-intensity': 1.6,
-                  'heatmap-radius': 24,
+                  'heatmap-radius': HEAT_RADIUS,
                   'heatmap-opacity': 0.75,
-                  'heatmap-color': [
-                    'interpolate',
-                    ['linear'],
-                    ['heatmap-density'],
-                    0,
-                    'rgba(0,0,0,0)',
-                    0.2,
-                    '#34778b',
-                    0.5,
-                    '#d1ac64',
-                    0.8,
-                    '#dd8156',
-                    1,
-                    '#f1d6a0',
-                  ],
+                  'heatmap-color': HEAT_COLOR,
                 },
               });
               map.addLayer({
@@ -889,7 +878,7 @@ export default function WorldMap() {
                   'circle-radius': 12,
                   'circle-color': 'transparent',
                   'circle-stroke-width': 2,
-                  'circle-stroke-color': '#fff1cb',
+                  'circle-stroke-color': SELECTION_COLORS.event,
                 },
               });
               eventsReady = true;
@@ -1040,18 +1029,26 @@ export default function WorldMap() {
       disposed = true;
       playbackGate.dispose();
       cancelAnimationFrame(initializeFrame);
-      cleanup?.();
+      if (cleanup) cleanup();
+      else {
+        // A setup that failed after creating the map must still release its WebGL context.
+        mapRef.current?.remove();
+        mapRef.current = null;
+      }
     };
-  }, []);
+  }, [attempt]);
 
   return (
     <div className="world-map-wrap" data-ready={ready}>
-      <div
-        ref={container}
-        className="world-map"
-        role="region"
-        aria-label={t('Carte historique interactive', 'Interactive historical map')}
-      />
+      {/* MapLibre's focusable canvas is the named region; a second one here was redundant. */}
+      <div ref={container} className="world-map" />
+      <p id={MAP_DESCRIPTION_ID} hidden>
+        {t('mapDescription')}{' '}
+        {t(
+          'Sur la carte : flèches pour se déplacer, + et − pour zoomer, Espace pour lancer ou arrêter la chronologie.',
+          'On the map: arrow keys to pan, + and − to zoom, Space to play or pause the timeline.',
+        )}
+      </p>
       {!ready && !error && (
         <div className="map-loading">
           <span className="loading-globe" />
@@ -1067,9 +1064,22 @@ export default function WorldMap() {
               'Explore events using the list view.',
             )}
           </p>
-          <button onClick={() => useAtlasStore.setState({ mode: 'list' })}>
-            {t('Ouvrir la liste', 'Open list')}
-          </button>
+          <div className="map-error-actions">
+            <button
+              type="button"
+              data-testid="map-retry"
+              onClick={() => {
+                setError(false);
+                setReady(false);
+                setAttempt((value) => value + 1);
+              }}
+            >
+              {t('Réessayer', 'Try again')}
+            </button>
+            <button onClick={() => useAtlasStore.setState({ mode: 'list' })}>
+              {t('Ouvrir la liste', 'Open list')}
+            </button>
+          </div>
         </div>
       )}
       <div className="map-vignette" aria-hidden="true" />

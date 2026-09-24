@@ -48,6 +48,8 @@ export interface AtlasState {
   campaignStep: number;
   storyId: string | null;
   storyStep: number;
+  /** Event of the active story step, ringed on the map without opening its dossier. Not in the URL. */
+  highlightedEvent: string | null;
   battlesVisible: boolean;
   resourcesVisible: boolean;
   religionsVisible: boolean;
@@ -85,6 +87,7 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   campaignStep: 0,
   storyId: null,
   storyStep: 0,
+  highlightedEvent: null,
   battlesVisible: true,
   resourcesVisible: false,
   religionsVisible: false,
@@ -243,6 +246,8 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
     state.selectedWar = null;
     state.campaignId = null;
     state.storyId = null;
+    // Battle mode hides the period controls, so a period must not filter it unseen.
+    state.range = null;
     state.playing = false;
     state.campaignPlaying = false;
     state.entityFollowing = false;
@@ -509,6 +514,8 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
                 selectedWar: null,
                 campaignId: null,
                 storyId: null,
+                // The period controls are hidden in battle mode (see focusBattle).
+                range: null,
                 battleProgress: 0,
                 mode: 'events' as const,
               }
