@@ -1,4 +1,4 @@
-import type { Map as MapInstance } from 'maplibre-gl';
+import type { Map as MapInstance, StyleImageMetadata } from 'maplibre-gl';
 import { RESOURCE_COLORS } from '@/lib/resources/colors';
 import { RESOURCE_ICONS, type ResourceIconPaint } from '@/lib/resources/icons';
 import {
@@ -10,6 +10,10 @@ import {
 const INK = '#153640';
 const PAPER = '#fff4dd';
 const PIXEL_RATIO = 2;
+/** Group pictograms are square; the overlay places their count just under this box. */
+export const RESOURCE_GROUP_SIZE = 36;
+/** A stretchable ink cartouche that the overlay fits around each group count. */
+export const RESOURCE_COUNT_BADGE = 'resource-count-badge';
 
 export const resourceIconKey = (categories: ResourceCategory[]) => [...categories].sort().join('-');
 
@@ -44,6 +48,8 @@ export function createResourceSprites(map: MapInstance) {
     width: number,
     height: number,
     draw: (context: CanvasRenderingContext2D) => void,
+    halo = true,
+    metadata: Partial<StyleImageMetadata> = {},
   ) => {
     if (map.hasImage(id)) return;
     const canvas = document.createElement('canvas');
@@ -51,27 +57,56 @@ export function createResourceSprites(map: MapInstance) {
     canvas.height = height * PIXEL_RATIO;
     const context = canvas.getContext('2d');
     if (!context) throw new Error('Resource pictograms could not be drawn');
-    context.scale(PIXEL_RATIO, PIXEL_RATIO);
-    draw(context);
+    if (halo) {
+      // One soft ink halo around the finished drawing keeps pale or grey
+      // pictograms legible over every territory colour.
+      const drawing = document.createElement('canvas');
+      drawing.width = canvas.width;
+      drawing.height = canvas.height;
+      const layer = drawing.getContext('2d');
+      if (!layer) throw new Error('Resource pictograms could not be drawn');
+      layer.scale(PIXEL_RATIO, PIXEL_RATIO);
+      draw(layer);
+      context.shadowColor = 'rgba(6, 24, 32, 0.8)';
+      context.shadowBlur = 3 * PIXEL_RATIO;
+      context.drawImage(drawing, 0, 0);
+    } else {
+      context.scale(PIXEL_RATIO, PIXEL_RATIO);
+      draw(context);
+    }
     map.addImage(id, context.getImageData(0, 0, canvas.width, canvas.height), {
       pixelRatio: PIXEL_RATIO,
+      ...metadata,
     });
     ownedImages.add(id);
   };
 
   return {
     ensure(sites: ResourceSite[]) {
-      for (const category of RESOURCE_CATEGORIES) {
-        add(`resource-group-${category}`, 48, 48, (context) => {
-          // A count cartouche distinguishes a group from a single exploitation site.
+      // Stretch and content boxes are in image pixels: only the flat middle stretches.
+      add(
+        RESOURCE_COUNT_BADGE,
+        16,
+        14,
+        (context) => {
           context.fillStyle = INK;
           context.strokeStyle = PAPER;
           context.lineWidth = 1;
           context.beginPath();
-          context.roundRect(6, 32, 36, 15, 3);
+          context.roundRect(0.5, 0.5, 15, 13, 3.5);
           context.fill();
           context.stroke();
-          context.translate(8, 1);
+        },
+        false,
+        {
+          stretchX: [[5 * PIXEL_RATIO, 11 * PIXEL_RATIO]],
+          stretchY: [[5 * PIXEL_RATIO, 9 * PIXEL_RATIO]],
+          content: [3 * PIXEL_RATIO, 3 * PIXEL_RATIO, 13 * PIXEL_RATIO, 11 * PIXEL_RATIO],
+        },
+      );
+      for (const category of RESOURCE_CATEGORIES) {
+        add(`resource-group-${category}`, RESOURCE_GROUP_SIZE, RESOURCE_GROUP_SIZE, (context) => {
+          context.translate(2, 2);
           drawIcon(context, category);
         });
       }

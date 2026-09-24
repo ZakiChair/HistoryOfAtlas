@@ -13,22 +13,47 @@ import {
   type ResourceSite,
 } from '@/lib/resources/types';
 import { resourcesInPeriod } from '@/lib/resources/time';
-import { RESOURCE_CLUSTERS, RESOURCE_POINTS, RESOURCE_SOURCE } from './resource-hit';
-import { createResourceSprites, resourceIconKey } from './resource-sprites';
+import {
+  RESOURCE_CLUSTERS,
+  RESOURCE_COUNTS,
+  RESOURCE_POINTS,
+  RESOURCE_SOURCE,
+} from './resource-hit';
+import { hasReligionAt } from './religion-hit';
+import {
+  createResourceSprites,
+  RESOURCE_COUNT_BADGE,
+  RESOURCE_GROUP_SIZE,
+  resourceIconKey,
+} from './resource-sprites';
+import { raiseThematicLayers } from './thematic-stack';
 
 const SELECTED = 'resource-selected';
-const LAYERS = [RESOURCE_CLUSTERS, RESOURCE_POINTS, SELECTED];
-const ICON_SIZE: ExpressionSpecification = [
-  'interpolate',
-  ['linear'],
-  ['zoom'],
-  1,
-  0.8,
-  7,
-  1,
-  12,
-  1.1,
-];
+const LAYERS = [RESOURCE_CLUSTERS, RESOURCE_POINTS, SELECTED, RESOURCE_COUNTS];
+const HOVER_LAYERS = [RESOURCE_POINTS, RESOURCE_CLUSTERS, RESOURCE_COUNTS];
+// Pictograms shrink on the whole-world view, where dozens of groups share the globe.
+const ICON_STOPS = [
+  [1, 0.66],
+  [3, 0.76],
+  [6, 0.92],
+  [9, 1],
+  [12, 1.1],
+] as const;
+const zoomCurve = (value: (size: number) => number | ExpressionSpecification) =>
+  [
+    'interpolate',
+    ['linear'],
+    ['zoom'],
+    ...ICON_STOPS.flatMap(([zoom, size]) => [zoom, value(size)]),
+  ] as ExpressionSpecification;
+const ICON_SIZE = zoomCurve((size) => size);
+const COUNT_SIZE = 10.5;
+// The count label's top edge tucks 2.5 px under its group pictogram at every icon size.
+// As a layout property it is evaluated per integer tile zoom, so it may drift by about 1 px.
+const COUNT_OFFSET = zoomCurve((size) => [
+  'literal',
+  [0, ((RESOURCE_GROUP_SIZE / 2) * size - 2.5) / COUNT_SIZE],
+]);
 const categoryCounts = RESOURCE_CATEGORIES.map((category) => ['get', `category-${category}`]);
 // Count each active resource once per site. Stable category order breaks ties.
 const clusterIcon: ExpressionSpecification = [
@@ -84,20 +109,35 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
     if (!installed) return;
     for (const id of LAYERS) map.setLayoutProperty(id, 'visibility', active ? 'visible' : 'none');
     // Historical territory sources are replaced as the year changes. Keep site markers above them.
-    if (active && map.getStyle().layers?.at(-1)?.id !== SELECTED)
-      for (const id of LAYERS) map.moveLayer(id);
+    if (active) raiseThematicLayers(map);
   };
+  // Religious emblems are drawn above resource symbols and receive clicks they cover.
   const select = (event: MapLayerMouseEvent) => {
-    if (!active || disposed || sourceUpdating) return;
+    if (
+      !active ||
+      disposed ||
+      sourceUpdating ||
+      event.defaultPrevented ||
+      hasReligionAt(map, event.point)
+    )
+      return;
     const site = sites.get(String(event.features?.[0]?.properties?.id ?? ''));
     if (site) {
       event.preventDefault();
       useResourceStore.getState().select(site);
     }
   };
-  const expand = async (event: MapLayerMouseEvent) => {
-    // Site symbols sit above groups and their click handler runs first.
-    if (!active || disposed || sourceUpdating || event.defaultPrevented) return;
+  // Count cartouches sit above everything; pictograms defer to emblems and sites above them.
+  const expandFrom = (countLayer: boolean) => async (event: MapLayerMouseEvent) => {
+    // Handlers run in registration order: counts, then sites, then group pictograms.
+    if (
+      !active ||
+      disposed ||
+      sourceUpdating ||
+      event.defaultPrevented ||
+      (!countLayer && hasReligionAt(map, event.point))
+    )
+      return;
     const feature = event.features?.[0];
     if (!feature || feature.geometry.type !== 'Point') return;
     event.preventDefault();
@@ -116,7 +156,11 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
   const enter = () => {
     if (active && !sourceUpdating) map.getCanvas().style.cursor = 'pointer';
   };
-  const leave = () => {
+  const expand = expandFrom(false);
+  const expandCount = expandFrom(true);
+  const leave = (event?: MapLayerMouseEvent) => {
+    // Moving from a resource symbol onto a touching religious emblem keeps the pointer.
+    if (event && hasReligionAt(map, event.point)) return;
     map.getCanvas().style.cursor = '';
   };
   const removeLayers = () => {
@@ -217,20 +261,14 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
         layout: {
           visibility: active ? 'visible' : 'none',
           'icon-image': clusterIcon,
+          'icon-size': ICON_SIZE,
           'icon-allow-overlap': true,
           'icon-ignore-placement': true,
           'icon-pitch-alignment': 'viewport',
           'icon-rotation-alignment': 'viewport',
-          'text-field': ['get', 'point_count_abbreviated'],
-          'text-font': ['Atlas UI'],
-          'text-size': 11,
-          'text-offset': [0, 1.4],
-          'text-allow-overlap': true,
-          'text-ignore-placement': true,
-          'text-pitch-alignment': 'viewport',
-          'text-rotation-alignment': 'viewport',
+          // Larger groups are drawn over smaller neighbours when they touch.
+          'symbol-sort-key': ['get', 'point_count'],
         },
-        paint: { 'text-color': '#ecf7ea' },
       });
       map.addLayer({
         id: RESOURCE_POINTS,
@@ -262,6 +300,35 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
           'icon-rotation-alignment': 'viewport',
         },
       });
+      // Counts get their own layer above religious emblems, in a cartouche fitted to the
+      // digits, so a group is announced even when an emblem covers its pictogram.
+      map.addLayer({
+        id: RESOURCE_COUNTS,
+        type: 'symbol',
+        source: RESOURCE_SOURCE,
+        filter: ['has', 'point_count'],
+        layout: {
+          visibility: active ? 'visible' : 'none',
+          'icon-image': RESOURCE_COUNT_BADGE,
+          'icon-text-fit': 'both',
+          'icon-text-fit-padding': [1, 4, 1, 4],
+          'icon-allow-overlap': true,
+          'icon-ignore-placement': true,
+          'icon-pitch-alignment': 'viewport',
+          'icon-rotation-alignment': 'viewport',
+          'symbol-sort-key': ['get', 'point_count'],
+          'text-field': ['get', 'point_count_abbreviated'],
+          'text-font': ['Atlas UI'],
+          'text-size': COUNT_SIZE,
+          'text-anchor': 'top',
+          'text-offset': COUNT_OFFSET,
+          'text-allow-overlap': true,
+          'text-ignore-placement': true,
+          'text-pitch-alignment': 'viewport',
+          'text-rotation-alignment': 'viewport',
+        },
+        paint: { 'text-color': '#fff4dd' },
+      });
       installed = true;
       applyVisibility();
       applySelection();
@@ -274,10 +341,11 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
     }
   };
 
+  map.on('click', RESOURCE_COUNTS, expandCount);
   map.on('click', RESOURCE_POINTS, select);
   map.on('click', RESOURCE_CLUSTERS, expand);
   map.on('render', publishSettledPeriod);
-  for (const id of [RESOURCE_POINTS, RESOURCE_CLUSTERS]) {
+  for (const id of HOVER_LAYERS) {
     map.on('mouseenter', id, enter);
     map.on('mouseleave', id, leave);
   }
@@ -308,10 +376,11 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
     dispose() {
       disposed = true;
       unsubscribe();
+      map.off('click', RESOURCE_COUNTS, expandCount);
       map.off('click', RESOURCE_POINTS, select);
       map.off('click', RESOURCE_CLUSTERS, expand);
       map.off('render', publishSettledPeriod);
-      for (const id of [RESOURCE_POINTS, RESOURCE_CLUSTERS]) {
+      for (const id of HOVER_LAYERS) {
         map.off('mouseenter', id, enter);
         map.off('mouseleave', id, leave);
       }

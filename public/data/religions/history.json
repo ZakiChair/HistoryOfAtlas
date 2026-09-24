@@ -528,7 +528,7 @@
         "fr": "Cultes de cités et traditions royales variés, attestés par les sanctuaires et les objets archéologiques. Les étapes retenues ne fixent pas une naissance unique.",
         "en": "Diverse city cults and royal traditions documented by sanctuaries and archaeological objects. Selected milestones do not establish a single founding moment."
       },
-      "color": "#bb8a59",
+      "color": "#9c8472",
       "symbol": "cuneiform"
     },
     {
@@ -541,7 +541,7 @@
         "fr": "Cultes locaux, pratiques funéraires et sanctuaires royaux de la vallée du Nil, transformés au fil des dynasties.",
         "en": "Local cults, funerary practices and royal sanctuaries of the Nile Valley, changing across successive dynasties."
       },
-      "color": "#dcae43",
+      "color": "#1e9696",
       "symbol": "ankh"
     },
     {
@@ -554,7 +554,7 @@
         "fr": "Famille diverse de traditions rituelles, philosophiques et dévotionnelles, sans fondateur unique. Les cultes locaux et les autres religions continuent de coexister.",
         "en": "Diverse ritual, philosophical and devotional traditions without a single founder. Local practices and other religions continue to coexist."
       },
-      "color": "#ed9155",
+      "color": "#c0783c",
       "symbol": "om"
     },
     {
@@ -567,7 +567,7 @@
         "fr": "Ensemble régional de traditions distinctes : Chavín, Tiwanaku et cultes incas. Leur regroupement géographique ne démontre pas une filiation religieuse continue.",
         "en": "A regional grouping of distinct traditions: Chavín, Tiwanaku and Inca cults. Geographic grouping does not establish continuous religious descent."
       },
-      "color": "#d87543",
+      "color": "#7ea84e",
       "symbol": "andean-sun"
     },
     {
@@ -580,7 +580,7 @@
         "fr": "Traditions iraniennes et parsies. La date et le lieu de la vie de Zarathoustra restent débattus.",
         "en": "Iranian and Parsi traditions. The date and location of Zarathustra’s life remain debated."
       },
-      "color": "#e5a94c",
+      "color": "#d8606c",
       "symbol": "faravahar"
     },
     {
@@ -593,7 +593,7 @@
         "fr": "Religions civiques et sanctuaires multiples du monde grec et romain. Les rapprochements culturels ne supposent pas une origine unique.",
         "en": "Multiple civic religions and sanctuaries of the Greek and Roman worlds. Cultural connections do not imply a single origin."
       },
-      "color": "#9286c4",
+      "color": "#8a8a60",
       "symbol": "laurel"
     },
     {
@@ -606,7 +606,7 @@
         "fr": "Traditions juives issues de l’histoire d’Israël et de Juda, transformées au fil des diasporas. Les premiers jalons ne fixent pas une fondation unique.",
         "en": "Jewish traditions rooted in the history of Israel and Judah and transformed through diasporas. Early milestones do not establish a single founding event."
       },
-      "color": "#5789d1",
+      "color": "#669cf6",
       "symbol": "menorah"
     },
     {
@@ -619,7 +619,7 @@
         "fr": "Traditions des Jina, dont les courants digambara et shvetambara. Mahavira est le dernier des vingt-quatre Tirthankara de la tradition.",
         "en": "Traditions of the Jinas, including Digambara and Shvetambara communities. Mahavira is the last of the tradition’s twenty-four Tirthankaras."
       },
-      "color": "#c9bb69",
+      "color": "#cc629f",
       "symbol": "ahimsa"
     },
     {
@@ -632,7 +632,7 @@
         "fr": "Textes philosophiques, communautés rituelles et lignées religieuses chinoises. Leur formation est progressive et leur relation aux autres traditions étroite.",
         "en": "Chinese philosophical texts, ritual communities and religious lineages. They developed gradually and interacted closely with other traditions."
       },
-      "color": "#55b6ab",
+      "color": "#89a2a4",
       "symbol": "yin-yang"
     },
     {
@@ -645,7 +645,7 @@
         "fr": "Enseignements éthiques, rites et institutions savantes de l’Asie orientale. Leur classement comme religion ou philosophie varie selon les contextes.",
         "en": "Ethical teachings, rituals and scholarly institutions of East Asia. Their classification as religion or philosophy varies with context."
       },
-      "color": "#bc786e",
+      "color": "#c0909c",
       "symbol": "confucian"
     },
     {
@@ -658,7 +658,7 @@
         "fr": "Traditions theravada, mahayana et vajrayana, transmises et adaptées par des communautés diverses. Les routes résument des échanges documentés.",
         "en": "Theravada, Mahayana and Vajrayana traditions, transmitted and adapted by diverse communities. Routes summarize documented exchanges."
       },
-      "color": "#e3c153",
+      "color": "#b49c3c",
       "symbol": "dharma-wheel"
     },
     {
@@ -671,7 +671,7 @@
         "fr": "Traditions issues des premiers disciples de Jésus : Églises orientales, orthodoxes, catholiques et protestantes notamment. Aucun jalon n’implique une conversion générale.",
         "en": "Traditions emerging from Jesus’ first followers, including Eastern, Orthodox, Catholic and Protestant churches. No milestone implies universal conversion."
       },
-      "color": "#ae83d8",
+      "color": "#c084d8",
       "symbol": "cross"
     },
     {
@@ -684,7 +684,7 @@
         "fr": "Traditions musulmanes diverses, notamment sunnites et chiites. Conquête politique, adoption religieuse et circulation des savoirs sont des phénomènes distincts.",
         "en": "Diverse Muslim traditions, including Sunni and Shia communities. Political conquest, religious adoption and circulation of knowledge are distinct processes."
       },
-      "color": "#4da995",
+      "color": "#249c66",
       "symbol": "crescent"
     },
     {
@@ -697,7 +697,7 @@
         "fr": "Traditions japonaises des kami, sans fondation unique ; elles se sont longtemps entremêlées aux pratiques bouddhiques. Les jalons sont des attestations de sanctuaires.",
         "en": "Japanese kami traditions without a single founding event; they were long intertwined with Buddhist practices. Milestones attest particular shrines."
       },
-      "color": "#db7379",
+      "color": "#de846c",
       "symbol": "torii"
     },
     {
@@ -710,7 +710,7 @@
         "fr": "Traditions plurielles d’Afrique occidentale et créations religieuses de leurs diasporas. Ife est un foyer attesté, sans date d’origine unique assignable ; les traversées atlantiques renvoient à la traite esclavagiste.",
         "en": "Plural West African traditions and religious creations of their diasporas. Ife is an attested centre without an assignable single origin date; Atlantic connections refer to the slave trade."
       },
-      "color": "#b75690",
+      "color": "#8484b4",
       "symbol": "orisha"
     },
     {
@@ -723,7 +723,7 @@
         "fr": "Tradition des gurus du Pendjab et de leurs communautés diasporiques. Les jalons retracent des institutions et des migrations documentées.",
         "en": "Tradition of the Punjab’s gurus and their diasporic communities. Milestones trace documented institutions and migrations."
       },
-      "color": "#e9a83e",
+      "color": "#3690b4",
       "symbol": "khanda"
     }
   ],

@@ -3894,6 +3894,74 @@ ul {
   height: 24px;
   flex-shrink: 0;
 }
+.religion-key-details > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+}
+.religion-key-details > summary::-webkit-details-marker {
+  display: none;
+}
+.religion-key-details > summary::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  margin-top: -2px;
+  border-inline-end: 1.5px solid currentColor;
+  border-block-end: 1.5px solid currentColor;
+  color: var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.15s;
+}
+.religion-key-details[open] > summary::after {
+  transform: rotate(45deg);
+}
+.religion-key-details > summary:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 2px;
+}
+.religion-key {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.35;
+}
+.religion-key li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.religion-key li > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.religion-key svg {
+  flex-shrink: 0;
+  width: 30px;
+  height: 24px;
+}
+/* Same hatch opacity and route casing as the map layers in religion-overlay.ts. */
+.religion-key-hatch {
+  opacity: 0.42;
+}
+.religion-key-casing {
+  stroke: #08202b;
+  stroke-opacity: 0.55;
+}
+:root[data-theme='light'] .religion-key-hatch {
+  opacity: 0.7;
+}
+:root[data-theme='light'] .religion-key-casing {
+  stroke: #2b2a22;
+  stroke-opacity: 0.3;
+}
 .religion-tradition-name,
 .religion-back {
   display: flex;
@@ -4275,4 +4343,41 @@ ul {
 .description-source {
   display: block;
   margin-top: 5px;
+}
+
+/* Layer status lines grow with active filters and loading states. A translucent
+   backdrop keeps them legible over map symbols, and panels start below them. */
+.resource-layer-note,
+.religion-layer-note {
+  width: max-content;
+  padding: 1px 7px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--panel) 84%, transparent);
+  text-shadow: none;
+}
+@media (min-width: 581px) {
+  .resource-layer-note,
+  .religion-layer-note {
+    font-size: 10px;
+  }
+  .resources-visible .exploration-panel,
+  .religions-visible .exploration-panel,
+  .resources-visible :is(.event-panel, .entity-panel),
+  .religions-visible :is(.event-panel, .entity-panel) {
+    top: max(143px, calc(var(--map-layers-bottom, 135px) + 8px));
+  }
+  .resources-visible :is(.resource-layer-card, .religion-layer-card),
+  .religions-visible :is(.resource-layer-card, .religion-layer-card) {
+    inset-block-start: max(143px, calc(var(--map-layers-bottom, 135px) + 8px));
+    max-height: calc(
+      100svh - var(--timeline-height) - 25px -
+        max(143px, calc(var(--map-layers-bottom, 135px) + 8px))
+    );
+  }
+}
+@media (max-width: 580px) {
+  .resource-layer-note,
+  .religion-layer-note {
+    font-size: 9px;
+  }
 }
