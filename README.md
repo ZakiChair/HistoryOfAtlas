@@ -16,6 +16,8 @@ The map's **Battles** and **Strategic resources** controls independently show or
 
 Resources use distinct pictograms shared by the map and legend, with adjacent icons for sites with several known resources by the selected period. Groups display their most frequent resource and the number of sites; clicking the icon or count zooms in. Select a resource in the legend to show only its sites and pictograms, or **All resources** to restore the complete layer. The choice survives year changes and layer toggles; legend counts continue to describe all sites in the selected period. These symbols indicate known resource categories, not current extraction, production quantities or remaining reserves.
 
+The **Religions** layer shows dated origins or first attestations, later milestones, schematic diffusion links and approximate regions. Enable or hide the complete layer, filter a tradition, or independently hide routes and regions. The atlas year (or the end of a selected range) controls all three representations. These are cumulative historical attestations, not a map of current believers, religious majorities or exclusive territories. Each milestone explains the documented mechanisms and links to its sources; approximate dates carry **≈**. Selecting a chronology entry moves the map to its place and date. Layer, tradition and display preferences are preserved in shared URLs. Data and rendering code load only on activation. See [religion data and methodology](docs/religions-data.md).
+
 The mineral catalogue combines MinCan, FINEPRINT, the GEM iron tracker, recent national producing-mine registers and reviewed operator/heritage records, including Mali's gold mines, uranium operations and rare-earth sites. All 45 resource categories have representative pictograms and sourced locations. The expanded layer includes non-producing oil/gas discoveries and USGS/ICMM mineral occurrences. Unknown discovery dates use a labelled documentary attestation; operating-register and satellite evidence never invent discovery dates. During playback, the last resource frame remains visible until the updated source is rendered, avoiding the symbol fade restart that previously made icons blink.
 
 ## Run
@@ -95,6 +97,7 @@ Replace the example origin with the real deployment origin. The multistage image
 - Dataset observations do not establish a polity's exact founding or dissolution. Shared Wikidata QIDs do not always mean shared polity identity.
 - Wikidata coverage is incomplete and uneven. Rejected and missing records remain visible in reports; they are never replaced with invented coordinates or dates.
 - Modern coastlines and rivers are geographical context, not reconstructed ancient physical geography.
+- Religious regions are hand-generalized geographic guides, and diffusion arrows connect documented milestones rather than exact itineraries. Surviving evidence and editorial coverage are uneven; a missing stage does not establish absence of a tradition.
 
 ## Sources and licences
 

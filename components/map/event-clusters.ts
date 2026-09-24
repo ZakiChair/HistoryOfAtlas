@@ -5,6 +5,7 @@ import { MAX_CLUSTER_INPUT, type ClusterResponse, type ScreenEvent } from './clu
 import { EMPTY_FEATURE_FILTER } from './style-filters';
 import { queryViewportFeatures } from './query-viewport';
 import { hasResourceAt } from './resource-hit';
+import { hasReligionAt } from './religion-hit';
 
 export const EVENT_QUERY_LAYER = 'event-cluster-query';
 const SOURCE = 'event-clusters';
@@ -260,7 +261,7 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
   };
 
   const click = (event: MapLayerMouseEvent) => {
-    if (hasResourceAt(map, event.point)) return;
+    if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
     if (!active) return;
     const feature = event.features?.[0];
     if (!feature || feature.geometry.type !== 'Point') return;
