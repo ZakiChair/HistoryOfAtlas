@@ -4939,12 +4939,18 @@ ul {
       var(--timeline-height) + 26px + var(--phone-bar-height) + var(--phone-tools-height)
     );
   }
+  /* Above the folded notebook bar and the tool row, so both stay reachable while the card shows. */
   .start-card {
     left: 10px;
     right: 10px;
-    bottom: calc(var(--timeline-height) + 10px);
+    bottom: calc(
+      var(--timeline-height) + 26px + var(--phone-bar-height) + var(--phone-tools-height)
+    );
     max-width: none;
-    max-height: calc(100svh - var(--header-height) - var(--timeline-height) - 64px);
+    max-height: calc(
+      100svh - var(--header-height) - var(--timeline-height) - 34px - var(--phone-bar-height) -
+        var(--phone-tools-height)
+    );
     padding: 13px 14px 12px;
   }
   .sidebar-is-open .start-card {
