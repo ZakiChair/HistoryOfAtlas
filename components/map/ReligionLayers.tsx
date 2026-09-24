@@ -6,32 +6,9 @@ import { useAtlasStore } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
 import { religionLabel, religionMilestonesAt } from '@/lib/religions/time';
 import { religionText } from '@/lib/religions/i18n';
-import { RELIGION_SYMBOLS } from '@/lib/religions/icons';
-import type { ReligionMilestone, ReligionTradition } from '@/lib/religions/types';
+import type { ReligionMilestone } from '@/lib/religions/types';
 import { formatYear } from '@/lib/histdate';
-
-function TraditionIcon({ tradition }: { tradition: ReligionTradition }) {
-  return (
-    <svg
-      className="religion-icon"
-      viewBox="0 0 32 32"
-      aria-hidden="true"
-      style={{ color: tradition.color }}
-    >
-      {(RELIGION_SYMBOLS[tradition.symbol] ?? []).map((path, index) => (
-        <path
-          key={index}
-          d={path}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      ))}
-    </svg>
-  );
-}
+import ReligionKey, { TraditionIcon } from './ReligionKey';
 
 export default function ReligionLayers({
   panelId,
@@ -55,6 +32,15 @@ export default function ReligionLayers({
   const tradition = dataset?.traditions.find(
     (item) => item.id === (selected?.traditionId ?? filter),
   );
+  // The key draws the filtered tradition's symbols, otherwise those of the tradition with
+  // the most milestones: a stable, frequently seen example rather than catalogue order.
+  const keyTradition =
+    tradition ??
+    dataset?.traditions.reduce((best, item) => {
+      const count = (id: string) =>
+        dataset.milestones.filter((stage) => stage.traditionId === id).length;
+      return count(item.id) > count(best.id) ? item : best;
+    });
   const stages = dataset
     ? (tradition
         ? dataset.milestones.filter((item) => item.traditionId === tradition.id)
@@ -214,6 +200,13 @@ export default function ReligionLayers({
                     {t('areas')}
                   </label>
                 </div>
+                {keyTradition && (
+                  <ReligionKey
+                    locale={locale}
+                    tradition={keyTradition}
+                    index={dataset?.traditions.indexOf(keyTradition) ?? 0}
+                  />
+                )}
                 <h3>{t('filter')}</h3>
                 <div className="religion-traditions" role="group" aria-label={t('filter')}>
                   <button

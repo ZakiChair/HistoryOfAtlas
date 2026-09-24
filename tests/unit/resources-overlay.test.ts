@@ -463,3 +463,73 @@ it('keeps symbols visible during playback and commits loaded source frames witho
   expect(useResourceStore.getState().selected?.id).toBe('stable');
   overlay.dispose();
 });
+
+it('leaves clicks on an overlapping religious emblem to the religion layer', async () => {
+  getDataset.mockResolvedValue(dataset);
+  const { map, sources, handlers, layers } = mapDouble();
+  const overlay = startResourceOverlay(map, true);
+  overlay.update(true, 1850);
+  await vi.waitFor(() => expect(useResourceStore.getState().status).toBe('ready'));
+  // Emblems are drawn above resource symbols.
+  layers.set('religion-milestones', { id: 'religion-milestones' } as LayerSpecification);
+  let emblemHit = true;
+  (map as unknown as { queryRenderedFeatures: () => object[] }).queryRenderedFeatures = () =>
+    emblemHit ? [{ properties: { id: 'judaism-jerusalem' } }] : [];
+  const event = () => ({
+    point: { x: 5, y: 5 },
+    defaultPrevented: false,
+    preventDefault: vi.fn(),
+    features: [
+      {
+        properties: { id: 'one', cluster_id: 1 },
+        geometry: { type: 'Point', coordinates: [12, 34] },
+      },
+    ] as object[],
+  });
+  handlers.get('click:resource-points')!(event());
+  handlers.get('click:resource-clusters')!(event());
+  const source = sources.get('strategic-resources') as {
+    getClusterExpansionZoom: ReturnType<typeof vi.fn>;
+  };
+  expect(useResourceStore.getState().selected).toBeNull();
+  expect(source.getClusterExpansionZoom).not.toHaveBeenCalled();
+  emblemHit = false;
+  handlers.get('click:resource-points')!(event());
+  expect(useResourceStore.getState().selected?.id).toBe('one');
+  overlay.dispose();
+});
+
+it('expands a group from its count cartouche even where a religious emblem is drawn', async () => {
+  getDataset.mockResolvedValue(dataset);
+  const { map, sources, handlers, layers } = mapDouble();
+  const overlay = startResourceOverlay(map, true);
+  overlay.update(true, 1850);
+  await vi.waitFor(() => expect(useResourceStore.getState().status).toBe('ready'));
+  expect(layers.get('resource-cluster-counts')?.layout).toMatchObject({
+    'icon-text-fit': 'both',
+    'text-field': ['get', 'point_count_abbreviated'],
+  });
+  layers.set('religion-milestones', { id: 'religion-milestones' } as LayerSpecification);
+  (map as unknown as { queryRenderedFeatures: () => object[] }).queryRenderedFeatures = () => [
+    { properties: { id: 'judaism-jerusalem' } },
+  ];
+  const event = {
+    point: { x: 5, y: 5 },
+    defaultPrevented: false,
+    preventDefault() {
+      this.defaultPrevented = true;
+    },
+    features: [
+      { properties: { cluster_id: 1 }, geometry: { type: 'Point', coordinates: [12, 34] } },
+    ] as object[],
+  };
+  handlers.get('click:resource-cluster-counts')!(event);
+  const source = sources.get('strategic-resources') as {
+    getClusterExpansionZoom: ReturnType<typeof vi.fn>;
+  };
+  expect(source.getClusterExpansionZoom).toHaveBeenCalledWith(1);
+  // The group pictogram underneath does not expand a second time for the same click.
+  handlers.get('click:resource-clusters')!(event);
+  expect(source.getClusterExpansionZoom).toHaveBeenCalledTimes(1);
+  overlay.dispose();
+});
