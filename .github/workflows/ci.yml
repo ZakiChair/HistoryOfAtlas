@@ -53,6 +53,8 @@ jobs:
         run: pnpm data:battles:check
       - name: Resource chronology, source hashes and current mineral coverage
         run: pnpm data:resources:check
+      - name: Polity capitals, dated populations and source coverage
+        run: pnpm data:polities:check
       - name: First-load data per layer (warning only)
         run: node scripts/measure-data.mjs
       # Keep last: the ignore list lives in a runner-local pnpm-workspace.yaml, which must not

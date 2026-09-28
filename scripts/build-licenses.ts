@@ -1,6 +1,6 @@
 /**
  * Writes public/data/licenses.json from the committed source manifests:
- * resource sources, religion references, the geography manifest, CDB90 and Wikidata,
+ * resource sources, religion references, the geography manifest, CDB90, Seshat and Wikidata,
  * plus the project's own licences declared in LICENSE and DATA-LICENSE.md.
  *
  *   pnpm data:licenses           regenerate the manifest
@@ -55,6 +55,9 @@ export function readLicenseInputs(): LicenseInputs {
   const geography = readJson<LicenseInputs['geography']>('public/geo/manifest.json');
   const events = readJson<LicenseInputs['events']>('public/data/manifest.json');
   const cdb90 = readJson<LicenseInputs['cdb90']>('data/curated/battle-cdb90-source.json');
+  const polityFacts = readJson<NonNullable<LicenseInputs['polityFacts']>>(
+    'data/curated/polity-facts-seshat-source.json',
+  );
   return {
     project: readProjectLicenses(),
     resources: {
@@ -71,6 +74,14 @@ export function readLicenseInputs(): LicenseInputs {
     geography: { sources: geography.sources },
     events: { sources: events.sources },
     cdb90,
+    polityFacts: {
+      sourceUrl: polityFacts.sourceUrl,
+      license: polityFacts.license,
+      licenseUrl: polityFacts.licenseUrl,
+      attribution: polityFacts.attribution,
+      modifications: polityFacts.modifications,
+      retrievedOn: polityFacts.retrievedOn,
+    },
   };
 }
 

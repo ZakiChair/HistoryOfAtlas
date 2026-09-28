@@ -92,6 +92,54 @@ describe('licence manifest', () => {
     expect(licenseIssues(inputs())).toEqual([]);
   });
 
+  it('keeps the Seshat supplement licence and adaptation attribution distinct from Cliopatria', () => {
+    const data = inputs();
+    data.polityFacts = {
+      sourceUrl: 'https://www.seshat-db.com/api/sc/polity-populations/?format=json',
+      license: 'CC-BY-SA-4.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      attribution: 'Seshat Global History Databank.',
+      modifications: 'Selected dated observations; converted BCE years; no interpolation.',
+      retrievedOn: '2026-09-28',
+    };
+    expect(licenseIssues(data)).toEqual([]);
+    const manifest = buildLicenseManifest(data);
+    expect(manifest.datasets.find((dataset) => dataset.id === 'seshat-populations')).toMatchObject({
+      url: data.polityFacts.sourceUrl,
+      license: 'CC-BY-SA-4.0',
+      licenseUrl: data.polityFacts.licenseUrl,
+      attribution: `${data.polityFacts.attribution} ${data.polityFacts.modifications}`,
+      revision: 'Snapshot 2026-09-28',
+    });
+    expect(manifest.datasets.find((dataset) => dataset.id === 'geo-cliopatria')?.license).toBe(
+      'CC-BY-4.0',
+    );
+    expect(manifest.datasets.find((dataset) => dataset.id === 'wikidata')?.scope).toContain(
+      'historical capitals and population observations',
+    );
+  });
+
+  it('rejects an untraceable population supplement or omitted adaptation credit', () => {
+    const data = inputs();
+    data.polityFacts = {
+      sourceUrl: 'not a URL',
+      license: ' ',
+      licenseUrl: '',
+      attribution: ' ',
+      modifications: '',
+      retrievedOn: '',
+    };
+    expect(licenseIssues(data)).toEqual([
+      'Seshat populations have no licence',
+      'Seshat populations have no source URL',
+      'Seshat populations have no licence URL',
+      'Seshat populations require an attribution',
+      'Seshat populations require a description of modifications',
+      'Seshat populations require a retrieval date',
+    ]);
+    expect(() => buildLicenseManifest(data)).toThrow(/incomplete/);
+  });
+
   it('reports every untraceable source', () => {
     const broken = inputs();
     broken.resources.sources[0]!.license = ' ';

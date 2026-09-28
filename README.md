@@ -6,6 +6,8 @@ An interactive historical atlas of territorial change and documented military ev
 
 The main boundary layer uses Seshat **Cliopatria**: 13,380 dated polity geometry records for 1,583 source-named entities, distributed in 39 temporal PMTiles archives. **Historical Basemaps** supplies 50 independent world snapshots. **Natural Earth** supplies the physical basemap. Events are acquired from **Wikidata**, never reconstructed from model memory.
 
+Click a territory to inspect its **capital and population** alongside its area. The selected year controls dated facts; missing annual populations show a clearly dated reference, without interpolation. Undated capitals are labelled separately, and estimates, ranges, alternative observations and source links remain visible. Historical population observations from **Seshat** supplement Wikidata. Coverage is partial; a missing value means missing documentation. See [polity data and reproduction](pipeline/polities/README.md).
+
 The published corpus contains **20,037 dated, geolocated events**, 240 editorial QIDs, 40 documented chronological sequences and 10 guided stories. Annual navigation loads temporal event tiles; it does not fetch the all-era archive at startup. See [verification and measured limits](docs/QA.md) before interpreting the performance targets as achieved guarantees.
 
 Open **3D battles** to search the complete ingested battle catalogue, then select a battlefield, play or scrub its illustrative reconstruction, and zoom in to inspect articulated equipment models. Source-backed army and casualty counts use a common disclosed scale; missing counts remain unknown. The [battle coverage report](public/data/battles/coverage.json) accounts for every acquired source candidate, including records without a usable date or location. Model equipment and movements are illustrative, not an exact tactical reconstruction.
@@ -58,6 +60,8 @@ This downloads cached raw sources into `data/raw`, normalizes dates and records,
 - `pnpm data:resources`: reproduce the resource snapshot offline from the committed source extracts; [provenance and acquisition](pipeline/resources/README.md).
 - `pnpm data:resources:check`: validate resource coordinates, categories, identifiers and source attribution, and check that the licence manifest is complete and current.
 - `pnpm data:licenses`: regenerate `public/data/licenses.json` from the resource sources, religion references, geography manifest, CDB90 record and event sources.
+- `pnpm data:polities`: rebuild capital and population profiles offline from committed source extracts and reviewed entity mappings.
+- `pnpm data:polities:check`: verify every profile and the coverage report against those inputs without network access.
 
 After rebuilding the core events, run `pnpm data:battles` to refresh the independent battle catalogue. Core event publication preserves existing battle and resource artifacts. Reproduce the authored GLBs in an isolated Blender process with `blender --background --factory-startup --python scripts/generate-battle-models.py -- --all`; equipment evidence and model constraints are documented in [the unit guide](docs/battle-units.md).
 

@@ -1,0 +1,1355 @@
+{
+  "version": 1,
+  "subjects": [
+    {
+      "subjectId": "Q12536",
+      "populations": [
+        {
+          "id": "seshat-population-388",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Abbasid Caliphate I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/388/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 23000000,
+          "max": 33000000,
+          "date": {
+            "date": {
+              "year": 800
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-389",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Abbasid Caliphate I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/389/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 9000000,
+          "max": 11000000,
+          "date": {
+            "date": {
+              "year": 900
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-390",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Abbasid Caliphate II · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/390/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 3900000,
+          "date": {
+            "date": {
+              "year": 1200
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q12544",
+      "populations": [
+        {
+          "id": "seshat-population-541",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/541/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 11000000,
+          "date": {
+            "date": {
+              "year": 632
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-542",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/542/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 4500000,
+          "max": 7000000,
+          "date": {
+            "date": {
+              "year": 700
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-543",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/543/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 5000000,
+          "max": 8000000,
+          "date": {
+            "date": {
+              "year": 800
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-544",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire II · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/544/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 7500000,
+          "max": 8500000,
+          "date": {
+            "date": {
+              "year": 900
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-545",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire II · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/545/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 10000000,
+          "max": 14000000,
+          "date": {
+            "date": {
+              "year": 1000
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-546",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire III · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/546/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 5000000,
+          "max": 6000000,
+          "date": {
+            "date": {
+              "year": 1100
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-547",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire III · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/547/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 6000000,
+          "date": {
+            "date": {
+              "year": 1150
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-548",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire III · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/548/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 10000000,
+          "date": {
+            "date": {
+              "year": 1150
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-549",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire III · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/549/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 6000000,
+          "date": {
+            "date": {
+              "year": 1200
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-550",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire III · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/550/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 7300000,
+          "date": {
+            "date": {
+              "year": 1200
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-551",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Byzantine Empire III · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/551/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 9000000,
+          "date": {
+            "date": {
+              "year": 1200
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-613",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · East Roman Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/613/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 20000000,
+          "date": {
+            "date": {
+              "year": 500
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-656",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · East Roman Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/656/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 15000000,
+          "date": {
+            "date": {
+              "year": 400
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q12560",
+      "populations": [
+        {
+          "id": "seshat-population-562",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Ottoman Empire I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/562/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 7000000,
+          "date": {
+            "date": {
+              "year": 1450
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-563",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Ottoman Empire I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/563/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 9000000,
+          "date": {
+            "date": {
+              "year": 1500
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-564",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Ottoman Empire II · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/564/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 28000000,
+          "date": {
+            "date": {
+              "year": 1600
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q2277",
+      "populations": [
+        {
+          "id": "seshat-population-439",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Roman Empire - Principate · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/439/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 50000000,
+          "date": {
+            "date": {
+              "year": 1
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-440",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Roman Empire - Principate · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/440/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 50000000,
+          "max": 60000000,
+          "date": {
+            "date": {
+              "year": 100
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-441",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Roman Empire - Principate · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/441/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 55000000,
+          "max": 70000000,
+          "date": {
+            "date": {
+              "year": 200
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-567",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Roman Empire - Dominate · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/567/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 40000000,
+          "max": 70000000,
+          "date": {
+            "date": {
+              "year": 300
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q28573",
+      "populations": [
+        {
+          "id": "seshat-population-522",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Inca Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/522/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 6000000,
+          "max": 14000000,
+          "date": {
+            "date": {
+              "year": 1532
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q389688",
+      "populations": [
+        {
+          "id": "seshat-population-400",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Achaemenid Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/400/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 20000000,
+          "max": 26000000,
+          "date": {
+            "date": {
+              "year": -499
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-401",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Achaemenid Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/401/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 17000000,
+          "max": 35000000,
+          "date": {
+            "date": {
+              "year": -399
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q7209",
+      "populations": [
+        {
+          "id": "seshat-population-277",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/277/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 21007820,
+          "date": {
+            "date": {
+              "year": 57
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-278",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/278/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 34125021,
+          "date": {
+            "date": {
+              "year": 75
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-279",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/279/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 43356367,
+          "date": {
+            "date": {
+              "year": 88
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-280",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/280/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 53256219,
+          "date": {
+            "date": {
+              "year": 105
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-281",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/281/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 48690789,
+          "date": {
+            "date": {
+              "year": 125
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-282",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/282/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 48000000,
+          "max": 53869588,
+          "start": {
+            "date": {
+              "year": 126
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          },
+          "end": {
+            "date": {
+              "year": 141
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-283",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/283/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 49150220,
+          "max": 49730550,
+          "start": {
+            "date": {
+              "year": 142
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          },
+          "end": {
+            "date": {
+              "year": 144
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-284",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/284/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 47556772,
+          "date": {
+            "date": {
+              "year": 146
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-285",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/285/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 50066856,
+          "date": {
+            "date": {
+              "year": 156
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-286",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Eastern Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/286/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 56486856,
+          "date": {
+            "date": {
+              "year": 157
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-300",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Western Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/300/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 45000000,
+          "max": 60000000,
+          "start": {
+            "date": {
+              "year": -199
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          },
+          "end": {
+            "date": {
+              "year": 9
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-301",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Western Han Empire · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/301/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 57600000,
+          "date": {
+            "date": {
+              "year": 1
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q8575586",
+      "populations": [
+        {
+          "id": "seshat-population-534",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Umayyad Caliphate · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/534/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 23000000,
+          "max": 33000000,
+          "date": {
+            "date": {
+              "year": 700
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q8733",
+      "populations": [
+        {
+          "id": "seshat-population-295",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Early Qing · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/295/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 100000000,
+          "max": 140000000,
+          "date": {
+            "date": {
+              "year": 1700
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-296",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Late Qing · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/296/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 295000000,
+          "date": {
+            "date": {
+              "year": 1800
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-297",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Late Qing · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/297/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 334000000,
+          "max": 348000000,
+          "date": {
+            "date": {
+              "year": 1900
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q9683",
+      "populations": [
+        {
+          "id": "seshat-population-595",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty II · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/595/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 60000000,
+          "max": 80000000,
+          "date": {
+            "date": {
+              "year": 900
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-596",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/596/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 37000000,
+          "date": {
+            "date": {
+              "year": 700
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-597",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/597/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 41400000,
+          "date": {
+            "date": {
+              "year": 726
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-598",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty II · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/598/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 40000000,
+          "max": 55000000,
+          "date": {
+            "date": {
+              "year": 766
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-604",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/604/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 37000000,
+          "date": {
+            "date": {
+              "year": 705
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-638",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/638/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 48000000,
+          "date": {
+            "date": {
+              "year": 740
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-642",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Tang Dynasty I · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/642/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 52800000,
+          "date": {
+            "date": {
+              "year": 754
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    },
+    {
+      "subjectId": "Q9903",
+      "populations": [
+        {
+          "id": "seshat-population-290",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Great Ming · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/290/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 60545800,
+          "max": 66598300,
+          "date": {
+            "date": {
+              "year": 1400
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-291",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Great Ming · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/291/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "value": 50908700,
+          "date": {
+            "date": {
+              "year": 1500
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        },
+        {
+          "id": "seshat-population-292",
+          "approximate": true,
+          "sources": [
+            {
+              "label": "Seshat · Great Ming · population",
+              "url": "https://www.seshat-db.com/api/sc/polity-populations/292/?format=json",
+              "license": "CC-BY-SA-4.0"
+            }
+          ],
+          "note": {
+            "fr": "Estimation pour la date ou la période de référence codée par Seshat ; justification et bibliographie dans la notice source. Aucune interpolation entre observations.",
+            "en": "Estimate for the reference date or period coded by Seshat; justification and bibliography are in the source record. No interpolation between observations."
+          },
+          "min": 90000000,
+          "max": 110000000,
+          "date": {
+            "date": {
+              "year": 1600
+            },
+            "precision": "year",
+            "calendar": "unknown",
+            "approximate": true
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -23,7 +23,7 @@
       "url": "https://www.wikidata.org/",
       "license": "CC0-1.0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "scope": "Events, dates, coordinates, participants, people, offices and conflict links"
+      "scope": "Events, dates, coordinates, participants, people, offices, conflict links, historical capitals and population observations"
     },
     {
       "id": "natural-earth-coastline-validation",
@@ -70,6 +70,16 @@
       "scope": "Dated polity boundaries",
       "revision": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
       "attribution": "https://doi.org/10.1038/s41597-025-04516-9"
+    },
+    {
+      "id": "seshat-populations",
+      "name": "Seshat Global History Databank · population observations",
+      "url": "https://www.seshat-db.com/api/sc/polity-populations/?format=json&page_size=100",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Dated historical polity population estimates and ranges",
+      "revision": "Snapshot 2026-09-28",
+      "attribution": "Seshat Global History Databank. Adaptation of public population observations under CC BY-SA 4.0. Selected explicitly dated, positive, ordered population ranges from the listed historical polities; retained alternative estimates separately; converted BCE signed years to astronomical years by adding one to negative years; preserved ranges without invented central values; no interpolation, no population inference from territory geometry. The original source records below preserve descriptions and bibliography."
     },
     {
       "id": "wikipedia",

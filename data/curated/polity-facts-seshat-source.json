@@ -1,0 +1,1162 @@
+{
+  "version": 1,
+  "retrievedOn": "2026-09-28",
+  "sourceUrl": "https://www.seshat-db.com/api/sc/polity-populations/?format=json&page_size=100",
+  "sourceTotalRecords": 579,
+  "license": "CC-BY-SA-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "termsUrl": "https://www.seshat-db.com/terms/current/",
+  "termsSha256": "f8972f6fb902a263fd2d963481f0bba273e006793d3ef6626ade96fe83ccd8f3",
+  "attribution": "Seshat Global History Databank. Adaptation of public population observations under CC BY-SA 4.0.",
+  "modifications": "Selected explicitly dated, positive, ordered population ranges from the listed historical polities; retained alternative estimates separately; converted BCE signed years to astronomical years by adding one to negative years; preserved ranges without invented central values; no interpolation, no population inference from territory geometry. The original source records below preserve descriptions and bibliography.",
+  "subjectMappings": [
+    {
+      "seshatId": "cn_eastern_han_dyn",
+      "subjectId": "Q7209",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "cn_ming_dyn",
+      "subjectId": "Q9903",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "cn_qing_dyn_1",
+      "subjectId": "Q8733",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "cn_qing_dyn_2",
+      "subjectId": "Q8733",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "cn_tang_dyn_1",
+      "subjectId": "Q9683",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "cn_tang_dyn_2",
+      "subjectId": "Q9683",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "cn_western_han_dyn",
+      "subjectId": "Q7209",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "iq_abbasid_cal_1",
+      "subjectId": "Q12536",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "iq_abbasid_cal_2",
+      "subjectId": "Q12536",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "ir_achaemenid_emp",
+      "subjectId": "Q389688",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "it_roman_principate",
+      "subjectId": "Q2277",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "pe_inca_emp",
+      "subjectId": "Q28573",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "sy_umayyad_cal",
+      "subjectId": "Q8575586",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_byzantine_emp_1",
+      "subjectId": "Q12544",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_byzantine_emp_2",
+      "subjectId": "Q12544",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_byzantine_emp_3",
+      "subjectId": "Q12544",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_east_roman_emp",
+      "subjectId": "Q12544",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_ottoman_emp_1",
+      "subjectId": "Q12560",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_ottoman_emp_2",
+      "subjectId": "Q12560",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    },
+    {
+      "seshatId": "tr_roman_dominate",
+      "subjectId": "Q2277",
+      "reason": "Reviewed corresponding historical political subject or dated phase of that same subject; independent of the Cliopatria map QID."
+    }
+  ],
+  "records": [
+    {
+      "id": 277,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 57,
+      "year_to": 57,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 21007820,
+      "polity_population_to": 21007820,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 278,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 75,
+      "year_to": 75,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 34125021,
+      "polity_population_to": 34125021,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 279,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 88,
+      "year_to": 88,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 43356367,
+      "polity_population_to": 43356367,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 280,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 105,
+      "year_to": 105,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 53256219,
+      "polity_population_to": 53256219,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 281,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 125,
+      "year_to": 125,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 48690789,
+      "polity_population_to": 48690789,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 282,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 126,
+      "year_to": 141,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 48000000,
+      "polity_population_to": 53869588,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 283,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 142,
+      "year_to": 144,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 49150220,
+      "polity_population_to": 49730550,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 284,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 146,
+      "year_to": 146,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 47556772,
+      "polity_population_to": 47556772,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 285,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 156,
+      "year_to": 156,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 50066856,
+      "polity_population_to": 50066856,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 286,
+      "polity": {
+        "id": 253,
+        "name": "cn_eastern_han_dyn",
+        "long_name": "Eastern Han Empire",
+        "start_year": 25,
+        "end_year": 220
+      },
+      "year_from": 157,
+      "year_to": 157,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 56486856,
+      "polity_population_to": 56486856,
+      "comment": null,
+      "description": " People.<br>57.7 million in census of 2 CE. 48,000,000 in census of 140 CE - however data from three commanderies were missing in this census.§REF§(Bielenstein 1986, 240)§REF§ Annual population register figures: 2 CE: 57.7m (76% in north). 140 CE: 48m (54% in north). §REF§(Roberts 2003, 56-60)§REF§<br>\"With the exception of Yuyang, where the resettlement of the Wuhuan and Xianbi led to a population increase, all commanderies show significant declines, many more than eighty or ninety percent...indicates a genuine decline in the Han population due to barbarian incursions.\" §REF§(Lewis 2000, 65) Lewis, Mark. 2000. The Han Abolition of Universal Military Service. in ed. Van de ven, Hans. Warfare in Chinese History. Brill. 33-76.§REF§ Note: decline from Han leaving or being killed?<br>From Bielenstein (1987): \"The following national totals have been preserved for the Han dynasty\", but there is some margin of error as is natural with historical censuses.<br>2 CE- 59,594,978 individuals<br>57 CE- 21,007,820 individuals<br>75 CE- 34,125,021 individuals<br>88 CE- 43,356,367 individuals<br>105 CE- 53,256,219 individuals<br>125 CE- 48,690,789 individuals<br>126-144 CE- 49,150,220 individuals<br>136-141 CE- 53,869,588 individuals<br>140 CE- 49,150,220 individuals<br>144 CE- 49,730,550 individuals<br>146 CE- 47,556,772 individuals<br>156 CE- 50,066,856 individuals<br>157 CE- 56,486,856 individuals §REF§(Bielenstein 1987: 12) Bielenstein, Hans. 1987. \"Chinese Historical Demography AD 2-1982.\" Bulletin of the Museum of Far Antiquities 59: 1-139)§REF§"
+    },
+    {
+      "id": 290,
+      "polity": {
+        "id": 269,
+        "name": "cn_ming_dyn",
+        "long_name": "Great Ming",
+        "start_year": 1368,
+        "end_year": 1644
+      },
+      "year_from": 1400,
+      "year_to": 1400,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 60545800,
+      "polity_population_to": 66598300,
+      "comment": null,
+      "description": " people<ul><li>1381 CE: 59,873,305 people §REF§《明太祖實錄 卷140》§REF§</li><li>1393 CE: {60,545,812 people; 65,000,000 §REF§《明太祖實錄 卷140》§REF§ 60,545,812 was recorded in the Ming history source, while the number 65,000,000 is the current estimation.</li><li>1403 CE: 66,598,337 people</li><li>1404 CE: 50,950,470 people</li><li>1479 CE: 71,850,000 people. The number of 1479 CE and 1488 CE were higher than other period because they were the current estimations.</li><li>1488 CE: 75,000,000 people</li><li>1491 CE: 53,281,158 people</li><li>1502 CE: 50,908,672 people §REF§《明孝宗實錄 卷194》§REF§</li><li>1504 CE: 60,105,835 people</li></ul><br>Population of 1393 CE §REF§第五章 〈封建社會唐（後期）宋遼金元的經濟〉//《中國古代經濟簡史》. 復旦大學. 1982年: 第154頁－第165頁§REF§:<ul><li>Beijing: 2,619,500 people</li><li>Shanxi Province: 3,790,760 people</li><li>Henan Province: 2,825,300 people</li><li>Shaanxi Province: 2,646,450 people</li><li>Zhejiang Province: 9,959,270 people</li><li>Jiangxi Province: 7,260,000 people</li><li>Sichuan Province: 1,314,260 people</li></ul>90,000,000-110,000,000: 1600 CE §REF§(<a class=\"external free\" href=\"http://afe.easia.columbia.edu/special/china_1950_population.htm\" rel=\"nofollow\">http://afe.easia.columbia.edu/special/china_1950_population.htm</a>)§REF§"
+    },
+    {
+      "id": 291,
+      "polity": {
+        "id": 269,
+        "name": "cn_ming_dyn",
+        "long_name": "Great Ming",
+        "start_year": 1368,
+        "end_year": 1644
+      },
+      "year_from": 1500,
+      "year_to": 1500,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 50908700,
+      "polity_population_to": 50908700,
+      "comment": null,
+      "description": " people<ul><li>1381 CE: 59,873,305 people §REF§《明太祖實錄 卷140》§REF§</li><li>1393 CE: {60,545,812 people; 65,000,000 §REF§《明太祖實錄 卷140》§REF§ 60,545,812 was recorded in the Ming history source, while the number 65,000,000 is the current estimation.</li><li>1403 CE: 66,598,337 people</li><li>1404 CE: 50,950,470 people</li><li>1479 CE: 71,850,000 people. The number of 1479 CE and 1488 CE were higher than other period because they were the current estimations.</li><li>1488 CE: 75,000,000 people</li><li>1491 CE: 53,281,158 people</li><li>1502 CE: 50,908,672 people §REF§《明孝宗實錄 卷194》§REF§</li><li>1504 CE: 60,105,835 people</li></ul><br>Population of 1393 CE §REF§第五章 〈封建社會唐（後期）宋遼金元的經濟〉//《中國古代經濟簡史》. 復旦大學. 1982年: 第154頁－第165頁§REF§:<ul><li>Beijing: 2,619,500 people</li><li>Shanxi Province: 3,790,760 people</li><li>Henan Province: 2,825,300 people</li><li>Shaanxi Province: 2,646,450 people</li><li>Zhejiang Province: 9,959,270 people</li><li>Jiangxi Province: 7,260,000 people</li><li>Sichuan Province: 1,314,260 people</li></ul>90,000,000-110,000,000: 1600 CE §REF§(<a class=\"external free\" href=\"http://afe.easia.columbia.edu/special/china_1950_population.htm\" rel=\"nofollow\">http://afe.easia.columbia.edu/special/china_1950_population.htm</a>)§REF§"
+    },
+    {
+      "id": 292,
+      "polity": {
+        "id": 269,
+        "name": "cn_ming_dyn",
+        "long_name": "Great Ming",
+        "start_year": 1368,
+        "end_year": 1644
+      },
+      "year_from": 1600,
+      "year_to": 1600,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 90000000,
+      "polity_population_to": 110000000,
+      "comment": null,
+      "description": " people<ul><li>1381 CE: 59,873,305 people §REF§《明太祖實錄 卷140》§REF§</li><li>1393 CE: {60,545,812 people; 65,000,000 §REF§《明太祖實錄 卷140》§REF§ 60,545,812 was recorded in the Ming history source, while the number 65,000,000 is the current estimation.</li><li>1403 CE: 66,598,337 people</li><li>1404 CE: 50,950,470 people</li><li>1479 CE: 71,850,000 people. The number of 1479 CE and 1488 CE were higher than other period because they were the current estimations.</li><li>1488 CE: 75,000,000 people</li><li>1491 CE: 53,281,158 people</li><li>1502 CE: 50,908,672 people §REF§《明孝宗實錄 卷194》§REF§</li><li>1504 CE: 60,105,835 people</li></ul><br>Population of 1393 CE §REF§第五章 〈封建社會唐（後期）宋遼金元的經濟〉//《中國古代經濟簡史》. 復旦大學. 1982年: 第154頁－第165頁§REF§:<ul><li>Beijing: 2,619,500 people</li><li>Shanxi Province: 3,790,760 people</li><li>Henan Province: 2,825,300 people</li><li>Shaanxi Province: 2,646,450 people</li><li>Zhejiang Province: 9,959,270 people</li><li>Jiangxi Province: 7,260,000 people</li><li>Sichuan Province: 1,314,260 people</li></ul>90,000,000-110,000,000: 1600 CE §REF§(<a class=\"external free\" href=\"http://afe.easia.columbia.edu/special/china_1950_population.htm\" rel=\"nofollow\">http://afe.easia.columbia.edu/special/china_1950_population.htm</a>)§REF§"
+    },
+    {
+      "id": 295,
+      "polity": {
+        "id": 1,
+        "name": "cn_qing_dyn_1",
+        "long_name": "Early Qing",
+        "start_year": 1644,
+        "end_year": 1796
+      },
+      "year_from": 1700,
+      "year_to": 1700,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 100000000,
+      "polity_population_to": 140000000,
+      "comment": null,
+      "description": " People<br>143,411,559: 1741 CE; 159,801,551: 1742 CE; 164,454,416: 1743 CE; 166,808,604: 1744 CE; 169,922,127: 1745 CE; 171,896,773: 1746 CE; 171,896,773: 1747CE; 177,495,039: 1748 CE; {177,495,039; 177,538,796}: 1749CE; 179,538,540: 1750 CE; 181,811,359: 1751 CE; 182,857,277: 1752 CE; 183,678,259: 1753 CE; 184,504,493: 1754 CE; 185,612,881: 1755 CE; 186,615,514: 1756 CE; 190,348,328: 1757 CE; 191,672,808: 1758 CE; 194,791,859: 1759 CE; 196,837,977: 1760 CE; {198,214,555; 198,214,553}: 1761 CE; {200,472,461; 201,013,344}: 1762 CE; 204,299,828: 1763 CE; 205,591,017: 1764 CE; 206,993,224: 1765 CE; 208,095,796: 1766 CE; {209,839,546; 209,749,547}: 1767 CE; 210,837,502: 1768 CE; 212,023,042: 1769 CE; 213,613,163: 1770 CE; {214,600,356; 214,647,251}: 1771 CE; 216,467,258: 1772 CE; 218,743,315: 1773 CE; 221,027,224: 1774 CE; 264,561,355: 1775 CE; {268,238,181; 268,238,182}: 1776 CE; 270,863,760: 1777 CE; 242,965,618: 1778 CE; 275,042,916: 1779 CE; 277,554,431: 1780 CE; 279,816,070: 1781 CE; 281,822,675: 1782 CE; {284,033,785; 284,033,805}: 1783 CE; 286,331,307: 1784 CE; 288,863,974: 1785 CE; 291,102,486: 1786 CE; 292,429,018: 1787 CE; {294,852,089; 294,852,189}: 1788 CE; 297,717,496: 1789 CE; {301,487,115; 301,487,114}: 1790 CE; {304,354,110; 304,354,160}: 1791 CE; 307,467,279: 1792 CE; 310,497,210: 1793 CE; {313,281,795; 313,281,295}: 1794 CE; 296,968,968: 1795 CE; 275,662,044: 1796 CE §REF§(姜涛, 1990)§REF§<br>\"300 million in 1795\"§REF§(Lorge 2015, 182)§REF§"
+    },
+    {
+      "id": 296,
+      "polity": {
+        "id": 2,
+        "name": "cn_qing_dyn_2",
+        "long_name": "Late Qing",
+        "start_year": 1796,
+        "end_year": 1912
+      },
+      "year_from": 1800,
+      "year_to": 1800,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 295000000,
+      "polity_population_to": 295000000,
+      "comment": null,
+      "description": " People<br>Later Qing has population over 300 million according to The Cambridge History of China§REF§(Fairbank, 1978, 8)§REF§<br>1812 CE: 361,695,492 people: The census was interrupted due to nature disasters, scattered rebellions, and White Lotus Rebellion occurred in 1794-1804 among impoverished settlers in the mountainous region that separates Sichuan province from Hubei and Shaanxi provinces.<br>1833 CE: 398,942,036 people:§REF§(梁方仲, 1985, 10)§REF§<br>1852 CE: 334,403,035 people: (1)§REF§(姜公韜 &amp; 傅樂成, 1988, 122)§REF§(2) The census was interrupted due to the outbreak of Nian Rebellion taking place in northern China from 1851 to 1868, and Taiping Rebellion (1851-1864) in South China.<br>1912 CE: 347,902,562 people: The census was conducted since 1910 and completed in 1912.§REF§(梁方仲, 1985)§REF§<br>Other figures:§REF§(姜涛, 1990)§REF§<br>Po-Ju Tuan coded the following estimates--they have been moved to the description field in case this level of detail is useful in the future: 275,662,044: 1796 CE; 271,333,544: 1797 CE; 290,982,980: 1798 CE; 293,283,179: 1799 CE; 295,237,311: 1800 CE; 297,501,548: 1801 CE; 299,749,770: 1802 CE; 302,250,673: 1803 CE; 304,461,284: 1804 CE; 332,181,403: 1805 CE; 335,369,469: 1806 CE; 338,062,439: 1807 CE; 350,291,724: 1808 CE; 352,900,024: 1809 CE; 345,717,214: 1810 CE; 358,610,039: 1811 CE; {333,700,560; 361,695,492; 363,695,492}: 1812 CE; 336,451,672: 1813 CE; 316,574,895: 1814 CE; 326,574,895: 1815 CE; 328,814,957: 1816 CE; 331,330,433: 1817 CE; {301,260,545; 371,580,173}: 1819 CE; {353,377,694; 373,773,394; 383,100,000}: 1820 CE; 355,540,258: 1821 CE; 372,457,539: 1822 CE; {375,153,122; 380,619,569}: 1823 CE; {374,601,132; 382,439,631}: 1824 CE; {379,885,340; 387,026,888}: 1825 CE; {380,287,007; 386,081,958}: 1826 CE; {383,696,095; 388,608,215}: 1827 CE; {386,531,513; 390,755,718}: 1828 CE; 390,500,650: 1829 CE; 394,784,681: 1830 CE; 395,821,092: 1831 CE; 397,132,659: 1832 CE; 398,942,036: 1833 CE; 401,008,574: 1834 CE; {401,767,053; 403,052,086}: 1835 CE; 404,901,448: 1836 CE; {405 923 174; 406 984 114}: 1837 CE; 409,038,799: 1838 CE; 410,850,639: 1839 CE; 412,814,828: 1840 CE; 413,457,311: 1841 CE; {414,686,994; 416,118,189}: 1842 CE; 417,239,097: 1843 CE; 419,441,336: 1844 CE; 421,342,730: 1845 CE; 423,121,129: 1846 CE; {424,938,009; 425,106,201}: 1847 CE; {426,737,016; 426,928,854}: 1848 CE; {412,986,649; 428,420,667}: 1849 CE; {414,493,899; 429,931,034}: 1850 CE; {432,164,047; 431,894,047}: 1851 CE; 334,403,035: 1852 CE; 347,902,565: 1920 CE."
+    },
+    {
+      "id": 297,
+      "polity": {
+        "id": 2,
+        "name": "cn_qing_dyn_2",
+        "long_name": "Late Qing",
+        "start_year": 1796,
+        "end_year": 1912
+      },
+      "year_from": 1900,
+      "year_to": 1900,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 334000000,
+      "polity_population_to": 348000000,
+      "comment": null,
+      "description": " People<br>Later Qing has population over 300 million according to The Cambridge History of China§REF§(Fairbank, 1978, 8)§REF§<br>1812 CE: 361,695,492 people: The census was interrupted due to nature disasters, scattered rebellions, and White Lotus Rebellion occurred in 1794-1804 among impoverished settlers in the mountainous region that separates Sichuan province from Hubei and Shaanxi provinces.<br>1833 CE: 398,942,036 people:§REF§(梁方仲, 1985, 10)§REF§<br>1852 CE: 334,403,035 people: (1)§REF§(姜公韜 &amp; 傅樂成, 1988, 122)§REF§(2) The census was interrupted due to the outbreak of Nian Rebellion taking place in northern China from 1851 to 1868, and Taiping Rebellion (1851-1864) in South China.<br>1912 CE: 347,902,562 people: The census was conducted since 1910 and completed in 1912.§REF§(梁方仲, 1985)§REF§<br>Other figures:§REF§(姜涛, 1990)§REF§<br>Po-Ju Tuan coded the following estimates--they have been moved to the description field in case this level of detail is useful in the future: 275,662,044: 1796 CE; 271,333,544: 1797 CE; 290,982,980: 1798 CE; 293,283,179: 1799 CE; 295,237,311: 1800 CE; 297,501,548: 1801 CE; 299,749,770: 1802 CE; 302,250,673: 1803 CE; 304,461,284: 1804 CE; 332,181,403: 1805 CE; 335,369,469: 1806 CE; 338,062,439: 1807 CE; 350,291,724: 1808 CE; 352,900,024: 1809 CE; 345,717,214: 1810 CE; 358,610,039: 1811 CE; {333,700,560; 361,695,492; 363,695,492}: 1812 CE; 336,451,672: 1813 CE; 316,574,895: 1814 CE; 326,574,895: 1815 CE; 328,814,957: 1816 CE; 331,330,433: 1817 CE; {301,260,545; 371,580,173}: 1819 CE; {353,377,694; 373,773,394; 383,100,000}: 1820 CE; 355,540,258: 1821 CE; 372,457,539: 1822 CE; {375,153,122; 380,619,569}: 1823 CE; {374,601,132; 382,439,631}: 1824 CE; {379,885,340; 387,026,888}: 1825 CE; {380,287,007; 386,081,958}: 1826 CE; {383,696,095; 388,608,215}: 1827 CE; {386,531,513; 390,755,718}: 1828 CE; 390,500,650: 1829 CE; 394,784,681: 1830 CE; 395,821,092: 1831 CE; 397,132,659: 1832 CE; 398,942,036: 1833 CE; 401,008,574: 1834 CE; {401,767,053; 403,052,086}: 1835 CE; 404,901,448: 1836 CE; {405 923 174; 406 984 114}: 1837 CE; 409,038,799: 1838 CE; 410,850,639: 1839 CE; 412,814,828: 1840 CE; 413,457,311: 1841 CE; {414,686,994; 416,118,189}: 1842 CE; 417,239,097: 1843 CE; 419,441,336: 1844 CE; 421,342,730: 1845 CE; 423,121,129: 1846 CE; {424,938,009; 425,106,201}: 1847 CE; {426,737,016; 426,928,854}: 1848 CE; {412,986,649; 428,420,667}: 1849 CE; {414,493,899; 429,931,034}: 1850 CE; {432,164,047; 431,894,047}: 1851 CE; 334,403,035: 1852 CE; 347,902,565: 1920 CE."
+    },
+    {
+      "id": 300,
+      "polity": {
+        "id": 251,
+        "name": "cn_western_han_dyn",
+        "long_name": "Western Han Empire",
+        "start_year": -202,
+        "end_year": 9
+      },
+      "year_from": -200,
+      "year_to": 9,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 45000000,
+      "polity_population_to": 60000000,
+      "comment": null,
+      "description": " \"Early on in the days of the Han Empire (206 BC - 220 AD) the population passed the 50m mark. But thereafter it was to stay in the band 45-60m for a thousand years.§REF§(McEvedy and Jones 1979)§REF§<br>Government census. 57,600,000 in 2 CE. 12 million family households. §REF§(Keay 2009, 144)§REF§<br>Agricultural intensification: population growth occurred in Former Han despite no increase in available arable land. Population migration to south throughout period.§REF§(Roberts 2003, 43-44)§REF§<br>60,000,000 at zenith.§REF§(Zhao 2015, 56) Zhao, Dingxin in Scheidel, Walter. ed. 2015. State Power in Ancient China and Rome. Oxford University Press.§REF§"
+    },
+    {
+      "id": 301,
+      "polity": {
+        "id": 251,
+        "name": "cn_western_han_dyn",
+        "long_name": "Western Han Empire",
+        "start_year": -202,
+        "end_year": 9
+      },
+      "year_from": 1,
+      "year_to": 1,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 57600000,
+      "polity_population_to": 57600000,
+      "comment": null,
+      "description": " \"Early on in the days of the Han Empire (206 BC - 220 AD) the population passed the 50m mark. But thereafter it was to stay in the band 45-60m for a thousand years.§REF§(McEvedy and Jones 1979)§REF§<br>Government census. 57,600,000 in 2 CE. 12 million family households. §REF§(Keay 2009, 144)§REF§<br>Agricultural intensification: population growth occurred in Former Han despite no increase in available arable land. Population migration to south throughout period.§REF§(Roberts 2003, 43-44)§REF§<br>60,000,000 at zenith.§REF§(Zhao 2015, 56) Zhao, Dingxin in Scheidel, Walter. ed. 2015. State Power in Ancient China and Rome. Oxford University Press.§REF§"
+    },
+    {
+      "id": 388,
+      "polity": {
+        "id": 132,
+        "name": "iq_abbasid_cal_1",
+        "long_name": "Abbasid Caliphate I",
+        "start_year": 750,
+        "end_year": 946
+      },
+      "year_from": 800,
+      "year_to": 800,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 23000000,
+      "polity_population_to": 33000000,
+      "comment": null,
+      "description": " persons.<br>[23,000,000-33,000,000]: 750-799 CE <i>ET: is this expert disagreement or a range? I've changed curly brackets to square brackets on the assumption it's a range (only one source cited).</i> [720 CE] {23,000,000-33,000,000} §REF§Blankinship, Khalid Yahya, The End of the Jihad State pp.37-8§REF§ The population of the Abbasid Caliphate would have been comparable to the preceding Umayyad Caliphate. The loss of Iberia and the Western half of North Africa in part accounted for by the ensuring population growth of the remaining territory.<br>900 CE - no Egypt, Afghanistan or Central Asia.<br>Western Iran 2m (estimating half of total 4.25m), Iraq 2.5m, The Interior (Saudi Arabia) 2m, Palestine and Jordan 0.5m, Syria 1.5m. §REF§(McEvedy and Jones 1978) McEvedy, Colin. Jones, Richard. 1978. Atlas of World Population History. Penguin Books Ltd.§REF§ Also a bit of Turkey and the Caucasus which is too tough to estimate. Will use 9 million as base of a range.<br>"
+    },
+    {
+      "id": 389,
+      "polity": {
+        "id": 132,
+        "name": "iq_abbasid_cal_1",
+        "long_name": "Abbasid Caliphate I",
+        "start_year": 750,
+        "end_year": 946
+      },
+      "year_from": 900,
+      "year_to": 900,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 9000000,
+      "polity_population_to": 11000000,
+      "comment": null,
+      "description": " persons.<br>[23,000,000-33,000,000]: 750-799 CE <i>ET: is this expert disagreement or a range? I've changed curly brackets to square brackets on the assumption it's a range (only one source cited).</i> [720 CE] {23,000,000-33,000,000} §REF§Blankinship, Khalid Yahya, The End of the Jihad State pp.37-8§REF§ The population of the Abbasid Caliphate would have been comparable to the preceding Umayyad Caliphate. The loss of Iberia and the Western half of North Africa in part accounted for by the ensuring population growth of the remaining territory.<br>900 CE - no Egypt, Afghanistan or Central Asia.<br>Western Iran 2m (estimating half of total 4.25m), Iraq 2.5m, The Interior (Saudi Arabia) 2m, Palestine and Jordan 0.5m, Syria 1.5m. §REF§(McEvedy and Jones 1978) McEvedy, Colin. Jones, Richard. 1978. Atlas of World Population History. Penguin Books Ltd.§REF§ Also a bit of Turkey and the Caucasus which is too tough to estimate. Will use 9 million as base of a range.<br>"
+    },
+    {
+      "id": 390,
+      "polity": {
+        "id": 484,
+        "name": "iq_abbasid_cal_2",
+        "long_name": "Abbasid Caliphate II",
+        "start_year": 1191,
+        "end_year": 1258
+      },
+      "year_from": 1200,
+      "year_to": 1200,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 3900000,
+      "polity_population_to": 3900000,
+      "comment": null,
+      "description": " People.<br>In 1200 CE the Abbasids held Iraq and part of western Iran south of the Caspian.<br>McEvedy and Jones§REF§(McEvedy and Jones 1978, 151-153) McEvedy, Colin. Jones, Richard. 1978. Atlas of World Population History. Penguin Books Ltd.§REF§<br>Iraq 1.5m in 1200 CE. Northernmost part of Iraq. Not controlled by Abbasids. However, likely most populated regions were under their control so will estimate 1.4m.<br>Iran 5m in 1200 CE. However, significant population centers e.g. Shiraz and Gulf coast region, Khurasan not controlled by Abbasids. Will estimate half of total for region: 2.5m"
+    },
+    {
+      "id": 400,
+      "polity": {
+        "id": 107,
+        "name": "ir_achaemenid_emp",
+        "long_name": "Achaemenid Empire",
+        "start_year": -550,
+        "end_year": -331
+      },
+      "year_from": -500,
+      "year_to": -500,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 20000000,
+      "polity_population_to": 26000000,
+      "comment": null,
+      "description": "20-26 million at peak 6.2m km2. §REF§(Broodbank 2015, 583) Broodbank, Cyprian. 2015. The Making of the Middle Sea. Thames &amp; Hudson. London.§REF§<br>15.5 million. 4 million \"in Persia proper.\" §REF§(Stearns 2001, 40)§REF§<br>Table of modern estimates of the population of the Achaemenid Empire from Wiesehofer (2009).<br>Low EstimatesEgypt 3.5mNear East (without Arabia) 12.0mCentral Asia and India 1.5mTotal 17.0m<br>High EstimatesTotal 30-35m§REF§(Wiesehofer 2009, 77)§REF§"
+    },
+    {
+      "id": 401,
+      "polity": {
+        "id": 107,
+        "name": "ir_achaemenid_emp",
+        "long_name": "Achaemenid Empire",
+        "start_year": -550,
+        "end_year": -331
+      },
+      "year_from": -400,
+      "year_to": -400,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 17000000,
+      "polity_population_to": 35000000,
+      "comment": null,
+      "description": "20-26 million at peak 6.2m km2. §REF§(Broodbank 2015, 583) Broodbank, Cyprian. 2015. The Making of the Middle Sea. Thames &amp; Hudson. London.§REF§<br>15.5 million. 4 million \"in Persia proper.\" §REF§(Stearns 2001, 40)§REF§<br>Table of modern estimates of the population of the Achaemenid Empire from Wiesehofer (2009).<br>Low EstimatesEgypt 3.5mNear East (without Arabia) 12.0mCentral Asia and India 1.5mTotal 17.0m<br>High EstimatesTotal 30-35m§REF§(Wiesehofer 2009, 77)§REF§"
+    },
+    {
+      "id": 439,
+      "polity": {
+        "id": 70,
+        "name": "it_roman_principate",
+        "long_name": "Roman Empire - Principate",
+        "start_year": -31,
+        "end_year": 284
+      },
+      "year_from": 1,
+      "year_to": 1,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 50000000,
+      "polity_population_to": 50000000,
+      "comment": null,
+      "description": " Inhabitants. Data coded to make it easier for scraper to read.<br>The standard population is estimated at 50 to 60 million in 117 CE. The most common estimate for the empire population is around 60 million, but a figure of 150 million is also conceivable, though highly unlikely. §REF§(Scheidel 2004: 2-9)§REF§ Another estimate is 50 million people (i.e. 5000 administrative units) at height. §REF§(Black 2008, 181))§REF§ 14 CE and 164 CE estimate based on: Frier, Bruce W. \"Demography\", in Alan K. Bowman, Peter Garnsey, and Dominic Rathbone, eds., The Cambridge Ancient History XI: The High Empire, A.D. 70-192, (Cambridge: Cambridge University Press, 2000), 827-54.<br>Imperial censuses 28 BCE - 48 CE §REF§(Brunt 1971, 1987)§REF§ (These numbers (million) refer only to Roman citizens, who were a small proportion of the population):<br>4,063,000: 28 BCE<br>4,233,000: 8 BCE<br>4,937,000: 14 CE<br>5,894,000: 48 CE<br>Roman population, by region 14 CE §REF§(Beloch (1886) Die Bevolkerung de griechnisch-romischen welt)§REF§§REF§(Russell 1958)§REF§<br>Italy: 6,000,000<br>Sicily: 600,000<br>Sardinia-Corsica: 500,000<br>Iberia: 6,000,000<br>Narbonensis: 1,500,000<br>Gaul: 3,400,000<br>Danube: 2,000,000<br>Greece: 3,000,000<br>Asia (province): 6,000,000<br>Asia Minor: 7,000,000<br>Syria: 6,000,000<br>Cyprus: 500,000<br>Egypt: 5,000,000<br>Cyrenaica: 500,000<br>Africa: 6,000,000Total: 54,000,000<br>Late Roman Empire: 74.9 million c.200 CE. <i>coded as 55,000,000-70,000,000. DH says 75,000,000 too high.</i><br>\"The Late Roman Empire covered vast amounts of territory (estimated at 3.8 million km2; Issawi 1981: 377) and enjoyed a prolonged period of economic prosperity and demographic expansion between the death of Augustus (14 CE) and the second century. During this phase population density was situated in the upper possible margins of pre-modern times (at roughly 20 inhabitants per km2) with a total population in the magnitude of 74.9 million (Issawi 1981: 377). The anarchy and general economic disarray of the third century will have taken its toll on the population, but we can safely assume that at the beginning of the Byzantine period, in the early fourth century, the demographic state of the empire was similar to that in the second century.\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§"
+    },
+    {
+      "id": 440,
+      "polity": {
+        "id": 70,
+        "name": "it_roman_principate",
+        "long_name": "Roman Empire - Principate",
+        "start_year": -31,
+        "end_year": 284
+      },
+      "year_from": 100,
+      "year_to": 100,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 50000000,
+      "polity_population_to": 60000000,
+      "comment": null,
+      "description": " Inhabitants. Data coded to make it easier for scraper to read.<br>The standard population is estimated at 50 to 60 million in 117 CE. The most common estimate for the empire population is around 60 million, but a figure of 150 million is also conceivable, though highly unlikely. §REF§(Scheidel 2004: 2-9)§REF§ Another estimate is 50 million people (i.e. 5000 administrative units) at height. §REF§(Black 2008, 181))§REF§ 14 CE and 164 CE estimate based on: Frier, Bruce W. \"Demography\", in Alan K. Bowman, Peter Garnsey, and Dominic Rathbone, eds., The Cambridge Ancient History XI: The High Empire, A.D. 70-192, (Cambridge: Cambridge University Press, 2000), 827-54.<br>Imperial censuses 28 BCE - 48 CE §REF§(Brunt 1971, 1987)§REF§ (These numbers (million) refer only to Roman citizens, who were a small proportion of the population):<br>4,063,000: 28 BCE<br>4,233,000: 8 BCE<br>4,937,000: 14 CE<br>5,894,000: 48 CE<br>Roman population, by region 14 CE §REF§(Beloch (1886) Die Bevolkerung de griechnisch-romischen welt)§REF§§REF§(Russell 1958)§REF§<br>Italy: 6,000,000<br>Sicily: 600,000<br>Sardinia-Corsica: 500,000<br>Iberia: 6,000,000<br>Narbonensis: 1,500,000<br>Gaul: 3,400,000<br>Danube: 2,000,000<br>Greece: 3,000,000<br>Asia (province): 6,000,000<br>Asia Minor: 7,000,000<br>Syria: 6,000,000<br>Cyprus: 500,000<br>Egypt: 5,000,000<br>Cyrenaica: 500,000<br>Africa: 6,000,000Total: 54,000,000<br>Late Roman Empire: 74.9 million c.200 CE. <i>coded as 55,000,000-70,000,000. DH says 75,000,000 too high.</i><br>\"The Late Roman Empire covered vast amounts of territory (estimated at 3.8 million km2; Issawi 1981: 377) and enjoyed a prolonged period of economic prosperity and demographic expansion between the death of Augustus (14 CE) and the second century. During this phase population density was situated in the upper possible margins of pre-modern times (at roughly 20 inhabitants per km2) with a total population in the magnitude of 74.9 million (Issawi 1981: 377). The anarchy and general economic disarray of the third century will have taken its toll on the population, but we can safely assume that at the beginning of the Byzantine period, in the early fourth century, the demographic state of the empire was similar to that in the second century.\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§"
+    },
+    {
+      "id": 441,
+      "polity": {
+        "id": 70,
+        "name": "it_roman_principate",
+        "long_name": "Roman Empire - Principate",
+        "start_year": -31,
+        "end_year": 284
+      },
+      "year_from": 200,
+      "year_to": 200,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 55000000,
+      "polity_population_to": 70000000,
+      "comment": null,
+      "description": " Inhabitants. Data coded to make it easier for scraper to read.<br>The standard population is estimated at 50 to 60 million in 117 CE. The most common estimate for the empire population is around 60 million, but a figure of 150 million is also conceivable, though highly unlikely. §REF§(Scheidel 2004: 2-9)§REF§ Another estimate is 50 million people (i.e. 5000 administrative units) at height. §REF§(Black 2008, 181))§REF§ 14 CE and 164 CE estimate based on: Frier, Bruce W. \"Demography\", in Alan K. Bowman, Peter Garnsey, and Dominic Rathbone, eds., The Cambridge Ancient History XI: The High Empire, A.D. 70-192, (Cambridge: Cambridge University Press, 2000), 827-54.<br>Imperial censuses 28 BCE - 48 CE §REF§(Brunt 1971, 1987)§REF§ (These numbers (million) refer only to Roman citizens, who were a small proportion of the population):<br>4,063,000: 28 BCE<br>4,233,000: 8 BCE<br>4,937,000: 14 CE<br>5,894,000: 48 CE<br>Roman population, by region 14 CE §REF§(Beloch (1886) Die Bevolkerung de griechnisch-romischen welt)§REF§§REF§(Russell 1958)§REF§<br>Italy: 6,000,000<br>Sicily: 600,000<br>Sardinia-Corsica: 500,000<br>Iberia: 6,000,000<br>Narbonensis: 1,500,000<br>Gaul: 3,400,000<br>Danube: 2,000,000<br>Greece: 3,000,000<br>Asia (province): 6,000,000<br>Asia Minor: 7,000,000<br>Syria: 6,000,000<br>Cyprus: 500,000<br>Egypt: 5,000,000<br>Cyrenaica: 500,000<br>Africa: 6,000,000Total: 54,000,000<br>Late Roman Empire: 74.9 million c.200 CE. <i>coded as 55,000,000-70,000,000. DH says 75,000,000 too high.</i><br>\"The Late Roman Empire covered vast amounts of territory (estimated at 3.8 million km2; Issawi 1981: 377) and enjoyed a prolonged period of economic prosperity and demographic expansion between the death of Augustus (14 CE) and the second century. During this phase population density was situated in the upper possible margins of pre-modern times (at roughly 20 inhabitants per km2) with a total population in the magnitude of 74.9 million (Issawi 1981: 377). The anarchy and general economic disarray of the third century will have taken its toll on the population, but we can safely assume that at the beginning of the Byzantine period, in the early fourth century, the demographic state of the empire was similar to that in the second century.\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§"
+    },
+    {
+      "id": 522,
+      "polity": {
+        "id": 83,
+        "name": "pe_inca_emp",
+        "long_name": "Inca Empire",
+        "start_year": 1375,
+        "end_year": 1532
+      },
+      "year_from": 1532,
+      "year_to": 1532,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 6000000,
+      "polity_population_to": 14000000,
+      "comment": null,
+      "description": " Approved of as \"reasonably vague\" by Alan Covey.§REF§(Alan Covey, pers. comm.)§REF§<br>Cook 1980 §REF§(Noble David Cook. 2014. Demographic Collapse: Indian Peru, 1520-1620. Cambridge: CUP§REF§ has done a thoughtful overview of Andean demography and the Inca population at the time of contact §REF§(Covey 2015, personal communication)§REF§. Cook reaches an estimate of 5.5 million to 9.4 million inhabitants §REF§(Cook 2004: 113) Noble David Cook. 2014. Demographic Collapse: Indian Peru, 1520-1620. Cambridge: CUP§REF§, but he favours the upper range of this estimate, settling on a number of 9 million §REF§(Cook 2004: 114) Noble David Cook. 2014. Demographic Collapse: Indian Peru, 1520-1620. Cambridge: CUP§REF§. However, Alan Covey has pointed out the methodological weaknesses of Cook's work, which is inferred from documentary evidence compiled decades after the fall of the Incas §REF§(Covey 2015, personal communication)§REF§.<br>A possible estimate for the period between 1375-1420 CE would be an inferred 150,000-250,000 inhabitants, based on data for the Killke period (note that the data provides an estimate of 35,000 for the core region; the estimate used for 1400 CE infers a larger population over a territory of 41,000 km2):<br>Sacred Valley Archaeological Project survey region after \"Inka consolidation of the Cusco region\" §REF§(Covey 2003, 343)§REF§ - undated, presumably 1200-1400 CE? Key: Big dot = over 10 ha; medium dot = 5-10 ha; small dots = 1-5 ha; circle and ? = Size unknown. Map has 31 small dots, 4 medium dots, 2 large dots and 3 size unknown.<br>If small dots average 2.5 ha, medium dots 7.5 ha, and the largest dots are 15 ha, and size unknown are 5 ha total urban area of survey area is 152.5 ha. If we assign 150 per ha to small dots (11,625), 300 per ha to medium dots (9,000), 400 per ha to the large dots (12,000), and 200 ha to unknown dots (3,000), estimated urban population (sites &gt; 1 ha) of the Sacred Valley Archeological Project survey region after 1200 CE (?) is 35,625.<br>Cuzco valley: 10,000-20,000. According to a Spaniard in mid 16th century, valley held over 20,000 §REF§(Bauer 2004, 189, 227)§REF§ Alan Covey: But another Spaniard estimated a population of ten times that size. §REF§(Covey 2015, personal communication)§REF§<br>Sacred Valley Archeological Project survey region: 35,625 - 40,000. First figure is estimated urban population (sites &gt; 1 ha) of the valley after 1200 CE (?)<br>\"Spanning over 4,000 km of western South America and encompassing more than ten million inhabitants, Tawantinsuyu was a century-long latecomer to Andean civilization, built on more than three millennia of complex societies.\" §REF§(D'Altroy 2014, xv)§REF§<br>\"Given the complexity of the population problem and the limitations of all the methodologies used by various scholars, it seems unlikely that we shall ever be able to determine an accurate population figure. Nevertheless, these attempts have helped narrow the range of estimates. Most modern Inca scholars seem to accept and work with figures ranging between 6 million and 14 million people.\" §REF§(McEwan 2006, 96)§REF§8,000,000: 1532 CE §REF§(Bauer 2004, 1)§REF§"
+    },
+    {
+      "id": 534,
+      "polity": {
+        "id": 131,
+        "name": "sy_umayyad_cal",
+        "long_name": "Umayyad Caliphate",
+        "start_year": 661,
+        "end_year": 750
+      },
+      "year_from": 700,
+      "year_to": 700,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 23000000,
+      "polity_population_to": 33000000,
+      "comment": null,
+      "description": " People. [23,000,000-33,000,000]: 720 CE §REF§(Blankinship 1994, 37-38)§REF§."
+    },
+    {
+      "id": 541,
+      "polity": {
+        "id": 73,
+        "name": "tr_byzantine_emp_1",
+        "long_name": "Byzantine Empire I",
+        "start_year": 632,
+        "end_year": 866
+      },
+      "year_from": 632,
+      "year_to": 632,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 11000000,
+      "polity_population_to": 11000000,
+      "comment": null,
+      "description": " People.<br>Johannes Preiser-Kapeller 2015 §REF§(Johannes Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>(since 541/542: Plague epidemic, returns all 10-15 years until ca. 750)<br>630: 11 Million<br>700: 4.5 Million<br>800: 5 Million (stabilisation of population after end of plague epidemics)<br>867: 5.5 Million<i>These estimates are connected to the estimates of the territorial extent. All of these numbers are of course guesstimates, but we have to take into consideration both the effects of dramatic loss of territory and the recurrent plague epidemics until the mid-8th cent.</i>§REF§(Johannes Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences. Personal Communication)§REF§<br>\"Furthermore, there is a significant drop in the number of subsistence crises in the seventh and eighth centuries throughout the empire compared to the period before that, indicating a population that did not put pressure on the available resources(Stathakopoulos 2004: 23-34). For that we may assume that large parts of the empire were less densely populated (at 9 inhabitants per km2) with an overall estimated population of 12 million (13 million in 800—Russell 1958:149; 7 million in the 780s—Treadgold 1997: 570).\" §REF§(Stathakopoulos 2008, 311) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"The outbreak of the so-called Justinianic Plague (541-750) represents a watershed for the demographic development of the Byzantine state. The pandemic ravaged the Mediterranean world in some eighteen waves, on average one every twelve years, causing large-scale mortality (Stathakopoulos 2004: 111-55; Conrad 1981; Little 2007).\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>700 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.5m, southern Crimea ?m, Mediterranean islands ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>750 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.75m, southern Crimea ?m, Mediterranean islands (except Sardinia) ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>800 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 6m, southern Crimea ?m, Mediterranean islands (except Sardinia and Corsica) ?m and southern Italy ?m.<br>850 CE<br>Greece and part of Balkans 1.5m, Anatolia 6.25m, southern Crimea ?m, small part of southern Italy ?m.<br>19m in 500 CE; 17m in 600 CE; 7m in 700 CE; 8m in 800 CE.§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§"
+    },
+    {
+      "id": 542,
+      "polity": {
+        "id": 73,
+        "name": "tr_byzantine_emp_1",
+        "long_name": "Byzantine Empire I",
+        "start_year": 632,
+        "end_year": 866
+      },
+      "year_from": 700,
+      "year_to": 700,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 4500000,
+      "polity_population_to": 7000000,
+      "comment": null,
+      "description": " People.<br>Johannes Preiser-Kapeller 2015 §REF§(Johannes Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>(since 541/542: Plague epidemic, returns all 10-15 years until ca. 750)<br>630: 11 Million<br>700: 4.5 Million<br>800: 5 Million (stabilisation of population after end of plague epidemics)<br>867: 5.5 Million<i>These estimates are connected to the estimates of the territorial extent. All of these numbers are of course guesstimates, but we have to take into consideration both the effects of dramatic loss of territory and the recurrent plague epidemics until the mid-8th cent.</i>§REF§(Johannes Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences. Personal Communication)§REF§<br>\"Furthermore, there is a significant drop in the number of subsistence crises in the seventh and eighth centuries throughout the empire compared to the period before that, indicating a population that did not put pressure on the available resources(Stathakopoulos 2004: 23-34). For that we may assume that large parts of the empire were less densely populated (at 9 inhabitants per km2) with an overall estimated population of 12 million (13 million in 800—Russell 1958:149; 7 million in the 780s—Treadgold 1997: 570).\" §REF§(Stathakopoulos 2008, 311) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"The outbreak of the so-called Justinianic Plague (541-750) represents a watershed for the demographic development of the Byzantine state. The pandemic ravaged the Mediterranean world in some eighteen waves, on average one every twelve years, causing large-scale mortality (Stathakopoulos 2004: 111-55; Conrad 1981; Little 2007).\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>700 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.5m, southern Crimea ?m, Mediterranean islands ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>750 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.75m, southern Crimea ?m, Mediterranean islands (except Sardinia) ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>800 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 6m, southern Crimea ?m, Mediterranean islands (except Sardinia and Corsica) ?m and southern Italy ?m.<br>850 CE<br>Greece and part of Balkans 1.5m, Anatolia 6.25m, southern Crimea ?m, small part of southern Italy ?m.<br>19m in 500 CE; 17m in 600 CE; 7m in 700 CE; 8m in 800 CE.§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§"
+    },
+    {
+      "id": 543,
+      "polity": {
+        "id": 73,
+        "name": "tr_byzantine_emp_1",
+        "long_name": "Byzantine Empire I",
+        "start_year": 632,
+        "end_year": 866
+      },
+      "year_from": 800,
+      "year_to": 800,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 5000000,
+      "polity_population_to": 8000000,
+      "comment": null,
+      "description": " People.<br>Johannes Preiser-Kapeller 2015 §REF§(Johannes Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>(since 541/542: Plague epidemic, returns all 10-15 years until ca. 750)<br>630: 11 Million<br>700: 4.5 Million<br>800: 5 Million (stabilisation of population after end of plague epidemics)<br>867: 5.5 Million<i>These estimates are connected to the estimates of the territorial extent. All of these numbers are of course guesstimates, but we have to take into consideration both the effects of dramatic loss of territory and the recurrent plague epidemics until the mid-8th cent.</i>§REF§(Johannes Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences. Personal Communication)§REF§<br>\"Furthermore, there is a significant drop in the number of subsistence crises in the seventh and eighth centuries throughout the empire compared to the period before that, indicating a population that did not put pressure on the available resources(Stathakopoulos 2004: 23-34). For that we may assume that large parts of the empire were less densely populated (at 9 inhabitants per km2) with an overall estimated population of 12 million (13 million in 800—Russell 1958:149; 7 million in the 780s—Treadgold 1997: 570).\" §REF§(Stathakopoulos 2008, 311) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"The outbreak of the so-called Justinianic Plague (541-750) represents a watershed for the demographic development of the Byzantine state. The pandemic ravaged the Mediterranean world in some eighteen waves, on average one every twelve years, causing large-scale mortality (Stathakopoulos 2004: 111-55; Conrad 1981; Little 2007).\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>700 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.5m, southern Crimea ?m, Mediterranean islands ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>750 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.75m, southern Crimea ?m, Mediterranean islands (except Sardinia) ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>800 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 6m, southern Crimea ?m, Mediterranean islands (except Sardinia and Corsica) ?m and southern Italy ?m.<br>850 CE<br>Greece and part of Balkans 1.5m, Anatolia 6.25m, southern Crimea ?m, small part of southern Italy ?m.<br>19m in 500 CE; 17m in 600 CE; 7m in 700 CE; 8m in 800 CE.§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§"
+    },
+    {
+      "id": 544,
+      "polity": {
+        "id": 75,
+        "name": "tr_byzantine_emp_2",
+        "long_name": "Byzantine Empire II",
+        "start_year": 867,
+        "end_year": 1072
+      },
+      "year_from": 900,
+      "year_to": 900,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 7500000,
+      "polity_population_to": 8500000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§ \"My estimates may be more conservative than others.\"§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences. Personal Communication.§REF§<br>5,500,000: 867 CE<br>7,300,00: 900 CE<br>10,000,000: 1000 CE<br>13,000,000: 1050 CE<br>12,000,000: 1025 CE.§REF§(Treadgold 1997, 570) Treadgold, Warren. 1997. A History of the Byzantine State and Society. Stanford University Press. Stanford.§REF§<br>\"Between 850 and 1000 there is evidence for the regression of woodland in favour of arable land, an indication of a growing population (Dunn 1992: 242-8; Lefort 2002: 269).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>900 CE<br>Greece 1m, Anatolia 6.5m, southern Crimea ?m, small part of southern Italy m?.<br>950 CE<br>Small part of Greece 0.5m and southern Italy ?m, Anatolia 6.75m, southern Crimea ?m.<br>1000 CE<br>Greece 1m, Anatolia 7m, small part of southern Italy ?m.<br>1050 CE<br>Greece and Balkans 2m, Anatolia 7m, small part of southern Italy ?m.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Comneni: 10-12m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 545,
+      "polity": {
+        "id": 75,
+        "name": "tr_byzantine_emp_2",
+        "long_name": "Byzantine Empire II",
+        "start_year": 867,
+        "end_year": 1072
+      },
+      "year_from": 1000,
+      "year_to": 1000,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 10000000,
+      "polity_population_to": 14000000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§ \"My estimates may be more conservative than others.\"§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences. Personal Communication.§REF§<br>5,500,000: 867 CE<br>7,300,00: 900 CE<br>10,000,000: 1000 CE<br>13,000,000: 1050 CE<br>12,000,000: 1025 CE.§REF§(Treadgold 1997, 570) Treadgold, Warren. 1997. A History of the Byzantine State and Society. Stanford University Press. Stanford.§REF§<br>\"Between 850 and 1000 there is evidence for the regression of woodland in favour of arable land, an indication of a growing population (Dunn 1992: 242-8; Lefort 2002: 269).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>900 CE<br>Greece 1m, Anatolia 6.5m, southern Crimea ?m, small part of southern Italy m?.<br>950 CE<br>Small part of Greece 0.5m and southern Italy ?m, Anatolia 6.75m, southern Crimea ?m.<br>1000 CE<br>Greece 1m, Anatolia 7m, small part of southern Italy ?m.<br>1050 CE<br>Greece and Balkans 2m, Anatolia 7m, small part of southern Italy ?m.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Comneni: 10-12m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 546,
+      "polity": {
+        "id": 76,
+        "name": "tr_byzantine_emp_3",
+        "long_name": "Byzantine Empire III",
+        "start_year": 1073,
+        "end_year": 1204
+      },
+      "year_from": 1100,
+      "year_to": 1100,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 5000000,
+      "polity_population_to": 6000000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>6,000,000: 1090 CE<br>10,000,000: 1150 CE<br>7,300,000: 1200 CE<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"5m in 1100 CE; 9m in 1200 CE; 2 m in 1300 CE.\"§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>1100 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1150 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1200 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Michael VIII: 5m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 547,
+      "polity": {
+        "id": 76,
+        "name": "tr_byzantine_emp_3",
+        "long_name": "Byzantine Empire III",
+        "start_year": 1073,
+        "end_year": 1204
+      },
+      "year_from": 1150,
+      "year_to": 1150,
+      "tag": "TRS",
+      "is_disputed": true,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 6000000,
+      "polity_population_to": 6000000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>6,000,000: 1090 CE<br>10,000,000: 1150 CE<br>7,300,000: 1200 CE<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"5m in 1100 CE; 9m in 1200 CE; 2 m in 1300 CE.\"§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>1100 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1150 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1200 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Michael VIII: 5m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 548,
+      "polity": {
+        "id": 76,
+        "name": "tr_byzantine_emp_3",
+        "long_name": "Byzantine Empire III",
+        "start_year": 1073,
+        "end_year": 1204
+      },
+      "year_from": 1150,
+      "year_to": 1150,
+      "tag": "TRS",
+      "is_disputed": true,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 10000000,
+      "polity_population_to": 10000000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>6,000,000: 1090 CE<br>10,000,000: 1150 CE<br>7,300,000: 1200 CE<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"5m in 1100 CE; 9m in 1200 CE; 2 m in 1300 CE.\"§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>1100 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1150 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1200 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Michael VIII: 5m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 549,
+      "polity": {
+        "id": 76,
+        "name": "tr_byzantine_emp_3",
+        "long_name": "Byzantine Empire III",
+        "start_year": 1073,
+        "end_year": 1204
+      },
+      "year_from": 1200,
+      "year_to": 1200,
+      "tag": "TRS",
+      "is_disputed": true,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 6000000,
+      "polity_population_to": 6000000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>6,000,000: 1090 CE<br>10,000,000: 1150 CE<br>7,300,000: 1200 CE<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"5m in 1100 CE; 9m in 1200 CE; 2 m in 1300 CE.\"§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>1100 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1150 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1200 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Michael VIII: 5m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 550,
+      "polity": {
+        "id": 76,
+        "name": "tr_byzantine_emp_3",
+        "long_name": "Byzantine Empire III",
+        "start_year": 1073,
+        "end_year": 1204
+      },
+      "year_from": 1200,
+      "year_to": 1200,
+      "tag": "TRS",
+      "is_disputed": true,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 7300000,
+      "polity_population_to": 7300000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>6,000,000: 1090 CE<br>10,000,000: 1150 CE<br>7,300,000: 1200 CE<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"5m in 1100 CE; 9m in 1200 CE; 2 m in 1300 CE.\"§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>1100 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1150 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1200 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Michael VIII: 5m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 551,
+      "polity": {
+        "id": 76,
+        "name": "tr_byzantine_emp_3",
+        "long_name": "Byzantine Empire III",
+        "start_year": 1073,
+        "end_year": 1204
+      },
+      "year_from": 1200,
+      "year_to": 1200,
+      "tag": "TRS",
+      "is_disputed": true,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 9000000,
+      "polity_population_to": 9000000,
+      "comment": null,
+      "description": " People.<br>Preiser-Kapeller§REF§(Preiser-Kapeller 2015) Institute for Medieval Research, Division of Byzantine Research, Austrian Academy of Sciences)§REF§<br>6,000,000: 1090 CE<br>10,000,000: 1150 CE<br>7,300,000: 1200 CE<br>\"... around 1025, although the empire occupied more or less the same amount of territory as in 750, it was more densely populated (at c.20 inhabitants per km2) and all in all more populous at roughly 18 million (between 10 and 18 million—Koder 1984/2001: 153; 19 million around 1025—Laiou 2002: 50-1; 18 million around 1050—Stein 1949-51:154).\"§REF§(Stathakopoulos 2008, 312) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>\"5m in 1100 CE; 9m in 1200 CE; 2 m in 1300 CE.\"§REF§(Palmisano, Alessio. Personal Communication to Jill Levine, Dan Hoyer, and Peter Turchin. April 2020. Email)§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>1100 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1150 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>1200 CE<br>Greece and Balkans 2m, coastal regions of Anatolia 3.5m?.<br>According to Stein, Byzantine Empire (1951) Mid-11th Century time of Michael VIII: 5m. §REF§(Russell 1958) Russell, J C (1958) Late and Medieval Population. Transactions of the American Philosophical Society. New Series. Vol 48. No 3. pp. 1-152  citing Stein, E. 1949-1951. Introduction a l'histoire et aux institutions byzantines, Traditio 7: 154§REF§"
+    },
+    {
+      "id": 562,
+      "polity": {
+        "id": 174,
+        "name": "tr_ottoman_emp_1",
+        "long_name": "Ottoman Empire I",
+        "start_year": 1402,
+        "end_year": 1517
+      },
+      "year_from": 1450,
+      "year_to": 1450,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 7000000,
+      "polity_population_to": 7000000,
+      "comment": null,
+      "description": " People.<br>Population of Ottoman Empire§REF§(McEvedy and Jones 1978, 137)§REF§<br>1,000,000: 1325 CE<br>2,500,000: 1350 CE<br>5,000,000: 1400 CE<br>7,000,000: 1450 CE<br>9,000,000: 1500 CE9,000,000: 1500 CE Seems possible, according to tax registers, there were 872,000 households in Ottoman Anatolia in 1520, cf. H. İNALCIK, An Economic and Social History of the Ottoman Empire, Volume I: 1300-1600. Cambridge 1997.§REF§Personal communication. Johannes Preiser-Kapeller. 2016. Institute for Medieval Research. Division of Byzantine Research. Austrian Academy of Sciences.§REF§"
+    },
+    {
+      "id": 563,
+      "polity": {
+        "id": 174,
+        "name": "tr_ottoman_emp_1",
+        "long_name": "Ottoman Empire I",
+        "start_year": 1402,
+        "end_year": 1517
+      },
+      "year_from": 1500,
+      "year_to": 1500,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 9000000,
+      "polity_population_to": 9000000,
+      "comment": null,
+      "description": " People.<br>Population of Ottoman Empire§REF§(McEvedy and Jones 1978, 137)§REF§<br>1,000,000: 1325 CE<br>2,500,000: 1350 CE<br>5,000,000: 1400 CE<br>7,000,000: 1450 CE<br>9,000,000: 1500 CE9,000,000: 1500 CE Seems possible, according to tax registers, there were 872,000 households in Ottoman Anatolia in 1520, cf. H. İNALCIK, An Economic and Social History of the Ottoman Empire, Volume I: 1300-1600. Cambridge 1997.§REF§Personal communication. Johannes Preiser-Kapeller. 2016. Institute for Medieval Research. Division of Byzantine Research. Austrian Academy of Sciences.§REF§"
+    },
+    {
+      "id": 564,
+      "polity": {
+        "id": 175,
+        "name": "tr_ottoman_emp_2",
+        "long_name": "Ottoman Empire II",
+        "start_year": 1517,
+        "end_year": 1683
+      },
+      "year_from": 1600,
+      "year_to": 1600,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 28000000,
+      "polity_population_to": 28000000,
+      "comment": null,
+      "description": " People. 22,000,000: 1550 CE; 28,000,000: 1600 CE; 27,500,000: 1650 CE<br>Population of Ottoman Empire§REF§(McEvedy and Jones 1978, 137)§REF§<br>1,000,000: 1325 CE<br>2,500,000: 1350 CE<br>5,000,000: 1400 CE<br>7,000,000: 1450 CE<br>9,000,000: 1500 CE<br>22,000,000: 1550 CE<br>28,000,000: 1600 CE<br>27,500,000: 1650 CE<br>24,000,000: 1700 CE<br>24,000,000: 1750 CE<br>24,000,000: 1800 CE<br>25,000,000: 1850 CE<br>25,000,000: 1900 CE<br>Population growth in Anatolia. 1520-1530 CE: 872,610. 1570-1580 CE: 1,360,474. §REF§(Inalcik and Quataert 1997, 28) Halil Inalcik and Donald Quataert. 1997. 'General Introduction' in <i>An Economic and Social History of the Ottoman Empire. Volume One: 1300-1600</i> edited by Halil Inalcik with Donald Quataert. Cambridge: Cambridge University Press.§REF§"
+    },
+    {
+      "id": 567,
+      "polity": {
+        "id": 71,
+        "name": "tr_roman_dominate",
+        "long_name": "Roman Empire - Dominate",
+        "start_year": 285,
+        "end_year": 394
+      },
+      "year_from": 300,
+      "year_to": 300,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 40000000,
+      "polity_population_to": 70000000,
+      "comment": null,
+      "description": "The most common general estimate for the empire population is around 60 million, but a figure of 150 million is also conceivable, though highly unlikely §REF§(Scheidel 2004: 2-9)§REF§. Another estimate is 50 million people (i.e. 5000 administrative units at height. §REF§(Black 2008, 181)§REF§. According to a graph by McEvedy and Jones between 200 CE and 400 CE population of the Roman Empire decreased from about 45 million to 35 million §REF§(McEvedy and Jones 1978, 127)§REF§.<br>70 million c.300 CE?<br>\"The Late Roman Empire covered vast amounts of territory (estimated at 3.8 million km2; Issawi 1981: 377) and enjoyed a prolonged period of economic prosperity and demographic expansion between the death of Augustus (14 CE) and the second century. During this phase population density was situated in the upper possible margins of pre-modern times (at roughly 20 inhabitants per km2) with a total population in the magnitude of 74.9 million (Issawi 1981: 377). The anarchy and general economic disarray of the third century will have taken its toll on the population, but we can safely assume that at the beginning of the Byzantine period, in the early fourth century, the demographic state of the empire was similar to that in the second century.\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§"
+    },
+    {
+      "id": 595,
+      "polity": {
+        "id": 264,
+        "name": "cn_tang_dyn_2",
+        "long_name": "Tang Dynasty II",
+        "start_year": 763,
+        "end_year": 907
+      },
+      "year_from": 900,
+      "year_to": 900,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 60000000,
+      "polity_population_to": 80000000,
+      "comment": null,
+      "description": " People.<br>Census in 766 CE recorded 16.9m. \"It is impossible, however, to believe, as some authors would have it, that 36 million people perished, especially in view of the fact that large parts of the country were not affected by the fighting. It is more likely these figures reveal a far-reaching disorganization of the government and its inability to have a proper census carried out. The T'ang government never recovered full control, particularly in the northern provinces ... the areas under the rule of the more independent military governors failed to follow the instructions of the central government also in this respect as they did in so many others.\"§REF§(Rodzinski 1979, 130)§REF§<br>\"In this period the population of the southern provinces, e.g. Kwangtung, increased rapidly. The Cantonese still call themselves T'ang jen - men of T'ang.\"§REF§(Rodzinski 1979, 130)§REF§<br>\"60-80 million in 900\" §REF§(Lorge 2015, 182)§REF§"
+    },
+    {
+      "id": 596,
+      "polity": {
+        "id": 261,
+        "name": "cn_tang_dyn_1",
+        "long_name": "Tang Dynasty I",
+        "start_year": 617,
+        "end_year": 763
+      },
+      "year_from": 700,
+      "year_to": 700,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 37000000,
+      "polity_population_to": 37000000,
+      "comment": null,
+      "description": " People.<br>37,000,000: 705 CE; 41,400,000: 726 CE; 48,000,000: 740 CE; 52,800,000: 754 CE. \"of this, 75 per cent was still north of the Yangtse.\" §REF§(Rodzinski 1979, 129)§REF§<br>AD: 37,000,000 inferred at 700 CE from the data available."
+    },
+    {
+      "id": 597,
+      "polity": {
+        "id": 261,
+        "name": "cn_tang_dyn_1",
+        "long_name": "Tang Dynasty I",
+        "start_year": 617,
+        "end_year": 763
+      },
+      "year_from": 726,
+      "year_to": 726,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 41400000,
+      "polity_population_to": 41400000,
+      "comment": null,
+      "description": " People.<br>37,000,000: 705 CE; 41,400,000: 726 CE; 48,000,000: 740 CE; 52,800,000: 754 CE. \"of this, 75 per cent was still north of the Yangtse.\" §REF§(Rodzinski 1979, 129)§REF§<br>AD: 37,000,000 inferred at 700 CE from the data available."
+    },
+    {
+      "id": 598,
+      "polity": {
+        "id": 264,
+        "name": "cn_tang_dyn_2",
+        "long_name": "Tang Dynasty II",
+        "start_year": 763,
+        "end_year": 907
+      },
+      "year_from": 766,
+      "year_to": 766,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 40000000,
+      "polity_population_to": 55000000,
+      "comment": null,
+      "description": " People.<br>Census in 766 CE recorded 16.9m. \"It is impossible, however, to believe, as some authors would have it, that 36 million people perished, especially in view of the fact that large parts of the country were not affected by the fighting. It is more likely these figures reveal a far-reaching disorganization of the government and its inability to have a proper census carried out. The T'ang government never recovered full control, particularly in the northern provinces ... the areas under the rule of the more independent military governors failed to follow the instructions of the central government also in this respect as they did in so many others.\"§REF§(Rodzinski 1979, 130)§REF§<br>\"In this period the population of the southern provinces, e.g. Kwangtung, increased rapidly. The Cantonese still call themselves T'ang jen - men of T'ang.\"§REF§(Rodzinski 1979, 130)§REF§<br>\"60-80 million in 900\" §REF§(Lorge 2015, 182)§REF§"
+    },
+    {
+      "id": 604,
+      "polity": {
+        "id": 261,
+        "name": "cn_tang_dyn_1",
+        "long_name": "Tang Dynasty I",
+        "start_year": 617,
+        "end_year": 763
+      },
+      "year_from": 705,
+      "year_to": 705,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 37000000,
+      "polity_population_to": 37000000,
+      "comment": null,
+      "description": " People.<br>37,000,000: 705 CE; 41,400,000: 726 CE; 48,000,000: 740 CE; 52,800,000: 754 CE. \"of this, 75 per cent was still north of the Yangtse.\" §REF§(Rodzinski 1979, 129)§REF§<br>AD: 37,000,000 inferred at 700 CE from the data available."
+    },
+    {
+      "id": 613,
+      "polity": {
+        "id": 72,
+        "name": "tr_east_roman_emp",
+        "long_name": "East Roman Empire",
+        "start_year": 395,
+        "end_year": 631
+      },
+      "year_from": 500,
+      "year_to": 500,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 20000000,
+      "polity_population_to": 20000000,
+      "comment": null,
+      "description": " People.<br>(541/542: Plague epidemic, returns all 10-15 years until ca. 750)<br>395: 15 Million<br>534: 20 Million<br>552: 17 Million<br>568: 14 Million<br>591: 15 Million<br>610: 12.5 Million<br>620: 7 Million<br>630: 11 Million<br>East Roman Empire 4th and 5th Centuries<br>\"In an estimated realm covering some 1.4 million km2 with a population density at 20 inhabitants per km2 this would amount to roughly 28 million inhabitants (Koder 1984/2001:154, between 24 and 26 million; Stein 1949-51: 154, 26 million).\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>14,150,000: 400 CE; 13,400,000: 450 CE; 12,900,000: 500 CE; [16,500,000-17,500,000]: 550 CE; [17,000,000-22,000,000]: 600 CE;<br>400 CE<br>Greece and Balkans 2m, Anatolia 6m, Levant 1.75m+0.4m, Egypt 4m<br>450 CE<br>Greece and Balkans 2m, Anatolia 5.75m, Levant 1.5m+0.4m, Egypt 3.75m<br>500 CE<br>Greece and Balkans 2m, Anatolia 5.5m, Levant 1.5m+0.4m, Egypt 3.5m<br>550 CE<br>Greece and Balkans 2m, Anatolia 5.25m, Levant 1.5m+0.4m, Egypt 3.25m, North Africa 1m+1.75m+1m+0.4m, Mediterranean islands ?m and southern Italy ?m.<br>600 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5m, Levant 1.5m+0.4m, Egypt 3m, North Africa 1m+1.75m+1m+0.4m, Mediterranean islands ?m and southern Italy ?m, southern coast of Spain ?m, north-east Italy ?m.<br>650 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.25m now extending into the Caucasus 0.25m, southern Crimea, North Africa 1.25m+1.75m+1m+0.5m, Mediterranean islands ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>"
+    },
+    {
+      "id": 638,
+      "polity": {
+        "id": 261,
+        "name": "cn_tang_dyn_1",
+        "long_name": "Tang Dynasty I",
+        "start_year": 617,
+        "end_year": 763
+      },
+      "year_from": 740,
+      "year_to": 740,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 48000000,
+      "polity_population_to": 48000000,
+      "comment": null,
+      "description": " People.<br>37,000,000: 705 CE; 41,400,000: 726 CE; 48,000,000: 740 CE; 52,800,000: 754 CE. \"of this, 75 per cent was still north of the Yangtse.\" §REF§(Rodzinski 1979, 129)§REF§<br>AD: 37,000,000 inferred at 700 CE from the data available."
+    },
+    {
+      "id": 642,
+      "polity": {
+        "id": 261,
+        "name": "cn_tang_dyn_1",
+        "long_name": "Tang Dynasty I",
+        "start_year": 617,
+        "end_year": 763
+      },
+      "year_from": 754,
+      "year_to": 754,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 52800000,
+      "polity_population_to": 52800000,
+      "comment": null,
+      "description": " People.<br>37,000,000: 705 CE; 41,400,000: 726 CE; 48,000,000: 740 CE; 52,800,000: 754 CE. \"of this, 75 per cent was still north of the Yangtse.\" §REF§(Rodzinski 1979, 129)§REF§<br>AD: 37,000,000 inferred at 700 CE from the data available."
+    },
+    {
+      "id": 656,
+      "polity": {
+        "id": 72,
+        "name": "tr_east_roman_emp",
+        "long_name": "East Roman Empire",
+        "start_year": 395,
+        "end_year": 631
+      },
+      "year_from": 400,
+      "year_to": 400,
+      "tag": "TRS",
+      "is_disputed": false,
+      "is_uncertain": false,
+      "name": "Polity_population",
+      "polity_population_from": 15000000,
+      "polity_population_to": 15000000,
+      "comment": null,
+      "description": " People.<br>(541/542: Plague epidemic, returns all 10-15 years until ca. 750)<br>395: 15 Million<br>534: 20 Million<br>552: 17 Million<br>568: 14 Million<br>591: 15 Million<br>610: 12.5 Million<br>620: 7 Million<br>630: 11 Million<br>East Roman Empire 4th and 5th Centuries<br>\"In an estimated realm covering some 1.4 million km2 with a population density at 20 inhabitants per km2 this would amount to roughly 28 million inhabitants (Koder 1984/2001:154, between 24 and 26 million; Stein 1949-51: 154, 26 million).\"§REF§(Stathakopoulos 2008, 310) Jeffreys E, Haldon J and Cormack R eds. 2008. The Oxford Handbook of Byzantine Studies. Oxford University Press. Oxford.§REF§<br>Estimates based on McEvedy and Jones (1978).§REF§(McEvedy and Jones 1978) McEvedy, C. Jones, R. 1978. Atlas of World Population History. Allen Lane. London.§REF§<br>14,150,000: 400 CE; 13,400,000: 450 CE; 12,900,000: 500 CE; [16,500,000-17,500,000]: 550 CE; [17,000,000-22,000,000]: 600 CE;<br>400 CE<br>Greece and Balkans 2m, Anatolia 6m, Levant 1.75m+0.4m, Egypt 4m<br>450 CE<br>Greece and Balkans 2m, Anatolia 5.75m, Levant 1.5m+0.4m, Egypt 3.75m<br>500 CE<br>Greece and Balkans 2m, Anatolia 5.5m, Levant 1.5m+0.4m, Egypt 3.5m<br>550 CE<br>Greece and Balkans 2m, Anatolia 5.25m, Levant 1.5m+0.4m, Egypt 3.25m, North Africa 1m+1.75m+1m+0.4m, Mediterranean islands ?m and southern Italy ?m.<br>600 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5m, Levant 1.5m+0.4m, Egypt 3m, North Africa 1m+1.75m+1m+0.4m, Mediterranean islands ?m and southern Italy ?m, southern coast of Spain ?m, north-east Italy ?m.<br>650 CE<br>Greece and Balkans extending to Italy (including Bosnia, Serbia, Croatia, Slovenia) 3m, Anatolia 5.25m now extending into the Caucasus 0.25m, southern Crimea, North Africa 1.25m+1.75m+1m+0.5m, Mediterranean islands ?m and southern Italy ?m, Ravenna region north-east Italy ?m.<br>"
+    }
+  ],
+  "rejected": [
+    {
+      "sourceRecordId": 621,
+      "reason": "missing-or-invalid-population-range"
+    }
+  ]
+}

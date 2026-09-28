@@ -8,6 +8,7 @@ import { localizedName, useI18n } from '@/lib/i18n';
 import { useAtlasStore } from '@/lib/store';
 import { resolvePolityIdentity } from '@/lib/polity-identities';
 import EntityLeaders from './EntityLeaders';
+import EntityFacts from './EntityFacts';
 
 export type ObservationInput = {
   year?: number;
@@ -295,6 +296,7 @@ export default function EntityPanel() {
                 'Period covered by available observations. These bounds do not necessarily indicate the founding and dissolution of this state.',
               )}
             </p>
+            <EntityFacts key={visible.id} entity={visible} year={year} />
             <div className="territory-stat">
               <span>{t('Superficie observée', 'Observed area')}</span>
               <strong>

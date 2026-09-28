@@ -799,7 +799,7 @@ export async function buildEvents(
     };
     await json(join(output, 'quality.json'), { ...report, rejected: undefined });
     // Independently acquired map layers survive replacement of the core event corpus.
-    for (const layer of ['battles', 'resources', 'religions']) {
+    for (const layer of ['battles', 'resources', 'religions', 'polity-facts']) {
       try {
         await cp(join(published, layer), join(output, layer), { recursive: true });
       } catch (error) {

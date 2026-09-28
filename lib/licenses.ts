@@ -83,6 +83,15 @@ export interface LicenseInputs {
     originalDataLicense: string;
     attribution: string;
   };
+  /** Attribution metadata for the optional Seshat population supplement. */
+  polityFacts?: {
+    sourceUrl: string;
+    license: string;
+    licenseUrl: string;
+    attribution: string;
+    modifications: string;
+    retrievedOn: string;
+  };
   geography: {
     sources: {
       label: string;
@@ -120,7 +129,8 @@ const EVENT_SOURCES = [
     match: /^https:\/\/www\.wikidata\.org\//,
     id: 'wikidata',
     name: 'Wikidata',
-    scope: 'Events, dates, coordinates, participants, people, offices and conflict links',
+    scope:
+      'Events, dates, coordinates, participants, people, offices, conflict links, historical capitals and population observations',
   },
   {
     match: /^https:\/\/www\.naturalearthdata\.com\//,
@@ -179,6 +189,17 @@ export function licenseIssues(inputs: LicenseInputs): string[] {
   }
   if (!inputs.cdb90.license || !isHttpUrl(inputs.cdb90.licenseUrl) || !inputs.cdb90.attribution)
     issues.push('CDB90 requires a licence, a licence URL and an attribution');
+  if (inputs.polityFacts) {
+    const source = inputs.polityFacts;
+    if (!source.license?.trim()) issues.push('Seshat populations have no licence');
+    if (!isHttpUrl(source.sourceUrl)) issues.push('Seshat populations have no source URL');
+    if (!isHttpUrl(source.licenseUrl)) issues.push('Seshat populations have no licence URL');
+    if (!source.attribution?.trim()) issues.push('Seshat populations require an attribution');
+    if (!source.modifications?.trim())
+      issues.push('Seshat populations require a description of modifications');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(source.retrievedOn ?? ''))
+      issues.push('Seshat populations require a retrieval date');
+  }
   for (const [part, declared] of Object.entries(inputs.project)) {
     if (!declared.license.trim()) issues.push(`Project ${part} has no licence`);
     if (!isHttpUrl(declared.licenseUrl) || !isHttpUrl(declared.text))
@@ -235,6 +256,20 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
       attribution: inputs.cdb90.attribution,
     },
     ...geography,
+    ...(inputs.polityFacts
+      ? [
+          {
+            id: 'seshat-populations',
+            name: 'Seshat Global History Databank · population observations',
+            url: inputs.polityFacts.sourceUrl,
+            license: inputs.polityFacts.license,
+            licenseUrl: inputs.polityFacts.licenseUrl,
+            scope: 'Dated historical polity population estimates and ranges',
+            revision: `Snapshot ${inputs.polityFacts.retrievedOn}`,
+            attribution: `${inputs.polityFacts.attribution} ${inputs.polityFacts.modifications}`,
+          },
+        ]
+      : []),
     {
       id: 'wikipedia',
       name: 'Wikipedia',

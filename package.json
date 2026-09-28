@@ -26,6 +26,8 @@
     "data:battles:check": "tsx pipeline/battles/check.ts",
     "data:resources": "tsx pipeline/resources/build.ts",
     "data:resources:check": "tsx pipeline/resources/check.ts && tsx scripts/build-licenses.ts --check",
+    "data:polities": "tsx pipeline/polities/build.ts",
+    "data:polities:check": "tsx pipeline/polities/build.ts --check",
     "data:licenses": "tsx scripts/build-licenses.ts",
     "data:geo": "tsx pipeline/geography/build.ts",
     "data:check": "tsx scripts/check-dossiers.ts",
