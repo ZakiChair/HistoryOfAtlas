@@ -9,6 +9,7 @@ import { RELIGION_SOURCE, RELIGION_POINTS, RELIGION_ROUTES, RELIGION_AREAS } fro
 import { hasResourceAt, hasResourceCountAt } from './resource-hit';
 import { createReligionSprites, RELIGION_SELECTION_RING } from './religion-sprites';
 import { raiseThematicLayers } from './thematic-stack';
+import { startReligionCoverageOverlay } from './religion-coverage-overlay';
 
 const OUTLINES = 'religion-area-outlines';
 const CASING = 'religion-route-casing';
@@ -295,7 +296,7 @@ export function religionFilter(shape: string, state: AtlasState): ExpressionSpec
 }
 
 /** Geometry is installed once. Time changes filter stable sources instead of removing symbols. */
-export function startReligionOverlay(map: MapInstance) {
+export function startReligionHistoryOverlay(map: MapInstance) {
   const sprites = createReligionSprites(map);
   let state: AtlasState | undefined;
   let dataset: ReligionDataset | undefined;
@@ -554,13 +555,17 @@ export function startReligionOverlay(map: MapInstance) {
   return {
     update(next: AtlasState) {
       const wasActive = state?.religionsVisible;
-      state = next;
-      if (!next.religionsVisible && wasActive) {
-        useReligionStore.getState().setPanelOpen(false);
+      state = {
+        ...next,
+        religionsVisible: next.religionsVisible && next.religionView === 'history',
+      };
+      if (!state.religionsVisible && wasActive) {
+        if (!next.religionsVisible) useReligionStore.getState().setPanelOpen(false);
+        else useReligionStore.getState().select(null);
         leave();
       }
       refresh();
-      if (next.religionsVisible && !wasActive) void load();
+      if (state.religionsVisible && !wasActive) void load();
     },
     isReady: () => !state?.religionsVisible || !installed || map.isSourceLoaded(RELIGION_SOURCE),
     dispose() {
@@ -576,6 +581,33 @@ export function startReligionOverlay(map: MapInstance) {
         panelOpen: false,
         visibleMilestones: [],
       });
+    },
+  };
+}
+
+/** Each corpus loads only when its mode is first enabled; its geometry survives mode changes. */
+export function startReligionOverlay(map: MapInstance) {
+  let history: ReturnType<typeof startReligionHistoryOverlay> | undefined;
+  let coverage: ReturnType<typeof startReligionCoverageOverlay> | undefined;
+  let disposed = false;
+  return {
+    update(state: AtlasState) {
+      if (disposed) return;
+      if (state.religionView === 'history') {
+        coverage?.update(state);
+        if (state.religionsVisible) history ??= startReligionHistoryOverlay(map);
+        history?.update(state);
+      } else {
+        history?.update(state);
+        if (state.religionsVisible) coverage ??= startReligionCoverageOverlay(map);
+        coverage?.update(state);
+      }
+    },
+    isReady: () => (history?.isReady() ?? true) && (coverage?.isReady() ?? true),
+    dispose() {
+      disposed = true;
+      history?.dispose();
+      coverage?.dispose();
     },
   };
 }

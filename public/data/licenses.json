@@ -34,6 +34,204 @@
       "scope": "Validation mask for event coordinates"
     },
     {
+      "id": "religion-coverage-rcs-dem-2-0",
+      "name": "RCS-Dem 2.0 · religious composition estimates",
+      "url": "https://www.thearda.com/data-archive?fid=RCSDEM2&tab=1",
+      "license": "ARDA data use terms",
+      "licenseUrl": "https://www.thearda.com/data-archive?fid=RCSDEM2&tab=3",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Brown, Davis, and Patrick James. Religious Characteristics of States Dataset Project: Demographics v. 2.0. ARDA, 2019. https://doi.org/10.17605/OSF.IO/7SR4M"
+    },
+    {
+      "id": "religion-coverage-rcs-dem-2-0-codebook",
+      "name": "RCS-Dem 2.0 · codebook, methods and territorial coverage (Appendix A)",
+      "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+      "license": "ARDA data use terms",
+      "licenseUrl": "https://www.thearda.com/data-archive?fid=RCSDEM2&tab=3",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "RCS-Dem 2.0 · codebook, methods and territorial coverage (Appendix A)"
+    },
+    {
+      "id": "religion-coverage-religion-coverage-natural-earth",
+      "name": "Natural Earth · reviewed country geometry",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_admin_0_countries.geojson",
+      "license": "Public domain",
+      "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Natural Earth · reviewed country geometry"
+    },
+    {
+      "id": "religion-coverage-cliopatria",
+      "name": "Cliopatria — dated political boundaries",
+      "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Cliopatria, pinned revision ad28a691b7c07c1fca89d0e0636d324667d2a258; https://doi.org/10.1038/s41597-025-04516-9. Geometry simplified; not religious boundaries."
+    },
+    {
+      "id": "religion-coverage-seshat",
+      "name": "Seshat Global History Databank — Widespread Religion",
+      "url": "https://seshat-db.com/rt/widespread_religions_all/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Religious Demography. Qualitative prevalence categories; API extracted 2026-09-28."
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-1060",
+      "name": "Seshat — Roman Empire - Dominate: Roman Religion",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/1060/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 1060; Vast majority. https://www.zotero.org/groups/1051264/seshat_databank/items/8UUZNR4E"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-1061",
+      "name": "Seshat — Roman Empire - Dominate: Christianity",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/1061/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 1061; Over half of the population. https://www.zotero.org/groups/1051264/seshat_databank/items/8UUZNR4E"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-435",
+      "name": "Seshat — Adal Sultanate: Sunni Islam",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/435/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 435; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/E3JKMPG2 https://www.zotero.org/groups/1051264/seshat_databank/items/UAQTDNIX"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-476",
+      "name": "Seshat — Yemen - Qasimid Dynasty: Sunni Islam",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/476/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 476; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/CZQNUAHA https://www.zotero.org/groups/1051264/seshat_databank/items/RQCTSWNA"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-477",
+      "name": "Seshat — Yemen - Qasimid Dynasty: Shia Islam",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/477/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 477; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/CZQNUAHA https://www.zotero.org/groups/1051264/seshat_databank/items/RQCTSWNA"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-503",
+      "name": "Seshat — Icelandic Commonwealth: Christianity",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/503/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 503; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/62IIU8CI https://www.zotero.org/groups/1051264/seshat_databank/items/952TGMR9 https://www.zotero.org/groups/1051264/seshat_databank/items/QSG2227N https://www.zotero.org/groups/1051264/seshat_databank/items/RXUXJ2KP"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-506",
+      "name": "Seshat — Haudenosaunee Confederacy - Early: Roman Catholic Christianity",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/506/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 506; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/CVZTC27K https://www.zotero.org/groups/1051264/seshat_databank/items/HPVINEVK"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-538",
+      "name": "Seshat — Axum II: Ethiopian Religion",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/538/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 538; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/IQWD9I5I https://www.zotero.org/groups/1051264/seshat_databank/items/PT9MJQBE"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-633",
+      "name": "Seshat — Roman Empire - Dominate: Christianity",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/633/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 633; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/8UUZNR4E"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-634",
+      "name": "Seshat — Roman Empire - Dominate: Roman Religion",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/634/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 634; Sizeable minority. https://www.zotero.org/groups/1051264/seshat_databank/items/8UUZNR4E"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-743",
+      "name": "Seshat — Adal Sultanate: Sunni Islam",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/743/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 743; Vast majority. https://www.zotero.org/groups/1051264/seshat_databank/items/7J425GTZ https://www.zotero.org/groups/1051264/seshat_databank/items/UAQTDNIX"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-744",
+      "name": "Seshat — Adal Sultanate: Ethiopian Orthodox Christianity",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/744/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 744; Over half of the population. https://www.zotero.org/groups/1051264/seshat_databank/items/7J425GTZ https://www.zotero.org/groups/1051264/seshat_databank/items/UAQTDNIX"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-799",
+      "name": "Seshat — Yemen - Qasimid Dynasty: Shia Islam",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/799/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 799; Vast majority. https://www.zotero.org/groups/1051264/seshat_databank/items/CZQNUAHA https://www.zotero.org/groups/1051264/seshat_databank/items/RQCTSWNA"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-800",
+      "name": "Seshat — Yemen - Qasimid Dynasty: Sunni Islam",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/800/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 800; Over half of the population. https://www.zotero.org/groups/1051264/seshat_databank/items/CZQNUAHA https://www.zotero.org/groups/1051264/seshat_databank/items/RQCTSWNA"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-846",
+      "name": "Seshat — Icelandic Commonwealth: Old Norse Religion",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/846/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 846; Vast majority. https://www.zotero.org/groups/1051264/seshat_databank/items/2THFRG68 https://www.zotero.org/groups/1051264/seshat_databank/items/952TGMR9 https://www.zotero.org/groups/1051264/seshat_databank/items/QSG2227N https://www.zotero.org/groups/1051264/seshat_databank/items/RXUXJ2KP https://www.zotero.org/groups/1051264/seshat_databank/items/TZ3CH4G3"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-891",
+      "name": "Seshat — Axum II: Ethiopian Religion",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/891/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 891; Over half of the population. https://www.zotero.org/groups/1051264/seshat_databank/items/IQWD9I5I https://www.zotero.org/groups/1051264/seshat_databank/items/PT9MJQBE"
+    },
+    {
+      "id": "religion-coverage-seshat-widespread-892",
+      "name": "Seshat — Axum II: Ethiopian Orthodox Christianity",
+      "url": "https://seshat-db.com/api/rt/widespread-religions/892/",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "scope": "Religious composition and geographic study areas; selected and transformed source observations",
+      "attribution": "Seshat Global History Databank, Widespread Religion, record 892; Over half of the population. https://www.zotero.org/groups/1051264/seshat_databank/items/IQWD9I5I https://www.zotero.org/groups/1051264/seshat_databank/items/PT9MJQBE"
+    },
+    {
       "id": "cdb90",
       "name": "CDB90 · CAA Database of Battles, Version 1990",
       "url": "https://github.com/jrnold/CDB90",

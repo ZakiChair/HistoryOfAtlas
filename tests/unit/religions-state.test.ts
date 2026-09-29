@@ -8,6 +8,7 @@ import {
 
 const defaults = {
   religionsVisible: false,
+  religionView: 'coverage',
   religionFilter: null,
   religionRoutesVisible: true,
   religionAreasVisible: true,
@@ -15,6 +16,20 @@ const defaults = {
 
 describe('shareable religion layer preferences', () => {
   beforeEach(() => useAtlasStore.getState().reset());
+
+  it('shares the historical mode even while the layer is hidden and normalizes invalid modes', () => {
+    expect(parseAtlasUrl('?rview=history').religionView).toBe('history');
+    expect(parseAtlasUrl('?rview=invalid').religionView).toBe('coverage');
+    useAtlasStore.getState().setReligionView('history');
+    const query = serializeAtlasUrl(useAtlasStore.getState());
+    expect(new URLSearchParams(query).get('rview')).toBe('history');
+    useAtlasStore.getState().hydrateFromUrl(query);
+    expect(useAtlasStore.getState().religionView).toBe('history');
+    useAtlasStore.getState().setReligionView('coverage');
+    expect(new URLSearchParams(serializeAtlasUrl(useAtlasStore.getState())).has('rview')).toBe(
+      false,
+    );
+  });
 
   it('keeps legacy links unchanged and omits default religion parameters', () => {
     const state = parseAtlasUrl('?y=-500&resources=1&battles=0&play=1');

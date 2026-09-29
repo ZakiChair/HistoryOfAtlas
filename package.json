@@ -28,6 +28,8 @@
     "data:resources:check": "tsx pipeline/resources/check.ts && tsx scripts/build-licenses.ts --check",
     "data:polities": "tsx pipeline/polities/build.ts",
     "data:polities:check": "tsx pipeline/polities/build.ts --check",
+    "data:religions": "python3 pipeline/religions/rcs.py && python3 pipeline/religions/seshat.py && tsx pipeline/religions/build.ts",
+    "data:religions:check": "python3 pipeline/religions/rcs.py --check && python3 pipeline/religions/seshat.py --check && tsx pipeline/religions/build.ts --check",
     "data:licenses": "tsx scripts/build-licenses.ts",
     "data:geo": "tsx pipeline/geography/build.ts",
     "data:check": "tsx scripts/check-dossiers.ts",

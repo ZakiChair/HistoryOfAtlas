@@ -11,14 +11,19 @@ import type { ReligionMilestone } from '@/lib/religions/types';
 import { formatYear } from '@/lib/histdate';
 import Localized from '../ui/Localized';
 import ReligionKey, { TraditionIcon } from './ReligionKey';
+import ReligionCoverageLayers from './ReligionCoverageLayers';
+import ReligionViewSwitch from './ReligionViewSwitch';
 
-export default function ReligionLayers({
-  panelId,
-  onClose,
-}: {
-  panelId: string;
-  onClose: () => void;
-}) {
+export default function ReligionLayers(props: { panelId: string; onClose: () => void }) {
+  const view = useAtlasStore((state) => state.religionView);
+  return view === 'history' ? (
+    <ReligionHistoryLayers {...props} />
+  ) : (
+    <ReligionCoverageLayers {...props} />
+  );
+}
+
+function ReligionHistoryLayers({ panelId, onClose }: { panelId: string; onClose: () => void }) {
   const locale = useAtlasStore((state) => state.locale);
   const year = useAtlasStore((state) => state.year);
   const range = useAtlasStore((state) => state.range);
@@ -133,6 +138,7 @@ export default function ReligionLayers({
             </button>
           </div>
           <div className="religion-card-body" ref={body}>
+            <ReligionViewSwitch />
             {selected ? (
               <>
                 <button

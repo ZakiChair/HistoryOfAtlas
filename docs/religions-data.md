@@ -1,10 +1,63 @@
-# Corpus historique des traditions religieuses
+# Religions : majorités, présences et repères historiques
+
+La couche **Religions** propose deux représentations complémentaires : **Majorités et présences**, fondée sur des données de composition de la population, et **Repères historiques**, qui conserve les attestations, étapes de diffusion et foyers du corpus éditorial. Le changement de mode ne transforme pas un sanctuaire, une religion officielle ou la religion d’un souverain en majorité démographique.
+
+## Majorités et présences
+
+Le fichier [`public/data/religions/coverage.json`](../public/data/religions/coverage.json) rassemble les observations quantitatives RCS et les observations qualitatives Seshat. Les couleurs et hachures résument les données disponibles pour l’année de l’atlas, ou la fin de la plage sélectionnée. Un clic sur une zone donne accès au périmètre de population, à la date ou à l’intervalle de référence, aux parts ou qualifications documentées et aux sources.
+
+### Lire les couleurs et les seuils
+
+- **Majorité quantitative : strictement plus de 50 %** de la population. Une part de 50 % ne suffit pas. Le fond prend la couleur de la religion concernée.
+- **Autres religions fortement présentes : au moins 20 %**. Les hachures rendent visibles ces autres groupes, y compris lorsqu’aucune religion ne dépasse 50 %. Le groupe le plus nombreux n’est donc pas automatiquement présenté comme majoritaire.
+- **Sans affiliation religieuse** est une catégorie distincte, avec une représentation neutre ; elle n’est pas présentée comme une religion.
+- Les regroupements de traditions sont signalés comme **agrégats**. Une catégorie telle que « traditions d’Asie orientale » ne devient pas une religion unique, et les catégories parentes ne sont jamais additionnées à leurs sous-catégories.
+
+Seshat apporte une autre forme d’information : ses codes explicites « vaste majorité » et « plus de la moitié » établissent une majorité qualitative ; « minorité importante » établit une présence importante. **Cette dernière qualification ne signifie pas qu’un seuil de 20 % a été mesuré.** Aucun pourcentage n’est inventé pour ces observations. Un rang tel que « religion la plus répandue », sans qualification de prévalence, ne suffit pas.
+
+Une zone sans coloration peut correspondre à une absence de majorité, à des données trop anciennes, à une observation écartée ou à un manque de documentation. Elle ne démontre pas l’absence d’une religion. Les proportions concernent une population agrégée ; elles ne localisent pas les croyants à l’intérieur du contour et ne permettent aucune déduction sur une personne.
+
+Dans cette vue, les remplissages politiques sont masqués et leurs contours neutralisés : leurs couleurs ne doivent pas être prises pour des données religieuses. Ils retrouvent leur représentation habituelle lorsque la couche est désactivée ou que l’on revient aux repères historiques. Le filtre affiche seulement la couleur et les hachures de la tradition choisie ; la fiche conserve la composition complète de la zone.
+
+### Dates et couverture
+
+Pour les données quantitatives, le mode utilise le dernier repère disponible qui ne dépasse pas l’année sélectionnée, avec un **âge maximal de 15 ans**. Son année d’origine reste affichée. Consulter une estimation de 2015 en 2026 ne produit donc pas une estimation de 2026. Aucune interpolation supplémentaire n’est ajoutée par l’atlas. Les observations qualitatives Seshat sont visibles uniquement dans leurs intervalles documentés, limités aussi par la validité de leur géométrie historique.
+
+La livraison du 28 septembre 2026 comprend :
+
+| Source                          | Couverture intégrée                                                    | Nature et limites                                                                                                                                                               |
+| ------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RCS-Dem 2.0**                 | **107 régions**, **6 952 repères annuels**, de 1700 à 2015             | Estimations à périmètres relus ; la série source contient déjà des interpolations et extrapolations. Une ligne annuelle n’est pas nécessairement un recensement de cette année. |
+| **Seshat, Widespread Religion** | **Six régions**, **42 observations par intervalle**, entre 287 et 1802 | Sélection qualitative pour Rome, Aksum, l’Islande, Adal, la confédération haudenosaunee et le Yémen qasimide ; intervalles discontinus et couverture ancienne très partielle.   |
+
+Ces totaux ne sont pas le nombre de zones visibles simultanément. RCS renseigne ici deux régions en 1800, 17 en 1900, 104 en 2010 et 99 en 2015. Les grandes lacunes anciennes sont conservées. Les chiffres reproductibles figurent dans le [rapport RCS](../data/curated/religion-coverage-rcs-report.json), le [rapport Seshat](../data/reports/religion-coverage-seshat.json) et le [rapport combiné](../public/data/religions/coverage-report.json).
+
+### Périmètres, sources et réutilisation
+
+Chaque correspondance RCS lie un identifiant source exact, une période et un périmètre de population relu dans l’annexe A du codebook. Une égalité de code ISO ne suffit pas. Les contours Natural Earth sont des contours de référence contemporains : lorsque RCS estime une population ancienne à l’intérieur de frontières contemporaines, ce choix est explicitement indiqué. Il ne reconstitue pas les frontières politiques de cette année.
+
+La France utilise seulement la métropole, la Russie exclut la Crimée conformément au périmètre RCS, et la Chine inclut Hong Kong et Macao uniquement pour les années retenues à partir de 1999. Les géométries historiques Seshat viennent de Cliopatria, avec correspondance d’identité et intersection des dates ; elles ne proviennent pas des croquis éditoriaux des repères historiques.
+
+Les parts manquantes restent inconnues. Les valeurs négatives, les répartitions incohérentes et les majorités contradictoires sont écartées et signalées dans les rapports ; les valeurs ne sont pas ramenées artificiellement à 100 %. Les branches d’une même tradition ne sont pas additionnées pour fabriquer une majorité.
+
+Les estimations RCS conservent les **conditions d’utilisation ARDA**, avec attribution à l’ARDA et à Davis Brown et Patrick James ; elles ne sont pas présentées comme des données sous licence Creative Commons. Les données Seshat sont attribuées sous **CC BY-SA 4.0**, leurs contours Cliopatria sous **CC BY 4.0**, et les contours Natural Earth relèvent du **domaine public**. Les références et les conditions détaillées sont conservées dans les données et les guides d’acquisition.
+
+### Reproduction
+
+```sh
+pnpm data:religions
+pnpm data:religions:check
+```
+
+La reconstruction normale utilise les extraits versionnés dans le dépôt, sans accès réseau. La réacquisition complète est une opération séparée, documentée dans le [guide RCS](../pipeline/religions/README.md) et le [guide Seshat](../pipeline/religions/SESHAT.md). Ces guides détaillent les filtres, les correspondances géographiques, les empreintes des sources et les vérifications propres à chaque import. `ReligionCoverageDatasetSchema` dans `lib/religions/coverage.ts` contrôle les observations, leurs références, les parts et les géométries avant publication.
+
+## Repères historiques
 
 `public/data/religions/history.json` est un corpus éditorial bilingue, consulté et vérifié le **23 septembre 2026**, puis complété le **24 septembre 2026** de 39 étapes de diffusion postérieures à 1600, chacune revérifiée sur ses sources par un relecteur indépendant. Il contient **16 traditions, 131 étapes, 54 zones schématiques, 27 relations de transmission et 148 sources**. Ses premiers et derniers jalons sont respectivement 3200 av. J.-C. et 1988.
 
-La couche affiche les **repères historiques cumulés jusqu’à l’année sélectionnée**. Un marqueur, un trait ou une zone conservé à une date ultérieure signifie que cette attestation a déjà eu lieu. Il ne démontre ni une pratique toujours vivante, ni une présence continue, ni une majorité religieuse, ni une frontière. Les traditions peuvent se superposer géographiquement et chronologiquement.
+Ce mode conserve les **repères historiques cumulés jusqu’à l’année sélectionnée**. Un marqueur, un trait ou une zone conservé à une date ultérieure signifie que cette attestation a déjà eu lieu. Il ne démontre ni une pratique toujours vivante, ni une présence continue, ni une majorité religieuse, ni une frontière. Les traditions peuvent se superposer géographiquement et chronologiquement.
 
-## Périmètre
+### Périmètre
 
 | ID               | Tradition ou famille de traditions    | Étapes | Zones | Relations |
 | ---------------- | ------------------------------------- | -----: | ----: | --------: |
@@ -29,7 +82,7 @@ Les catégories sont des outils de lecture. « Traditions andines » rassemble d
 
 Ce premier corpus ne recense pas toutes les traditions ni toutes leurs implantations. Il laisse notamment de vastes lacunes pour les traditions autochtones d’Amérique du Nord et d’Océanie, de nombreuses traditions africaines, le bön et plusieurs mouvements religieux récents. Une absence sur la carte n’est pas une absence historique. Le nombre de jalons ne mesure ni l’importance ni le nombre de fidèles d’une tradition.
 
-## Temps : repères choisis et fourchettes
+### Temps : repères choisis et fourchettes
 
 `kind: "origin"` signifie **premier repère sélectionné dans ce corpus pour cette tradition**. Il ne signifie pas automatiquement date de fondation, première attestation connue dans la recherche, lieu de naissance d’un fondateur ou origine unique. C’est particulièrement important pour :
 
@@ -56,7 +109,7 @@ Les années suivent la convention astronomique de l’atlas : `year = 1 - année
 
 Une date de monument atteste un foyer local à ce moment, sans être automatiquement la première arrivée de la tradition dans la région. Une décision royale, un synode, une réforme ou un texte n’est pas transformé en conversion générale de la population. Les croyances rapportées par les traditions sont présentées comme telles.
 
-## Géographie et relations
+### Géographie et relations
 
 Les coordonnées WGS84 sont des positions de référence des lieux nommés, généralement arrondies. Les marqueurs régionaux — premiers courants védiques, monde iranien oriental, plaine gangétique ou Chine ancienne — sont explicitement décrits comme tels. Ils ne sont pas des coordonnées établies de naissance, d’enseignement ou de rédaction.
 
@@ -78,7 +131,7 @@ Les relations sont limitées aux cas documentés, notamment :
 
 Les points de départ des diasporas yoruba représentent des relations culturelles régionales, pas des ports d’embarquement. Le lien Mexique–Philippines ne suppose pas que les missionnaires aient quitté un monastère particulier du Popocatépetl. De même, le lien Mésopotamie–Chang’an ne reconstruit pas le voyage individuel d’Alopen. Les autres étapes restent indépendantes lorsqu’une liaison précise n’est pas étayée.
 
-## Sources et réutilisation
+### Sources et réutilisation
 
 Chaque étape possède des `sourceIds` résolus vers une notice bibliographique avec URL HTTPS dans le même JSON. Le corpus s’appuie sur des musées, des universités, des publications savantes, des institutions patrimoniales et, pour certaines histoires de sanctuaires ou de missions, les institutions concernées. Les textes français et anglais sont des synthèses originales brèves ; le corpus ne reproduit pas les pages consultées ni leurs illustrations.
 
@@ -88,7 +141,7 @@ Le JSON conserve les références, mais ne revendique pas une licence uniforme s
 
 Les clés des symboles sont `cuneiform`, `ankh`, `laurel`, `menorah`, `faravahar`, `om`, `ahimsa`, `dharma-wheel`, `cross`, `crescent`, `khanda`, `yin-yang`, `confucian`, `torii`, `orisha` et `andean-sun`. Ce sont des identifiants visuels conventionnels de la légende ; leur affichage ne prétend pas que le symbole était utilisé à la date du premier jalon.
 
-## Validation et enrichissement
+### Validation et enrichissement
 
 Le fichier est une curation explicite, sans API ou service tiers au moment de l’affichage. `ReligionDatasetSchema` dans `lib/religions/types.ts` contrôle les types, les bornes des coordonnées, les IDs uniques, la résolution des sources et traditions, les liens chronologiquement valides et la fermeture des polygones.
 
@@ -98,6 +151,6 @@ Validation locale ciblée :
 pnpm exec tsx -e "import fs from 'node:fs'; import { ReligionDatasetSchema } from './lib/religions/types.ts'; const d = ReligionDatasetSchema.parse(JSON.parse(fs.readFileSync('public/data/religions/history.json', 'utf8'))); console.log(d.traditions.length, d.milestones.length, d.sources.length);"
 ```
 
-Résultat lors de la livraison : `16 92 103`. Un contrôle indépendant des 54 contours a vérifié leur fermeture, l’absence d’auto-intersection et l’inclusion de leur point de référence. Les liens ont été relus sur le fond ; aucun lien entre cultures andines distinctes n’a été ajouté pour combler la chronologie.
+Résultat après l’enrichissement du 24 septembre 2026 : `16 131 148`. Un contrôle indépendant des 54 contours a vérifié leur fermeture, l’absence d’auto-intersection et l’inclusion de leur point de référence. Les liens ont été relus sur le fond ; aucun lien entre cultures andines distinctes n’a été ajouté pour combler la chronologie.
 
-Pour enrichir le corpus, ajouter une source spécifique pour chaque nouvelle assertion de date, de lieu ou de relation. Expliquer les fourchettes dans les deux langues, maintenir la convention astronomique, préférer une étape indépendante à une filiation supposée et documenter toute modification de l’année représentative. Une future couche de présence contemporaine ou de démographie nécessiterait un autre modèle et d’autres données.
+Pour enrichir le corpus, ajouter une source spécifique pour chaque nouvelle assertion de date, de lieu ou de relation. Expliquer les fourchettes dans les deux langues, maintenir la convention astronomique, préférer une étape indépendante à une filiation supposée et documenter toute modification de l’année représentative. Le mode **Majorités et présences** utilise son propre modèle et ses propres données ; l’ajout d’un jalon historique ne modifie pas ses estimations démographiques.

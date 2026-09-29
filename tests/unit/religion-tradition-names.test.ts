@@ -4,10 +4,12 @@ import { localizedName } from '../../lib/i18n';
 import { religionTraditionNames } from '../../lib/religions/tradition-names';
 import type { LocalizedName } from '../../lib/types';
 
-const history = JSON.parse(
-  readFileSync(new URL('../../public/data/religions/history.json', import.meta.url), 'utf8'),
-) as { traditions: { names: LocalizedName }[] };
-const publishedNames = history.traditions.map((tradition) => tradition.names);
+const publishedNames = ['history', 'coverage'].flatMap((dataset) => {
+  const data = JSON.parse(
+    readFileSync(new URL(`../../public/data/religions/${dataset}.json`, import.meta.url), 'utf8'),
+  ) as { traditions: { names: LocalizedName }[] };
+  return data.traditions.map((tradition) => tradition.names);
+});
 
 describe('religion interface category names', () => {
   it('translates every published tradition category into Arabic without mutating the source', () => {

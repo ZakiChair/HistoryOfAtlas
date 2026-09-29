@@ -1,0 +1,1865 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-28",
+  "policy": "Reviewed exact Appendix A present-day scope rows, joined through both source code and ISO3; no automatic identity-to-historical-frontier substitution. Natural Earth generalization and contested-border conventions remain visible source limitations. Coverage is deliberately partial.",
+  "mappings": [
+    {
+      "ccode": 6,
+      "sourceAbbrev": "PTR",
+      "sourceIso3": "PRI",
+      "geometryAdm0A3": "PRI",
+      "fromYear": 1860,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 50
+      },
+      "reviewNote": "Appendix A printed p. 50: Puerto Rico (6, PTR)                            1860-2015   present-day borders"
+    },
+    {
+      "ccode": 20,
+      "sourceAbbrev": "CAN",
+      "sourceIso3": "CAN",
+      "geometryAdm0A3": "CAN",
+      "fromYear": 1700,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population estimée à l’intérieur des frontières actuelles du Canada, y compris les territoires qui n’étaient pas encore administrés par la France, la Grande-Bretagne ou le Canada ; contour contemporain Natural Earth.",
+        "en": "Estimated population within present-day Canadian borders, including territories not yet under French, British or Canadian administration; modern Natural Earth outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 30
+      },
+      "reviewNote": "Appendix A p.30 explicitly specifies present-day borders for 1700–1866 and 1867–2015, including territories not yet under administration."
+    },
+    {
+      "ccode": 30,
+      "sourceAbbrev": "BER",
+      "sourceIso3": "BMU",
+      "geometryAdm0A3": "BMU",
+      "fromYear": 1870,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 28
+      },
+      "reviewNote": "Appendix A printed p. 28: Bermuda (30, BER)                                 1870-2015   present-day borders"
+    },
+    {
+      "ccode": 31,
+      "sourceAbbrev": "BHM",
+      "sourceIso3": "BHS",
+      "geometryAdm0A3": "BHS",
+      "fromYear": 1973,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 27
+      },
+      "reviewNote": "Appendix A printed p. 27: Bahamas (31, BHM)                                  1973-2015   present-day borders"
+    },
+    {
+      "ccode": 51,
+      "sourceAbbrev": "JAM",
+      "sourceIso3": "JAM",
+      "geometryAdm0A3": "JAM",
+      "fromYear": 1962,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 41
+      },
+      "reviewNote": "Appendix A printed p. 41: Jamaica (51, JAM)                                   1962-2015   present-day borders"
+    },
+    {
+      "ccode": 53,
+      "sourceAbbrev": "BAR",
+      "sourceIso3": "BRB",
+      "geometryAdm0A3": "BRB",
+      "fromYear": 1966,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 28
+      },
+      "reviewNote": "Appendix A printed p. 28: Barbados (53, BAR)                                1966-2015   present-day borders"
+    },
+    {
+      "ccode": 54,
+      "sourceAbbrev": "DMA",
+      "sourceIso3": "DMA",
+      "geometryAdm0A3": "DMA",
+      "fromYear": 1978,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 34
+      },
+      "reviewNote": "Appendix A printed p. 34: Dominica (54, DMA)         1978-2015   present-day borders"
+    },
+    {
+      "ccode": 55,
+      "sourceAbbrev": "GRN",
+      "sourceIso3": "GRD",
+      "geometryAdm0A3": "GRD",
+      "fromYear": 1974,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 38
+      },
+      "reviewNote": "Appendix A printed p. 38: Grenada (55, GRN)                                1974-2015   present-day borders"
+    },
+    {
+      "ccode": 56,
+      "sourceAbbrev": "SLU",
+      "sourceIso3": "LCA",
+      "geometryAdm0A3": "LCA",
+      "fromYear": 1979,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 51
+      },
+      "reviewNote": "Appendix A printed p. 51: Saint Lucia (56, SLU)                             1979-2015   present-day borders"
+    },
+    {
+      "ccode": 59,
+      "sourceAbbrev": "MST",
+      "sourceIso3": "MSR",
+      "geometryAdm0A3": "MSR",
+      "fromYear": 1886,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 46
+      },
+      "reviewNote": "Appendix A printed p. 46: Montserrat (59, MST)                        1886-2015   present-day borders"
+    },
+    {
+      "ccode": 80,
+      "sourceAbbrev": "BLZ",
+      "sourceIso3": "BLZ",
+      "geometryAdm0A3": "BLZ",
+      "fromYear": 1981,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 28
+      },
+      "reviewNote": "Appendix A printed p. 28: Belize (80, BLZ)                                  1981-2015   present-day borders"
+    },
+    {
+      "ccode": 90,
+      "sourceAbbrev": "GUA",
+      "sourceIso3": "GTM",
+      "geometryAdm0A3": "GTM",
+      "fromYear": 1839,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 38
+      },
+      "reviewNote": "Appendix A printed p. 38: Guatemala (90, GUA)                              1839-2015   present-day borders"
+    },
+    {
+      "ccode": 91,
+      "sourceAbbrev": "HON",
+      "sourceIso3": "HND",
+      "geometryAdm0A3": "HND",
+      "fromYear": 1838,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 39
+      },
+      "reviewNote": "Appendix A printed p. 39: Honduras (91, HON)                                  1838-2015   present-day borders"
+    },
+    {
+      "ccode": 92,
+      "sourceAbbrev": "SAL",
+      "sourceIso3": "SLV",
+      "geometryAdm0A3": "SLV",
+      "fromYear": 1841,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 35
+      },
+      "reviewNote": "Appendix A printed p. 35: El Salvador (92, SAL)                              1841-2015   present-day borders"
+    },
+    {
+      "ccode": 94,
+      "sourceAbbrev": "COS",
+      "sourceIso3": "CRI",
+      "geometryAdm0A3": "CRI",
+      "fromYear": 1838,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 32
+      },
+      "reviewNote": "Appendix A printed p. 32: Costa Rica (94, COS)                                 1838-2015   present-day borders"
+    },
+    {
+      "ccode": 95,
+      "sourceAbbrev": "PAN",
+      "sourceIso3": "PAN",
+      "geometryAdm0A3": "PAN",
+      "fromYear": 1903,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 49
+      },
+      "reviewNote": "Appendix A printed p. 49: Panama (95, PAN)                                   1903-2015   present-day borders"
+    },
+    {
+      "ccode": 110,
+      "sourceAbbrev": "GUY",
+      "sourceIso3": "GUY",
+      "geometryAdm0A3": "GUY",
+      "fromYear": 1966,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 38
+      },
+      "reviewNote": "Appendix A printed p. 38: Guyana (110, GUY)                                1966-2015   present-day borders"
+    },
+    {
+      "ccode": 115,
+      "sourceAbbrev": "SUR",
+      "sourceIso3": "SUR",
+      "geometryAdm0A3": "SUR",
+      "fromYear": 1975,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 54
+      },
+      "reviewNote": "Appendix A printed p. 54: Suriname (115, SUR)                               1975-2015   present-day borders"
+    },
+    {
+      "ccode": 165,
+      "sourceAbbrev": "URU",
+      "sourceIso3": "URY",
+      "geometryAdm0A3": "URY",
+      "fromYear": 1828,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 58
+      },
+      "reviewNote": "Appendix A printed p. 58: Uruguay (165, URU)                                  1828-2015   present-day borders"
+    },
+    {
+      "ccode": 221,
+      "sourceAbbrev": "MNC",
+      "sourceIso3": "MCO",
+      "geometryAdm0A3": "MCO",
+      "fromYear": 1860,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 45
+      },
+      "reviewNote": "Appendix A printed p. 45: Monaco (221, MNC)                                  1860-2015   present-day borders"
+    },
+    {
+      "ccode": 223,
+      "sourceAbbrev": "LIE",
+      "sourceIso3": "LIE",
+      "geometryAdm0A3": "LIE",
+      "fromYear": 1812,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Liechtenstein (223, LIE)                             1812-2015   present-day borders"
+    },
+    {
+      "ccode": 225,
+      "sourceAbbrev": "SWZ",
+      "sourceIso3": "CHE",
+      "geometryAdm0A3": "CHE",
+      "fromYear": 1816,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 54
+      },
+      "reviewNote": "Appendix A printed p. 54: Switzerland (225, SWZ)                            1816-2015   present-day borders"
+    },
+    {
+      "ccode": 317,
+      "sourceAbbrev": "SLO",
+      "sourceIso3": "SVK",
+      "geometryAdm0A3": "SVK",
+      "fromYear": 1993,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 53
+      },
+      "reviewNote": "Appendix A printed p. 53: Slovakia (317, SLO)                                 1993-2015   present-day borders"
+    },
+    {
+      "ccode": 331,
+      "sourceAbbrev": "SNM",
+      "sourceIso3": "SMR",
+      "geometryAdm0A3": "SMR",
+      "fromYear": 1900,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 51
+      },
+      "reviewNote": "Appendix A printed p. 51: San Marino (331, SNM)                             1900-2015   present-day borders"
+    },
+    {
+      "ccode": 338,
+      "sourceAbbrev": "MLT",
+      "sourceIso3": "MLT",
+      "geometryAdm0A3": "MLT",
+      "fromYear": 1964,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 44
+      },
+      "reviewNote": "Appendix A printed p. 44: Malta (338 MLT)                                      1964-2015    present-day borders"
+    },
+    {
+      "ccode": 339,
+      "sourceAbbrev": "ALB",
+      "sourceIso3": "ALB",
+      "geometryAdm0A3": "ALB",
+      "fromYear": 1912,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 26
+      },
+      "reviewNote": "Appendix A printed p. 26: Albania (339, ALB)                                   1912-2015   present-day borders"
+    },
+    {
+      "ccode": 343,
+      "sourceAbbrev": "MAC",
+      "sourceIso3": "MKD",
+      "geometryAdm0A3": "MKD",
+      "fromYear": 1993,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 43
+      },
+      "reviewNote": "Appendix A printed p. 43: Macedonia (343, MAC)                              1993-2015   present-day borders"
+    },
+    {
+      "ccode": 344,
+      "sourceAbbrev": "CRO",
+      "sourceIso3": "HRV",
+      "geometryAdm0A3": "HRV",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 33
+      },
+      "reviewNote": "Appendix A printed p. 33: Croatia (344, CRO)                                  1991-2015   present-day borders"
+    },
+    {
+      "ccode": 349,
+      "sourceAbbrev": "SLV",
+      "sourceIso3": "SVN",
+      "geometryAdm0A3": "SVN",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 53
+      },
+      "reviewNote": "Appendix A printed p. 53: Slovenia (349, SLV)                                 1991-2015   present-day borders"
+    },
+    {
+      "ccode": 366,
+      "sourceAbbrev": "EST",
+      "sourceIso3": "EST",
+      "geometryAdm0A3": "EST",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 35
+      },
+      "reviewNote": "Appendix A printed p. 35: Estonia (366, EST)                                 1991-2015   present-day borders"
+    },
+    {
+      "ccode": 367,
+      "sourceAbbrev": "LAT",
+      "sourceIso3": "LVA",
+      "geometryAdm0A3": "LVA",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Latvia (367, LAT)                                    1991-2015   present-day borders"
+    },
+    {
+      "ccode": 368,
+      "sourceAbbrev": "LIT",
+      "sourceIso3": "LTU",
+      "geometryAdm0A3": "LTU",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 43
+      },
+      "reviewNote": "Appendix A printed p. 43: Lithuania (368, LIT)                              1991-2015   present-day borders"
+    },
+    {
+      "ccode": 370,
+      "sourceAbbrev": "BLR",
+      "sourceIso3": "BLR",
+      "geometryAdm0A3": "BLR",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 28
+      },
+      "reviewNote": "Appendix A printed p. 28: Belarus (370, BLR)                                1991-2015   present-day borders"
+    },
+    {
+      "ccode": 395,
+      "sourceAbbrev": "ICE",
+      "sourceIso3": "ISL",
+      "geometryAdm0A3": "ISL",
+      "fromYear": 1944,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 39
+      },
+      "reviewNote": "Appendix A printed p. 39: Iceland (395, ICE)                                  1944-2015   present-day borders"
+    },
+    {
+      "ccode": 402,
+      "sourceAbbrev": "CAP",
+      "sourceIso3": "CPV",
+      "geometryAdm0A3": "CPV",
+      "fromYear": 1975,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 30
+      },
+      "reviewNote": "Appendix A printed p. 30: Cape Verde (402, CAP)                               1975-2015   present-day borders"
+    },
+    {
+      "ccode": 420,
+      "sourceAbbrev": "GAM",
+      "sourceIso3": "GMB",
+      "geometryAdm0A3": "GMB",
+      "fromYear": 1965,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 37
+      },
+      "reviewNote": "Appendix A printed p. 37: Gambia (420, GAM)                                    1965-2015   present-day borders"
+    },
+    {
+      "ccode": 432,
+      "sourceAbbrev": "MLI",
+      "sourceIso3": "MLI",
+      "geometryAdm0A3": "MLI",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 44
+      },
+      "reviewNote": "Appendix A printed p. 44: Mali (432, MLI)                                      1960-2015    present-day borders"
+    },
+    {
+      "ccode": 433,
+      "sourceAbbrev": "SEN",
+      "sourceIso3": "SEN",
+      "geometryAdm0A3": "SEN",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 52
+      },
+      "reviewNote": "Appendix A printed p. 52: Senegal (433, SEN)                                  1960-2015   present-day borders"
+    },
+    {
+      "ccode": 434,
+      "sourceAbbrev": "BEN",
+      "sourceIso3": "BEN",
+      "geometryAdm0A3": "BEN",
+      "fromYear": 1975,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 28
+      },
+      "reviewNote": "Appendix A printed p. 28: Benin (434, BEN)                                  1975-2015   present-day borders"
+    },
+    {
+      "ccode": 435,
+      "sourceAbbrev": "MAA",
+      "sourceIso3": "MRT",
+      "geometryAdm0A3": "MRT",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 44
+      },
+      "reviewNote": "Appendix A printed p. 44: Mauritania (435, MAA)                                 1960-2015   present-day borders"
+    },
+    {
+      "ccode": 436,
+      "sourceAbbrev": "NIR",
+      "sourceIso3": "NER",
+      "geometryAdm0A3": "NER",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 47
+      },
+      "reviewNote": "Appendix A printed p. 47: Niger (436, NIR)                                        1960-2015   present-day borders"
+    },
+    {
+      "ccode": 437,
+      "sourceAbbrev": "CDI",
+      "sourceIso3": "CIV",
+      "geometryAdm0A3": "CIV",
+      "fromYear": 1986,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 32
+      },
+      "reviewNote": "Appendix A printed p. 32: Côte d’Ivoire (437, CDI)                             1986-2015   present-day borders"
+    },
+    {
+      "ccode": 438,
+      "sourceAbbrev": "GUI",
+      "sourceIso3": "GIN",
+      "geometryAdm0A3": "GIN",
+      "fromYear": 1958,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 38
+      },
+      "reviewNote": "Appendix A printed p. 38: Guinea (438, GUI)                                1958-2015   present-day borders"
+    },
+    {
+      "ccode": 450,
+      "sourceAbbrev": "LBR",
+      "sourceIso3": "LBR",
+      "geometryAdm0A3": "LBR",
+      "fromYear": 1847,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Liberia (450, LBR)                                   1847-2015   present-day borders"
+    },
+    {
+      "ccode": 451,
+      "sourceAbbrev": "SIE",
+      "sourceIso3": "SLE",
+      "geometryAdm0A3": "SLE",
+      "fromYear": 1961,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 52
+      },
+      "reviewNote": "Appendix A printed p. 52: Sierra Leone (451, SIE)                             1961-2015   present-day borders"
+    },
+    {
+      "ccode": 452,
+      "sourceAbbrev": "GHA",
+      "sourceIso3": "GHA",
+      "geometryAdm0A3": "GHA",
+      "fromYear": 1957,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 38
+      },
+      "reviewNote": "Appendix A printed p. 38: Ghana (452, GHA)                                 1957-2015   present-day borders"
+    },
+    {
+      "ccode": 461,
+      "sourceAbbrev": "TOG",
+      "sourceIso3": "TGO",
+      "geometryAdm0A3": "TGO",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 55
+      },
+      "reviewNote": "Appendix A printed p. 55: Togo (461, TOG)                                     1960-2015   present-day borders"
+    },
+    {
+      "ccode": 471,
+      "sourceAbbrev": "CAO",
+      "sourceIso3": "CMR",
+      "geometryAdm0A3": "CMR",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 30
+      },
+      "reviewNote": "Appendix A printed p. 30: Cameroon (471, CAO)                                 1960-2015   present-day borders"
+    },
+    {
+      "ccode": 481,
+      "sourceAbbrev": "GAB",
+      "sourceIso3": "GAB",
+      "geometryAdm0A3": "GAB",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 36
+      },
+      "reviewNote": "Appendix A printed p. 36: Gabon (481, GAB)                                      1960-2015   present-day borders"
+    },
+    {
+      "ccode": 483,
+      "sourceAbbrev": "CHA",
+      "sourceIso3": "TCD",
+      "geometryAdm0A3": "TCD",
+      "fromYear": 1960,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 31
+      },
+      "reviewNote": "Appendix A printed p. 31: Chad (483, CHA)            1960-2015   present-day borders"
+    },
+    {
+      "ccode": 500,
+      "sourceAbbrev": "UGA",
+      "sourceIso3": "UGA",
+      "geometryAdm0A3": "UGA",
+      "fromYear": 1962,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 56
+      },
+      "reviewNote": "Appendix A printed p. 56: Uganda (500, UGA)                                    1962-2015   present-day borders"
+    },
+    {
+      "ccode": 501,
+      "sourceAbbrev": "KEN",
+      "sourceIso3": "KEN",
+      "geometryAdm0A3": "KEN",
+      "fromYear": 1963,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 41
+      },
+      "reviewNote": "Appendix A printed p. 41: Kenya (501 KEN)                                     1963-2015   present-day borders"
+    },
+    {
+      "ccode": 516,
+      "sourceAbbrev": "BUI",
+      "sourceIso3": "BDI",
+      "geometryAdm0A3": "BDI",
+      "fromYear": 1962,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 30
+      },
+      "reviewNote": "Appendix A printed p. 30: Burundi (516, BUI)                                  1962-2015   present-day borders"
+    },
+    {
+      "ccode": 517,
+      "sourceAbbrev": "RWA",
+      "sourceIso3": "RWA",
+      "geometryAdm0A3": "RWA",
+      "fromYear": 1962,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 51
+      },
+      "reviewNote": "Appendix A printed p. 51: Rwanda (517, RWA)                                 1962-2015   present-day borders"
+    },
+    {
+      "ccode": 522,
+      "sourceAbbrev": "DJI",
+      "sourceIso3": "DJI",
+      "geometryAdm0A3": "DJI",
+      "fromYear": 1977,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 34
+      },
+      "reviewNote": "Appendix A printed p. 34: Djibouti (522, DJI)        1977-2015   present-day borders"
+    },
+    {
+      "ccode": 531,
+      "sourceAbbrev": "ERI",
+      "sourceIso3": "ERI",
+      "geometryAdm0A3": "ERI",
+      "fromYear": 1993,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 35
+      },
+      "reviewNote": "Appendix A printed p. 35: Eritrea (531, ERI)                                 1993-2015   present-day borders"
+    },
+    {
+      "ccode": 540,
+      "sourceAbbrev": "ANG",
+      "sourceIso3": "AGO",
+      "geometryAdm0A3": "AGO",
+      "fromYear": 1975,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 26
+      },
+      "reviewNote": "Appendix A printed p. 26: Angola (540, ANG)                                    1975-2015   present-day borders"
+    },
+    {
+      "ccode": 551,
+      "sourceAbbrev": "ZAM",
+      "sourceIso3": "ZMB",
+      "geometryAdm0A3": "ZMB",
+      "fromYear": 1964,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 60
+      },
+      "reviewNote": "Appendix A printed p. 60: Zambia (551, ZAM)                                 1964-2015    present-day borders"
+    },
+    {
+      "ccode": 552,
+      "sourceAbbrev": "ZIM",
+      "sourceIso3": "ZWE",
+      "geometryAdm0A3": "ZWE",
+      "fromYear": 1980,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 60
+      },
+      "reviewNote": "Appendix A printed p. 60: Zimbabwe (552, ZIM)                                1980-2015   present-day borders"
+    },
+    {
+      "ccode": 553,
+      "sourceAbbrev": "MAW",
+      "sourceIso3": "MWI",
+      "geometryAdm0A3": "MWI",
+      "fromYear": 1964,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 44
+      },
+      "reviewNote": "Appendix A printed p. 44: Malawi (553, MAW)                                    1964-2015    present-day borders"
+    },
+    {
+      "ccode": 570,
+      "sourceAbbrev": "LES",
+      "sourceIso3": "LSO",
+      "geometryAdm0A3": "LSO",
+      "fromYear": 1966,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Lesotho (570, LES)                                   1966-2015   present-day borders"
+    },
+    {
+      "ccode": 571,
+      "sourceAbbrev": "BOT",
+      "sourceIso3": "BWA",
+      "geometryAdm0A3": "BWA",
+      "fromYear": 1966,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 29
+      },
+      "reviewNote": "Appendix A printed p. 29: Botswana (571, BOT)                                 1966-2015   present-day borders"
+    },
+    {
+      "ccode": 572,
+      "sourceAbbrev": "SWA",
+      "sourceIso3": "SWZ",
+      "geometryAdm0A3": "SWZ",
+      "fromYear": 1968,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 54
+      },
+      "reviewNote": "Appendix A printed p. 54: Swaziland (572, SWA)                              1968-2015   present-day borders"
+    },
+    {
+      "ccode": 591,
+      "sourceAbbrev": "SEY",
+      "sourceIso3": "SYC",
+      "geometryAdm0A3": "SYC",
+      "fromYear": 1976,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 52
+      },
+      "reviewNote": "Appendix A printed p. 52: Seychelles (591, SEY)                               1976-2015   present-day borders"
+    },
+    {
+      "ccode": 615,
+      "sourceAbbrev": "ALG",
+      "sourceIso3": "DZA",
+      "geometryAdm0A3": "DZA",
+      "fromYear": 1962,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 26
+      },
+      "reviewNote": "Appendix A printed p. 26: Algeria (615, ALG)                                   1962-2015   present-day borders"
+    },
+    {
+      "ccode": 616,
+      "sourceAbbrev": "TUN",
+      "sourceIso3": "TUN",
+      "geometryAdm0A3": "TUN",
+      "fromYear": 1956,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 55
+      },
+      "reviewNote": "Appendix A printed p. 55: Tunisia (616, TUN)                                  1956-2015   present-day borders"
+    },
+    {
+      "ccode": 620,
+      "sourceAbbrev": "LIB",
+      "sourceIso3": "LBY",
+      "geometryAdm0A3": "LBY",
+      "fromYear": 1951,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Libya (620, LIB)                                     1951-2015   present-day borders"
+    },
+    {
+      "ccode": 690,
+      "sourceAbbrev": "KUW",
+      "sourceIso3": "KWT",
+      "geometryAdm0A3": "KWT",
+      "fromYear": 1961,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Kuwait (690, KUW)                                    1961-2015   present-day borders"
+    },
+    {
+      "ccode": 692,
+      "sourceAbbrev": "BAH",
+      "sourceIso3": "BHR",
+      "geometryAdm0A3": "BHR",
+      "fromYear": 1971,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 27
+      },
+      "reviewNote": "Appendix A printed p. 27: Bahrain (692, BAH)                                 1971-2015   present-day borders"
+    },
+    {
+      "ccode": 694,
+      "sourceAbbrev": "QAT",
+      "sourceIso3": "QAT",
+      "geometryAdm0A3": "QAT",
+      "fromYear": 1971,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 50
+      },
+      "reviewNote": "Appendix A printed p. 50: Qatar (694, QAT)                                1971-2015   present-day borders"
+    },
+    {
+      "ccode": 698,
+      "sourceAbbrev": "OMA",
+      "sourceIso3": "OMN",
+      "geometryAdm0A3": "OMN",
+      "fromYear": 1971,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 48
+      },
+      "reviewNote": "Appendix A printed p. 48: Oman (698, OMA)                                        1971-2015   present-day borders"
+    },
+    {
+      "ccode": 702,
+      "sourceAbbrev": "TAJ",
+      "sourceIso3": "TJK",
+      "geometryAdm0A3": "TJK",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 55
+      },
+      "reviewNote": "Appendix A printed p. 55: Tajikistan (702, TAJ)                               1991-2015   present-day borders"
+    },
+    {
+      "ccode": 703,
+      "sourceAbbrev": "KYR",
+      "sourceIso3": "KGZ",
+      "geometryAdm0A3": "KGZ",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Kyrgyzstan (703, KYR)                                1991-2015   present-day borders"
+    },
+    {
+      "ccode": 704,
+      "sourceAbbrev": "UZB",
+      "sourceIso3": "UZB",
+      "geometryAdm0A3": "UZB",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 58
+      },
+      "reviewNote": "Appendix A printed p. 58: Uzbekistan (704, UZB)                               1991-2015   present-day borders"
+    },
+    {
+      "ccode": 705,
+      "sourceAbbrev": "KZK",
+      "sourceIso3": "KAZ",
+      "geometryAdm0A3": "KAZ",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 41
+      },
+      "reviewNote": "Appendix A printed p. 41: Kazakhstan (705, KZK)                               1991-2015   present-day borders"
+    },
+    {
+      "ccode": 712,
+      "sourceAbbrev": "MON",
+      "sourceIso3": "MNG",
+      "geometryAdm0A3": "MNG",
+      "fromYear": 1911,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 45
+      },
+      "reviewNote": "Appendix A printed p. 45: Mongolia (712, MON)                                1911-2015   present-day borders"
+    },
+    {
+      "ccode": 771,
+      "sourceAbbrev": "BNG",
+      "sourceIso3": "BGD",
+      "geometryAdm0A3": "BGD",
+      "fromYear": 1971,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 28
+      },
+      "reviewNote": "Appendix A printed p. 28: Bangladesh (771, BNG)                             1971-2015   present-day borders"
+    },
+    {
+      "ccode": 775,
+      "sourceAbbrev": "MYA",
+      "sourceIso3": "MMR",
+      "geometryAdm0A3": "MMR",
+      "fromYear": 1989,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 46
+      },
+      "reviewNote": "Appendix A printed p. 46: Myanmar (775, MYA)                          1989-2015   present-day borders"
+    },
+    {
+      "ccode": 780,
+      "sourceAbbrev": "SRI",
+      "sourceIso3": "LKA",
+      "geometryAdm0A3": "LKA",
+      "fromYear": 1972,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 53
+      },
+      "reviewNote": "Appendix A printed p. 53: Sri Lanka (780, SRI)                                1972-2015   present-day borders"
+    },
+    {
+      "ccode": 781,
+      "sourceAbbrev": "MAD",
+      "sourceIso3": "MDV",
+      "geometryAdm0A3": "MDV",
+      "fromYear": 1965,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 44
+      },
+      "reviewNote": "Appendix A printed p. 44: Maldives (781, MAD)                                  1965-2015    present-day borders"
+    },
+    {
+      "ccode": 790,
+      "sourceAbbrev": "NEP",
+      "sourceIso3": "NPL",
+      "geometryAdm0A3": "NPL",
+      "fromYear": 1800,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 46
+      },
+      "reviewNote": "Appendix A printed p. 46: Nepal (790, NEP)                            1800-2015   present-day borders"
+    },
+    {
+      "ccode": 800,
+      "sourceAbbrev": "THI",
+      "sourceIso3": "THA",
+      "geometryAdm0A3": "THA",
+      "fromYear": 1949,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 55
+      },
+      "reviewNote": "Appendix A printed p. 55: Thailand (800, THI)                                 1949-2015   present-day borders"
+    },
+    {
+      "ccode": 811,
+      "sourceAbbrev": "CAM",
+      "sourceIso3": "KHM",
+      "geometryAdm0A3": "KHM",
+      "fromYear": 1989,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 30
+      },
+      "reviewNote": "Appendix A printed p. 30: Cambodia (811, CAM)                                 1989-2015   present-day borders"
+    },
+    {
+      "ccode": 812,
+      "sourceAbbrev": "LAO",
+      "sourceIso3": "LAO",
+      "geometryAdm0A3": "LAO",
+      "fromYear": 1953,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 42
+      },
+      "reviewNote": "Appendix A printed p. 42: Laos (812, LAO)                                      1953-2015   present-day borders"
+    },
+    {
+      "ccode": 830,
+      "sourceAbbrev": "SIN",
+      "sourceIso3": "SGP",
+      "geometryAdm0A3": "SGP",
+      "fromYear": 1965,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 52
+      },
+      "reviewNote": "Appendix A printed p. 52: Singapore (830, SIN)                                1965-2015   present-day borders"
+    },
+    {
+      "ccode": 835,
+      "sourceAbbrev": "BRU",
+      "sourceIso3": "BRN",
+      "geometryAdm0A3": "BRN",
+      "fromYear": 1984,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 29
+      },
+      "reviewNote": "Appendix A printed p. 29: Brunei (835, BRU)                                   1984-2015   present-day borders"
+    },
+    {
+      "ccode": 860,
+      "sourceAbbrev": "ETM",
+      "sourceIso3": "TLS",
+      "geometryAdm0A3": "TLS",
+      "fromYear": 2002,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 35
+      },
+      "reviewNote": "Appendix A printed p. 35: East Timor (860, ETM)                              2002-2015   present-day borders"
+    },
+    {
+      "ccode": 935,
+      "sourceAbbrev": "VAN",
+      "sourceIso3": "VUT",
+      "geometryAdm0A3": "VUT",
+      "fromYear": 1980,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 58
+      },
+      "reviewNote": "Appendix A printed p. 58: Vanuatu (935, VAN)                                  1980-2015   present-day borders"
+    },
+    {
+      "ccode": 946,
+      "sourceAbbrev": "KIR",
+      "sourceIso3": "KIR",
+      "geometryAdm0A3": "KIR",
+      "fromYear": 1979,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 41
+      },
+      "reviewNote": "Appendix A printed p. 41: Kiribati (946, KIR)                                 1979-2015   present-day borders"
+    },
+    {
+      "ccode": 947,
+      "sourceAbbrev": "TUV",
+      "sourceIso3": "TUV",
+      "geometryAdm0A3": "TUV",
+      "fromYear": 1978,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 56
+      },
+      "reviewNote": "Appendix A printed p. 56: Tuvalu (947, TUV)                                    1978-2015   present-day borders"
+    },
+    {
+      "ccode": 950,
+      "sourceAbbrev": "FIJ",
+      "sourceIso3": "FJI",
+      "geometryAdm0A3": "FJI",
+      "fromYear": 1970,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 36
+      },
+      "reviewNote": "Appendix A printed p. 36: Fiji (950, FIJ)                                       1970-2015   present-day borders"
+    },
+    {
+      "ccode": 955,
+      "sourceAbbrev": "TON",
+      "sourceIso3": "TON",
+      "geometryAdm0A3": "TON",
+      "fromYear": 1970,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 55
+      },
+      "reviewNote": "Appendix A printed p. 55: Tonga (955, TON)                                    1970-2015   present-day borders"
+    },
+    {
+      "ccode": 970,
+      "sourceAbbrev": "NAU",
+      "sourceIso3": "NRU",
+      "geometryAdm0A3": "NRU",
+      "fromYear": 1968,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 46
+      },
+      "reviewNote": "Appendix A printed p. 46: Nauru (970, NAU)                            1968-2015   present-day borders"
+    },
+    {
+      "ccode": 985,
+      "sourceAbbrev": "GUM",
+      "sourceIso3": "GUM",
+      "geometryAdm0A3": "GUM",
+      "fromYear": 1900,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 38
+      },
+      "reviewNote": "Appendix A printed p. 38: Guam (985, GUM)                                  1900-2015   present-day borders"
+    },
+    {
+      "ccode": 986,
+      "sourceAbbrev": "PAL",
+      "sourceIso3": "PLW",
+      "geometryAdm0A3": "PLW",
+      "fromYear": 1990,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 48
+      },
+      "reviewNote": "Appendix A printed p. 48: Palau (986, PAL)                                       1990-2015   present-day borders"
+    },
+    {
+      "ccode": 990,
+      "sourceAbbrev": "WSM",
+      "sourceIso3": "WSM",
+      "geometryAdm0A3": "WSM",
+      "fromYear": 1997,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 51
+      },
+      "reviewNote": "Appendix A printed p. 51: Samoa (990, WSM)                                  1997-2015   present-day borders"
+    },
+    {
+      "ccode": 1062,
+      "sourceAbbrev": "AGL",
+      "sourceIso3": "AIA",
+      "geometryAdm0A3": "AIA",
+      "fromYear": 1980,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 26
+      },
+      "reviewNote": "Appendix A printed p. 26: Anguilla (1062, AGL)                                 1980-2015   present-day borders"
+    },
+    {
+      "ccode": 1069,
+      "sourceAbbrev": "ARU",
+      "sourceIso3": "ABW",
+      "geometryAdm0A3": "ABW",
+      "fromYear": 1986,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du territoire défini par RCS selon ses frontières contemporaines (« present-day borders »), représentées par Natural Earth ; il ne s’agit pas de frontières politiques reconstituées pour cette année.",
+        "en": "Population of the RCS territory in its present-day borders, represented by Natural Earth; these are not reconstructed political borders for the observation year."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 27
+      },
+      "reviewNote": "Appendix A printed p. 27: Aruba (1069, ARU)                                  1986-2015   present-day borders"
+    },
+    {
+      "ccode": 220,
+      "sourceAbbrev": "FRN",
+      "sourceIso3": "FRA",
+      "geometryAdm0A3": "FRA-metropole",
+      "fromYear": 1918,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population de la France métropolitaine dans ses frontières contemporaines selon RCS, Corse et Alsace-Lorraine comprises ; Algérie et territoires ultramarins exclus. Contour de référence Natural Earth.",
+        "en": "Population of metropolitan France within the present-day borders specified by RCS, including Corsica and Alsace-Lorraine, excluding Algeria and overseas territories. Natural Earth reference outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 36
+      },
+      "reviewNote": "1918–1961 and 1962–2015: present-day borders of metropole only. Pinned Natural Earth FRA polygons 0 (Corsica), 1 (mainland), 2 (Oléron); all overseas polygons excluded.",
+      "name": {
+        "fr": "France métropolitaine",
+        "en": "Metropolitan France"
+      },
+      "geometryParts": [
+        {
+          "adm0A3": "FRA",
+          "polygonIndices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "ccode": 710,
+      "sourceAbbrev": "CHN",
+      "sourceIso3": "CHN",
+      "geometryAdm0A3": "CHN-HKG-MAC",
+      "fromYear": 1999,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du périmètre RCS pour la Chine de 1999 à 2015, Hong Kong, Macao et Tibet compris, Taïwan exclu ; union des contours de référence CHN, HKG et MAC de Natural Earth.",
+        "en": "Population within the RCS China scope for 1999–2015, including Hong Kong, Macao and Tibet, excluding Taiwan; combined Natural Earth CHN, HKG and MAC reference outlines."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 31
+      },
+      "reviewNote": "1999–2015: present-day borders; incl. Hong Kong, Macau, Tibet. CHN alone would omit two explicitly included territories.",
+      "geometryParts": [
+        {
+          "adm0A3": "CHN"
+        },
+        {
+          "adm0A3": "HKG"
+        },
+        {
+          "adm0A3": "MAC"
+        }
+      ]
+    },
+    {
+      "ccode": 750,
+      "sourceAbbrev": "IND",
+      "sourceIso3": "IND",
+      "geometryAdm0A3": "IND",
+      "fromYear": 1947,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du périmètre RCS pour l’Inde depuis 1947, Sikkim et anciennes colonies françaises et portugaises compris ; Pakistan, Bangladesh et Birmanie exclus. Contour de référence généralisé Natural Earth.",
+        "en": "Population within the RCS India scope from 1947, including Sikkim and former French and Portuguese colonies, excluding Pakistan, Bangladesh and Burma. Generalized Natural Earth reference outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 39
+      },
+      "reviewNote": "1947–2015: present-day borders; not incl. Pakistan, Bangladesh, Burma; also incl. Sikkim, Portuguese and French Indian colonies. Reference outline does not adjudicate disputed boundaries."
+    },
+    {
+      "ccode": 365,
+      "sourceAbbrev": "RUS",
+      "sourceIso3": "RUS",
+      "geometryAdm0A3": "RUS-no-Crimea",
+      "fromYear": 1991,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population de la Fédération de Russie dans le périmètre RCS de 1991 à 2015, Crimée exclue. Le polygone criméen du contour Natural Earth est explicitement retiré.",
+        "en": "Population of the Russian Federation within the RCS 1991–2015 scope, excluding Crimea. The Crimean polygon in the Natural Earth outline is explicitly removed."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 51
+      },
+      "reviewNote": "1991–2015: present-day borders of Russian Federation only; not incl. Crimea. Pinned Natural Earth RUS polygon 100 bounds [32.508008,44.387598,36.575,46.219573] represents Crimea and is excluded.",
+      "geometryParts": [
+        {
+          "adm0A3": "RUS",
+          "excludePolygonIndices": [
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "ccode": 2,
+      "sourceAbbrev": "USA",
+      "sourceIso3": "USA",
+      "geometryAdm0A3": "USA",
+      "fromYear": 1898,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population des États-Unis continentaux, de l’Alaska et d’Hawaï dans le périmètre RCS depuis 1898, populations autochtones comprises ; dépendances exclues. Contour contemporain Natural Earth.",
+        "en": "Population of the continental United States, Alaska and Hawaii within the RCS scope from 1898, including Native Americans, excluding dependencies. Modern Natural Earth outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 58
+      },
+      "reviewNote": "1898–2015: combined present-day CONUS, Alaska, Hawaii (including Native Americans)."
+    },
+    {
+      "ccode": 140,
+      "sourceAbbrev": "BRA",
+      "sourceIso3": "BRA",
+      "geometryAdm0A3": "BRA",
+      "fromYear": 1903,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du Brésil dans les frontières contemporaines définies par RCS depuis 1903, Acre compris ; contour de référence Natural Earth.",
+        "en": "Population of Brazil within the present-day borders defined by RCS from 1903, including Acre; Natural Earth reference outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 29
+      },
+      "reviewNote": "1903–2015: present-day borders; incl. Acré."
+    },
+    {
+      "ccode": 200,
+      "sourceAbbrev": "UKG",
+      "sourceIso3": "GBR",
+      "geometryAdm0A3": "GBR",
+      "fromYear": 1921,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population de l’Angleterre, du pays de Galles, de l’Écosse et de l’Irlande du Nord dans le périmètre RCS depuis 1921 ; île de Man, îles Anglo-Normandes et République d’Irlande exclues. Contour Natural Earth.",
+        "en": "Population of England, Wales, Scotland and Northern Ireland within the RCS scope from 1921, excluding the Isle of Man, Channel Islands and Republic of Ireland. Natural Earth outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 57
+      },
+      "reviewNote": "1921–2015: combined present-day borders of England, Wales, Scotland, Northern Ireland; not incl. Isle of Man, Channel Islands, Republic of Ireland."
+    },
+    {
+      "ccode": 850,
+      "sourceAbbrev": "INS",
+      "sourceIso3": "IDN",
+      "geometryAdm0A3": "IDN",
+      "fromYear": 2002,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population de l’Indonésie dans le périmètre RCS de 2002 à 2015, Nouvelle-Guinée occidentale comprise, Timor oriental exclu ; contour de référence Natural Earth.",
+        "en": "Population of Indonesia within the RCS 2002–2015 scope, including Western New Guinea, excluding East Timor; Natural Earth reference outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 40
+      },
+      "reviewNote": "2002–2015: present-day borders; incl. West Irian; not incl. East Timor."
+    },
+    {
+      "ccode": 475,
+      "sourceAbbrev": "NIG",
+      "sourceIso3": "NGA",
+      "geometryAdm0A3": "NGA",
+      "fromYear": 2009,
+      "toYear": 2015,
+      "populationScope": {
+        "fr": "Population du Nigéria dans ses frontières de l’époque selon RCS ; seuls 2009–2015 sont retenus, après le transfert de Bakassi au Cameroun en 2008. Contour de référence Natural Earth.",
+        "en": "Population of Nigeria within its contemporary boundaries according to RCS; only 2009–2015 is retained, after the 2008 transfer of Bakassi to Cameroon. Natural Earth reference outline."
+      },
+      "scopeReference": {
+        "url": "https://www.thearda.com/ARDA/pdf/originalCodebooks/RCS%20Demographics%20v2.0%20Codebook.pdf",
+        "page": 47
+      },
+      "reviewNote": "1960–2015: contemporaneous borders. Retain only years after the 14 August 2008 Bakassi authority transfer, documented by the United Nations.",
+      "additionalReferences": [
+        {
+          "label": "UN Secretary-General, Bakassi transfer, 14 August 2008",
+          "url": "https://www.un.org/sg/en/content/former-secretary-general/statements/2008-08-14/secretary-generals-message-the-occasion-of-the-ceremony-for-the-withdrawal-and-transfer-of-authority-the-bakassi-peninsula"
+        }
+      ]
+    }
+  ]
+}

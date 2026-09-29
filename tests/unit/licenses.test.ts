@@ -140,6 +140,28 @@ describe('licence manifest', () => {
     expect(() => buildLicenseManifest(data)).toThrow(/incomplete/);
   });
 
+  it('preserves religion coverage source terms separately from the editorial corpus licence', () => {
+    const data = inputs();
+    data.religionCoverage = [
+      {
+        id: 'religion-coverage-rcs-dem-2',
+        name: 'RCS-Dem 2.0',
+        url: 'https://www.thearda.com/data-archive?fid=RCSDEM2',
+        license: 'ARDA data use terms',
+        licenseUrl: 'https://www.thearda.com/data-archive?fid=RCSDEM2&tab=3',
+        scope: 'Selected religious composition estimates',
+        attribution: 'Davis Brown and Patrick James; ARDA. Selected and transformed data.',
+      },
+    ];
+    const manifest = buildLicenseManifest(data);
+    expect(manifest.datasets.find((source) => source.id === data.religionCoverage![0].id)).toEqual(
+      data.religionCoverage[0],
+    );
+    expect(manifest.religions.corpus.license).toBe('CC BY 4.0');
+    data.religionCoverage[0].attribution = '';
+    expect(() => buildLicenseManifest(data)).toThrow(/requires terms, URL and attribution/);
+  });
+
   it('reports every untraceable source', () => {
     const broken = inputs();
     broken.resources.sources[0]!.license = ' ';

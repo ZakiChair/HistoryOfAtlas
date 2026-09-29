@@ -55,6 +55,10 @@ jobs:
         run: pnpm data:resources:check
       - name: Polity capitals, dated populations and source coverage
         run: pnpm data:polities:check
+      - name: Religious composition and reviewed geographic scope
+        run: pnpm data:religions:check
+      - name: Religious composition importer invariants
+        run: python3 -m unittest discover -s pipeline/religions -p 'test_*.py'
       - name: First-load data per layer (warning only)
         run: node scripts/measure-data.mjs
       # Keep last: the ignore list lives in a runner-local pnpm-workspace.yaml, which must not

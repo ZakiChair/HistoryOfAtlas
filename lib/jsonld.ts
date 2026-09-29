@@ -305,8 +305,17 @@ export function licenseDatasetParts(datasets: LicenseDataset[], origin: string):
   for (const dataset of ordered) {
     if (dataset.id.startsWith('font-') || NOT_DATA_SOURCES.has(dataset.id)) continue;
     const use = isUse(dataset);
-    const url = use ? `${new URL(dataset.url).origin}/` : dataset.url;
-    const name = (use ? dataset.name.split(' · ')[0]! : dataset.name)
+    // Country outlines can cite a pinned GitHub download instead of the landing page.
+    const naturalEarth =
+      dataset.licenseUrl === 'https://www.naturalearthdata.com/about/terms-of-use/';
+    const url = naturalEarth
+      ? 'https://www.naturalearthdata.com/'
+      : use
+        ? `${new URL(dataset.url).origin}/`
+        : dataset.url;
+    const name = (
+      naturalEarth ? 'Natural Earth' : use ? dataset.name.split(' · ')[0]! : dataset.name
+    )
       // The geography pipeline labels Historical Basemaps in French; this data is English.
       .replace(/ et contributeurs$/, ' and contributors');
     const license =

@@ -729,7 +729,7 @@ for (const door of [
   },
   {
     id: 'religion',
-    query: { religions: '1', religion: 'buddhism', y: '-449' },
+    query: { religions: '1', rview: 'history', religion: 'buddhism', y: '-449' },
     panel: '[data-testid="religions-layer-toggle"][aria-pressed="true"]',
   },
 ]) {

@@ -4115,6 +4115,160 @@ ul {
   font-size: 11px;
   font-weight: 600;
 }
+
+.religion-view-switch {
+  display: flex;
+  gap: 5px;
+  margin: 0 0 18px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.religion-view-switch button {
+  flex: 1;
+  padding: 9px 6px;
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.religion-view-switch button[aria-pressed='true'] {
+  background: var(--gold);
+  color: var(--ink);
+}
+.religion-coverage-key,
+.religion-shares,
+.religion-coverage-regions {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+}
+.religion-coverage-key li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.religion-coverage-swatch {
+  flex: 0 0 27px;
+  height: 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  background: #c8a561;
+}
+.religion-coverage-swatch.hatched {
+  background: repeating-linear-gradient(135deg, #c8a561 0 5px, #6caecc 5px 7px, #c8a561 7px 12px);
+}
+.religion-coverage-swatch.neutral {
+  background: #738a95;
+}
+.religion-coverage-colours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding: 12px 0;
+  margin: 12px 0;
+  list-style: none;
+  border-block: 1px solid var(--line);
+}
+.religion-coverage-colours li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.religion-coverage-filter {
+  display: grid;
+  gap: 7px;
+  margin: 20px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.religion-coverage-filter select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  color: var(--paper);
+  background: var(--panel);
+}
+.religion-color-chip {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  background: var(--religion-color, #a0b1b9);
+}
+.religion-coverage-regions button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+  font-size: 12px;
+}
+.religion-coverage-regions button > span:nth-child(2) {
+  flex: 1;
+}
+.religion-coverage-regions small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.religion-coverage-majority {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+}
+.religion-shares li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.religion-share-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--paper);
+  font-size: 12px;
+}
+.religion-share-heading > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.religion-share-heading strong {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.religion-share-track {
+  height: 5px;
+  margin-top: 10px;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+.religion-share-track > span {
+  display: block;
+  height: 100%;
+  background: var(--religion-color);
+}
+.religion-coverage-note {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
 .religion-display-options {
   display: flex;
   flex-wrap: wrap;

@@ -39,12 +39,11 @@ test('Arabic layers and help stay readable and accessible', async ({ page }, tes
   await expect(page.getByTestId('resource-filter-gold')).toContainText('الذهب');
   await page.screenshot({ path: testInfo.outputPath('arabic-resources.png') });
   await page.getByTestId('religions-legend-toggle').click();
-  const religions = page.getByTestId('religions-panel');
-  await expect(religions).toBeVisible();
-  await expect(religions.getByRole('heading', { level: 2 })).toHaveText('الأديان وانتشارها');
-  await expect(page.getByTestId('religions-routes-toggle')).toHaveAccessibleName('المسارات');
-  await expect(page.getByTestId('religions-areas-toggle')).toHaveAccessibleName('المناطق الموثقة');
-  await expect(page.getByTestId('religion-filter-christianity')).toContainText('التقاليد المسيحية');
+  await expect(page.getByTestId('religions-panel')).toBeVisible();
+  await expect(page.getByTestId('religions-panel').locator('h2')).toContainText(/[\u0600-\u06ff]/);
+  await expect(page.locator('.religion-coverage-colours')).not.toContainText(
+    'Christian traditions',
+  );
   await page.screenshot({ path: testInfo.outputPath('arabic-religions.png') });
   await expect
     .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))

@@ -58,6 +58,7 @@ function showReligion(result: Result) {
   atlas.patchState({
     religionsVisible: true,
     religionFilter: tradition,
+    religionView: 'history',
     playing: false,
     campaignPlaying: false,
     entityFollowing: false,
