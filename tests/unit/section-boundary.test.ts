@@ -1,8 +1,8 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import SectionFallback, { type SectionArea } from '../../components/ui/SectionFallback';
-import { translateCopy } from '../../lib/i18n';
+import { loadEditorialCopy, translateCopy } from '../../lib/i18n';
 import { additionalCopy } from '../../lib/i18n/copy';
 import { LOCALES } from '../../lib/types';
 
@@ -12,6 +12,8 @@ const render = (props: Parameters<typeof SectionFallback>[0]): string =>
 const AREAS: SectionArea[] = ['map', 'layers', 'notebook', 'detail'];
 
 describe('contained rendering error', () => {
+  beforeAll(() => loadEditorialCopy());
+
   it.each(AREAS)('announces the failing %s and offers to try again', (area) => {
     const markup = render({ area, error: new Error('layer source missing'), retry: () => {} });
     expect(markup).toContain('role="alert"');

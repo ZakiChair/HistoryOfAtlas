@@ -1,21 +1,39 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import ts from 'typescript';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it, vi } from 'vitest';
 import {
   dictionaries,
   EVENT_TYPE_LABELS,
   REGION_LABELS,
   PRECISION_LABELS,
   interpolate,
+  loadEditorialCopy,
   localizedName,
   localizedLanguage,
   localeDirection,
   translate,
   translateCopy,
 } from '../../lib/i18n';
-import { additionalCopy, type AdditionalLocale } from '../../lib/i18n/copy';
+import { additionalCopy } from '../../lib/i18n/copy';
+import { labelCopy, type AdditionalLocale } from '../../lib/i18n/labels';
 import { LOCALES } from '../../lib/types';
+
+/** Both halves of the split catalog: control labels ship with the shell, sentences follow. */
+const catalog: Record<string, Record<AdditionalLocale, string>> = {
+  ...labelCopy,
+  ...additionalCopy,
+};
+
+/** English strings the i18n module translates while it loads, before any catalog can arrive. */
+function shellLabels(): Set<string> {
+  return new Set([
+    ...Object.values(dictionaries.en),
+    ...Object.values(EVENT_TYPE_LABELS).map((label) => label.en),
+    ...Object.values(REGION_LABELS).map((label) => label.en),
+    ...Object.values(PRECISION_LABELS).map((label) => label.en),
+  ]);
+}
 
 function componentFiles(directory: string): string[] {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -25,11 +43,13 @@ function componentFiles(directory: string): string[] {
 }
 
 describe('multilingual UI', () => {
+  beforeAll(() => loadEditorialCopy());
+
   it('provides every additional locale for every catalog entry', () => {
     const locales = LOCALES.filter(
       (locale): locale is AdditionalLocale => locale !== 'en' && locale !== 'fr',
     );
-    for (const [english, translations] of Object.entries(additionalCopy)) {
+    for (const [english, translations] of Object.entries(catalog)) {
       for (const locale of locales) {
         expect(translations[locale], `${locale}: ${english}`).toBeTruthy();
       }
@@ -37,22 +57,33 @@ describe('multilingual UI', () => {
   });
 
   it('covers every keyed label, event type, region and date precision', () => {
-    const labels = [
-      ...Object.values(dictionaries.en),
-      ...Object.values(EVENT_TYPE_LABELS).map((label) => label.en),
-      ...Object.values(REGION_LABELS).map((label) => label.en),
-      ...Object.values(PRECISION_LABELS).map((label) => label.en),
-    ];
-    for (const label of labels) {
-      expect(additionalCopy[label], `Missing catalog entry: ${label}`).toBeDefined();
+    for (const label of shellLabels()) {
+      expect(labelCopy[label], `Missing catalog entry: ${label}`).toBeDefined();
       for (const locale of ['de', 'es', 'zh', 'ru', 'ar'] as const) {
-        expect(additionalCopy[label][locale], `${locale}: ${label}`).toBeTruthy();
+        expect(labelCopy[label][locale], `${locale}: ${label}`).toBeTruthy();
       }
     }
     for (const locale of LOCALES) {
       expect(Object.keys(dictionaries[locale])).toEqual(Object.keys(dictionaries.en));
       expect(translate(locale, 'year')).toBeTruthy();
     }
+  });
+
+  it('carries the control labels, and only those, in the initial shell', () => {
+    expect(new Set(Object.keys(labelCopy))).toEqual(shellLabels());
+    const shared = Object.keys(additionalCopy).filter((english) => english in labelCopy);
+    expect(shared).toEqual([]);
+  });
+
+  it('translates the controls before the editorial sentences are downloaded', async () => {
+    vi.resetModules();
+    const i18n = await import('../../lib/i18n');
+    const sentence = 'Hide events in this period';
+    expect(i18n.translate('de', 'year')).toBe(labelCopy.Year!.de);
+    expect(i18n.translateCopy('de', 'Année', 'Year')).toBe(labelCopy.Year!.de);
+    expect(i18n.translateCopy('de', 'Masquer', sentence)).toBe(sentence);
+    await i18n.loadEditorialCopy();
+    expect(i18n.translateCopy('de', 'Masquer', sentence)).toBe(additionalCopy[sentence]!.de);
   });
 
   it('covers all editorial copy actually used by components', () => {
@@ -68,7 +99,7 @@ describe('multilingual UI', () => {
         if (ts.isCallExpression(node)) {
           const call = node.expression.getText(source);
           const english = node.arguments[call === 't' ? 1 : call === 'translateCopy' ? 2 : -1];
-          if (english && ts.isStringLiteralLike(english) && !additionalCopy[english.text]) {
+          if (english && ts.isStringLiteralLike(english) && !catalog[english.text]) {
             missing.push(`${file}: ${english.text}`);
           }
         }
@@ -80,7 +111,7 @@ describe('multilingual UI', () => {
   });
 
   it('preserves named interpolation placeholders in all translations', () => {
-    for (const [english, translations] of Object.entries(additionalCopy)) {
+    for (const [english, translations] of Object.entries(catalog)) {
       const placeholders = [...english.matchAll(/\{\w+\}/g)].map(([value]) => value).sort();
       for (const text of Object.values(translations)) {
         expect([...text.matchAll(/\{\w+\}/g)].map(([value]) => value).sort()).toEqual(placeholders);

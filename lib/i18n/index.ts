@@ -1,9 +1,9 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect, useSyncExternalStore } from 'react';
 import { useAtlasStore } from '../store';
 import { LOCALES } from '../types';
-import { additionalCopy } from './copy';
+import { labelCopy, type AdditionalLocale } from './labels';
 import type { DatePrecision, EventType, Locale, LocalizedName, RegionId } from '../types';
 
 const baseDictionaries = {
@@ -135,19 +135,54 @@ export function interpolate(template: string, values: TranslationValues = {}): s
   );
 }
 
-export function translateCopy(
+type EditorialCopy = Record<string, Record<AdditionalLocale, string>>;
+
+let editorialCopy: EditorialCopy | null = null;
+let editorialRequest: Promise<void> | null = null;
+const editorialListeners = new Set<() => void>();
+
+/**
+ * Downloads the editorial sentences once per visit. Control labels ship with the interface, so
+ * only the longer explanatory copy waits for this, and only outside English and French.
+ */
+export function loadEditorialCopy(): Promise<void> {
+  editorialRequest ??= import('./copy').then(({ additionalCopy }) => {
+    editorialCopy = additionalCopy;
+    for (const listener of editorialListeners) listener();
+  });
+  return editorialRequest;
+}
+
+function subscribeToEditorialCopy(listener: () => void): () => void {
+  editorialListeners.add(listener);
+  return () => {
+    editorialListeners.delete(listener);
+  };
+}
+
+function formatCopy(
   locale: Locale,
   french: string,
   english: string,
-  values?: TranslationValues,
+  values: TranslationValues | undefined,
+  editorial: EditorialCopy | null,
 ): string {
   const text =
     locale === 'fr'
       ? french
       : locale === 'en'
         ? english
-        : (additionalCopy[english]?.[locale] ?? english);
+        : (labelCopy[english]?.[locale] ?? editorial?.[english]?.[locale] ?? english);
   return interpolate(text, values);
+}
+
+export function translateCopy(
+  locale: Locale,
+  french: string,
+  english: string,
+  values?: TranslationValues,
+): string {
+  return formatCopy(locale, french, english, values, editorialCopy);
 }
 
 export const dictionaries = Object.fromEntries(
@@ -225,12 +260,20 @@ export function localeDirection(locale: string): 'ltr' | 'rtl' {
 export function useTranslation() {
   const locale = useAtlasStore((state) => state.locale);
   const setLocale = useAtlasStore((state) => state.setLocale);
+  const editorial = useSyncExternalStore(
+    subscribeToEditorialCopy,
+    () => editorialCopy,
+    () => null,
+  );
+  useEffect(() => {
+    if (locale !== 'fr' && locale !== 'en') void loadEditorialCopy();
+  }, [locale]);
   const t = useCallback(
     (keyOrFrench: TranslationKey | string, english?: string, values?: TranslationValues): string =>
       english !== undefined
-        ? translateCopy(locale, keyOrFrench, english, values)
+        ? formatCopy(locale, keyOrFrench, english, values, editorial)
         : translate(locale, keyOrFrench as TranslationKey),
-    [locale],
+    [locale, editorial],
   );
   return { locale, setLocale, t, dir: localeDirection(locale) };
 }
