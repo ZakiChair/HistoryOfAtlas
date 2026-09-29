@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { splitReligionCoverage, type ReligionCoverageDataset } from '../../lib/religions/coverage';
 
 // Deliberately synthetic shares test the presentation without asserting historical facts.
 const text = (fr: string, en = fr) => ({ fr, en });
@@ -94,9 +95,23 @@ const fixture = {
   ],
 };
 
+const split = splitReligionCoverage(fixture as ReligionCoverageDataset);
+
 test.beforeEach(async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.route('**/data/religions/coverage.json', (route) => route.fulfill({ json: fixture }));
+  await page.route('**/data/religions/coverage-index.json', (route) =>
+    route.fulfill({ json: split.index }),
+  );
+  await page.route('**/data/religions/coverage/*.json', (route) => {
+    const regionId = decodeURIComponent(
+      new URL(route.request().url()).pathname
+        .split('/')
+        .pop()!
+        .replace(/\.json$/, ''),
+    );
+    const region = split.regions.find((row) => row.regionId === regionId);
+    return region ? route.fulfill({ json: region }) : route.fulfill({ status: 404 });
+  });
 });
 
 test('rounded percentages preserve the side of majority and hatching thresholds', async ({
@@ -190,7 +205,8 @@ test('coverage loads on activation and a filled polygon opens its detail without
     });
   }).toPass({ timeout: 15_000 });
   await expect(territory).not.toBeAttached();
-  expect(requests.filter((url) => url.endsWith('/coverage.json'))).toHaveLength(1);
+  expect(requests.filter((url) => url.endsWith('/coverage-index.json'))).toHaveLength(1);
+  expect(requests.filter((url) => url.endsWith('/coverage/test-region.json'))).toHaveLength(1);
   expect(requests.filter((url) => url.endsWith('/history.json'))).toHaveLength(0);
   await expect
     .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
@@ -201,8 +217,8 @@ test('invalid coverage data can be retried and the tradition filter remains usab
   page,
 }) => {
   let attempts = 0;
-  await page.route('**/data/religions/coverage.json', (route) =>
-    route.fulfill({ json: ++attempts === 1 ? { version: 0 } : fixture }),
+  await page.route('**/data/religions/coverage-index.json', (route) =>
+    route.fulfill({ json: ++attempts === 1 ? { version: 0 } : split.index }),
   );
   await page.goto('/?lang=fr&y=1900&religions=1&battles=0');
   await expect(page.getByTestId('religions-status').getByRole('alert')).toBeVisible();

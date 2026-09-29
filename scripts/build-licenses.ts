@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { buildLicenseManifest, licenseIssues, type LicenseInputs } from '../lib/licenses';
 import { REPOSITORY_URL } from '../lib/seo';
-import type { ReligionCoverageDataset } from '../lib/religions/coverage';
+import type { ReligionCoverageIndex } from '../lib/religions/coverage';
 
 const root = new URL('../', import.meta.url);
 const OUTPUT = new URL('public/data/licenses.json', root);
@@ -53,7 +53,7 @@ export function readProjectLicenses(): LicenseInputs['project'] {
 export function readLicenseInputs(): LicenseInputs {
   const resources = readJson<LicenseInputs['resources']>('public/data/resources/sites.json');
   const religions = readJson<LicenseInputs['religions']>('public/data/religions/history.json');
-  const coverage = readJson<ReligionCoverageDataset>('public/data/religions/coverage.json');
+  const coverage = readJson<ReligionCoverageIndex>('public/data/religions/coverage-index.json');
   const geography = readJson<LicenseInputs['geography']>('public/geo/manifest.json');
   const events = readJson<LicenseInputs['events']>('public/data/manifest.json');
   const cdb90 = readJson<LicenseInputs['cdb90']>('data/curated/battle-cdb90-source.json');

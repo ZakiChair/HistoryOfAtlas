@@ -66,7 +66,7 @@ This downloads cached raw sources into `data/raw`, normalizes dates and records,
 - `pnpm data:licenses`: regenerate `public/data/licenses.json` from the resource sources, religion references, geography manifest, CDB90 record and event sources.
 - `pnpm data:polities`: rebuild capital and population profiles offline from committed source extracts and reviewed entity mappings.
 - `pnpm data:polities:check`: verify every profile and the coverage report against those inputs without network access.
-- `pnpm data:religions`: rebuild the RCS and Seshat composition fragments from committed extracts and publish the combined coverage dataset and report; [RCS](pipeline/religions/README.md) and [Seshat](pipeline/religions/SESHAT.md) document separate reacquisition workflows.
+- `pnpm data:religions`: rebuild the RCS and Seshat composition fragments from committed extracts and publish the coverage index, per-region details and report; [RCS](pipeline/religions/README.md) and [Seshat](pipeline/religions/SESHAT.md) document separate reacquisition workflows.
 - `pnpm data:religions:check`: verify both fragments and the published religious-composition dataset offline.
 
 After rebuilding the core events, run `pnpm data:battles` to refresh the independent battle catalogue. Core event publication preserves existing battle and resource artifacts. Reproduce the authored GLBs in an isolated Blender process with `blender --background --factory-startup --python scripts/generate-battle-models.py -- --all`; equipment evidence and model constraints are documented in [the unit guide](docs/battle-units.md).

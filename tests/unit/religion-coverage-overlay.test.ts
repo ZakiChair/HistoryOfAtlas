@@ -1,6 +1,7 @@
 import { beforeEach, expect, it, vi } from 'vitest';
 import type { LayerSpecification, Map as MapInstance } from 'maplibre-gl';
 import { coverageFixture } from '../fixtures/religion-coverage';
+import { splitReligionCoverage } from '../../lib/religions/coverage';
 import { createInitialAtlasState } from '../../lib/store';
 import { useReligionStore } from '../../lib/religions/store';
 import { useReligionCoverageStore } from '../../lib/religions/coverage-store';
@@ -9,8 +10,12 @@ import { startReligionOverlay } from '../../components/map/religion-overlay';
 import { religionFixture } from '../fixtures/religions';
 
 const load = vi.hoisted(() => vi.fn());
+const regionLoad = vi.hoisted(() => vi.fn());
 const historyLoad = vi.hoisted(() => vi.fn());
-vi.mock('../../lib/religions/coverage-client', () => ({ getReligionCoverageDataset: load }));
+vi.mock('../../lib/religions/coverage-client', () => ({
+  getReligionCoverageIndex: load,
+  getReligionCoverageRegion: regionLoad,
+}));
 vi.mock('../../lib/religions/client', () => ({ getReligionDataset: historyLoad }));
 vi.mock('../../components/map/religion-sprites', async (original) => ({
   ...(await original<typeof import('../../components/map/religion-sprites')>()),
@@ -64,14 +69,25 @@ function mapDouble() {
   };
 }
 const enabled = () => ({ ...createInitialAtlasState(), religionsVisible: true, year: 2000 });
+const indexOf = (dataset: ReturnType<typeof coverageFixture>) =>
+  splitReligionCoverage(dataset).index;
+const regionsOf = (dataset: ReturnType<typeof coverageFixture>) =>
+  splitReligionCoverage(dataset).regions;
 beforeEach(() => {
-  load.mockReset().mockResolvedValue(coverageFixture());
+  load.mockReset().mockImplementation(() => Promise.resolve(indexOf(coverageFixture())));
+  regionLoad
+    .mockReset()
+    .mockImplementation((regionId: string) =>
+      Promise.resolve(regionsOf(coverageFixture()).find((row) => row.regionId === regionId)),
+    );
   historyLoad.mockReset().mockResolvedValue(religionFixture);
   useReligionStore.setState({ panelOpen: false, selected: null });
   useReligionCoverageStore.setState({
     status: 'idle',
     dataset: null,
     selected: null,
+    detail: null,
+    detailStatus: 'idle',
     visibleObservations: [],
     revision: 0,
   });
@@ -84,7 +100,7 @@ it('loads only the selected mode and retains each geometry source when switching
   await vi.waitFor(() => expect(useReligionCoverageStore.getState().status).toBe('ready'));
   expect(historyLoad).not.toHaveBeenCalled();
   const original = sources.get('religion-coverage');
-  useReligionCoverageStore.getState().select(coverageFixture().observations[0]);
+  useReligionCoverageStore.getState().select(indexOf(coverageFixture()).observations[0]);
   overlay.update({ ...enabled(), religionView: 'history' });
   await vi.waitFor(() => expect(useReligionStore.getState().status).toBe('ready'));
   expect(useReligionStore.getState().panelOpen).toBe(true);
@@ -104,12 +120,12 @@ it('loads only the selected mode and retains each geometry source when switching
 it('keeps a fifteen-year reference dated and removes a selection excluded by the filter', async () => {
   const dataset = coverageFixture();
   dataset.snapshotMaxAge = 15;
-  load.mockResolvedValue(dataset);
+  load.mockResolvedValue(indexOf(dataset));
   const { map } = mapDouble();
   const overlay = startReligionCoverageOverlay(map);
   overlay.update(enabled());
   await vi.waitFor(() => expect(useReligionCoverageStore.getState().status).toBe('ready'));
-  useReligionCoverageStore.getState().select(dataset.observations[0]);
+  useReligionCoverageStore.getState().select(indexOf(dataset).observations[0]);
   overlay.update({ ...enabled(), year: 2015 });
   expect(useReligionCoverageStore.getState().selected?.time).toEqual({
     kind: 'snapshot',
@@ -183,7 +199,7 @@ it('shows both substantial religions with disjoint hatch colours even at catalog
     { traditionId: 'b', share: 0.3567 },
     { traditionId: 'none', share: 0.1504 },
   ];
-  load.mockResolvedValue(dataset);
+  load.mockResolvedValue(indexOf(dataset));
   const { map, layers, filters, calls } = mapDouble();
   const overlay = startReligionCoverageOverlay(map);
   overlay.update(enabled());
@@ -224,7 +240,7 @@ it('shows both substantial religions with disjoint hatch colours even at catalog
 });
 
 it('does not reopen hidden coverage when its request resolves and supports retry', async () => {
-  let resolve!: (value: ReturnType<typeof coverageFixture>) => void;
+  let resolve!: (value: ReturnType<typeof indexOf>) => void;
   load.mockReturnValueOnce(
     new Promise((done) => {
       resolve = done;
@@ -234,7 +250,7 @@ it('does not reopen hidden coverage when its request resolves and supports retry
   const overlay = startReligionCoverageOverlay(map);
   overlay.update(enabled());
   overlay.update({ ...enabled(), religionView: 'history' });
-  resolve(coverageFixture());
+  resolve(indexOf(coverageFixture()));
   await vi.waitFor(() => expect(useReligionCoverageStore.getState().status).toBe('ready'));
   for (const layer of layers.values()) expect(layer.layout?.visibility).toBe('none');
   expect(useReligionCoverageStore.getState().selected).toBeNull();
@@ -256,7 +272,7 @@ it('uses a seamless power-of-two texture for three substantial religions with ev
     { traditionId: 'b', share: 0.3 },
     { traditionId: 'c', share: 0.3 },
   ];
-  load.mockResolvedValue(dataset);
+  load.mockResolvedValue(indexOf(dataset));
   const { map, layers, filters, calls } = mapDouble();
   const overlay = startReligionCoverageOverlay(map);
   overlay.update(enabled());
@@ -280,5 +296,61 @@ it('uses a seamless power-of-two texture for three substantial religions with ev
     if (texture.data[offset + 3])
       colours.add(Array.from(texture.data.slice(offset, offset + 3)).join(','));
   expect([...colours].sort()).toEqual(['0,0,255', '0,255,0', '255,0,0']);
+  overlay.dispose();
+});
+
+it('loads the region detail once, keeps it across entries and retries a failure', async () => {
+  const dataset = coverageFixture();
+  dataset.observations.push({
+    ...dataset.observations[0],
+    id: 'new',
+    time: { kind: 'snapshot', year: 2005 },
+  });
+  const split = splitReligionCoverage(dataset);
+  load.mockResolvedValue(split.index);
+  const fetched = new Set<string>();
+  regionLoad.mockImplementation((regionId: string) => {
+    fetched.add(regionId);
+    return Promise.resolve(split.regions.find((row) => row.regionId === regionId));
+  });
+  const { map } = mapDouble();
+  const overlay = startReligionCoverageOverlay(map);
+  overlay.update(enabled());
+  await vi.waitFor(() => expect(useReligionCoverageStore.getState().status).toBe('ready'));
+  const store = useReligionCoverageStore.getState();
+  store.select(split.index.observations[0]);
+  await vi.waitFor(() =>
+    expect(useReligionCoverageStore.getState().detail?.shares).toHaveLength(2),
+  );
+  useReligionCoverageStore.getState().select(split.index.observations[1]);
+  await vi.waitFor(() => expect(useReligionCoverageStore.getState().detail?.id).toBe('new'));
+  expect([...fetched]).toEqual(['r']);
+
+  regionLoad.mockRejectedValueOnce(new Error('offline'));
+  useReligionCoverageStore.getState().select(split.index.observations[0]);
+  await vi.waitFor(() => expect(useReligionCoverageStore.getState().detailStatus).toBe('error'));
+  useReligionCoverageStore.getState().retryDetail();
+  await vi.waitFor(() => expect(useReligionCoverageStore.getState().detailStatus).toBe('ready'));
+  overlay.dispose();
+});
+
+it('ignores a region response that arrives after the selection changed', async () => {
+  let resolve!: (value: unknown) => void;
+  regionLoad.mockReturnValueOnce(
+    new Promise((done) => {
+      resolve = done;
+    }),
+  );
+  const split = splitReligionCoverage(coverageFixture());
+  const { map } = mapDouble();
+  const overlay = startReligionCoverageOverlay(map);
+  overlay.update(enabled());
+  await vi.waitFor(() => expect(useReligionCoverageStore.getState().status).toBe('ready'));
+  useReligionCoverageStore.getState().select(split.index.observations[0]);
+  useReligionCoverageStore.getState().select(null);
+  resolve(split.regions[0]);
+  await Promise.resolve();
+  expect(useReligionCoverageStore.getState().detail).toBeNull();
+  expect(useReligionCoverageStore.getState().detailStatus).toBe('idle');
   overlay.dispose();
 });

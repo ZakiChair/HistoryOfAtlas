@@ -1,12 +1,12 @@
 import type { FeatureCollection } from 'geojson';
 import type { ExpressionSpecification, Map as MapInstance, MapLayerMouseEvent } from 'maplibre-gl';
 import type { AtlasState } from '@/lib/store';
-import { getReligionCoverageDataset } from '@/lib/religions/coverage-client';
+import { getReligionCoverageIndex } from '@/lib/religions/coverage-client';
 import {
   religionCoverageAt,
   religionCoverageClasses,
-  type ReligionCoverageDataset,
-  type ReligionCoverageObservation,
+  type ReligionCoverageEntry,
+  type ReligionCoverageIndex,
 } from '@/lib/religions/coverage';
 import { publishReligionCoverage, useReligionCoverageStore } from '@/lib/religions/coverage-store';
 import { useReligionStore } from '@/lib/religions/store';
@@ -48,14 +48,14 @@ function hatchImage(colors: string[]) {
 /** One immutable geometry source; time and filters only change style expressions. */
 export function startReligionCoverageOverlay(map: MapInstance) {
   let state: AtlasState | undefined;
-  let dataset: ReligionCoverageDataset | undefined;
+  let dataset: ReligionCoverageIndex | undefined;
   let installed = false,
     loading = false,
     disposed = false;
   let renderKey = '';
   const layerIds: string[] = [],
     images: string[] = [];
-  let byGeometry = new Map<string, ReligionCoverageObservation>();
+  let byGeometry = new Map<string, ReligionCoverageEntry>();
   const active = () => Boolean(state?.religionsVisible && state.religionView === 'coverage');
   const selection = () => {
     if (installed)
@@ -92,17 +92,12 @@ export function startReligionCoverageOverlay(map: MapInstance) {
       const classification = religionCoverageClasses(dataset, row);
       const majority =
         classification.majority &&
-        (!state.religionFilter || classification.majority.traditionId === state.religionFilter)
+        (!state.religionFilter || classification.majority === state.religionFilter)
           ? classification.majority
           : null;
-      color.push(
-        row.geometryId,
-        majority ? traditions.get(majority.traditionId)!.color : '#879196',
-      );
+      color.push(row.geometryId, majority ? traditions.get(majority)!.color : '#879196');
       opacity.push(row.geometryId, majority ? (state.theme === 'light' ? 0.48 : 0.55) : 0.2);
-      const minorities = classification.substantial
-        .filter((part) => !filter || part.traditionId === filter)
-        .map((part) => part.traditionId);
+      const minorities = classification.substantial.filter((id) => !filter || id === filter);
       if (minorities.length) {
         const pattern = hatchId(minorities);
         const ids = hatches.get(pattern) ?? [];
@@ -143,7 +138,7 @@ export function startReligionCoverageOverlay(map: MapInstance) {
     loading = true;
     useReligionCoverageStore.setState({ status: 'loading', error: null });
     try {
-      dataset = await getReligionCoverageDataset();
+      dataset = await getReligionCoverageIndex();
       if (disposed) return;
       const data: FeatureCollection = {
         type: 'FeatureCollection',
@@ -171,9 +166,7 @@ export function startReligionCoverageOverlay(map: MapInstance) {
       const traditions = new Map(dataset.traditions.map((row) => [row.id, row]));
       const patterns = new Map<string, string[]>();
       for (const observation of dataset.observations) {
-        const minorities = religionCoverageClasses(dataset, observation)
-          .substantial.map((part) => part.traditionId)
-          .sort();
+        const minorities = religionCoverageClasses(dataset, observation).substantial.sort();
         if (minorities.length) patterns.set(hatchId(minorities), minorities);
         // Filtering a tradition displays just its own bands, with no source rewrite.
         for (const id of minorities) patterns.set(hatchId([id]), [id]);
@@ -265,7 +258,12 @@ export function startReligionCoverageOverlay(map: MapInstance) {
       const wasActive = active();
       state = next;
       if (!active() && wasActive) {
-        useReligionCoverageStore.setState({ selected: null, visibleObservations: [] });
+        useReligionCoverageStore.setState({
+          selected: null,
+          visibleObservations: [],
+          detail: null,
+          detailStatus: 'idle',
+        });
         if (!next.religionsVisible) useReligionStore.getState().setPanelOpen(false);
         leave();
         renderKey = '';
@@ -286,6 +284,8 @@ export function startReligionCoverageOverlay(map: MapInstance) {
         status: 'idle',
         selected: null,
         visibleObservations: [],
+        detail: null,
+        detailStatus: 'idle',
       });
     },
   };

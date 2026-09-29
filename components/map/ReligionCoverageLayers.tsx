@@ -11,7 +11,7 @@ import { useReligionCoverageStore } from '@/lib/religions/coverage-store';
 import {
   religionCoverageAt,
   religionCoverageClasses,
-  type ReligionCoverageObservation,
+  type ReligionCoverageEntry,
   type ReligionCoverageShare,
 } from '@/lib/religions/coverage';
 import { religionCoverageText, type ReligionCoverageCopyKey } from '@/lib/religions/coverage-i18n';
@@ -25,8 +25,8 @@ import ReligionViewSwitch from './ReligionViewSwitch';
 const colorStyle = (color: string): CSSProperties =>
   ({ '--religion-color': color }) as CSSProperties;
 
-function observationDate(observation: ReligionCoverageObservation, year: number, locale: Locale) {
-  const time = observation.time;
+function observationDate(entry: Pick<ReligionCoverageEntry, 'time'>, year: number, locale: Locale) {
+  const time = entry.time;
   return time.kind === 'snapshot'
     ? religionCoverageText(locale, time.year === year ? 'estimate' : 'datedReference').replace(
         '{year}',
@@ -61,17 +61,20 @@ export default function ReligionCoverageLayers({
   const filter = useAtlasStore((state) => state.religionFilter);
   const panelOpen = useReligionStore((state) => state.panelOpen);
   // Named fields only: the store also carries a retry revision, which must not redraw the panel.
-  const { status, dataset, visibleObservations, selected, retry, select } =
+  const { status, dataset, visibleObservations, selected, detail, detailStatus, retry, select } =
     useReligionCoverageStore(
       useShallow((state) => ({
         status: state.status,
         dataset: state.dataset,
         visibleObservations: state.visibleObservations,
         selected: state.selected,
+        detail: state.detail,
+        detailStatus: state.detailStatus,
         retry: state.retry,
         select: state.select,
       })),
     );
+  const retryDetail = useReligionCoverageStore((state) => state.retryDetail);
   const heading = useRef<HTMLHeadingElement>(null);
   const body = useRef<HTMLDivElement>(null);
   const t = (key: ReligionCoverageCopyKey) => religionCoverageText(locale, key);
@@ -82,13 +85,17 @@ export default function ReligionCoverageLayers({
     [dataset, year, range],
   );
   const classes = dataset && selected ? religionCoverageClasses(dataset, selected) : null;
-  const majority = dataset?.traditions.find((item) => item.id === classes?.majority?.traditionId);
+  const majority = dataset?.traditions.find((item) => item.id === classes?.majority);
   const selectedGeometry = dataset?.geometries.find((item) => item.id === selected?.geometryId);
   const sourceIds = new Set([
-    ...(selected?.sourceIds ?? []),
+    ...(detail?.sourceIds ?? []),
     ...(selectedGeometry?.sourceIds ?? []),
-    ...(selected?.shares.flatMap((share) => share.sourceIds ?? []) ?? []),
+    ...(detail?.shares.flatMap((share) => share.sourceIds ?? []) ?? []),
   ]);
+  const regionNames = useMemo(
+    () => new Map((dataset?.regions ?? []).map((row) => [row.id, row.name])),
+    [dataset],
+  );
   const percent = useMemo(
     () => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 1 }),
     [locale],
@@ -99,8 +106,8 @@ export default function ReligionCoverageLayers({
         dataset
           ? visibleObservations.flatMap((row) => {
               const groups = religionCoverageClasses(dataset, row);
-              return [groups.majority, ...groups.substantial].flatMap((part) =>
-                part && (!filter || part.traditionId === filter) ? [part.traditionId] : [],
+              return [groups.majority, ...groups.substantial].flatMap((id) =>
+                id && (!filter || id === filter) ? [id] : [],
               );
             })
           : [],
@@ -116,17 +123,7 @@ export default function ReligionCoverageLayers({
   const lastReferenceYear = Math.max(...referenceYears);
   const traditions = useMemo(
     () =>
-      dataset?.traditions.filter((item) =>
-        all.some((row) =>
-          row.shares.some(
-            (part) =>
-              part.traditionId === item.id &&
-              (part.share !== undefined
-                ? part.share >= 0.2
-                : ['majority', 'substantial'].includes(part.prevalence!)),
-          ),
-        ),
-      ) ?? [],
+      dataset?.traditions.filter((item) => all.some((row) => row.present.includes(item.id))) ?? [],
     [dataset, all],
   );
   const regions = useMemo(
@@ -134,9 +131,12 @@ export default function ReligionCoverageLayers({
       visibleObservations
         .slice()
         .sort((a, b) =>
-          religionLabel(a.name, locale).localeCompare(religionLabel(b.name, locale), locale),
+          religionLabel(regionNames.get(a.regionId)!, locale).localeCompare(
+            religionLabel(regionNames.get(b.regionId)!, locale),
+            locale,
+          ),
         ),
-    [visibleObservations, locale],
+    [visibleObservations, regionNames, locale],
   );
 
   useEffect(() => {
@@ -197,7 +197,11 @@ export default function ReligionCoverageLayers({
         >
           <div className="religion-card-heading">
             <h2 id={`${panelId}-heading`} ref={heading} tabIndex={-1}>
-              {selected ? <Localized value={selected.name} locale={locale} /> : t('title')}
+              {selected ? (
+                <Localized value={regionNames.get(selected.regionId)!} locale={locale} />
+              ) : (
+                t('title')
+              )}
             </h2>
             <button
               type="button"
@@ -238,77 +242,97 @@ export default function ReligionCoverageLayers({
                     t('noMajority')
                   )}
                 </p>
-                <h3>{t('shares')}</h3>
-                <ul className="religion-shares">
-                  {selected.shares
-                    .slice()
-                    .sort((a, b) => shareOrder(b) - shareOrder(a))
-                    .map((part) => {
-                      const tradition = dataset.traditions.find(
-                        (item) => item.id === part.traditionId,
-                      )!;
-                      const substantial = classes?.substantial.some(
-                        (item) => item.traditionId === part.traditionId,
-                      );
-                      return (
-                        <li key={part.traditionId} style={colorStyle(tradition.color)}>
-                          <div className="religion-share-heading">
-                            <span>
-                              <span className="religion-color-chip" aria-hidden="true" />
-                              <Localized
-                                value={religionTraditionNames(tradition.names)}
-                                locale={locale}
-                              />
-                            </span>
-                            <strong>
-                              {part.share !== undefined
-                                ? formatShare(part.share, percent)
-                                : t(part.prevalence!)}
-                            </strong>
-                          </div>
-                          {part.share !== undefined && (
-                            <div className="religion-share-track" aria-hidden="true">
-                              <span style={{ width: `${part.share * 100}%` }} />
-                            </div>
-                          )}
-                          {part.share === undefined && (
-                            <p className="source-note">{t('qualitative')}</p>
-                          )}
-                          {tradition.kind !== 'religion' ? (
-                            <p className="source-note">{t(tradition.kind)}</p>
-                          ) : (
-                            substantial && <p className="source-note">{t('substantial')}</p>
-                          )}
-                          {part.note && (
-                            <Localized
-                              as="p"
-                              className="source-note"
-                              value={part.note}
-                              locale={locale}
-                            />
-                          )}
-                        </li>
-                      );
-                    })}
-                </ul>
-                <h3>{t('scope')}</h3>
-                <Localized as="p" value={selected.populationScope} locale={locale} />
-                {selected.note && (
-                  <Localized as="p" className="source-note" value={selected.note} locale={locale} />
+                {detailStatus === 'loading' && (
+                  <p role="status" className="source-note">
+                    {t('detailLoading')}
+                  </p>
                 )}
-                <h3>{religionText(locale, 'sources')}</h3>
-                <ul className="religion-sources">
-                  {dataset.sources
-                    .filter((source) => sourceIds.has(source.id))
-                    .map((source) => (
-                      <li key={source.id}>
-                        <a href={source.url} target="_blank" rel="noopener noreferrer">
-                          {source.title}
-                          <ArrowUpRight size={13} aria-hidden="true" />
-                        </a>
-                      </li>
-                    ))}
-                </ul>
+                {detailStatus === 'error' && (
+                  <p role="alert" className="source-note">
+                    {t('detailError')}{' '}
+                    <button type="button" onClick={retryDetail}>
+                      {religionText(locale, 'retry')}
+                    </button>
+                  </p>
+                )}
+                {detail && (
+                  <>
+                    <h3>{t('shares')}</h3>
+                    <ul className="religion-shares">
+                      {detail.shares
+                        .slice()
+                        .sort((a, b) => shareOrder(b) - shareOrder(a))
+                        .map((part) => {
+                          const tradition = dataset.traditions.find(
+                            (item) => item.id === part.traditionId,
+                          )!;
+                          const substantial = classes?.substantial.includes(part.traditionId);
+                          return (
+                            <li key={part.traditionId} style={colorStyle(tradition.color)}>
+                              <div className="religion-share-heading">
+                                <span>
+                                  <span className="religion-color-chip" aria-hidden="true" />
+                                  <Localized
+                                    value={religionTraditionNames(tradition.names)}
+                                    locale={locale}
+                                  />
+                                </span>
+                                <strong>
+                                  {part.share !== undefined
+                                    ? formatShare(part.share, percent)
+                                    : t(part.prevalence!)}
+                                </strong>
+                              </div>
+                              {part.share !== undefined && (
+                                <div className="religion-share-track" aria-hidden="true">
+                                  <span style={{ width: `${part.share * 100}%` }} />
+                                </div>
+                              )}
+                              {part.share === undefined && (
+                                <p className="source-note">{t('qualitative')}</p>
+                              )}
+                              {tradition.kind !== 'religion' ? (
+                                <p className="source-note">{t(tradition.kind)}</p>
+                              ) : (
+                                substantial && <p className="source-note">{t('substantial')}</p>
+                              )}
+                              {part.note && (
+                                <Localized
+                                  as="p"
+                                  className="source-note"
+                                  value={part.note}
+                                  locale={locale}
+                                />
+                              )}
+                            </li>
+                          );
+                        })}
+                    </ul>
+                    <h3>{t('scope')}</h3>
+                    <Localized as="p" value={detail.populationScope} locale={locale} />
+                    {detail.note && (
+                      <Localized
+                        as="p"
+                        className="source-note"
+                        value={detail.note}
+                        locale={locale}
+                      />
+                    )}
+                    <h3>{religionText(locale, 'sources')}</h3>
+                    <ul className="religion-sources">
+                      {dataset.sources
+                        .filter((source) => sourceIds.has(source.id))
+                        .map((source) => (
+                          <li key={source.id}>
+                            <a href={source.url} target="_blank" rel="noopener noreferrer">
+                              {source.title}
+                              <ArrowUpRight size={13} aria-hidden="true" />
+                            </a>
+                          </li>
+                        ))}
+                    </ul>
+                  </>
+                )}
               </>
             ) : (
               <>
@@ -385,9 +409,7 @@ export default function ReligionCoverageLayers({
                 <ul className="religion-coverage-regions">
                   {regions.map((row) => {
                     const group = dataset ? religionCoverageClasses(dataset, row).majority : null;
-                    const tradition = dataset?.traditions.find(
-                      (item) => item.id === group?.traditionId,
-                    );
+                    const tradition = dataset?.traditions.find((item) => item.id === group);
                     return (
                       <li key={row.id}>
                         <button
@@ -401,7 +423,7 @@ export default function ReligionCoverageLayers({
                             aria-hidden="true"
                           />
                           <span>
-                            <Localized value={row.name} locale={locale} />
+                            <Localized value={regionNames.get(row.regionId)!} locale={locale} />
                             <small>{observationDate(row, horizon, locale)}</small>
                           </span>
                           <ArrowUpRight size={13} aria-hidden="true" />

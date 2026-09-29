@@ -31,9 +31,10 @@ const LAYERS = [
     budgetGzipBytes: 52_000,
   },
   {
-    label: 'Religions (dated population coverage, on activation)',
-    files: ['data/religions/coverage.json'],
-    budgetGzipBytes: 1_500_000,
+    label: 'Religions (dated population coverage index, on activation)',
+    files: ['data/religions/coverage-index.json'],
+    // 474.2 kB measured on 29 September 2026; budget is the measure plus 5 % rounded up to 5 kB.
+    budgetGzipBytes: 500_000,
   },
 ];
 

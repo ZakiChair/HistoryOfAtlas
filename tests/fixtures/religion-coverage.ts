@@ -1,4 +1,4 @@
-import type { ReligionCoverageDataset } from '../../lib/religions/coverage';
+import { splitReligionCoverage, type ReligionCoverageDataset } from '../../lib/religions/coverage';
 
 const text = { fr: 'Zone', en: 'Area' };
 export function coverageFixture(): ReligionCoverageDataset {
@@ -45,3 +45,7 @@ export function coverageFixture(): ReligionCoverageDataset {
     ],
   };
 }
+
+export const coverageIndexFixture = () => splitReligionCoverage(coverageFixture()).index;
+export const coverageRegionFixture = (regionId = 'r') =>
+  splitReligionCoverage(coverageFixture()).regions.find((region) => region.regionId === regionId)!;

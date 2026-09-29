@@ -4,7 +4,7 @@ import { localizedName } from '../../lib/i18n';
 import { religionTraditionNames } from '../../lib/religions/tradition-names';
 import type { LocalizedName } from '../../lib/types';
 
-const publishedNames = ['history', 'coverage'].flatMap((dataset) => {
+const publishedNames = ['history', 'coverage-index'].flatMap((dataset) => {
   const data = JSON.parse(
     readFileSync(new URL(`../../public/data/religions/${dataset}.json`, import.meta.url), 'utf8'),
   ) as { traditions: { names: LocalizedName }[] };

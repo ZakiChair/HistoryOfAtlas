@@ -4,7 +4,7 @@ La couche **Religions** propose deux représentations complémentaires : **Major
 
 ## Majorités et présences
 
-Le fichier [`public/data/religions/coverage.json`](../public/data/religions/coverage.json) rassemble les observations quantitatives RCS et les observations qualitatives Seshat. Les couleurs et hachures résument les données disponibles pour l’année de l’atlas, ou la fin de la plage sélectionnée. Un clic sur une zone donne accès au périmètre de population, à la date ou à l’intervalle de référence, aux parts ou qualifications documentées et aux sources.
+L’index [`public/data/religions/coverage-index.json`](../public/data/religions/coverage-index.json) rassemble les observations quantitatives RCS et les observations qualitatives Seshat, résumées pour le rendu (géométries arrondies à 1e-4°, majorité et traditions présentes par observation). Il est chargé à l’activation de la couche ; les couleurs et hachures résument les données disponibles pour l’année de l’atlas, ou la fin de la plage sélectionnée. Un clic sur une zone charge le fichier `coverage/<région>.json` correspondant, qui donne accès au périmètre de population, à la date ou à l’intervalle de référence, aux parts ou qualifications documentées et aux sources.
 
 ### Lire les couleurs et les seuils
 
@@ -49,7 +49,7 @@ pnpm data:religions
 pnpm data:religions:check
 ```
 
-La reconstruction normale utilise les extraits versionnés dans le dépôt, sans accès réseau. La réacquisition complète est une opération séparée, documentée dans le [guide RCS](../pipeline/religions/README.md) et le [guide Seshat](../pipeline/religions/SESHAT.md). Ces guides détaillent les filtres, les correspondances géographiques, les empreintes des sources et les vérifications propres à chaque import. `ReligionCoverageDatasetSchema` dans `lib/religions/coverage.ts` contrôle les observations, leurs références, les parts et les géométries avant publication.
+La reconstruction normale utilise les extraits versionnés dans le dépôt, sans accès réseau. La réacquisition complète est une opération séparée, documentée dans le [guide RCS](../pipeline/religions/README.md) et le [guide Seshat](../pipeline/religions/SESHAT.md). Ces guides détaillent les filtres, les correspondances géographiques, les empreintes des sources et les vérifications propres à chaque import. `ReligionCoverageDatasetSchema` dans `lib/religions/coverage.ts` contrôle les observations, leurs références, les parts et les géométries avant publication ; `ReligionCoverageIndexSchema` et `ReligionCoverageRegionSchema` valident ensuite l’index publié et chaque fichier de région.
 
 ## Repères historiques
 
