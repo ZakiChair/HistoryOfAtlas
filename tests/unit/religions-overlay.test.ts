@@ -82,7 +82,7 @@ it('installs once and filters years without removing/reloading map geometry', as
     'all',
     ['==', ['get', 'shape'], 'point'],
     ['<=', ['get', 'year'], -250],
-    ['==', ['get', 'tradition'], 'buddhism'],
+    ['==', ['get', 'theme'], 'buddhism'],
   ]);
   overlay.update({ ...enabled(), year: -251, religionFilter: 'buddhism' });
   expect(useReligionStore.getState().visibleMilestones).toHaveLength(1);

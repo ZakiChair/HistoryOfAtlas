@@ -1,8 +1,12 @@
 import type { Map as MapInstance, PointLike } from 'maplibre-gl';
-export const RELIGION_SOURCE = 'religion-history';
-export const RELIGION_POINTS = 'religion-milestones';
-export const RELIGION_ROUTES = 'religion-routes';
-export const RELIGION_AREAS = 'religion-areas';
+import { milestoneLayerIds } from './milestone-ids';
+import { hasMilestoneEmblemAt } from './milestone-hit';
+
+const RELIGION_IDS = milestoneLayerIds('religion');
+export const RELIGION_SOURCE = RELIGION_IDS.source;
+export const RELIGION_POINTS = RELIGION_IDS.points;
+export const RELIGION_ROUTES = RELIGION_IDS.routes;
+export const RELIGION_AREAS = RELIGION_IDS.areas;
 export const RELIGION_COVERAGE_SOURCE = 'religion-coverage';
 export const RELIGION_COVERAGE_AREAS = 'religion-coverage-areas';
 
@@ -16,8 +20,5 @@ export function hasReligionCoverageAt(map: MapInstance, point: PointLike): boole
 
 /** Only small interactive emblems intercept clicks; broad presence zones do not. */
 export function hasReligionAt(map: MapInstance, point: PointLike): boolean {
-  return (
-    Boolean(map.getLayer(RELIGION_POINTS)) &&
-    map.queryRenderedFeatures(point, { layers: [RELIGION_POINTS] }).length > 0
-  );
+  return hasMilestoneEmblemAt(map, point, RELIGION_POINTS);
 }

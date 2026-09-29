@@ -1,3 +1,4 @@
+import { cumulativeTimeModel, thematicHorizon, thematicMilestonesAt } from '../thematic/time';
 import type { ReligionDataset, ReligionMilestone, ReligionText } from './types';
 import type { Locale } from '@/lib/types';
 
@@ -7,6 +8,16 @@ export const religionLanguage = (locale: Locale): 'fr' | 'en' => (locale === 'fr
 export const religionLabel = (value: ReligionText, locale: Locale): string =>
   value[religionLanguage(locale)];
 
+/** Opacity by years since attestation: older milestones recede instead of reading as present. */
+export const RELIGION_AGE_FADE = [
+  [0, 1],
+  [500, 0.8],
+  [1500, 0.45],
+] as const;
+export const RELIGION_TIME = cumulativeTimeModel(RELIGION_AGE_FADE);
+/** Diffusion links are momentary movements, so they fade twice as fast as attestations. */
+export const RELIGION_ROUTE_FADE_RATE = 2;
+
 /** Cumulative historical attestations, never a claim about current adherence. */
 export function religionMilestonesAt(
   dataset: ReligionDataset,
@@ -14,8 +25,11 @@ export function religionMilestonesAt(
   range: [number, number] | null = null,
   tradition: string | null = null,
 ): ReligionMilestone[] {
-  const horizon = range ? Math.max(...range) : year;
-  return dataset.milestones
-    .filter((item) => item.year <= horizon && (!tradition || item.traditionId === tradition))
-    .sort((a, b) => a.year - b.year || a.id.localeCompare(b.id));
+  return thematicMilestonesAt(
+    dataset.milestones,
+    thematicHorizon(year, range),
+    RELIGION_TIME,
+    (milestone) => milestone.traditionId,
+    tradition,
+  );
 }

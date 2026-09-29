@@ -26,7 +26,7 @@ import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from '
 import { hasResourceAt } from './resource-hit';
 import { useResourceStore } from '@/lib/resources/store';
 import { hasReligionAt, hasReligionCoverageAt } from './religion-hit';
-import { useReligionStore } from '@/lib/religions/store';
+import { THEMATIC_LAYERS, type ThematicOverlay } from './thematic-layers';
 import { EVENT_COLOR_EXPRESSION, SELECTION_COLORS } from '@/lib/colors/semantic';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
@@ -183,9 +183,10 @@ export default function WorldMap() {
         let resourceOverlay:
           ReturnType<(typeof import('./resource-overlay'))['startResourceOverlay']> | undefined;
         let resourceOverlayLoading = false;
-        let religionOverlay:
-          ReturnType<(typeof import('./religion-overlay'))['startReligionOverlay']> | undefined;
-        let religionOverlayLoading = false;
+        const thematicSlots = THEMATIC_LAYERS.map(() => ({
+          overlay: undefined as ThematicOverlay | undefined,
+          loading: false,
+        }));
         let adjustingBattlePadding = false;
         const frameBattlefield = (state: AtlasState) => {
           const focused = state.battlesVisible && state.battleMode && Boolean(state.selectedEvent);
@@ -702,23 +703,27 @@ export default function WorldMap() {
               });
           }
           resourceOverlay?.update(state.resourcesVisible, state.year, state.range);
-          if (state.religionsVisible && !religionOverlay && !religionOverlayLoading) {
-            religionOverlayLoading = true;
-            useReligionStore.setState({ status: 'loading', error: null });
-            void import('./religion-overlay')
-              .then(({ startReligionOverlay }) => {
-                if (disposed) return;
-                religionOverlay = startReligionOverlay(map);
-                religionOverlay.update(useAtlasStore.getState());
-              })
-              .catch((cause) => {
-                if (!disposed) useReligionStore.setState({ status: 'error', error: String(cause) });
-              })
-              .finally(() => {
-                religionOverlayLoading = false;
-              });
-          }
-          religionOverlay?.update(state);
+          THEMATIC_LAYERS.forEach((layer, index) => {
+            const slot = thematicSlots[index]!;
+            if (layer.isActive(state) && !slot.overlay && !slot.loading) {
+              slot.loading = true;
+              layer.store.setState({ status: 'loading', error: null });
+              void layer
+                .load()
+                .then((start) => {
+                  if (disposed) return;
+                  slot.overlay = start(map);
+                  slot.overlay.update(useAtlasStore.getState());
+                })
+                .catch((cause) => {
+                  if (!disposed) layer.store.setState({ status: 'error', error: String(cause) });
+                })
+                .finally(() => {
+                  slot.loading = false;
+                });
+            }
+            slot.overlay?.update(state);
+          });
           if (!previous || state.theme !== previous.theme) {
             const dark = state.theme === 'dark';
             map.setPaintProperty('ocean', 'background-color', dark ? '#0b2636' : '#c9d9db');
@@ -790,7 +795,7 @@ export default function WorldMap() {
               territoriesLoaded() &&
               (!eventsReady || map.isSourceLoaded('events')) &&
               (resourceOverlay?.isReady() ?? true) &&
-              (religionOverlay?.isReady() ?? true);
+              thematicSlots.every((slot) => slot.overlay?.isReady() ?? true);
             if (loaded) playbackGate.ready();
             return loaded;
           },
@@ -1020,19 +1025,25 @@ export default function WorldMap() {
           if (state.revision !== previous.revision && !resourceOverlay && styleReady)
             renderQueue.submit(useAtlasStore.getState(), true);
         });
-        const unsubscribeReligions = useReligionStore.subscribe((state, previous) => {
-          if (state.revision !== previous.revision && !religionOverlay && styleReady)
-            renderQueue.submit(useAtlasStore.getState(), true);
-        });
+        const unsubscribeThematic = THEMATIC_LAYERS.map((layer, index) =>
+          layer.store.subscribe((state, previous) => {
+            if (
+              state.revision !== previous.revision &&
+              !thematicSlots[index]!.overlay &&
+              styleReady
+            )
+              renderQueue.submit(useAtlasStore.getState(), true);
+          }),
+        );
         cleanup = () => {
           unsubscribe();
           unsubscribeResources();
-          unsubscribeReligions();
+          for (const unsubscribeThematicLayer of unsubscribeThematic) unsubscribeThematicLayer();
           renderQueue.dispose();
           campaignOverlay?.dispose();
           battleOverlay?.dispose();
           resourceOverlay?.dispose();
-          religionOverlay?.dispose();
+          for (const slot of thematicSlots) slot.overlay?.dispose();
           eventClustering?.destroy();
           cancelGhost();
           map.off('sourcedata', retirePreviousTerritories);
