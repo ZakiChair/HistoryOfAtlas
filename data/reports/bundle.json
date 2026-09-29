@@ -1,46 +1,51 @@
 {
   "schemaVersion": 2,
   "method": "Unique script and script-preload URLs in the exported index.html, excluding legacy noModule polyfills that module-capable browsers never download; gzip default level. This measures the HTML shell, not the total JavaScript required for an interactive map. Browser network audits measure the deferred map and worker separately.",
-  "codeCommit": "3e05da3acf436695e075987708b7ebc75bc1a786",
-  "initialGzipBytes": 261461,
+  "codeCommit": "7f0424e5d688499e4bb2db11cb5e05a279314f24",
+  "initialGzipBytes": 273778,
   "budgetBytes": 274000,
   "shellBudgetMet": true,
   "legacyPolyfillGzipBytes": 39473,
   "assets": [
     {
-      "path": "/_next/static/chunks/17kclwmtrr02v.js",
-      "bytes": 229154,
-      "gzipBytes": 71645
+      "path": "/_next/static/chunks/07yj3qxu3r02x.js",
+      "bytes": 234406,
+      "gzipBytes": 73290
     },
     {
-      "path": "/_next/static/chunks/33zcsxekclmvz.js",
-      "bytes": 184169,
-      "gzipBytes": 61114
+      "path": "/_next/static/chunks/1ak2zvc7np7f0.js",
+      "bytes": 188493,
+      "gzipBytes": 62595
     },
     {
-      "path": "/_next/static/chunks/2121tb6a5vuli.js",
-      "bytes": 161329,
-      "gzipBytes": 44126
+      "path": "/_next/static/chunks/1vgiydpk7448e.js",
+      "bytes": 161912,
+      "gzipBytes": 44197
     },
     {
-      "path": "/_next/static/chunks/3kdlu_cu5rnuk.js",
-      "bytes": 90563,
-      "gzipBytes": 35940
+      "path": "/_next/static/chunks/40bw-2kruulbq.js",
+      "bytes": 91828,
+      "gzipBytes": 36603
     },
     {
-      "path": "/_next/static/chunks/1uo51odq1nya9.js",
-      "bytes": 72659,
-      "gzipBytes": 25781
+      "path": "/_next/static/chunks/1hnxvhzt7vvnr.js",
+      "bytes": 73474,
+      "gzipBytes": 26094
     },
     {
-      "path": "/_next/static/chunks/1dsqt4ga36lpp.js",
-      "bytes": 32969,
-      "gzipBytes": 8762
+      "path": "/_next/static/chunks/27t3k7f98pf0w.js",
+      "bytes": 24733,
+      "gzipBytes": 8957
     },
     {
-      "path": "/_next/static/chunks/turbopack-2o_6kmwjxydu9.js",
-      "bytes": 10946,
-      "gzipBytes": 4306
+      "path": "/_next/static/chunks/0e8vvz4v4m7xd.js",
+      "bytes": 32386,
+      "gzipBytes": 8680
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-24s7vvafkq8j-.js",
+      "bytes": 10913,
+      "gzipBytes": 4294
     },
     {
       "path": "/_next/static/chunks/1sivr9ddcv5tm.js",
@@ -53,14 +58,19 @@
       "gzipBytes": 3595
     },
     {
-      "path": "/_next/static/chunks/3em48suk0ehbx.js",
-      "bytes": 5364,
-      "gzipBytes": 1957
+      "path": "/_next/static/chunks/1j6234u7-zeo6.js",
+      "bytes": 1237,
+      "gzipBytes": 708
     },
     {
-      "path": "/_next/static/chunks/0jhysk_btisxz.js",
-      "bytes": 1892,
-      "gzipBytes": 568
+      "path": "/_next/static/chunks/077sy5kpv0rrx.js",
+      "bytes": 2125,
+      "gzipBytes": 620
+    },
+    {
+      "path": "/_next/static/chunks/06t9jl5ytudwn.js",
+      "bytes": 1021,
+      "gzipBytes": 478
     }
   ],
   "legacyPolyfills": [
