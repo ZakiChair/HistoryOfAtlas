@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from './zod';
 import registry from '@/data/curated/polity-identities.json';
 import { LocalizedNameSchema } from './schema';
 

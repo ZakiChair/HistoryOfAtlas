@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from './zod';
 import { compareHistDates, isChronologicallyPossible, isValidHistDate } from './histdate';
 import { ERA_IDS, EVENT_TYPES, REGION_IDS } from './types';
 

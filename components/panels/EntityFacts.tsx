@@ -18,7 +18,7 @@ import {
 import { polityFactsText } from '@/lib/polity-facts-i18n';
 import type { Source } from '@/lib/schema';
 import type { Locale, LocalizedName } from '@/lib/types';
-import type { z } from 'zod';
+import type { z } from '@/lib/zod';
 
 const REGISTRY_PATH = '/data/polity-facts/index.json';
 type Registry = z.infer<typeof PolityFactsRegistrySchema>;

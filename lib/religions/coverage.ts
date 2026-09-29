@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from '../zod';
 
 const Id = z.string().trim().min(1);
 const Text = z.object({ fr: z.string().min(1), en: z.string().min(1) });

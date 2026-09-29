@@ -55,6 +55,16 @@ docker run -d --restart unless-stopped --name historyofatlas -p 127.0.0.1:8080:8
 
 The Nginx configuration is a full `nginx.conf`; it provides correct static 404 behavior, byte ranges, gzip level 6 for text assets, immutable caching for hashed Next.js assets, and revalidation for mutable data manifests. PMTiles are not re-compressed. Deploy HTML and data together as one immutable build/image; changing a manifest in place while keeping old tiles can create inconsistent views.
 
+## Response headers
+
+Both serving paths send the same four headers: `Content-Security-Policy`, `Referrer-Policy`, `X-Frame-Options` and `X-Content-Type-Options`. Vercel reads them from `vercel.json`, the container from the `server` block of `nginx.conf`, and `tests/unit/security-headers.test.ts` fails when the two drift apart. A reverse proxy in front of the container must pass them through rather than replace them.
+
+The policy keeps the atlas on its own origin. Scripts, styles, fonts, workers and data all come from `'self'`; `object-src` and `frame-src` are `'none'`; `base-uri`, `form-action` and `frame-ancestors` are `'self'`. Two remote origins are named because the atlas reads them: `https://*.wikipedia.org` for the article summaries shown in a record, and `https://commons.wikimedia.org` for the credits of the illustrations, whose files load from `https://upload.wikimedia.org`. Adding any other remote source means naming it here, in both files.
+
+Inline scripts remain allowed. The server-rendered payload travels in `<script>` elements whose contents change with every build, and a static export has no server to issue a nonce, so `script-src` carries `'unsafe-inline'`. The policy therefore limits which origins may serve code rather than preventing injected inline code; `object-src 'none'`, `base-uri 'self'` and the absence of `'unsafe-eval'` still close the usual escapes. Should the site ever be served by a process rather than a file server, replace `'unsafe-inline'` with a per-response nonce.
+
+Serving a different front end from these files is a change of contract: the map needs `worker-src blob:` for MapLibre, and the search and clustering workers need `'self'`.
+
 ## PMTiles hosting contract
 
 The browser must receive HTTP byte ranges (`206 Partial Content`) when requesting tile archive slices. Do not put `.pmtiles` behind middleware that returns HTML, ignores Range, or adds gzip content encoding. A basic check against the deployed site:
