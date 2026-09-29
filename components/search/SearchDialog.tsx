@@ -36,6 +36,38 @@ type Result = Pick<
 >;
 type Counts = Record<SearchKind, number>;
 
+// The index costs several megabytes of archives to build. One worker serves the whole visit, so
+// reopening search shows the archives already indexed instead of downloading them again.
+let searchWorker: Worker | null = null;
+/** Set when an archive failed: the next opening starts from a fresh worker, as the notice says. */
+let indexIsIncomplete = false;
+
+function acquireSearchWorker(): Worker | null {
+  if (searchWorker && indexIsIncomplete) {
+    searchWorker.terminate();
+    searchWorker = null;
+  }
+  if (!searchWorker) {
+    try {
+      searchWorker = new Worker(new URL('./search.worker.ts', import.meta.url));
+    } catch {
+      return null;
+    }
+    indexIsIncomplete = false;
+  }
+  return searchWorker;
+}
+
+function releaseSearchWorker(instance: Worker) {
+  instance.onmessage = null;
+  instance.onerror = null;
+  // A complete index is kept; a broken one is dropped now rather than held until the next open.
+  if (instance === searchWorker && indexIsIncomplete) {
+    instance.terminate();
+    searchWorker = null;
+  }
+}
+
 /** Where keyboard focus lands once the dialog has closed on a result. */
 const DESTINATIONS: Record<SearchKind, string> = {
   event: '[data-testid="event-panel"]',
@@ -126,16 +158,15 @@ export default function SearchDialog({
     [],
   );
   useEffect(() => {
-    let instance: Worker;
-    try {
-      instance = new Worker(new URL('./search.worker.ts', import.meta.url));
-    } catch {
+    const instance = acquireSearchWorker();
+    if (!instance) {
       setError(true);
       setBusy(false);
       return;
     }
     worker.current = instance;
     instance.onerror = () => {
+      indexIsIncomplete = true;
       setError(true);
       setBusy(false);
     };
@@ -151,10 +182,14 @@ export default function SearchDialog({
       }>,
     ) => {
       if (message.data.type === 'error') {
+        indexIsIncomplete = true;
         setError(true);
         setBusy(false);
       }
-      if (message.data.type === 'warning') setPartial(true);
+      if (message.data.type === 'warning') {
+        indexIsIncomplete = true;
+        setPartial(true);
+      }
       if (
         message.data.type === 'results' &&
         message.data.query === latestQuery.current &&
@@ -165,10 +200,11 @@ export default function SearchDialog({
         setBusy(message.data.loaded < message.data.total);
       }
     };
+    // The worker ignores a second init; a reused index answers the first search straight away.
     instance.postMessage({ type: 'init', year: useAtlasStore.getState().year });
     return () => {
-      instance.terminate();
       worker.current = null;
+      releaseSearchWorker(instance);
     };
   }, []);
   useEffect(() => {

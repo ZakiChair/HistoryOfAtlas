@@ -2,6 +2,8 @@ import { expect, test, type APIRequestContext, type Locator, type Page } from '@
 import AxeBuilder from '@axe-core/playwright';
 import type { Campaign, HistoricalEvent, Story } from '../../lib/schema';
 
+const SEARCH_MANIFEST = '/data/search-manifest.json';
+
 async function sourcedEvent(request: APIRequestContext): Promise<HistoricalEvent> {
   const manifest = await (await request.get('/data/manifest.json')).json();
   const chunks = manifest.chunks.filter(
@@ -182,6 +184,32 @@ test('fuzzy search changes both the selected event and timeline', async ({ page,
     'aria-valuetext',
     String(event.start.year),
   );
+});
+
+test('reopening search keeps the index built on the first opening', async ({ page }) => {
+  const requested: string[] = [];
+  page.on('request', (resource) => requested.push(new URL(resource.url()).pathname));
+  await page.goto('/?lang=en&y=1812');
+  const trigger = page.getByRole('button', { name: 'Search the atlas', exact: true });
+  const field = page.getByRole('combobox', { name: 'Search the atlas' });
+  await trigger.click();
+  await field.fill('Waterlo');
+  await expect(page.getByRole('option').first()).toBeVisible();
+  const archives = () => requested.filter((path) => path.startsWith('/data/search/')).length;
+  await expect.poll(() => requested.filter((path) => path === SEARCH_MANIFEST).length).toBe(1);
+  await expect.poll(archives).toBeGreaterThan(0);
+  const footer = page.locator('.search-footer span').first();
+  await expect(footer).toHaveText('Searching the loaded sources', { timeout: 40_000 });
+  await page.keyboard.press('Escape');
+  await expect(field).toBeHidden();
+  requested.length = 0;
+  await trigger.click();
+  await field.fill('Waterlo');
+  await expect(page.getByRole('option').first()).toBeVisible();
+  // The worker outlived the dialog, so neither the manifest nor an archive is fetched again.
+  await expect(footer).toHaveText('Searching the loaded sources');
+  expect(requested.filter((path) => path === SEARCH_MANIFEST)).toEqual([]);
+  expect(archives()).toBe(0);
 });
 
 test('participant filter uses sourced entities and updates the visible events', async ({

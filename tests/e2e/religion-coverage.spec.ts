@@ -178,13 +178,18 @@ test('coverage loads on activation and a filled polygon opens its detail without
   await expect(page.getByTestId('religions-status')).toContainText('1');
   const canvas = page.locator('.maplibregl-canvas');
   const box = await canvas.boundingBox();
+  const territory = page.getByTestId('entity-panel');
   await expect(async () => {
+    // A click landing before the coverage layer is painted falls through to the territory below,
+    // so clear that selection and let the assertion judge the click that reached the polygon.
+    if (await territory.isVisible())
+      await page.getByRole('button', { name: 'Fermer la fiche du territoire' }).click();
     await canvas.click({ position: { x: box!.width / 2, y: box!.height / 2 } });
     await expect(page.getByTestId('religion-coverage-detail')).toContainText('Région de test', {
       timeout: 1_000,
     });
   }).toPass({ timeout: 15_000 });
-  await expect(page.getByTestId('entity-panel')).not.toBeAttached();
+  await expect(territory).not.toBeAttached();
   expect(requests.filter((url) => url.endsWith('/coverage.json'))).toHaveLength(1);
   expect(requests.filter((url) => url.endsWith('/history.json'))).toHaveLength(0);
   await expect

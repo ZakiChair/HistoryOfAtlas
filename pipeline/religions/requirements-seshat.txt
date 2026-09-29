@@ -1,0 +1,3 @@
+# Seshat reacquisition only (`python pipeline/religions/seshat.py --acquire`).
+# Normal builds and `--check` read the committed extract and need no dependency.
+shapely==2.1.2

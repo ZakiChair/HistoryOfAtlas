@@ -59,6 +59,7 @@ import {
 } from '@/lib/first-visit';
 import Timeline from './timeline/Timeline';
 import { IconButton } from './ui/IconButton';
+import SectionBoundary from './ui/SectionBoundary';
 import MapLayers from './map/MapLayers';
 
 const WorldMap = dynamic(() => import('./map/WorldMap'), { ssr: false });
@@ -494,7 +495,21 @@ export default function AtlasApp() {
           <a className="skip-link" href={sidebarOpen ? '#atlas-explore' : '#atlas-reopen'}>
             {t('skipToContent')}
           </a>
-          {hydrated && <WorldMap />}
+          {hydrated && (
+            <SectionBoundary
+              area="map"
+              action={{
+                label: t('Passer à la vue liste', 'Switch to the list view'),
+                onClick: () => {
+                  useAtlasStore.getState().setMode('list');
+                  setTab('explore');
+                  setSidebarOpen(true);
+                },
+              }}
+            >
+              <WorldMap />
+            </SectionBoundary>
+          )}
           <header className="atlas-header">
             <Link href={withLocale('/', locale)} className="brand">
               <CompassRose small />
@@ -582,7 +597,9 @@ export default function AtlasApp() {
               </Link>
             </div>
           </header>
-          <MapLayers />
+          <SectionBoundary area="layers">
+            <MapLayers />
+          </SectionBoundary>
           {startCard && !contextOpen && <StartCard onDismiss={dismissStartCard} />}
           <AnimatePresence initial={false}>
             {sidebarOpen && (
@@ -636,46 +653,48 @@ export default function AtlasApp() {
                   </button>
                 </div>
                 <div className="exploration-scroll">
-                  {battleMode ? (
-                    <BattlePanel />
-                  ) : tab === 'explore' ? (
-                    <>
-                      {mode === 'list' ? (
-                        <>
-                          <button
-                            className="text-button"
-                            onClick={() => useAtlasStore.getState().setMode('events')}
-                          >
-                            <ChevronLeft size={14} className="reading-order-arrow" />
-                            {t('Retour à l’atlas', 'Back to the atlas')}
-                          </button>
-                          <Filters />
-                          <EventList full />
-                        </>
-                      ) : (
-                        <>
-                          {showFilters ? (
+                  <SectionBoundary area="notebook">
+                    {battleMode ? (
+                      <BattlePanel />
+                    ) : tab === 'explore' ? (
+                      <>
+                        {mode === 'list' ? (
+                          <>
+                            <button
+                              className="text-button"
+                              onClick={() => useAtlasStore.getState().setMode('events')}
+                            >
+                              <ChevronLeft size={14} className="reading-order-arrow" />
+                              {t('Retour à l’atlas', 'Back to the atlas')}
+                            </button>
                             <Filters />
-                          ) : (
-                            <Overview manifest={manifest} territories={territories} />
-                          )}
-                          <button
-                            className={`filter-toggle ${showFilters ? 'active' : ''}`}
-                            onClick={() => setShowFilters(!showFilters)}
-                          >
-                            <SlidersHorizontal size={15} />
-                            {showFilters
-                              ? t('Revenir à l’exploration', 'Back to exploration')
-                              : t('Filtres & sélection', 'Filters & selection')}
-                          </button>
-                        </>
-                      )}
-                    </>
-                  ) : tab === 'campaigns' ? (
-                    <CampaignPanel />
-                  ) : (
-                    <StoryPanel />
-                  )}
+                            <EventList full />
+                          </>
+                        ) : (
+                          <>
+                            {showFilters ? (
+                              <Filters />
+                            ) : (
+                              <Overview manifest={manifest} territories={territories} />
+                            )}
+                            <button
+                              className={`filter-toggle ${showFilters ? 'active' : ''}`}
+                              onClick={() => setShowFilters(!showFilters)}
+                            >
+                              <SlidersHorizontal size={15} />
+                              {showFilters
+                                ? t('Revenir à l’exploration', 'Back to exploration')
+                                : t('Filtres & sélection', 'Filters & selection')}
+                            </button>
+                          </>
+                        )}
+                      </>
+                    ) : tab === 'campaigns' ? (
+                      <CampaignPanel />
+                    ) : (
+                      <StoryPanel />
+                    )}
+                  </SectionBoundary>
                 </div>
                 <div className="discovery-actions">
                   {battleMode ? (
@@ -874,13 +893,30 @@ export default function AtlasApp() {
               </button>
             </div>
           )}
-          {selectedPerson ? (
-            <PersonPanel key={selectedPerson} />
-          ) : selectedEntity ? (
-            <EntityPanel key={selectedEntity} />
-          ) : selectedEvent && !battleMode ? (
-            <EventPanel key={selectedEvent} />
-          ) : null}
+          {hasDetail && (
+            // A new selection is a new attempt: the key clears an error left by the previous one.
+            <SectionBoundary
+              area="detail"
+              key={selectedPerson ?? selectedEntity ?? selectedEvent ?? 'detail'}
+              action={{
+                label: t('Fermer le dossier', 'Close the record'),
+                onClick: () =>
+                  useAtlasStore.setState({
+                    selectedPerson: null,
+                    selectedEntity: null,
+                    selectedEvent: null,
+                  }),
+              }}
+            >
+              {selectedPerson ? (
+                <PersonPanel key={selectedPerson} />
+              ) : selectedEntity ? (
+                <EntityPanel key={selectedEntity} />
+              ) : selectedEvent && !battleMode ? (
+                <EventPanel key={selectedEvent} />
+              ) : null}
+            </SectionBoundary>
+          )}
           <MapCaption geo={geo} />
           {mode === 'heatmap' && !battleMode && <DensityKey />}
           <Timeline density={manifest?.density} territorialDensity={geo?.temporal?.density} />

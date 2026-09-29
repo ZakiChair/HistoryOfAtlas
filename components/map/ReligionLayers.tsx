@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
+import { useShallow } from 'zustand/react/shallow';
 import { ArrowLeft, ArrowUpRight, X } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
@@ -30,32 +31,52 @@ function ReligionHistoryLayers({ panelId, onClose }: { panelId: string; onClose:
   const filter = useAtlasStore((state) => state.religionFilter);
   const routes = useAtlasStore((state) => state.religionRoutesVisible);
   const areas = useAtlasStore((state) => state.religionAreasVisible);
-  const { status, dataset, visibleMilestones, selected, panelOpen } = useReligionStore();
+  // Named fields only: the store also carries a retry revision, which must not redraw the panel.
+  const { status, dataset, visibleMilestones, selected, panelOpen } = useReligionStore(
+    useShallow((state) => ({
+      status: state.status,
+      dataset: state.dataset,
+      visibleMilestones: state.visibleMilestones,
+      selected: state.selected,
+      panelOpen: state.panelOpen,
+    })),
+  );
   const heading = useRef<HTMLHeadingElement>(null);
   const body = useRef<HTMLDivElement>(null);
   const t = (key: Parameters<typeof religionText>[1]) => religionText(locale, key);
   const horizon = range?.[1] ?? year;
-  const allVisible = dataset ? religionMilestonesAt(dataset, year, range) : [];
+  // Scanning the corpus is the panel's one costly step; the year and range decide its result.
+  const allVisible = useMemo(
+    () => (dataset ? religionMilestonesAt(dataset, year, range) : []),
+    [dataset, year, range],
+  );
   const tradition = dataset?.traditions.find(
     (item) => item.id === (selected?.traditionId ?? filter),
   );
   // The key draws the filtered tradition's symbols, otherwise those of the tradition with
   // the most milestones: a stable, frequently seen example rather than catalogue order.
-  const keyTradition =
-    tradition ??
-    dataset?.traditions.reduce((best, item) => {
-      const count = (id: string) =>
-        dataset.milestones.filter((stage) => stage.traditionId === id).length;
-      return count(item.id) > count(best.id) ? item : best;
-    });
-  const stages = dataset
-    ? (tradition
-        ? dataset.milestones.filter((item) => item.traditionId === tradition.id)
-        : visibleMilestones
-      )
-        .slice()
-        .sort((a, b) => a.year - b.year || a.id.localeCompare(b.id))
-    : [];
+  const mostDocumented = useMemo(
+    () =>
+      dataset?.traditions.reduce((best, item) => {
+        const count = (id: string) =>
+          dataset.milestones.filter((stage) => stage.traditionId === id).length;
+        return count(item.id) > count(best.id) ? item : best;
+      }),
+    [dataset],
+  );
+  const keyTradition = tradition ?? mostDocumented;
+  const stages = useMemo(
+    () =>
+      dataset
+        ? (tradition
+            ? dataset.milestones.filter((item) => item.traditionId === tradition.id)
+            : visibleMilestones
+          )
+            .slice()
+            .sort((a, b) => a.year - b.year || a.id.localeCompare(b.id))
+        : [],
+    [dataset, tradition, visibleMilestones],
+  );
 
   useEffect(() => {
     if (panelOpen) {

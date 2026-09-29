@@ -13,6 +13,9 @@ export default defineConfig([
     'test-results/**',
     'playwright-report/**',
     'performance-report/**',
+    // Scratch files and browser-tool captures are not repository sources.
+    '.remember/**',
+    '.playwright-mcp/**',
   ]),
   { rules: { 'react-hooks/set-state-in-effect': 'off' } },
 ]);

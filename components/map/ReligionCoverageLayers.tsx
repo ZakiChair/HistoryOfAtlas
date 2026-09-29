@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, type CSSProperties } from 'react';
+import { useShallow } from 'zustand/react/shallow';
 import { ArrowLeft, ArrowUpRight, X } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { formatYear } from '@/lib/histdate';
@@ -59,13 +60,27 @@ export default function ReligionCoverageLayers({
   const range = useAtlasStore((state) => state.range);
   const filter = useAtlasStore((state) => state.religionFilter);
   const panelOpen = useReligionStore((state) => state.panelOpen);
+  // Named fields only: the store also carries a retry revision, which must not redraw the panel.
   const { status, dataset, visibleObservations, selected, retry, select } =
-    useReligionCoverageStore();
+    useReligionCoverageStore(
+      useShallow((state) => ({
+        status: state.status,
+        dataset: state.dataset,
+        visibleObservations: state.visibleObservations,
+        selected: state.selected,
+        retry: state.retry,
+        select: state.select,
+      })),
+    );
   const heading = useRef<HTMLHeadingElement>(null);
   const body = useRef<HTMLDivElement>(null);
   const t = (key: ReligionCoverageCopyKey) => religionCoverageText(locale, key);
   const horizon = range ? Math.max(...range) : year;
-  const all = dataset ? religionCoverageAt(dataset, year, range) : [];
+  // Scanning the dataset is the panel's one costly step; the year and range decide its result.
+  const all = useMemo(
+    () => (dataset ? religionCoverageAt(dataset, year, range) : []),
+    [dataset, year, range],
+  );
   const classes = dataset && selected ? religionCoverageClasses(dataset, selected) : null;
   const majority = dataset?.traditions.find((item) => item.id === classes?.majority?.traditionId);
   const selectedGeometry = dataset?.geometries.find((item) => item.id === selected?.geometryId);
@@ -74,34 +89,55 @@ export default function ReligionCoverageLayers({
     ...(selectedGeometry?.sourceIds ?? []),
     ...(selected?.shares.flatMap((share) => share.sourceIds ?? []) ?? []),
   ]);
-  const percent = new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 1 });
-  const mappedTraditionIds = new Set(
-    dataset
-      ? visibleObservations.flatMap((row) => {
-          const groups = religionCoverageClasses(dataset, row);
-          return [groups.majority, ...groups.substantial].flatMap((part) =>
-            part && (!filter || part.traditionId === filter) ? [part.traditionId] : [],
-          );
-        })
-      : [],
+  const percent = useMemo(
+    () => new Intl.NumberFormat(locale, { style: 'percent', maximumFractionDigits: 1 }),
+    [locale],
   );
-  const referenceYears = visibleObservations.flatMap((row) =>
-    row.time.kind === 'snapshot' ? [row.time.year] : [],
+  const mappedTraditionIds = useMemo(
+    () =>
+      new Set(
+        dataset
+          ? visibleObservations.flatMap((row) => {
+              const groups = religionCoverageClasses(dataset, row);
+              return [groups.majority, ...groups.substantial].flatMap((part) =>
+                part && (!filter || part.traditionId === filter) ? [part.traditionId] : [],
+              );
+            })
+          : [],
+      ),
+    [dataset, visibleObservations, filter],
+  );
+  const referenceYears = useMemo(
+    () =>
+      visibleObservations.flatMap((row) => (row.time.kind === 'snapshot' ? [row.time.year] : [])),
+    [visibleObservations],
   );
   const firstReferenceYear = Math.min(...referenceYears);
   const lastReferenceYear = Math.max(...referenceYears);
-  const traditions =
-    dataset?.traditions.filter((item) =>
-      all.some((row) =>
-        row.shares.some(
-          (part) =>
-            part.traditionId === item.id &&
-            (part.share !== undefined
-              ? part.share >= 0.2
-              : ['majority', 'substantial'].includes(part.prevalence!)),
+  const traditions = useMemo(
+    () =>
+      dataset?.traditions.filter((item) =>
+        all.some((row) =>
+          row.shares.some(
+            (part) =>
+              part.traditionId === item.id &&
+              (part.share !== undefined
+                ? part.share >= 0.2
+                : ['majority', 'substantial'].includes(part.prevalence!)),
+          ),
         ),
-      ),
-    ) ?? [];
+      ) ?? [],
+    [dataset, all],
+  );
+  const regions = useMemo(
+    () =>
+      visibleObservations
+        .slice()
+        .sort((a, b) =>
+          religionLabel(a.name, locale).localeCompare(religionLabel(b.name, locale), locale),
+        ),
+    [visibleObservations, locale],
+  );
 
   useEffect(() => {
     if (panelOpen) {
@@ -347,40 +383,32 @@ export default function ReligionCoverageLayers({
                 </h3>
                 {status === 'ready' && visibleObservations.length === 0 && <p>{t('empty')}</p>}
                 <ul className="religion-coverage-regions">
-                  {visibleObservations
-                    .slice()
-                    .sort((a, b) =>
-                      religionLabel(a.name, locale).localeCompare(
-                        religionLabel(b.name, locale),
-                        locale,
-                      ),
-                    )
-                    .map((row) => {
-                      const group = dataset ? religionCoverageClasses(dataset, row).majority : null;
-                      const tradition = dataset?.traditions.find(
-                        (item) => item.id === group?.traditionId,
-                      );
-                      return (
-                        <li key={row.id}>
-                          <button
-                            type="button"
-                            data-testid={`religion-region-${row.id}`}
-                            onClick={() => select(row)}
-                          >
-                            <span
-                              className="religion-color-chip"
-                              style={colorStyle(tradition?.color ?? '#a0b1b9')}
-                              aria-hidden="true"
-                            />
-                            <span>
-                              <Localized value={row.name} locale={locale} />
-                              <small>{observationDate(row, horizon, locale)}</small>
-                            </span>
-                            <ArrowUpRight size={13} aria-hidden="true" />
-                          </button>
-                        </li>
-                      );
-                    })}
+                  {regions.map((row) => {
+                    const group = dataset ? religionCoverageClasses(dataset, row).majority : null;
+                    const tradition = dataset?.traditions.find(
+                      (item) => item.id === group?.traditionId,
+                    );
+                    return (
+                      <li key={row.id}>
+                        <button
+                          type="button"
+                          data-testid={`religion-region-${row.id}`}
+                          onClick={() => select(row)}
+                        >
+                          <span
+                            className="religion-color-chip"
+                            style={colorStyle(tradition?.color ?? '#a0b1b9')}
+                            aria-hidden="true"
+                          />
+                          <span>
+                            <Localized value={row.name} locale={locale} />
+                            <small>{observationDate(row, horizon, locale)}</small>
+                          </span>
+                          <ArrowUpRight size={13} aria-hidden="true" />
+                        </button>
+                      </li>
+                    );
+                  })}
                 </ul>
               </>
             )}

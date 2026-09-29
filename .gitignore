@@ -5,6 +5,7 @@ data/raw/
 data/geography/raw/
 data/geography/build/
 .firecrawl/
+.playwright-mcp/
 *.tsbuildinfo
 .env*
 test-results/
