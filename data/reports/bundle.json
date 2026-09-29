@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "method": "Unique script and script-preload URLs in the exported index.html, excluding legacy noModule polyfills that module-capable browsers never download; gzip default level. This measures the HTML shell, not the total JavaScript required for an interactive map. Browser network audits measure the deferred map and worker separately.",
-  "codeCommit": "7f0424e5d688499e4bb2db11cb5e05a279314f24",
-  "initialGzipBytes": 273778,
+  "codeCommit": "ed2a4966846631b2a20b145e8df6345c667a5080",
+  "initialGzipBytes": 254194,
   "budgetBytes": 274000,
   "shellBudgetMet": true,
   "legacyPolyfillGzipBytes": 39473,
@@ -23,19 +23,14 @@
       "gzipBytes": 44197
     },
     {
-      "path": "/_next/static/chunks/40bw-2kruulbq.js",
-      "bytes": 91828,
-      "gzipBytes": 36603
+      "path": "/_next/static/chunks/2mi-2taxfcrtm.js",
+      "bytes": 100910,
+      "gzipBytes": 40131
     },
     {
-      "path": "/_next/static/chunks/1hnxvhzt7vvnr.js",
-      "bytes": 73474,
-      "gzipBytes": 26094
-    },
-    {
-      "path": "/_next/static/chunks/27t3k7f98pf0w.js",
-      "bytes": 24733,
-      "gzipBytes": 8957
+      "path": "/_next/static/chunks/23bd_y93u9btc.js",
+      "bytes": 31366,
+      "gzipBytes": 11920
     },
     {
       "path": "/_next/static/chunks/0e8vvz4v4m7xd.js",
@@ -63,9 +58,9 @@
       "gzipBytes": 708
     },
     {
-      "path": "/_next/static/chunks/077sy5kpv0rrx.js",
-      "bytes": 2125,
-      "gzipBytes": 620
+      "path": "/_next/static/chunks/2tg-p-6vks7on.js",
+      "bytes": 2226,
+      "gzipBytes": 639
     },
     {
       "path": "/_next/static/chunks/06t9jl5ytudwn.js",
