@@ -29,7 +29,7 @@ it.each([
   expect(svg).toContain(`fill="${RESOURCE_COLORS[category]}"`);
   expect(svg).not.toMatch(/undefined|NaN/);
   expect(svg.match(/<path\b/g)?.length).toBeGreaterThan(1);
-  for (const locale of ['en', 'fr', 'de', 'es', 'zh', 'ru'] as const)
+  for (const locale of ['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'] as const)
     expect(resourceText(locale, category).trim().length).toBeGreaterThan(0);
 });
 

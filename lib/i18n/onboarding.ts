@@ -12,6 +12,7 @@ const copy = {
     es: 'Primeros pasos',
     zh: '入门',
     ru: 'Первые шаги',
+    ar: 'الخطوات الأولى',
   },
   startTitle: {
     fr: 'Par où commencer ?',
@@ -20,6 +21,7 @@ const copy = {
     es: '¿Por dónde empezar?',
     zh: '从哪里开始？',
     ru: 'С чего начать?',
+    ar: 'من أين تبدأ؟',
   },
   startLead: {
     fr: 'Trois portes d’entrée dans l’atlas. Vous pouvez aussi fermer cette carte et explorer librement.',
@@ -28,6 +30,7 @@ const copy = {
     es: 'Tres puertas de entrada al atlas. También puedes cerrar esta tarjeta y explorar libremente.',
     zh: '进入地图集的三种方式。你也可以关闭此卡片，自由探索。',
     ru: 'Три входа в атлас. Можно закрыть эту карточку и исследовать карту самостоятельно.',
+    ar: 'ثلاث طرق للدخول إلى الأطلس. يمكنك أيضًا إغلاق هذه البطاقة والاستكشاف بحرّية.',
   },
   napoleonTitle: {
     fr: 'Lire les guerres napoléoniennes',
@@ -36,6 +39,7 @@ const copy = {
     es: 'Recorrer las guerras napoleónicas',
     zh: '阅读拿破仑战争',
     ru: 'Пройти по наполеоновским войнам',
+    ar: 'تابع الحروب النابليونية',
   },
   napoleonDetail: {
     fr: 'Une campagne pas à pas, de 1805 à 1815',
@@ -44,6 +48,7 @@ const copy = {
     es: 'Una campaña paso a paso, de 1805 a 1815',
     zh: '逐步展开的战役，1805—1815 年',
     ru: 'Кампания шаг за шагом, 1805–1815',
+    ar: 'حملة خطوة بخطوة، من 1805 إلى 1815',
   },
   waterlooTitle: {
     fr: 'Entrer dans une bataille en 3D : Waterloo',
@@ -52,6 +57,7 @@ const copy = {
     es: 'Entrar en una batalla en 3D: Waterloo',
     zh: '进入 3D 战役：滑铁卢',
     ru: 'Войти в 3D-битву: Ватерлоо',
+    ar: 'ادخل معركة ثلاثية الأبعاد: واترلو',
   },
   waterlooDetail: {
     fr: 'Le 18 juin 1815, reconstitué en trois dimensions',
@@ -60,6 +66,7 @@ const copy = {
     es: 'El 18 de junio de 1815, reconstruido en tres dimensiones',
     zh: '1815 年 6 月 18 日的三维重建',
     ru: '18 июня 1815 года в трёхмерной реконструкции',
+    ar: 'إعادة بناء يوم 18 يونيو 1815 بالأبعاد الثلاثة',
   },
   buddhismTitle: {
     fr: 'Voir le bouddhisme se diffuser',
@@ -68,6 +75,7 @@ const copy = {
     es: 'Ver la difusión del budismo',
     zh: '观看佛教的传播',
     ru: 'Проследить распространение буддизма',
+    ar: 'شاهد انتشار البوذية',
   },
   buddhismDetail: {
     fr: 'De l’Inde à l’Asie de l’Est, siècle après siècle',
@@ -76,6 +84,7 @@ const copy = {
     es: 'De la India a Asia oriental, siglo a siglo',
     zh: '从印度到东亚，一个世纪接一个世纪',
     ru: 'Из Индии в Восточную Азию, век за веком',
+    ar: 'من الهند إلى شرق آسيا، قرنًا بعد قرن',
   },
   startHelp: {
     fr: 'Le bouton ? en haut de l’écran explique la frise, les raccourcis et les calques.',
@@ -84,6 +93,7 @@ const copy = {
     es: 'El botón ? de la parte superior explica la cronología, los atajos y las capas.',
     zh: '屏幕顶部的 ? 按钮介绍时间轴、快捷键和图层。',
     ru: 'Кнопка ? вверху экрана объясняет шкалу времени, сочетания клавиш и слои.',
+    ar: 'يشرح زر ? أعلى الشاشة الخط الزمني والاختصارات والطبقات.',
   },
   dismiss: {
     fr: 'Fermer et explorer librement',
@@ -92,6 +102,7 @@ const copy = {
     es: 'Cerrar y explorar libremente',
     zh: '关闭并自由探索',
     ru: 'Закрыть и исследовать самостоятельно',
+    ar: 'إغلاق واستكشاف بحرّية',
   },
   helpTitle: {
     fr: 'Comment lire l’atlas',
@@ -100,6 +111,7 @@ const copy = {
     es: 'Cómo leer el atlas',
     zh: '如何阅读地图集',
     ru: 'Как читать атлас',
+    ar: 'كيفية قراءة الأطلس',
   },
   helpLead: {
     fr: 'La carte montre le monde à l’année choisie sur la frise. Les calques ajoutent des informations sourcées.',
@@ -108,6 +120,7 @@ const copy = {
     es: 'El mapa muestra el mundo en el año elegido en la cronología. Las capas añaden información con fuentes.',
     zh: '地图显示时间轴上所选年份的世界。图层提供附有来源的信息。',
     ru: 'Карта показывает мир в году, выбранном на шкале времени. Слои добавляют сведения с источниками.',
+    ar: 'تُظهر الخريطة العالم في السنة المختارة على الخط الزمني. وتضيف الطبقات معلومات موثّقة بالمصادر.',
   },
   timelineHeading: {
     fr: 'La frise',
@@ -116,6 +129,7 @@ const copy = {
     es: 'La cronología',
     zh: '时间轴',
     ru: 'Шкала времени',
+    ar: 'الخط الزمني',
   },
   timelineDrag: {
     fr: 'Faites glisser le curseur pour changer d’année, ou touchez l’année affichée pour en saisir une, par exemple « 331 av. J.-C. ».',
@@ -124,6 +138,7 @@ const copy = {
     es: 'Arrastra el cursor para cambiar de año, o toca el año mostrado para escribir uno, por ejemplo «331 a. C.».',
     zh: '拖动滑块切换年份，或点按显示的年份直接输入，例如“331 BCE”。',
     ru: 'Перетащите ползунок, чтобы сменить год, или нажмите на показанный год и введите свой, например «331 до н. э.».',
+    ar: 'اسحب المؤشّر لتغيير السنة، أو اضغط على السنة المعروضة لإدخال سنة، مثل «331 ق.م.».',
   },
   timelineWheel: {
     fr: 'Au-dessus de la frise, la molette avance ou recule d’un an.',
@@ -132,6 +147,7 @@ const copy = {
     es: 'Sobre la cronología, la rueda del ratón avanza o retrocede un año.',
     zh: '在时间轴上滚动鼠标滚轮，可前进或后退一年。',
     ru: 'Над шкалой времени колесо мыши сдвигает год вперёд или назад.',
+    ar: 'عند وضع المؤشّر فوق الخط الزمني، تنقلك عجلة الفأرة سنة إلى الأمام أو الخلف.',
   },
   timelinePlay: {
     fr: 'Le bouton Lecture fait défiler les années, à 1, 5, 25 ou 100 ans par seconde.',
@@ -140,6 +156,7 @@ const copy = {
     es: 'El botón de reproducción recorre los años a 1, 5, 25 o 100 años por segundo.',
     zh: '播放按钮以每秒 1、5、25 或 100 年的速度推进年份。',
     ru: 'Кнопка воспроизведения прокручивает годы со скоростью 1, 5, 25 или 100 лет в секунду.',
+    ar: 'ينقلك زر التشغيل عبر السنوات بسرعة 1 أو 5 أو 25 أو 100 سنة في الثانية.',
   },
   keysHeading: {
     fr: 'Raccourcis clavier',
@@ -148,6 +165,7 @@ const copy = {
     es: 'Atajos de teclado',
     zh: '键盘快捷键',
     ru: 'Сочетания клавиш',
+    ar: 'اختصارات لوحة المفاتيح',
   },
   spaceKey: {
     fr: 'Espace',
@@ -156,6 +174,7 @@ const copy = {
     es: 'Espacio',
     zh: '空格键',
     ru: 'Пробел',
+    ar: 'المسافة',
   },
   escapeKey: {
     fr: 'Échap',
@@ -164,6 +183,7 @@ const copy = {
     es: 'Esc',
     zh: 'Esc',
     ru: 'Esc',
+    ar: 'Esc',
   },
   keySpace: {
     fr: 'Lire ou mettre en pause la chronologie',
@@ -172,6 +192,7 @@ const copy = {
     es: 'Reproducir o pausar la cronología',
     zh: '播放或暂停时间轴',
     ru: 'Запустить или приостановить хронологию',
+    ar: 'تشغيل الخط الزمني أو إيقافه مؤقتًا',
   },
   keyArrows: {
     fr: 'Année précédente ou suivante',
@@ -180,6 +201,7 @@ const copy = {
     es: 'Año anterior o siguiente',
     zh: '上一年或下一年',
     ru: 'Предыдущий или следующий год',
+    ar: 'السنة السابقة أو التالية',
   },
   keySearch: {
     fr: 'Rechercher dans l’atlas',
@@ -188,6 +210,7 @@ const copy = {
     es: 'Buscar en el atlas',
     zh: '搜索地图集',
     ru: 'Поиск по атласу',
+    ar: 'البحث في الأطلس',
   },
   keyEscape: {
     fr: 'Fermer la fiche ouverte et arrêter la lecture',
@@ -196,6 +219,7 @@ const copy = {
     es: 'Cerrar la ficha abierta y detener la reproducción',
     zh: '关闭当前条目并停止播放',
     ru: 'Закрыть открытую карточку и остановить воспроизведение',
+    ar: 'إغلاق السجل المفتوح وإيقاف التشغيل',
   },
   layersHeading: {
     fr: 'Les calques',
@@ -204,6 +228,7 @@ const copy = {
     es: 'Capas',
     zh: '图层',
     ru: 'Слои',
+    ar: 'الطبقات',
   },
   religions: {
     fr: 'Religions',
@@ -212,6 +237,7 @@ const copy = {
     es: 'Religiones',
     zh: '宗教',
     ru: 'Религии',
+    ar: 'الأديان',
   },
   layerBattles: {
     fr: 'Les conflits datés et localisés : batailles, sièges, guerres, campagnes et conquêtes (les traités restent visibles). Avec les batailles en 3D, certaines s’ouvrent en reconstitution.',
@@ -220,6 +246,7 @@ const copy = {
     es: 'Conflictos fechados y localizados: batallas, asedios, guerras, campañas y conquistas (los tratados siguen visibles). Con las batallas en 3D, algunas se abren como reconstrucción.',
     zh: '有日期和地点的冲突：战役、围城、战争、战事与征服（条约仍会显示）。在 3D 战役中，部分战役可以打开三维重建。',
     ru: 'Датированные конфликты с указанием места: битвы, осады, войны, кампании и завоевания (договоры остаются видимыми). В режиме 3D некоторые битвы открываются как реконструкция.',
+    ar: 'صراعات موثّقة التاريخ والموقع: المعارك والحصارات والحروب والحملات والفتوحات (تبقى المعاهدات ظاهرة). مع تفعيل المعارك ثلاثية الأبعاد، يُفتح بعضها في عرض يعيد بناء المعركة.',
   },
   layerResources: {
     fr: 'Les mines et gisements connus à l’année choisie, avec leurs sources.',
@@ -228,6 +255,7 @@ const copy = {
     es: 'Minas y yacimientos conocidos en el año elegido, con sus fuentes.',
     zh: '所选年份已知的矿山和矿床，并附来源。',
     ru: 'Шахты и месторождения, известные в выбранном году, с источниками.',
+    ar: 'المناجم والرواسب المعروفة في السنة المختارة، مع مصادرها.',
   },
   layerReligions: {
     fr: 'Les attestations datées des traditions religieuses et leurs routes de diffusion.',
@@ -236,6 +264,7 @@ const copy = {
     es: 'Testimonios fechados de las tradiciones religiosas y sus rutas de difusión.',
     zh: '宗教传统有日期的见证及其传播路线。',
     ru: 'Датированные свидетельства религиозных традиций и пути их распространения.',
+    ar: 'الشواهد المؤرّخة للتقاليد الدينية ومسارات انتشارها.',
   },
   layerKey: {
     fr: 'La flèche à côté d’un calque ouvre sa légende.',
@@ -244,6 +273,7 @@ const copy = {
     es: 'La flecha junto a una capa abre su leyenda.',
     zh: '图层旁的箭头可打开其图例。',
     ru: 'Стрелка рядом со слоем открывает его легенду.',
+    ar: 'يفتح السهم بجوار الطبقة مفتاح رموزها.',
   },
   toolsNote: {
     fr: 'Les boutons de la carte changent la projection, la source des frontières, la densité des conflits, la vue liste et les traces.',
@@ -252,6 +282,7 @@ const copy = {
     es: 'Los botones del mapa cambian la proyección, la fuente de las fronteras, la densidad de conflictos, la vista de lista y los rastros.',
     zh: '地图按钮可切换投影、边界来源、冲突密度、列表视图和轨迹。',
     ru: 'Кнопки карты переключают проекцию, источник границ, плотность конфликтов, режим списка и следы.',
+    ar: 'تُبدّل أزرار الخريطة الإسقاط ومصدر الحدود وكثافة الصراعات وعرض القائمة والآثار.',
   },
   showStart: {
     fr: 'Revoir les trois portes d’entrée',
@@ -260,6 +291,7 @@ const copy = {
     es: 'Volver a ver las tres puertas de entrada',
     zh: '再次显示三种入门方式',
     ru: 'Снова показать три входа',
+    ar: 'عرض طرق الدخول الثلاث مجدّدًا',
   },
 } satisfies Record<string, Record<Locale, string>>;
 

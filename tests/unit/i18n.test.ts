@@ -10,10 +10,11 @@ import {
   interpolate,
   localizedName,
   localizedLanguage,
+  localeDirection,
   translate,
   translateCopy,
 } from '../../lib/i18n';
-import { additionalCopy } from '../../lib/i18n/copy';
+import { additionalCopy, type AdditionalLocale } from '../../lib/i18n/copy';
 import { LOCALES } from '../../lib/types';
 
 function componentFiles(directory: string): string[] {
@@ -23,7 +24,18 @@ function componentFiles(directory: string): string[] {
   });
 }
 
-describe('six-language UI', () => {
+describe('multilingual UI', () => {
+  it('provides every additional locale for every catalog entry', () => {
+    const locales = LOCALES.filter(
+      (locale): locale is AdditionalLocale => locale !== 'en' && locale !== 'fr',
+    );
+    for (const [english, translations] of Object.entries(additionalCopy)) {
+      for (const locale of locales) {
+        expect(translations[locale], `${locale}: ${english}`).toBeTruthy();
+      }
+    }
+  });
+
   it('covers every keyed label, event type, region and date precision', () => {
     const labels = [
       ...Object.values(dictionaries.en),
@@ -33,7 +45,7 @@ describe('six-language UI', () => {
     ];
     for (const label of labels) {
       expect(additionalCopy[label], `Missing catalog entry: ${label}`).toBeDefined();
-      for (const locale of ['de', 'es', 'zh', 'ru'] as const) {
+      for (const locale of ['de', 'es', 'zh', 'ru', 'ar'] as const) {
         expect(additionalCopy[label][locale], `${locale}: ${label}`).toBeTruthy();
       }
     }
@@ -82,10 +94,21 @@ describe('six-language UI', () => {
     expect(interpolate('{toString}', {})).toBe('{toString}');
   });
 
+  it('offers Arabic with right-to-left controls', () => {
+    expect(LOCALES).toContain('ar');
+    expect(translateCopy('ar', 'Année', 'Year')).toBe('السنة');
+    expect(localeDirection('ar')).toBe('rtl');
+    expect(localeDirection('ar-SA')).toBe('rtl');
+    expect(localeDirection('fr')).toBe('ltr');
+  });
+
   it('falls back to documented English names and never invents historical translations', () => {
     const name = { en: 'English source title', fr: 'Titre français', de: 'Deutscher Titel' };
     expect(localizedName(name, 'de')).toBe('Deutscher Titel');
     expect(localizedName(name, 'ru')).toBe('English source title');
+    expect(localizedName(name, 'ar')).toBe('English source title');
+    expect(localizedName({ ...name, ar: 'عنوان عربي موثق' }, 'ar')).toBe('عنوان عربي موثق');
+    expect(localizedLanguage(name, 'ar')).toBe('en');
     expect(localizedLanguage(name, 'de')).toBe('de');
     expect(localizedLanguage(name, 'fr')).toBe('fr');
     expect(localizedLanguage(name, 'ru')).toBe('en');

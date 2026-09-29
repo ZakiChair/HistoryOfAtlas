@@ -7,7 +7,7 @@ test('a new visit opens HistoryOfAtlas in English', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByTestId('language-select')).toHaveValue('en');
   await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-label', 'Year');
-  await expect(page.getByTestId('language-select').locator('option')).toHaveCount(6);
+  await expect(page.getByTestId('language-select').locator('option')).toHaveCount(7);
 });
 
 test('campaign steps use sourced English names by default and follow language changes', async ({
@@ -39,6 +39,7 @@ const languages = [
   { locale: 'es', year: 'Año', play: 'Reproducir cronología' },
   { locale: 'zh', year: '年份', play: '播放时间轴' },
   { locale: 'ru', year: 'Год', play: 'Воспроизвести хронологию' },
+  { locale: 'ar', year: 'السنة', play: 'تشغيل الخط الزمني' },
 ];
 
 for (const { locale, year, play } of languages) {
@@ -48,6 +49,7 @@ for (const { locale, year, play } of languages) {
     await page.goto('/?y=-330&mode=list');
     await page.getByTestId('language-select').selectOption(locale);
     await expect(page.locator('html')).toHaveAttribute('lang', locale);
+    await expect(page.locator('html')).toHaveAttribute('dir', locale === 'ar' ? 'rtl' : 'ltr');
     await expect(page.getByTestId('year-slider')).toHaveAttribute('aria-label', year);
     await expect(page.getByTestId('timeline-play')).toHaveAttribute('aria-label', play);
     await expect.poll(() => new URL(page.url()).searchParams.get('lang')).toBe(locale);
@@ -61,3 +63,46 @@ for (const { locale, year, play } of languages) {
     expect(errors).toEqual([]);
   });
 }
+
+test('Arabic keeps the time axis aligned, accepts Arabic years and restores LTR on switching', async ({
+  page,
+}) => {
+  await page.goto('/?lang=ar&y=-330&mode=list');
+  const slider = page.getByTestId('year-slider');
+  await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
+  await expect(slider).toHaveAttribute('aria-label', 'السنة');
+  await expect(page.locator('.timeline-era').first()).toContainText(/[\u0600-\u06ff]/);
+  const bands = page.locator('.timeline-era');
+  const first = await bands.first().boundingBox();
+  const last = await bands.last().boundingBox();
+  expect(first!.x).toBeLessThan(last!.x);
+  await slider.focus();
+  await page.keyboard.press('ArrowRight');
+  await expect.poll(() => new URL(page.url()).searchParams.get('y')).toBe('-329');
+  // Radix offsets its thumb to keep it inside the rail. Both locales must use
+  // the same physical positions, including that built-in bounds adjustment.
+  const positions = async () => {
+    const thumb = await slider.boundingBox();
+    const cursor = await page.locator('.timeline-cursor-line').boundingBox();
+    return { thumb: thumb!.x + thumb!.width / 2, cursor: cursor!.x };
+  };
+  const arabic = await positions();
+  await page.getByTestId('language-select').selectOption('en');
+  await expect(page.locator('html')).toHaveAttribute('dir', 'ltr');
+  const english = await positions();
+  expect(arabic.thumb).toBeCloseTo(english.thumb, 0);
+  expect(arabic.cursor).toBeCloseTo(english.cursor, 0);
+  await page.getByTestId('language-select').selectOption('ar');
+  await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
+  await page.locator('.timeline-year').click();
+  await page.locator('.timeline-year-form input').fill('٣٣١ ق.م.');
+  await page.locator('.timeline-year-form input').press('Enter');
+  await expect.poll(() => new URL(page.url()).searchParams.get('y')).toBe('-330');
+  await page.getByTestId('help-trigger').click();
+  await expect(page.getByTestId('help-sheet')).toBeVisible();
+  await expect(page.getByTestId('help-sheet').locator('h2')).toContainText(/[\u0600-\u06ff]/);
+  await page.keyboard.press('Escape');
+  await page.getByTestId('language-select').selectOption('en');
+  await expect(page.locator('html')).toHaveAttribute('dir', 'ltr');
+  await expect(slider).toHaveAttribute('aria-label', 'Year');
+});

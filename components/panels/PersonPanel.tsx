@@ -289,7 +289,7 @@ function PersonDetail({ person }: { person: Person }) {
         )}
         {description && (
           <p className="detail-description" lang={descriptionLanguage}>
-            {description}
+            <bdi dir="auto">{description}</bdi>
             <a
               className="description-source"
               href={`https://www.wikidata.org/wiki/${person.id}`}

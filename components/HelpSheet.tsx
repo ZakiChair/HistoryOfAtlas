@@ -64,7 +64,9 @@ export default function HelpSheet({
                 <div key={action}>
                   <dt>
                     {keys.map((key) => (
-                      <kbd key={key}>{key}</kbd>
+                      <kbd key={key} dir="auto">
+                        {key}
+                      </kbd>
                     ))}
                   </dt>
                   <dd>{text(action)}</dd>

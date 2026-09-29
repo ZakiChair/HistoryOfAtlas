@@ -9,7 +9,7 @@ import type {
   VectorTileSource,
 } from 'maplibre-gl';
 import { useAtlasStore } from '@/lib/store';
-import { translateCopy, useI18n } from '@/lib/i18n';
+import { translateCopy, useI18n, localeDirection } from '@/lib/i18n';
 import { getEvent, readJson, type DataManifest } from '@/lib/data-client';
 import { selectEventArchive } from '@/lib/event-archives';
 import { boundaryFrames, wrapLongitude } from '@/lib/map-boundaries';
@@ -200,9 +200,15 @@ export default function WorldMap() {
                 }
               : {
                   top: 20,
-                  right: 60,
+                  right:
+                    localeDirection(state.locale) === 'rtl'
+                      ? Math.min(370, map.getContainer().clientWidth * 0.3)
+                      : 60,
                   bottom: 20,
-                  left: Math.min(370, map.getContainer().clientWidth * 0.3),
+                  left:
+                    localeDirection(state.locale) === 'rtl'
+                      ? 60
+                      : Math.min(370, map.getContainer().clientWidth * 0.3),
                 }
             : { top: 0, right: 0, bottom: 0, left: 0 };
           const previous = map.getPadding();

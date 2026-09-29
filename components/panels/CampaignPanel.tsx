@@ -54,7 +54,7 @@ export default function CampaignPanel() {
   return (
     <section className="campaign-panel">
       <div className="section-heading">
-        <h2 lang={selected ? localizedLanguage(selected.name, locale) : undefined}>
+        <h2 lang={selected ? localizedLanguage(selected.name, locale) : undefined} dir="auto">
           {selected
             ? localizedName(selected.name, locale)
             : t('Guerres & campagnes', 'Wars & campaigns')}
@@ -130,7 +130,10 @@ export default function CampaignPanel() {
                   })}{' '}
                   · {formatHistDate(current.date, locale)}
                 </small>
-                <strong lang={current.name ? localizedLanguage(current.name, locale) : undefined}>
+                <strong
+                  lang={current.name ? localizedLanguage(current.name, locale) : undefined}
+                  dir="auto"
+                >
                   {current.name ? localizedName(current.name, locale) : current.label}
                 </strong>
               </p>
@@ -161,7 +164,10 @@ export default function CampaignPanel() {
                   <span className="step-number">{index + 1}</span>
                   <span>
                     <small>{formatYear(item.date.year, locale)}</small>
-                    <strong lang={item.name ? localizedLanguage(item.name, locale) : undefined}>
+                    <strong
+                      lang={item.name ? localizedLanguage(item.name, locale) : undefined}
+                      dir="auto"
+                    >
                       {item.name ? localizedName(item.name, locale) : item.label}
                     </strong>
                   </span>
@@ -201,7 +207,7 @@ export default function CampaignPanel() {
             >
               <Route size={20} strokeWidth={1.25} />
               <span>
-                <strong lang={localizedLanguage(campaign.name, locale)}>
+                <strong lang={localizedLanguage(campaign.name, locale)} dir="auto">
                   {localizedName(campaign.name, locale)}
                 </strong>
                 <small>

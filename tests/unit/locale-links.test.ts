@@ -29,6 +29,7 @@ describe('the static pages lead back to the atlas in the reader’s language', (
 
   it('keeps a supported ?lang= from the page address and nothing else', () => {
     expect(hrefKeepingLang('/', '?lang=fr')).toBe('/?lang=fr');
+    expect(hrefKeepingLang('/', '?lang=ar')).toBe('/?lang=ar');
     expect(hrefKeepingLang('/', '?utm_source=news&lang=zh')).toBe('/?lang=zh');
     expect(hrefKeepingLang('/', '?lang=en')).toBe('/');
     expect(hrefKeepingLang('/', '?lang=xx')).toBe('/');
@@ -82,7 +83,7 @@ describe('religion texts', () => {
   const text = { en: 'The early Upanishads', fr: 'Les premières Upanishad' };
   it('declares English wherever the French text is not shown', () => {
     expect(religionLanguage('fr')).toBe('fr');
-    for (const locale of ['en', 'de', 'es', 'zh', 'ru'] as const) {
+    for (const locale of ['en', 'de', 'es', 'zh', 'ru', 'ar'] as const) {
       expect(religionLanguage(locale)).toBe('en');
       expect(religionLabel(text, locale)).toBe(text.en);
     }

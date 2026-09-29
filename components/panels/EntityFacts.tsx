@@ -73,13 +73,16 @@ function Capital({ fact }: { fact: CapitalFact }) {
           target="_blank"
           rel="noreferrer"
           lang={nameLanguage(fact.city.name, locale)}
+          dir="auto"
         >
           {localizedName(fact.city.name, locale)}
         </a>
       </strong>
       <span className="polity-fact-date">{period}</span>
       {fact.note && (
-        <p lang={nameLanguage(fact.note, locale)}>{localizedName(fact.note, locale)}</p>
+        <p lang={nameLanguage(fact.note, locale)} dir="auto">
+          {localizedName(fact.note, locale)}
+        </p>
       )}
       <FactSources sources={fact.sources} />
     </li>
@@ -116,7 +119,9 @@ function Population({ fact }: { fact: PopulationFact }) {
         </span>
       )}
       {fact.note && (
-        <p lang={nameLanguage(fact.note, locale)}>{localizedName(fact.note, locale)}</p>
+        <p lang={nameLanguage(fact.note, locale)} dir="auto">
+          {localizedName(fact.note, locale)}
+        </p>
       )}
       <FactSources sources={fact.sources} />
     </li>
@@ -294,6 +299,7 @@ export default function EntityFacts({ entity, year }: { entity: Entity; year: nu
                 target="_blank"
                 rel="noreferrer"
                 lang={nameLanguage(mapping.label, locale)}
+                dir="auto"
               >
                 {localizedName(mapping.label, locale)}
               </a>

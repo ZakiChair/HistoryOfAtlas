@@ -159,7 +159,7 @@ ul {
   position: fixed;
   z-index: 100;
   top: -80px;
-  left: 20px;
+  inset-inline-start: 20px;
   background: var(--gold);
   color: var(--ink);
   padding: 12px 18px;
@@ -228,8 +228,8 @@ ul {
   align-items: center;
   align-self: stretch;
   gap: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 .primary-nav button {
   position: relative;
@@ -246,8 +246,8 @@ ul {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   height: 2px;
   background: var(--gold);
 }
@@ -376,8 +376,8 @@ ul {
   position: absolute;
   z-index: 3;
   top: 107px;
-  left: 29px;
-  right: 28px;
+  inset-inline-start: 29px;
+  inset-inline-end: 28px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -743,13 +743,13 @@ ul {
   width: 94px;
   height: 1px;
   background: var(--line-strong);
-  margin-left: 5px;
+  margin-inline-start: 5px;
 }
 .exploration-panel {
   position: absolute;
   z-index: 8;
   width: 328px;
-  left: 26px;
+  inset-inline-start: 26px;
   top: 143px;
   bottom: calc(var(--timeline-height) + 42px);
   display: flex;
@@ -881,7 +881,7 @@ ul {
   gap: 10px;
   width: 100%;
   padding: 9px 7px;
-  text-align: left;
+  text-align: start;
   color: var(--muted);
   border-radius: 4px;
   font-size: 10px;
@@ -928,7 +928,7 @@ ul {
   gap: 10px;
   align-items: center;
   padding: 10px 7px;
-  text-align: left;
+  text-align: start;
   border-radius: 4px;
 }
 .event-row:hover {
@@ -954,7 +954,7 @@ ul {
 .event-type-icon .event-swatch {
   position: absolute;
   top: -3px;
-  right: -3px;
+  inset-inline-end: -3px;
 }
 .event-row-copy {
   display: flex;
@@ -994,7 +994,7 @@ ul {
   color: var(--gold);
   font-size: 10px;
   line-height: 1.6;
-  text-align: left;
+  text-align: start;
 }
 .text-button:hover {
   color: var(--paper);
@@ -1080,7 +1080,7 @@ ul {
   font-size: 9px;
 }
 .discovery-actions button + button {
-  border-left: 1px solid var(--line);
+  border-inline-start: 1px solid var(--line);
 }
 .discovery-actions button:hover {
   color: var(--gold);
@@ -1093,7 +1093,7 @@ ul {
   position: absolute;
   z-index: 9;
   top: 145px;
-  left: 27px;
+  inset-inline-start: 27px;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -1107,7 +1107,7 @@ ul {
   position: absolute;
   z-index: 9;
   top: 148px;
-  right: 25px;
+  inset-inline-end: 25px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1146,7 +1146,7 @@ ul {
   position: absolute;
   z-index: 3;
   bottom: calc(var(--timeline-height) + 61px);
-  right: 30px;
+  inset-inline-end: 30px;
   width: 50px;
   text-align: center;
   color: var(--gold);
@@ -1165,7 +1165,7 @@ ul {
 .map-coordinate {
   position: absolute;
   z-index: 4;
-  left: 385px;
+  inset-inline-start: 385px;
   bottom: calc(var(--timeline-height) + 56px);
   display: flex;
   flex-direction: column;
@@ -1183,8 +1183,8 @@ ul {
   position: absolute;
   z-index: 5;
   bottom: calc(var(--timeline-height) + 15px);
-  right: 28px;
-  left: 385px;
+  inset-inline-end: 28px;
+  inset-inline-start: 385px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1193,7 +1193,7 @@ ul {
   font-size: 8px;
 }
 .map-attribution a {
-  margin-left: 12px;
+  margin-inline-start: 12px;
 }
 .maplibregl-ctrl-attrib {
   display: none;
@@ -1240,8 +1240,8 @@ ul {
   position: absolute;
   z-index: 15;
   bottom: 0;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   height: var(--timeline-height);
   padding: 17px 31px 11px;
   background: var(--ink);
@@ -1264,7 +1264,7 @@ ul {
 }
 .timeline-eyebrow {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   color: var(--dim);
   font-size: 8px;
@@ -1288,7 +1288,7 @@ ul {
     10px 'Manrope',
     sans-serif;
   display: inline-block;
-  margin-left: 7px;
+  margin-inline-start: 7px;
   color: var(--dim);
   vertical-align: middle;
 }
@@ -1339,8 +1339,8 @@ ul {
   display: flex;
   align-items: center;
   gap: 3px;
-  border-left: 1px solid var(--line-strong);
-  padding-left: 18px;
+  border-inline-start: 1px solid var(--line-strong);
+  padding-inline-start: 18px;
 }
 .timeline-speeds button {
   min-width: 29px;
@@ -1403,7 +1403,7 @@ ul {
   align-items: center;
   width: 100%;
   height: 24px;
-  left: 0;
+  inset-inline-start: 0;
   bottom: -11px;
   user-select: none;
   touch-action: none;
@@ -1436,7 +1436,7 @@ ul {
   position: absolute;
   height: 6px;
   width: 6px;
-  left: 8px;
+  inset-inline-start: 8px;
   top: 8px;
   background: var(--gold);
   transform: rotate(45deg);
@@ -1510,7 +1510,7 @@ ul {
 }
 .timeline-range {
   position: absolute;
-  right: 30px;
+  inset-inline-end: 30px;
   bottom: calc(100% + 12px);
   display: flex;
   align-items: center;
@@ -1570,7 +1570,7 @@ ul {
   z-index: 12;
   top: 143px;
   bottom: calc(var(--timeline-height) + 42px);
-  right: 85px;
+  inset-inline-end: 85px;
   width: 352px;
   display: flex;
   flex-direction: column;
@@ -1696,7 +1696,7 @@ ul {
 .badge-warning,
 .document-notice {
   background: var(--gold-wash);
-  border-left: 2px solid var(--gold);
+  border-inline-start: 2px solid var(--gold);
   padding: 10px 12px;
   font-size: 10px;
   line-height: 1.75;
@@ -1818,8 +1818,8 @@ ul {
 .war-mini-timeline button::before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   height: 1px;
   top: 8px;
   background: var(--line-strong);
@@ -1948,7 +1948,7 @@ ul {
   line-height: 1.6;
 }
 .polity-fact-sources ul {
-  padding-left: 16px;
+  padding-inline-start: 16px;
   margin: 8px 0;
 }
 .polity-fact-sources summary,
@@ -2002,7 +2002,7 @@ ul {
   padding: 9px 0;
   color: var(--muted);
   font-size: 10px;
-  text-align: left;
+  text-align: start;
   width: 100%;
 }
 .entity-wars button span {
@@ -2032,7 +2032,7 @@ ul {
   padding: 10px 8px;
   color: var(--muted);
   font-size: 9px;
-  text-align: left;
+  text-align: start;
 }
 .type-filters svg {
   width: 13px;
@@ -2093,7 +2093,7 @@ ul {
   height: 6px;
 }
 .range-value {
-  float: right;
+  float: inline-end;
   color: var(--gold);
   font-variant-numeric: tabular-nums;
 }
@@ -2123,7 +2123,7 @@ ul {
   gap: 11px;
   padding: 16px 0;
   border-top: 1px solid var(--line);
-  text-align: left;
+  text-align: start;
 }
 .campaign-card > svg {
   color: var(--gold);
@@ -2202,7 +2202,7 @@ ul {
 .campaign-steps li:not(:last-child)::after {
   content: '';
   position: absolute;
-  left: 12px;
+  inset-inline-start: 12px;
   width: 1px;
   top: 33px;
   bottom: -8px;
@@ -2214,7 +2214,7 @@ ul {
   align-items: flex-start;
   gap: 12px;
   padding: 12px 0;
-  text-align: left;
+  text-align: start;
 }
 .step-number {
   display: flex;
@@ -2258,7 +2258,7 @@ ul {
   display: block;
   width: 100%;
   padding: 20px 0;
-  text-align: left;
+  text-align: start;
   border-top: 1px solid var(--line);
 }
 .story-card-index {
@@ -2287,7 +2287,7 @@ ul {
 }
 .story-card-dates {
   color: var(--gold);
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 .story-card:hover strong {
   color: var(--gold);
@@ -2310,7 +2310,7 @@ ul {
   scroll-snap-align: start;
   min-height: 230px;
   padding: 26px 14px;
-  border-left: 1px solid var(--line-strong);
+  border-inline-start: 1px solid var(--line-strong);
 }
 .story-step.active {
   border-color: var(--gold);
@@ -2390,7 +2390,7 @@ ul {
   gap: 12px;
   padding: 13px 14px;
   width: 100%;
-  text-align: left;
+  text-align: start;
   border-radius: 4px;
 }
 .search-results button.active {
@@ -2613,7 +2613,7 @@ ul {
   font-size: 12px;
 }
 .document-body > section > ul {
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 .document-card ul {
   list-style: none;
@@ -2628,7 +2628,7 @@ ul {
   margin-top: 12px;
 }
 .document-card dd {
-  margin-left: 0;
+  margin-inline-start: 0;
   color: var(--paper);
   font-size: 13px;
 }
@@ -2642,8 +2642,8 @@ ul {
 }
 .war-event-list {
   list-style: none;
-  border-left: 1px solid var(--line-strong);
-  padding-left: 24px;
+  border-inline-start: 1px solid var(--line-strong);
+  padding-inline-start: 24px;
   margin: 30px 0;
 }
 .war-event-list li {
@@ -2671,7 +2671,7 @@ ul {
 }
 .document-table caption {
   caption-side: bottom;
-  text-align: left;
+  text-align: start;
   color: var(--dim);
   font-size: 11px;
   padding-top: 10px;
@@ -2680,7 +2680,7 @@ ul {
 .document-table td {
   padding: 8px 14px 8px 0;
   border-bottom: 1px solid var(--line);
-  text-align: right;
+  text-align: end;
   vertical-align: top;
   white-space: nowrap;
 }
@@ -2689,7 +2689,7 @@ ul {
   font-weight: 500;
 }
 .document-table th:first-child {
-  text-align: left;
+  text-align: start;
   white-space: normal;
   min-width: 11em;
 }
@@ -2706,7 +2706,7 @@ ul {
 }
 .document-details ul {
   margin-top: 12px;
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 
 @media (min-width: 1500px) {
@@ -2714,18 +2714,18 @@ ul {
     padding-inline: 40px;
   }
   .exploration-panel {
-    left: 34px;
+    inset-inline-start: 34px;
     width: 344px;
   }
   .map-topline {
-    left: 38px;
+    inset-inline-start: 38px;
   }
   .overview-heading h2 {
     font-size: 43px;
   }
   .map-coordinate,
   .map-attribution {
-    left: 410px;
+    inset-inline-start: 410px;
   }
   .timeline {
     padding-inline: 40px;
@@ -2769,7 +2769,7 @@ ul {
   }
   .map-coordinate,
   .map-attribution {
-    left: 355px;
+    inset-inline-start: 355px;
   }
   .event-panel,
   .entity-panel {
@@ -2800,7 +2800,7 @@ ul {
   }
   .exploration-panel {
     width: 283px;
-    left: 18px;
+    inset-inline-start: 18px;
   }
   .exploration-scroll {
     padding: 22px 18px;
@@ -2812,25 +2812,25 @@ ul {
     font-size: 10px;
   }
   .map-topline {
-    left: 20px;
+    inset-inline-start: 20px;
   }
   .map-coordinate,
   .map-attribution {
-    left: 322px;
+    inset-inline-start: 322px;
   }
   .map-attribution {
     flex-wrap: wrap;
     row-gap: 4px;
   }
   .map-attribution a {
-    margin-left: 0;
+    margin-inline-start: 0;
   }
   .detail-is-open .exploration-panel {
     display: none;
   }
   .event-panel,
   .entity-panel {
-    right: 82px;
+    inset-inline-end: 82px;
     width: min(360px, calc(100vw - 115px));
   }
   .timeline {
@@ -2850,7 +2850,7 @@ ul {
     gap: 12px;
   }
   .timeline-speeds {
-    padding-left: 12px;
+    padding-inline-start: 12px;
   }
   .timeline-range-toggle span {
     display: none;
@@ -2953,8 +2953,8 @@ ul {
 
   .map-topline {
     top: 83px;
-    left: 16px;
-    right: 64px;
+    inset-inline-start: 16px;
+    inset-inline-end: 64px;
     font-size: 8px;
     letter-spacing: 0.2px;
     gap: 7px;
@@ -3008,8 +3008,8 @@ ul {
   .exploration-panel {
     top: auto;
     bottom: calc(var(--timeline-height) + 10px);
-    left: 10px;
-    right: 10px;
+    inset-inline-start: 10px;
+    inset-inline-end: 10px;
     width: auto;
     height: 265px;
     border-radius: 7px;
@@ -3046,8 +3046,8 @@ ul {
     height: 1px;
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     background: var(--gold);
   }
   .exploration-scroll {
@@ -3088,13 +3088,13 @@ ul {
     font-size: 9px;
   }
   .reopen-panel {
-    left: 15px;
+    inset-inline-start: 15px;
     top: 112px;
     padding: 10px;
   }
   .map-tools {
     top: 113px;
-    right: 12px;
+    inset-inline-end: 12px;
     gap: 8px;
     align-items: flex-end;
     z-index: 7;
@@ -3113,10 +3113,10 @@ ul {
   }
   .tool-group .icon-button + .icon-button {
     border-top: 0;
-    border-left: 1px solid var(--line);
+    border-inline-start: 1px solid var(--line);
   }
   .map-coordinate {
-    left: 16px;
+    inset-inline-start: 16px;
     bottom: calc(var(--timeline-height) + 22px);
     font-size: 7px;
     gap: 3px;
@@ -3125,8 +3125,8 @@ ul {
     display: none;
   }
   .map-attribution {
-    left: 16px;
-    right: 13px;
+    inset-inline-start: 16px;
+    inset-inline-end: 13px;
     bottom: calc(var(--timeline-height) + 8px);
     font-size: 6px;
     gap: 4px;
@@ -3140,7 +3140,7 @@ ul {
     height: 9px;
   }
   .map-attribution a {
-    margin-left: 5px;
+    margin-inline-start: 5px;
   }
   .world-compass {
     display: none;
@@ -3156,8 +3156,8 @@ ul {
   .entity-panel {
     top: auto;
     bottom: calc(var(--timeline-height) + 8px);
-    left: 8px;
-    right: 8px;
+    inset-inline-start: 8px;
+    inset-inline-end: 8px;
     width: auto;
     height: 48svh;
     max-height: calc(100svh - var(--timeline-height) - 110px);
@@ -3239,8 +3239,8 @@ ul {
     height: 12px;
   }
   .timeline-speeds {
-    border-left: 0;
-    padding-left: 3px;
+    border-inline-start: 0;
+    padding-inline-start: 3px;
     gap: 0;
   }
   .timeline-speeds button {
@@ -3309,8 +3309,8 @@ ul {
     background: var(--ink);
   }
   .timeline-range {
-    left: 10px;
-    right: 10px;
+    inset-inline-start: 10px;
+    inset-inline-end: 10px;
     bottom: calc(100% + 10px);
     width: auto;
     max-width: none;
@@ -3405,7 +3405,7 @@ ul {
     font-size: 43px;
   }
   .war-event-list {
-    padding-left: 16px;
+    padding-inline-start: 16px;
   }
 }
 @media (max-width: 480px) {
@@ -3541,7 +3541,7 @@ ul {
   margin: 20px 0 10px;
 }
 .battle-kicker > span {
-  margin-left: auto;
+  margin-inline-start: auto;
   letter-spacing: 0;
   color: var(--muted);
 }
@@ -3578,7 +3578,7 @@ ul {
   font-size: 10px;
 }
 .battle-coverage a {
-  margin-left: auto;
+  margin-inline-start: auto;
   padding: 8px;
 }
 .battle-search {
@@ -3648,7 +3648,7 @@ ul {
   align-items: center;
   gap: 8px;
   width: 100%;
-  text-align: left;
+  text-align: start;
   padding: 14px 0;
 }
 .battle-list button:hover {
@@ -3720,8 +3720,8 @@ ul {
   margin: 8px 0 17px;
 }
 .battle-notice {
-  border-left: 2px solid var(--gold);
-  padding-left: 10px;
+  border-inline-start: 2px solid var(--gold);
+  padding-inline-start: 10px;
   font-size: 10px;
   line-height: 1.6;
   color: var(--muted);
@@ -3785,7 +3785,7 @@ ul {
 }
 .battle-detail dd {
   margin: 0;
-  text-align: right;
+  text-align: end;
   font-variant-numeric: tabular-nums;
 }
 .battle-quantity {
@@ -3805,7 +3805,7 @@ ul {
 .battle-quantity a svg {
   display: inline;
   vertical-align: baseline;
-  margin-left: 2px;
+  margin-inline-start: 2px;
 }
 .battle-quantity small {
   display: block;
@@ -3834,7 +3834,7 @@ ul {
 }
 .battle-equipment svg {
   display: inline;
-  margin-left: 3px;
+  margin-inline-start: 3px;
 }
 .battle-scale {
   font-size: 9px;
@@ -3908,13 +3908,13 @@ ul {
   color: var(--gold);
 }
 .battle-sources ul {
-  padding-left: 15px;
+  padding-inline-start: 15px;
   font-size: 10px;
   line-height: 1.8;
 }
 .battle-sources a svg {
   vertical-align: middle;
-  margin-left: 3px;
+  margin-inline-start: 3px;
 }
 .discovery-actions .battle-leave {
   flex: 1;
@@ -3936,7 +3936,7 @@ ul {
 .density-key {
   position: absolute;
   z-index: 5;
-  right: 25px;
+  inset-inline-end: 25px;
   bottom: calc(var(--timeline-height) + 36px);
   width: 190px;
   margin: 0;
@@ -3977,7 +3977,7 @@ ul {
 }
 @media (max-width: 580px) {
   .density-key {
-    right: 16px;
+    inset-inline-end: 16px;
     width: min(190px, calc(100vw - 32px));
   }
   /* The open notebook sheet (z-index 8) covers the key's corner on phones. */
@@ -4387,8 +4387,8 @@ ul {
 
 .detail-description {
   margin: 18px 0;
-  padding-left: 14px;
-  border-left: 2px solid var(--gold);
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid var(--gold);
 }
 .detail-description p {
   margin: 0 0 5px;
@@ -4488,9 +4488,9 @@ ul {
   color: var(--gold);
 }
 .person-tenure {
-  border-left: 1px solid var(--line);
+  border-inline-start: 1px solid var(--line);
   margin: 18px 0;
-  padding-left: 13px;
+  padding-inline-start: 13px;
 }
 .person-tenure h4 {
   margin: 0 0 4px;
@@ -4515,7 +4515,7 @@ ul {
 }
 .person-events .person-link {
   width: 100%;
-  text-align: left;
+  text-align: start;
 }
 .person-events .person-link:disabled {
   cursor: wait;
@@ -4686,8 +4686,8 @@ ul {
 .start-card {
   position: fixed;
   z-index: 45;
-  left: 385px;
-  right: 90px;
+  inset-inline-start: 385px;
+  inset-inline-end: 90px;
   bottom: calc(var(--timeline-height) + 40px);
   max-width: 640px;
   max-height: calc(100svh - var(--header-height) - var(--timeline-height) - 60px);
@@ -4779,13 +4779,13 @@ ul {
   position: fixed;
   z-index: 61;
   top: 0;
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
   width: min(420px, 100vw);
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 20px 24px 28px;
-  border-left: 1px solid var(--line-strong);
+  border-inline-start: 1px solid var(--line-strong);
   background: var(--panel);
   box-shadow: 0 24px 90px #00000055;
   color: var(--paper);
@@ -4876,13 +4876,13 @@ ul {
 }
 @media (min-width: 1500px) {
   .start-card {
-    left: 410px;
+    inset-inline-start: 410px;
   }
 }
 @media (max-width: 1120px) {
   .start-card {
-    left: 322px;
-    right: 72px;
+    inset-inline-start: 322px;
+    inset-inline-end: 72px;
   }
 }
 @media (max-width: 580px) {
@@ -4953,7 +4953,7 @@ ul {
   }
   .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .reopen-panel {
     top: auto;
-    left: 10px;
+    inset-inline-start: 10px;
     bottom: calc(var(--timeline-height) + 10px);
     width: var(--phone-bar-width);
     height: var(--phone-bar-height);
@@ -4979,8 +4979,8 @@ ul {
   }
   .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .map-tools {
     top: auto;
-    left: 10px;
-    right: 10px;
+    inset-inline-start: 10px;
+    inset-inline-end: 10px;
     bottom: calc(var(--timeline-height) + 18px + var(--phone-bar-height));
     flex-direction: row;
     flex-wrap: wrap;
@@ -4997,8 +4997,8 @@ ul {
     height: 30px;
   }
   .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .map-attribution {
-    left: calc(20px + var(--phone-bar-width));
-    right: 12px;
+    inset-inline-start: calc(20px + var(--phone-bar-width));
+    inset-inline-end: 12px;
     bottom: calc(var(--timeline-height) + 10px);
     min-height: var(--phone-bar-height);
     flex-wrap: wrap;
@@ -5013,8 +5013,8 @@ ul {
   }
   /* Above the folded notebook bar and the tool row, so both stay reachable while the card shows. */
   .start-card {
-    left: 10px;
-    right: 10px;
+    inset-inline-start: 10px;
+    inset-inline-end: 10px;
     bottom: calc(
       var(--timeline-height) + 26px + var(--phone-bar-height) + var(--phone-tools-height)
     );
@@ -5052,12 +5052,12 @@ ul {
   }
   .help-sheet {
     top: auto;
-    left: 0;
+    inset-inline-start: 0;
     width: 100%;
     max-height: 88svh;
     padding: 16px 18px 24px;
     border-top: 1px solid var(--line-strong);
-    border-left: 0;
+    border-inline-start: 0;
     border-radius: 10px 10px 0 0;
   }
   .help-terms > div {
@@ -5071,5 +5071,22 @@ ul {
   }
   .atlas-header .brand > span {
     font-size: 20px;
+  }
+}
+
+/* Arabic joins letters: tracking intended for Latin capitals must not separate them. */
+:lang(ar) {
+  letter-spacing: normal;
+}
+/* These arrows navigate reading order; compass and playback directions stay geographic/temporal. */
+[dir='rtl'] :is(.lucide-arrow-left, .lucide-arrow-right),
+[dir='rtl'] .timeline-year-submit svg,
+[dir='rtl'] .panel-collapse svg,
+[dir='rtl'] .reading-order-arrow {
+  transform: scaleX(-1);
+}
+@media (min-width: 581px) {
+  [dir='rtl'] .reopen-panel > .lucide-chevron-right {
+    transform: scaleX(-1);
   }
 }

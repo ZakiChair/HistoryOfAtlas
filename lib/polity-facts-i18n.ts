@@ -8,6 +8,7 @@ const copy = {
     'Capital y población',
     '首都与人口',
     'Столица и население',
+    'العاصمة والسكان',
   ],
   selectedYear: [
     'Année consultée :',
@@ -16,6 +17,7 @@ const copy = {
     'Año seleccionado:',
     '所选年份：',
     'Выбранный год:',
+    'السنة المختارة:',
   ],
   capital: [
     'Capitale(s)',
@@ -24,10 +26,19 @@ const copy = {
     'Capital(es)',
     '首都',
     'Столица / столицы',
+    'العاصمة / العواصم',
   ],
-  population: ['Population', 'Population', 'Bevölkerung', 'Población', '人口', 'Население'],
-  inhabitants: ['habitants', 'inhabitants', 'Einwohner', 'habitantes', '人', 'жителей'],
-  sources: ['Sources', 'Sources', 'Quellen', 'Fuentes', '来源', 'Источники'],
+  population: [
+    'Population',
+    'Population',
+    'Bevölkerung',
+    'Población',
+    '人口',
+    'Население',
+    'عدد السكان',
+  ],
+  inhabitants: ['habitants', 'inhabitants', 'Einwohner', 'habitantes', '人', 'жителей', 'نسمة'],
+  sources: ['Sources', 'Sources', 'Quellen', 'Fuentes', '来源', 'Источники', 'المصادر'],
   loading: [
     'Chargement des repères historiques…',
     'Loading historical facts…',
@@ -35,6 +46,7 @@ const copy = {
     'Cargando datos históricos…',
     '正在加载历史资料…',
     'Загрузка исторических сведений…',
+    'جارٍ تحميل المعلومات التاريخية…',
   ],
   unavailable: [
     'Ces informations sont indisponibles pour le moment.',
@@ -43,8 +55,17 @@ const copy = {
     'Estos datos no están disponibles temporalmente.',
     '这些资料暂时无法加载。',
     'Эти сведения временно недоступны.',
+    'هذه المعلومات غير متاحة حاليًا.',
   ],
-  retry: ['Réessayer', 'Try again', 'Erneut versuchen', 'Reintentar', '重试', 'Повторить'],
+  retry: [
+    'Réessayer',
+    'Try again',
+    'Erneut versuchen',
+    'Reintentar',
+    '重试',
+    'Повторить',
+    'إعادة المحاولة',
+  ],
   noCapital: [
     'Aucune capitale datée documentée pour',
     'No dated capital documented for',
@@ -52,6 +73,7 @@ const copy = {
     'No hay capital fechada documentada para',
     '没有对应年份的首都记载：',
     'Нет датированных сведений о столице за',
+    'لا توجد عاصمة موثقة بتاريخ لعام',
   ],
   noPopulation: [
     'Aucun chiffre documenté pour',
@@ -60,6 +82,7 @@ const copy = {
     'No hay cifra de población documentada para',
     '没有对应年份的人口记录：',
     'Нет данных о численности населения за',
+    'لا يوجد تعداد سكاني موثق لعام',
   ],
   undatedPeriod: [
     'Période non précisée',
@@ -68,6 +91,7 @@ const copy = {
     'Período no especificado',
     '时期不详',
     'Период не указан',
+    'الفترة غير محددة',
   ],
   undatedCapitals: [
     'Capitales mentionnées sans période connue',
@@ -76,6 +100,7 @@ const copy = {
     'Capitales mencionadas sin período conocido',
     '有记载但时期不详的首都',
     'Упомянутые столицы без известного периода',
+    'عواصم مذكورة دون فترة معروفة',
   ],
   undatedObservation: [
     'Date non précisée',
@@ -84,6 +109,7 @@ const copy = {
     'Fecha no especificada',
     '日期不详',
     'Дата не указана',
+    'التاريخ غير محدد',
   ],
   unknownStart: [
     'Début non précisé',
@@ -92,6 +118,7 @@ const copy = {
     'Inicio no especificado',
     '起始时间不详',
     'Начало не указано',
+    'البداية غير محددة',
   ],
   unknownEnd: [
     'Fin non précisée',
@@ -100,6 +127,7 @@ const copy = {
     'Fin no especificado',
     '结束时间不详',
     'Окончание не указано',
+    'النهاية غير محددة',
   ],
   otherCapitals: [
     'Autres capitales documentées',
@@ -108,6 +136,7 @@ const copy = {
     'Otras capitales documentadas',
     '其他有记载的首都',
     'Другие документированные столицы',
+    'عواصم أخرى موثقة',
   ],
   closestObservation: [
     'Repère daté le plus proche',
@@ -116,6 +145,7 @@ const copy = {
     'Dato fechado más cercano',
     '最近的有日期记录',
     'Ближайшие датированные сведения',
+    'أقرب ملاحظة مؤرخة',
   ],
   alternatives: [
     'Plusieurs valeurs sont rapportées par les sources.',
@@ -124,6 +154,7 @@ const copy = {
     'Las fuentes indican varios valores.',
     '来源记录了不同数值。',
     'Источники приводят разные значения.',
+    'تورد المصادر عدة قيم.',
   ],
   noInterpolation: [
     'Chaque chiffre se rapporte à sa date et au périmètre de sa source ; aucune population n’est interpolée entre deux dates.',
@@ -132,6 +163,7 @@ const copy = {
     'Cada cifra corresponde a su fecha y al ámbito de su fuente; no se interpola la población entre fechas.',
     '每个数值仅对应其日期和来源范围；不会对不同日期间的人口进行插值。',
     'Каждое значение относится к своей дате и охвату источника; население между датами не интерполируется.',
+    'يرتبط كل رقم بتاريخه ونطاق مصدره؛ ولا تُستنبط أعداد السكان بين تاريخين.',
   ],
   populationHistory: [
     'Autres observations démographiques',
@@ -140,6 +172,7 @@ const copy = {
     'Otros datos de población',
     '其他人口记录',
     'Другие сведения о населении',
+    'ملاحظات سكانية أخرى',
   ],
   subject: [
     'Entité documentée :',
@@ -148,6 +181,7 @@ const copy = {
     'Entidad documentada:',
     '资料对应的实体：',
     'Сведения относятся к:',
+    'الكيان الموثق:',
   ],
   scope: [
     'Ces repères concernent cette entité historique, dont le périmètre peut différer du contour affiché.',
@@ -156,12 +190,13 @@ const copy = {
     'Estos datos se refieren a esta entidad histórica, cuya extensión puede diferir del contorno mostrado.',
     '资料对应这一历史实体，其范围可能与所显示的边界不同。',
     'Эти сведения относятся к историческому образованию, границы которого могут отличаться от показанных.',
+    'تخص هذه المعلومات هذا الكيان التاريخي، الذي قد يختلف نطاقه عن الحدود المعروضة.',
   ],
-  minimum: ['Minimum :', 'Minimum:', 'Minimum:', 'Mínimo:', '下限：', 'Минимум:'],
-  maximum: ['Maximum :', 'Maximum:', 'Maximum:', 'Máximo:', '上限：', 'Максимум:'],
+  minimum: ['Minimum :', 'Minimum:', 'Minimum:', 'Mínimo:', '下限：', 'Минимум:', 'الحد الأدنى:'],
+  maximum: ['Maximum :', 'Maximum:', 'Maximum:', 'Máximo:', '上限：', 'Максимум:', 'الحد الأقصى:'],
 } as const;
 
-const position: Record<Locale, number> = { fr: 0, en: 1, de: 2, es: 3, zh: 4, ru: 5 };
+const position: Record<Locale, number> = { fr: 0, en: 1, de: 2, es: 3, zh: 4, ru: 5, ar: 6 };
 export function polityFactsText(locale: Locale, key: keyof typeof copy): string {
   return copy[key][position[locale]];
 }

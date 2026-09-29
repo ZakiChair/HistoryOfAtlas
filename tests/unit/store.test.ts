@@ -15,7 +15,7 @@ describe('shareable atlas state', () => {
     expect(useAtlasStore.getState().locale).toBe('en');
   });
 
-  it.each(['en', 'fr', 'de', 'es', 'zh', 'ru'] as const)(
+  it.each(['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'] as const)(
     'preserves the selected language %s when sharing and reopening the atlas',
     (locale) => {
       useAtlasStore.getState().setLocale(locale);

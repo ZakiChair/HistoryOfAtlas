@@ -6,6 +6,7 @@ import { useAtlasStore } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
 import { religionLanguage, religionMilestonesAt } from '@/lib/religions/time';
 import { religionText } from '@/lib/religions/i18n';
+import { religionTraditionNames } from '@/lib/religions/tradition-names';
 import type { ReligionMilestone } from '@/lib/religions/types';
 import { formatYear } from '@/lib/histdate';
 import Localized from '../ui/Localized';
@@ -84,7 +85,11 @@ export default function ReligionLayers({
         <span>{t('through').replace('{year}', formatYear(horizon, locale))}</span>
         {filter && (
           <span className="religion-active-filter">
-            {tradition ? <Localized value={tradition.names} locale={locale} /> : filter}
+            {tradition ? (
+              <Localized value={religionTraditionNames(tradition.names)} locale={locale} />
+            ) : (
+              filter
+            )}
           </span>
         )}
         {(status === 'idle' || status === 'loading') && <span role="status">{t('loading')}</span>}
@@ -141,7 +146,7 @@ export default function ReligionLayers({
                 {tradition && (
                   <p className="religion-tradition-name">
                     <TraditionIcon tradition={tradition} />
-                    <Localized value={tradition.names} locale={locale} />
+                    <Localized value={religionTraditionNames(tradition.names)} locale={locale} />
                   </p>
                 )}
                 <p className="religion-stage-date">
@@ -228,7 +233,7 @@ export default function ReligionLayers({
                       onClick={() => useAtlasStore.getState().setReligionFilter(item.id)}
                     >
                       <TraditionIcon tradition={item} />
-                      <Localized value={item.names} locale={locale} />
+                      <Localized value={religionTraditionNames(item.names)} locale={locale} />
                       <span className="religion-tradition-count">
                         {allVisible.filter((stage) => stage.traditionId === item.id).length}
                       </span>

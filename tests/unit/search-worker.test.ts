@@ -128,6 +128,7 @@ describe('localized source names', () => {
     es: 'Singular',
     zh: '本地标签',
     ru: 'Уникальный',
+    ar: 'عنوان فريد',
   };
   const localizedDocuments = {
     ...documents,
@@ -138,7 +139,7 @@ describe('localized source names', () => {
     '/geo/polities.json': [{ id: 'structural-polity', name, firstObserved: 0 }],
   };
 
-  it.each(['de', 'es', 'zh', 'ru'] as const)(
+  it.each(['de', 'es', 'zh', 'ru', 'ar'] as const)(
     'finds supplied %s labels in events, people and territories',
     async (locale) => {
       const responses = await searchWithUnavailable([], name[locale], localizedDocuments);

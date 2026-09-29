@@ -30,7 +30,7 @@ export const REGION_IDS = [
 export type EventType = (typeof EVENT_TYPES)[number];
 export type EraId = (typeof ERA_IDS)[number];
 export type RegionId = (typeof REGION_IDS)[number];
-export const LOCALES = ['en', 'fr', 'de', 'es', 'zh', 'ru'] as const;
+export const LOCALES = ['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'en';
 export const LOCALE_LABELS: Record<Locale, string> = {
@@ -40,6 +40,7 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   es: 'Español',
   zh: '简体中文',
   ru: 'Русский',
+  ar: 'العربية',
 };
 export function isLocale(value: unknown): value is Locale {
   return typeof value === 'string' && LOCALES.includes(value as Locale);

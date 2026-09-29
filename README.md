@@ -2,7 +2,7 @@
 
 [Live atlas](https://historyofatlas.vercel.app) · [Public repository](https://github.com/ZakiChair/HistoryOfAtlas)
 
-An interactive historical atlas of territorial change and documented military events. Move through time to see dated polity geometries, explore sourced events, and inspect what the underlying datasets actually say. The interface defaults to English and also supports French, German, Spanish, Simplified Chinese and Russian. Historical source text uses the selected language when available, with English as the fallback.
+An interactive historical atlas of territorial change and documented military events. Move through time to see dated polity geometries, explore sourced events, and inspect what the underlying datasets actually say. The interface defaults to English and also supports French, German, Spanish, Simplified Chinese, Russian and Arabic. Arabic uses right-to-left interface controls while the time axis retains its chronological direction. Historical source text uses the selected language when available, with English as the fallback.
 
 The main boundary layer uses Seshat **Cliopatria**: 13,380 dated polity geometry records for 1,583 source-named entities, distributed in 39 temporal PMTiles archives. **Historical Basemaps** supplies 50 independent world snapshots. **Natural Earth** supplies the physical basemap. Events are acquired from **Wikidata**, never reconstructed from model memory.
 

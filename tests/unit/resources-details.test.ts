@@ -79,7 +79,7 @@ it('labels the first exploitation evidence as attestation instead of inventing a
   expect(markup).toContain('href="https://example.org/mining"');
 });
 
-it.each(['en', 'fr', 'de', 'es', 'zh', 'ru'])(
+it.each(['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'])(
   'renders a discovery-only deposit without invented exploitation in %s',
   (locale) => {
     state.locale = locale;

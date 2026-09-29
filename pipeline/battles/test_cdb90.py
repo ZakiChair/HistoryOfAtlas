@@ -114,7 +114,7 @@ class ProfileTests(unittest.TestCase):
         baseline = self.call(data)['participants'][0]
         evidence = {'label': 'Battlefield archive', 'url': 'https://example.org/army-identity'}
         data['match']['participants'] = [{'side': 'attacker', 'identityReview': {
-            'name': {'en': 'Reviewed combined field army', 'fr': 'Armée de campagne réunie'},
+            'name': {'en': 'Reviewed combined field army', 'fr': 'Armée de campagne réunie', 'ar': 'جيش ميداني موحد'},
             'note': 'The archive identifies this combined force at the engagement.',
             'sources': [evidence],
         }}]
@@ -123,6 +123,7 @@ class ProfileTests(unittest.TestCase):
         army = profile['participants'][0]
         self.assertEqual(data, before)
         self.assertEqual(army['name']['en'], 'Reviewed combined field army')
+        self.assertEqual(army['name']['ar'], 'جيش ميداني موحد')
         for field in ('id', 'kind', 'sideId', 'medium', 'strength', 'deaths', 'casualties'):
             self.assertEqual(army[field], baseline[field], field)
         self.assertIn(evidence, army['sources'])
