@@ -30,6 +30,7 @@ describe('historical dates without native Date conversion', () => {
     ['es', '331 a. C.', '18 de junio de 1815', 'siglo IV a. C.', 'c. 331 a. C. (juliano)'],
     ['zh', '公元前331年', '1815年6月18日', '公元前4世纪', '约公元前331年 (儒略历)'],
     ['ru', '331 до н. э.', '18 июня 1815', 'IV век до н. э.', 'ок. 331 до н. э. (юлианский)'],
+    ['ar', '331 ق.م.', '18 يونيو 1815', 'القرن 4 ق.م.', 'نحو 331 ق.م. (يولياني)'],
   ] as const)(
     'formats historical dates and source calendars in %s',
     (locale, year, day, century, approximate) => {
@@ -133,6 +134,42 @@ describe('historical dates without native Date conversion', () => {
     expect(parseHistoricalYear('0 BCE')).toBeNull();
     expect(parseHistoricalYear('1812cats')).toBeNull();
   });
+
+  it('formats Arabic partial dates, decades and source calendars', () => {
+    expect(formatYear(0, 'ar')).toBe('1 ق.م.');
+    expect(formatHistDate({ year: 1815, month: 6 }, 'ar')).toBe('يونيو 1815');
+    expect(formatHistDate({ year: 1815 }, 'ar', 'decade')).toBe('عقد 1810');
+    expect(formatHistDate({ year: -330 }, 'ar', 'decade')).toBe('عقد 330 ق.م.');
+    expect(
+      formatHistDate({ year: 1815 }, 'ar', { calendar: 'gregorian', showCalendar: true }),
+    ).toBe('1815 (غريغوري)');
+    expect(formatHistDate({ year: 1815 }, 'ar', { calendar: 'unknown', showCalendar: true })).toBe(
+      '1815 (تقويم غير محدد)',
+    );
+  });
+
+  it.each([
+    ['٣٣١ ق.م.', -330],
+    ['۳۳۱ ق. م.', -330],
+    ['٣٣١ قبل الميلاد', -330],
+    ['١ ق م', 0],
+    ['١٨١٥ م', 1815],
+    ['١٨١٥ ميلادي', 1815],
+    ['١٨١٥ بعد الميلاد', 1815],
+    ['١٨١٥', 1815],
+    ['-٣٣٠', -330],
+    ['\u061c-٣٣٠', -330],
+    ['\u2067٣٣١ ق.م.\u2069', -330],
+  ] as const)('parses Arabic year input %s', (input, year) => {
+    expect(parseHistoricalYear(input)).toBe(year);
+  });
+
+  it.each(['٠ ق.م.', '٠ م', '٣٣١ هـ', '١٨١٥ نص', '٩٠٠٧١٩٩٢٥٤٧٤٠٩٩٢'])(
+    'rejects invalid or unsupported Arabic year input %s',
+    (input) => {
+      expect(parseHistoricalYear(input)).toBeNull();
+    },
+  );
 });
 
 describe('nonlinear timeline', () => {

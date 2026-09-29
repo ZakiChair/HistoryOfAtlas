@@ -22,6 +22,7 @@ const religionLabels = {
   es: ['Religiones', 'Explorar religiones'],
   zh: ['宗教', '探索宗教'],
   ru: ['Религии', 'Изучить религии'],
+  ar: ['الأديان', 'استكشاف الأديان'],
 };
 
 export default function MapLayers() {
@@ -289,7 +290,13 @@ export default function MapLayers() {
           <div className="resource-card-heading">
             <h2 id={headingId} ref={heading} tabIndex={-1}>
               {/* Catalogue names, countries and notes are published in English only. */}
-              {selected ? <span lang="en">{selected.name}</span> : text('legend')}
+              {selected ? (
+                <span lang="en" dir="auto">
+                  {selected.name}
+                </span>
+              ) : (
+                text('legend')
+              )}
             </h2>
             <button
               type="button"
@@ -324,7 +331,9 @@ export default function MapLayers() {
                   {selected.country && (
                     <div>
                       <dt>{text('location')}</dt>
-                      <dd lang="en">{selected.country}</dd>
+                      <dd lang="en" dir="auto">
+                        {selected.country}
+                      </dd>
                     </div>
                   )}
                   <div>
@@ -354,7 +363,7 @@ export default function MapLayers() {
                         {evidence.categories.map((category) => text(category)).join(' · ')}
                       </span>
                       {evidence.description && (
-                        <p className="resource-period-description" lang="en">
+                        <p className="resource-period-description" lang="en" dir="auto">
                           {evidence.description}
                         </p>
                       )}
@@ -398,7 +407,7 @@ export default function MapLayers() {
                         </span>
                       )}
                       {period.description && (
-                        <p className="resource-period-description" lang="en">
+                        <p className="resource-period-description" lang="en" dir="auto">
                           {period.description}
                         </p>
                       )}

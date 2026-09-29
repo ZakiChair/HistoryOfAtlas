@@ -146,7 +146,7 @@ def _identity_review(entry):
         raise ValueError('Force identity review requires only name, note and sources')
     name = review['name']
     if (not isinstance(name, dict) or 'en' not in name or
-            not set(name).issubset({'en', 'fr', 'de', 'es', 'zh', 'ru'}) or
+            not set(name).issubset({'en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'}) or
             any(not isinstance(value, str) or not value.strip() for value in name.values())):
         raise ValueError('Force identity review requires a nonempty localized name')
     if not isinstance(review['note'], str) or not review['note'].strip():

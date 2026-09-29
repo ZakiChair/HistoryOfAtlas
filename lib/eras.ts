@@ -32,6 +32,7 @@ export const ERAS: readonly Era[] = [
       es: 'Antigüedad temprana',
       zh: '早期古代',
       ru: 'Ранняя древность',
+      ar: 'العصور القديمة المبكرة',
     },
     short: {
       fr: 'Premiers empires',
@@ -40,6 +41,7 @@ export const ERAS: readonly Era[] = [
       es: 'Primeros imperios',
       zh: '早期帝国',
       ru: 'Первые империи',
+      ar: 'الإمبراطوريات الأولى',
     },
   },
   {
@@ -55,6 +57,7 @@ export const ERAS: readonly Era[] = [
       es: 'Antigüedad clásica',
       zh: '古典时代',
       ru: 'Классическая античность',
+      ar: 'العصور الكلاسيكية القديمة',
     },
     short: {
       fr: 'Antiquité',
@@ -63,6 +66,7 @@ export const ERAS: readonly Era[] = [
       es: 'Antigüedad',
       zh: '古代',
       ru: 'Античность',
+      ar: 'العصور القديمة',
     },
   },
   {
@@ -78,6 +82,7 @@ export const ERAS: readonly Era[] = [
       es: 'Antigüedad tardía',
       zh: '古代晚期',
       ru: 'Поздняя античность',
+      ar: 'العصور القديمة المتأخرة',
     },
     short: {
       fr: 'Ant. tardive',
@@ -86,6 +91,7 @@ export const ERAS: readonly Era[] = [
       es: 'Ant. tardía',
       zh: '古代晚期',
       ru: 'Поздняя античность',
+      ar: 'أواخر العصور القديمة',
     },
   },
   {
@@ -101,6 +107,7 @@ export const ERAS: readonly Era[] = [
       es: 'Edad Media',
       zh: '中世纪',
       ru: 'Средние века',
+      ar: 'العصور الوسطى',
     },
     short: {
       fr: 'Moyen Âge',
@@ -109,6 +116,7 @@ export const ERAS: readonly Era[] = [
       es: 'Edad Media',
       zh: '中世纪',
       ru: 'Средние века',
+      ar: 'العصور الوسطى',
     },
   },
   {
@@ -124,6 +132,7 @@ export const ERAS: readonly Era[] = [
       es: 'Edad Moderna',
       zh: '近代早期',
       ru: 'Раннее Новое время',
+      ar: 'العصر الحديث المبكر',
     },
     short: {
       fr: 'Époque moderne',
@@ -132,6 +141,7 @@ export const ERAS: readonly Era[] = [
       es: 'Edad Moderna',
       zh: '近代早期',
       ru: 'Раннее Новое время',
+      ar: 'العصر الحديث المبكر',
     },
   },
   {
@@ -147,8 +157,17 @@ export const ERAS: readonly Era[] = [
       es: 'Siglo XIX',
       zh: '19世纪',
       ru: 'XIX век',
+      ar: 'القرن التاسع عشر',
     },
-    short: { fr: 'XIXe', en: '19th c.', de: '19. Jh.', es: 'S. XIX', zh: '19世纪', ru: 'XIX в.' },
+    short: {
+      fr: 'XIXe',
+      en: '19th c.',
+      de: '19. Jh.',
+      es: 'S. XIX',
+      zh: '19世纪',
+      ru: 'XIX в.',
+      ar: 'القرن 19',
+    },
   },
   {
     id: '20th-century',
@@ -163,8 +182,17 @@ export const ERAS: readonly Era[] = [
       es: 'Siglo XX',
       zh: '20世纪',
       ru: 'XX век',
+      ar: 'القرن العشرون',
     },
-    short: { fr: 'XXe', en: '20th c.', de: '20. Jh.', es: 'S. XX', zh: '20世纪', ru: 'XX в.' },
+    short: {
+      fr: 'XXe',
+      en: '20th c.',
+      de: '20. Jh.',
+      es: 'S. XX',
+      zh: '20世纪',
+      ru: 'XX в.',
+      ar: 'القرن 20',
+    },
   },
   {
     id: 'contemporary',
@@ -179,6 +207,7 @@ export const ERAS: readonly Era[] = [
       es: 'Época contemporánea',
       zh: '当代',
       ru: 'Современная эпоха',
+      ar: 'العصر المعاصر',
     },
     short: {
       fr: 'Aujourd’hui',
@@ -187,6 +216,7 @@ export const ERAS: readonly Era[] = [
       es: 'Actualidad',
       zh: '当今',
       ru: 'Сегодня',
+      ar: 'اليوم',
     },
   },
 ];

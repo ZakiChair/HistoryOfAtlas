@@ -78,6 +78,20 @@ const MONTHS: Record<Locale, readonly string[]> = {
     'ноября',
     'декабря',
   ],
+  ar: [
+    'يناير',
+    'فبراير',
+    'مارس',
+    'أبريل',
+    'مايو',
+    'يونيو',
+    'يوليو',
+    'أغسطس',
+    'سبتمبر',
+    'أكتوبر',
+    'نوفمبر',
+    'ديسمبر',
+  ],
 };
 
 const RUSSIAN_MONTHS = [
@@ -101,6 +115,7 @@ const BCE_LABELS: Record<Locale, string> = {
   es: 'a. C.',
   zh: '公元前',
   ru: 'до н. э.',
+  ar: 'ق.م.',
 };
 const APPROXIMATE_LABELS: Record<Locale, string> = {
   en: 'c. ',
@@ -109,6 +124,7 @@ const APPROXIMATE_LABELS: Record<Locale, string> = {
   es: 'c. ',
   zh: '约',
   ru: 'ок. ',
+  ar: 'نحو ',
 };
 const CALENDAR_LABELS: Record<Locale, Record<Calendar, string>> = {
   fr: { julian: 'julien', gregorian: 'grégorien', unknown: 'calendrier non précisé' },
@@ -117,6 +133,7 @@ const CALENDAR_LABELS: Record<Locale, Record<Calendar, string>> = {
   es: { julian: 'juliano', gregorian: 'gregoriano', unknown: 'calendario no especificado' },
   zh: { julian: '儒略历', gregorian: '格里高利历', unknown: '历法未注明' },
   ru: { julian: 'юлианский', gregorian: 'григорианский', unknown: 'календарь не указан' },
+  ar: { julian: 'يولياني', gregorian: 'غريغوري', unknown: 'تقويم غير محدد' },
 };
 
 function withEra(text: string, year: number, locale: Locale): string {
@@ -248,6 +265,7 @@ export function formatHistDate(
       es: `siglo ${romanNumeral(number)}`,
       zh: `${number}世纪`,
       ru: `${romanNumeral(number)} век`,
+      ar: `القرن ${number}`,
     };
     text = withEra(centuries[locale], date.year, locale);
   } else if (precision === 'decade') {
@@ -260,6 +278,7 @@ export function formatHistDate(
       es: `década de ${decade}`,
       zh: `${decade}年代`,
       ru: `${decade}-е годы`,
+      ar: `عقد ${decade}`,
     };
     text = withEra(decades[locale], date.year, locale);
   } else if (date.month !== undefined && (precision === 'month' || precision === 'day')) {
@@ -294,13 +313,18 @@ export function formatDateRange(
 
 /** Signed plain integers are astronomical; an explicit BCE suffix uses historical numbering. */
 export function parseHistoricalYear(input: string): number | null {
-  const value = input.trim();
+  // Pasted Arabic numbers can contain directional marks as well as either digit set.
+  const value = input
+    .replace(/[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/g, '')
+    .replace(/[٠-٩]/g, (digit) => String(digit.charCodeAt(0) - 0x0660))
+    .replace(/[۰-۹]/g, (digit) => String(digit.charCodeAt(0) - 0x06f0))
+    .trim();
   if (/^[+-]?\d+$/.test(value)) {
     const year = Number(value);
     return Number.isSafeInteger(year) ? year : null;
   }
   const bce =
-    /^(\d+)\s*(?:BCE?|av\.?\s*J\.?\s*-?\s*C\.?|v\.?\s*Chr\.?|a\.?\s*C\.?|до\s*н\.?\s*э\.?)$/i.exec(
+    /^(\d+)\s*(?:BCE?|av\.?\s*J\.?\s*-?\s*C\.?|v\.?\s*Chr\.?|a\.?\s*C\.?|до\s*н\.?\s*э\.?|ق\.?\s*م\.?|قبل\s+الميلاد)$/i.exec(
       value,
     ) ?? /^公元前\s*(\d+)\s*年?$/.exec(value);
   if (bce) {
@@ -308,7 +332,7 @@ export function parseHistoricalYear(input: string): number | null {
     return Number.isSafeInteger(year) && year > 0 ? 1 - year : null;
   }
   const ce =
-    /^(\d+)\s*(?:CE|AD|ap\.?\s*J\.?\s*-?\s*C\.?|n\.?\s*Chr\.?|d\.?\s*C\.?|н\.?\s*э\.?)$/i.exec(
+    /^(\d+)\s*(?:CE|AD|ap\.?\s*J\.?\s*-?\s*C\.?|n\.?\s*Chr\.?|d\.?\s*C\.?|н\.?\s*э\.?|م\.?|ميلادي|بعد\s+الميلاد)$/i.exec(
       value,
     ) ?? /^(?:公元\s*)?(\d+)\s*年$/.exec(value);
   if (ce) {

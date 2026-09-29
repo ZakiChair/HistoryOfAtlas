@@ -99,7 +99,7 @@ export default function Timeline({
   density = EMPTY_DENSITY,
   territorialDensity = EMPTY_DENSITY,
 }: TimelineProps) {
-  const { locale, t } = useTranslation();
+  const { locale, t, dir } = useTranslation();
   const year = useAtlasStore((state) => state.year);
   const playing = useAtlasStore((state) => state.playing);
   const speed = useAtlasStore((state) => state.speed);
@@ -185,8 +185,16 @@ export default function Timeline({
   }
 
   return (
-    <section className="timeline" aria-label={t('timeline')} ref={rootRef} data-testid="timeline">
-      <div className="timeline-toolbar">
+    // The histogram, ticks and year-position math share a left-to-right time axis.
+    // Keep it explicit while the toolbar and Arabic labels follow the reader's direction.
+    <section
+      className="timeline"
+      dir="ltr"
+      aria-label={t('timeline')}
+      ref={rootRef}
+      data-testid="timeline"
+    >
+      <div className="timeline-toolbar" dir={dir}>
         <div className="timeline-date">
           <span className="timeline-eyebrow">
             {t('LE FIL DE L’HISTOIRE', 'THE THREAD OF HISTORY')}
@@ -242,7 +250,7 @@ export default function Timeline({
         </div>
         {!battleMode && (
           <div className="timeline-controls">
-            <div className="timeline-playback">
+            <div className="timeline-playback" dir="ltr">
               <button
                 className="timeline-step"
                 aria-label={t('previousYear')}
@@ -337,6 +345,7 @@ export default function Timeline({
         />
         <Slider.Root
           className="timeline-track"
+          dir="ltr"
           min={0}
           max={10000}
           step={1}
@@ -381,7 +390,7 @@ export default function Timeline({
               setYear(item.start);
             }}
           >
-            {item.short[locale]}
+            <bdi dir={dir}>{item.short[locale]}</bdi>
           </button>
         ))}
       </div>
@@ -405,9 +414,10 @@ export default function Timeline({
       </div>
       {range && !battleMode && (
         <div className="timeline-range">
-          <span>{formatYear(range[0], locale)}</span>
+          <bdi dir={dir}>{formatYear(range[0], locale)}</bdi>
           <Slider.Root
             className="timeline-range-slider"
+            dir="ltr"
             min={0}
             max={10000}
             step={1}
@@ -434,7 +444,7 @@ export default function Timeline({
               aria-valuetext={formatYear(range[1], locale)}
             />
           </Slider.Root>
-          <span>{formatYear(range[1], locale)}</span>
+          <bdi dir={dir}>{formatYear(range[1], locale)}</bdi>
           <button aria-label={t('clearRange')} onClick={() => setRange(null)}>
             <X size={14} />
           </button>

@@ -26,7 +26,12 @@ describe('ingestion contracts', () => {
   it('builds campaign steps with English defaults and preserved sourced names', () => {
     const event = HistoricalEventSchema.parse({
       ...fixture,
-      name: { en: 'English event', fr: 'Événement français', de: 'Deutsches Ereignis' },
+      name: {
+        en: 'English event',
+        fr: 'Événement français',
+        de: 'Deutsches Ereignis',
+        ar: 'حدث بالعربية',
+      },
     });
     const second = { ...event, id: 'Q43', start: { year: 1 } };
     const campaign = buildSequences(
@@ -39,10 +44,11 @@ describe('ingestion contracts', () => {
       en: 'English event',
       fr: 'Événement français',
       de: 'Deutsches Ereignis',
+      ar: 'حدث بالعربية',
     });
   });
 
-  it('retains available names, descriptions and source links in all six languages', () => {
+  it('retains available names, descriptions and source links in all supported languages', () => {
     const names = {
       en: 'Example',
       fr: 'Exemple',
@@ -50,11 +56,13 @@ describe('ingestion contracts', () => {
       es: 'Ejemplo',
       zh: '示例',
       ru: 'Пример',
+      ar: 'مثال',
     };
     const links = {
       en: 'https://en.wikipedia.org/wiki/Example',
       de: 'https://de.wikipedia.org/wiki/Beispiel',
       zh: 'https://zh.wikipedia.org/wiki/示例',
+      ar: 'https://ar.wikipedia.org/wiki/مثال',
     };
     const event = HistoricalEventSchema.parse({
       ...fixture,

@@ -1,6 +1,6 @@
 import type { Locale } from '@/lib/types';
 
-const languages: Locale[] = ['en', 'fr', 'de', 'es', 'zh', 'ru'];
+const languages: Locale[] = ['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'];
 const copy = {
   layers: [
     'Map layers',
@@ -9,8 +9,9 @@ const copy = {
     'Capas del mapa',
     '地图图层',
     'Слои карты',
+    'طبقات الخريطة',
   ],
-  battles: ['Battles', 'Batailles', 'Schlachten', 'Batallas', '战役', 'Битвы'],
+  battles: ['Battles', 'Batailles', 'Schlachten', 'Batallas', '战役', 'Битвы', 'المعارك'],
   resources: [
     'Strategic resources',
     'Ressources stratégiques',
@@ -18,6 +19,7 @@ const copy = {
     'Recursos estratégicos',
     '战略资源',
     'Стратегические ресурсы',
+    'الموارد الاستراتيجية',
   ],
   reference: [
     'Known resources',
@@ -26,6 +28,7 @@ const copy = {
     'Recursos conocidos',
     '已知资源',
     'Известные ресурсы',
+    'الموارد المعروفة',
   ],
   legend: [
     'Legend and sources',
@@ -34,6 +37,7 @@ const copy = {
     'Leyenda y fuentes',
     '图例与来源',
     'Условные обозначения и источники',
+    'مفتاح الخريطة والمصادر',
   ],
   filterResource: [
     'Filter by resource',
@@ -42,6 +46,7 @@ const copy = {
     'Filtrar por recurso',
     '按资源筛选',
     'Фильтр по ресурсу',
+    'تصفية حسب المورد',
   ],
   allResources: [
     'All resources',
@@ -50,6 +55,7 @@ const copy = {
     'Todos los recursos',
     '全部资源',
     'Все ресурсы',
+    'جميع الموارد',
   ],
   activeFilter: [
     'Resource filter',
@@ -58,6 +64,7 @@ const copy = {
     'Filtro de recurso',
     '资源筛选',
     'Фильтр ресурса',
+    'تصفية الموارد',
   ],
   filteredSites: [
     '{count} sites shown · {category}',
@@ -66,6 +73,7 @@ const copy = {
     '{count} sitios mostrados · {category}',
     '显示 {count} 个地点 · {category}',
     'Показано месторождений: {count} · {category}',
+    'المواقع المعروضة: {count} · {category}',
   ],
   filteredEmpty: [
     'No sites for this resource in this period.',
@@ -74,6 +82,7 @@ const copy = {
     'No hay sitios de este recurso para este período.',
     '这一时期没有此资源的记录地点。',
     'Нет месторождений этого ресурса для данного периода.',
+    'لا توجد مواقع لهذا المورد في هذه الفترة.',
   ],
   loading: [
     'Loading resource locations…',
@@ -82,6 +91,7 @@ const copy = {
     'Cargando ubicaciones de recursos…',
     '正在加载资源位置…',
     'Загрузка месторождений…',
+    'جارٍ تحميل مواقع الموارد…',
   ],
   error: [
     'Resource locations could not be loaded.',
@@ -90,8 +100,17 @@ const copy = {
     'No se pudieron cargar las ubicaciones de recursos.',
     '无法加载资源位置。',
     'Не удалось загрузить месторождения.',
+    'تعذر تحميل مواقع الموارد.',
   ],
-  retry: ['Try again', 'Réessayer', 'Erneut versuchen', 'Reintentar', '重试', 'Повторить'],
+  retry: [
+    'Try again',
+    'Réessayer',
+    'Erneut versuchen',
+    'Reintentar',
+    '重试',
+    'Повторить',
+    'إعادة المحاولة',
+  ],
   sites: [
     '{count} sites known by this period',
     '{count} sites connus à cette période',
@@ -99,6 +118,7 @@ const copy = {
     '{count} sitios conocidos hasta este período',
     '截至这一时期已知的地点：{count} 个',
     '{count} месторождений, известных к этому периоду',
+    'المواقع المعروفة حتى هذه الفترة: {count}',
   ],
   totalSites: [
     '{count} dated sites in the full dataset',
@@ -107,6 +127,7 @@ const copy = {
     '{count} sitios con fechas en el conjunto de datos',
     '完整数据集中有日期记录的地点：{count} 个',
     '{count} месторождений с датировками во всём наборе данных',
+    'المواقع المؤرخة في مجموعة البيانات الكاملة: {count}',
   ],
   empty: [
     'No known sites documented by this period.',
@@ -115,6 +136,7 @@ const copy = {
     'No hay sitios conocidos documentados hasta este período.',
     '截至这一时期尚无已知地点的记录。',
     'К этому периоду нет засвидетельствованных известных месторождений.',
+    'لا توجد مواقع معروفة موثقة حتى هذه الفترة.',
   ],
   emptyDetail: [
     'Missing data does not establish an absence of activity.',
@@ -123,6 +145,7 @@ const copy = {
     'La falta de datos no demuestra ausencia de actividad.',
     '缺少数据不代表当时没有开采。',
     'Отсутствие данных не доказывает отсутствия деятельности.',
+    'غياب البيانات لا يثبت غياب النشاط.',
   ],
   coverage: [
     'Sites appear from their sourced discovery or first attestation and remain visible after mining ends. Coverage is incomplete. Markers do not indicate current activity, production volumes or reserves.',
@@ -131,6 +154,7 @@ const copy = {
     'Los sitios aparecen desde su descubrimiento o primera constancia documentada y siguen visibles tras el fin de la explotación. La cobertura es parcial. Los marcadores no indican actividad actual, producción ni reservas.',
     '地点从有来源支持的发现或首次记载起显示，开采结束后仍保留。数据并不完整。标记不代表当前活动、产量或储量。',
     'Месторождения показаны с подтверждённого открытия или первого свидетельства и остаются видимыми после окончания добычи. Охват неполный. Отметки не означают текущую разработку, объёмы добычи или запасов.',
+    'تظهر المواقع بدءًا من اكتشافها أو أول توثيق لها بحسب المصادر، وتظل ظاهرة بعد انتهاء التعدين. التغطية غير مكتملة. لا تشير العلامات إلى النشاط الحالي أو حجم الإنتاج أو الاحتياطيات.',
   ],
   chronologyNote: [
     'When no discovery date is sourced, the earliest attestation is used. Exploitation periods are shown separately without filling gaps; ≈ marks approximate dates.',
@@ -139,6 +163,7 @@ const copy = {
     'Si no hay fecha de descubrimiento documentada, se usa la primera constancia. Los períodos de explotación se muestran por separado, sin rellenar vacíos; ≈ indica fechas aproximadas.',
     '没有可靠的发现日期时，以首次记载为准。开采时期单独列出，不填补记录空缺；≈ 表示近似日期。',
     'Если дата открытия не подтверждена, используется первое свидетельство. Периоды добычи показаны отдельно, без заполнения пробелов; ≈ означает приблизительную дату.',
+    'عند غياب تاريخ اكتشاف موثق، يُستخدم أقدم توثيق متاح. تُعرض فترات الاستغلال منفصلة دون ملء الفجوات؛ وتشير ≈ إلى التواريخ التقريبية.',
   ],
   catalogueSnapshots: [
     'The jumps in 2009 and 2026 are catalogue snapshot dates (USGS 2009, GEM and ICMM 2026): thousands of sites without an earlier sourced date appear then, not a sudden wave of discoveries.',
@@ -147,6 +172,7 @@ const copy = {
     'Los saltos de 2009 y 2026 son fechas de corte de catálogos (USGS 2009, GEM e ICMM 2026): miles de sitios sin una fecha documentada anterior aparecen entonces; no es una ola repentina de descubrimientos.',
     '2009年和2026年的跃增来自目录快照日期（USGS 2009，GEM与ICMM 2026）：数千个没有更早可靠日期的地点在这些年份出现，并非突然的大量发现。',
     'Скачки в 2009 и 2026 годах — это даты срезов каталогов (USGS 2009, GEM и ICMM 2026): тысячи объектов без более ранней подтверждённой даты появляются именно тогда, а не в результате внезапной волны открытий.',
+    'تعكس الزيادات في عامي 2009 و2026 تواريخ لقطات الفهارس (USGS 2009 وGEM وICMM 2026): تظهر عندها آلاف المواقع التي لا تتوافر لها تواريخ أقدم موثقة، ولا تعني موجة مفاجئة من الاكتشافات.',
   ],
   knowledge: [
     'Known since',
@@ -155,8 +181,17 @@ const copy = {
     'Conocido desde',
     '已知时间',
     'Известно с',
+    'معروف منذ',
   ],
-  discovery: ['Discovery', 'Découverte', 'Entdeckung', 'Descubrimiento', '发现', 'Открытие'],
+  discovery: [
+    'Discovery',
+    'Découverte',
+    'Entdeckung',
+    'Descubrimiento',
+    '发现',
+    'Открытие',
+    'الاكتشاف',
+  ],
   attestation: [
     'First attestation',
     'Première attestation',
@@ -164,6 +199,7 @@ const copy = {
     'Primera constancia',
     '首次记载',
     'Первое свидетельство',
+    'أول توثيق',
   ],
   knowledgeSource: [
     'Source for this record',
@@ -172,6 +208,7 @@ const copy = {
     'Fuente de este registro',
     '此记录的来源',
     'Источник этого свидетельства',
+    'مصدر هذا السجل',
   ],
   exploitationAttested: [
     'Exploitation documented for {period}',
@@ -180,6 +217,7 @@ const copy = {
     'Explotación documentada para {period}',
     '{period}有开采记录',
     'Добыча засвидетельствована за {period}',
+    'الاستغلال موثق خلال {period}',
   ],
   exploitationUnattested: [
     'No exploitation documented for {period}',
@@ -188,6 +226,7 @@ const copy = {
     'No hay explotación documentada para {period}',
     '{period}没有开采记录',
     'За {period} добыча не засвидетельствована',
+    'لا يوجد استغلال موثق خلال {period}',
   ],
   noExploitationPeriods: [
     'No exploitation periods documented.',
@@ -196,6 +235,7 @@ const copy = {
     'No hay períodos de explotación documentados.',
     '没有已记录的开采时期。',
     'Нет подтверждённых периодов добычи.',
+    'لا توجد فترات استغلال موثقة.',
   ],
   periods: [
     'Documented exploitation periods',
@@ -204,6 +244,7 @@ const copy = {
     'Períodos de explotación documentados',
     '有记录的开采时期',
     'Периоды разработки по источникам',
+    'فترات الاستغلال الموثقة',
   ],
   periodSource: [
     'Source for these dates',
@@ -212,6 +253,7 @@ const copy = {
     'Fuente de estas fechas',
     '日期来源',
     'Источник датировки',
+    'مصدر هذه التواريخ',
   ],
   approximateDates: [
     'Approximate dates',
@@ -220,6 +262,7 @@ const copy = {
     'Fechas aproximadas',
     '近似日期',
     'Приблизительные даты',
+    'تواريخ تقريبية',
   ],
   coordinateSource: [
     'Location source',
@@ -228,6 +271,7 @@ const copy = {
     'Fuente de las coordenadas',
     '位置来源',
     'Источник координат',
+    'مصدر الموقع',
   ],
   choose: [
     'Select a marker to read its source.',
@@ -236,6 +280,7 @@ const copy = {
     'Selecciona un marcador para consultar su fuente.',
     '选择标记以查看其来源。',
     'Выберите отметку, чтобы открыть источник.',
+    'اختر علامة للاطلاع على مصدرها.',
   ],
   clusters: [
     'Groups can mix resources; their icon shows the most common one. Filter by resource to reveal its sites, then zoom in to distinguish them.',
@@ -244,8 +289,9 @@ const copy = {
     'Los grupos pueden mezclar recursos; el icono muestra el más frecuente. Filtra por recurso y amplía el mapa para distinguir sus sitios.',
     '分组可能包含多种资源，图标显示最常见的一种。按资源筛选，再放大地图可区分各个地点。',
     'Группы могут объединять разные ресурсы; значок показывает самый частый. Выберите ресурс и увеличьте масштаб, чтобы увидеть его месторождения.',
+    'قد تضم المجموعات موارد متعددة؛ وتُظهر أيقونتها المورد الأكثر شيوعًا. صفِّ حسب المورد لإظهار مواقعه، ثم كبّر الخريطة لتمييزها.',
   ],
-  source: ['Source', 'Source', 'Quelle', 'Fuente', '来源', 'Источник'],
+  source: ['Source', 'Source', 'Quelle', 'Fuente', '来源', 'Источник', 'المصدر'],
   sources: [
     'Sources and licences',
     'Sources et licences',
@@ -253,6 +299,7 @@ const copy = {
     'Fuentes y licencias',
     '来源与许可',
     'Источники и лицензии',
+    'المصادر والتراخيص',
   ],
   sourceYear: [
     'Evidence snapshot year',
@@ -261,8 +308,17 @@ const copy = {
     'Año de referencia documental',
     '资料参考年份',
     'Год документального среза',
+    'السنة المرجعية للبيانات',
   ],
-  location: ['Location', 'Localisation', 'Standort', 'Ubicación', '位置', 'Местоположение'],
+  location: [
+    'Location',
+    'Localisation',
+    'Standort',
+    'Ubicación',
+    '位置',
+    'Местоположение',
+    'الموقع',
+  ],
   accuracy: [
     'Location accuracy',
     'Précision de localisation',
@@ -270,8 +326,9 @@ const copy = {
     'Precisión de ubicación',
     '位置精度',
     'Точность положения',
+    'دقة الموقع',
   ],
-  exact: ['Exact', 'Exacte', 'Genau', 'Exacta', '精确', 'Точное'],
+  exact: ['Exact', 'Exacte', 'Genau', 'Exacta', '精确', 'Точное', 'دقيق'],
   approximate: [
     'Approximate',
     'Approximative',
@@ -279,8 +336,9 @@ const copy = {
     'Aproximada',
     '近似',
     'Приблизительное',
+    'تقريبي',
   ],
-  unknown: ['Unknown', 'Inconnue', 'Unbekannt', 'Desconocida', '未知', 'Неизвестное'],
+  unknown: ['Unknown', 'Inconnue', 'Unbekannt', 'Desconocida', '未知', 'Неизвестное', 'غير معروف'],
   close: [
     'Close resource information',
     'Fermer les informations sur les ressources',
@@ -288,18 +346,27 @@ const copy = {
     'Cerrar información de recursos',
     '关闭资源信息',
     'Закрыть сведения о ресурсах',
+    'إغلاق معلومات الموارد',
   ],
-  oil: ['Oil', 'Pétrole', 'Erdöl', 'Petróleo', '石油', 'Нефть'],
-  gas: ['Natural gas', 'Gaz naturel', 'Erdgas', 'Gas natural', '天然气', 'Природный газ'],
-  coal: ['Coal', 'Charbon', 'Kohle', 'Carbón', '煤炭', 'Уголь'],
-  uranium: ['Uranium', 'Uranium', 'Uran', 'Uranio', '铀', 'Уран'],
-  iron: ['Iron', 'Fer', 'Eisen', 'Hierro', '铁', 'Железо'],
-  copper: ['Copper', 'Cuivre', 'Kupfer', 'Cobre', '铜', 'Медь'],
-  gold: ['Gold', 'Or', 'Gold', 'Oro', '黄金', 'Золото'],
-  silver: ['Silver', 'Argent', 'Silber', 'Plata', '白银', 'Серебро'],
-  tin: ['Tin', 'Étain', 'Zinn', 'Estaño', '锡', 'Олово'],
-  salt: ['Salt', 'Sel', 'Salz', 'Sal', '盐', 'Соль'],
-  lithium: ['Lithium', 'Lithium', 'Lithium', 'Litio', '锂', 'Литий'],
+  oil: ['Oil', 'Pétrole', 'Erdöl', 'Petróleo', '石油', 'Нефть', 'النفط'],
+  gas: [
+    'Natural gas',
+    'Gaz naturel',
+    'Erdgas',
+    'Gas natural',
+    '天然气',
+    'Природный газ',
+    'الغاز الطبيعي',
+  ],
+  coal: ['Coal', 'Charbon', 'Kohle', 'Carbón', '煤炭', 'Уголь', 'الفحم'],
+  uranium: ['Uranium', 'Uranium', 'Uran', 'Uranio', '铀', 'Уран', 'اليورانيوم'],
+  iron: ['Iron', 'Fer', 'Eisen', 'Hierro', '铁', 'Железо', 'الحديد'],
+  copper: ['Copper', 'Cuivre', 'Kupfer', 'Cobre', '铜', 'Медь', 'النحاس'],
+  gold: ['Gold', 'Or', 'Gold', 'Oro', '黄金', 'Золото', 'الذهب'],
+  silver: ['Silver', 'Argent', 'Silber', 'Plata', '白银', 'Серебро', 'الفضة'],
+  tin: ['Tin', 'Étain', 'Zinn', 'Estaño', '锡', 'Олово', 'القصدير'],
+  salt: ['Salt', 'Sel', 'Salz', 'Sal', '盐', 'Соль', 'الملح'],
+  lithium: ['Lithium', 'Lithium', 'Lithium', 'Litio', '锂', 'Литий', 'الليثيوم'],
   'rare-earths': [
     'Rare earths',
     'Terres rares',
@@ -307,6 +374,7 @@ const copy = {
     'Tierras raras',
     '稀土',
     'Редкоземельные элементы',
+    'العناصر الأرضية النادرة',
   ],
   bauxite: [
     'Bauxite / aluminium',
@@ -315,32 +383,41 @@ const copy = {
     'Bauxita / aluminio',
     '铝土矿／铝',
     'Бокситы / алюминий',
+    'البوكسيت / الألومنيوم',
   ],
-  nickel: ['Nickel', 'Nickel', 'Nickel', 'Níquel', '镍', 'Никель'],
-  phosphate: ['Phosphate', 'Phosphate', 'Phosphat', 'Fosfato', '磷酸盐', 'Фосфаты'],
-  zinc: ['Zinc', 'Zinc', 'Zink', 'Zinc', '锌', 'Цинк'],
-  lead: ['Lead', 'Plomb', 'Blei', 'Plomo', '铅', 'Свинец'],
-  cobalt: ['Cobalt', 'Cobalt', 'Kobalt', 'Cobalto', '钴', 'Кобальт'],
-  manganese: ['Manganese', 'Manganèse', 'Mangan', 'Manganeso', '锰', 'Марганец'],
-  molybdenum: ['Molybdenum', 'Molybdène', 'Molybdän', 'Molibdeno', '钼', 'Молибден'],
-  graphite: ['Graphite', 'Graphite', 'Grafit', 'Grafito', '石墨', 'Графит'],
-  diamond: ['Diamonds', 'Diamants', 'Diamanten', 'Diamantes', '钻石', 'Алмазы'],
-  potash: ['Potash', 'Potasse', 'Kali', 'Potasa', '钾盐', 'Калийные соли'],
-  platinum: ['Platinum', 'Platine', 'Platin', 'Platino', '铂', 'Платина'],
-  palladium: ['Palladium', 'Palladium', 'Palladium', 'Paladio', '钯', 'Палладий'],
-  tungsten: ['Tungsten', 'Tungstène', 'Wolfram', 'Wolframio', '钨', 'Вольфрам'],
-  antimony: ['Antimony', 'Antimoine', 'Antimon', 'Antimonio', '锑', 'Сурьма'],
-  niobium: ['Niobium', 'Niobium', 'Niob', 'Niobio', '铌', 'Ниобий'],
-  tantalum: ['Tantalum', 'Tantale', 'Tantal', 'Tantalio', '钽', 'Тантал'],
-  mercury: ['Mercury', 'Mercure', 'Quecksilber', 'Mercurio', '汞', 'Ртуть'],
-  titanium: ['Titanium', 'Titane', 'Titan', 'Titanio', '钛', 'Титан'],
-  silicon: ['Silicon', 'Silicium', 'Silizium', 'Silicio', '硅', 'Кремний'],
-  magnesium: ['Magnesium', 'Magnésium', 'Magnesium', 'Magnesio', '镁', 'Магний'],
-  cesium: ['Cesium', 'Césium', 'Cäsium', 'Cesio', '铯', 'Цезий'],
-  scandium: ['Scandium', 'Scandium', 'Scandium', 'Escandio', '钪', 'Скандий'],
-  selenium: ['Selenium', 'Sélénium', 'Selen', 'Selenio', '硒', 'Селен'],
-  tellurium: ['Tellurium', 'Tellure', 'Tellur', 'Telurio', '碲', 'Теллур'],
-  indium: ['Indium', 'Indium', 'Indium', 'Indio', '铟', 'Индий'],
+  nickel: ['Nickel', 'Nickel', 'Nickel', 'Níquel', '镍', 'Никель', 'النيكل'],
+  phosphate: ['Phosphate', 'Phosphate', 'Phosphat', 'Fosfato', '磷酸盐', 'Фосфаты', 'الفوسفات'],
+  zinc: ['Zinc', 'Zinc', 'Zink', 'Zinc', '锌', 'Цинк', 'الزنك'],
+  lead: ['Lead', 'Plomb', 'Blei', 'Plomo', '铅', 'Свинец', 'الرصاص'],
+  cobalt: ['Cobalt', 'Cobalt', 'Kobalt', 'Cobalto', '钴', 'Кобальт', 'الكوبالت'],
+  manganese: ['Manganese', 'Manganèse', 'Mangan', 'Manganeso', '锰', 'Марганец', 'المنغنيز'],
+  molybdenum: [
+    'Molybdenum',
+    'Molybdène',
+    'Molybdän',
+    'Molibdeno',
+    '钼',
+    'Молибден',
+    'الموليبدينوم',
+  ],
+  graphite: ['Graphite', 'Graphite', 'Grafit', 'Grafito', '石墨', 'Графит', 'الغرافيت'],
+  diamond: ['Diamonds', 'Diamants', 'Diamanten', 'Diamantes', '钻石', 'Алмазы', 'الألماس'],
+  potash: ['Potash', 'Potasse', 'Kali', 'Potasa', '钾盐', 'Калийные соли', 'البوتاس'],
+  platinum: ['Platinum', 'Platine', 'Platin', 'Platino', '铂', 'Платина', 'البلاتين'],
+  palladium: ['Palladium', 'Palladium', 'Palladium', 'Paladio', '钯', 'Палладий', 'البلاديوم'],
+  tungsten: ['Tungsten', 'Tungstène', 'Wolfram', 'Wolframio', '钨', 'Вольфрам', 'التنغستن'],
+  antimony: ['Antimony', 'Antimoine', 'Antimon', 'Antimonio', '锑', 'Сурьма', 'الأنتيمون'],
+  niobium: ['Niobium', 'Niobium', 'Niob', 'Niobio', '铌', 'Ниобий', 'النيوبيوم'],
+  tantalum: ['Tantalum', 'Tantale', 'Tantal', 'Tantalio', '钽', 'Тантал', 'التنتالوم'],
+  mercury: ['Mercury', 'Mercure', 'Quecksilber', 'Mercurio', '汞', 'Ртуть', 'الزئبق'],
+  titanium: ['Titanium', 'Titane', 'Titan', 'Titanio', '钛', 'Титан', 'التيتانيوم'],
+  silicon: ['Silicon', 'Silicium', 'Silizium', 'Silicio', '硅', 'Кремний', 'السيليكون'],
+  magnesium: ['Magnesium', 'Magnésium', 'Magnesium', 'Magnesio', '镁', 'Магний', 'المغنيسيوم'],
+  cesium: ['Cesium', 'Césium', 'Cäsium', 'Cesio', '铯', 'Цезий', 'السيزيوم'],
+  scandium: ['Scandium', 'Scandium', 'Scandium', 'Escandio', '钪', 'Скандий', 'السكانديوم'],
+  selenium: ['Selenium', 'Sélénium', 'Selen', 'Selenio', '硒', 'Селен', 'السيلينيوم'],
+  tellurium: ['Tellurium', 'Tellure', 'Tellur', 'Telurio', '碲', 'Теллур', 'التيلوريوم'],
+  indium: ['Indium', 'Indium', 'Indium', 'Indio', '铟', 'Индий', 'الإنديوم'],
   barium: [
     'Barium / barite',
     'Baryum / barytine',
@@ -348,6 +425,7 @@ const copy = {
     'Bario / barita',
     '钡／重晶石',
     'Барий / барит',
+    'الباريوم / الباريت',
   ],
   chromium: [
     'Chromium / chromite',
@@ -356,6 +434,7 @@ const copy = {
     'Cromo / cromita',
     '铬／铬铁矿',
     'Хром / хромит',
+    'الكروم / الكروميت',
   ],
   boron: [
     'Boron / borates',
@@ -364,8 +443,9 @@ const copy = {
     'Boro / boratos',
     '硼／硼酸盐',
     'Бор / бораты',
+    'البورون / البورات',
   ],
-  vanadium: ['Vanadium', 'Vanadium', 'Vanadium', 'Vanadio', '钒', 'Ванадий'],
+  vanadium: ['Vanadium', 'Vanadium', 'Vanadium', 'Vanadio', '钒', 'Ванадий', 'الفاناديوم'],
   fluorite: [
     'Fluorite / fluorspar',
     'Fluorine',
@@ -373,6 +453,7 @@ const copy = {
     'Fluorita',
     '萤石',
     'Флюорит',
+    'الفلوريت / الفلورسبار',
   ],
   'mineral-sands': [
     'Heavy mineral sands',
@@ -381,6 +462,7 @@ const copy = {
     'Arenas minerales pesadas',
     '重矿物砂',
     'Тяжёлые минеральные пески',
+    'رمال المعادن الثقيلة',
   ],
   'platinum-group': [
     'Platinum-group metals',
@@ -389,8 +471,9 @@ const copy = {
     'Metales del grupo del platino',
     '铂族金属',
     'Металлы платиновой группы',
+    'معادن مجموعة البلاتين',
   ],
-} satisfies Record<string, [string, string, string, string, string, string]>;
+} satisfies Record<string, [string, string, string, string, string, string, string]>;
 
 export type ResourceCopyKey = keyof typeof copy;
 

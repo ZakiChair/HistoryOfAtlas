@@ -361,7 +361,10 @@ function EventDetail({ event }: { event: HistoricalEvent }) {
         )}
         {(event.description?.[locale] ?? event.description?.en ?? event.description?.fr) && (
           <div className="detail-description">
-            <p lang={event.description?.[locale] ? locale : event.description?.en ? 'en' : 'fr'}>
+            <p
+              lang={event.description?.[locale] ? locale : event.description?.en ? 'en' : 'fr'}
+              dir="auto"
+            >
               {event.description?.[locale] ?? event.description?.en ?? event.description?.fr}
             </p>
             <a href={event.sources[0].url} target="_blank" rel="noreferrer">

@@ -1,6 +1,6 @@
 import type { Locale } from '@/lib/types';
 
-const languages: Locale[] = ['en', 'fr', 'de', 'es', 'zh', 'ru'];
+const languages: Locale[] = ['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'];
 const copy = {
   lossShare: [
     'Illustrated losses (% of strength)',
@@ -9,6 +9,7 @@ const copy = {
     'Bajas ilustradas (% de efectivos)',
     '示意损失（兵力百分比）',
     'Показанные потери (% численности)',
+    'الخسائر الممثلة (% من حجم القوات)',
   ],
   belowResolution: [
     'This force is smaller than one figure at this scale; one figure keeps it visible. Losses are rounded to whole figures.',
@@ -17,6 +18,7 @@ const copy = {
     'Esta fuerza es menor que una figura a esta escala; una figura la mantiene visible. Las bajas se redondean a figuras enteras.',
     '这支部队在当前比例下不足一个模型，以一个模型保持可见。损失按完整模型取整。',
     'Численность меньше одной фигуры в этом масштабе; одна фигура сохраняет видимость. Потери округляются до целых фигур.',
+    'حجم هذه القوة أصغر مما يمثله مجسم واحد بهذا المقياس؛ لذا تُعرض بمجسم واحد لتبقى مرئية. تُقرّب الخسائر إلى مجسمات كاملة.',
   ],
   mapped: [
     'Located on the map',
@@ -25,6 +27,7 @@ const copy = {
     'Ubicadas en el mapa',
     '已定位',
     'Нанесены на карту',
+    'محددة على الخريطة',
   ],
   visibleModels: [
     'Figures in this animation',
@@ -33,10 +36,19 @@ const copy = {
     'Figuras en esta animación',
     '动画中的模型',
     'Фигуры в анимации',
+    'المجسمات في هذه المحاكاة',
   ],
-  activeModels: ['Active', 'Actives', 'Aktiv', 'Activas', '活动', 'В строю'],
-  withdrawnModels: ['Withdrawn', 'Retirées', 'Zurückgezogen', 'Retiradas', '退出', 'Выведены'],
-  deadModels: ['Fallen', 'Tombées', 'Gefallen', 'Caídas', '倒下', 'Павшие'],
+  activeModels: ['Active', 'Actives', 'Aktiv', 'Activas', '活动', 'В строю', 'في الخدمة'],
+  withdrawnModels: [
+    'Withdrawn',
+    'Retirées',
+    'Zurückgezogen',
+    'Retiradas',
+    '退出',
+    'Выведены',
+    'منسحبة',
+  ],
+  deadModels: ['Fallen', 'Tombées', 'Gefallen', 'Caídas', '倒下', 'Павшие', 'ساقطة'],
   noModel: [
     'No compatible 3D model is documented for this date. The source record remains available below.',
     'Aucun modèle 3D compatible n’est documenté pour cette date. La notice sourcée reste consultable ci-dessous.',
@@ -44,6 +56,7 @@ const copy = {
     'No hay un modelo 3D compatible documentado para esta fecha. La ficha y sus fuentes siguen disponibles abajo.',
     '该日期没有有据可查的兼容3D模型。下方仍可查看来源记录。',
     'Для этой даты нет подходящей 3D-модели по источникам. Запись с источниками доступна ниже.',
+    'لا يوجد نموذج ثلاثي الأبعاد ملائم وموثق لهذا التاريخ. يظل السجل ومصادره متاحين أدناه.',
   ],
   unassigned: [
     'Unallocated source observations',
@@ -52,6 +65,7 @@ const copy = {
     'Datos sin asignación',
     '未分配的来源数据',
     'Нераспределённые данные источников',
+    'بيانات المصادر غير المنسوبة إلى جيش',
   ],
   equipment: [
     'Modelled equipment',
@@ -60,6 +74,7 @@ const copy = {
     'Equipo representado',
     '展示的装备',
     'Представленное снаряжение',
+    'المعدات الممثلة',
   ],
   representative: [
     'Period illustration',
@@ -68,6 +83,7 @@ const copy = {
     'Ilustración de la época',
     '时代示意',
     'Образ эпохи',
+    'تصوير توضيحي للعصر',
   ],
   mode: [
     '3D battles',
@@ -76,8 +92,17 @@ const copy = {
     'Batallas en 3D',
     '3D战役',
     'Битвы в 3D',
+    'معارك ثلاثية الأبعاد',
   ],
-  view: ['View in 3D', 'Voir en 3D', 'In 3D ansehen', 'Ver en 3D', '以3D查看', 'Смотреть в 3D'],
+  view: [
+    'View in 3D',
+    'Voir en 3D',
+    'In 3D ansehen',
+    'Ver en 3D',
+    '以3D查看',
+    'Смотреть в 3D',
+    'عرض ثلاثي الأبعاد',
+  ],
   viewSourced: [
     'View in 3D · sourced forces',
     'Voir en 3D · effectifs sourcés',
@@ -85,6 +110,7 @@ const copy = {
     'Ver en 3D · efectivos documentados',
     '以3D查看 · 兵力有据可查',
     'Смотреть в 3D · численность по источникам',
+    'عرض ثلاثي الأبعاد · قوات موثقة بالمصادر',
   ],
   viewIllustrative: [
     'Illustrative 3D (forces unknown)',
@@ -93,6 +119,7 @@ const copy = {
     '3D ilustrativo (efectivos desconocidos)',
     '3D示意（兵力未知）',
     'Условная 3D-сцена (численность неизвестна)',
+    'عرض توضيحي ثلاثي الأبعاد (حجم القوات غير معروف)',
   ],
   illustrative: [
     'Illustrative 3D',
@@ -101,6 +128,7 @@ const copy = {
     '3D ilustrativo',
     '3D示意',
     'Условная 3D',
+    'عرض توضيحي ثلاثي الأبعاد',
   ],
   title: [
     'Enter the battlefield',
@@ -109,6 +137,7 @@ const copy = {
     'Explora las batallas',
     '探索战场',
     'Исследуйте поле боя',
+    'استكشف ساحة المعركة',
   ],
   intro: [
     'Explore every battle in the catalogue. Open a battlefield to inspect its armies in 3D.',
@@ -117,6 +146,7 @@ const copy = {
     'Explora todas las batallas del catálogo y observa sus ejércitos en 3D.',
     '浏览目录中的所有战役，打开战场以3D方式观察军队。',
     'Откройте любую битву в каталоге и рассмотрите её армии в 3D.',
+    'استكشف جميع المعارك في الفهرس. افتح ساحة معركة لتفحص جيوشها في عرض ثلاثي الأبعاد.',
   ],
   search: [
     'Search all battles…',
@@ -125,6 +155,7 @@ const copy = {
     'Buscar batallas…',
     '搜索所有战役…',
     'Поиск по всем битвам…',
+    'ابحث في جميع المعارك…',
   ],
   catalogue: [
     'All battles',
@@ -133,6 +164,7 @@ const copy = {
     'Todas las batallas',
     '所有战役',
     'Все битвы',
+    'جميع المعارك',
   ],
   documented: [
     'Sourced proportions',
@@ -141,9 +173,18 @@ const copy = {
     'Proporciones documentadas',
     '有据可查的比例',
     'Пропорции по источникам',
+    'نسب موثقة بالمصادر',
   ],
-  unknown: ['Unknown', 'Inconnu', 'Unbekannt', 'Desconocido', '未知', 'Неизвестно'],
-  all: ['All types', 'Tous les types', 'Alle Typen', 'Todos los tipos', '所有类型', 'Все типы'],
+  unknown: ['Unknown', 'Inconnu', 'Unbekannt', 'Desconocido', '未知', 'Неизвестно', 'غير معروف'],
+  all: [
+    'All types',
+    'Tous les types',
+    'Alle Typen',
+    'Todos los tipos',
+    '所有类型',
+    'Все типы',
+    'جميع الأنواع',
+  ],
   battle: [
     'Land battles',
     'Batailles terrestres',
@@ -151,8 +192,9 @@ const copy = {
     'Batallas terrestres',
     '陆战',
     'Сухопутные сражения',
+    'معارك برية',
   ],
-  siege: ['Sieges', 'Sièges', 'Belagerungen', 'Asedios', '围城战', 'Осады'],
+  siege: ['Sieges', 'Sièges', 'Belagerungen', 'Asedios', '围城战', 'Осады', 'عمليات حصار'],
   naval: [
     'Naval battles',
     'Batailles navales',
@@ -160,6 +202,7 @@ const copy = {
     'Batallas navales',
     '海战',
     'Морские сражения',
+    'معارك بحرية',
   ],
   air: [
     'Air battles',
@@ -168,8 +211,9 @@ const copy = {
     'Batallas aéreas',
     '空战',
     'Воздушные сражения',
+    'معارك جوية',
   ],
-  results: ['results', 'résultats', 'Ergebnisse', 'resultados', '个结果', 'результатов'],
+  results: ['results', 'résultats', 'Ergebnisse', 'resultados', '个结果', 'результатов', 'نتائج'],
   more: [
     'Show more battles',
     'Voir plus de batailles',
@@ -177,6 +221,7 @@ const copy = {
     'Ver más batallas',
     '显示更多战役',
     'Показать ещё',
+    'عرض المزيد من المعارك',
   ],
   noResults: [
     'No matching battle.',
@@ -185,6 +230,7 @@ const copy = {
     'No hay batallas coincidentes.',
     '没有匹配的战役。',
     'Битвы не найдены.',
+    'لا توجد معركة مطابقة.',
   ],
   loading: [
     'Loading battlefield…',
@@ -193,6 +239,7 @@ const copy = {
     'Cargando el campo de batalla…',
     '正在加载战场…',
     'Загрузка поля боя…',
+    'جارٍ تحميل ساحة المعركة…',
   ],
   loadingModels: [
     'Loading 3D models…',
@@ -201,6 +248,7 @@ const copy = {
     'Cargando modelos 3D…',
     '正在加载3D模型…',
     'Загрузка 3D-моделей…',
+    'جارٍ تحميل النماذج ثلاثية الأبعاد…',
   ],
   error: [
     'The battlefield could not be loaded.',
@@ -209,8 +257,17 @@ const copy = {
     'No se pudo cargar el campo de batalla.',
     '无法加载战场。',
     'Не удалось загрузить поле боя.',
+    'تعذر تحميل ساحة المعركة.',
   ],
-  retry: ['Try again', 'Réessayer', 'Erneut versuchen', 'Reintentar', '重试', 'Повторить'],
+  retry: [
+    'Try again',
+    'Réessayer',
+    'Erneut versuchen',
+    'Reintentar',
+    '重试',
+    'Повторить',
+    'إعادة المحاولة',
+  ],
   play: [
     'Animate armies',
     'Animer les armées',
@@ -218,6 +275,7 @@ const copy = {
     'Animar ejércitos',
     '播放军队动画',
     'Оживить армии',
+    'تشغيل حركة الجيوش',
   ],
   pause: [
     'Pause animation',
@@ -226,8 +284,9 @@ const copy = {
     'Pausar animación',
     '暂停动画',
     'Приостановить',
+    'إيقاف الحركة مؤقتًا',
   ],
-  replay: ['Replay', 'Rejouer', 'Wiederholen', 'Repetir', '重播', 'Повторить'],
+  replay: ['Replay', 'Rejouer', 'Wiederholen', 'Repetir', '重播', 'Повторить', 'إعادة التشغيل'],
   progress: [
     'Animation progress',
     'Progression de l’animation',
@@ -235,6 +294,7 @@ const copy = {
     'Progreso de la animación',
     '动画进度',
     'Ход анимации',
+    'تقدم المحاكاة',
   ],
   speed: [
     'Animation speed',
@@ -243,9 +303,26 @@ const copy = {
     'Velocidad de animación',
     '动画速度',
     'Скорость анимации',
+    'سرعة الحركة',
   ],
-  deployment: ['Deployment', 'Déploiement', 'Aufstellung', 'Despliegue', '部署', 'Развёртывание'],
-  encounter: ['Engagement', 'Affrontement', 'Gefecht', 'Enfrentamiento', '交战', 'Столкновение'],
+  deployment: [
+    'Deployment',
+    'Déploiement',
+    'Aufstellung',
+    'Despliegue',
+    '部署',
+    'Развёртывание',
+    'الانتشار',
+  ],
+  encounter: [
+    'Engagement',
+    'Affrontement',
+    'Gefecht',
+    'Enfrentamiento',
+    '交战',
+    'Столкновение',
+    'الاشتباك',
+  ],
   aftermath: [
     'Reported losses',
     'Pertes rapportées',
@@ -253,6 +330,7 @@ const copy = {
     'Pérdidas documentadas',
     '记载的损失',
     'Потери по источникам',
+    'الخسائر الواردة في المصادر',
   ],
   focus: [
     'Focus battlefield',
@@ -261,6 +339,7 @@ const copy = {
     'Centrar el campo de batalla',
     '聚焦战场',
     'Показать поле боя',
+    'توسيط ساحة المعركة',
   ],
   inspect: [
     'Zoom in to inspect equipment. Drag to move; right-drag to rotate.',
@@ -269,6 +348,7 @@ const copy = {
     'Acerca la vista para ver el equipo. Arrastra para mover; botón derecho para girar.',
     '放大查看装备。拖动平移；右键拖动旋转。',
     'Увеличьте масштаб для осмотра снаряжения. Перетаскивайте для перемещения, правой кнопкой — для поворота.',
+    'كبّر العرض لتفحص المعدات. اسحب للتحريك؛ واسحب بزر الفأرة الأيمن للتدوير.',
   ],
   illustration: [
     'Illustrative formations and movements; not a tactical reconstruction. Equipment is representative unless documented for this battle.',
@@ -277,6 +357,7 @@ const copy = {
     'Formaciones y movimientos ilustrativos, sin reconstrucción táctica. El equipo es representativo salvo documentación específica de la batalla.',
     '阵型与运动仅为示意，并非战术复原。除非有本战役的记载，装备均为代表性示例。',
     'Построения и движения условны и не воспроизводят тактику. Снаряжение типовое, если нет сведений для этой битвы.',
+    'التشكيلات والحركات توضيحية، وليست إعادة بناء تكتيكية. تمثل المعدات نماذج من العصر ما لم تُوثق لهذه المعركة تحديدًا.',
   ],
   armies: [
     'Armies & evidence',
@@ -285,8 +366,9 @@ const copy = {
     'Ejércitos y fuentes',
     '军队与依据',
     'Армии и источники',
+    'الجيوش والأدلة',
   ],
-  strength: ['Strength', 'Effectif', 'Stärke', 'Efectivos', '兵力', 'Численность'],
+  strength: ['Strength', 'Effectif', 'Stärke', 'Efectivos', '兵力', 'Численность', 'حجم القوات'],
   casualties: [
     'Reported casualties',
     'Pertes rapportées',
@@ -294,13 +376,14 @@ const copy = {
     'Pérdidas documentadas',
     '记载的损失',
     'Потери по источникам',
+    'الخسائر البشرية الواردة في المصادر',
   ],
-  deaths: ['Deaths', 'Morts', 'Tote', 'Muertos', '阵亡', 'Погибшие'],
-  ships: ['ships', 'navires', 'Schiffe', 'buques', '艘舰船', 'кораблей'],
-  aircraft: ['aircraft', 'aéronefs', 'Flugzeuge', 'aeronaves', '架飞机', 'самолётов'],
-  soldiers: ['soldiers', 'soldats', 'Soldaten', 'soldados', '名士兵', 'военнослужащих'],
-  people: ['people', 'personnes', 'Personen', 'personas', '人', 'человек'],
-  groups: ['groups', 'groupes', 'Gruppen', 'grupos', '组', 'групп'],
+  deaths: ['Deaths', 'Morts', 'Tote', 'Muertos', '阵亡', 'Погибшие', 'القتلى'],
+  ships: ['ships', 'navires', 'Schiffe', 'buques', '艘舰船', 'кораблей', 'سفن'],
+  aircraft: ['aircraft', 'aéronefs', 'Flugzeuge', 'aeronaves', '架飞机', 'самолётов', 'طائرات'],
+  soldiers: ['soldiers', 'soldats', 'Soldaten', 'soldados', '名士兵', 'военнослужащих', 'جنود'],
+  people: ['people', 'personnes', 'Personen', 'personas', '人', 'человек', 'أشخاص'],
+  groups: ['groups', 'groupes', 'Gruppen', 'grupos', '组', 'групп', 'مجموعات'],
   scale: [
     'One model represents',
     'Un modèle représente',
@@ -308,8 +391,9 @@ const copy = {
     'Un modelo representa',
     '一个模型代表',
     'Одна модель означает',
+    'يمثل كل مجسم',
   ],
-  models: ['models', 'modèles', 'Modelle', 'modelos', '个模型', 'моделей'],
+  models: ['models', 'modèles', 'Modelle', 'modelos', '个模型', 'моделей', 'مجسمات'],
   symbolic: [
     'Illustrative formation · unknown strength, no historical proportions',
     'Formation illustrative · effectif inconnu, sans proportions historiques',
@@ -317,6 +401,7 @@ const copy = {
     'Formación ilustrativa · fuerza desconocida, sin proporciones históricas',
     '示意编队 · 兵力未知，不代表历史比例',
     'Условное построение · численность неизвестна, без исторических пропорций',
+    'تشكيل توضيحي · حجم القوات غير معروف، ولا يعكس نسبًا تاريخية',
   ],
   noParticipants: [
     'The sources do not identify the armies. The neutral models are illustrative.',
@@ -325,6 +410,7 @@ const copy = {
     'Las fuentes no identifican los ejércitos. Los modelos neutros son ilustrativos.',
     '来源未标明参战军队。中性模型仅作示意。',
     'Источники не определяют армии. Нейтральные модели условны.',
+    'لا تحدد المصادر الجيوش المشاركة. المجسمات المحايدة توضيحية.',
   ],
   unknownSides: [
     'Alliances are not established by the sources.',
@@ -333,6 +419,7 @@ const copy = {
     'Las fuentes no establecen alianzas.',
     '来源未明确阵营归属。',
     'Стороны не установлены источниками.',
+    'لا تثبت المصادر التحالفات.',
   ],
   totals: [
     'Battle totals',
@@ -341,6 +428,7 @@ const copy = {
     'Totales de la batalla',
     '战役总计',
     'Итоги по всей битве',
+    'إجماليات المعركة',
   ],
   totalsNote: [
     'Totals are not divided between armies without a source.',
@@ -349,6 +437,7 @@ const copy = {
     'Los totales no se reparten entre ejércitos sin una fuente.',
     '没有来源依据时，总数不分配到各支军队。',
     'Общие числа не распределяются между армиями без источника.',
+    'لا تُوزع الإجماليات بين الجيوش دون مصدر.',
   ],
   lossesNote: [
     'Losses appear only when documented. Their timing is illustrative; killed and wounded are not added to deaths.',
@@ -357,6 +446,7 @@ const copy = {
     'Solo se muestran pérdidas documentadas. Su ritmo es ilustrativo; no se suman los muertos al total de muertos y heridos.',
     '仅显示有记载的损失。发生时间仅作示意；阵亡人数不会重复计入伤亡总数。',
     'Показаны только подтверждённые потери. Их время условно; погибшие не прибавляются повторно к убитым и раненым.',
+    'تظهر الخسائر فقط حين تكون موثقة. توقيتها توضيحي؛ ولا يُحتسب القتلى مرتين ضمن مجموع القتلى والجرحى.',
   ],
   location: [
     'Source location',
@@ -365,6 +455,7 @@ const copy = {
     'Ubicación documentada',
     '来源位置',
     'Место по источникам',
+    'الموقع بحسب المصادر',
   ],
   placeLocation: [
     'Located at the associated place; the precise battlefield is not established.',
@@ -373,6 +464,7 @@ const copy = {
     'Situada en el lugar asociado; el campo de batalla exacto no está establecido.',
     '定位于相关地点；确切战场尚未确定。',
     'Указано связанное место; точное поле боя не установлено.',
+    'محددة في المكان المرتبط بها؛ ولم يُثبت موقع ساحة المعركة بدقة.',
   ],
   unmapped: [
     'Date or location missing · catalogue record only',
@@ -381,6 +473,7 @@ const copy = {
     'Falta fecha o ubicación · solo ficha',
     '日期或地点缺失 · 仅目录记录',
     'Нет даты или места · только запись',
+    'التاريخ أو الموقع مفقود · سجل في الفهرس فقط',
   ],
   coverage: [
     'Catalogue coverage',
@@ -389,8 +482,9 @@ const copy = {
     'Cobertura del catálogo',
     '目录覆盖范围',
     'Охват каталога',
+    'نطاق تغطية الفهرس',
   ],
-  sources: ['Sources', 'Sources', 'Quellen', 'Fuentes', '来源', 'Источники'],
+  sources: ['Sources', 'Sources', 'Quellen', 'Fuentes', '来源', 'Источники', 'المصادر'],
   leave: [
     'Return to the atlas',
     'Revenir à l’atlas',
@@ -398,6 +492,7 @@ const copy = {
     'Volver al atlas',
     '返回地图集',
     'Вернуться к атласу',
+    'العودة إلى الأطلس',
   ],
   select: [
     'Choose a battle to open its 3D scene.',
@@ -406,6 +501,7 @@ const copy = {
     'Elige una batalla para abrir su escena 3D.',
     '选择战役以打开3D场景。',
     'Выберите битву для просмотра в 3D.',
+    'اختر معركة لفتح مشهدها ثلاثي الأبعاد.',
   ],
   accessible: [
     'The sourced numbers and descriptions remain available without animation.',
@@ -414,6 +510,7 @@ const copy = {
     'Las cifras documentadas y las descripciones están disponibles sin animación.',
     '无需播放动画即可阅读有据可查的数据和说明。',
     'Числа и описания доступны и без анимации.',
+    'تظل الأرقام الموثقة والأوصاف متاحة دون تشغيل الحركة.',
   ],
 } satisfies Record<string, string[]>;
 

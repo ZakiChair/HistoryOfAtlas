@@ -147,7 +147,7 @@ def acquire():
     entities = {}
     for qid in sorted(subject_ids | dependencies, key=lambda q: int(q[1:])):
         names = labels.get(qid, {})
-        languages = ['en', 'fr', 'de', 'es', 'zh', 'ru'] if names.get('en') or names.get('fr') else list(names)
+        languages = ['en', 'fr', 'de', 'es', 'zh', 'ru', 'ar'] if names.get('en') or names.get('fr') else list(names)
         entities[qid] = {**subjects.get(qid, {'id': qid, **dependency_meta.get(qid, {})}),
                          'labels': {language: names[language] for language in languages if language in names}}
     extract = {'version': 1, 'license': 'CC0-1.0',

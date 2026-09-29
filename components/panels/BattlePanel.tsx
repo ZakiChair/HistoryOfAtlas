@@ -64,7 +64,11 @@ function Quantities({ values, locale }: { values: SourcedQuantity[]; locale: Loc
             {quantityLabel(quantity, locale)}
             <ArrowUpRight size={10} aria-hidden="true" />
           </a>
-          {quantity.note && <small lang="en">{quantity.note}</small>}
+          {quantity.note && (
+            <small lang="en" dir="auto">
+              {quantity.note}
+            </small>
+          )}
         </span>
       ))}
     </>
@@ -291,7 +295,7 @@ function BattleDetail({ entry, onBack }: { entry: BattleIndexEntry; onBack: () =
       ) : (
         <>
           {battle.note && (
-            <p className="source-note" lang="en">
+            <p className="source-note" lang="en" dir="auto">
               {battle.note}
             </p>
           )}
@@ -415,12 +419,15 @@ function BattleDetail({ entry, onBack }: { entry: BattleIndexEntry; onBack: () =
                           target="_blank"
                           rel="noreferrer"
                           lang="en"
+                          dir="auto"
                         >
                           {rendered.profileLabel}
                           <ArrowUpRight size={10} />
                         </a>
                       ) : (
-                        <span lang="en">{rendered.profileLabel}</span>
+                        <span lang="en" dir="auto">
+                          {rendered.profileLabel}
+                        </span>
                       )}
                     </p>
                   )}

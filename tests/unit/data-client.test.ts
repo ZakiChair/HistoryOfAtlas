@@ -17,6 +17,7 @@ describe('lazy data loading and provenance-preserving summaries', () => {
     ['es', 'Artículo de ejemplo'],
     ['zh', '示例条目'],
     ['ru', 'Пример статьи'],
+    ['ar', 'مقالة نموذجية'],
   ] as const)(
     'discovers the sourced %s article when the corpus only has an English link',
     async (locale, title) => {
@@ -137,7 +138,7 @@ describe('lazy data loading and provenance-preserving summaries', () => {
     },
   );
 
-  it.each(['de', 'es', 'zh', 'ru'] as const)(
+  it.each(['de', 'es', 'zh', 'ru', 'ar'] as const)(
     'prefers an available %s source and identifies an English fallback honestly',
     async (locale) => {
       vi.stubGlobal(

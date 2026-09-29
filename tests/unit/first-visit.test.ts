@@ -156,7 +156,7 @@ describe('first visit', () => {
     expect(startCardDismissed()).toBe(false);
   });
 
-  it('writes the start card and help sheet in all six languages', () => {
+  it('writes the start card and help sheet in all supported languages', () => {
     const keys = [
       'startTitle',
       'napoleonTitle',

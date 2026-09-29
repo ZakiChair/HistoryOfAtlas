@@ -130,7 +130,7 @@ export default function EncyclopediaContent({
       {text ? (
         <section className="detail-section">
           <h3>{translateCopy(locale, 'En quelques mots', 'In context')}</h3>
-          <p className="detail-summary" lang={textLanguage}>
+          <p className="detail-summary" lang={textLanguage} dir="auto">
             {text}
           </p>
           {articleUrl && (

@@ -128,10 +128,10 @@ export default function StoryPanel() {
             <ArrowLeft size={15} />
             {t('Tous les parcours', 'All stories')}
           </button>
-          <h2 className="story-title" lang={localizedLanguage(story.title, locale)}>
+          <h2 className="story-title" lang={localizedLanguage(story.title, locale)} dir="auto">
             {localizedName(story.title, locale)}
           </h2>
-          <p className="panel-intro" lang={localizedLanguage(story.description, locale)}>
+          <p className="panel-intro" lang={localizedLanguage(story.description, locale)} dir="auto">
             {localizedName(story.description, locale)}
           </p>
           <div
@@ -149,7 +149,7 @@ export default function StoryPanel() {
                 <span className="story-step-number">
                   {index + 1} / {story.steps.length}
                 </span>
-                <p lang={localizedLanguage(step.text, locale)}>
+                <p lang={localizedLanguage(step.text, locale)} dir="auto">
                   {localizedName(step.text, locale)}
                 </p>
                 <button
@@ -209,7 +209,7 @@ export default function StoryPanel() {
                 }}
               >
                 <span className="story-card-index">{String(index + 1).padStart(2, '0')}</span>
-                <strong lang={localizedLanguage(item.title, locale)}>
+                <strong lang={localizedLanguage(item.title, locale)} dir="auto">
                   {localizedName(item.title, locale)}
                 </strong>
                 <span>

@@ -19,6 +19,7 @@ export const LocalizedNameSchema = z.object({
   es: z.string().min(1).optional(),
   zh: z.string().min(1).optional(),
   ru: z.string().min(1).optional(),
+  ar: z.string().min(1).optional(),
 });
 export const CoordinatesSchema = z.tuple([
   z.number().finite().min(-180).max(180),
@@ -45,6 +46,7 @@ const LocalizedTextSchema = z.object({
   es: z.string().optional(),
   zh: z.string().optional(),
   ru: z.string().optional(),
+  ar: z.string().optional(),
 });
 const WikidataPropertySchema = z.string().regex(/^P[1-9]\d*$/);
 const NamedEntitySchema = z.object({ id: QidSchema, name: LocalizedNameSchema });

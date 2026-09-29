@@ -33,7 +33,7 @@ import {
 } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { createAtlasUrlSync } from '@/lib/store/url-sync';
-import { useI18n, translateCopy } from '@/lib/i18n';
+import { useI18n, translateCopy, localeDirection } from '@/lib/i18n';
 import { isLocale, LOCALES, LOCALE_LABELS } from '@/lib/types';
 import { getEra } from '@/lib/eras';
 import { formatYear } from '@/lib/histdate';
@@ -168,7 +168,9 @@ function Overview({
                 }
               >
                 <span className="territory-color" style={{ background: item.color }} />
-                <span lang="en">{item.name}</span>
+                <span lang="en" dir="auto">
+                  {item.name}
+                </span>
                 <ArrowUpRight size={13} />
               </button>
             </li>
@@ -535,7 +537,9 @@ export default function AtlasApp() {
                   <Search size={17} />
                   <span>{t('Rechercher', 'Search')}</span>
                 </button>
-                <kbd aria-hidden="true">⌘ K</kbd>
+                <kbd aria-hidden="true" dir="ltr">
+                  ⌘ K
+                </kbd>
               </div>
               <select
                 className="language-select"
@@ -547,7 +551,12 @@ export default function AtlasApp() {
                 }}
               >
                 {LOCALES.map((language) => (
-                  <option key={language} value={language} lang={language}>
+                  <option
+                    key={language}
+                    value={language}
+                    lang={language}
+                    dir={localeDirection(language)}
+                  >
                     {LOCALE_LABELS[language]}
                   </option>
                 ))}
@@ -581,9 +590,9 @@ export default function AtlasApp() {
                 key="exploration"
                 id="atlas-explore"
                 className={`exploration-panel ${mode === 'list' ? 'list-panel' : ''}`}
-                initial={{ opacity: 0, x: -16 }}
+                initial={{ opacity: 0, x: dir === 'rtl' ? 16 : -16 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -16 }}
+                exit={{ opacity: 0, x: dir === 'rtl' ? 16 : -16 }}
                 transition={{ duration: 0.2 }}
                 aria-label={t('Carnet d’exploration', 'Exploration notebook')}
               >
@@ -637,7 +646,7 @@ export default function AtlasApp() {
                             className="text-button"
                             onClick={() => useAtlasStore.getState().setMode('events')}
                           >
-                            <ChevronLeft size={14} />
+                            <ChevronLeft size={14} className="reading-order-arrow" />
                             {t('Retour à l’atlas', 'Back to the atlas')}
                           </button>
                           <Filters />
@@ -680,7 +689,7 @@ export default function AtlasApp() {
                         });
                       }}
                     >
-                      <ChevronLeft size={15} />
+                      <ChevronLeft size={15} className="reading-order-arrow" />
                       {battleText(locale, 'leave')}
                     </button>
                   ) : (
