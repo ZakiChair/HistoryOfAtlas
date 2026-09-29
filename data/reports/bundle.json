@@ -1,26 +1,26 @@
 {
   "schemaVersion": 2,
   "method": "Unique script and script-preload URLs in the exported index.html, excluding legacy noModule polyfills that module-capable browsers never download; gzip default level. This measures the HTML shell, not the total JavaScript required for an interactive map. Browser network audits measure the deferred map and worker separately.",
-  "codeCommit": "ed2a4966846631b2a20b145e8df6345c667a5080",
-  "initialGzipBytes": 254194,
+  "codeCommit": "abe01c6176358eb712b0da31846f46ba979d341f",
+  "initialGzipBytes": 254220,
   "budgetBytes": 274000,
   "shellBudgetMet": true,
   "legacyPolyfillGzipBytes": 39473,
   "assets": [
     {
-      "path": "/_next/static/chunks/07yj3qxu3r02x.js",
-      "bytes": 234406,
-      "gzipBytes": 73290
+      "path": "/_next/static/chunks/1_xlkqtrkqqcf.js",
+      "bytes": 234404,
+      "gzipBytes": 73293
     },
     {
-      "path": "/_next/static/chunks/1ak2zvc7np7f0.js",
-      "bytes": 188493,
-      "gzipBytes": 62595
+      "path": "/_next/static/chunks/3z7_wnq_d5zg2.js",
+      "bytes": 188586,
+      "gzipBytes": 62615
     },
     {
-      "path": "/_next/static/chunks/1vgiydpk7448e.js",
+      "path": "/_next/static/chunks/1f84j40re4n3u.js",
       "bytes": 161912,
-      "gzipBytes": 44197
+      "gzipBytes": 44198
     },
     {
       "path": "/_next/static/chunks/2mi-2taxfcrtm.js",
@@ -33,14 +33,14 @@
       "gzipBytes": 11920
     },
     {
-      "path": "/_next/static/chunks/0e8vvz4v4m7xd.js",
+      "path": "/_next/static/chunks/0e7fvzglayi9i.js",
       "bytes": 32386,
-      "gzipBytes": 8680
+      "gzipBytes": 8683
     },
     {
-      "path": "/_next/static/chunks/turbopack-24s7vvafkq8j-.js",
+      "path": "/_next/static/chunks/turbopack-13zm1w84fl-21.js",
       "bytes": 10913,
-      "gzipBytes": 4294
+      "gzipBytes": 4291
     },
     {
       "path": "/_next/static/chunks/1sivr9ddcv5tm.js",
@@ -58,9 +58,9 @@
       "gzipBytes": 708
     },
     {
-      "path": "/_next/static/chunks/2tg-p-6vks7on.js",
+      "path": "/_next/static/chunks/0ddor2tnccith.js",
       "bytes": 2226,
-      "gzipBytes": 639
+      "gzipBytes": 641
     },
     {
       "path": "/_next/static/chunks/06t9jl5ytudwn.js",
