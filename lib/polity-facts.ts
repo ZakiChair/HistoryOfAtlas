@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from './zod';
 import { isChronologicallyPossible, isValidHistDate } from './histdate';
 import {
   CalendarSchema,

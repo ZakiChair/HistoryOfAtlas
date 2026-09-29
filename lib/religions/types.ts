@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from '../zod';
 
 const Id = z.string().regex(/^[a-z][a-z0-9-]{0,63}$/);
 const Text = z.object({ fr: z.string().min(1), en: z.string().min(1) });

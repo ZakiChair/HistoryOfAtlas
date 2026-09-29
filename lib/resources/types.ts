@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from '../zod';
 
 import { RESOURCE_CATEGORIES } from './categories';
 
