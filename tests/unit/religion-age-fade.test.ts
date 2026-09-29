@@ -116,7 +116,12 @@ describe('religion attestation age fade', () => {
   it('updates paint with the date, never the geometry or the visibility', async () => {
     const { map, paint, hidden, calls } = mapDouble();
     const overlay = startReligionOverlay(map);
-    const enabled = { ...createInitialAtlasState(), religionsVisible: true, year: -500 };
+    const enabled = {
+      ...createInitialAtlasState(),
+      religionsVisible: true,
+      religionView: 'history' as const,
+      year: -500,
+    };
     overlay.update(enabled);
     await vi.waitFor(() => expect(useReligionStore.getState().status).toBe('ready'));
     const iconOpacity = () =>

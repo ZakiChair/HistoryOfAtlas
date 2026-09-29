@@ -53,6 +53,7 @@ export interface AtlasState {
   battlesVisible: boolean;
   resourcesVisible: boolean;
   religionsVisible: boolean;
+  religionView: 'coverage' | 'history';
   religionFilter: string | null;
   religionRoutesVisible: boolean;
   religionAreasVisible: boolean;
@@ -91,6 +92,7 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   battlesVisible: true,
   resourcesVisible: false,
   religionsVisible: false,
+  religionView: 'coverage',
   religionFilter: null,
   religionRoutesVisible: true,
   religionAreasVisible: true,
@@ -230,6 +232,7 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   state.battlesVisible = query.get('battles') !== '0';
   state.resourcesVisible = query.get('resources') === '1';
   state.religionsVisible = query.get('religions') === '1';
+  state.religionView = query.get('rview') === 'history' ? 'history' : 'coverage';
   state.religionFilter = religionIdentifier(query.get('religion'));
   state.religionRoutesVisible = query.get('rpaths') !== '0';
   state.religionAreasVisible = query.get('rareas') !== '0';
@@ -284,6 +287,7 @@ export function serializeAtlasUrl(state: AtlasState): string {
   if (!state.battlesVisible) query.set('battles', '0');
   if (state.resourcesVisible) query.set('resources', '1');
   if (state.religionsVisible) query.set('religions', '1');
+  if (state.religionView === 'history') query.set('rview', 'history');
   const religionFilter = religionIdentifier(state.religionFilter);
   if (religionFilter) query.set('religion', religionFilter);
   if (!state.religionRoutesVisible) query.set('rpaths', '0');
@@ -334,6 +338,7 @@ export interface AtlasActions {
   setBattlesVisible: (visible: boolean) => void;
   setResourcesVisible: (visible: boolean) => void;
   setReligionsVisible: (visible: boolean) => void;
+  setReligionView: (view: AtlasState['religionView']) => void;
   setReligionFilter: (tradition: string | null) => void;
   setReligionRoutesVisible: (visible: boolean) => void;
   setReligionAreasVisible: (visible: boolean) => void;
@@ -496,6 +501,7 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
     setBattlesVisible: (battlesVisible) => set((state) => playbackPatch(state, { battlesVisible })),
     setResourcesVisible: (resourcesVisible) => set({ resourcesVisible }),
     setReligionsVisible: (religionsVisible) => set({ religionsVisible }),
+    setReligionView: (view) => set({ religionView: view === 'history' ? 'history' : 'coverage' }),
     setReligionFilter: (religionFilter) =>
       set({ religionFilter: religionIdentifier(religionFilter) }),
     setReligionRoutesVisible: (religionRoutesVisible) => set({ religionRoutesVisible }),
@@ -538,6 +544,9 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
         ...(patch.range !== undefined ? { range: normalizeRange(patch.range) } : {}),
         ...(patch.religionFilter !== undefined
           ? { religionFilter: religionIdentifier(patch.religionFilter) }
+          : {}),
+        ...(patch.religionView !== undefined
+          ? { religionView: patch.religionView === 'history' ? 'history' : 'coverage' }
           : {}),
       })),
     hydrateFromUrl: (url) =>

@@ -75,7 +75,7 @@ async function mapControlsOutsideLayers(page: Page) {
 }
 
 function stageUrl(stage: ReligionMilestone, year: number) {
-  return `/?${new URLSearchParams({ lang: 'en', y: String(year), lon: String(stage.coordinates[0]), lat: String(stage.coordinates[1]), z: '9', projection: 'mercator', battles: '0', religions: '1', religion: stage.traditionId })}`;
+  return `/?${new URLSearchParams({ lang: 'en', rview: 'history', y: String(year), lon: String(stage.coordinates[0]), lat: String(stage.coordinates[1]), z: '9', projection: 'mercator', battles: '0', religions: '1', religion: stage.traditionId })}`;
 }
 
 test.beforeEach(async ({ page }) => {
@@ -99,7 +99,7 @@ test('religions load on demand and retain every preference in shared links while
   page.on('request', (request) => {
     if (new URL(request.url()).pathname === dataPath) requests++;
   });
-  await page.goto('/?lang=en&y=1812');
+  await page.goto('/?lang=en&rview=history&y=1812');
   await ready(page);
   expect(requests).toBe(0);
   const toggle = page.getByTestId('religions-layer-toggle');
@@ -176,7 +176,7 @@ test('the chronology navigates to sourced BCE stages and pauses playback without
 }) => {
   const stage = data().milestones.find((item) => item.year < 0 && item.year >= -1000)!;
   expect(stage).toBeTruthy();
-  await page.goto('/?lang=en&y=1812&religions=1&resources=1');
+  await page.goto('/?lang=en&rview=history&y=1812&religions=1&resources=1');
   await ready(page);
   await religionReady(page);
   await page.getByTestId('religions-legend-toggle').click();
@@ -206,7 +206,7 @@ test('religion and resource panels remain mutually exclusive and keyboard access
 }, testInfo) => {
   if (testInfo.project.name === 'mobile-chromium')
     await page.setViewportSize({ width: 320, height: 667 });
-  await page.goto('/?lang=en&y=1812&religions=1&resources=1');
+  await page.goto('/?lang=en&rview=history&y=1812&religions=1&resources=1');
   await ready(page);
   await religionReady(page);
   await page.screenshot({ path: testInfo.outputPath('religions-controls.png') });
@@ -258,7 +258,7 @@ test('an invalid first response can be retried without reloading the page', asyn
       await route.fulfill({ status: 200, contentType: 'application/json', body: '{}' });
     else await route.continue();
   });
-  await page.goto('/?lang=en&y=1812&religions=1');
+  await page.goto('/?lang=en&rview=history&y=1812&religions=1');
   await ready(page);
   await expect(page.getByTestId('religions-status')).toContainText('unavailable');
   await page

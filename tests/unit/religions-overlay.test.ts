@@ -48,7 +48,12 @@ function mapDouble() {
   };
   return { map: map as unknown as MapInstance, layers, sources, handlers, calls: map };
 }
-const enabled = () => ({ ...createInitialAtlasState(), religionsVisible: true, year: -500 });
+const enabled = () => ({
+  ...createInitialAtlasState(),
+  religionsVisible: true,
+  religionView: 'history' as const,
+  year: -500,
+});
 
 beforeEach(() => {
   getDataset.mockReset().mockResolvedValue(religionFixture);

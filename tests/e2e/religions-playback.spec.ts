@@ -64,6 +64,7 @@ test('normal-motion playback preserves religious symbols and one geometry source
     lang: 'en',
     y: String(stage.year - 2),
     religions: '1',
+    rview: 'history',
     religion: stage.traditionId,
     battles: '0',
     lon: String(stage.coordinates[0]),

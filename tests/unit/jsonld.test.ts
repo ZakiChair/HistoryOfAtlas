@@ -509,4 +509,27 @@ describe('dataset parts from the licence manifest', () => {
     }
     expect(node.isBasedOn).not.toContain('https://www.naturalearthdata.com/about/terms-of-use/');
   });
+
+  it('folds pinned Natural Earth geometry downloads into the same upstream dataset', () => {
+    const parts = licenseDatasetParts(
+      [
+        ...datasets,
+        {
+          id: 'religion-coverage-natural-earth',
+          name: 'Natural Earth · reviewed country geometry',
+          url: 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/revision/geojson/ne_50m_admin_0_countries.geojson',
+          license: 'Public domain',
+          licenseUrl: 'https://www.naturalearthdata.com/about/terms-of-use/',
+          scope: 'Reviewed religious-composition reference outlines',
+        },
+      ],
+      origin,
+    );
+    const naturalEarth = parts.filter((part) => part.name.startsWith('Natural Earth'));
+    expect(naturalEarth).toHaveLength(1);
+    expect(naturalEarth[0].url).toBe('https://www.naturalearthdata.com/');
+    expect(naturalEarth[0].description).toContain(
+      'Reviewed religious-composition reference outlines',
+    );
+  });
 });

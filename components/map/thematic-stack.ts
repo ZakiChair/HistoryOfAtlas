@@ -8,6 +8,9 @@ import type { Map as MapInstance } from 'maplibre-gl';
  * restores this order after them.
  */
 export const THEMATIC_STACK = [
+  'religion-coverage-areas',
+  'religion-coverage-outlines',
+  'religion-coverage-selection',
   'religion-areas',
   'religion-area-outlines',
   'religion-route-casing',
@@ -33,9 +36,21 @@ export function isTerritoryLabelLayer(id: string): boolean {
  * the per-frame calls during playback do not churn the style.
  */
 export function raiseThematicLayers(map: MapInstance) {
-  const present = THEMATIC_STACK.filter((id) => map.getLayer(id));
-  if (!present.length) return;
   const order = map.getStyle().layers?.map((layer) => layer.id) ?? [];
+  const stack: string[] = [...THEMATIC_STACK];
+  const hatches = order.filter((id) => id.startsWith('religion-coverage-hatch-'));
+  stack.splice(1, 0, ...hatches);
+  // Unlike small history symbols, broad demographic fills must not veil event markers.
+  if (map.getLayer('religion-coverage-areas'))
+    stack.splice(
+      3 + hatches.length,
+      0,
+      ...order.filter(
+        (id) => id.startsWith('event-') && id !== 'event-heat' && id !== 'event-trails',
+      ),
+    );
+  const present = stack.filter((id) => map.getLayer(id));
+  if (!present.length) return;
   const wanted = [...present, ...order.filter(isTerritoryLabelLayer)];
   const tail = order.slice(order.length - wanted.length);
   if (wanted.every((id, index) => tail[index] === id)) return;

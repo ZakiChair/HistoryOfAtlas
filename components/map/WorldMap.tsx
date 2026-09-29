@@ -25,7 +25,7 @@ import { createRenderQueue } from './render-queue';
 import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from './event-clusters';
 import { hasResourceAt } from './resource-hit';
 import { useResourceStore } from '@/lib/resources/store';
-import { hasReligionAt } from './religion-hit';
+import { hasReligionAt, hasReligionCoverageAt } from './religion-hit';
 import { useReligionStore } from '@/lib/religions/store';
 import { EVENT_COLOR_EXPRESSION, SELECTION_COLORS } from '@/lib/colors/semantic';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -269,7 +269,13 @@ export default function WorldMap() {
         };
 
         const showPreviousTerritory = (id: string, year: number) => {
-          if (reduced || useAtlasStore.getState().playing) return;
+          const state = useAtlasStore.getState();
+          if (
+            reduced ||
+            state.playing ||
+            (state.religionsVisible && state.religionView === 'coverage')
+          )
+            return;
           cancelGhost();
           const token = ghostToken;
           const layer = `${id}-ghost`;
@@ -469,6 +475,7 @@ export default function WorldMap() {
           });
           const click = (event: MapLayerMouseEvent) => {
             if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
+            if (hasReligionCoverageAt(map, event.point)) return;
             if (useAtlasStore.getState().battleMode) return;
             if (!currentBoundarySources.includes(id)) return;
             if (eventClustering?.hasFeatureAt(event.point)) return;
@@ -510,6 +517,7 @@ export default function WorldMap() {
 
         const updateTerritories = (state: AtlasState) => {
           cancelGhost();
+          const religiousCoverage = state.religionsVisible && state.religionView === 'coverage';
           const frames = boundaryFrames(geo, state.year, state.boundarySource);
           currentBoundarySources = frames.map((frame) => frame.id);
           for (const frame of frames) {
@@ -522,12 +530,14 @@ export default function WorldMap() {
             map.setPaintProperty(
               `${id}-fill`,
               'fill-opacity',
-              (temporal ? (state.theme === 'dark' ? 0.44 : 0.32) : 0.42) * frame.weight,
+              religiousCoverage
+                ? 0
+                : (temporal ? (state.theme === 'dark' ? 0.44 : 0.32) : 0.42) * frame.weight,
             );
             map.setPaintProperty(
               `${id}-border`,
               'line-opacity',
-              (temporal ? 0.8 : 0.65) * frame.weight,
+              (religiousCoverage ? 0.3 : temporal ? 0.8 : 0.65) * frame.weight,
             );
             map.setPaintProperty(`${id}-label`, 'text-opacity', 0.82 * frame.weight);
             if (!temporal) continue;
@@ -542,6 +552,20 @@ export default function WorldMap() {
               showPreviousTerritory(id, lastYear);
           }
           for (const id of boundaryResources.keys()) {
+            // Political hues must not imply a religious majority in undocumented regions.
+            map.setPaintProperty(
+              `${id}-border`,
+              'line-color',
+              religiousCoverage
+                ? state.theme === 'dark'
+                  ? '#8da5a8'
+                  : '#65767a'
+                : ['get', 'color'],
+            );
+            if (religiousCoverage) {
+              map.setPaintProperty(`${id}-fill`, 'fill-opacity', 0);
+              map.setPaintProperty(`${id}-ghost`, 'fill-opacity', 0);
+            }
             if (currentBoundarySources.includes(id)) continue;
             // A retained outline is only a loading transition, never a current political label.
             map.setLayoutProperty(`${id}-label`, 'visibility', 'none');
@@ -561,7 +585,9 @@ export default function WorldMap() {
             !previous ||
             state.year !== previous.year ||
             state.theme !== previous.theme ||
-            state.boundarySource !== previous.boundarySource
+            state.boundarySource !== previous.boundarySource ||
+            state.religionsVisible !== previous.religionsVisible ||
+            state.religionView !== previous.religionView
           )
             updateTerritories(state);
           if (eventsReady) {

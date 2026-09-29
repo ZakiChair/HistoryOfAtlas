@@ -62,6 +62,7 @@ function watchBuddhismSpread() {
   state.patchState({
     religionsVisible: true,
     religionFilter: START_DOORS.religion,
+    religionView: 'history',
     year: START_DOORS.religionYear,
     range: null,
     battleMode: false,

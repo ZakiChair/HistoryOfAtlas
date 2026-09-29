@@ -30,6 +30,11 @@ const LAYERS = [
     // 131 milestones after the 24 September 2026 data wave (45.9 kB) plus room for growth.
     budgetGzipBytes: 52_000,
   },
+  {
+    label: 'Religions (dated population coverage, on activation)',
+    files: ['data/religions/coverage.json'],
+    budgetGzipBytes: 1_500_000,
+  },
 ];
 
 const strict = process.argv.includes('--strict');

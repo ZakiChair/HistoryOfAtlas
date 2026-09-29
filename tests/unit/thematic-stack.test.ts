@@ -77,10 +77,9 @@ it('keeps territory names above pictograms when a thematic overlay is installed 
     ...THEMATIC_STACK,
   ]);
   raiseThematicLayers(map);
-  expect(order.slice(-THEMATIC_STACK.length - 1)).toEqual([
-    ...THEMATIC_STACK,
-    'territory-1600-label',
-  ]);
+  expect(order.at(-1)).toBe('territory-1600-label');
+  expect(order.indexOf('event-points')).toBeGreaterThan(order.indexOf('religion-coverage-areas'));
+  expect(order.indexOf('event-points')).toBeLessThan(order.indexOf('religion-areas'));
   expect(order.indexOf('territory-1600-fill')).toBeLessThan(order.indexOf('religion-areas'));
   // A newly dated snapshot adds its label at the top: already in order, nothing moves.
   order.push('snapshot-1650-label');
@@ -95,4 +94,24 @@ it('recognises only territory frame labels', () => {
   expect(isTerritoryLabelLayer('territory-1600-fill')).toBe(false);
   expect(isTerritoryLabelLayer('event-icons')).toBe(false);
   expect(isTerritoryLabelLayer('resource-cluster-counts')).toBe(false);
+});
+
+it('keeps event markers legible above broad coverage fills and hatches', () => {
+  const { map, order } = styleDouble([
+    'land',
+    'event-points',
+    'event-cluster-counts',
+    'religion-coverage-areas',
+    'religion-coverage-hatch-islam',
+    'religion-coverage-outlines',
+    'resource-points',
+  ]);
+  raiseThematicLayers(map);
+  expect(order.indexOf('event-points')).toBeGreaterThan(
+    order.indexOf('religion-coverage-hatch-islam'),
+  );
+  expect(order.indexOf('event-cluster-counts')).toBeGreaterThan(
+    order.indexOf('religion-coverage-outlines'),
+  );
+  expect(order.indexOf('resource-points')).toBeGreaterThan(order.indexOf('event-points'));
 });
