@@ -3184,5 +3184,123 @@
         "milestones": 1
       }
     ]
+  },
+  "epidemics": {
+    "corpus": {
+      "scope": "Disease descriptions, outbreak texts and hand-generalized affected areas written for the atlas",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Project content. Cited references are listed for verification only; their content is not redistributed."
+    },
+    "references": [
+      {
+        "id": "cdc-mmwr-1981",
+        "title": "CDC — MMWR, 5 June 1981: Pneumocystis Pneumonia — Los Angeles (first report of what became AIDS)",
+        "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/june_5.htm",
+        "milestones": 1
+      },
+      {
+        "id": "cdc-mmwr-haiti-2010",
+        "title": "CDC — MMWR, Update: Outbreak of Cholera — Haiti, 2010 (first outbreak confirmed 21 October 2010)",
+        "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5948a4.htm",
+        "milestones": 1
+      },
+      {
+        "id": "cdc-principles-epidemiology-snow",
+        "title": "CDC — Principles of Epidemiology in Public Health Practice, lesson 1 section 2: John Snow’s 1854 Golden Square investigation",
+        "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section2.html",
+        "milestones": 1
+      },
+      {
+        "id": "cdc-museum-1918",
+        "title": "CDC Museum — Influenza: Complex Virus/Complex History, the 1918 influenza pandemic",
+        "url": "https://www.cdcmuseum.org/exhibits/show/influenza/1918-influenza-pandemic",
+        "milestones": 1
+      },
+      {
+        "id": "epimeddat-messina3-1347",
+        "title": "EpiMedDat — 1347-10 Messina (3): plague refugees from Messina spread the Black Death to Siracusa, Agrigento and Trapani",
+        "url": "https://epimeddat.net/1347-10-00-Messina3",
+        "milestones": 1
+      },
+      {
+        "id": "epimeddat-messina-1347",
+        "title": "EpiMedDat, Open Data Collection for Historical Epidemics and Medieval Diseases — 1347-10 Messina: arrival of the Black Death on Genoese ships (Michele da Piazza)",
+        "url": "https://epimeddat.net/1347-10-00-Messina",
+        "milestones": 1
+      },
+      {
+        "id": "factgrid-messina-1347",
+        "title": "FactGrid — Item Q1871673, arrival of the Black Death in Messina, October 1347",
+        "url": "https://database.factgrid.de/wiki/Item:Q1871673",
+        "milestones": 1
+      },
+      {
+        "id": "pasteur-yersin",
+        "title": "Institut Pasteur — Alexandre Yersin, the man who discovered the bacterium responsible for the plague (Hong Kong, 1894)",
+        "url": "https://www.pasteur.fr/en/research-journal/news/alexandre-yersin-man-who-discovered-bacterium-responsible-plague",
+        "milestones": 1
+      },
+      {
+        "id": "paho-cholera-alert-2022",
+        "title": "PAHO/WHO — Epidemiological Alert: Cholera, 2 October 2022 (Haiti, October 2010 – February 2019: over 820,000 cases and nearly 10,000 deaths)",
+        "url": "https://www.paho.org/sites/default/files/2022-10/2022-october-2-phe-alert-cholera-final.pdf",
+        "milestones": 1
+      },
+      {
+        "id": "nationalarchives-great-plague",
+        "title": "The National Archives (UK) — The Great Plague of 1665–1666, teaching resource with original documents",
+        "url": "https://www.nationalarchives.gov.uk/education/resources/great-plague/",
+        "milestones": 1
+      },
+      {
+        "id": "ucla-john-snow",
+        "title": "UCLA Fielding School of Public Health — John Snow, historical giant in epidemiology (Broad Street pump outbreak, 1854)",
+        "url": "https://epi-snow.ph.ucla.edu/",
+        "milestones": 1
+      },
+      {
+        "id": "unaids-fact-sheet",
+        "title": "UNAIDS — Global HIV & AIDS statistics fact sheet (2025 estimates)",
+        "url": "https://www.unaids.org/en/resources/fact-sheet",
+        "milestones": 1
+      },
+      {
+        "id": "michigan-influenza-philadelphia",
+        "title": "University of Michigan — The American Influenza Epidemic of 1918–1919, a digital encyclopedia: Philadelphia, Pennsylvania",
+        "url": "https://www.influenzaarchive.org/cities/city-philadelphia.html",
+        "milestones": 1
+      },
+      {
+        "id": "who-cholera-fact-sheet",
+        "title": "World Health Organization — Cholera fact sheet (pandemics since the 19th century; seventh pandemic since 1961)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/cholera",
+        "milestones": 1
+      },
+      {
+        "id": "who-don-madagascar-plague-2017",
+        "title": "World Health Organization — Disease Outbreak News, Plague – Madagascar, 15 November 2017",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/15-november-2017-plague-madagascar-en",
+        "milestones": 1
+      },
+      {
+        "id": "who-covid-timeline",
+        "title": "World Health Organization — Listings of WHO’s response to COVID-19 (timeline from 31 December 2019)",
+        "url": "https://www.who.int/news/item/29-06-2020-covidtimeline",
+        "milestones": 1
+      },
+      {
+        "id": "who-smallpox",
+        "title": "World Health Organization — Smallpox (health topic: last natural case 1977, eradication certified 1979–1980)",
+        "url": "https://www.who.int/health-topics/smallpox",
+        "milestones": 2
+      },
+      {
+        "id": "who-covid-pheic-end-2023",
+        "title": "World Health Organization — Statement on the fifteenth meeting of the IHR (2005) Emergency Committee on the COVID-19 pandemic, 5 May 2023",
+        "url": "https://www.who.int/news/item/05-05-2023-statement-on-the-fifteenth-meeting-of-the-international-health-regulations-(2005)-emergency-committee-regarding-the-coronavirus-disease-(covid-19)-pandemic",
+        "milestones": 1
+      }
+    ]
   }
 }

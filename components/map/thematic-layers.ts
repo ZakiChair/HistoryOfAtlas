@@ -1,6 +1,7 @@
 import type { Map as MapInstance } from 'maplibre-gl';
 import type { AtlasState } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
+import { useEpidemicStore } from '@/lib/epidemics/store';
 
 export interface ThematicOverlay {
   update(state: AtlasState): void;
@@ -29,5 +30,11 @@ export const THEMATIC_LAYERS: readonly ThematicLayer[] = [
     isActive: (state) => state.religionsVisible,
     store: useReligionStore,
     load: () => import('./religion-overlay').then((module) => module.startReligionOverlay),
+  },
+  {
+    id: 'epidemics',
+    isActive: (state) => state.epidemicsVisible,
+    store: useEpidemicStore,
+    load: () => import('./epidemic-overlay').then((module) => module.startEpidemicOverlay),
   },
 ];

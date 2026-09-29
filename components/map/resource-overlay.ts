@@ -20,6 +20,7 @@ import {
   RESOURCE_SOURCE,
 } from './resource-hit';
 import { hasReligionAt } from './religion-hit';
+import { hasEpidemicAt } from './epidemic-hit';
 import {
   createResourceSprites,
   RESOURCE_COUNT_BADGE,
@@ -111,14 +112,15 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
     // Historical territory sources are replaced as the year changes. Keep site markers above them.
     if (active) raiseThematicLayers(map);
   };
-  // Religious emblems are drawn above resource symbols and receive clicks they cover.
+  // Thematic emblems are drawn above resource symbols and receive clicks they cover.
   const select = (event: MapLayerMouseEvent) => {
     if (
       !active ||
       disposed ||
       sourceUpdating ||
       event.defaultPrevented ||
-      hasReligionAt(map, event.point)
+      hasReligionAt(map, event.point) ||
+      hasEpidemicAt(map, event.point)
     )
       return;
     const site = sites.get(String(event.features?.[0]?.properties?.id ?? ''));
@@ -135,7 +137,7 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
       disposed ||
       sourceUpdating ||
       event.defaultPrevented ||
-      (!countLayer && hasReligionAt(map, event.point))
+      (!countLayer && (hasReligionAt(map, event.point) || hasEpidemicAt(map, event.point)))
     )
       return;
     const feature = event.features?.[0];
@@ -159,8 +161,8 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
   const expand = expandFrom(false);
   const expandCount = expandFrom(true);
   const leave = (event?: MapLayerMouseEvent) => {
-    // Moving from a resource symbol onto a touching religious emblem keeps the pointer.
-    if (event && hasReligionAt(map, event.point)) return;
+    // Moving from a resource symbol onto a touching thematic emblem keeps the pointer.
+    if (event && (hasReligionAt(map, event.point) || hasEpidemicAt(map, event.point))) return;
     map.getCanvas().style.cursor = '';
   };
   const removeLayers = () => {

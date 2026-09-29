@@ -66,6 +66,10 @@ export interface LicenseManifest {
     corpus: { scope: string; license: string; licenseUrl: string; note: string };
     references: ReligionReference[];
   };
+  epidemics?: {
+    corpus: { scope: string; license: string; licenseUrl: string; note: string };
+    references: ReligionReference[];
+  };
 }
 
 export interface LicenseInputs {
@@ -117,6 +121,11 @@ export interface LicenseInputs {
   religions: {
     sources: { id: string; title: string; url: string }[];
     milestones: { id: string; sourceIds: string[] }[];
+  };
+  /** Optional until the corpus is published. */
+  epidemics?: {
+    sources: { id: string; title: string; url: string }[];
+    milestones: { id: string; sourceIds: string[]; toll?: { sourceIds: string[] }[] }[];
   };
 }
 
@@ -178,6 +187,18 @@ export function licenseIssues(inputs: LicenseInputs): string[] {
     for (const sourceId of milestone.sourceIds)
       if (!religionSources.has(sourceId))
         issues.push(`Religion milestone ${milestone.id} cites unknown source ${sourceId}`);
+  const epidemicSources = new Map(
+    (inputs.epidemics?.sources ?? []).map((source) => [source.id, source]),
+  );
+  for (const source of inputs.epidemics?.sources ?? [])
+    if (!isHttpUrl(source.url)) issues.push(`Epidemic source ${source.id} has no URL`);
+  for (const milestone of inputs.epidemics?.milestones ?? [])
+    for (const sourceId of [
+      ...milestone.sourceIds,
+      ...(milestone.toll ?? []).flatMap((toll) => toll.sourceIds),
+    ])
+      if (!epidemicSources.has(sourceId))
+        issues.push(`Epidemic milestone ${milestone.id} cites unknown source ${sourceId}`);
   for (const source of inputs.geography.sources) {
     if (!source.licence.trim()) issues.push(`Geography source ${source.label} has no licence`);
     if (!isHttpUrl(source.url)) issues.push(`Geography source ${source.label} has no URL`);
@@ -344,6 +365,13 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
   for (const milestone of inputs.religions.milestones)
     for (const sourceId of new Set(milestone.sourceIds))
       citations.set(sourceId, (citations.get(sourceId) ?? 0) + 1);
+  const epidemicCitations = new Map<string, number>();
+  for (const milestone of inputs.epidemics?.milestones ?? [])
+    for (const sourceId of new Set([
+      ...milestone.sourceIds,
+      ...(milestone.toll ?? []).flatMap((toll) => toll.sourceIds),
+    ]))
+      epidemicCitations.set(sourceId, (epidemicCitations.get(sourceId) ?? 0) + 1);
 
   return {
     version: 1,
@@ -382,5 +410,26 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
         }))
         .sort((a, b) => a.title.localeCompare(b.title, 'en')),
     },
+    ...(inputs.epidemics
+      ? {
+          epidemics: {
+            corpus: {
+              scope:
+                'Disease descriptions, outbreak texts and hand-generalized affected areas written for the atlas',
+              license: inputs.project.content.license,
+              licenseUrl: inputs.project.content.licenseUrl,
+              note: 'Project content. Cited references are listed for verification only; their content is not redistributed.',
+            },
+            references: inputs.epidemics.sources
+              .map((source) => ({
+                id: source.id,
+                title: source.title,
+                url: source.url,
+                milestones: epidemicCitations.get(source.id) ?? 0,
+              }))
+              .sort((a, b) => a.title.localeCompare(b.title, 'en')),
+          },
+        }
+      : {}),
   };
 }

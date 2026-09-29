@@ -8,7 +8,7 @@
  *
  * `pnpm data:resources:check` runs the same check.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { buildLicenseManifest, licenseIssues, type LicenseInputs } from '../lib/licenses';
 import { REPOSITORY_URL } from '../lib/seo';
@@ -53,6 +53,13 @@ export function readProjectLicenses(): LicenseInputs['project'] {
 export function readLicenseInputs(): LicenseInputs {
   const resources = readJson<LicenseInputs['resources']>('public/data/resources/sites.json');
   const religions = readJson<LicenseInputs['religions']>('public/data/religions/history.json');
+  // The epidemic corpus is authored separately; until it lands the manifest simply omits it.
+  const epidemics = existsSync(new URL('public/data/epidemics/history.json', root))
+    ? readJson<{
+        sources: { id: string; title: string; url: string }[];
+        milestones: { id: string; sourceIds: string[]; toll?: { sourceIds: string[] }[] }[];
+      }>('public/data/epidemics/history.json')
+    : undefined;
   const coverage = readJson<ReligionCoverageIndex>('public/data/religions/coverage-index.json');
   const geography = readJson<LicenseInputs['geography']>('public/geo/manifest.json');
   const events = readJson<LicenseInputs['events']>('public/data/manifest.json');
@@ -73,6 +80,18 @@ export function readLicenseInputs(): LicenseInputs {
         sourceIds: milestone.sourceIds,
       })),
     },
+    ...(epidemics
+      ? {
+          epidemics: {
+            sources: epidemics.sources,
+            milestones: epidemics.milestones.map((milestone) => ({
+              id: milestone.id,
+              sourceIds: milestone.sourceIds,
+              toll: milestone.toll?.map((toll) => ({ sourceIds: toll.sourceIds })),
+            })),
+          },
+        }
+      : {}),
     religionCoverage: coverage.sources.map((source) => ({
       id: `religion-coverage-${source.id}`,
       name: source.title,
@@ -114,7 +133,7 @@ export function checkLicenseManifest(): string {
   }
   if (committed !== renderLicenseManifest(inputs))
     throw new Error('public/data/licenses.json is out of date: run `pnpm data:licenses`.');
-  return `Verified licences for ${inputs.resources.sources.length} resource sources, ${inputs.religions.sources.length} religion references and ${inputs.geography.sources.length} geography sources.`;
+  return `Verified licences for ${inputs.resources.sources.length} resource sources, ${inputs.religions.sources.length} religion references, ${inputs.epidemics?.sources.length ?? 0} epidemic references and ${inputs.geography.sources.length} geography sources.`;
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {

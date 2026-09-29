@@ -55,6 +55,11 @@ export interface ThematicRefinementOptions<M> {
   crossThemeKinds?: readonly string[];
   /** Kinds allowed to carry `closesId` (e.g. a contraction); none by default. */
   closingKinds?: readonly string[];
+  /**
+   * `fromId` chronology: 'earlier' (default) requires a strictly earlier target;
+   * 'notLater' also accepts a target sharing the milestone's year at that granularity.
+   */
+  linkOrder?: 'earlier' | 'notLater';
 }
 
 export function refineThematicDataset<
@@ -92,7 +97,9 @@ export function refineThematicDataset<
         from.id === stage.id ||
         (!options.crossThemeKinds?.includes(stage.kind) &&
           options.themeIdOf(from) !== options.themeIdOf(stage)) ||
-        from.year >= stage.year
+        (options.linkOrder === 'notLater'
+          ? from.year > stage.year
+          : from.year >= stage.year)
       )
         issue(`Invalid chronological link: ${stage.id}`);
     }

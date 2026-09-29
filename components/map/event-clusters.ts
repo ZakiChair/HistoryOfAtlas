@@ -12,6 +12,7 @@ import { EMPTY_FEATURE_FILTER } from './style-filters';
 import { queryViewportFeatures } from './query-viewport';
 import { hasResourceAt } from './resource-hit';
 import { hasReligionAt } from './religion-hit';
+import { hasEpidemicAt } from './epidemic-hit';
 import { translateCopy } from '@/lib/i18n';
 import { useAtlasStore } from '@/lib/store';
 import { EVENT_COLOR_EXPRESSION, EVENT_GROUP_COLORS } from '@/lib/colors/semantic';
@@ -266,7 +267,12 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
   };
 
   const click = (event: MapLayerMouseEvent) => {
-    if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
+    if (
+      hasResourceAt(map, event.point) ||
+      hasReligionAt(map, event.point) ||
+      hasEpidemicAt(map, event.point)
+    )
+      return;
     if (!active) return;
     const feature = event.features?.[0];
     if (!feature || feature.geometry.type !== 'Point') return;

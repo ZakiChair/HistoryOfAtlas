@@ -1,0 +1,415 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "epimeddat-messina-1347",
+      "title": "EpiMedDat, Open Data Collection for Historical Epidemics and Medieval Diseases — 1347-10 Messina: arrival of the Black Death on Genoese ships (Michele da Piazza)",
+      "url": "https://epimeddat.net/1347-10-00-Messina"
+    },
+    {
+      "id": "factgrid-messina-1347",
+      "title": "FactGrid — Item Q1871673, arrival of the Black Death in Messina, October 1347",
+      "url": "https://database.factgrid.de/wiki/Item:Q1871673"
+    },
+    {
+      "id": "epimeddat-messina3-1347",
+      "title": "EpiMedDat — 1347-10 Messina (3): plague refugees from Messina spread the Black Death to Siracusa, Agrigento and Trapani",
+      "url": "https://epimeddat.net/1347-10-00-Messina3"
+    },
+    {
+      "id": "nationalarchives-great-plague",
+      "title": "The National Archives (UK) — The Great Plague of 1665–1666, teaching resource with original documents",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/great-plague/"
+    },
+    {
+      "id": "pasteur-yersin",
+      "title": "Institut Pasteur — Alexandre Yersin, the man who discovered the bacterium responsible for the plague (Hong Kong, 1894)",
+      "url": "https://www.pasteur.fr/en/research-journal/news/alexandre-yersin-man-who-discovered-bacterium-responsible-plague"
+    },
+    {
+      "id": "who-don-madagascar-plague-2017",
+      "title": "World Health Organization — Disease Outbreak News, Plague – Madagascar, 15 November 2017",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/15-november-2017-plague-madagascar-en"
+    },
+    {
+      "id": "who-smallpox",
+      "title": "World Health Organization — Smallpox (health topic: last natural case 1977, eradication certified 1979–1980)",
+      "url": "https://www.who.int/health-topics/smallpox"
+    },
+    {
+      "id": "ucla-john-snow",
+      "title": "UCLA Fielding School of Public Health — John Snow, historical giant in epidemiology (Broad Street pump outbreak, 1854)",
+      "url": "https://epi-snow.ph.ucla.edu/"
+    },
+    {
+      "id": "cdc-principles-epidemiology-snow",
+      "title": "CDC — Principles of Epidemiology in Public Health Practice, lesson 1 section 2: John Snow’s 1854 Golden Square investigation",
+      "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section2.html"
+    },
+    {
+      "id": "who-cholera-fact-sheet",
+      "title": "World Health Organization — Cholera fact sheet (pandemics since the 19th century; seventh pandemic since 1961)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/cholera"
+    },
+    {
+      "id": "paho-cholera-alert-2022",
+      "title": "PAHO/WHO — Epidemiological Alert: Cholera, 2 October 2022 (Haiti, October 2010 – February 2019: over 820,000 cases and nearly 10,000 deaths)",
+      "url": "https://www.paho.org/sites/default/files/2022-10/2022-october-2-phe-alert-cholera-final.pdf"
+    },
+    {
+      "id": "cdc-mmwr-haiti-2010",
+      "title": "CDC — MMWR, Update: Outbreak of Cholera — Haiti, 2010 (first outbreak confirmed 21 October 2010)",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5948a4.htm"
+    },
+    {
+      "id": "michigan-influenza-philadelphia",
+      "title": "University of Michigan — The American Influenza Epidemic of 1918–1919, a digital encyclopedia: Philadelphia, Pennsylvania",
+      "url": "https://www.influenzaarchive.org/cities/city-philadelphia.html"
+    },
+    {
+      "id": "cdc-museum-1918",
+      "title": "CDC Museum — Influenza: Complex Virus/Complex History, the 1918 influenza pandemic",
+      "url": "https://www.cdcmuseum.org/exhibits/show/influenza/1918-influenza-pandemic"
+    },
+    {
+      "id": "cdc-mmwr-1981",
+      "title": "CDC — MMWR, 5 June 1981: Pneumocystis Pneumonia — Los Angeles (first report of what became AIDS)",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/june_5.htm"
+    },
+    {
+      "id": "unaids-fact-sheet",
+      "title": "UNAIDS — Global HIV & AIDS statistics fact sheet (2025 estimates)",
+      "url": "https://www.unaids.org/en/resources/fact-sheet"
+    },
+    {
+      "id": "who-covid-timeline",
+      "title": "World Health Organization — Listings of WHO’s response to COVID-19 (timeline from 31 December 2019)",
+      "url": "https://www.who.int/news/item/29-06-2020-covidtimeline"
+    },
+    {
+      "id": "who-covid-pheic-end-2023",
+      "title": "World Health Organization — Statement on the fifteenth meeting of the IHR (2005) Emergency Committee on the COVID-19 pandemic, 5 May 2023",
+      "url": "https://www.who.int/news/item/05-05-2023-statement-on-the-fifteenth-meeting-of-the-international-health-regulations-(2005)-emergency-committee-regarding-the-coronavirus-disease-(covid-19)-pandemic"
+    }
+  ],
+  "diseases": [
+    {
+      "id": "plague",
+      "names": { "fr": "Peste", "en": "Plague" },
+      "description": {
+        "fr": "Maladie due au bacille Yersinia pestis, identifié à Hong Kong en 1894. Les foyers retenus vont de la peste noire de 1347 aux épidémies contemporaines suivies par l’OMS ; ils ne recensent pas toutes les vagues de peste.",
+        "en": "Disease caused by the bacillus Yersinia pestis, identified in Hong Kong in 1894. The outbreaks retained run from the Black Death of 1347 to contemporary epidemics followed by WHO; they do not list every plague wave."
+      },
+      "color": "#c9584c",
+      "symbol": "plague"
+    },
+    {
+      "id": "smallpox",
+      "names": { "fr": "Variole", "en": "Smallpox" },
+      "description": {
+        "fr": "Maladie contagieuse due au virus de la variole, mortelle dans jusqu’à 30 % des cas selon l’OMS, et seule maladie infectieuse humaine déclarée éradiquée. Les repères retenus documentent la fin de la maladie, non son histoire millénaire.",
+        "en": "Contagious disease caused by the variola virus, fatal in up to 30% of cases according to WHO, and the only human infectious disease declared eradicated. The milestones retained document the end of the disease, not its millennia-long history."
+      },
+      "color": "#d9a441",
+      "symbol": "smallpox"
+    },
+    {
+      "id": "cholera",
+      "names": { "fr": "Choléra", "en": "Cholera" },
+      "description": {
+        "fr": "Infection diarrhéique aiguë due à Vibrio cholerae, transmise par l’eau ou les aliments contaminés. L’OMS compte six pandémies depuis le XIXe siècle et une septième, en cours depuis 1961 ; seuls quelques foyers documentés sont retenus ici.",
+        "en": "Acute diarrhoeal infection caused by Vibrio cholerae, transmitted through contaminated water or food. WHO counts six pandemics since the 19th century and a seventh, ongoing since 1961; only a few documented outbreaks are retained here."
+      },
+      "color": "#4c9ac9",
+      "symbol": "cholera"
+    },
+    {
+      "id": "influenza",
+      "names": { "fr": "Grippe", "en": "Influenza" },
+      "description": {
+        "fr": "Infections respiratoires dues aux virus grippaux. La pandémie de 1918–1919, due à un virus A(H1N1), est la plus grave de l’histoire récente selon le CDC ; le corpus n’en retient pour l’instant qu’un foyer documenté.",
+        "en": "Respiratory infections caused by influenza viruses. The 1918–1919 pandemic, caused by an A(H1N1) virus, was the most severe in recent history according to the CDC; the corpus so far retains a single documented outbreak of it."
+      },
+      "color": "#8bb174",
+      "symbol": "influenza"
+    },
+    {
+      "id": "hiv",
+      "names": { "fr": "VIH/sida", "en": "HIV/AIDS" },
+      "description": {
+        "fr": "Pandémie due au virus de l’immunodéficience humaine. Le premier signalement clinique publié date de 1981 ; les estimations mondiales de l’ONUSIDA conservent leurs fourchettes.",
+        "en": "Pandemic caused by the human immunodeficiency virus. The first published clinical report dates from 1981; UNAIDS global estimates keep their ranges."
+      },
+      "color": "#b0578d",
+      "symbol": "hiv"
+    },
+    {
+      "id": "covid-19",
+      "names": { "fr": "COVID-19", "en": "COVID-19" },
+      "description": {
+        "fr": "Maladie due au coronavirus SARS-CoV-2. La chronologie de l’OMS commence avec le signalement d’un groupe de pneumonies à Wuhan le 31 décembre 2019 ; l’urgence de santé publique de portée internationale a été levée le 5 mai 2023.",
+        "en": "Disease caused by the SARS-CoV-2 coronavirus. WHO’s timeline begins with the report of a pneumonia cluster in Wuhan on 31 December 2019; the public health emergency of international concern was lifted on 5 May 2023."
+      },
+      "color": "#7e6bd1",
+      "symbol": "covid-19"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "plague-messina-1347",
+      "diseaseId": "plague",
+      "kind": "emergence",
+      "year": 1347,
+      "endYear": 1347,
+      "approximate": true,
+      "title": { "fr": "Messine, octobre 1347 : la peste noire touche l’Europe", "en": "Messina, October 1347: the Black Death reaches Europe" },
+      "description": {
+        "fr": "Selon le chroniqueur Michele da Piazza, douze galères génoises accostent à Messine au début d’octobre 1347 et y apportent la maladie ; les Messinois les chassent du port, mais une immense mortalité suit. L’entrée EpiMedDat date le début à octobre 1347 sans fixer de fin ; l’année 1347 sert de repère pour ce premier foyer européen documenté du corpus.",
+        "en": "According to the chronicler Michele da Piazza, twelve Genoese galleys put in at Messina in early October 1347 and brought the disease; the Messinese drove them from the harbour, but immense mortality followed. The EpiMedDat record dates the start to October 1347 without an end; the year 1347 stands for this first documented European outbreak in the corpus."
+      },
+      "coordinates": [15.554, 38.194],
+      "mechanisms": ["shipping"],
+      "sourceIds": ["epimeddat-messina-1347", "factgrid-messina-1347"]
+    },
+    {
+      "id": "plague-sicily-1347",
+      "diseaseId": "plague",
+      "kind": "outbreak",
+      "year": 1347,
+      "endYear": 1347,
+      "approximate": true,
+      "title": { "fr": "Sicile, 1347 : les réfugiés de Messine", "en": "Sicily, 1347: the refugees from Messina" },
+      "description": {
+        "fr": "La même chronique rapporte que les Messinois fuyant la peste sont repoussés de Catane et se dispersent dans l’île, portant la maladie à Syracuse, Agrigente et Trapani. Le lien depuis Messine représente cette propagation documentée par les réfugiés, pas un itinéraire précis ; le point situe Catane.",
+        "en": "The same chronicle reports that Messinese fleeing the plague were turned away from Catania and scattered across the island, carrying the disease to Siracusa, Agrigento and Trapani. The link from Messina represents this documented spread by refugees, not a precise route; the point marks Catania."
+      },
+      "coordinates": [15.087, 37.503],
+      "mechanisms": ["migration"],
+      "sourceIds": ["epimeddat-messina3-1347"],
+      "fromId": "plague-messina-1347"
+    },
+    {
+      "id": "plague-london-1665",
+      "diseaseId": "plague",
+      "kind": "outbreak",
+      "year": 1665,
+      "endYear": 1666,
+      "approximate": false,
+      "title": { "fr": "Londres, 1665–1666 : la Grande Peste", "en": "London, 1665–1666: the Great Plague" },
+      "description": {
+        "fr": "Les documents des Archives nationales britanniques — bulletins de mortalité, ordonnances de Charles II, lettres — décrivent une épidémie qui a pu tuer plus de 100 000 Londoniens ; les maisons infectées étaient fermées quarante jours et marquées d’une croix rouge. Les chiffres des bulletins d’époque restent ceux de leurs rédacteurs.",
+        "en": "Documents held by the UK National Archives — mortality bills, Charles II’s orders, letters — describe an epidemic that may have killed more than 100,000 Londoners; infected houses were shut up for forty days and marked with a red cross. The figures of the period’s bills remain those of their compilers."
+      },
+      "coordinates": [-0.128, 51.507],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["nationalarchives-great-plague"],
+      "toll": [
+        {
+          "kind": "deaths",
+          "min": 100000,
+          "scope": { "fr": "Londres, 1665–1666 : « peut-être plus de 100 000 » morts selon les Archives nationales britanniques", "en": "London, 1665–1666: ‘may have killed more than 100,000’ according to the UK National Archives" },
+          "sourceIds": ["nationalarchives-great-plague"]
+        }
+      ]
+    },
+    {
+      "id": "plague-hong-kong-1894",
+      "diseaseId": "plague",
+      "kind": "outbreak",
+      "year": 1894,
+      "endYear": 1894,
+      "approximate": false,
+      "title": { "fr": "Hong Kong, 1894 : Yersin identifie le bacille", "en": "Hong Kong, 1894: Yersin identifies the bacillus" },
+      "description": {
+        "fr": "Envoyé en juin 1894 face à l’épidémie de peste, Alexandre Yersin isole à Hong Kong l’agent de la maladie, Yersinia pestis, qu’il décrit comme de « petits bâtonnets trapus aux extrémités arrondies », selon l’Institut Pasteur. Le jalon date le foyer de Hong Kong et l’identification du bacille, pas le début de la troisième pandémie.",
+        "en": "Sent in June 1894 to face the plague epidemic, Alexandre Yersin isolated the disease agent, Yersinia pestis, in Hong Kong, describing it as ‘small stocky spindles with rounded ends’, according to the Institut Pasteur. The milestone dates the Hong Kong outbreak and the identification of the bacillus, not the start of the third pandemic."
+      },
+      "coordinates": [114.159, 22.278],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["pasteur-yersin"]
+    },
+    {
+      "id": "plague-madagascar-2017",
+      "diseaseId": "plague",
+      "kind": "outbreak",
+      "year": 2017,
+      "endYear": 2017,
+      "approximate": false,
+      "title": { "fr": "Madagascar, 2017 : une flambée de peste suivie par l’OMS", "en": "Madagascar, 2017: a plague outbreak followed by WHO" },
+      "description": {
+        "fr": "Depuis le 1er août 2017, Madagascar connaît une importante flambée de peste ; au 10 novembre 2017, l’OMS compte 2 119 cas confirmés, probables ou suspects et 171 décès. Le point situe Antananarivo comme repère national ; les cas se répartissent sur plusieurs districts.",
+        "en": "From 1 August 2017 Madagascar experienced a large plague outbreak; as of 10 November 2017 WHO counted 2,119 confirmed, probable or suspected cases and 171 deaths. The point marks Antananarivo as a national reference; cases were spread over several districts."
+      },
+      "coordinates": [47.525, -18.91],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["who-don-madagascar-plague-2017"],
+      "toll": [
+        {
+          "kind": "cases",
+          "value": 2119,
+          "scope": { "fr": "Madagascar, 1er août – 10 novembre 2017 : cas confirmés, probables et suspects notifiés à l’OMS", "en": "Madagascar, 1 August – 10 November 2017: confirmed, probable and suspected cases reported to WHO" },
+          "sourceIds": ["who-don-madagascar-plague-2017"]
+        },
+        {
+          "kind": "deaths",
+          "value": 171,
+          "scope": { "fr": "Madagascar, 1er août – 10 novembre 2017, décès notifiés à l’OMS", "en": "Madagascar, 1 August – 10 November 2017, deaths reported to WHO" },
+          "sourceIds": ["who-don-madagascar-plague-2017"]
+        }
+      ]
+    },
+    {
+      "id": "smallpox-somalia-1977",
+      "diseaseId": "smallpox",
+      "kind": "eradication",
+      "year": 1977,
+      "endYear": 1977,
+      "approximate": false,
+      "title": { "fr": "Somalie, 1977 : dernier cas naturel de variole", "en": "Somalia, 1977: last natural case of smallpox" },
+      "description": {
+        "fr": "Le dernier cas naturel connu de variole survient en Somalie en 1977, après la campagne intensifiée d’éradication lancée par l’OMS en 1967. Le point est un repère national ; la notice de l’OMS ne localise pas le cas.",
+        "en": "The last known natural case of smallpox occurred in Somalia in 1977, after the intensified eradication campaign WHO launched in 1967. The point is a national reference; the WHO notice does not locate the case."
+      },
+      "coordinates": [47, 6],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["who-smallpox"]
+    },
+    {
+      "id": "smallpox-geneva-1980",
+      "diseaseId": "smallpox",
+      "kind": "eradication",
+      "year": 1980,
+      "endYear": 1980,
+      "approximate": false,
+      "title": { "fr": "Genève, 1980 : la variole déclarée éradiquée", "en": "Geneva, 1980: smallpox declared eradicated" },
+      "description": {
+        "fr": "L’éradication de la variole est certifiée en décembre 1979 par une commission indépendante réunie au siège de l’OMS à Genève, puis déclarée par l’OMS en 1980 : la seule maladie infectieuse à ce jour dans ce cas. Le premier vaccin, dû à Edward Jenner en 1796, l’avait précédée de près de deux siècles.",
+        "en": "The eradication of smallpox was certified in December 1979 by an independent commission meeting at WHO headquarters in Geneva, then declared by WHO in 1980 — the only infectious disease to date in that position. The first vaccine, developed by Edward Jenner in 1796, had preceded it by almost two centuries."
+      },
+      "coordinates": [6.15, 46.2],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["who-smallpox"]
+    },
+    {
+      "id": "cholera-london-1854",
+      "diseaseId": "cholera",
+      "kind": "outbreak",
+      "year": 1854,
+      "endYear": 1854,
+      "approximate": false,
+      "title": { "fr": "Londres, 1854 : la pompe de Broad Street", "en": "London, 1854: the Broad Street pump" },
+      "description": {
+        "fr": "Lors de la flambée de choléra de Soho, John Snow cartographie les décès autour de la pompe de Broad Street et conclut à une transmission par l’eau contaminée ; les autorités retirent la poignée de la pompe. Le CDC présente cette enquête de 1854 comme la séquence classique de l’épidémiologie de terrain. Le jalon date ce foyer, non les pandémies de choléra du XIXe siècle qui l’englobent.",
+        "en": "During the Soho cholera outbreak, John Snow mapped the deaths around the Broad Street pump and concluded that contaminated water transmitted the disease; the authorities removed the pump handle. The CDC presents this 1854 investigation as the classic sequence of field epidemiology. The milestone dates this outbreak, not the 19th-century cholera pandemics that encompass it."
+      },
+      "coordinates": [-0.136, 51.514],
+      "mechanisms": ["water"],
+      "sourceIds": ["ucla-john-snow", "cdc-principles-epidemiology-snow", "who-cholera-fact-sheet"]
+    },
+    {
+      "id": "cholera-haiti-2010",
+      "diseaseId": "cholera",
+      "kind": "outbreak",
+      "year": 2010,
+      "endYear": 2019,
+      "approximate": false,
+      "title": { "fr": "Haïti, 2010–2019 : le choléra après le séisme", "en": "Haiti, 2010–2019: cholera after the earthquake" },
+      "description": {
+        "fr": "Le premier foyer de choléra en Haïti depuis au moins un siècle est confirmé le 21 octobre 2010 ; les premiers cas confirmés viennent du département de l’Artibonite, où le point est placé. D’octobre 2010 à février 2019, plus de 820 000 cas et près de 10 000 décès sont rapportés selon l’OPS/OMS ; après plus de trois ans sans cas, le choléra réapparaît en octobre 2022.",
+        "en": "The first cholera outbreak in Haiti in at least a century was confirmed on 21 October 2010; the first confirmed cases came from the Artibonite department, where the point is placed. From October 2010 to February 2019, over 820,000 cases and nearly 10,000 deaths were reported according to PAHO/WHO; after more than three years without cases, cholera reappeared in October 2022."
+      },
+      "coordinates": [-72.683, 19.45],
+      "mechanisms": ["water"],
+      "sourceIds": ["paho-cholera-alert-2022", "cdc-mmwr-haiti-2010"],
+      "toll": [
+        {
+          "kind": "cases",
+          "min": 820000,
+          "scope": { "fr": "Haïti, octobre 2010 – février 2019 : « plus de 820 000 cas » rapportés (OPS/OMS)", "en": "Haiti, October 2010 – February 2019: ‘over 820,000 cases’ reported (PAHO/WHO)" },
+          "sourceIds": ["paho-cholera-alert-2022"]
+        },
+        {
+          "kind": "deaths",
+          "max": 10000,
+          "scope": { "fr": "Haïti, octobre 2010 – février 2019 : « près de 10 000 décès » rapportés (OPS/OMS)", "en": "Haiti, October 2010 – February 2019: ‘nearly 10,000 deaths’ reported (PAHO/WHO)" },
+          "sourceIds": ["paho-cholera-alert-2022"]
+        }
+      ]
+    },
+    {
+      "id": "influenza-philadelphia-1918",
+      "diseaseId": "influenza",
+      "kind": "outbreak",
+      "year": 1918,
+      "endYear": 1919,
+      "approximate": false,
+      "title": { "fr": "Philadelphie, 1918 : la grippe après le défilé", "en": "Philadelphia, 1918: influenza after the parade" },
+      "description": {
+        "fr": "Alors que l’épidémie touchait surtout l’arsenal de la Marine, quelque 200 000 Philadelphiens assistent le 28 septembre 1918 au défilé de l’emprunt de guerre ; les cas explosent dans les jours suivants et la ville connaît une surmortalité de 748 décès pour 100 000 habitants, parmi les plus élevées des grandes villes américaines selon l’encyclopédie de l’université du Michigan. Le CDC estime la pandémie de 1918–1919 à au moins 50 millions de morts dans le monde, dont environ 675 000 aux États-Unis.",
+        "en": "While the epidemic was mostly confined to the Navy Yard, some 200,000 Philadelphians attended the Liberty Loan parade on 28 September 1918; cases surged within days and the city recorded an excess death rate of 748 per 100,000 inhabitants, among the highest of large American cities according to the University of Michigan encyclopedia. The CDC estimates the 1918–1919 pandemic at at least 50 million deaths worldwide, about 675,000 of them in the United States."
+      },
+      "coordinates": [-75.164, 39.953],
+      "mechanisms": ["war"],
+      "sourceIds": ["michigan-influenza-philadelphia", "cdc-museum-1918"],
+      "toll": [
+        {
+          "kind": "share",
+          "value": 0.00748,
+          "scope": { "fr": "Surmortalité à Philadelphie, 1918–1919 : 748 décès pour 100 000 habitants (université du Michigan)", "en": "Excess mortality in Philadelphia, 1918–1919: 748 deaths per 100,000 inhabitants (University of Michigan)" },
+          "sourceIds": ["michigan-influenza-philadelphia"]
+        },
+        {
+          "kind": "deaths",
+          "min": 50000000,
+          "scope": { "fr": "Monde, pandémie de 1918–1919 : « au moins 50 millions » de morts estimés (CDC)", "en": "World, 1918–1919 pandemic: ‘at least 50 million’ estimated deaths (CDC)" },
+          "sourceIds": ["cdc-museum-1918"]
+        },
+        {
+          "kind": "deaths",
+          "value": 675000,
+          "scope": { "fr": "États-Unis, pandémie de 1918–1919 : environ 675 000 morts estimés (CDC)", "en": "United States, 1918–1919 pandemic: about 675,000 estimated deaths (CDC)" },
+          "sourceIds": ["cdc-museum-1918"]
+        }
+      ]
+    },
+    {
+      "id": "hiv-los-angeles-1981",
+      "diseaseId": "hiv",
+      "kind": "emergence",
+      "year": 1981,
+      "approximate": false,
+      "title": { "fr": "Los Angeles, 1981 : le premier signalement", "en": "Los Angeles, 1981: the first report" },
+      "description": {
+        "fr": "Le 5 juin 1981, le bulletin MMWR du CDC rapporte cinq jeunes hommes traités entre octobre 1980 et mai 1981 dans trois hôpitaux de Los Angeles pour une pneumonie à Pneumocystis, deux étant décédés : premier signalement publié de ce qui deviendra le sida. Le jalon date ce signalement, pas l’origine du virus ; la pandémie est toujours en cours.",
+        "en": "On 5 June 1981 the CDC’s MMWR reported five young men treated between October 1980 and May 1981 in three Los Angeles hospitals for Pneumocystis pneumonia, two of whom had died: the first published report of what became AIDS. The milestone dates this report, not the origin of the virus; the pandemic is still ongoing."
+      },
+      "coordinates": [-118.244, 34.052],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["cdc-mmwr-1981", "unaids-fact-sheet"],
+      "toll": [
+        {
+          "kind": "deaths",
+          "min": 33800000,
+          "max": 61100000,
+          "scope": { "fr": "Monde, décès liés au sida depuis le début de l’épidémie : 44,2 millions, fourchette 33,8–61,1 millions (ONUSIDA, estimations 2025)", "en": "World, AIDS-related deaths since the start of the epidemic: 44.2 million, range 33.8–61.1 million (UNAIDS, 2025 estimates)" },
+          "sourceIds": ["unaids-fact-sheet"]
+        }
+      ]
+    },
+    {
+      "id": "covid-19-wuhan-2019",
+      "diseaseId": "covid-19",
+      "kind": "emergence",
+      "year": 2019,
+      "approximate": false,
+      "title": { "fr": "Wuhan, décembre 2019 : un groupe de pneumonies", "en": "Wuhan, December 2019: a pneumonia cluster" },
+      "description": {
+        "fr": "Le 31 décembre 2019, le bureau de l’OMS en Chine relève un communiqué de la commission sanitaire de Wuhan sur des cas de « pneumonie virale ». L’OMS déclare une urgence de santé publique de portée internationale le 30 janvier 2020, qualifie la situation de pandémie le 11 mars 2020 et lève l’urgence le 5 mai 2023, la COVID-19 restant selon elle un problème de santé établi et persistant.",
+        "en": "On 31 December 2019 the WHO country office in China picked up a Wuhan health commission statement on cases of ‘viral pneumonia’. WHO declared a public health emergency of international concern on 30 January 2020, characterized the situation as a pandemic on 11 March 2020 and lifted the emergency on 5 May 2023, COVID-19 remaining, in its words, an established and ongoing health issue."
+      },
+      "coordinates": [114.297, 30.595],
+      "mechanisms": ["undocumented"],
+      "sourceIds": ["who-covid-timeline", "who-covid-pheic-end-2023"]
+    }
+  ]
+}

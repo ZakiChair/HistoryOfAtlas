@@ -101,6 +101,8 @@ export const ATLAS_VIEW_KEYS: ReadonlySet<string> = new Set([
   'rview',
   'rpaths',
   'rareas',
+  'epidemics',
+  'epidemic',
 ]);
 
 /**

@@ -225,7 +225,8 @@ export function startReligionCoverageOverlay(map: MapInstance) {
         id.startsWith('resource-') ||
         id === 'event-points' ||
         id.startsWith('event-cluster') ||
-        id === 'religion-milestones'
+        id === 'religion-milestones' ||
+        id === 'epidemic-milestones'
       );
     });
   const select = (event: MapLayerMouseEvent) => {

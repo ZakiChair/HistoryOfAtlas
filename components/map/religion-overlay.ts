@@ -7,6 +7,7 @@ import { RELIGION_ROUTE_FADE_RATE, RELIGION_TIME } from '@/lib/religions/time';
 import { thematicHorizon } from '@/lib/thematic/time';
 import { useReligionStore } from '@/lib/religions/store';
 import { milestoneLayerIds } from './milestone-ids';
+import { hasEpidemicAt } from './epidemic-hit';
 import { hasResourceAt, hasResourceCountAt } from './resource-hit';
 import { createReligionSprites } from './religion-sprites';
 import {
@@ -84,7 +85,7 @@ export const startReligionHistoryOverlay = (map: MapInstance) =>
     routeFadeRate: RELIGION_ROUTE_FADE_RATE,
     createSprites: createReligionSprites,
     view: religionView,
-    hasForegroundAt: hasResourceCountAt,
+    hasForegroundAt: (m, point) => hasResourceCountAt(m, point) || hasEpidemicAt(m, point),
     keepsPointerAt: hasResourceAt,
   });
 

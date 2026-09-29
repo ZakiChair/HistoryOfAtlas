@@ -1,8 +1,9 @@
 import type { Map as MapInstance } from 'maplibre-gl';
 
 /**
- * Broad religious zones and routes sit beneath dense resource symbols; the
- * sparse religious emblems stay on top so both layers remain readable together. Resource
+ * Broad religious and epidemic zones and routes sit beneath dense resource symbols; the
+ * sparse emblems stay on top so both layers remain readable together. Epidemic emblems
+ * close the emblem row, above religious ones. Resource
  * group counts stay above everything, so a group covered by an emblem is still announced.
  * Historical territory layers are inserted as the year changes, so each overlay
  * restores this order after them.
@@ -16,12 +17,20 @@ export const THEMATIC_STACK = [
   'religion-route-casing',
   'religion-routes',
   'religion-route-directions',
+  'epidemic-areas',
+  'epidemic-area-outlines',
+  'epidemic-route-casing',
+  'epidemic-routes',
+  'epidemic-route-directions',
   'resource-clusters',
   'resource-points',
   'resource-selected',
   'religion-milestones',
   'religion-selection-emblem',
   'religion-selection',
+  'epidemic-milestones',
+  'epidemic-selection-emblem',
+  'epidemic-selection',
   'resource-cluster-counts',
 ] as const;
 

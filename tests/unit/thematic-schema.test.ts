@@ -18,19 +18,21 @@ const Milestone = z.object({
   themeId: ThematicId,
 });
 
-const CorpusSchema = z
-  .object({
-    sources: z.array(ThematicSource).min(1),
-    themes: z.array(ThematicTheme).min(1),
-    milestones: z.array(Milestone).min(1),
-  })
-  .superRefine((data, context) =>
-    refineThematicDataset(
-      { sources: data.sources, themes: data.themes, milestones: data.milestones },
-      { themeIdOf: (milestone) => milestone.themeId, crossThemeKinds: ['schism'] },
-      (message) => context.addIssue({ code: 'custom', message }),
-    ),
-  );
+const corpusSchema = (linkOrder?: 'earlier' | 'notLater') =>
+  z
+    .object({
+      sources: z.array(ThematicSource).min(1),
+      themes: z.array(ThematicTheme).min(1),
+      milestones: z.array(Milestone).min(1),
+    })
+    .superRefine((data, context) =>
+      refineThematicDataset(
+        { sources: data.sources, themes: data.themes, milestones: data.milestones },
+        { themeIdOf: (milestone) => milestone.themeId, crossThemeKinds: ['schism'], linkOrder },
+        (message) => context.addIssue({ code: 'custom', message }),
+      ),
+    );
+const CorpusSchema = corpusSchema();
 
 type TestMilestone = z.infer<typeof Milestone>;
 const text = { fr: 'Texte', en: 'Text' };
@@ -112,5 +114,36 @@ describe('composed thematic schema', () => {
     const data = corpus();
     data.milestones.push(milestone({ id: 'orphan', themeId: 'gamma' }));
     expect(messages(data)).toContain('Unknown theme: orphan');
+  });
+
+  it('rejects a same-year link by default and accepts it under notLater, never a self-link', () => {
+    const withPeer = (linkOrder?: 'earlier' | 'notLater', target = 'alpha-origin', year = -300) =>
+      corpusSchema(linkOrder).safeParse({
+        ...corpus(),
+        milestones: [...corpus().milestones, milestone({ fromId: target, year })],
+      });
+    // alpha-spread at -300 linked to a -500 milestone is fine in both modes.
+    expect(withPeer().success).toBe(true);
+    expect(withPeer('notLater').success).toBe(true);
+    // A link to a milestone of the same year is only legal at notLater granularity.
+    const sameYear = (linkOrder?: 'earlier' | 'notLater') => {
+      const data = corpus();
+      data.milestones.push(milestone({ id: 'alpha-peer', year: -300 }));
+      data.milestones.push(milestone({ id: 'alpha-wave', year: -300, fromId: 'alpha-peer' }));
+      return corpusSchema(linkOrder).safeParse(data).success;
+    };
+    expect(sameYear()).toBe(false);
+    expect(sameYear('notLater')).toBe(true);
+    // Later and self links stay rejected in both modes.
+    const later = (linkOrder?: 'earlier' | 'notLater') => {
+      const data = corpus();
+      data.milestones.push(milestone({ id: 'alpha-later', year: -200 }));
+      data.milestones.push(milestone({ id: 'alpha-back', year: -300, fromId: 'alpha-later' }));
+      return corpusSchema(linkOrder).safeParse(data).success;
+    };
+    expect(later('notLater')).toBe(false);
+    const self = corpus();
+    self.milestones.push(milestone({ id: 'alpha-self', year: -300, fromId: 'alpha-self' }));
+    expect(corpusSchema('notLater').safeParse(self).success).toBe(false);
   });
 });

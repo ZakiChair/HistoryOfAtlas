@@ -26,6 +26,7 @@ import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from '
 import { hasResourceAt } from './resource-hit';
 import { useResourceStore } from '@/lib/resources/store';
 import { hasReligionAt, hasReligionCoverageAt } from './religion-hit';
+import { hasEpidemicAt } from './epidemic-hit';
 import { THEMATIC_LAYERS, type ThematicOverlay } from './thematic-layers';
 import { EVENT_COLOR_EXPRESSION, SELECTION_COLORS } from '@/lib/colors/semantic';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -475,7 +476,12 @@ export default function WorldMap() {
             },
           });
           const click = (event: MapLayerMouseEvent) => {
-            if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
+            if (
+              hasResourceAt(map, event.point) ||
+              hasReligionAt(map, event.point) ||
+              hasEpidemicAt(map, event.point)
+            )
+              return;
             if (hasReligionCoverageAt(map, event.point)) return;
             if (useAtlasStore.getState().battleMode) return;
             if (!currentBoundarySources.includes(id)) return;
@@ -933,7 +939,12 @@ export default function WorldMap() {
               appliedState = undefined;
               renderQueue.submit(useAtlasStore.getState(), true);
               map.on('click', 'event-points', (event) => {
-                if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
+                if (
+                  hasResourceAt(map, event.point) ||
+                  hasReligionAt(map, event.point) ||
+                  hasEpidemicAt(map, event.point)
+                )
+                  return;
                 const id = event.features?.[0]?.properties?.id;
                 if (!id) return;
                 selectMapEvent(String(id));

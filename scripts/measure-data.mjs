@@ -36,6 +36,12 @@ const LAYERS = [
     // 474.2 kB measured on 29 September 2026; budget is the measure plus 5 % rounded up to 5 kB.
     budgetGzipBytes: 500_000,
   },
+  {
+    label: 'Epidemics (dated history)',
+    files: ['data/epidemics/history.json'],
+    // First corpus of 6 diseases and 12 milestones on 29 September 2026 (8.3 kB) plus 5 % rounded up to 5 kB.
+    budgetGzipBytes: 10_000,
+  },
 ];
 
 const strict = process.argv.includes('--strict');

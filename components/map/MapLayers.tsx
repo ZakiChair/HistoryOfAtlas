@@ -2,7 +2,16 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { ArrowUpRight, Check, ChevronDown, Gem, Swords, Waypoints, X } from 'lucide-react';
+import {
+  ArrowUpRight,
+  Biohazard,
+  Check,
+  ChevronDown,
+  Gem,
+  Swords,
+  Waypoints,
+  X,
+} from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { useI18n } from '@/lib/i18n';
 import { formatYear } from '@/lib/histdate';
@@ -12,9 +21,12 @@ import { RESOURCE_CATEGORIES } from '@/lib/resources/categories';
 import { resourceKnowledge, resourcePeriodMatches } from '@/lib/resources/time';
 import ResourceIcon from './ResourceIcon';
 import { useReligionStore } from '@/lib/religions/store';
+import { useEpidemicStore } from '@/lib/epidemics/store';
+import { epidemicText } from '@/lib/epidemics/i18n';
 
 const ReligionLayers = dynamic(() => import('./ReligionLayers'), { ssr: false });
 const EventKey = dynamic(() => import('./EventKey'), { ssr: false });
+const EpidemicLayers = dynamic(() => import('./EpidemicLayers'), { ssr: false });
 const religionLabels = {
   fr: ['Religions', 'Explorer les religions'],
   en: ['Religions', 'Explore religions'],
@@ -32,6 +44,8 @@ export default function MapLayers() {
   const resourcesVisible = useAtlasStore((state) => state.resourcesVisible);
   const religionsVisible = useAtlasStore((state) => state.religionsVisible);
   const religionPanelOpen = useReligionStore((state) => state.panelOpen);
+  const epidemicsVisible = useAtlasStore((state) => state.epidemicsVisible);
+  const epidemicPanelOpen = useEpidemicStore((state) => state.panelOpen);
   const year = useAtlasStore((state) => state.year);
   const range = useAtlasStore((state) => state.range);
   const status = useResourceStore((state) => state.status);
@@ -51,6 +65,8 @@ export default function MapLayers() {
   const heading = useRef<HTMLHeadingElement>(null);
   const religionLegendButton = useRef<HTMLButtonElement>(null);
   const religionPanelId = useId();
+  const epidemicLegendButton = useRef<HTMLButtonElement>(null);
+  const epidemicPanelId = useId();
   const panelId = useId();
   const headingId = useId();
   const source = sources.find((item) => item.id === selected?.sourceId);
@@ -97,16 +113,27 @@ export default function MapLayers() {
         setLegendOpen(false);
         setEventKeyOpen(false);
         useResourceStore.getState().select(null);
+        useEpidemicStore.getState().setPanelOpen(false);
+      }
+    });
+    const unsubscribeEpidemics = useEpidemicStore.subscribe((state, previous) => {
+      if (state.panelOpen && !previous.panelOpen) {
+        setLegendOpen(false);
+        setEventKeyOpen(false);
+        useResourceStore.getState().select(null);
+        useReligionStore.getState().setPanelOpen(false);
       }
     });
     const unsubscribeResources = useResourceStore.subscribe((state, previous) => {
       if (state.selected && state.selected !== previous.selected) {
         useReligionStore.getState().setPanelOpen(false);
+        useEpidemicStore.getState().setPanelOpen(false);
         setEventKeyOpen(false);
       }
     });
     return () => {
       unsubscribeReligions();
+      unsubscribeEpidemics();
       unsubscribeResources();
     };
   }, []);
@@ -119,6 +146,10 @@ export default function MapLayers() {
   const closeReligions = () => {
     useReligionStore.getState().setPanelOpen(false);
     religionLegendButton.current?.focus();
+  };
+  const closeEpidemics = () => {
+    useEpidemicStore.getState().setPanelOpen(false);
+    epidemicLegendButton.current?.focus();
   };
   const closeEventKey = () => {
     setEventKeyOpen(false);
@@ -157,6 +188,7 @@ export default function MapLayers() {
                 setLegendOpen(false);
                 useResourceStore.getState().select(null);
                 useReligionStore.getState().setPanelOpen(false);
+                useEpidemicStore.getState().setPanelOpen(false);
                 setEventKeyOpen(true);
               }
             }}
@@ -197,6 +229,7 @@ export default function MapLayers() {
                 if (detailsOpen) closeDetails();
                 else {
                   useReligionStore.getState().setPanelOpen(false);
+                  useEpidemicStore.getState().setPanelOpen(false);
                   setEventKeyOpen(false);
                   setLegendOpen(true);
                 }
@@ -234,7 +267,48 @@ export default function MapLayers() {
               ref={religionLegendButton}
               onClick={() => {
                 if (religionPanelOpen) closeReligions();
-                else useReligionStore.getState().setPanelOpen(true);
+                else {
+                  useEpidemicStore.getState().setPanelOpen(false);
+                  useReligionStore.getState().setPanelOpen(true);
+                }
+              }}
+            >
+              <ChevronDown size={16} aria-hidden="true" />
+            </button>
+          )}
+        </div>
+        <div className="map-layer-group">
+          <button
+            type="button"
+            className="map-layer-toggle"
+            data-testid="epidemics-layer-toggle"
+            aria-pressed={epidemicsVisible}
+            onClick={() => {
+              useAtlasStore.getState().setEpidemicsVisible(!epidemicsVisible);
+              if (epidemicsVisible) useEpidemicStore.getState().setPanelOpen(false);
+            }}
+          >
+            <Biohazard size={15} aria-hidden="true" />
+            <span>{epidemicText(locale, 'layer')}</span>
+            <span className="map-layer-check" aria-hidden="true">
+              {epidemicsVisible && <Check size={11} />}
+            </span>
+          </button>
+          {epidemicsVisible && (
+            <button
+              type="button"
+              className="map-layer-legend-toggle"
+              data-testid="epidemics-legend-toggle"
+              aria-label={epidemicText(locale, 'explore')}
+              aria-expanded={epidemicPanelOpen}
+              aria-controls={epidemicPanelId}
+              ref={epidemicLegendButton}
+              onClick={() => {
+                if (epidemicPanelOpen) closeEpidemics();
+                else {
+                  useReligionStore.getState().setPanelOpen(false);
+                  useEpidemicStore.getState().setPanelOpen(true);
+                }
               }}
             >
               <ChevronDown size={16} aria-hidden="true" />
@@ -273,6 +347,7 @@ export default function MapLayers() {
         </div>
       )}
       {religionsVisible && <ReligionLayers panelId={religionPanelId} onClose={closeReligions} />}
+      {epidemicsVisible && <EpidemicLayers panelId={epidemicPanelId} onClose={closeEpidemics} />}
       {eventKeyOpen && <EventKey panelId={eventKeyId} onClose={closeEventKey} />}
       {detailsOpen && (
         <section

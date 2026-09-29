@@ -84,6 +84,13 @@ function inputs(): LicenseInputs {
         { id: 'm2', sourceIds: ['ref-a', 'ref-a'] },
       ],
     },
+    epidemics: {
+      sources: [{ id: 'ref-e', title: 'Reference E', url: 'https://example.org/e' }],
+      milestones: [
+        { id: 'e1', sourceIds: ['ref-e'], toll: [{ sourceIds: ['ref-e'] }] },
+        { id: 'e2', sourceIds: ['ref-e'] },
+      ],
+    },
   };
 }
 
@@ -170,6 +177,8 @@ describe('licence manifest', () => {
     broken.resources.sites.push({ sourceId: 'missing' });
     broken.religions.milestones.push({ id: 'm3', sourceIds: ['unknown'] });
     broken.religions.sources[0]!.url = '';
+    broken.epidemics!.milestones.push({ id: 'e3', sourceIds: ['missing'] });
+    broken.epidemics!.sources[0]!.url = 'not a url';
     broken.geography.sources[0]!.licenceUrl = '';
     broken.events.sources[0]!.license = '';
     broken.cdb90.attribution = '';
@@ -183,6 +192,8 @@ describe('licence manifest', () => {
       'Resource sourceId missing has no declared source',
       'Religion source ref-a has no URL',
       'Religion milestone m3 cites unknown source unknown',
+      'Epidemic source ref-e has no URL',
+      'Epidemic milestone e3 cites unknown source missing',
       'Geography source Cliopatria · Seshat has no licence URL',
       'Event source Wikidata has no licence',
       'CDB90 requires a licence, a licence URL and an attribution',

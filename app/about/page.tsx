@@ -119,6 +119,10 @@ export default async function AboutPage() {
     readJson<{ traditions: unknown[]; milestones: unknown[] }>('data/religions/history.json'),
     readCoverage(),
   ]);
+  // The epidemic corpus is authored separately; the section appears with it.
+  const epidemics = licenses.epidemics
+    ? await readJson<{ diseases: unknown[]; milestones: unknown[] }>('data/epidemics/history.json')
+    : undefined;
   const number = (value: number) => new Intl.NumberFormat('en').format(value);
   const origin = siteOrigin();
   const resourceSites = licenses.resources.licenses.reduce((sum, group) => sum + group.sites, 0);
@@ -149,6 +153,16 @@ export default async function AboutPage() {
           url: `${origin}/about/#sources`,
           license: licenses.religions.corpus.licenseUrl,
         },
+        ...(licenses.epidemics && epidemics
+          ? [
+              {
+                name: 'Epidemics',
+                description: `${epidemics.diseases.length} diseases and ${epidemics.milestones.length} dated outbreaks checked against ${licenses.epidemics.references.length} references`,
+                url: `${origin}/about/#sources`,
+                license: licenses.epidemics.corpus.licenseUrl,
+              },
+            ]
+          : []),
       ],
     }),
   );
@@ -438,6 +452,30 @@ export default async function AboutPage() {
               ))}
             </ul>
           </details>
+          {licenses.epidemics && epidemics && (
+            <>
+              <h3>Epidemics</h3>
+              <p>
+                The epidemics layer follows {epidemics.diseases.length} diseases through{' '}
+                {epidemics.milestones.length} dated outbreaks, with transmission contexts,
+                hand-generalized affected areas and documented tolls written for the atlas. Each
+                outbreak cites at least one of {licenses.epidemics.references.length} references,
+                listed for verification; their content is not redistributed. Affected areas are
+                geographic guides, not exact spreads.
+              </p>
+              <details className="document-details">
+                <summary>All {licenses.epidemics.references.length} epidemic references</summary>
+                <ul>
+                  {licenses.epidemics.references.map((reference) => (
+                    <li key={reference.id}>
+                      <a href={reference.url}>{reference.title}</a> · {reference.milestones}{' '}
+                      milestone{reference.milestones === 1 ? '' : 's'}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </>
+          )}
         </section>
         <section>
           <span className="eyebrow">04 / TIME & BOUNDARIES</span>

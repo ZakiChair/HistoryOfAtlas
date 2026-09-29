@@ -31,6 +31,7 @@ import type { useAtlasStore } from '@/lib/store';
 import { queryViewportFeatures } from './query-viewport';
 import { hasResourceAt } from './resource-hit';
 import { hasReligionAt } from './religion-hit';
+import { hasEpidemicAt } from './epidemic-hit';
 
 type State = ReturnType<typeof useAtlasStore.getState>;
 const SOURCE = 'battle-catalogue';
@@ -540,7 +541,12 @@ export function startBattleOverlay(
   };
 
   const select = (event: MapLayerMouseEvent) => {
-    if (hasResourceAt(map, event.point) || hasReligionAt(map, event.point)) return;
+    if (
+      hasResourceAt(map, event.point) ||
+      hasReligionAt(map, event.point) ||
+      hasEpidemicAt(map, event.point)
+    )
+      return;
     if (!active) return;
     const id = String(event.features?.[0]?.properties.id ?? '');
     const battle = catalogue.get(id);

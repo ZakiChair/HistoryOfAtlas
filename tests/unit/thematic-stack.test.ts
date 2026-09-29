@@ -29,6 +29,9 @@ it('keeps zones and routes under resource symbols, religious emblems and territo
     'religion-areas',
     'religion-routes',
     'religion-milestones',
+    'epidemic-areas',
+    'epidemic-routes',
+    'epidemic-milestones',
     'territory-1600-label',
   ]);
   raiseThematicLayers(map);
@@ -36,10 +39,13 @@ it('keeps zones and routes under resource symbols, religious emblems and territo
     'land',
     'religion-areas',
     'religion-routes',
+    'epidemic-areas',
+    'epidemic-routes',
     'resource-clusters',
     'resource-points',
     'resource-selected',
     'religion-milestones',
+    'epidemic-milestones',
     'territory-1600-label',
   ]);
 });
