@@ -29,7 +29,14 @@ export const religionCorpus = (dataset: ReligionDataset): MilestoneCorpus<Religi
   themes: dataset.traditions,
   milestones: dataset.milestones,
   themeIdOf: (milestone) => milestone.traditionId,
-  originKind: 'origin',
+  emblemOf: (kind) =>
+    kind === 'origin'
+      ? 'origin'
+      : kind === 'schism'
+        ? 'divided'
+        : kind === 'contraction'
+          ? 'closing'
+          : 'plain',
 });
 
 export const religionFanIndex = (dataset: ReligionDataset, sameTradition = false) =>

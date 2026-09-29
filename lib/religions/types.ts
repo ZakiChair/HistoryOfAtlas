@@ -8,7 +8,7 @@ import {
   ThematicTheme,
 } from '../thematic/schema';
 
-export const RELIGION_KINDS = ['origin', 'spread'] as const;
+export const RELIGION_KINDS = ['origin', 'spread', 'schism', 'contraction'] as const;
 export const RELIGION_MECHANISMS = [
   'emergence',
   'trade',
@@ -18,6 +18,8 @@ export const RELIGION_MECHANISMS = [
   'conquest',
   'diaspora',
   'reform',
+  'persecution',
+  'division',
 ] as const;
 
 const Tradition = ThematicTheme;
@@ -44,6 +46,7 @@ export const ReligionDatasetSchema = z
       {
         themeIdOf: (milestone) => milestone.traditionId,
         labels: { plural: 'traditions', singular: 'tradition' },
+        closingKinds: ['contraction'],
       },
       (message) => context.addIssue({ code: 'custom', message }),
     ),

@@ -4459,6 +4459,25 @@ ul {
 .religion-stage-future button {
   color: var(--muted);
 }
+.religion-stage-closed > button {
+  opacity: 0.6;
+}
+.religion-stage-relation {
+  font-size: 10px;
+  color: var(--muted);
+}
+.religion-stage-relation button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline dotted;
+}
+.religion-stage-relation button:hover,
+.religion-stage-relation button:focus-visible {
+  text-decoration: underline;
+}
 .religion-stages small {
   display: block;
   margin-top: 3px;

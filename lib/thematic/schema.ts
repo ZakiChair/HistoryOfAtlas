@@ -42,6 +42,7 @@ export function thematicMilestoneFields<K extends string, M extends string>(opti
     mechanisms: z.array(z.enum(options.mechanisms)).min(1),
     sourceIds: z.array(ThematicId).min(1),
     fromId: ThematicId.optional(),
+    closesId: ThematicId.optional(),
     area: ThematicArea.optional(),
   };
 }
@@ -52,6 +53,8 @@ export interface ThematicRefinementOptions<M> {
   labels?: { plural: string; singular: string };
   /** Kinds whose `fromId` may point into another theme (e.g. a schism); none by default. */
   crossThemeKinds?: readonly string[];
+  /** Kinds allowed to carry `closesId` (e.g. a contraction); none by default. */
+  closingKinds?: readonly string[];
 }
 
 export function refineThematicDataset<
@@ -61,6 +64,7 @@ export function refineThematicDataset<
     year: number;
     sourceIds: string[];
     fromId?: string;
+    closesId?: string;
     area?: { ring: [number, number][] };
   },
 >(
@@ -91,6 +95,18 @@ export function refineThematicDataset<
         from.year >= stage.year
       )
         issue(`Invalid chronological link: ${stage.id}`);
+    }
+    if (stage.closesId) {
+      const target = stages.get(stage.closesId);
+      if (
+        !options.closingKinds?.includes(stage.kind) ||
+        !target ||
+        target.id === stage.id ||
+        options.themeIdOf(target) !== options.themeIdOf(stage) ||
+        target.year >= stage.year ||
+        options.closingKinds?.includes(target.kind)
+      )
+        issue(`Invalid closure: ${stage.id}`);
     }
     if (stage.area) {
       const ring = stage.area.ring;

@@ -1,3 +1,5 @@
+import type { ExpressionSpecification } from 'maplibre-gl';
+
 export interface MilestoneLayerIds {
   source: string;
   areas: string;
@@ -22,9 +24,15 @@ export const milestoneLayerIds = (prefix: string): MilestoneLayerIds => ({
   selection: `${prefix}-selection`,
 });
 
+export type MilestoneEmblem = 'plain' | 'origin' | 'divided' | 'closing';
+
 export interface MilestoneSpriteIds {
   medallion(theme: string): string;
   origin(theme: string): string;
+  /** Medallion variant sprite id: `${prefix}-${theme}` with the emblem infix when not plain. */
+  emblem(theme: string, emblem: MilestoneEmblem): string;
+  /** Emblem expression over the feature properties `emblem` and `theme`. */
+  emblemImage: ExpressionSpecification;
   dot(theme: string): string;
   arrow(theme: string): string;
   hatch(theme: string): string;
@@ -36,6 +44,14 @@ export interface MilestoneSpriteIds {
 export const milestoneSpriteIds = (prefix: string): MilestoneSpriteIds => ({
   medallion: (theme) => `${prefix}-${theme}`,
   origin: (theme) => `${prefix}-origin-${theme}`,
+  emblem: (theme, emblem) =>
+    emblem === 'plain' ? `${prefix}-${theme}` : `${prefix}-${emblem}-${theme}`,
+  emblemImage: [
+    'concat',
+    `${prefix}-`,
+    ['case', ['==', ['get', 'emblem'], 'plain'], '', ['concat', ['get', 'emblem'], '-']],
+    ['get', 'theme'],
+  ] as ExpressionSpecification,
   dot: (theme) => `${prefix}-dot-${theme}`,
   arrow: (theme) => `${prefix}-arrow-${theme}`,
   hatch: (theme) => `${prefix}-hatch-${theme}`,

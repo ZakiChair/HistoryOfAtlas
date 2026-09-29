@@ -65,6 +65,24 @@ function ReligionHistoryLayers({ panelId, onClose }: { panelId: string; onClose:
     [dataset],
   );
   const keyTradition = tradition ?? mostDocumented;
+  // The milestone the selection closes, and the earliest contraction closing the selection.
+  const closureTarget = selected?.closesId
+    ? dataset?.milestones.find((item) => item.id === selected.closesId)
+    : undefined;
+  const closer = useMemo(() => {
+    if (!selected || !dataset) return undefined;
+    return dataset.milestones
+      .filter((item) => item.closesId === selected.id)
+      .sort((a, b) => a.year - b.year)[0];
+  }, [dataset, selected]);
+  // Earliest contraction year per closed centre, for the chronology.
+  const closedAt = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const stage of dataset?.milestones ?? [])
+      if (stage.closesId)
+        map.set(stage.closesId, Math.min(map.get(stage.closesId) ?? Infinity, stage.year));
+    return map;
+  }, [dataset]);
   const stages = useMemo(
     () =>
       dataset
@@ -188,6 +206,22 @@ function ReligionHistoryLayers({ panelId, onClose }: { panelId: string; onClose:
                     <li key={mechanism}>{t(mechanism)}</li>
                   ))}
                 </ul>
+                {closureTarget && (
+                  <p className="religion-stage-relation">
+                    {t('closes')}{' '}
+                    <button type="button" onClick={() => visit(closureTarget)}>
+                      <Localized value={closureTarget.title} locale={locale} />
+                    </button>
+                  </p>
+                )}
+                {closer && (
+                  <p className="religion-stage-relation">
+                    {t('closedBy').replace('{year}', formatYear(closer.year, locale))}{' '}
+                    <button type="button" onClick={() => visit(closer)}>
+                      <Localized value={closer.title} locale={locale} />
+                    </button>
+                  </p>
+                )}
                 {selected.area && (
                   <p className="religion-area-caption">
                     {t('areas')} · <Localized value={selected.area.label} locale={locale} />
@@ -282,29 +316,45 @@ function ReligionHistoryLayers({ panelId, onClose }: { panelId: string; onClose:
               <>
                 <h3>{t('stages')}</h3>
                 <ol className="religion-stages" data-testid="religion-stages">
-                  {stages.map((stage) => (
-                    <li
-                      key={stage.id}
-                      className={stage.year > horizon ? 'religion-stage-future' : undefined}
-                    >
-                      <button
-                        type="button"
-                        data-testid={`religion-stage-${stage.id}`}
-                        aria-current={selected?.id === stage.id ? 'step' : undefined}
-                        title={t('visit')}
-                        onClick={() => visit(stage)}
+                  {stages.map((stage) => {
+                    const closed = closedAt.get(stage.id);
+                    const isClosed = closed !== undefined && closed <= horizon;
+                    return (
+                      <li
+                        key={stage.id}
+                        className={
+                          [
+                            stage.year > horizon ? 'religion-stage-future' : undefined,
+                            isClosed ? 'religion-stage-closed' : undefined,
+                          ]
+                            .filter(Boolean)
+                            .join(' ') || undefined
+                        }
                       >
-                        <span className="religion-stage-year">
-                          {stage.approximate && '≈ '}
-                          {formatYear(stage.year, locale)}
-                        </span>
-                        <span>
-                          <Localized value={stage.title} locale={locale} />
-                          {stage.year > horizon && <small>{t('future')}</small>}
-                        </span>
-                      </button>
-                    </li>
-                  ))}
+                        <button
+                          type="button"
+                          data-testid={`religion-stage-${stage.id}`}
+                          aria-current={selected?.id === stage.id ? 'step' : undefined}
+                          title={t('visit')}
+                          onClick={() => visit(stage)}
+                        >
+                          <span className="religion-stage-year">
+                            {stage.approximate && '≈ '}
+                            {formatYear(stage.year, locale)}
+                          </span>
+                          <span>
+                            <Localized value={stage.title} locale={locale} />
+                            {stage.year > horizon && <small>{t('future')}</small>}
+                            {isClosed && (
+                              <small>
+                                {t('closedShort').replace('{year}', formatYear(closed, locale))}
+                              </small>
+                            )}
+                          </span>
+                        </button>
+                      </li>
+                    );
+                  })}
                 </ol>
               </>
             )}

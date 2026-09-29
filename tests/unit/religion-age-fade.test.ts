@@ -9,6 +9,16 @@ import {
   religionAgePaint,
   startReligionOverlay,
 } from '../../components/map/religion-overlay';
+import { CLOSED_OPACITY } from '../../components/map/milestone-overlay';
+import type { ExpressionSpecification } from 'maplibre-gl';
+
+// Point, area and outline fades are wrapped by the closure dimming in milestoneAgePaint.
+const closedDim = (expression: ExpressionSpecification, horizon: number) => [
+  'case',
+  ['all', ['has', 'closedYear'], ['<=', ['get', 'closedYear'], horizon]],
+  ['*', expression, CLOSED_OPACITY],
+  expression,
+];
 
 const getDataset = vi.hoisted(() => vi.fn());
 vi.mock('../../lib/religions/client', () => ({ getReligionDataset: getDataset }));
@@ -126,16 +136,16 @@ describe('religion attestation age fade', () => {
     await vi.waitFor(() => expect(useReligionStore.getState().status).toBe('ready'));
     const iconOpacity = () =>
       paint.filter(([id, key]) => id === 'religion-milestones' && key === 'icon-opacity');
-    expect(iconOpacity().at(-1)?.[2]).toEqual(religionAgeOpacity(-500));
+    expect(iconOpacity().at(-1)?.[2]).toEqual(closedDim(religionAgeOpacity(-500), -500));
     for (const year of [-499, -498, 0, 1950]) overlay.update({ ...enabled, year });
-    expect(iconOpacity().at(-1)?.[2]).toEqual(religionAgeOpacity(1950));
+    expect(iconOpacity().at(-1)?.[2]).toEqual(closedDim(religionAgeOpacity(1950), 1950));
     expect(iconOpacity()).toHaveLength(5);
     // The same date again writes nothing.
     overlay.update({ ...enabled, year: 1950 });
     expect(iconOpacity()).toHaveLength(5);
     overlay.update({ ...enabled, year: 1950, theme: 'light' });
     const hatch = paint.filter(([id, key]) => id === 'religion-areas' && key === 'fill-opacity');
-    expect(hatch.at(-1)?.[2]).toEqual(religionAgeOpacity(1950, 0.7));
+    expect(hatch.at(-1)?.[2]).toEqual(closedDim(religionAgeOpacity(1950, 0.7), 1950));
     expect(calls.addSource).toHaveBeenCalledTimes(1);
     expect(hidden).toEqual([]);
     overlay.dispose();

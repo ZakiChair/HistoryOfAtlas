@@ -740,6 +740,111 @@
       "id": "nagasaki-koshibyo",
       "title": "Nagasaki Confucius Shrine (Koshibyo) — About Confucius and the shrine, with chronology",
       "url": "https://nagasaki-koushibyou.com/koushiabout.html"
+    },
+    {
+      "id": "vatican-1965-declaration",
+      "title": "Holy See — Joint Catholic-Orthodox Declaration of Paul VI and Athenagoras I, 7 December 1965 (on the 1054 excommunications)",
+      "url": "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html"
+    },
+    {
+      "id": "met-egypt-500-1000",
+      "title": "The Met — Heilbrunn Timeline, Egypt 500–1000 A.D. (closing of the temple at Philae, 535)",
+      "url": "https://www.metmuseum.org/toah/ht/06/afe"
+    },
+    {
+      "id": "iranica-karbala",
+      "title": "Encyclopaedia Iranica — Karbala",
+      "url": "https://www.iranicaonline.org/articles/karbala/"
+    },
+    {
+      "id": "columbia-wuzong-edict",
+      "title": "Columbia University, Asia for Educators — Emperor Wuzong’s Edict on the Suppression of Buddhism (845)",
+      "url": "https://afe.easia.columbia.edu/ps/cup/emperor_wuzong_suppress_buddhism.pdf"
+    },
+    {
+      "id": "jrs-temple-cults-exemption",
+      "title": "Journal of Roman Studies (Cambridge) — A legal exemption for the temple cults of Rome and Alexandria in the fourth century",
+      "url": "https://www.cambridge.org/core/journals/journal-of-roman-studies/article/legal-exemption-for-the-temple-cults-of-rome-and-alexandria-in-the-fourth-century/8FCF6B2789837BED8D95874E77605DC5"
+    },
+    {
+      "id": "judaism-rome-cth-16-10-12",
+      "title": "Judaism and Rome (ERC project) — Codex Theodosianus XVI.10.12, 8 November 392",
+      "url": "https://www.judaism-and-rome.org/codex-theodosianus-xvi1012-8th-november-392%C2%A0ce"
+    },
+    {
+      "id": "mezquita-catedral-brochure",
+      "title": "Cabildo Catedral de Córdoba — Mosque-Cathedral of Cordoba, visitor brochure (dedications of 1146 and 1236)",
+      "url": "https://mezquita-catedraldecordoba.es/site/assets/files/1060/folleto_ingles_web.pdf"
+    },
+    {
+      "id": "diocesis-cordoba-historia",
+      "title": "Diócesis de Córdoba — Historia de la Catedral (dedication of 29 June 1236)",
+      "url": "https://diocesisdecordoba.es/catedral/historia"
+    },
+    {
+      "id": "fordham-expulsion-1492",
+      "title": "Fordham University, Internet Jewish History Sourcebook — The Expulsion from Spain, 1492 CE",
+      "url": "https://sourcebooks.fordham.edu/jewish/1492-jews-spain1.asp"
+    },
+    {
+      "id": "kagoshima-pref-xavier",
+      "title": "Kagoshima Prefecture — The arrival of Christianity (Xavier lands at Kagoshima, 15 August 1549)",
+      "url": "https://www.pref.kagoshima.jp/ab23/pr/gaiyou/rekishi/tyuusei/christ2.html"
+    },
+    {
+      "id": "kagoshima-city-xavier-landing",
+      "title": "Kagoshima City official tourist information — Monument of St. Xavier’s Landing (1549)",
+      "url": "https://www.kagoshima-yokanavi.jp/en/spot/10155"
+    },
+    {
+      "id": "kirishitan-nagasaki-1614",
+      "title": "Hidden Christian Sites in the Nagasaki Region (World Heritage council) — Beginning of the absence of missionaries (1614 ban)",
+      "url": "https://kirishitan.jp/histories_en/his001"
+    },
+    {
+      "id": "mlit-nagasaki-magistrates",
+      "title": "Nagasaki Museum of History and Culture / MLIT multilingual database — The Nagasaki magistrates’ special mission to eradicate Christianity",
+      "url": "https://www.mlit.go.jp/tagengo-db/common/001561256.pdf"
+    },
+    {
+      "id": "natmus-jelling-stone",
+      "title": "National Museum of Denmark — The Jelling Stone (c. 965)",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-monuments-at-jelling/the-jelling-stone/"
+    },
+    {
+      "id": "natmus-christianity-denmark",
+      "title": "National Museum of Denmark — Christianity comes to Denmark",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/religion-magic-death-and-rituals/christianity-comes-to-denmark/"
+    },
+    {
+      "id": "katedra-vilnius-history",
+      "title": "Vilnius Archcathedral — History of the cathedral treasury (1387 baptism of Lithuania and founding of the cathedral)",
+      "url": "https://www.katedra.lt/lobynas/istorija/"
+    },
+    {
+      "id": "cityofmercy-vilnius-cathedral",
+      "title": "Archdiocese of Vilnius, City of Mercy — Vilnius Cathedral Basilica of St. Stanislaus and St. Vladislaus",
+      "url": "https://cityofmercy.lt/en_GB/objektai/vilniaus-arkikatedra-bazilika/"
+    },
+    {
+      "id": "archnet-alaeddin-konya",
+      "title": "Archnet — Alaeddin Külliyesi, Konya (completed 1220)",
+      "url": "https://www.archnet.org/sites/3576"
+    },
+    {
+      "id": "mwnf-alaeddin-konya",
+      "title": "Discover Islamic Art, Museum With No Frontiers — Alaaddin Mosque, Konya",
+      "url": "https://islamicart.museumwnf.org/database_item.php?id=monument;ISL;tr;Mon01;3;en"
+    },
+    {
+      "id": "brill-lambourn-tombstones",
+      "title": "Journal of the Economic and Social History of the Orient (Brill) — Elizabeth Lambourn, Tombstones, Texts, and Typologies (al-Malik al-Sālih, d. 1297)",
+      "url": "https://brill.com/view/journals/jesh/51/2/article-p252_3.xml"
+    },
+    {
+      "id": "anu-early-islamisation-sea",
+      "title": "Australian National University Press — Towards a re-interpretation of early Islamisation processes in Southeast Asia",
+      "url": "https://press-files.anu.edu.au/downloads/press/n1676/pdf/ch07.pdf"
     }
   ],
   "traditions": [
@@ -4502,7 +4607,7 @@
     {
       "id": "christianity-wittenberg",
       "traditionId": "christianity",
-      "kind": "spread",
+      "kind": "schism",
       "year": 1517,
       "approximate": false,
       "title": {
@@ -4518,7 +4623,8 @@
         51.866
       ],
       "mechanisms": [
-        "reform"
+        "reform",
+        "division"
       ],
       "sourceIds": [
         "unesco-wittenberg"
@@ -6179,6 +6285,371 @@
       ],
       "sourceIds": [
         "storyofleicester-jain"
+      ]
+    },
+    {
+      "id": "christianity-chalcedon",
+      "traditionId": "christianity",
+      "kind": "schism",
+      "year": 451,
+      "approximate": false,
+      "title": {
+        "fr": "Chalcédoine : une définition qui divise",
+        "en": "Chalcedon: a definition that divides"
+      },
+      "description": {
+        "fr": "Le concile de 451 formule la définition officielle du Christ en deux natures, humaine et divine. Selon le Metropolitan Museum, son acceptation ou son refus est au cœur des débats qui séparent ensuite les Églises des provinces méridionales de l’Empire, en Égypte et en Syrie, de l’Église de Constantinople. Le jalon date le concile, pas une séparation qui s’étend sur des siècles.",
+        "en": "The council of 451 formulated the official definition of Christ as having two natures, human and divine. According to the Metropolitan Museum, accepting or rejecting it was central to the debates that later separated the churches of the empire’s southern provinces, in Egypt and Syria, from the church of Constantinople. The milestone dates the council, not a separation that unfolded over centuries."
+      },
+      "coordinates": [
+        29.033,
+        40.983
+      ],
+      "mechanisms": [
+        "division"
+      ],
+      "sourceIds": [
+        "met-byzantium-islam"
+      ]
+    },
+    {
+      "id": "christianity-constantinople-1054",
+      "traditionId": "christianity",
+      "kind": "schism",
+      "year": 1054,
+      "approximate": false,
+      "title": {
+        "fr": "Constantinople, 1054 : excommunications croisées",
+        "en": "Constantinople, 1054: mutual excommunications"
+      },
+      "description": {
+        "fr": "Les légats du siège romain prononcent une sentence d’excommunication contre le patriarche Michel Cérulaire, puis reçoivent une sentence semblable du patriarche et du synode de Constantinople. La déclaration commune de 1965 rappelle que ces censures visaient des personnes, non les Églises, et que la rupture effective de communion résulta d’événements antérieurs et postérieurs. Le jalon date l’incident, pas toute la séparation entre Rome et l’Orient.",
+        "en": "The legates of the Roman See pronounced a sentence of excommunication against Patriarch Michael Cerularius, then received a similar sentence from the patriarch and the Synod of Constantinople. The 1965 joint declaration recalls that these censures targeted persons, not the Churches, and that the effective rupture of communion resulted from earlier and later events. The milestone dates the incident, not the whole separation between Rome and the East."
+      },
+      "coordinates": [
+        28.98,
+        41.008
+      ],
+      "mechanisms": [
+        "division"
+      ],
+      "sourceIds": [
+        "vatican-1965-declaration"
+      ]
+    },
+    {
+      "id": "islam-karbala",
+      "traditionId": "islam",
+      "kind": "schism",
+      "year": 680,
+      "approximate": false,
+      "title": {
+        "fr": "Karbala : la mort de Husayn",
+        "en": "Karbala: the death of Husayn"
+      },
+      "description": {
+        "fr": "Le 10 muharram 61, soit le 10 octobre 680, Husayn ibn ʿAli, que les chiites vénèrent comme leur troisième imam, est tué avec ses compagnons par une armée omeyyade dans la plaine de Karbala, devenue l’une des villes-sanctuaires du chiisme. L’Encyclopaedia Iranica documente la bataille et sa commémoration à Achoura. Le jalon date cet événement fondateur de la mémoire chiite, pas la formation doctrinale, plus longue, du chiisme et du sunnisme.",
+        "en": "On 10 Muharram 61, that is 10 October 680, Husayn ibn ʿAli, revered by the Shi‘a as their third imam, was killed with his companions by an Umayyad army on the plain of Karbala, since then one of the Shi‘i shrine cities. The Encyclopaedia Iranica documents the battle and its Ashura commemoration. The milestone dates this founding event of Shi‘i memory, not the longer doctrinal formation of Shi‘ism and Sunnism."
+      },
+      "coordinates": [
+        44.033,
+        32.617
+      ],
+      "mechanisms": [
+        "division"
+      ],
+      "sourceIds": [
+        "iranica-karbala"
+      ]
+    },
+    {
+      "id": "christianity-changan-845",
+      "traditionId": "christianity",
+      "kind": "contraction",
+      "year": 845,
+      "approximate": false,
+      "title": {
+        "fr": "Chang’an, 845 : l’édit de Wuzong",
+        "en": "Chang’an, 845: Wuzong’s edict"
+      },
+      "description": {
+        "fr": "L’édit de suppression du bouddhisme de l’empereur Wuzong ordonne aussi à plus de 2 000 « nestoriens » et mazdéens de retourner à la vie laïque, selon la traduction publiée par l’université Columbia. Ce recul clôt le foyer de l’Église de l’Orient à Chang’an attesté depuis 635 ; il ne date pas la fin de toute présence chrétienne en Chine.",
+        "en": "Emperor Wuzong’s edict suppressing Buddhism also ordered more than 2,000 ‘Nestorians’ and Mazdeans to return to lay life, in the translation published by Columbia University. This contraction closes the Church of the East centre at Chang’an attested since 635; it does not date the end of every Christian presence in China."
+      },
+      "coordinates": [
+        108.94,
+        34.26
+      ],
+      "mechanisms": [
+        "persecution"
+      ],
+      "sourceIds": [
+        "columbia-wuzong-edict"
+      ],
+      "closesId": "christianity-changan"
+    },
+    {
+      "id": "egyptian-philae-closure",
+      "traditionId": "egyptian",
+      "kind": "contraction",
+      "year": 535,
+      "approximate": true,
+      "title": {
+        "fr": "Philae : fermeture du temple d’Isis",
+        "en": "Philae: closing of the temple of Isis"
+      },
+      "description": {
+        "fr": "L’un des derniers temples égyptiens en activité, Philae est fermé sous Justinien Ier (527–565), qui ordonne la fermeture des temples païens ; le Metropolitan Museum retient l’année 535. Le temple est ensuite converti en église. La dernière inscription hiéroglyphique datée du site remonte à 394 ; le recul clôt le foyer ptolémaïque attesté vers 280 av. n. è.",
+        "en": "One of the last active Egyptian temples, Philae was closed under Justinian I (527–565), who ordered the closure of pagan temples; the Metropolitan Museum gives the year 535. The temple was then converted into a church. The site’s last dated hieroglyphic inscription is from 394; the contraction closes the Ptolemaic centre attested around 280 BCE."
+      },
+      "coordinates": [
+        32.889,
+        24.012
+      ],
+      "mechanisms": [
+        "persecution"
+      ],
+      "sourceIds": [
+        "ui-egypt-philae",
+        "met-egypt-500-1000"
+      ],
+      "closesId": "egyptian-philae"
+    },
+    {
+      "id": "greco-roman-rome-391",
+      "traditionId": "greco-roman",
+      "kind": "contraction",
+      "year": 391,
+      "approximate": false,
+      "title": {
+        "fr": "Rome, 391 : interdiction des cultes publics",
+        "en": "Rome, 391: public cults banned"
+      },
+      "description": {
+        "fr": "Les lois de Théodose de 391–392 interdisent durablement les sacrifices ; selon le Journal of Roman Studies, les cultes civiques de Rome et d’Alexandrie, jusque-là exemptés des interdictions en vigueur ailleurs, cessent d’être légaux en 391. Le recul clôt le foyer romain attesté ; il ne date ni la fin des pratiques privées, ni celle des croyances.",
+        "en": "Theodosius’s laws of 391–392 durably prohibited sacrifices; according to the Journal of Roman Studies, the civic cults of Rome and Alexandria, until then exempt from the bans in force elsewhere, ceased to be legal in 391. The contraction closes the attested Roman centre; it dates neither the end of private practice nor of belief."
+      },
+      "coordinates": [
+        12.482,
+        41.893
+      ],
+      "mechanisms": [
+        "persecution"
+      ],
+      "sourceIds": [
+        "jrs-temple-cults-exemption",
+        "judaism-rome-cth-16-10-12"
+      ],
+      "closesId": "greco-roman-rome"
+    },
+    {
+      "id": "islam-cordoba-1236",
+      "traditionId": "islam",
+      "kind": "contraction",
+      "year": 1236,
+      "approximate": false,
+      "title": {
+        "fr": "Cordoue, 1236 : la mosquée devient cathédrale",
+        "en": "Córdoba, 1236: the mosque becomes a cathedral"
+      },
+      "description": {
+        "fr": "Après la conquête de Cordoue par Ferdinand III, la grande mosquée est consacrée au culte catholique ; la messe de dédicace de la cathédrale a lieu le 29 juin 1236, selon le chapitre cathédral et le diocèse. Le recul clôt le foyer omeyyade attesté depuis 785 ; il ne date pas la fin de la présence musulmane dans la péninsule.",
+        "en": "After Ferdinand III’s conquest of Córdoba, the Great Mosque was consecrated to Catholic worship; the cathedral’s dedication mass took place on 29 June 1236, according to the cathedral chapter and the diocese. The contraction closes the Umayyad centre attested since 785; it does not date the end of Muslim presence in the peninsula."
+      },
+      "coordinates": [
+        -4.779,
+        37.879
+      ],
+      "mechanisms": [
+        "conquest"
+      ],
+      "sourceIds": [
+        "mezquita-catedral-brochure",
+        "diocesis-cordoba-historia"
+      ],
+      "closesId": "islam-cordoba"
+    },
+    {
+      "id": "judaism-granada-1492",
+      "traditionId": "judaism",
+      "kind": "contraction",
+      "year": 1492,
+      "approximate": false,
+      "title": {
+        "fr": "Grenade, 1492 : l’édit d’expulsion",
+        "en": "Granada, 1492: the expulsion edict"
+      },
+      "description": {
+        "fr": "Signé le 31 mars 1492, peu après la prise de Grenade, et proclamé le 1er mai, l’édit de Ferdinand et Isabelle ordonne aux juifs de quitter leurs royaumes avant la fin de juillet ; le récit contemporain publié par l’université Fordham décrit l’exode et les conversions. Le recul clôt le foyer de Cordoue attesté en 1315 ; les diasporas séfarades, dont celle d’Amsterdam, en prolongent l’histoire.",
+        "en": "Signed on 31 March 1492, shortly after the capture of Granada, and announced on 1 May, Ferdinand and Isabella’s edict ordered the Jews to leave their kingdoms by the end of July; the contemporary account published by Fordham University describes the exodus and the conversions. The contraction closes the Córdoba centre attested in 1315; Sephardic diasporas, Amsterdam among them, continue its history."
+      },
+      "coordinates": [
+        -3.6,
+        37.175
+      ],
+      "mechanisms": [
+        "persecution"
+      ],
+      "sourceIds": [
+        "fordham-expulsion-1492"
+      ],
+      "closesId": "judaism-cordoba"
+    },
+    {
+      "id": "christianity-kagoshima",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1549,
+      "approximate": false,
+      "title": {
+        "fr": "Kagoshima : l’arrivée de François Xavier",
+        "en": "Kagoshima: Francis Xavier’s arrival"
+      },
+      "description": {
+        "fr": "Le 15 août 1549, le jésuite François Xavier débarque à Kagoshima, guidé par Yajirō, un Japonais de Satsuma réfugié à Goa ; reçu par Shimazu Takahisa, il obtient l’autorisation de prêcher, selon la préfecture de Kagoshima. Le monument du débarquement, au parc de Gionnosu, rappelle cette première mission chrétienne au Japon.",
+        "en": "On 15 August 1549 the Jesuit Francis Xavier landed at Kagoshima, guided by Yajirō, a Japanese man from Satsuma who had taken refuge in Goa; received by Shimazu Takahisa, he obtained permission to preach, according to Kagoshima Prefecture. The landing monument in Gionnosu Park commemorates this first Christian mission to Japan."
+      },
+      "coordinates": [
+        130.557,
+        31.597
+      ],
+      "mechanisms": [
+        "mission"
+      ],
+      "sourceIds": [
+        "kagoshima-pref-xavier",
+        "kagoshima-city-xavier-landing"
+      ]
+    },
+    {
+      "id": "christianity-nagasaki-1614",
+      "traditionId": "christianity",
+      "kind": "contraction",
+      "year": 1614,
+      "approximate": false,
+      "title": {
+        "fr": "Nagasaki, 1614 : interdiction du christianisme",
+        "en": "Nagasaki, 1614: Christianity banned"
+      },
+      "description": {
+        "fr": "Le shogunat Tokugawa interdit le christianisme dans tout le Japon en 1614 ; les missionnaires sont expulsés vers Macao et Manille et onze églises de Nagasaki sont détruites, selon le conseil du patrimoine des sites chrétiens cachés et le musée d’histoire et de culture de Nagasaki. Le recul clôt la mission ouverte à Kagoshima en 1549 ; la foi se transmet en secret jusqu’à la découverte des chrétiens cachés à Ōura en 1865.",
+        "en": "The Tokugawa shogunate banned Christianity throughout Japan in 1614; missionaries were expelled to Macao and Manila and eleven churches in Nagasaki were destroyed, according to the Hidden Christian Sites heritage council and the Nagasaki Museum of History and Culture. The contraction closes the mission opened at Kagoshima in 1549; the faith was passed on in secret until the Hidden Christians came forward at Ōura in 1865."
+      },
+      "coordinates": [
+        129.88,
+        32.75
+      ],
+      "mechanisms": [
+        "persecution"
+      ],
+      "sourceIds": [
+        "kirishitan-nagasaki-1614",
+        "mlit-nagasaki-magistrates"
+      ],
+      "closesId": "christianity-kagoshima"
+    },
+    {
+      "id": "christianity-jelling",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 965,
+      "approximate": true,
+      "title": {
+        "fr": "Jelling : « rendit les Danois chrétiens »",
+        "en": "Jelling: ‘made the Danes Christian’"
+      },
+      "description": {
+        "fr": "Vers 965, Harald à la Dent bleue érige la grande pierre runique de Jelling, dont l’inscription affirme qu’il « rendit les Danois chrétiens » ; elle porte la plus ancienne image du Christ connue en Scandinavie. Le Musée national du Danemark rappelle que des courants chrétiens existaient bien avant et que le changement de croyance ne s’est pas fait du jour au lendemain.",
+        "en": "Around 965 Harald Bluetooth raised the large Jelling rune stone, whose inscription states that he ‘made the Danes Christian’; it bears the oldest known image of Christ in Scandinavia. The National Museum of Denmark notes that Christian currents existed long before and that the change of belief did not happen overnight."
+      },
+      "coordinates": [
+        9.42,
+        55.757
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "natmus-jelling-stone",
+        "natmus-christianity-denmark"
+      ]
+    },
+    {
+      "id": "christianity-vilnius",
+      "traditionId": "christianity",
+      "kind": "spread",
+      "year": 1387,
+      "approximate": false,
+      "title": {
+        "fr": "Vilnius : le baptême de la Lituanie",
+        "en": "Vilnius: the baptism of Lithuania"
+      },
+      "description": {
+        "fr": "En 1387, année du baptême de la Lituanie sous le grand-duc Jogaila, la cathédrale de Vilnius est fondée et son trésor commence à se constituer, selon l’archicathédrale ; elle porte le titre de saint Ladislas, nom de baptême de Jogaila. Le jalon date une conversion officielle et institutionnelle, pas celle de chaque communauté.",
+        "en": "In 1387, the year of Lithuania’s baptism under Grand Duke Jogaila, Vilnius Cathedral was founded and its treasury began to form, according to the archcathedral; it bears the title of Saint Ladislaus, Jogaila’s baptismal name. The milestone dates an official, institutional conversion, not that of every community."
+      },
+      "coordinates": [
+        25.288,
+        54.686
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "katedra-vilnius-history",
+        "cityofmercy-vilnius-cathedral"
+      ]
+    },
+    {
+      "id": "islam-konya",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1220,
+      "approximate": true,
+      "title": {
+        "fr": "Konya : la mosquée Alaeddin des Seldjoukides",
+        "en": "Konya: the Seljuk Alaeddin Mosque"
+      },
+      "description": {
+        "fr": "Grande mosquée de la capitale seldjoukide de Roum, l’Alaeddin Camii est achevée en 1220 selon Archnet, au terme d’un chantier ouvert vers 1116 et poursuivi jusque dans les années 1230 selon le musée virtuel Discover Islamic Art ; ses colonnes réemploient des édifices antiques et byzantins. Le jalon atteste le patronage des sultans en Anatolie, sans dater l’islamisation de sa population.",
+        "en": "Great mosque of the Seljuk capital of Rum, the Alaeddin Camii was completed in 1220 according to Archnet, after works begun around 1116 and continued into the 1230s according to the Discover Islamic Art virtual museum; its columns reuse antique and Byzantine buildings. The milestone attests the sultans’ patronage in Anatolia without dating the Islamization of its population."
+      },
+      "coordinates": [
+        32.493,
+        37.873
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "archnet-alaeddin-konya",
+        "mwnf-alaeddin-konya"
+      ]
+    },
+    {
+      "id": "islam-samudra-pasai",
+      "traditionId": "islam",
+      "kind": "spread",
+      "year": 1297,
+      "approximate": true,
+      "title": {
+        "fr": "Samudra Pasai : un sultan musulman à Sumatra",
+        "en": "Samudra Pasai: a Muslim sultan in Sumatra"
+      },
+      "description": {
+        "fr": "Les pierres tombales d’al-Malik al-Sālih, mort en 696 de l’hégire (1297), tenu pour le premier sultan musulman de Samudra, symbolisent l’islamisation du nord de Sumatra ; Elizabeth Lambourn montre qu’elles remplacent tardivement une tombe plus ancienne. Le jalon date un patronage royal attesté par l’épigraphie funéraire, non la conversion de la région.",
+        "en": "The tombstones of al-Malik al-Sālih, who died in 696 AH (1297) and is regarded as the first Muslim sultan of Samudra, symbolize the Islamization of northern Sumatra; Elizabeth Lambourn shows they are later replacements for an older grave. The milestone dates a royal patronage attested by funerary epigraphy, not the conversion of the region."
+      },
+      "coordinates": [
+        97.201,
+        5.134
+      ],
+      "mechanisms": [
+        "patronage"
+      ],
+      "sourceIds": [
+        "brill-lambourn-tombstones",
+        "anu-early-islamisation-sea"
       ]
     }
   ]

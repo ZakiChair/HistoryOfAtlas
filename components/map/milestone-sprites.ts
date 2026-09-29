@@ -1,5 +1,5 @@
 import type { Map as MapInstance } from 'maplibre-gl';
-import type { MilestoneSpriteIds } from './milestone-ids';
+import type { MilestoneEmblem, MilestoneSpriteIds } from './milestone-ids';
 
 const PIXEL_RATIO = 2;
 /** Medallion and selection ring share one centre, so icon-size and icon-offset stay identical. */
@@ -39,7 +39,7 @@ export function createMilestoneSprites(
   };
   // A dark disc lifts the stroked glyph off any territory colour or resource pictogram.
   const medallion =
-    (theme: { color: string; symbol: string }, origin: boolean) =>
+    (theme: { color: string; symbol: string }, emblem: MilestoneEmblem) =>
     (context: CanvasRenderingContext2D) => {
       const centre = MILESTONE_MEDALLION_SIZE / 2;
       context.fillStyle = ink;
@@ -53,9 +53,12 @@ export function createMilestoneSprites(
       context.fill();
       context.globalAlpha = 1;
       context.strokeStyle = theme.color;
-      context.lineWidth = origin ? 2.6 : 1.6;
+      context.lineWidth = emblem === 'origin' ? 2.6 : 1.6;
+      // A divided ring marks a schism: the milestone splits a documented community.
+      if (emblem === 'divided') context.setLineDash([3.2, 2.4]);
       context.stroke();
-      if (origin) {
+      context.setLineDash([]);
+      if (emblem === 'origin') {
         // A second ring marks the earliest attested centre of a theme.
         context.strokeStyle = ink;
         context.lineWidth = 3.5;
@@ -66,12 +69,26 @@ export function createMilestoneSprites(
         context.lineWidth = 1.3;
         context.stroke();
       }
+      context.save();
       context.translate(centre - 11, centre - 11);
       context.scale(22 / 32, 22 / 32);
       for (const d of symbols[theme.symbol] ?? symbols[fallbackSymbol]) {
         context.strokeStyle = theme.color;
         context.lineWidth = 2.4;
         context.stroke(new Path2D(d));
+      }
+      context.restore();
+      if (emblem === 'closing') {
+        // A slash over the glyph marks a documented ban, expulsion or closure.
+        context.strokeStyle = ink;
+        context.lineWidth = 3.6;
+        context.beginPath();
+        context.moveTo(centre - 12, centre + 12);
+        context.lineTo(centre + 12, centre - 12);
+        context.stroke();
+        context.strokeStyle = theme.color;
+        context.lineWidth = 1.8;
+        context.stroke();
       }
     };
   return {
@@ -90,8 +107,10 @@ export function createMilestoneSprites(
         true,
       );
       themes.forEach((theme, index) => {
-        add(ids.medallion(theme.id), MILESTONE_MEDALLION_SIZE, medallion(theme, false));
-        add(ids.origin(theme.id), MILESTONE_MEDALLION_SIZE, medallion(theme, true));
+        add(ids.emblem(theme.id, 'plain'), MILESTONE_MEDALLION_SIZE, medallion(theme, 'plain'));
+        add(ids.emblem(theme.id, 'origin'), MILESTONE_MEDALLION_SIZE, medallion(theme, 'origin'));
+        add(ids.emblem(theme.id, 'divided'), MILESTONE_MEDALLION_SIZE, medallion(theme, 'divided'));
+        add(ids.emblem(theme.id, 'closing'), MILESTONE_MEDALLION_SIZE, medallion(theme, 'closing'));
         // Whole-world views generalise later milestones to dots; founding centres keep their emblem.
         // Transparent padding widens the click target without enlarging the drawn dot.
         add(ids.dot(theme.id), 40, (context) => {

@@ -1,13 +1,15 @@
 import { useId, useState, type ReactNode } from 'react';
+import type { MilestoneEmblem } from './milestone-ids';
 import { RELIGION_SYMBOLS } from '@/lib/religions/icons';
 import { religionText, type ReligionCopyKey } from '@/lib/religions/i18n';
 import type { ReligionTradition } from '@/lib/religions/types';
 import type { Locale } from '@/lib/types';
 import { RELIGION_INK as INK } from './religion-sprites';
 
-// SVG twins of the map sprites in components/map/religion-sprites.ts and the paint in
-// religion-overlay.ts: same ink, radii, stroke widths and dash ratios, so the panel reads
-// exactly like the map. Theme-dependent opacities live in the .religion-key-* CSS rules.
+// SVG twins of the map sprites in components/map/milestone-sprites.ts and the paint in
+// milestone-overlay.ts: same ink, radii, stroke widths, dash ratios and emblem variants
+// (plain, origin, divided, closing; a closed centre reads at 0.3 opacity), so the panel
+// reads exactly like the map. Theme-dependent opacities live in the .religion-key-* CSS rules.
 /** Centre of the 44 px medallion sprite; dots share its scale on the map. */
 const CENTRE = 22;
 /** Key swatches are 30 × 24 px; point symbols are drawn at 24 px, about their world-view size. */
@@ -22,7 +24,7 @@ const OUTLINE_WIDTH = 1.6;
 
 type Sample = Pick<ReligionTradition, 'color' | 'symbol'>;
 
-function Medallion({ symbol, origin = false }: { symbol: string; origin?: boolean }) {
+function Medallion({ symbol, emblem = 'plain' }: { symbol: string; emblem?: MilestoneEmblem }) {
   return (
     <g fill="none" stroke="currentColor">
       <circle cx={CENTRE} cy={CENTRE} r={17} fill={INK} fillOpacity={0.9} stroke="none" />
@@ -32,9 +34,10 @@ function Medallion({ symbol, origin = false }: { symbol: string; origin?: boolea
         r={17}
         fill="currentColor"
         fillOpacity={0.16}
-        strokeWidth={origin ? 2.6 : 1.6}
+        strokeWidth={emblem === 'origin' ? 2.6 : 1.6}
+        strokeDasharray={emblem === 'divided' ? '3.2 2.4' : undefined}
       />
-      {origin && (
+      {emblem === 'origin' && (
         <>
           <circle cx={CENTRE} cy={CENTRE} r={20.2} stroke={INK} strokeWidth={3.5} />
           <circle cx={CENTRE} cy={CENTRE} r={20.2} strokeWidth={1.3} />
@@ -50,6 +53,27 @@ function Medallion({ symbol, origin = false }: { symbol: string; origin?: boolea
           <path key={index} d={d} />
         ))}
       </g>
+      {emblem === 'closing' && (
+        <>
+          <line
+            x1={CENTRE - 12}
+            y1={CENTRE + 12}
+            x2={CENTRE + 12}
+            y2={CENTRE - 12}
+            stroke={INK}
+            strokeWidth={3.6}
+            strokeLinecap="round"
+          />
+          <line
+            x1={CENTRE - 12}
+            y1={CENTRE + 12}
+            x2={CENTRE + 12}
+            y2={CENTRE - 12}
+            strokeWidth={1.8}
+            strokeLinecap="round"
+          />
+        </>
+      )}
     </g>
   );
 }
@@ -114,7 +138,7 @@ export default function ReligionKey({
         <li>
           <Swatch color={color}>
             <g transform={SYMBOL_BOX}>
-              <Medallion symbol={symbol} origin />
+              <Medallion symbol={symbol} emblem="origin" />
             </g>
           </Swatch>
           <span>{t('legendOrigin')}</span>
@@ -126,6 +150,31 @@ export default function ReligionKey({
             </g>
           </Swatch>
           <span>{t('legendMilestone')}</span>
+        </li>
+        <li>
+          <Swatch color={color}>
+            <g transform={SYMBOL_BOX}>
+              <Medallion symbol={symbol} emblem="divided" />
+            </g>
+          </Swatch>
+          <span>{t('legendSchism')}</span>
+        </li>
+        <li>
+          <Swatch color={color}>
+            <g transform={SYMBOL_BOX}>
+              <Medallion symbol={symbol} emblem="closing" />
+            </g>
+          </Swatch>
+          <span>{t('legendContraction')}</span>
+        </li>
+        <li>
+          <Swatch color={color}>
+            {/* Same opacity as a centre a later contraction closed. */}
+            <g transform={SYMBOL_BOX} opacity={0.3}>
+              <Medallion symbol={symbol} />
+            </g>
+          </Swatch>
+          <span>{t('legendClosed')}</span>
         </li>
         <li>
           <Swatch color={color}>

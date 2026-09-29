@@ -27,8 +27,8 @@ const LAYERS = [
   {
     label: 'Religions (dated history)',
     files: ['data/religions/history.json'],
-    // 131 milestones after the 24 September 2026 data wave (45.9 kB) plus room for growth.
-    budgetGzipBytes: 52_000,
+    // 145 milestones and 169 sources after the 29 September 2026 evolution wave (53.3 kB) plus room for growth.
+    budgetGzipBytes: 56_000,
   },
   {
     label: 'Religions (dated population coverage index, on activation)',

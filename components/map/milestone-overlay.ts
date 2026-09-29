@@ -8,7 +8,12 @@ import type {
 import type { AtlasState } from '@/lib/store';
 import { thematicMilestonesAt, type ThematicTimeModel } from '@/lib/thematic/time';
 import { publishMilestones, type MilestoneStore } from '@/lib/thematic/store';
-import { milestoneLayerIds, milestoneSpriteIds, type MilestoneLayerIds } from './milestone-ids';
+import {
+  milestoneLayerIds,
+  milestoneSpriteIds,
+  type MilestoneEmblem,
+  type MilestoneLayerIds,
+} from './milestone-ids';
 import { raiseThematicLayers } from './thematic-stack';
 
 export interface MilestoneTheme {
@@ -17,6 +22,8 @@ export interface MilestoneTheme {
   symbol: string;
 }
 
+export type { MilestoneEmblem } from './milestone-ids';
+
 export interface MilestoneLike {
   id: string;
   kind: string;
@@ -24,6 +31,7 @@ export interface MilestoneLike {
   endYear?: number;
   coordinates: [number, number];
   fromId?: string;
+  closesId?: string;
   area?: { ring: [number, number][] };
 }
 
@@ -31,8 +39,8 @@ export interface MilestoneCorpus<M extends MilestoneLike> {
   themes: readonly MilestoneTheme[];
   milestones: readonly M[];
   themeIdOf: (milestone: M) => string;
-  /** Kind drawn with the double ring and kept prominent, e.g. 'origin'. */
-  originKind: string;
+  /** Emblem a kind is drawn with: plain, origin double ring, divided dash or closing slash. */
+  emblemOf: (kind: string) => MilestoneEmblem;
 }
 
 /**
@@ -138,7 +146,7 @@ export function milestoneDetailZooms<M extends MilestoneLike>(
   sameTheme = false,
 ): Map<string, number> {
   const rank = (stage: M) =>
-    [stage.kind === corpus.originKind ? 0 : 1, stage.year, stage.id] as const;
+    [corpus.emblemOf(stage.kind) === 'origin' ? 0 : 1, stage.year, stage.id] as const;
   const before = (a: M, b: M) => {
     const [left, right] = [rank(a), rank(b)];
     return left[0] - right[0] || left[1] - right[1] || left[2].localeCompare(right[2]);
@@ -175,16 +183,24 @@ export function milestoneFeatures<M extends MilestoneLike>(
   const fanOwn = milestoneFanIndex(corpus, true);
   const detail = milestoneDetailZooms(corpus);
   const detailOwn = milestoneDetailZooms(corpus, true);
+  // A closing milestone dims its target from its own year; the earliest closer wins.
+  const closedBy = new Map<string, number>();
+  for (const stage of corpus.milestones)
+    if (stage.closesId)
+      closedBy.set(stage.closesId, Math.min(closedBy.get(stage.closesId) ?? Infinity, stage.year));
   const features: FeatureCollection<Geometry>['features'] = [];
   for (const stage of corpus.milestones) {
     const theme = themes.get(corpus.themeIdOf(stage))!;
+    const closedYear = closedBy.get(stage.id);
     const properties = {
       id: stage.id,
       theme: corpus.themeIdOf(stage),
       year: stage.year,
       ...(stage.endYear !== undefined ? { endYear: stage.endYear } : {}),
+      ...(closedYear !== undefined ? { closedYear } : {}),
       color: theme.color,
-      origin: stage.kind === corpus.originKind,
+      emblem: corpus.emblemOf(stage.kind),
+      origin: corpus.emblemOf(stage.kind) === 'origin',
     };
     features.push({
       type: 'Feature',
@@ -236,6 +252,18 @@ export function milestoneFilter(
   return ['all', ...clauses];
 }
 
+/** A centre closed by a later contraction stays drawn but dimmed, never erased. */
+export const CLOSED_OPACITY = 0.3;
+const closedFade = (
+  expression: ExpressionSpecification,
+  horizon: number,
+): ExpressionSpecification => [
+  'case',
+  ['all', ['has', 'closedYear'], ['<=', ['get', 'closedYear'], horizon]],
+  ['*', expression, CLOSED_OPACITY],
+  expression,
+];
+
 /** Paint-only age fade for every milestone layer; the selection keeps full opacity. */
 export function milestoneAgePaint(
   ids: MilestoneLayerIds,
@@ -246,9 +274,9 @@ export function milestoneAgePaint(
 ) {
   const paint = THEME_PAINT[theme];
   return [
-    [ids.points, 'icon-opacity', time.opacity(horizon)],
-    [ids.areas, 'fill-opacity', time.opacity(horizon, paint.hatch)],
-    [ids.outlines, 'line-opacity', time.opacity(horizon, 0.9)],
+    [ids.points, 'icon-opacity', closedFade(time.opacity(horizon), horizon)],
+    [ids.areas, 'fill-opacity', closedFade(time.opacity(horizon, paint.hatch), horizon)],
+    [ids.outlines, 'line-opacity', closedFade(time.opacity(horizon, 0.9), horizon)],
     [ids.casing, 'line-opacity', time.opacity(horizon, paint.casingOpacity, routeFadeRate)],
     [ids.routes, 'line-opacity', time.opacity(horizon, 0.95, routeFadeRate)],
     [ids.arrows, 'icon-opacity', time.opacity(horizon, 1, routeFadeRate)],
@@ -306,12 +334,7 @@ export function startMilestoneOverlay<D, M extends MilestoneLike>(
   const ROUTE_LAYERS = new Set([ids.casing, ids.routes, ids.arrows]);
   const AREA_LAYERS = new Set([ids.areas, ids.outlines]);
   const DOT_IMAGE: ExpressionSpecification = ['concat', spriteIds.prefixes.dot, ['get', 'theme']];
-  const DETAIL_IMAGE: ExpressionSpecification = [
-    'case',
-    ['get', 'origin'],
-    ['concat', spriteIds.prefixes.origin, ['get', 'theme']],
-    ['concat', spriteIds.prefixes.medallion, ['get', 'theme']],
-  ];
+  const DETAIL_IMAGE: ExpressionSpecification = spriteIds.emblemImage;
   /**
    * A milestone stays a dot until its zoom (`detail`, or `detailOwn` under a theme
    * filter) separates it from every more prominent neighbour. Unfiltered world views also

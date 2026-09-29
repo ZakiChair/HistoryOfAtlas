@@ -2176,6 +2176,18 @@
         "milestones": 1
       },
       {
+        "id": "cityofmercy-vilnius-cathedral",
+        "title": "Archdiocese of Vilnius, City of Mercy — Vilnius Cathedral Basilica of St. Stanislaus and St. Vladislaus",
+        "url": "https://cityofmercy.lt/en_GB/objektai/vilniaus-arkikatedra-bazilika/",
+        "milestones": 1
+      },
+      {
+        "id": "archnet-alaeddin-konya",
+        "title": "Archnet — Alaeddin Külliyesi, Konya (completed 1220)",
+        "url": "https://www.archnet.org/sites/3576",
+        "milestones": 1
+      },
+      {
         "id": "art-institute-parliament",
         "title": "Art Institute of Chicago — Museum Studies 36/2, Parliament of Religions",
         "url": "https://www.artic.edu/files/d6d34ab7-f17c-4939-b2aa-f8c5a71495a5/AIC_MuseumStudies_36-2_UPDF.pdf",
@@ -2194,6 +2206,12 @@
         "milestones": 1
       },
       {
+        "id": "anu-early-islamisation-sea",
+        "title": "Australian National University Press — Towards a re-interpretation of early Islamisation processes in Southeast Asia",
+        "url": "https://press-files.anu.edu.au/downloads/press/n1676/pdf/ch07.pdf",
+        "milestones": 1
+      },
+      {
         "id": "bm-jerusalem-chronicle",
         "title": "British Museum — Babylonian Chronicle, campaign of 597 BCE",
         "url": "https://www.britishmuseum.org/collection/object/W_1896-0409-51",
@@ -2203,6 +2221,12 @@
         "id": "ui-bm-ife",
         "title": "British Museum — Ife head and the city’s sacred kingship",
         "url": "https://www.britishmuseum.org/collection/object/E_Af1939-34-1",
+        "milestones": 1
+      },
+      {
+        "id": "mezquita-catedral-brochure",
+        "title": "Cabildo Catedral de Córdoba — Mosque-Cathedral of Cordoba, visitor brochure (dedications of 1146 and 1236)",
+        "url": "https://mezquita-catedraldecordoba.es/site/assets/files/1060/folleto_ingles_web.pdf",
         "milestones": 1
       },
       {
@@ -2236,6 +2260,12 @@
         "milestones": 1
       },
       {
+        "id": "columbia-wuzong-edict",
+        "title": "Columbia University, Asia for Educators — Emperor Wuzong’s Edict on the Suppression of Buddhism (845)",
+        "url": "https://afe.easia.columbia.edu/ps/cup/emperor_wuzong_suppress_buddhism.pdf",
+        "milestones": 1
+      },
+      {
         "id": "conib-kahal-zur-israel",
         "title": "Confederação Israelita do Brasil (CONIB) — Kahal Zur Israel synagogue, Recife",
         "url": "https://conib.org.br/noticias/todas-as-noticias/38630-sinagoga-kahal-zur-israel-de-recife-pode-se-tornar-patrimonio-do-brasil.html",
@@ -2260,6 +2290,18 @@
         "milestones": 1
       },
       {
+        "id": "diocesis-cordoba-historia",
+        "title": "Diócesis de Córdoba — Historia de la Catedral (dedication of 29 June 1236)",
+        "url": "https://diocesisdecordoba.es/catedral/historia",
+        "milestones": 1
+      },
+      {
+        "id": "mwnf-alaeddin-konya",
+        "title": "Discover Islamic Art, Museum With No Frontiers — Alaaddin Mosque, Konya",
+        "url": "https://islamicart.museumwnf.org/database_item.php?id=monument;ISL;tr;Mon01;3;en",
+        "milestones": 1
+      },
+      {
         "id": "ui-egypt-abu-simbel",
         "title": "Egyptian Ministry of Tourism and Antiquities — Abu Simbel",
         "url": "https://egymonuments.gov.eg/archaeological-sites/abu-simbel/",
@@ -2275,7 +2317,7 @@
         "id": "ui-egypt-philae",
         "title": "Egyptian Ministry of Tourism and Antiquities — Philae",
         "url": "https://egymonuments.gov.eg/archaeological-sites/philae/",
-        "milestones": 1
+        "milestones": 2
       },
       {
         "id": "britannica-hindu-spread",
@@ -2302,6 +2344,12 @@
         "milestones": 1
       },
       {
+        "id": "iranica-karbala",
+        "title": "Encyclopaedia Iranica — Karbala",
+        "url": "https://www.iranicaonline.org/articles/karbala/",
+        "milestones": 1
+      },
+      {
         "id": "iranica-parsis",
         "title": "Encyclopaedia Iranica — Parsi communities I: Early history",
         "url": "https://www.iranicaonline.org/articles/parsi-communities-i-early-history/",
@@ -2311,6 +2359,12 @@
         "id": "iranica-zoroaster",
         "title": "Encyclopaedia Iranica — Zoroaster II: General Survey",
         "url": "https://www.iranicaonline.org/articles/zoroaster-ii-general-survey/",
+        "milestones": 1
+      },
+      {
+        "id": "fordham-expulsion-1492",
+        "title": "Fordham University, Internet Jewish History Sourcebook — The Expulsion from Spain, 1492 CE",
+        "url": "https://sourcebooks.fordham.edu/jewish/1492-jews-spain1.asp",
         "milestones": 1
       },
       {
@@ -2380,6 +2434,12 @@
         "milestones": 1
       },
       {
+        "id": "kirishitan-nagasaki-1614",
+        "title": "Hidden Christian Sites in the Nagasaki Region (World Heritage council) — Beginning of the absence of missionaries (1614 ban)",
+        "url": "https://kirishitan.jp/histories_en/his001",
+        "milestones": 1
+      },
+      {
         "id": "he-blog-gurdwaras",
         "title": "Historic England, Heritage Calling — A brief history of gurdwaras in England",
         "url": "https://heritagecalling.com/2022/07/14/a-brief-history-of-gurdwaras-in-england/",
@@ -2395,6 +2455,12 @@
         "id": "hhf-abcfm-bicentennial",
         "title": "Historic Hawaiʻi Foundation — Bicentennial of the arrival of ABCFM missionaries and three historic churches",
         "url": "https://historichawaii.org/article/bicentennial-of-the-arrival-of-abmc-missionaries-and-establishment-of-three-historic-churches/",
+        "milestones": 1
+      },
+      {
+        "id": "vatican-1965-declaration",
+        "title": "Holy See — Joint Catholic-Orthodox Declaration of Paul VI and Athenagoras I, 7 December 1965 (on the 1054 excommunications)",
+        "url": "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
         "milestones": 1
       },
       {
@@ -2431,6 +2497,36 @@
         "id": "jck-amsterdam",
         "title": "Jewish Cultural Quarter — Portuguese Synagogue history",
         "url": "https://jck.nl/verhalen-en-verdieping/portugese-synagoge-geschiedenis",
+        "milestones": 1
+      },
+      {
+        "id": "jrs-temple-cults-exemption",
+        "title": "Journal of Roman Studies (Cambridge) — A legal exemption for the temple cults of Rome and Alexandria in the fourth century",
+        "url": "https://www.cambridge.org/core/journals/journal-of-roman-studies/article/legal-exemption-for-the-temple-cults-of-rome-and-alexandria-in-the-fourth-century/8FCF6B2789837BED8D95874E77605DC5",
+        "milestones": 1
+      },
+      {
+        "id": "brill-lambourn-tombstones",
+        "title": "Journal of the Economic and Social History of the Orient (Brill) — Elizabeth Lambourn, Tombstones, Texts, and Typologies (al-Malik al-Sālih, d. 1297)",
+        "url": "https://brill.com/view/journals/jesh/51/2/article-p252_3.xml",
+        "milestones": 1
+      },
+      {
+        "id": "judaism-rome-cth-16-10-12",
+        "title": "Judaism and Rome (ERC project) — Codex Theodosianus XVI.10.12, 8 November 392",
+        "url": "https://www.judaism-and-rome.org/codex-theodosianus-xvi1012-8th-november-392%C2%A0ce",
+        "milestones": 1
+      },
+      {
+        "id": "kagoshima-city-xavier-landing",
+        "title": "Kagoshima City official tourist information — Monument of St. Xavier’s Landing (1549)",
+        "url": "https://www.kagoshima-yokanavi.jp/en/spot/10155",
+        "milestones": 1
+      },
+      {
+        "id": "kagoshima-pref-xavier",
+        "title": "Kagoshima Prefecture — The arrival of Christianity (Xavier lands at Kagoshima, 15 August 1549)",
+        "url": "https://www.pref.kagoshima.jp/ab23/pr/gaiyou/rekishi/tyuusei/christ2.html",
         "milestones": 1
       },
       {
@@ -2518,6 +2614,12 @@
         "milestones": 1
       },
       {
+        "id": "mlit-nagasaki-magistrates",
+        "title": "Nagasaki Museum of History and Culture / MLIT multilingual database — The Nagasaki magistrates’ special mission to eradicate Christianity",
+        "url": "https://www.mlit.go.jp/tagengo-db/common/001561256.pdf",
+        "milestones": 1
+      },
+      {
         "id": "discover-nagasaki-oura",
         "title": "Nagasaki Prefecture Tourism Association — Oura Cathedral and the discovery of the Hidden Christians",
         "url": "https://www.discover-nagasaki.com/en/featured-topics/shin-kirishitan/5",
@@ -2533,6 +2635,18 @@
         "id": "ui-unesco-old-oyo",
         "title": "National Commission for Museums and Monuments / UNESCO — Old Oyo",
         "url": "https://whc.unesco.org/en/tentativelists/489/",
+        "milestones": 1
+      },
+      {
+        "id": "natmus-christianity-denmark",
+        "title": "National Museum of Denmark — Christianity comes to Denmark",
+        "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/religion-magic-death-and-rituals/christianity-comes-to-denmark/",
+        "milestones": 1
+      },
+      {
+        "id": "natmus-jelling-stone",
+        "title": "National Museum of Denmark — The Jelling Stone (c. 965)",
+        "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/the-monuments-at-jelling/the-jelling-stone/",
         "milestones": 1
       },
       {
@@ -2701,7 +2815,7 @@
         "id": "met-byzantium-islam",
         "title": "The Met — Byzantium and Islam: Age of Transition",
         "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam",
-        "milestones": 1
+        "milestones": 2
       },
       {
         "id": "met-judean-diaspora",
@@ -2719,6 +2833,12 @@
         "id": "met-aksum",
         "title": "The Met — Foundations of Aksumite Civilization and Its Christian Legacy",
         "url": "https://www.metmuseum.org/essays/foundations-of-aksumite-civilization-and-its-christian-legacy-1st-7th-century",
+        "milestones": 1
+      },
+      {
+        "id": "met-egypt-500-1000",
+        "title": "The Met — Heilbrunn Timeline, Egypt 500–1000 A.D. (closing of the temple at Philae, 535)",
+        "url": "https://www.metmuseum.org/toah/ht/06/afe",
         "milestones": 1
       },
       {
@@ -3025,6 +3145,12 @@
         "id": "vietnam-hanoi",
         "title": "Vietnam National Authority of Tourism — Six heritage sites of Hanoi",
         "url": "https://beta-v1.vietnam.travel/things-to-do/hanoi-six-heritage-sites",
+        "milestones": 1
+      },
+      {
+        "id": "katedra-vilnius-history",
+        "title": "Vilnius Archcathedral — History of the cathedral treasury (1387 baptism of Lithuania and founding of the cathedral)",
+        "url": "https://www.katedra.lt/lobynas/istorija/",
         "milestones": 1
       },
       {

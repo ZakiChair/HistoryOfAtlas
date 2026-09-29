@@ -53,7 +53,7 @@ La reconstruction normale utilise les extraits versionnés dans le dépôt, sans
 
 ## Repères historiques
 
-`public/data/religions/history.json` est un corpus éditorial bilingue, consulté et vérifié le **23 septembre 2026**, puis complété le **24 septembre 2026** de 39 étapes de diffusion postérieures à 1600, chacune revérifiée sur ses sources par un relecteur indépendant. Il contient **16 traditions, 131 étapes, 54 zones schématiques, 27 relations de transmission et 148 sources**. Ses premiers et derniers jalons sont respectivement 3200 av. J.-C. et 1988.
+`public/data/religions/history.json` est un corpus éditorial bilingue, consulté et vérifié le **23 septembre 2026**, puis complété le **24 septembre 2026** de 39 étapes de diffusion postérieures à 1600, chacune revérifiée sur ses sources par un relecteur indépendant, puis enrichi le **29 septembre 2026** de 14 étapes documentant des schismes, des reculs attestés et des lacunes médiévales, chaque source ayant été consultée le jour même (les pages du Metropolitan Museum, d’Archnet et de l’Encyclopaedia Iranica, qui refusent les consultations automatisées, l’ont été par leurs extraits indexés). Il contient **16 traditions, 145 étapes, 54 zones schématiques, 27 relations de transmission, 6 clôtures et 169 sources**. Ses premiers et derniers jalons sont respectivement 3200 av. J.-C. et 1988.
 
 Ce mode conserve les **repères historiques cumulés jusqu’à l’année sélectionnée**. Un marqueur, un trait ou une zone conservé à une date ultérieure signifie que cette attestation a déjà eu lieu. Il ne démontre ni une pratique toujours vivante, ni une présence continue, ni une majorité religieuse, ni une frontière. Les traditions peuvent se superposer géographiquement et chronologiquement.
 
@@ -62,21 +62,23 @@ Ce mode conserve les **repères historiques cumulés jusqu’à l’année séle
 | ID               | Tradition ou famille de traditions    | Étapes | Zones | Relations |
 | ---------------- | ------------------------------------- | -----: | ----: | --------: |
 | `mesopotamian`   | Traditions mésopotamiennes            |      4 |     2 |         0 |
-| `egyptian`       | Traditions de l’Égypte ancienne       |      4 |     2 |         1 |
+| `egyptian`       | Traditions de l’Égypte ancienne       |      5 |     2 |         1 |
 | `hinduism`       | Traditions védiques et hindoues       |     10 |     4 |         1 |
 | `andean`         | Traditions andines et incas           |      4 |     3 |         1 |
 | `zoroastrianism` | Zoroastrisme                          |      6 |     2 |         1 |
-| `greco-roman`    | Traditions grecques et romaines       |      4 |     3 |         1 |
-| `judaism`        | Judaïsme                              |     11 |     1 |         4 |
+| `greco-roman`    | Traditions grecques et romaines       |      5 |     3 |         1 |
+| `judaism`        | Judaïsme                              |     12 |     1 |         4 |
 | `jainism`        | Jaïnisme                              |      5 |     2 |         0 |
 | `daoism`         | Traditions taoïstes                   |      6 |     2 |         0 |
 | `confucianism`   | Traditions confucéennes               |      5 |     2 |         0 |
 | `buddhism`       | Bouddhismes                           |     15 |     9 |         7 |
-| `christianity`   | Christianismes                        |     21 |     7 |         4 |
-| `islam`          | Islam                                 |     16 |     9 |         3 |
+| `christianity`   | Christianismes                        |     28 |     7 |         4 |
+| `islam`          | Islam                                 |     20 |     9 |         3 |
 | `shinto`         | Cultes des kami et shinto             |      6 |     2 |         0 |
 | `yoruba-orisha`  | Traditions yoruba, òrìṣà et diasporas |      7 |     3 |         3 |
 | `sikhism`        | Sikhisme                              |      7 |     1 |         1 |
+
+Les étapes de genre `schism` (4) et `contraction` (6) sont comprises dans ces totaux ; chaque recul nomme le foyer qu’il clôt : Chang’an (845), Philae (535), Rome (391), Cordoue (1236 pour la mosquée, 1492 pour la synagogue) et Kagoshima (1614).
 
 Les catégories sont des outils de lecture. « Traditions andines » rassemble des cultures distinctes : aucune filiation Chavín → Tiwanaku → Inca n’est tracée. Les traditions gréco-romaines, mésopotamiennes et égyptiennes sont également plurielles. Le classement des traditions confucéennes comme religion, éthique ou philosophie dépend du contexte. Les communautés diasporiques ne sont pas considérées comme des copies inchangées d’une tradition d’origine.
 
@@ -94,6 +96,8 @@ Ce premier corpus ne recense pas toutes les traditions ni toutes leurs implantat
 
 Les années suivent la convention astronomique de l’atlas : `year = 1 - année_avant_notre_ère`. Ainsi, 3200 av. J.-C. vaut `-3199`, 600 av. J.-C. vaut `-599` et 1 av. J.-C. vaut `0`. Les années de notre ère conservent leur valeur usuelle.
 
+`kind: "schism"` date une division documentée à une date et un lieu : un schisme ou une séparation attestée, sans prétendre dater l’ensemble du processus de séparation. `kind: "contraction"` date un recul attesté — interdiction, expulsion ou fermeture — et porte un `closesId` vers le foyer qu’il clôt ; le centre clos est atténué à partir de la date du recul, sans dater la disparition de toute pratique ni celle des fidèles, et sans effacer l’attestation antérieure.
+
 `approximate: true` signale soit une datation discutée, soit une année représentative d’un siècle, d’une phase ou d’une fourchette explicitée dans le texte. L’affichage commence à cette année représentative ; il ne prétend pas trancher à l’année près une incertitude pluriséculaire. Les cas les plus sensibles sont :
 
 | Étape                                      | Traitement                                                                                                                                              |
@@ -106,6 +110,9 @@ Les années suivent la convention astronomique de l’atlas : `year = 1 - année
 | Samyé, Prambanan, Angkor, Bagan, Sukhothai | Années représentatives de phases de fondation, patronage ou transmission ; elles ne datent pas tous les monuments du site.                              |
 | Yushima Seido                              | Repère 1690, avec la phase 1690–1691 indiquée.                                                                                                          |
 | La Havane et Salvador                      | Repères de communautés documentées au XIXe siècle ; aucune date unique d’arrivée des traditions diasporiques n’est prétendue.                           |
+| Philae, fermeture                          | Repère 535 selon le Metropolitan Museum ; la notice égyptienne ne donne que le règne de Justinien (527–565).                                            |
+| Konya                                      | Repère 1220 (achèvement selon Archnet) pour un chantier de 1116 aux années 1230.                                                                        |
+| Samudra Pasai                              | Repère 1297 (décès d’al-Malik al-Sālih) ; ses pierres tombales sont des remplacements tardifs selon Lambourn.                                           |
 
 Une date de monument atteste un foyer local à ce moment, sans être automatiquement la première arrivée de la tradition dans la région. Une décision royale, un synode, une réforme ou un texte n’est pas transformé en conversion générale de la population. Les croyances rapportées par les traditions sont présentées comme telles.
 
@@ -135,15 +142,15 @@ Les points de départ des diasporas yoruba représentent des relations culturell
 
 Chaque étape possède des `sourceIds` résolus vers une notice bibliographique avec URL HTTPS dans le même JSON. Le corpus s’appuie sur des musées, des universités, des publications savantes, des institutions patrimoniales et, pour certaines histoires de sanctuaires ou de missions, les institutions concernées. Les textes français et anglais sont des synthèses originales brèves ; le corpus ne reproduit pas les pages consultées ni leurs illustrations.
 
-Les principales familles documentaires sont le Metropolitan Museum of Art, le British Museum, les musées universitaires de Penn et Yale, les notices et évaluations de l’UNESCO, Harvard Pluralism Project, Encyclopaedia Iranica, SOAS, Heidelberg, ANU, Max Planck et les institutions patrimoniales nationales. Les notices UNESCO décrivent des sites patrimoniaux : leur inscription contemporaine n’est jamais utilisée comme date d’origine du culte. Une histoire institutionnelle ou un récit traditionnel ne devient pas automatiquement une datation archéologique certaine.
+Les principales familles documentaires sont le Metropolitan Museum of Art, le British Museum, les musées universitaires de Penn et Yale, les notices et évaluations de l’UNESCO, Harvard Pluralism Project, Encyclopaedia Iranica, SOAS, Heidelberg, ANU, Max Planck, les institutions patrimoniales nationales, le Saint-Siège (déclaration commune de 1965), les universités Columbia et Fordham, Cambridge University Press et Brill, Archnet, les musées nationaux du Danemark et de Nagasaki, la préfecture de Kagoshima, le chapitre et le diocèse de Cordoue, l’archicathédrale de Vilnius. Les notices UNESCO décrivent des sites patrimoniaux : leur inscription contemporaine n’est jamais utilisée comme date d’origine du culte. Une histoire institutionnelle ou un récit traditionnel ne devient pas automatiquement une datation archéologique certaine.
 
 Le JSON conserve les références, mais ne revendique pas une licence uniforme sur les sources liées. Les droits des textes et images des sites cités restent ceux de leurs détenteurs. Les polygones sont une géométrie éditoriale de ce projet, pas une reprise de cartes protégées ni des périmètres officiels d’inscription UNESCO.
 
-Les clés des symboles sont `cuneiform`, `ankh`, `laurel`, `menorah`, `faravahar`, `om`, `ahimsa`, `dharma-wheel`, `cross`, `crescent`, `khanda`, `yin-yang`, `confucian`, `torii`, `orisha` et `andean-sun`. Ce sont des identifiants visuels conventionnels de la légende ; leur affichage ne prétend pas que le symbole était utilisé à la date du premier jalon.
+Les clés des symboles sont `cuneiform`, `ankh`, `laurel`, `menorah`, `faravahar`, `om`, `ahimsa`, `dharma-wheel`, `cross`, `crescent`, `khanda`, `yin-yang`, `confucian`, `torii`, `orisha` et `andean-sun`. Ce sont des identifiants visuels conventionnels de la légende ; leur affichage ne prétend pas que le symbole était utilisé à la date du premier jalon. Le genre de l’étape choisit ensuite une variante d’emblème : `plain` par défaut, `origin` (double anneau), `divided` (anneau pointillé) pour un schisme, `closing` (barre oblique) pour un recul.
 
 ### Validation et enrichissement
 
-Le fichier est une curation explicite, sans API ou service tiers au moment de l’affichage. `ReligionDatasetSchema` dans `lib/religions/types.ts` contrôle les types, les bornes des coordonnées, les IDs uniques, la résolution des sources et traditions, les liens chronologiquement valides et la fermeture des polygones.
+Le fichier est une curation explicite, sans API ou service tiers au moment de l’affichage. `ReligionDatasetSchema` dans `lib/religions/types.ts` contrôle les types, les bornes des coordonnées, les IDs uniques, la résolution des sources et traditions, les liens chronologiquement valides et la fermeture des polygones. Les liens `closesId` sont validés eux aussi : seule une étape de genre `contraction` peut en porter un, vers une étape antérieure de la même tradition qui n’est pas elle-même une clôture.
 
 Validation locale ciblée :
 
@@ -151,6 +158,6 @@ Validation locale ciblée :
 pnpm exec tsx -e "import fs from 'node:fs'; import { ReligionDatasetSchema } from './lib/religions/types.ts'; const d = ReligionDatasetSchema.parse(JSON.parse(fs.readFileSync('public/data/religions/history.json', 'utf8'))); console.log(d.traditions.length, d.milestones.length, d.sources.length);"
 ```
 
-Résultat après l’enrichissement du 24 septembre 2026 : `16 131 148`. Un contrôle indépendant des 54 contours a vérifié leur fermeture, l’absence d’auto-intersection et l’inclusion de leur point de référence. Les liens ont été relus sur le fond ; aucun lien entre cultures andines distinctes n’a été ajouté pour combler la chronologie.
+Résultat après l’enrichissement du 29 septembre 2026 : `16 145 169`. Un contrôle indépendant des 54 contours a vérifié leur fermeture, l’absence d’auto-intersection et l’inclusion de leur point de référence. Les liens ont été relus sur le fond ; aucun lien entre cultures andines distinctes n’a été ajouté pour combler la chronologie.
 
 Pour enrichir le corpus, ajouter une source spécifique pour chaque nouvelle assertion de date, de lieu ou de relation. Expliquer les fourchettes dans les deux langues, maintenir la convention astronomique, préférer une étape indépendante à une filiation supposée et documenter toute modification de l’année représentative. Le mode **Majorités et présences** utilise son propre modèle et ses propres données ; l’ajout d’un jalon historique ne modifie pas ses estimations démographiques.
