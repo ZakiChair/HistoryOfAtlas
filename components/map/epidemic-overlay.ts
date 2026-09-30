@@ -18,6 +18,7 @@ import {
   type MilestoneOverlayView,
 } from './milestone-overlay';
 import { EPIDEMIC_POINTS, hasEpidemicAt } from './epidemic-hit';
+import { startEpidemicSpreadOverlay } from './epidemic-spread-overlay';
 import { createEpidemicSprites } from './epidemic-sprites';
 import { hasResourceAt, hasResourceCountAt } from './resource-hit';
 import { hasReligionAt } from './religion-hit';
@@ -30,7 +31,13 @@ export const epidemicCorpus = (dataset: EpidemicDataset): MilestoneCorpus<Epidem
   milestones: dataset.milestones,
   themeIdOf: (milestone) => milestone.diseaseId,
   emblemOf: (kind) =>
-    kind === 'emergence' ? 'origin' : kind === 'eradication' ? 'closing' : 'plain',
+    kind === 'emergence'
+      ? 'origin'
+      : kind === 'eradication'
+        ? 'closing'
+        : kind === 'control'
+          ? 'divided'
+          : 'plain',
 });
 
 export const epidemicFanIndex = (dataset: EpidemicDataset, sameDisease = false) =>
@@ -57,8 +64,8 @@ export function epidemicView(state: AtlasState): MilestoneOverlayView {
   };
 }
 
-export const startEpidemicOverlay = (map: MapInstance) =>
-  startMilestoneOverlay(map, {
+export const startEpidemicOverlay = (map: MapInstance) => {
+  const milestones = startMilestoneOverlay(map, {
     prefix: 'epidemic',
     store: useEpidemicStore,
     load: getEpidemicDataset,
@@ -70,5 +77,18 @@ export const startEpidemicOverlay = (map: MapInstance) =>
     hasForegroundAt: hasResourceCountAt,
     keepsPointerAt: (m, point) => hasResourceAt(m, point) || hasReligionAt(m, point),
   });
+  const spread = startEpidemicSpreadOverlay(map);
+  return {
+    update: (state: AtlasState) => {
+      milestones.update(state);
+      spread.update(state);
+    },
+    isReady: () => milestones.isReady() && spread.isReady(),
+    dispose: () => {
+      spread.dispose();
+      milestones.dispose();
+    },
+  };
+};
 
 export { EPIDEMIC_POINTS, hasEpidemicAt };

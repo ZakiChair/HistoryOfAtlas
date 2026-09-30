@@ -82,6 +82,10 @@ const fanOffset = (property: 'fan' | 'fanOwn'): ExpressionSpecification => [
   ['literal', [-FAN_SPACING, 0]],
   3,
   ['literal', [0, FAN_SPACING]],
+  4,
+  ['literal', [0, -FAN_SPACING]],
+  5,
+  ['literal', [FAN_SPACING, FAN_SPACING]],
   ['literal', [0, 0]],
 ];
 /** Crowded milestones (drawn as dots while crowded) sit above medallions, then origins. */
@@ -127,7 +131,7 @@ export function milestoneFanIndex<M extends MilestoneLike>(
           item.coordinates[1] - stage.coordinates[1],
         ) < SHARED_PLACE_DEGREES,
     );
-    if (anchor) fan.set(stage.id, Math.min(anchor.members++, 3));
+    if (anchor) fan.set(stage.id, Math.min(anchor.members++, 5));
     else {
       anchors.push({ coordinates: stage.coordinates, theme: corpus.themeIdOf(stage), members: 1 });
       fan.set(stage.id, 0);

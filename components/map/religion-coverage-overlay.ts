@@ -10,6 +10,7 @@ import {
 } from '@/lib/religions/coverage';
 import { publishReligionCoverage, useReligionCoverageStore } from '@/lib/religions/coverage-store';
 import { useReligionStore } from '@/lib/religions/store';
+import { useReligionPolityStore } from '@/lib/religions/polities-store';
 import { RELIGION_COVERAGE_AREAS, RELIGION_COVERAGE_SOURCE } from './religion-hit';
 import { raiseThematicLayers } from './thematic-stack';
 
@@ -56,7 +57,7 @@ export function startReligionCoverageOverlay(map: MapInstance) {
   const layerIds: string[] = [],
     images: string[] = [];
   let byGeometry = new Map<string, ReligionCoverageEntry>();
-  const active = () => Boolean(state?.religionsVisible && state.religionView === 'coverage');
+  const active = () => Boolean(state?.religionsVisible && state.religionView === 'dominant');
   const selection = () => {
     if (installed)
       map.setFilter(
@@ -235,6 +236,7 @@ export function startReligionCoverageOverlay(map: MapInstance) {
     const row = byGeometry.get(String(event.features?.[0]?.properties?.id ?? ''));
     if (row) {
       event.preventDefault();
+      useReligionPolityStore.getState().select(null);
       useReligionCoverageStore.getState().select(row);
     }
   };

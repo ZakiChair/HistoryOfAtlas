@@ -41,6 +41,7 @@ export default function EpidemicLayers({
   const year = useAtlasStore((state) => state.year);
   const range = useAtlasStore((state) => state.range);
   const filter = useAtlasStore((state) => state.epidemicFilter);
+  const spread = useAtlasStore((state) => state.epidemicSpreadVisible);
   // Named fields only: the store also carries a retry revision, which must not redraw the panel.
   const { status, dataset, visibleMilestones, selected, panelOpen } = useEpidemicStore(
     useShallow((state) => ({
@@ -214,6 +215,9 @@ export default function EpidemicLayers({
                   {selected.approximate && <abbr title={t('approximate')}>≈ </abbr>}
                   {stageDates(selected)}
                 </p>
+                <p className="religion-stage-relation">
+                  {t('extent')} : {t(`extent-${selected.extent}` as EpidemicCopyKey)}
+                </p>
                 <Localized as="p" value={selected.description} locale={locale} />
                 <h3>{t('vectors')}</h3>
                 <ul className="religion-mechanisms">
@@ -286,6 +290,19 @@ export default function EpidemicLayers({
               </>
             ) : (
               <>
+                <div className="religion-display-options" role="group" aria-label={t('title')}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      data-testid="epidemics-spread-toggle"
+                      checked={spread}
+                      onChange={(event) =>
+                        useAtlasStore.getState().setEpidemicSpreadVisible(event.target.checked)
+                      }
+                    />
+                    {t('spread')}
+                  </label>
+                </div>
                 {keyDisease && (
                   <MilestoneKey
                     locale={locale}
@@ -295,7 +312,18 @@ export default function EpidemicLayers({
                     fallback="influenza"
                     ink={EPIDEMIC_INK}
                     text={(key) => t(key as EpidemicCopyKey)}
-                    rows={['origin', 'milestone', 'contraction', 'age', 'dot', 'area', 'route']}
+                    rows={[
+                      'origin',
+                      'milestone',
+                      'contraction',
+                      'control',
+                      'age',
+                      'dot',
+                      'area',
+                      'halo',
+                      'front',
+                      'route',
+                    ]}
                   />
                 )}
                 <h3>{t('filter')}</h3>

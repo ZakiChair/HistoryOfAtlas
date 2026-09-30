@@ -97,6 +97,7 @@ export interface LicenseInputs {
     retrievedOn: string;
   };
   religionCoverage?: LicenseDataset[];
+  religionPolities?: LicenseDataset[];
   geography: {
     sources: {
       label: string;
@@ -233,6 +234,12 @@ export function licenseIssues(inputs: LicenseInputs): string[] {
     if (source.licenseUrl && !isHttpUrl(source.licenseUrl))
       issues.push(`Religion coverage source ${source.id} has an invalid terms URL`);
   }
+  for (const source of inputs.religionPolities ?? []) {
+    if (!source.license.trim() || !isHttpUrl(source.url) || !source.name.trim())
+      issues.push(`Religion polities source ${source.id} requires terms and URL`);
+    if (source.licenseUrl && !isHttpUrl(source.licenseUrl))
+      issues.push(`Religion polities source ${source.id} has an invalid terms URL`);
+  }
   if (!inputs.project.content.attribution.trim())
     issues.push('Project content licence needs an attribution');
   return issues;
@@ -274,6 +281,7 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
   const datasets: LicenseDataset[] = [
     ...eventSources,
     ...(inputs.religionCoverage ?? []),
+    ...(inputs.religionPolities ?? []),
     {
       id: 'cdb90',
       name: 'CDB90 · CAA Database of Battles, Version 1990',

@@ -6,7 +6,11 @@ import {
   useAtlasStore,
 } from '../../lib/store';
 
-const defaults = { epidemicsVisible: false, epidemicFilter: null };
+const defaults = {
+  epidemicsVisible: false,
+  epidemicFilter: null,
+  epidemicSpreadVisible: true,
+};
 
 describe('shareable epidemic layer preferences', () => {
   beforeEach(() => useAtlasStore.getState().reset());
@@ -15,13 +19,17 @@ describe('shareable epidemic layer preferences', () => {
     const state = parseAtlasUrl('?y=-500&resources=1&battles=0&play=1');
     expect(state).toMatchObject({ ...defaults, year: -500, playing: true });
     const query = new URLSearchParams(serializeAtlasUrl(state));
-    for (const key of ['epidemics', 'epidemic']) expect(query.has(key)).toBe(false);
+    for (const key of ['epidemics', 'epidemic', 'espread']) expect(query.has(key)).toBe(false);
     expect(query.get('resources')).toBe('1');
     expect(query.get('battles')).toBe('0');
   });
 
   it('uses exact URL flags and falls back safely for malformed values', () => {
     expect(parseAtlasUrl('?epidemics=1')).toMatchObject({ epidemicsVisible: true });
+    expect(parseAtlasUrl('?epidemics=1&espread=0')).toMatchObject({
+      epidemicsVisible: true,
+      epidemicSpreadVisible: false,
+    });
     for (const value of ['', 'invalid', 'true', 'false', '2'])
       expect(parseAtlasUrl(`?epidemics=${value}`)).toMatchObject(defaults);
   });
@@ -65,15 +73,18 @@ describe('shareable epidemic layer preferences', () => {
     const actions = useAtlasStore.getState();
     actions.setEpidemicsVisible(visible);
     actions.setEpidemicFilter('plague');
+    actions.setEpidemicSpreadVisible(false);
     const query = serializeAtlasUrl(useAtlasStore.getState());
     const params = new URLSearchParams(query);
     expect(params.get('epidemics')).toBe(visible ? '1' : null);
     expect(params.get('epidemic')).toBe('plague');
+    expect(params.get('espread')).toBe('0');
     actions.reset();
     actions.hydrateFromUrl(query);
     expect(useAtlasStore.getState()).toMatchObject({
       epidemicsVisible: visible,
       epidemicFilter: 'plague',
+      epidemicSpreadVisible: false,
     });
   });
 

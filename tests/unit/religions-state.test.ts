@@ -8,7 +8,7 @@ import {
 
 const defaults = {
   religionsVisible: false,
-  religionView: 'coverage',
+  religionView: 'dominant',
   religionFilter: null,
   religionRoutesVisible: true,
   religionAreasVisible: true,
@@ -19,13 +19,16 @@ describe('shareable religion layer preferences', () => {
 
   it('shares the historical mode even while the layer is hidden and normalizes invalid modes', () => {
     expect(parseAtlasUrl('?rview=history').religionView).toBe('history');
-    expect(parseAtlasUrl('?rview=invalid').religionView).toBe('coverage');
+    expect(parseAtlasUrl('?rview=invalid').religionView).toBe('dominant');
+    // Legacy coverage links resolve to the merged dominant-religions view.
+    expect(parseAtlasUrl('?rview=coverage').religionView).toBe('dominant');
+    expect(createInitialAtlasState().religionView).toBe('dominant');
     useAtlasStore.getState().setReligionView('history');
     const query = serializeAtlasUrl(useAtlasStore.getState());
     expect(new URLSearchParams(query).get('rview')).toBe('history');
     useAtlasStore.getState().hydrateFromUrl(query);
     expect(useAtlasStore.getState().religionView).toBe('history');
-    useAtlasStore.getState().setReligionView('coverage');
+    useAtlasStore.getState().setReligionView('dominant');
     expect(new URLSearchParams(serializeAtlasUrl(useAtlasStore.getState())).has('rview')).toBe(
       false,
     );

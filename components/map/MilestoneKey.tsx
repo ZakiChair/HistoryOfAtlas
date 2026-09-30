@@ -19,7 +19,18 @@ const ROUTE_WIDTH = 1.8;
 const OUTLINE_WIDTH = 1.6;
 
 export type MilestoneKeyRow =
-  'origin' | 'milestone' | 'schism' | 'contraction' | 'closed' | 'age' | 'dot' | 'area' | 'route';
+  | 'origin'
+  | 'milestone'
+  | 'schism'
+  | 'control'
+  | 'contraction'
+  | 'closed'
+  | 'age'
+  | 'dot'
+  | 'area'
+  | 'route'
+  | 'halo'
+  | 'front';
 
 export interface MilestoneKeyTheme {
   color: string;
@@ -163,7 +174,7 @@ export default function MilestoneKey({
     () => typeof window === 'undefined' || !window.matchMedia('(max-width: 580px)').matches,
   );
   const { color, symbol } = theme;
-  const emblem = (variant: MilestoneEmblem) => (
+  const emblem = (variant: MilestoneEmblem, label = 'legendSchism') => (
     <li>
       <Swatch color={color}>
         <g transform={SYMBOL_BOX}>
@@ -178,11 +189,7 @@ export default function MilestoneKey({
       </Swatch>
       <span>
         {t(
-          variant === 'origin'
-            ? 'legendOrigin'
-            : variant === 'divided'
-              ? 'legendSchism'
-              : 'legendContraction',
+          variant === 'origin' ? 'legendOrigin' : variant === 'divided' ? label : 'legendContraction',
         )}
       </span>
     </li>
@@ -200,6 +207,7 @@ export default function MilestoneKey({
       </li>
     ),
     schism: emblem('divided'),
+    control: emblem('divided', 'legendControl'),
     contraction: emblem('closing'),
     closed: (
       <li>
@@ -303,6 +311,39 @@ export default function MilestoneKey({
           />
         </Swatch>
         <span>{t('legendRoute')}</span>
+      </li>
+    ),
+    halo: (
+      <li>
+        <Swatch color={color}>
+          <circle
+            cx={15}
+            cy={12}
+            r={9}
+            fill="currentColor"
+            fillOpacity={0.3}
+            stroke="currentColor"
+            strokeOpacity={0.7}
+            strokeWidth={1}
+          />
+        </Swatch>
+        <span>{t('halo')}</span>
+      </li>
+    ),
+    front: (
+      <li>
+        <Swatch color={color}>
+          <path d={ZONE} fill="currentColor" fillOpacity={0.22} />
+          <path
+            d={ZONE}
+            fill="none"
+            stroke="currentColor"
+            strokeOpacity={0.85}
+            strokeWidth={1.4}
+            strokeLinejoin="round"
+          />
+        </Swatch>
+        <span>{t('front')}</span>
       </li>
     ),
   };

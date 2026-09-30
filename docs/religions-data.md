@@ -1,8 +1,8 @@
-# Religions : majorités, présences et repères historiques
+# Religions : dominantes par État, zones quantitatives et repères historiques
 
-La couche **Religions** propose deux représentations complémentaires : **Majorités et présences**, fondée sur des données de composition de la population, et **Repères historiques**, qui conserve les attestations, étapes de diffusion et foyers du corpus éditorial. Le changement de mode ne transforme pas un sanctuaire, une religion officielle ou la religion d’un souverain en majorité démographique.
+La couche **Religions** propose deux représentations complémentaires : **Religions dominantes** (par défaut), qui colore les contours politiques de Cliopatria selon la religion attribuée à chaque État et superpose les zones quantitatives RCS/Seshat documentées, et **Repères historiques**, qui conserve les attestations, étapes de diffusion et foyers du corpus éditorial. Le changement de mode ne transforme pas un sanctuaire, une religion officielle ou la religion d’un souverain en majorité démographique.
 
-## Majorités et présences
+## Zones quantitatives RCS/Seshat
 
 L’index [`public/data/religions/coverage-index.json`](../public/data/religions/coverage-index.json) rassemble les observations quantitatives RCS et les observations qualitatives Seshat, résumées pour le rendu (géométries arrondies à 1e-4°, majorité et traditions présentes par observation). Il est chargé à l’activation de la couche ; les couleurs et hachures résument les données disponibles pour l’année de l’atlas, ou la fin de la plage sélectionnée. Un clic sur une zone charge le fichier `coverage/<région>.json` correspondant, qui donne accès au périmètre de population, à la date ou à l’intervalle de référence, aux parts ou qualifications documentées et aux sources.
 
@@ -50,6 +50,20 @@ pnpm data:religions:check
 ```
 
 La reconstruction normale utilise les extraits versionnés dans le dépôt, sans accès réseau. La réacquisition complète est une opération séparée, documentée dans le [guide RCS](../pipeline/religions/README.md) et le [guide Seshat](../pipeline/religions/SESHAT.md). Ces guides détaillent les filtres, les correspondances géographiques, les empreintes des sources et les vérifications propres à chaque import. `ReligionCoverageDatasetSchema` dans `lib/religions/coverage.ts` contrôle les observations, leurs références, les parts et les géométries avant publication ; `ReligionCoverageIndexSchema` et `ReligionCoverageRegionSchema` valident ensuite l’index publié et chaque fichier de région.
+
+## Religion dominante par État (vue par défaut)
+
+`public/data/religions/polities.json` attribue à chaque État Cliopatria la religion dominante de sa population, ou à défaut sa religion d’État, année par année — **824 entités sur 1 583, 1 203 intervalles** (dont cinq agrégats coloniaux pluricontinentaux émis sans couleur — `exclude`). Trois preuves graduées se combinent :
+
+- `majority` — Seshat « Widespread Religion », codes `v_m`/`o_h_p` : majorité documentée dans la population ;
+- `predominant` — Seshat, autre code de prévalence en première position : religion la plus répandue sans majorité mesurée ;
+- `state` — Wikidata P140 (religion ou conception du monde) de l’item de l’État : religion de l’État, population non documentée ; ou supplément éditorial (`editorial`) qui peut afficher l’un ou l’autre niveau.
+
+Chaque intervalle garde le libellé de sa source (« Orthodoxie byzantine — vaste majorité », item Wikidata, famille éditoriale), ses liens et ses `sourceIds` ; `others` liste les autres religions Seshat codées pour la même entité, et `state` peut reporter la religion d’État Wikidata quand le remplissage vient d’une autre famille. Les choix Wikidata non tranchables entre familles sont marqués `ambiguous` avec leurs `alternatives`, et un item Wikidata de la famille `unaffiliated` ne colore pas la carte : il produit une mention `secular`.
+
+Règle de datation : à la différence du fragment de couverture relu, un code Seshat de premier rang **non daté est appliqué à la durée du régime politique** (choix assumé, toujours signalé dans la note de l’intervalle). Les codes datés coupent les non datés ; deux codes datés concurrents de familles différentes annulent leur recouvrement (report `conflicts`). Une lacune de dix ans ou moins entre deux attributions Seshat de même famille est comblée et signalée dans la note. Une affirmation Wikidata ne peut pas peindre une dénomination avant son existence (famille `minYear`, items `wikidataItemMinYear`). Priorité de fusion : supplément éditorial > Seshat > supplément « de repli » (`priority: fallback`) > Wikidata ; un niveau inférieur ne comble que les années non couvertes. Les fragments Wikidata de deux ans ou moins coincés entre deux autres attributions sont écartés comme artefacts du découpage. Le supplément `data/curated/religion-polities-supplement.json` (366 sujets). Cinq agrégats coloniaux pluricontinentaux (British Africa, French Africa, French Indochina, German Africa, Italian Africa) portent `exclude` au lieu d’intervalles : ils sont émis sans aucune couleur (`spans: []`, raison bilingue affichée dans la fiche) quoi que disent Seshat ou Wikidata. s’appuie sur des notices encyclopédiques identifiées comme telles.
+
+Une couleur affirme la religion dominante **de l’État**, pas le lieu de résidence des croyants : le polygone est le contour politique approximatif de Cliopatria, une religion d’État n’est pas une majorité de population, et une zone non colorée n’établit pas l’absence de religion. Reproduction : `pipeline/religions/POLITIES.md`.
 
 ## Repères historiques
 

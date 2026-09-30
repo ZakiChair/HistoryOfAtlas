@@ -102,6 +102,26 @@ export function readLicenseInputs(): LicenseInputs {
         'Religious composition and geographic study areas; selected and transformed source observations',
       attribution: source.citation ?? source.title,
     })),
+    ...(existsSync(new URL('public/data/religions/polities.json', root))
+      ? {
+          religionPolities: readJson<{
+            sources: {
+              id: string;
+              title: string;
+              url: string;
+              license: string;
+              licenseUrl?: string;
+            }[];
+          }>('public/data/religions/polities.json').sources.map((source) => ({
+            id: `religion-polities-${source.id}`,
+            name: source.title,
+            url: source.url,
+            license: source.license,
+            ...(source.licenseUrl ? { licenseUrl: source.licenseUrl } : {}),
+            scope: 'Dominant or state religion attributed to a dated polity outline',
+          })),
+        }
+      : {}),
     geography: { sources: geography.sources },
     events: { sources: events.sources },
     cdb90,

@@ -53,12 +53,13 @@ export interface AtlasState {
   battlesVisible: boolean;
   resourcesVisible: boolean;
   religionsVisible: boolean;
-  religionView: 'coverage' | 'history';
+  religionView: 'dominant' | 'history';
   religionFilter: string | null;
   religionRoutesVisible: boolean;
   religionAreasVisible: boolean;
   epidemicsVisible: boolean;
   epidemicFilter: string | null;
+  epidemicSpreadVisible: boolean;
   battleMode: boolean;
   battlePlaying: boolean;
   battleSpeed: 0.5 | 1 | 2;
@@ -94,12 +95,13 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   battlesVisible: true,
   resourcesVisible: false,
   religionsVisible: false,
-  religionView: 'coverage',
+  religionView: 'dominant',
   religionFilter: null,
   religionRoutesVisible: true,
   religionAreasVisible: true,
   epidemicsVisible: false,
   epidemicFilter: null,
+  epidemicSpreadVisible: true,
   battleMode: false,
   battlePlaying: false,
   battleSpeed: 1,
@@ -236,12 +238,13 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   state.battlesVisible = query.get('battles') !== '0';
   state.resourcesVisible = query.get('resources') === '1';
   state.religionsVisible = query.get('religions') === '1';
-  state.religionView = query.get('rview') === 'history' ? 'history' : 'coverage';
+  state.religionView = query.get('rview') === 'history' ? 'history' : 'dominant';
   state.religionFilter = religionIdentifier(query.get('religion'));
   state.religionRoutesVisible = query.get('rpaths') !== '0';
   state.religionAreasVisible = query.get('rareas') !== '0';
   state.epidemicsVisible = query.get('epidemics') === '1';
   state.epidemicFilter = religionIdentifier(query.get('epidemic'));
+  state.epidemicSpreadVisible = query.get('espread') !== '0';
   state.battleMode = query.get('battle') === '1' && state.battlesVisible;
   if (!state.battlesVisible && query.get('battle') === '1') state.selectedEvent = null;
   state.battleProgress = finiteNumber(query.get('bphase'), 0, 0, 1);
@@ -299,6 +302,7 @@ export function serializeAtlasUrl(state: AtlasState): string {
   if (!state.religionRoutesVisible) query.set('rpaths', '0');
   if (!state.religionAreasVisible) query.set('rareas', '0');
   if (state.epidemicsVisible) query.set('epidemics', '1');
+  if (!state.epidemicSpreadVisible) query.set('espread', '0');
   const epidemicFilter = religionIdentifier(state.epidemicFilter);
   if (epidemicFilter) query.set('epidemic', epidemicFilter);
   if (state.battleMode) {
@@ -353,6 +357,7 @@ export interface AtlasActions {
   setReligionAreasVisible: (visible: boolean) => void;
   setEpidemicsVisible: (visible: boolean) => void;
   setEpidemicFilter: (disease: string | null) => void;
+  setEpidemicSpreadVisible: (visible: boolean) => void;
   setBattleMode: (enabled: boolean) => void;
   setBattlePlaying: (playing: boolean) => void;
   setBattleSpeed: (speed: AtlasState['battleSpeed']) => void;
@@ -512,7 +517,7 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
     setBattlesVisible: (battlesVisible) => set((state) => playbackPatch(state, { battlesVisible })),
     setResourcesVisible: (resourcesVisible) => set({ resourcesVisible }),
     setReligionsVisible: (religionsVisible) => set({ religionsVisible }),
-    setReligionView: (view) => set({ religionView: view === 'history' ? 'history' : 'coverage' }),
+    setReligionView: (view) => set({ religionView: view === 'history' ? 'history' : 'dominant' }),
     setReligionFilter: (religionFilter) =>
       set({ religionFilter: religionIdentifier(religionFilter) }),
     setReligionRoutesVisible: (religionRoutesVisible) => set({ religionRoutesVisible }),
@@ -520,6 +525,7 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
     setEpidemicsVisible: (epidemicsVisible) => set({ epidemicsVisible }),
     setEpidemicFilter: (epidemicFilter) =>
       set({ epidemicFilter: religionIdentifier(epidemicFilter) }),
+    setEpidemicSpreadVisible: (epidemicSpreadVisible) => set({ epidemicSpreadVisible }),
     setBattleMode: (battleMode) =>
       set((state) =>
         playbackPatch(state, {
@@ -560,7 +566,7 @@ export const useAtlasStore = create<AtlasState & AtlasActions>()(
           ? { religionFilter: religionIdentifier(patch.religionFilter) }
           : {}),
         ...(patch.religionView !== undefined
-          ? { religionView: patch.religionView === 'history' ? 'history' : 'coverage' }
+          ? { religionView: patch.religionView === 'history' ? 'history' : 'dominant' }
           : {}),
         ...(patch.epidemicFilter !== undefined
           ? { epidemicFilter: religionIdentifier(patch.epidemicFilter) }

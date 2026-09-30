@@ -12,7 +12,7 @@ import type { ReligionMilestone } from '@/lib/religions/types';
 import { formatYear } from '@/lib/histdate';
 import Localized from '../ui/Localized';
 import ReligionKey, { TraditionIcon } from './ReligionKey';
-import ReligionCoverageLayers from './ReligionCoverageLayers';
+import ReligionDominantLayers from './ReligionDominantLayers';
 import ReligionViewSwitch from './ReligionViewSwitch';
 
 export default function ReligionLayers(props: { panelId: string; onClose: () => void }) {
@@ -20,7 +20,7 @@ export default function ReligionLayers(props: { panelId: string; onClose: () => 
   return view === 'history' ? (
     <ReligionHistoryLayers {...props} />
   ) : (
-    <ReligionCoverageLayers {...props} />
+    <ReligionDominantLayers {...props} />
   );
 }
 

@@ -5346,3 +5346,17 @@ ul {
     transform: scaleX(-1);
   }
 }
+
+/* Evidence swatches for the dominant-religion polity fills. */
+.religion-coverage-swatch.dominant {
+  background: #c8a561;
+}
+.religion-coverage-swatch.predominant {
+  background: color-mix(in srgb, #c8a561 55%, transparent);
+}
+.religion-coverage-swatch.state {
+  background:
+    radial-gradient(circle 1.1px at 7px 6px, var(--paper) 92%, transparent),
+    radial-gradient(circle 1.1px at 20px 16px, var(--paper) 92%, transparent),
+    color-mix(in srgb, #c8a561 32%, transparent);
+}

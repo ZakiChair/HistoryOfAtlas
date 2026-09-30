@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import type {
   Map as MapInstance,
   MapLayerMouseEvent,
+  ExpressionSpecification,
   FilterSpecification,
   StyleSpecification,
   VectorTileSource,
@@ -26,6 +27,8 @@ import { attachEventClustering, EVENT_QUERY_LAYER, type EventClustering } from '
 import { hasResourceAt } from './resource-hit';
 import { useResourceStore } from '@/lib/resources/store';
 import { hasReligionAt, hasReligionCoverageAt } from './religion-hit';
+import { useReligionPolityStore } from '@/lib/religions/polities-store';
+import { religionPolityPaint } from './religion-polity-paint';
 import { hasEpidemicAt } from './epidemic-hit';
 import { THEMATIC_LAYERS, type ThematicOverlay } from './thematic-layers';
 import { EVENT_COLOR_EXPRESSION, SELECTION_COLORS } from '@/lib/colors/semantic';
@@ -33,6 +36,23 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 type AtlasState = ReturnType<typeof useAtlasStore.getState>;
 const eventColor = EVENT_COLOR_EXPRESSION;
+
+/** Two light dots mark polities whose only attribution is a state religion. */
+function religionStateDotsImage(hex: string) {
+  const width = 8,
+    data = new Uint8Array(width * width * 4);
+  const channels = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+  for (const [cx, cy] of [
+    [2, 2],
+    [6, 6],
+  ])
+    for (let dy = -1; dy <= 0; dy++)
+      for (let dx = -1; dx <= 0; dx++) {
+        const offset = ((cy + dy) * width + cx + dx) * 4;
+        data.set([...channels, 128], offset);
+      }
+  return { width, height: width, data };
+}
 
 function makeStyle(
   manifest: GeographyManifest,
@@ -275,7 +295,7 @@ export default function WorldMap() {
           if (
             reduced ||
             state.playing ||
-            (state.religionsVisible && state.religionView === 'coverage')
+            (state.religionsVisible && state.religionView === 'dominant')
           )
             return;
           cancelGhost();
@@ -315,7 +335,7 @@ export default function WorldMap() {
           boundaryResources.delete(id);
           if (resource?.retirement) clearTimeout(resource.retirement);
           resource?.detach();
-          for (const suffix of ['ghost', 'fill', 'border', 'label']) {
+          for (const suffix of ['ghost', 'fill', 'religion-pattern', 'border', 'label']) {
             if (map.getLayer(`${id}-${suffix}`)) map.removeLayer(`${id}-${suffix}`);
           }
           if (map.getSource(id)) map.removeSource(id);
@@ -365,6 +385,10 @@ export default function WorldMap() {
             existing.retirement = null;
             return;
           }
+          if (!map.hasImage('religion-state-dots-dark'))
+            map.addImage('religion-state-dots-dark', religionStateDotsImage('#dfe7e8'));
+          if (!map.hasImage('religion-state-dots-light'))
+            map.addImage('religion-state-dots-light', religionStateDotsImage('#2b2a22'));
           // Retain the most recent loaded predecessor while bounding fast-scrub memory.
           while (boundaryResources.size >= 4) {
             const candidates = [...boundaryResources].filter(
@@ -404,6 +428,20 @@ export default function WorldMap() {
                 'fill-color': ['get', 'color'],
                 'fill-opacity': 0,
                 'fill-opacity-transition': { duration: reduced ? 0 : 450 },
+              },
+            },
+            eventsReady ? 'event-halo' : undefined,
+          );
+          map.addLayer(
+            {
+              id: `${id}-religion-pattern`,
+              type: 'fill',
+              source: id,
+              'source-layer': sourceLayer,
+              layout: { visibility: 'none' },
+              paint: {
+                'fill-pattern': dark ? 'religion-state-dots-dark' : 'religion-state-dots-light',
+                'fill-opacity': 0.55,
               },
             },
             eventsReady ? 'event-halo' : undefined,
@@ -493,12 +531,20 @@ export default function WorldMap() {
             )
               return;
             const entityId = event.features?.[0]?.properties?.entityId;
-            if (entityId)
-              useAtlasStore.getState().patchState({
-                selectedEntity: String(entityId),
-                selectedEvent: null,
-                selectedPerson: null,
+            if (!entityId) return;
+            const current = useAtlasStore.getState();
+            if (current.religionsVisible && current.religionView === 'dominant') {
+              useReligionPolityStore.getState().select({
+                entityId: String(entityId),
+                name: String(event.features?.[0]?.properties?.name ?? entityId),
               });
+              return;
+            }
+            useAtlasStore.getState().patchState({
+              selectedEntity: String(entityId),
+              selectedEvent: null,
+              selectedPerson: null,
+            });
           };
           const enter = () => {
             if (!currentBoundarySources.includes(id)) return;
@@ -524,7 +570,15 @@ export default function WorldMap() {
 
         const updateTerritories = (state: AtlasState) => {
           cancelGhost();
-          const religiousCoverage = state.religionsVisible && state.religionView === 'coverage';
+          const dominant = state.religionsVisible && state.religionView === 'dominant';
+          const paint = dominant
+            ? religionPolityPaint(
+                useReligionPolityStore.getState().dataset,
+                state.range ? Math.max(...state.range) : state.year,
+                state.religionFilter,
+                state.theme,
+              )
+            : null;
           const frames = boundaryFrames(geo, state.year, state.boundarySource);
           currentBoundarySources = frames.map((frame) => frame.id);
           for (const frame of frames) {
@@ -536,18 +590,43 @@ export default function WorldMap() {
             map.setPaintProperty(`${id}-ghost`, 'fill-opacity', 0);
             map.setPaintProperty(
               `${id}-fill`,
+              'fill-color',
+              dominant ? paint!.fillColor : ['get', 'color'],
+            );
+            map.setPaintProperty(
+              `${id}-fill`,
               'fill-opacity',
-              religiousCoverage
-                ? 0
+              dominant
+                ? typeof paint!.fillOpacity === 'number'
+                  ? paint!.fillOpacity * frame.weight
+                  : (['*', paint!.fillOpacity, frame.weight] as ExpressionSpecification)
                 : (temporal ? (state.theme === 'dark' ? 0.44 : 0.32) : 0.42) * frame.weight,
             );
             map.setPaintProperty(
               `${id}-border`,
               'line-opacity',
-              (religiousCoverage ? 0.3 : temporal ? 0.8 : 0.65) * frame.weight,
+              (dominant ? 0.45 : temporal ? 0.8 : 0.65) * frame.weight,
             );
             map.setPaintProperty(`${id}-label`, 'text-opacity', 0.82 * frame.weight);
-            if (!temporal) continue;
+            const pattern = `${id}-religion-pattern`;
+            map.setPaintProperty(
+              pattern,
+              'fill-pattern',
+              state.theme === 'dark' ? 'religion-state-dots-dark' : 'religion-state-dots-light',
+            );
+            map.setLayoutProperty(
+              pattern,
+              'visibility',
+              dominant && paint!.stateIds.length ? 'visible' : 'none',
+            );
+            if (!temporal) {
+              map.setFilter(pattern, [
+                'in',
+                ['get', 'entityId'],
+                ['literal', dominant ? paint!.stateIds : []],
+              ]);
+              continue;
+            }
             const filter: FilterSpecification = [
               'all',
               ['<=', ['get', 'fromYear'], frame.year!],
@@ -555,6 +634,11 @@ export default function WorldMap() {
             ];
             for (const suffix of ['fill', 'border', 'label'])
               map.setFilter(`${id}-${suffix}`, filter);
+            map.setFilter(pattern, [
+              'all',
+              filter,
+              ['in', ['get', 'entityId'], ['literal', dominant ? paint!.stateIds : []]],
+            ]);
             if (lastYear !== state.year && !state.playing && !reduced)
               showPreviousTerritory(id, lastYear);
           }
@@ -563,20 +647,13 @@ export default function WorldMap() {
             map.setPaintProperty(
               `${id}-border`,
               'line-color',
-              religiousCoverage
-                ? state.theme === 'dark'
-                  ? '#8da5a8'
-                  : '#65767a'
-                : ['get', 'color'],
+              dominant ? (state.theme === 'dark' ? '#8da5a8' : '#65767a') : ['get', 'color'],
             );
-            if (religiousCoverage) {
-              map.setPaintProperty(`${id}-fill`, 'fill-opacity', 0);
-              map.setPaintProperty(`${id}-ghost`, 'fill-opacity', 0);
-            }
             if (currentBoundarySources.includes(id)) continue;
             // A retained outline is only a loading transition, never a current political label.
             map.setLayoutProperty(`${id}-label`, 'visibility', 'none');
             map.setPaintProperty(`${id}-label`, 'text-opacity', 0);
+            map.setLayoutProperty(`${id}-religion-pattern`, 'visibility', 'none');
           }
           retirePreviousTerritories();
           lastYear = state.year;
@@ -594,7 +671,9 @@ export default function WorldMap() {
             state.theme !== previous.theme ||
             state.boundarySource !== previous.boundarySource ||
             state.religionsVisible !== previous.religionsVisible ||
-            state.religionView !== previous.religionView
+            state.religionView !== previous.religionView ||
+            state.religionFilter !== previous.religionFilter ||
+            state.range !== previous.range
           )
             updateTerritories(state);
           if (eventsReady) {
@@ -1036,6 +1115,9 @@ export default function WorldMap() {
           if (state.revision !== previous.revision && !resourceOverlay && styleReady)
             renderQueue.submit(useAtlasStore.getState(), true);
         });
+        const unsubscribePolities = useReligionPolityStore.subscribe((state, previous) => {
+          if (state.dataset !== previous.dataset) updateTerritories(useAtlasStore.getState());
+        });
         const unsubscribeThematic = THEMATIC_LAYERS.map((layer, index) =>
           layer.store.subscribe((state, previous) => {
             if (
@@ -1049,6 +1131,7 @@ export default function WorldMap() {
         cleanup = () => {
           unsubscribe();
           unsubscribeResources();
+          unsubscribePolities();
           for (const unsubscribeThematicLayer of unsubscribeThematic) unsubscribeThematicLayer();
           renderQueue.dispose();
           campaignOverlay?.dispose();

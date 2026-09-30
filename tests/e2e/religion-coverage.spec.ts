@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { splitReligionCoverage, type ReligionCoverageDataset } from '../../lib/religions/coverage';
+import { religionPolitiesFixture } from '../fixtures/religion-polities';
 
 // Deliberately synthetic shares test the presentation without asserting historical facts.
 const text = (fr: string, en = fr) => ({ fr, en });
@@ -102,6 +103,9 @@ test.beforeEach(async ({ page }) => {
   await page.route('**/data/religions/coverage-index.json', (route) =>
     route.fulfill({ json: split.index }),
   );
+  await page.route('**/data/religions/polities.json', (route) =>
+    route.fulfill({ json: religionPolitiesFixture }),
+  );
   await page.route('**/data/religions/coverage/*.json', (route) => {
     const regionId = decodeURIComponent(
       new URL(route.request().url()).pathname
@@ -136,8 +140,8 @@ test('switching to historical milestones and back keeps the panel open and resto
   await expect(page.getByTestId('religion-view-history')).toHaveAttribute('aria-pressed', 'true');
   await expect(page).toHaveURL(/rview=history/);
   await expect(page.getByTestId('religion-coverage-detail')).not.toBeAttached();
-  await page.getByTestId('religion-view-coverage').click();
-  await expect(page.getByTestId('religion-view-coverage')).toHaveAttribute('aria-pressed', 'true');
+  await page.getByTestId('religion-view-dominant').click();
+  await expect(page.getByTestId('religion-view-dominant')).toHaveAttribute('aria-pressed', 'true');
   await expect(page).not.toHaveURL(/rview=history/);
   await page.getByTestId('religion-region-test-1900').click();
   await expect(page.getByTestId('religion-coverage-detail')).toContainText(/60\s*%/);
@@ -155,7 +159,16 @@ test('majorities are the default view, significant minorities and source dates r
 }) => {
   await page.goto('/?lang=fr&y=1900&religions=1&battles=0');
   await page.getByTestId('religions-legend-toggle').click();
-  await expect(page.getByTestId('religion-view-coverage')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByTestId('religion-view-dominant')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByTestId('religions-status')).toContainText('États attribués');
+  await expect(page.getByTestId('religions-status')).toContainText('Zones quantitatives');
+  await expect(page.getByTestId('religions-panel')).toContainText(
+    'Majorité documentée dans la population',
+  );
+  await expect(page.getByTestId('religions-panel')).toContainText('sans majorité mesurée');
+  await expect(page.getByTestId('religions-panel')).toContainText(
+    'Religion d’État ou officielle seulement',
+  );
   await expect(page.getByTestId('religions-panel')).toContainText('20 %');
   await page.getByTestId('religion-region-test-1900').click();
   const detail = page.getByTestId('religion-coverage-detail');
@@ -223,7 +236,7 @@ test('invalid coverage data can be retried and the tradition filter remains usab
   await page.goto('/?lang=fr&y=1900&religions=1&battles=0');
   await expect(page.getByTestId('religions-status').getByRole('alert')).toBeVisible();
   await page.getByTestId('religions-status').getByRole('button').click();
-  await expect(page.getByTestId('religions-status')).toContainText('Zones documentées : 1');
+  await expect(page.getByTestId('religions-status')).toContainText('Zones quantitatives : 1');
   await page.getByTestId('religions-legend-toggle').click();
   await page.getByRole('combobox', { name: 'Afficher une tradition' }).selectOption('islam');
   await expect(page).toHaveURL(/religion=islam/);

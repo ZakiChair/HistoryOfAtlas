@@ -1,0 +1,881 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-30",
+  "policy": "Editorial reading grid for the polity-level religion attribution. Source labels (Seshat religion names, Wikidata items) are grouped into atlas families for the fill colour only; the source label, its prevalence code or its Wikidata item stay attached to every span and are shown in the panel. Grouping never adds two labels together. A null family means the label is not used for the fill (generic or unidentified).",
+  "families": [
+    {
+      "id": "christianity",
+      "names": {
+        "fr": "Christianismes",
+        "en": "Christian traditions"
+      },
+      "color": "#c084d8",
+      "symbol": "cross",
+      "kind": "religion",
+      "minYear": 30
+    },
+    {
+      "id": "islam",
+      "names": {
+        "fr": "Islam",
+        "en": "Islam"
+      },
+      "color": "#249c66",
+      "symbol": "crescent",
+      "kind": "religion",
+      "minYear": 610
+    },
+    {
+      "id": "judaism",
+      "names": {
+        "fr": "Judaïsme",
+        "en": "Judaism"
+      },
+      "color": "#669cf6",
+      "symbol": "menorah",
+      "kind": "religion"
+    },
+    {
+      "id": "buddhism",
+      "names": {
+        "fr": "Bouddhismes",
+        "en": "Buddhist traditions"
+      },
+      "color": "#b49c3c",
+      "symbol": "dharma-wheel",
+      "kind": "religion",
+      "minYear": -500
+    },
+    {
+      "id": "hinduism",
+      "names": {
+        "fr": "Traditions védiques et hindoues",
+        "en": "Vedic and Hindu traditions"
+      },
+      "color": "#c0783c",
+      "symbol": "om",
+      "kind": "religion"
+    },
+    {
+      "id": "jainism",
+      "names": {
+        "fr": "Jaïnisme",
+        "en": "Jainism"
+      },
+      "color": "#cc629f",
+      "symbol": "ahimsa",
+      "kind": "religion",
+      "minYear": -600
+    },
+    {
+      "id": "sikhism",
+      "names": {
+        "fr": "Sikhisme",
+        "en": "Sikhism"
+      },
+      "color": "#3690b4",
+      "symbol": "khanda",
+      "kind": "religion",
+      "minYear": 1469
+    },
+    {
+      "id": "zoroastrianism",
+      "names": {
+        "fr": "Zoroastrisme et religions iraniennes anciennes",
+        "en": "Zoroastrianism and ancient Iranian religions"
+      },
+      "color": "#d8606c",
+      "symbol": "faravahar",
+      "kind": "religion",
+      "minYear": -1500
+    },
+    {
+      "id": "manichaeism",
+      "names": {
+        "fr": "Manichéisme",
+        "en": "Manichaeism"
+      },
+      "color": "#8e6b9e",
+      "symbol": "star",
+      "kind": "religion",
+      "minYear": 240
+    },
+    {
+      "id": "mandaeism",
+      "names": {
+        "fr": "Mandéisme",
+        "en": "Mandaeism"
+      },
+      "color": "#709da8",
+      "symbol": "water",
+      "kind": "religion",
+      "minYear": 1
+    },
+    {
+      "id": "bahai",
+      "names": {
+        "fr": "Foi bahá’íe",
+        "en": "Bahá’í Faith"
+      },
+      "color": "#c7aa55",
+      "symbol": "star",
+      "kind": "religion",
+      "minYear": 1844
+    },
+    {
+      "id": "chinese-folk",
+      "names": {
+        "fr": "Religion populaire chinoise et cultes chinois anciens",
+        "en": "Chinese popular religion and ancient Chinese cults"
+      },
+      "color": "#e3b23c",
+      "symbol": "yin-yang",
+      "kind": "religion"
+    },
+    {
+      "id": "daoism",
+      "names": {
+        "fr": "Traditions taoïstes",
+        "en": "Daoist traditions"
+      },
+      "color": "#89a2a4",
+      "symbol": "yin-yang",
+      "kind": "religion",
+      "minYear": -400
+    },
+    {
+      "id": "confucianism",
+      "names": {
+        "fr": "Traditions confucéennes",
+        "en": "Confucian traditions"
+      },
+      "color": "#c0909c",
+      "symbol": "confucian",
+      "kind": "religion",
+      "minYear": -500
+    },
+    {
+      "id": "shinto",
+      "names": {
+        "fr": "Cultes des kami et shinto",
+        "en": "Kami worship and Shinto"
+      },
+      "color": "#de846c",
+      "symbol": "torii",
+      "kind": "religion"
+    },
+    {
+      "id": "tengrism",
+      "names": {
+        "fr": "Tengrisme et chamanismes des steppes",
+        "en": "Tengrism and steppe shamanism"
+      },
+      "color": "#6fb7c7",
+      "symbol": "circle",
+      "kind": "religion"
+    },
+    {
+      "id": "greco-roman",
+      "names": {
+        "fr": "Traditions grecques et romaines",
+        "en": "Greek and Roman traditions"
+      },
+      "color": "#8a8a60",
+      "symbol": "laurel",
+      "kind": "religion"
+    },
+    {
+      "id": "egyptian",
+      "names": {
+        "fr": "Traditions égyptiennes anciennes",
+        "en": "Ancient Egyptian traditions"
+      },
+      "color": "#1e9696",
+      "symbol": "ankh",
+      "kind": "religion"
+    },
+    {
+      "id": "ancient-near-east",
+      "names": {
+        "fr": "Traditions du Proche-Orient ancien",
+        "en": "Ancient Near Eastern traditions"
+      },
+      "color": "#9c8472",
+      "symbol": "cuneiform",
+      "kind": "religion"
+    },
+    {
+      "id": "european-ancient",
+      "names": {
+        "fr": "Traditions celtiques, germaniques, baltes et slaves anciennes",
+        "en": "Ancient Celtic, Germanic, Baltic and Slavic traditions"
+      },
+      "color": "#c9a66b",
+      "symbol": "circle",
+      "kind": "religion"
+    },
+    {
+      "id": "old-norse",
+      "names": {
+        "fr": "Traditions nordiques anciennes",
+        "en": "Old Norse traditions"
+      },
+      "color": "#768eab",
+      "symbol": "norse",
+      "kind": "religion"
+    },
+    {
+      "id": "ethiopian-traditional",
+      "names": {
+        "fr": "Traditions éthiopiennes anciennes",
+        "en": "Traditional Ethiopian religions"
+      },
+      "color": "#ac805e",
+      "symbol": "ethiopian",
+      "kind": "religion"
+    },
+    {
+      "id": "african-traditional",
+      "names": {
+        "fr": "Religions traditionnelles africaines",
+        "en": "African traditional religions"
+      },
+      "color": "#a45d3f",
+      "symbol": "orisha",
+      "kind": "religion"
+    },
+    {
+      "id": "mesoamerican",
+      "names": {
+        "fr": "Traditions mésoaméricaines",
+        "en": "Mesoamerican traditions"
+      },
+      "color": "#c96f5c",
+      "symbol": "circle",
+      "kind": "religion"
+    },
+    {
+      "id": "andean",
+      "names": {
+        "fr": "Traditions andines et incas",
+        "en": "Andean and Inca traditions"
+      },
+      "color": "#7ea84e",
+      "symbol": "andean-sun",
+      "kind": "religion"
+    },
+    {
+      "id": "indigenous-americas",
+      "names": {
+        "fr": "Traditions autochtones des Amériques",
+        "en": "Indigenous traditions of the Americas"
+      },
+      "color": "#bfae8c",
+      "symbol": "earth",
+      "kind": "religion"
+    },
+    {
+      "id": "indigenous-asia-oceania",
+      "names": {
+        "fr": "Traditions autochtones d’Asie et d’Océanie",
+        "en": "Indigenous traditions of Asia and Oceania"
+      },
+      "color": "#7d8fb0",
+      "symbol": "earth",
+      "kind": "religion"
+    },
+    {
+      "id": "ancient-local",
+      "names": {
+        "fr": "Traditions locales anciennes (non classées)",
+        "en": "Ancient local traditions (unclassified)"
+      },
+      "color": "#8f8a80",
+      "symbol": "circle",
+      "kind": "aggregate"
+    },
+    {
+      "id": "new-religions-aggregate",
+      "names": {
+        "fr": "Nouveaux mouvements religieux (agrégat)",
+        "en": "New religious movements (aggregate)"
+      },
+      "color": "#b58678",
+      "symbol": "star",
+      "kind": "aggregate",
+      "minYear": 1800
+    },
+    {
+      "id": "broad-other",
+      "names": {
+        "fr": "Autres religions non classées",
+        "en": "Other unclassified religions"
+      },
+      "color": "#a09280",
+      "symbol": "circle",
+      "kind": "aggregate"
+    },
+    {
+      "id": "unaffiliated",
+      "names": {
+        "fr": "Sans affiliation religieuse ou État séculier",
+        "en": "Religiously unaffiliated or secular state"
+      },
+      "color": "#8b919a",
+      "symbol": "circle",
+      "kind": "unaffiliated"
+    }
+  ],
+  "seshatPrevalence": {
+    "v_m": {
+      "evidence": "majority",
+      "label": {
+        "fr": "vaste majorité",
+        "en": "vast majority"
+      }
+    },
+    "o_h_p": {
+      "evidence": "majority",
+      "label": {
+        "fr": "plus de la moitié de la population",
+        "en": "over half of the population"
+      }
+    },
+    "sz_m": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "minorité importante",
+        "en": "sizeable minority"
+      }
+    },
+    "sm_m": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "petite minorité",
+        "en": "small minority"
+      }
+    },
+    "vs_m": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "très petite minorité",
+        "en": "very small minority"
+      }
+    },
+    "a_m": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "absente (code Seshat)",
+        "en": "absent (Seshat code)"
+      }
+    },
+    "unc": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "prévalence incertaine",
+        "en": "uncertain prevalence"
+      }
+    },
+    "unk": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "prévalence inconnue",
+        "en": "unknown prevalence"
+      }
+    },
+    "null": {
+      "evidence": "predominant",
+      "label": {
+        "fr": "prévalence non codée",
+        "en": "prevalence not coded"
+      }
+    }
+  },
+  "seshatSkippedOrder1Prevalence": [
+    "a_m",
+    "vs_m",
+    "sm_m"
+  ],
+  "seshat": {
+    "Achik Religion": "indigenous-asia-oceania",
+    "African Traditional Religion": "african-traditional",
+    "Ajivika Religion": "broad-other",
+    "Akan Religion": "african-traditional",
+    "Akkadian Religion": "ancient-near-east",
+    "Anatolian Religion": "ancient-near-east",
+    "Ancient Egyptian Religion": "egyptian",
+    "Ancient Greek Religion": "greco-roman",
+    "Ancient Khwarazm Religion": "ancient-local",
+    "Ancient Ona Religion": "indigenous-americas",
+    "Andronovan Religion": "ancient-local",
+    "Anglican Christianity": "christianity",
+    "Appenine religion": "greco-roman",
+    "Arian Christianity": "christianity",
+    "Arianism": "christianity",
+    "Armenian Apostolic Christianity": "christianity",
+    "Arminianism Christianity": "christianity",
+    "Assyrian Religion": "ancient-near-east",
+    "Babylonian Religion": "ancient-near-east",
+    "Badari religion": "egyptian",
+    "Baha’i Religion": "bahai",
+    "Bamana Religion": "african-traditional",
+    "Baptist Christianity": "christianity",
+    "Benin Religion": "african-traditional",
+    "Bogomilism Dualist Christianity": "christianity",
+    "Bornu Religion": "african-traditional",
+    "Buda": "hinduism",
+    "Buddhism": "buddhism",
+    "Buganda Religion": "african-traditional",
+    "Calvinist Christianity": "christianity",
+    "Calvinist Protestant Christianity": "christianity",
+    "Canaanite Religion": "ancient-near-east",
+    "Catholic Christianity": "christianity",
+    "Catholic Melkites": "christianity",
+    "Celtic Religion": "european-ancient",
+    "Chaldean Catholic Religion": "christianity",
+    "Chinese Popular Religion": "chinese-folk",
+    "Christianity": "christianity",
+    "Confucianism": "confucianism",
+    "Congregationalist Christianity": "christianity",
+    "Coptic Christianity": "christianity",
+    "Coptic Orthodox Christianity": "christianity",
+    "Crypto-Judaism": "judaism",
+    "Cult of Al-Muqanna": "broad-other",
+    "Cult of Mithra": "zoroastrianism",
+    "Cwezi-Kubandwa Religion": "african-traditional",
+    "Dahomey royal ancestral cult": "african-traditional",
+    "Daoism": "daoism",
+    "Druze Religion": "broad-other",
+    "Early Dynastic Egyptian Religion": "egyptian",
+    "Early Iron Age Cretan Religion": "greco-roman",
+    "Eastern Orthodox Christianity": "christianity",
+    "Edomite Religion": "ancient-near-east",
+    "Elamite Religion": "ancient-near-east",
+    "Eritrean Orthodox Christianity": "christianity",
+    "Ethiopian Orthodox Christianity": "christianity",
+    "Ethiopian Religion": "ethiopian-traditional",
+    "Ethiopo-Sabaean Religion": "ethiopian-traditional",
+    "Etruscan Religion": "greco-roman",
+    "Evangelical Christianity": "christianity",
+    "Fulani Religion": "african-traditional",
+    "Germanic Religion": "european-ancient",
+    "Ghur Religion": "ancient-local",
+    "Greco-Egyptian Religion": "egyptian",
+    "Greek Catholic Unitates": "christianity",
+    "Greek Orthodox Christianity": "christianity",
+    "Greek Polytheism": "greco-roman",
+    "Greek Religion": "greco-roman",
+    "Harappan Religion": "ancient-local",
+    "Hawaiian Religion": "indigenous-asia-oceania",
+    "Hellenistic Religion": "greco-roman",
+    "Hephthalite Religion": "tengrism",
+    "Hinayana Buddhism": "buddhism",
+    "Hindu-Buddhism": "hinduism",
+    "Hinduism": "hinduism",
+    "Hittite Religion": "ancient-near-east",
+    "Hmong Millenarianism": "indigenous-asia-oceania",
+    "Hmong Religion": "indigenous-asia-oceania",
+    "Holy Apostolic Catholic Assyrian Church of the East": "christianity",
+    "Hurrian Religion": "ancient-near-east",
+    "Ibadi Islam": "islam",
+    "Iban Religion": "indigenous-asia-oceania",
+    "Igala religion": "african-traditional",
+    "Igbo Religion": "african-traditional",
+    "Illini religion": "indigenous-americas",
+    "Inca religion": "andean",
+    "Indigenous African Religion": "african-traditional",
+    "Indigenous Brazilian Religion": "indigenous-americas",
+    "Indigenous Cambodian Religion": "indigenous-asia-oceania",
+    "Iroquois Religion": "indigenous-americas",
+    "Ise Shinto": "shinto",
+    "Islam": "islam",
+    "Israelite Religion": "judaism",
+    "Jainism": "jainism",
+    "Jenne-jeno Religion": "african-traditional",
+    "Jomon Religion": "ancient-local",
+    "Judaism": "judaism",
+    "Jukun Religion": "african-traditional",
+    "Kaabu Religion": "african-traditional",
+    "Kaffa Religion": "ethiopian-traditional",
+    "Khitan Religion": "tengrism",
+    "Kizilbas Shia Islam": "islam",
+    "Kofun religion": "shinto",
+    "Konkō": "new-religions-aggregate",
+    "Kurdish Christianity": "christianity",
+    "Kurdish Islam": "islam",
+    "Kwararafa Religion": "african-traditional",
+    "Latin Religion": "greco-roman",
+    "Latium Copper Age religion": "ancient-local",
+    "Longshan Religion": "ancient-local",
+    "Lutheran Christianity": "christianity",
+    "Lutheran Protestant Christianity": "christianity",
+    "Luwian Religion": "ancient-near-east",
+    "Maguzanci": "african-traditional",
+    "Mahayana Buddhism": "buddhism",
+    "Mande Religion": "african-traditional",
+    "Mandeanism": "mandaeism",
+    "Manichaeism": "manichaeism",
+    "Maravi Religion": "african-traditional",
+    "Marcionism Dualist Christianity": "christianity",
+    "Maronite Christianity": "christianity",
+    "Mesoamerican Religions": "mesoamerican",
+    "Mesopotamian Religion": "ancient-near-east",
+    "Methodist Christianity": "christianity",
+    "Metwalis Sect Shiite Islam": "islam",
+    "Mexica religion": "mesoamerican",
+    "Minoan Religion": "greco-roman",
+    "Mississippian Religion": "indigenous-americas",
+    "Mithraism": "greco-roman",
+    "Moche Religion": "andean",
+    "Mongol Religion": "tengrism",
+    "Mongolian Shamanism": "tengrism",
+    "Monophysite Christianity": "christianity",
+    "Monophysite Jacobites": "christianity",
+    "Monte Alban I religion": "mesoamerican",
+    "Mossi Religion": "african-traditional",
+    "Mwali Religion": "african-traditional",
+    "Naqada Religion": "egyptian",
+    "Nasca Religion": "andean",
+    "Neolithic Cretan Religion": "ancient-local",
+    "Nestorian Christianity": "christianity",
+    "Nestorian Christianity Manicheism": null,
+    "New Palace Minoan Religion": "greco-roman",
+    "Nok Religion": "african-traditional",
+    "North American Indigenous Religion": "indigenous-americas",
+    "Nubian Religion": "egyptian",
+    "Nyoro Religion": "african-traditional",
+    "Old Iranian Religion": "zoroastrianism",
+    "Old Norse Religion": "old-norse",
+    "Old Palace Minoan Religion": "greco-roman",
+    "Orisha Religion": "african-traditional",
+    "Orokaiva Religion": "indigenous-asia-oceania",
+    "Oromo Religion": "ethiopian-traditional",
+    "Otomanguean Religion": "mesoamerican",
+    "Pagan Cult Religion": "ancient-local",
+    "Palaian Religion": "ancient-near-east",
+    "Paphlagonian Religion": "ancient-near-east",
+    "Paulicianism Dualist Christianity": "christianity",
+    "Phrygian Religion": "ancient-near-east",
+    "Pre-Maravi Religion": "african-traditional",
+    "Prepalatial Minoan Religion": "greco-roman",
+    "Presbyterian Christianity": "christianity",
+    "Protestant Christianity": "christianity",
+    "Protestantism": "christianity",
+    "Qadiri Sufi Order": "islam",
+    "Reformed Protestant Christianity": "christianity",
+    "Roman Catholic Christianity": "christianity",
+    "Roman Catholic Religion": "christianity",
+    "Roman Catholicism": "christianity",
+    "Roman Christian Christianity": "christianity",
+    "Roman Religion": "greco-roman",
+    "Rouran Religion": "tengrism",
+    "Saivist Hinduism": "hinduism",
+    "Sakha Religion": "tengrism",
+    "Saktist Hinduism": "hinduism",
+    "Samaritan Religion": "judaism",
+    "Samaritanism": "judaism",
+    "Sami Religion": "european-ancient",
+    "Sape Mane Religion": "african-traditional",
+    "Sape Traditional Religion": "african-traditional",
+    "Sarazm Religion": "ancient-local",
+    "Sereer Religion": "african-traditional",
+    "Shamanism": "tengrism",
+    "Shang Religion": "chinese-folk",
+    "Shaykhism": "islam",
+    "Shia Islam": "islam",
+    "Shinto": "shinto",
+    "Shinto-Buddhism": "shinto",
+    "Shuar Religion": "indigenous-americas",
+    "Sidama Religion": "ethiopian-traditional",
+    "Sierra Leone Religion": "african-traditional",
+    "Sikhism": "sikhism",
+    "Smarta Hinduism": "hinduism",
+    "Somali Religion": "african-traditional",
+    "Songhai Religion": "african-traditional",
+    "South Arabian Religion": "ancient-near-east",
+    "Sufi Islam": "islam",
+    "Sufism": "islam",
+    "Sumerian Religion": "ancient-near-east",
+    "Sunni Islam": "islam",
+    "Suriyanis Syriac Christianity": "christianity",
+    "Syriac Orthodox Christianity": "christianity",
+    "Tabalean Religion": "ancient-near-east",
+    "Tairona Religion": "indigenous-americas",
+    "Tantric Buddhism": "buddhism",
+    "Tengrism": "tengrism",
+    "Theraväda Buddhism": "buddhism",
+    "Tiwanaku Religion": "andean",
+    "Tondrakism Dualist Christianity": "christianity",
+    "Traditional African Religions": "african-traditional",
+    "Traditional Indigenous Religions of the Americas": "indigenous-americas",
+    "Trukese Religion": "indigenous-asia-oceania",
+    "Tuoba Religion": "tengrism",
+    "Twelver Shia Islam": "islam",
+    "Uighur Religion": "tengrism",
+    "Upper Mississippian Religion": "indigenous-americas",
+    "Urnfield Culture Religion": "european-ancient",
+    "Vaisnavist Hinduism": "hinduism",
+    "Vedic Hinduism": "hinduism",
+    "Vedic Religion": "hinduism",
+    "Vodun": "african-traditional",
+    "Wagadu Religion": "african-traditional",
+    "Wari religion": "andean",
+    "Wolof Religion": "african-traditional",
+    "Xiongnu Religion": "tengrism",
+    "Yahwism": "judaism",
+    "Yangshao Religion": "ancient-local",
+    "Yayoi Religion": "ancient-local",
+    "Yazidism": "broad-other",
+    "Yemeni Late Bronze Age Religion": "ancient-near-east",
+    "Yemeni Late Neolithic Religion": "ancient-local",
+    "Yoruba Religion": "african-traditional",
+    "Zapotec Religion": "mesoamerican",
+    "Zoroastrianism": "zoroastrianism",
+    "Zoroastrianism/Mazdiaism": "zoroastrianism",
+    "blank": null,
+    "indigenous African beliefs": "african-traditional",
+    "pre-Inca religion": "andean",
+    "shaminism": "tengrism",
+    "unknown": null
+  },
+  "seshatNotes": {
+    "Hindu-Buddhism": {
+      "fr": "Syncrétisme javanais Shiva-Bouddha ; classé avec les traditions hindoues sans addition au bouddhisme.",
+      "en": "Javanese Shiva-Buddha syncretism; grouped with the Hindu traditions without adding it to Buddhism."
+    },
+    "Shinto-Buddhism": {
+      "fr": "Syncrétisme japonais (shinbutsu shūgō) ; classé avec les cultes des kami sans addition au bouddhisme.",
+      "en": "Japanese syncretism (shinbutsu shūgō); grouped with kami worship without adding it to Buddhism."
+    },
+    "Samaritanism": {
+      "fr": "Le samaritanisme est une tradition israélite distincte du judaïsme rabbinique ; il est classé avec les traditions israélites pour la couleur seulement.",
+      "en": "Samaritanism is an Israelite tradition distinct from rabbinic Judaism; it is grouped with the Israelite traditions for the colour only."
+    },
+    "Samaritan Religion": {
+      "fr": "Le samaritanisme est une tradition israélite distincte du judaïsme rabbinique ; il est classé avec les traditions israélites pour la couleur seulement.",
+      "en": "Samaritanism is an Israelite tradition distinct from rabbinic Judaism; it is grouped with the Israelite traditions for the colour only."
+    },
+    "Greco-Egyptian Religion": {
+      "fr": "Cultes égyptiens sous administration hellénistique ; classés avec les traditions égyptiennes.",
+      "en": "Egyptian cults under Hellenistic rule; grouped with the Egyptian traditions."
+    },
+    "Nubian Religion": {
+      "fr": "Cultes koushites d’héritage égyptien (Amon de Napata) ; classés avec les traditions égyptiennes.",
+      "en": "Kushite cults of Egyptian heritage (Amun of Napata); grouped with the Egyptian traditions."
+    },
+    "Cult of Mithra": {
+      "fr": "Culte iranien de Mithra ; classé avec les religions iraniennes anciennes, pas avec le mithraïsme romain.",
+      "en": "Iranian cult of Mithra; grouped with the ancient Iranian religions, not with Roman Mithraism."
+    },
+    "Mithraism": {
+      "fr": "Culte à mystères de l’Empire romain ; classé avec les traditions romaines.",
+      "en": "Mystery cult of the Roman Empire; grouped with the Roman traditions."
+    },
+    "Oromo Religion": {
+      "fr": "Religion oromo (Waaqeffanna) ; classée avec les traditions éthiopiennes anciennes.",
+      "en": "Oromo religion (Waaqeffanna); grouped with the traditional Ethiopian religions."
+    },
+    "Sami Religion": {
+      "fr": "Religion sami ; classée avec les traditions anciennes d’Europe du Nord pour la couleur seulement.",
+      "en": "Sami religion; grouped with the ancient northern European traditions for the colour only."
+    },
+    "Kofun religion": {
+      "fr": "Cultes de la période Kofun, antérieurs au shinto institutionnel ; classés avec les cultes des kami.",
+      "en": "Kofun-period cults, earlier than institutional Shinto; grouped with kami worship."
+    },
+    "Pagan Cult Religion": {
+      "fr": "Cultes du royaume de Pagan antérieurs au theravāda ; laissés non classés.",
+      "en": "Cults of the Pagan kingdom before Theravāda; left unclassified."
+    },
+    "Buda": {
+      "fr": "« Buda » désigne ici la religion javanaise pré-islamique (agama Buda, hindou-bouddhique) codée par Seshat pour Medang et Majapahit ; classée avec les traditions hindoues.",
+      "en": "‘Buda’ here is the pre-Islamic Javanese religion (agama Buda, Hindu-Buddhist) coded by Seshat for Medang and Majapahit; grouped with the Hindu traditions."
+    }
+  },
+  "wikidataGeneric": [
+    "Q9163",
+    "Q29536",
+    "Q43004",
+    "Q42042",
+    "Q172904",
+    "Q238199",
+    "Q920021",
+    "Q190209",
+    "Q5694834"
+  ],
+  "wikidata": {
+    "Q432": "islam",
+    "Q9592": "christianity",
+    "Q9089": "hinduism",
+    "Q748": "buddhism",
+    "Q483654": "islam",
+    "Q1841": "christianity",
+    "Q5043": "christianity",
+    "Q9268": "judaism",
+    "Q3333484": "christianity",
+    "Q75809": "christianity",
+    "Q837605": "tengrism",
+    "Q23540": "christianity",
+    "Q132265": "buddhism",
+    "Q9598": "daoism",
+    "Q537514": "european-ancient",
+    "Q35032": "christianity",
+    "Q9585": "islam",
+    "Q9601": "zoroastrianism",
+    "Q101849": "christianity",
+    "Q7970362": "christianity",
+    "Q855270": "greco-roman",
+    "Q9232": "jainism",
+    "Q1258552": "christianity",
+    "Q2279088": "shinto",
+    "Q242758": "christianity",
+    "Q386498": "african-traditional",
+    "Q447131": "egyptian",
+    "Q483889": "buddhism",
+    "Q515880": "christianity",
+    "Q815628": "buddhism",
+    "Q9316": "sikhism",
+    "Q1074275": "chinese-folk",
+    "Q170111": "christianity",
+    "Q188814": "christianity",
+    "Q269785": "islam",
+    "Q3173931": "indigenous-asia-oceania",
+    "Q337547": "greco-roman",
+    "Q48362": "buddhism",
+    "Q593427": "buddhism",
+    "Q60995": "christianity",
+    "Q683724": "christianity",
+    "Q797944": "ancient-near-east",
+    "Q83922": "christianity",
+    "Q842798": "christianity",
+    "Q9581": "confucianism",
+    "Q1086440": "african-traditional",
+    "Q1122452": "european-ancient",
+    "Q1142277": "ancient-near-east",
+    "Q1197248": "shinto",
+    "Q12153518": "tengrism",
+    "Q12189752": "islam",
+    "Q122221195": "judaism",
+    "Q13048421": "christianity",
+    "Q131465103": "european-ancient",
+    "Q1369404": "new-religions-aggregate",
+    "Q137097": "islam",
+    "Q1546359": "christianity",
+    "Q168414": "christianity",
+    "Q171764": "islam",
+    "Q181901": "christianity",
+    "Q194497": "hinduism",
+    "Q198998": "christianity",
+    "Q2075119": "christianity",
+    "Q210540": "christianity",
+    "Q216920": "unaffiliated",
+    "Q223710": "christianity",
+    "Q234953": "hinduism",
+    "Q2657460": "christianity",
+    "Q275051": "ancient-near-east",
+    "Q288928": "unaffiliated",
+    "Q3238302": "andean",
+    "Q3424392": "ancient-near-east",
+    "Q3429351": "indigenous-asia-oceania",
+    "Q3436989": "christianity",
+    "Q385393": "greco-roman",
+    "Q434553": "ancient-near-east",
+    "Q4492323": "european-ancient",
+    "Q467692": "islam",
+    "Q470364": "new-religions-aggregate",
+    "Q478186": "greco-roman",
+    "Q49376": "christianity",
+    "Q49377": "christianity",
+    "Q51644": "christianity",
+    "Q55647808": "christianity",
+    "Q56273774": "european-ancient",
+    "Q58721": "unaffiliated",
+    "Q597526": "christianity",
+    "Q6673892": "indigenous-americas",
+    "Q684411": "ancient-near-east",
+    "Q699747": "indigenous-asia-oceania",
+    "Q781560": "mesoamerican",
+    "Q805779": "european-ancient",
+    "Q812767": "shinto",
+    "Q825754": "confucianism",
+    "Q82708": "christianity",
+    "Q859563": "unaffiliated",
+    "Q864936": "unaffiliated",
+    "Q892785": "indigenous-asia-oceania",
+    "Q921579": "christianity",
+    "Q950310": "christianity"
+  },
+  "wikidataNotes": {
+    "Q815628": {
+      "fr": "Le bön est une tradition tibétaine distincte ; il est classé avec les bouddhismes pour la couleur seulement.",
+      "en": "Bon is a distinct Tibetan tradition; it is grouped with the Buddhist traditions for the colour only."
+    },
+    "Q2279088": {
+      "fr": "Shinbutsu shūgō : syncrétisme japonais classé avec les cultes des kami sans addition au bouddhisme.",
+      "en": "Shinbutsu shūgō: Japanese syncretism grouped with kami worship without adding it to Buddhism."
+    },
+    "Q12153518": {
+      "fr": "Mythologie scythe : religion des steppes iraniennes classée avec les chamanismes des steppes pour la couleur seulement.",
+      "en": "Scythian mythology: Iranian steppe religion grouped with steppe shamanism for the colour only."
+    },
+    "Q684411": {
+      "fr": "Paganisme arménien d’influence iranienne et anatolienne ; classé avec le Proche-Orient ancien.",
+      "en": "Armenian paganism of Iranian and Anatolian influence; grouped with the ancient Near East."
+    },
+    "Q4492323": {
+      "fr": "Religion thrace ; classée avec les traditions anciennes d’Europe pour la couleur seulement.",
+      "en": "Thracian religion; grouped with the ancient European traditions for the colour only."
+    },
+    "Q56273774": {
+      "fr": "Religion illyrienne ; classée avec les traditions anciennes d’Europe pour la couleur seulement.",
+      "en": "Illyrian religion; grouped with the ancient European traditions for the colour only."
+    }
+  },
+  "wikidataItemMinYear": {
+    "Q23540": 1517,
+    "Q75809": 1517,
+    "Q101849": 1517,
+    "Q170111": 1517,
+    "Q515880": 1571,
+    "Q2075119": 1652,
+    "Q921579": 1567,
+    "Q82708": 1534,
+    "Q223710": 1666,
+    "Q1546359": 1596,
+    "Q950310": 1646,
+    "Q49376": 1596,
+    "Q60995": 988,
+    "Q242758": 870,
+    "Q188814": 1219,
+    "Q181901": 1359,
+    "Q683724": 301,
+    "Q198998": 42,
+    "Q210540": 451,
+    "Q168414": 431,
+    "Q83922": 320,
+    "Q13048421": 400,
+    "Q1258552": 400,
+    "Q3436989": 597,
+    "Q2657460": 988,
+    "Q49377": 451,
+    "Q3333484": 30,
+    "Q35032": 30,
+    "Q9585": 632,
+    "Q269785": 874,
+    "Q137097": 1300,
+    "Q467692": 1300,
+    "Q171764": 1889,
+    "Q12189752": 1700,
+    "Q1197248": 1868,
+    "Q825754": 1000,
+    "Q483889": 600,
+    "Q593427": 372,
+    "Q132265": -250,
+    "Q9316": 1469,
+    "Q470364": 1926,
+    "Q1369404": 1939,
+    "Q9268": -1000,
+    "Q122221195": -1200
+  },
+  "wikidataItemMinYearPolicy": "A Wikidata P140 statement is clipped to [max(family minYear, item minYear), +inf): an undated statement on a long-lived polity must not paint a denomination before it existed (e.g. Protestantism before 1517, Christianity before 30). Years before the minimum stay unattributed unless another layer covers them."
+}

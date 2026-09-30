@@ -2,6 +2,7 @@
 
 import { useAtlasStore } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
+import { useReligionPolityStore } from '@/lib/religions/polities-store';
 import { useReligionCoverageStore } from '@/lib/religions/coverage-store';
 import { religionCoverageText } from '@/lib/religions/coverage-i18n';
 
@@ -14,7 +15,7 @@ export default function ReligionViewSwitch() {
       role="group"
       aria-label={religionCoverageText(locale, 'view')}
     >
-      {(['coverage', 'history'] as const).map((value) => (
+      {(['dominant', 'history'] as const).map((value) => (
         <button
           key={value}
           type="button"
@@ -22,6 +23,7 @@ export default function ReligionViewSwitch() {
           aria-pressed={view === value}
           onClick={() => {
             useReligionCoverageStore.getState().select(null);
+            useReligionPolityStore.getState().select(null);
             useReligionStore.getState().select(null);
             useAtlasStore.getState().setReligionView(value);
           }}

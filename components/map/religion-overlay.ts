@@ -3,6 +3,8 @@ import type { ExpressionSpecification, Map as MapInstance } from 'maplibre-gl';
 import type { AtlasState } from '@/lib/store';
 import type { ReligionDataset, ReligionMilestone } from '@/lib/religions/types';
 import { getReligionDataset } from '@/lib/religions/client';
+import { getReligionPolities } from '@/lib/religions/polities-client';
+import { useReligionPolityStore } from '@/lib/religions/polities-store';
 import { RELIGION_ROUTE_FADE_RATE, RELIGION_TIME } from '@/lib/religions/time';
 import { thematicHorizon } from '@/lib/thematic/time';
 import { useReligionStore } from '@/lib/religions/store';
@@ -94,6 +96,7 @@ export function startReligionOverlay(map: MapInstance) {
   let history: ReturnType<typeof startReligionHistoryOverlay> | undefined;
   let coverage: ReturnType<typeof startReligionCoverageOverlay> | undefined;
   let disposed = false;
+  let polityRevision = -1;
   return {
     update(state: AtlasState) {
       if (disposed) return;
@@ -103,6 +106,23 @@ export function startReligionOverlay(map: MapInstance) {
         history?.update(state);
       } else {
         history?.update(state);
+        const store = useReligionPolityStore.getState();
+        if (
+          state.religionsVisible &&
+          (store.status === 'idle' ||
+            (store.status === 'error' && store.revision !== polityRevision))
+        ) {
+          polityRevision = store.revision;
+          useReligionPolityStore.setState({ status: 'loading', error: null });
+          getReligionPolities()
+            .then((dataset) => {
+              if (!disposed) useReligionPolityStore.setState({ status: 'ready', dataset });
+            })
+            .catch((error) => {
+              if (!disposed)
+                useReligionPolityStore.setState({ status: 'error', error: String(error) });
+            });
+        }
         if (state.religionsVisible) coverage ??= startReligionCoverageOverlay(map);
         coverage?.update(state);
       }

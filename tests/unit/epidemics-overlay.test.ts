@@ -29,7 +29,13 @@ function mapDouble() {
     getLayer: (id: string) => layers.get(id),
     getStyle: () => ({ layers: [...layers.values()] }),
     removeLayer: (id: string) => layers.delete(id),
-    moveLayer: vi.fn(),
+    moveLayer: vi.fn((id: string) => {
+      const layer = layers.get(id);
+      if (layer) {
+        layers.delete(id);
+        layers.set(id, layer);
+      }
+    }),
     setFilter: vi.fn(),
     setPaintProperty: vi.fn(),
     setLayoutProperty: (id: string, key: string, value: unknown) => {
@@ -71,9 +77,10 @@ it('installs once and filters years without removing/reloading map geometry', as
   expect(getDataset).not.toHaveBeenCalled();
   overlay.update(enabled());
   await vi.waitFor(() => expect(useEpidemicStore.getState().status).toBe('ready'));
-  expect(calls.addSource).toHaveBeenCalledTimes(1);
+  expect(calls.addSource).toHaveBeenCalledTimes(2);
   const geometry = sources.get('epidemic-history');
   expect(geometry).toBeDefined();
+  expect(sources.get('epidemic-spread')).toBeDefined();
   expect(calls.setFilter).toHaveBeenCalledWith('epidemic-milestones', [
     'all',
     ['==', ['get', 'shape'], 'point'],
@@ -81,8 +88,10 @@ it('installs once and filters years without removing/reloading map geometry', as
   ]);
   overlay.update({ ...enabled(), year: 1400 });
   expect(sources.get('epidemic-history')).toBe(geometry);
-  expect(calls.addSource).toHaveBeenCalledTimes(1);
+  expect(calls.addSource).toHaveBeenCalledTimes(2);
   expect(getDataset).toHaveBeenCalledTimes(1);
+  calls.moveLayer.mockClear();
+  overlay.update({ ...enabled(), year: 1401 });
   expect(calls.moveLayer).not.toHaveBeenCalled();
   overlay.dispose();
 });

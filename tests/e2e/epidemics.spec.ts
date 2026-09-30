@@ -77,3 +77,20 @@ test('epidemic and religion panels are mutually exclusive', async ({ page }) => 
   await expect(page.getByTestId('epidemics-panel')).toBeVisible();
   await expect(page.getByTestId('religions-panel')).not.toBeAttached();
 });
+
+test('the spread toggle hides halos and fronts and persists as espread=0', async ({ page }) => {
+  await page.route('**/data/epidemics/history.json', (route) => route.fulfill({ json: fixture }));
+  await page.goto('/?lang=fr&y=1348&epidemics=1&battles=0');
+  await expect(page.locator('.world-map-wrap')).toHaveAttribute('data-ready', 'true', {
+    timeout: 30_000,
+  });
+  await epidemicReady(page);
+  await page.getByTestId('epidemics-legend-toggle').click();
+  const toggle = page.getByTestId('epidemics-spread-toggle');
+  await expect(toggle).toBeChecked();
+  await toggle.click();
+  await expect.poll(() => new URL(page.url()).searchParams.get('espread')).toBe('0');
+  await page.goto('/?lang=fr&y=1348&epidemics=1&battles=0&espread=0');
+  await page.getByTestId('epidemics-legend-toggle').click();
+  await expect(page.getByTestId('epidemics-spread-toggle')).not.toBeChecked();
+});
