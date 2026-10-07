@@ -1,0 +1,145 @@
+.view {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.view h3 {
+  margin: 0 0 4px;
+  color: var(--paper);
+  font-size: 16px;
+}
+.view p {
+  margin: 9px 0;
+}
+.view strong {
+  color: var(--paper);
+}
+.source {
+  font-size: 11px;
+}
+.totals {
+  display: flex;
+  gap: 20px;
+  padding-block: 10px;
+  border-block: 1px solid var(--line);
+}
+.totals > div {
+  display: grid;
+  gap: 2px;
+}
+.totals strong {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.totals span {
+  font-size: 11px;
+}
+.notice {
+  padding-inline-start: 10px;
+  border-inline-start: 2px solid var(--gold);
+}
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  padding: 7px 9px;
+  color: var(--gold);
+  text-align: start;
+  font-size: 11px;
+}
+.action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.snapshotNavigation,
+.regionActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block: 10px;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-block: 16px 8px;
+  table-layout: fixed;
+  font-variant-numeric: tabular-nums;
+}
+.table caption {
+  margin-bottom: 7px;
+  text-align: start;
+  font-size: 11px;
+}
+.table th,
+.table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--line);
+  text-align: end;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+.table thead {
+  font-size: 10px;
+}
+.table th:first-child {
+  width: 46%;
+  text-align: start;
+}
+.table tbody button {
+  padding: 4px 0;
+  text-align: start;
+  color: var(--paper);
+  font-size: 11px;
+}
+.table tbody tr[data-selected] {
+  background: var(--gold-wash);
+}
+.table tbody button[aria-pressed='true'] {
+  color: var(--gold);
+  font-weight: 600;
+}
+.legend {
+  display: grid;
+  gap: 5px;
+  margin-block: 12px;
+  font-size: 10px;
+}
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.documented {
+  background: #8cc7c0;
+  border: 1px solid #335957;
+}
+.undocumented {
+  background: transparent;
+  border: 1px solid var(--muted);
+}
+.method {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.method summary {
+  cursor: pointer;
+  color: var(--paper);
+  padding-block: 5px;
+}
+.method a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--gold);
+  text-decoration: underline;
+}

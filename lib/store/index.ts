@@ -3,6 +3,7 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { CURRENT_YEAR, MIN_YEAR } from '../eras';
+import { CONTEXT_VIEWS, type ContextView } from '../context/types';
 import { DEFAULT_LOCALE, ERA_IDS, EVENT_TYPES, REGION_IDS, isLocale } from '../types';
 import type { EraId, EventType, Locale, RegionId } from '../types';
 
@@ -60,6 +61,8 @@ export interface AtlasState {
   epidemicsVisible: boolean;
   epidemicFilter: string | null;
   epidemicSpreadVisible: boolean;
+  contextView: ContextView | null;
+  contextSelection: string | null;
   battleMode: boolean;
   battlePlaying: boolean;
   battleSpeed: 0.5 | 1 | 2;
@@ -102,6 +105,8 @@ export const DEFAULT_ATLAS_STATE: AtlasState = {
   epidemicsVisible: false,
   epidemicFilter: null,
   epidemicSpreadVisible: true,
+  contextView: null,
+  contextSelection: null,
   battleMode: false,
   battlePlaying: false,
   battleSpeed: 1,
@@ -245,6 +250,11 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
   state.epidemicsVisible = query.get('epidemics') === '1';
   state.epidemicFilter = religionIdentifier(query.get('epidemic'));
   state.epidemicSpreadVisible = query.get('espread') !== '0';
+  const context = query.get('context');
+  state.contextView = CONTEXT_VIEWS.includes(context as ContextView)
+    ? (context as ContextView)
+    : null;
+  state.contextSelection = state.contextView ? identifier(query.get('contextItem'), false) : null;
   state.battleMode = query.get('battle') === '1' && state.battlesVisible;
   if (!state.battlesVisible && query.get('battle') === '1') state.selectedEvent = null;
   state.battleProgress = finiteNumber(query.get('bphase'), 0, 0, 1);
@@ -301,6 +311,10 @@ export function serializeAtlasUrl(state: AtlasState): string {
   if (religionFilter) query.set('religion', religionFilter);
   if (!state.religionRoutesVisible) query.set('rpaths', '0');
   if (!state.religionAreasVisible) query.set('rareas', '0');
+  if (state.contextView) {
+    query.set('context', state.contextView);
+    if (state.contextSelection) query.set('contextItem', state.contextSelection);
+  }
   if (state.epidemicsVisible) query.set('epidemics', '1');
   if (!state.epidemicSpreadVisible) query.set('espread', '0');
   const epidemicFilter = religionIdentifier(state.epidemicFilter);
@@ -385,6 +399,15 @@ function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<A
   )
     patch = { ...patch, selectedEvent: null };
   const next = { ...state, ...patch };
+  if (patch.contextView !== undefined) {
+    next.contextView = CONTEXT_VIEWS.includes(patch.contextView as ContextView)
+      ? patch.contextView
+      : null;
+    if (next.contextView !== state.contextView) next.contextSelection = null;
+  }
+  if (patch.contextSelection !== undefined)
+    next.contextSelection = identifier(patch.contextSelection, false);
+  if (!next.contextView) next.contextSelection = null;
   const changedEntity =
     patch.selectedEntity !== undefined && patch.selectedEntity !== state.selectedEntity;
   const changedCampaign = patch.campaignId !== undefined && patch.campaignId !== state.campaignId;
@@ -460,6 +483,8 @@ function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<A
   }
   return {
     ...patch,
+    contextView: next.contextView,
+    contextSelection: next.contextSelection,
     selectedPerson: next.selectedPerson,
     playing: next.playing,
     entityFollowing: next.entityFollowing,

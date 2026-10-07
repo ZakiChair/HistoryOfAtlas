@@ -2,13 +2,15 @@
 
 import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import * as Slider from '@radix-ui/react-slider';
-import { ChevronLeft, ChevronRight, Pause, Play, SlidersHorizontal, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Info, Pause, Play, SlidersHorizontal, X } from 'lucide-react';
 import { CURRENT_YEAR, ERAS, MIN_YEAR, getEra, positionToYear, yearToPosition } from '@/lib/eras';
 import { formatYear, parseHistoricalYear } from '@/lib/histdate';
 import { useTranslation } from '@/lib/i18n';
+import { timelineReadingText } from '@/lib/i18n/timeline-reading';
 import { advancePlayback, buildDensityBins, type DensityYear } from '@/lib/playback';
 import { createPlaybackFrameClock, isPlaybackMapReady } from '@/lib/playback-readiness';
 import { useAtlasStore } from '@/lib/store';
+import styles from './Timeline.module.css';
 
 const EMPTY_DENSITY: DensityYear[] = [];
 const SPEEDS = [1, 5, 25, 100] as const;
@@ -127,7 +129,7 @@ export default function Timeline({
       if (
         target instanceof Element &&
         target.closest(
-          'input, textarea, select, button, [contenteditable="true"], [role="slider"], [role="dialog"]',
+          'input, textarea, select, button, summary, [contenteditable="true"], [role="slider"], [role="dialog"]',
         )
       )
         return;
@@ -150,7 +152,7 @@ export default function Timeline({
       if (
         event.ctrlKey ||
         event.metaKey ||
-        (event.target instanceof Element && event.target.closest('input'))
+        (event.target instanceof Element && event.target.closest('input, details'))
       )
         return;
       event.preventDefault();
@@ -196,9 +198,28 @@ export default function Timeline({
     >
       <div className="timeline-toolbar" dir={dir}>
         <div className="timeline-date">
-          <span className="timeline-eyebrow">
-            {t('LE FIL DE L’HISTOIRE', 'THE THREAD OF HISTORY')}
-          </span>
+          <details
+            className={styles.reading}
+            data-testid="timeline-reading"
+            onKeyDown={(event) => {
+              if (event.key === 'Escape' && event.currentTarget.open) {
+                event.preventDefault();
+                event.stopPropagation();
+                event.currentTarget.open = false;
+                event.currentTarget.querySelector('summary')?.focus();
+              }
+            }}
+          >
+            <summary>
+              <Info size={10} aria-hidden="true" />
+              {timelineReadingText(locale, 'label')}
+            </summary>
+            <div className={styles.explanation}>
+              <p>{timelineReadingText(locale, 'scale')}</p>
+              <p>{timelineReadingText(locale, 'bars')}</p>
+              <p>{timelineReadingText(locale, 'periods')}</p>
+            </div>
+          </details>
           {editing ? (
             <form
               className="timeline-year-form"
@@ -332,10 +353,7 @@ export default function Timeline({
                   'Densité des événements sourcés au fil du temps',
                   'Density of sourced events over time',
                 )
-              : t(
-                  'Densité des territoires documentés au fil du temps',
-                  'Density of documented territories over time',
-                )
+              : timelineReadingText(locale, 'territorialDensity')
           }
         />
         <div
@@ -413,7 +431,7 @@ export default function Timeline({
         ))}
       </div>
       {range && !battleMode && (
-        <div className="timeline-range">
+        <div className={`timeline-range ${styles.rangePanel}`}>
           <bdi dir={dir}>{formatYear(range[0], locale)}</bdi>
           <Slider.Root
             className="timeline-range-slider"

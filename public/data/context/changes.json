@@ -1,0 +1,1006 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-01",
+  "changes": [
+    {
+      "id": "babylon-539-bce",
+      "year": -538,
+      "coordinates": [
+        44.4,
+        32.5
+      ],
+      "title": {
+        "fr": "539 av. J.-C. · Babylone sous domination perse",
+        "en": "539 BCE · Babylon under Persian rule"
+      },
+      "mechanism": {
+        "fr": "Cyrus, roi de Perse, s’empare de Babylone en 539 av. J.-C. La conquête change le pouvoir qui dirige la région.",
+        "en": "Cyrus, king of Persia, captures Babylon in 539 BCE. The conquest changes the authority governing the region."
+      },
+      "consequence": {
+        "fr": "La Mésopotamie entre dans l’Empire perse : un ancien centre impérial est intégré à un ensemble politique plus vaste.",
+        "en": "Mesopotamia becomes part of the Persian Empire, incorporating a former imperial centre into a larger political structure."
+      },
+      "limits": {
+        "fr": "Le changement de souveraineté ne fait pas disparaître immédiatement les traditions mésopotamiennes. Le repère régional est éditorial ; il ne délimite pas la conquête.",
+        "en": "The change of rule does not immediately erase Mesopotamian traditions. The regional marker is editorial; it does not delineate the conquest."
+      },
+      "sources": [
+        {
+          "label": "Getty · Mesopotamia: Civilization Begins",
+          "url": "https://www.getty.edu/art/exhibitions/mesopotamia/explore.html"
+        }
+      ]
+    },
+    {
+      "id": "qin-unification-221-bce",
+      "year": -220,
+      "coordinates": [
+        108.7,
+        34.4
+      ],
+      "title": {
+        "fr": "221 av. J.-C. · Unification sous les Qin",
+        "en": "221 BCE · Unification under the Qin"
+      },
+      "mechanism": {
+        "fr": "Les conquêtes de Qin éliminent les royaumes rivaux. En 221 av. J.-C., Ying Zheng prend le titre d’empereur.",
+        "en": "Qin conquests eliminate the rival kingdoms. In 221 BCE, Ying Zheng assumes the title of emperor."
+      },
+      "consequence": {
+        "fr": "Un gouvernement central dirige des commanderies. L’unification s’accompagne de normes communes pour l’écriture, la monnaie, les poids et les mesures.",
+        "en": "A central government directs commanderies. Unification brings common standards for writing, currency, weights and measures."
+      },
+      "limits": {
+        "fr": "L’empire de cette époque ne se confond pas avec la Chine actuelle. Le repère éditorial situe la région de la capitale Qin, sans restituer ses frontières.",
+        "en": "This empire must not be equated with present-day China. The editorial marker locates the Qin capital region without reconstructing its borders."
+      },
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Age of Empires: Exhibition Galleries",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2017/age-of-empires/exhibition-galleries"
+        }
+      ]
+    },
+    {
+      "id": "egypt-roman-30-bce",
+      "year": -29,
+      "title": {
+        "fr": "30 av. J.-C. · L’Égypte sous domination romaine",
+        "en": "30 BCE · Egypt under Roman rule"
+      },
+      "mechanism": {
+        "fr": "Octavien conquiert l’Égypte en 30 av. J.-C., après sa victoire sur Antoine et Cléopâtre. La monarchie ptolémaïque prend fin.",
+        "en": "Octavian conquers Egypt in 30 BCE following his victory over Antony and Cleopatra. The Ptolemaic monarchy ends."
+      },
+      "consequence": {
+        "fr": "L’Égypte devient une province romaine administrée par un préfet. Ses récoltes alimentent notamment Rome.",
+        "en": "Egypt becomes a Roman province administered by a prefect. Its harvests help supply Rome."
+      },
+      "limits": {
+        "fr": "La conquête ne signifie ni pacification immédiate ni disparition des traditions égyptiennes. Alexandrie est un repère éditorial approximatif, sans emprise provinciale.",
+        "en": "Conquest means neither immediate pacification nor the disappearance of Egyptian traditions. Alexandria is an approximate editorial marker, without a provincial footprint."
+      },
+      "coordinates": [
+        29.92,
+        31.2
+      ],
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Roman Egypt",
+          "url": "https://www.metmuseum.org/essays/roman-egypt"
+        }
+      ]
+    },
+    {
+      "id": "abbasid-revolution-750",
+      "year": 750,
+      "coordinates": [
+        62.18,
+        37.66
+      ],
+      "title": {
+        "fr": "750 · Révolution abbasside",
+        "en": "750 · Abbasid revolution"
+      },
+      "mechanism": {
+        "fr": "Un mouvement parti du Khorasan, animé notamment par Abu Muslim, renverse le pouvoir omeyyade en 750 et porte les Abbassides au califat.",
+        "en": "A movement originating in Khurasan, with Abu Muslim among its leaders, overthrows Umayyad rule in 750 and brings the Abbasids to the caliphate."
+      },
+      "consequence": {
+        "fr": "Le centre du pouvoir se déplace de la Syrie vers l’Irak. La fondation de Bagdad comme capitale intervient ensuite, en 762.",
+        "en": "The centre of power shifts from Syria towards Iraq. Baghdad’s foundation as a capital follows later, in 762."
+      },
+      "limits": {
+        "fr": "Le changement de dynastie n’assure pas une obéissance uniforme. Le repère éditorial situe l’oasis de Merv, foyer du mouvement, et non une frontière ou une bataille précise.",
+        "en": "Dynastic change does not ensure uniform allegiance. The editorial marker locates the Merv oasis, a centre of the movement, rather than a boundary or an exact battlefield."
+      },
+      "sources": [
+        {
+          "label": "Encyclopædia Iranica · C. E. Bosworth, ʿAbbasid Caliphate",
+          "url": "https://www.iranicaonline.org/articles/abbasid-caliphate/"
+        },
+        {
+          "label": "The Metropolitan Museum of Art · The Art of the Abbasid Period (750–1258)",
+          "url": "https://www.metmuseum.org/essays/the-art-of-the-abbasid-period-750-1258"
+        }
+      ]
+    },
+    {
+      "id": "verdun-843",
+      "year": 843,
+      "coordinates": [
+        5.4,
+        49.2
+      ],
+      "title": {
+        "fr": "843 · Partage carolingien à Verdun",
+        "en": "843 · Carolingian partition at Verdun"
+      },
+      "mechanism": {
+        "fr": "Après des luttes successorales, les trois fils de Louis le Pieux concluent en août 843 un accord de partage.",
+        "en": "Following succession struggles, the three sons of Louis the Pious agree on a partition in August 843."
+      },
+      "consequence": {
+        "fr": "Charles reçoit la partie occidentale, Louis la partie orientale ; Lothaire conserve une bande centrale comprenant l’Italie.",
+        "en": "Charles receives the western portion and Louis the eastern portion; Lothair retains a central belt including Italy."
+      },
+      "limits": {
+        "fr": "Le texte original est perdu. Ces royaumes dynastiques ne sont pas les États actuels. Le repère de Verdun est éditorial et ne décrit pas les limites du partage.",
+        "en": "The original text is lost. These dynastic kingdoms are not present-day states. The editorial Verdun marker does not describe the partition boundaries."
+      },
+      "sources": [
+        {
+          "label": "Bibliothèque nationale de France · Traité de Verdun (843)",
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb16734735c"
+        },
+        {
+          "label": "Archives municipales de Verdun · Le Traité de Verdun",
+          "url": "https://www.verdun.fr/connaitre-ma-ville-et-mon-agglo/ville/les-archives-municipales/terre-dhistoire/le-traite-de-verdun/"
+        }
+      ]
+    },
+    {
+      "id": "norman-conquest-1066",
+      "year": 1066,
+      "coordinates": [
+        0,
+        52
+      ],
+      "title": {
+        "fr": "1066 · Conquête normande de l’Angleterre",
+        "en": "1066 · Norman conquest of England"
+      },
+      "mechanism": {
+        "fr": "Guillaume de Normandie bat Harold à Hastings le 14 octobre. Après une campagne dans le sud-est, il est couronné roi à Noël.",
+        "en": "William of Normandy defeats Harold at Hastings on 14 October. After campaigning in the southeast, he is crowned king at Christmas."
+      },
+      "consequence": {
+        "fr": "La conquête entraîne progressivement une redistribution des terres aux fidèles de Guillaume et l’installation d’une nouvelle élite dirigeante.",
+        "en": "The conquest gradually redistributes land to William’s supporters and establishes a new ruling elite."
+      },
+      "limits": {
+        "fr": "Les résistances se poursuivent après 1066 : le couronnement ne signifie pas un contrôle immédiat et uniforme. Le repère régional éditorial ne situe pas la bataille.",
+        "en": "Resistance continues after 1066: coronation does not mean immediate, uniform control. The editorial regional marker does not locate the battle."
+      },
+      "sources": [
+        {
+          "label": "Historic Royal Palaces · William I (the Conqueror)",
+          "url": "https://www.hrp.org.uk/tower-of-london/history-and-stories/william-the-conqueror/"
+        }
+      ]
+    },
+    {
+      "id": "mongol-unification-1206",
+      "year": 1206,
+      "coordinates": [
+        105,
+        48
+      ],
+      "title": {
+        "fr": "1206 · Unification mongole sous Gengis Khan",
+        "en": "1206 · Mongol unification under Chinggis Khan"
+      },
+      "mechanism": {
+        "fr": "Temüjin rassemble des groupes mongols dans une confédération. En 1206, une assemblée de nobles lui reconnaît le titre de Gengis Khan.",
+        "en": "Temüjin brings Mongol groups into a confederation. In 1206, an assembly of nobles recognises him as Chinggis Khan."
+      },
+      "consequence": {
+        "fr": "Des groupes auparavant séparés reconnaissent une autorité commune. Cette union politique précède les grandes conquêtes qui étendent ensuite l’empire.",
+        "en": "Previously separate groups acknowledge a common authority. This political union precedes the major conquests that subsequently expand the empire."
+      },
+      "limits": {
+        "fr": "1206 date la reconnaissance du chef, pas l’étendue maximale de l’empire. Le repère éditorial en Mongolie n’est ni une frontière ni le lieu précis de l’assemblée.",
+        "en": "1206 dates recognition of the leader, not the empire’s greatest extent. The editorial marker in Mongolia is neither a boundary nor the assembly’s exact location."
+      },
+      "sources": [
+        {
+          "label": "Columbia University, Asia for Educators · Mongol Unity under Chinggis Khan",
+          "url": "https://afe.easia.columbia.edu/mongols/figures/figu_geng_unity.htm"
+        }
+      ]
+    },
+    {
+      "id": "constantinople-1453",
+      "year": 1453,
+      "coordinates": [
+        29,
+        41
+      ],
+      "title": {
+        "fr": "1453 · Constantinople sous pouvoir ottoman",
+        "en": "1453 · Constantinople under Ottoman rule"
+      },
+      "mechanism": {
+        "fr": "Les Ottomans de Mehmed II prennent Constantinople en 1453, après une longue contraction du territoire byzantin.",
+        "en": "Mehmed II’s Ottomans capture Constantinople in 1453, following a long contraction of Byzantine territory."
+      },
+      "consequence": {
+        "fr": "L’ancienne capitale byzantine passe sous autorité ottomane. Sous Mehmed II, le port retrouve une place importante dans les échanges.",
+        "en": "The former Byzantine capital passes under Ottoman authority. Under Mehmed II, its harbour regains an important trading role."
+      },
+      "limits": {
+        "fr": "La conquête ne supprime pas toutes les communautés ni les traditions byzantines. Le repère éditorial du Bosphore ne date pas chaque transformation régionale.",
+        "en": "The conquest does not erase all Byzantine communities or traditions. The editorial Bosphorus marker does not date every regional transformation."
+      },
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Constantinople after 1261",
+          "url": "https://www.metmuseum.org/essays/constantinople-after-1261"
+        }
+      ]
+    },
+    {
+      "id": "granada-1492",
+      "year": 1492,
+      "title": {
+        "fr": "1492 · La reddition de Grenade",
+        "en": "1492 · The surrender of Granada"
+      },
+      "mechanism": {
+        "fr": "Après dix années de guerre, la reddition négociée par Boabdil permet l’entrée des troupes castillanes dans l’Alhambra le 2 janvier 1492.",
+        "en": "After ten years of war, Boabdil’s negotiated surrender allows Castilian troops to enter the Alhambra on 2 January 1492."
+      },
+      "consequence": {
+        "fr": "Le pouvoir nasride s’achève ; le royaume de Grenade est incorporé à la couronne de Castille.",
+        "en": "Nasrid rule ends; the kingdom of Granada is incorporated into the Crown of Castile."
+      },
+      "limits": {
+        "fr": "Les communautés musulmanes ne disparaissent pas en 1492 ; les capitulations puis leur remise en cause ouvrent une histoire conflictuelle. Grenade est un repère éditorial approximatif, sans frontières reconstituées.",
+        "en": "Muslim communities do not disappear in 1492; the surrender terms and their subsequent erosion lead to further conflict. Granada is an approximate editorial marker, without reconstructed borders."
+      },
+      "coordinates": [
+        -3.6,
+        37.18
+      ],
+      "sources": [
+        {
+          "label": "Patronato de la Alhambra y Generalife · Gate of the Seven Floors",
+          "url": "https://www.alhambra-patronato.es/en/notas-prensa/the-alhambra-opens-the-enigmatic-gate-of-the-seven-floors-to-the-public"
+        },
+        {
+          "label": "Universidad de Almería / Modernalia · Los Reyes Católicos ante Granada",
+          "url": "https://www.modernalia.es/items/show/337"
+        },
+        {
+          "label": "Patronato de la Alhambra y Generalife · De Garnata a Granada",
+          "url": "https://www.alhambra-patronato.es/de-garnata-granada"
+        }
+      ]
+    },
+    {
+      "id": "tenochtitlan-1521",
+      "year": 1521,
+      "coordinates": [
+        -99.13,
+        19.43
+      ],
+      "title": {
+        "fr": "1521 · Chute de Tenochtitlan et Tlatelolco",
+        "en": "1521 · Fall of Tenochtitlan and Tlatelolco"
+      },
+      "mechanism": {
+        "fr": "Après plusieurs mois de siège par les forces espagnoles et leurs alliés autochtones, Cuauhtémoc est capturé le 13 août 1521.",
+        "en": "After months of siege by Spanish forces and their Indigenous allies, Cuauhtémoc is captured on 13 August 1521."
+      },
+      "consequence": {
+        "fr": "La défaite du centre du pouvoir mexica ouvre une réorganisation coloniale : Mexico est reconstruite sur les ruines de Tenochtitlan.",
+        "en": "Defeat at the centre of Mexica power opens a colonial reorganisation: Mexico City is rebuilt over Tenochtitlan’s ruins."
+      },
+      "limits": {
+        "fr": "Cette date ne signifie ni la conquête immédiate de tout le Mexique actuel ni la disparition des peuples autochtones. Le repère situe les villes assiégées.",
+        "en": "This date means neither the immediate conquest of all present-day Mexico nor the disappearance of Indigenous peoples. The marker locates the besieged cities."
+      },
+      "sources": [
+        {
+          "label": "INAH · Tlatelolco, el último bastión mexica",
+          "url": "https://www.inah.gob.mx/index.php/foto-del-dia/1521-tlatelolco-el-ultimo-bastion-mexica"
+        },
+        {
+          "label": "INAH · Centro histórico de la Ciudad de México",
+          "url": "https://lugares.inah.gob.mx/es/node/4833"
+        },
+        {
+          "label": "INAH · El impacto de la Conquista",
+          "url": "https://mexicograndezaydiversidad.inah.gob.mx/libro/fasciculos/09/"
+        }
+      ]
+    },
+    {
+      "id": "panipat-mughal-1526",
+      "year": 1526,
+      "coordinates": [
+        76.96,
+        29.39
+      ],
+      "title": {
+        "fr": "1526 · Panipat et les débuts du pouvoir moghol",
+        "en": "1526 · Panipat and the beginnings of Mughal rule"
+      },
+      "mechanism": {
+        "fr": "Le 21 avril 1526, selon la chronologie de Panipat, Babur bat l’armée d’Ibrahim Lodi, sultan de Delhi. Ses forces combinent artillerie et manœuvres d’encerclement.",
+        "en": "On 21 April 1526, according to Panipat’s chronology, Babur defeats the army of Ibrahim Lodi, sultan of Delhi. His forces combine artillery with encircling manoeuvres."
+      },
+      "consequence": {
+        "fr": "Babur s’empare du sultanat de Delhi et fonde une dynastie dont les successeurs agrandiront les possessions dans le sous-continent.",
+        "en": "Babur takes the Delhi Sultanate and establishes a dynasty whose successors will expand its possessions across the subcontinent."
+      },
+      "limits": {
+        "fr": "Son contrôle reste fragile : 1526 ne représente ni l’empire à son apogée ni l’Inde actuelle. Le repère éditorial situe Panipat, sans reconstituer le champ de bataille.",
+        "en": "His control remains fragile: 1526 represents neither the empire at its greatest extent nor present-day India. The editorial marker locates Panipat without reconstructing the battlefield."
+      },
+      "sources": [
+        {
+          "label": "Panipat District Administration · First Battle of Panipat (1526)",
+          "url": "https://panipat.gov.in/first-battle/"
+        },
+        {
+          "label": "Victoria and Albert Museum · The arts of the Mughal Empire",
+          "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire"
+        }
+      ]
+    },
+    {
+      "id": "qing-beijing-1644",
+      "year": 1644,
+      "coordinates": [
+        116.39,
+        39.9
+      ],
+      "title": {
+        "fr": "1644 · Pékin passe sous pouvoir Qing",
+        "en": "1644 · Beijing passes under Qing rule"
+      },
+      "mechanism": {
+        "fr": "En 1644, Pékin tombe d’abord aux mains d’une armée rebelle. Les forces mandchoues battent les rebelles et poursuivent leur conquête vers le sud.",
+        "en": "In 1644, Beijing first falls to a rebel army. Manchu forces defeat the rebels and continue their conquest southwards."
+      },
+      "consequence": {
+        "fr": "Le pouvoir impérial Qing remplace celui des Ming à Pékin, tandis que des prétendants Ming et d’autres adversaires poursuivent la lutte.",
+        "en": "Qing imperial rule replaces Ming authority in Beijing while Ming claimants and other opponents continue the struggle."
+      },
+      "limits": {
+        "fr": "La conquête se prolonge pendant des décennies. 1644 n’indique ni un contrôle uniforme ni les frontières actuelles. Le repère éditorial situe Pékin.",
+        "en": "Conquest continues for decades. 1644 indicates neither uniform control nor present-day borders. The editorial marker locates Beijing."
+      },
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · The Art of Dissent in 17th-Century China",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2011/the-art-of-dissent"
+        },
+        {
+          "label": "Cambridge University Press · Pamela Kyle Crossley, The Qing Unification, 1618–1683 (summary)",
+          "url": "https://www.cambridge.org/core/books/abs/east-asia-in-the-world/qing-unification-16181683/5E6EAF9BE95F583FFA77C925B3AD5E4C"
+        }
+      ]
+    },
+    {
+      "id": "paris-1783",
+      "year": 1783,
+      "coordinates": [
+        -77,
+        39
+      ],
+      "title": {
+        "fr": "1783 · Reconnaissance des États-Unis",
+        "en": "1783 · Recognition of the United States"
+      },
+      "mechanism": {
+        "fr": "Le traité de Paris du 3 septembre clôt la guerre d’indépendance entre la Grande-Bretagne et les États-Unis.",
+        "en": "The Treaty of Paris of 3 September ends the War of Independence between Britain and the United States."
+      },
+      "consequence": {
+        "fr": "La Grande-Bretagne reconnaît leur indépendance et le traité définit leurs limites territoriales.",
+        "en": "Britain recognises their independence and the treaty defines their territorial boundaries."
+      },
+      "limits": {
+        "fr": "Une frontière diplomatique ne décrit pas à elle seule le contrôle effectif. Le repère situe la région concernée, pas le lieu de signature.",
+        "en": "A diplomatic boundary alone does not describe effective control. The marker locates the affected region, not the signing place."
+      },
+      "sources": [
+        {
+          "label": "US National Archives · Treaty of Paris",
+          "url": "https://www.archives.gov/milestone-documents/treaty-of-paris"
+        }
+      ]
+    },
+    {
+      "id": "haiti-1804",
+      "year": 1804,
+      "coordinates": [
+        -72.69,
+        19.45
+      ],
+      "title": {
+        "fr": "1804 · Indépendance d’Haïti",
+        "en": "1804 · Haitian independence"
+      },
+      "mechanism": {
+        "fr": "Issue de l’insurrection contre l’esclavage commencée en 1791, la révolution aboutit à la déclaration d’indépendance du 1er janvier 1804 aux Gonaïves.",
+        "en": "Emerging from the uprising against slavery begun in 1791, the revolution culminates in the independence declaration of 1 January 1804 at Gonaïves."
+      },
+      "consequence": {
+        "fr": "L’ancienne colonie française de Saint-Domingue devient Haïti. La déclaration affirme la rupture avec la domination française et la défense de la liberté.",
+        "en": "The former French colony of Saint-Domingue becomes Haiti. The declaration asserts separation from French rule and the defence of freedom."
+      },
+      "limits": {
+        "fr": "Proclamation et reconnaissance diplomatique sont distinctes : la France reconnaît l’indépendance en 1825, les États-Unis en 1862. Le repère ne représente pas toute l’île d’Hispaniola.",
+        "en": "Proclamation and diplomatic recognition are distinct: France recognises independence in 1825, the United States in 1862. The marker does not represent all of Hispaniola."
+      },
+      "sources": [
+        {
+          "label": "Duke University · Haitian Declaration of Independence, 1 January 1804",
+          "url": "https://today.duke.edu/showcase/haitideclaration/declarationstext.html"
+        },
+        {
+          "label": "US Office of the Historian · The Haitian Revolution, 1791–1804",
+          "url": "https://history.state.gov/milestones/1784-1800/haitian-rev"
+        }
+      ]
+    },
+    {
+      "id": "vienna-1815",
+      "year": 1815,
+      "coordinates": [
+        16.37,
+        48.21
+      ],
+      "title": {
+        "fr": "1815 · Réorganisation de l’Europe",
+        "en": "1815 · Reorganisation of Europe"
+      },
+      "mechanism": {
+        "fr": "Après les guerres napoléoniennes, le congrès de Vienne recherche un équilibre entre puissances et restaure des dynasties.",
+        "en": "After the Napoleonic wars, the Congress of Vienna seeks a balance between powers and restores dynasties."
+      },
+      "consequence": {
+        "fr": "L’acte final du 9 juin redessine l’ordre territorial européen ; une Confédération germanique réunit des États restant distincts.",
+        "en": "The Final Act of 9 June reshapes the European territorial order; a German Confederation brings together states that remain separate."
+      },
+      "limits": {
+        "fr": "Confédération, souveraineté et occupation sont des relations différentes. Une seule couleur ne peut pas les expliquer toutes.",
+        "en": "Confederation, sovereignty and occupation are different relationships. A single colour cannot explain all of them."
+      },
+      "sources": [
+        {
+          "label": "Chancellerie fédérale autrichienne · 1815",
+          "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/besuchen-sie-uns/gang-der-geschichte/1815.html"
+        }
+      ]
+    },
+    {
+      "id": "brazil-1822",
+      "year": 1822,
+      "title": {
+        "fr": "1822 · L’indépendance du Brésil",
+        "en": "1822 · Brazilian independence"
+      },
+      "mechanism": {
+        "fr": "Le 7 septembre 1822, Pedro proclame l’indépendance. La rupture avec le Portugal aboutit à un empire dirigé depuis Rio de Janeiro.",
+        "en": "On 7 September 1822, Pedro proclaims independence. The break with Portugal produces an empire governed from Rio de Janeiro."
+      },
+      "consequence": {
+        "fr": "L’adhésion des provinces se construit par des négociations et des guerres. Le traité du 29 août 1825 acte la reconnaissance portugaise.",
+        "en": "Provincial allegiance develops through negotiations and wars. The treaty of 29 August 1825 records Portuguese recognition."
+      },
+      "limits": {
+        "fr": "1822 ne marque pas un contrôle uniforme : les combats en Bahia durent jusqu’au 2 juillet 1823. Rio est un repère éditorial approximatif du gouvernement, sans emprise territoriale.",
+        "en": "1822 does not mark uniform control: fighting in Bahia continues until 2 July 1823. Rio is an approximate editorial marker for the government, without a territorial footprint."
+      },
+      "coordinates": [
+        -43.2,
+        -22.9
+      ],
+      "sources": [
+        {
+          "label": "Fundação Casa de Rui Barbosa · O prazer do percurso, cronologia 1821–1830",
+          "url": "https://antigo.casaruibarbosa.gov.br/oprazerdopercurso/cronologia20.htm"
+        },
+        {
+          "label": "Arquivo Nacional · Apontamentos sobre a independência do Brasil na Bahia",
+          "url": "https://www.gov.br/arquivonacional/pt-br/sites_eventos/sites-tematicos-1/brasil-oitocentista/especial-bicentenario-da-independencia/apontamentos-sobre-a-independencia-do-brasil-na-bahia"
+        },
+        {
+          "label": "Arquivo Histórico do Itamaraty · Missão Charles Stuart (1825–1829)",
+          "url": "https://atom.itamaraty.gov.br/index.php/stt"
+        }
+      ]
+    },
+    {
+      "id": "waitangi-1840",
+      "year": 1840,
+      "coordinates": [
+        174.08,
+        -35.27
+      ],
+      "title": {
+        "fr": "1840 · Waitangi : des textes qui diffèrent",
+        "en": "1840 · Waitangi: differing texts"
+      },
+      "mechanism": {
+        "fr": "Le traité commence à être signé le 6 février, dans un contexte d’installation britannique croissante. La Couronne proclame sa souveraineté le 21 mai.",
+        "en": "Signing begins on 6 February amid increasing British settlement. The Crown proclaims sovereignty on 21 May."
+      },
+      "consequence": {
+        "fr": "La version anglaise évoque une cession de souveraineté ; le texte māori emploie kāwanatanga et garantit tino rangatiratanga.",
+        "en": "The English version describes a transfer of sovereignty; the Māori text uses kāwanatanga and guarantees tino rangatiratanga."
+      },
+      "limits": {
+        "fr": "Les deux textes ne sont pas équivalents. Une couleur coloniale ne prouve ni un accord uniforme ni la disparition de l’autorité māorie.",
+        "en": "The two texts are not equivalent. A colonial map colour proves neither uniform agreement nor the disappearance of Māori authority."
+      },
+      "sources": [
+        {
+          "label": "Manatū Taonga · The Treaty in brief",
+          "url": "https://nzhistory.govt.nz/politics/treaty/the-treaty-in-brief"
+        },
+        {
+          "label": "Archives New Zealand · Te Tiriti texts",
+          "url": "https://www.archives.govt.nz/discover-our-stories/the-treaty-of-waitangi/what-te-tiriti-o-waitangi-says-in-english-and-te-reo-maori"
+        }
+      ]
+    },
+    {
+      "id": "canada-confederation-1867",
+      "year": 1867,
+      "title": {
+        "fr": "1867 · La Confédération canadienne",
+        "en": "1867 · Canadian Confederation"
+      },
+      "mechanism": {
+        "fr": "Le 1er juillet 1867, une loi britannique réunit trois colonies en quatre provinces : Ontario, Québec, Nouvelle-Écosse et Nouveau-Brunswick.",
+        "en": "On 1 July 1867, a British act unites three colonies as four provinces: Ontario, Quebec, Nova Scotia and New Brunswick."
+      },
+      "consequence": {
+        "fr": "La fédération répartit les pouvoirs entre gouvernement central et provinces. Cette union ne constitue pas encore une indépendance complète envers le Royaume-Uni.",
+        "en": "The federation divides powers between the central government and provinces. This union does not yet constitute full independence from Britain."
+      },
+      "limits": {
+        "fr": "Les peuples autochtones ne sont pas consultés. Le Canada de 1867 n’a pas ses limites actuelles. Ottawa est un repère éditorial approximatif ; aucun territoire autochtone n’est délimité.",
+        "en": "Indigenous peoples are not consulted. Canada in 1867 lacks its present boundaries. Ottawa is an approximate editorial marker; no Indigenous territory is delineated."
+      },
+      "coordinates": [
+        -75.7,
+        45.42
+      ],
+      "sources": [
+        {
+          "label": "Gouvernement du Canada · Provinces and territories",
+          "url": "https://www.canada.ca/en/intergovernmental-affairs/services/provinces-territories.html"
+        },
+        {
+          "label": "Canadian Museum of History · British North America Act, 1867",
+          "url": "https://www.historymuseum.ca/teachers-zone/think-like-a-historian-working-with-primary-source-evidence/documents/british-north-america-act-1867/"
+        }
+      ]
+    },
+    {
+      "id": "meiji-restoration-1868",
+      "year": 1868,
+      "coordinates": [
+        135.77,
+        35.01
+      ],
+      "title": {
+        "fr": "1868 · Restauration Meiji et centralisation du Japon",
+        "en": "1868 · Meiji Restoration and Japan’s centralisation"
+      },
+      "mechanism": {
+        "fr": "Après la restitution du pouvoir par le shogun en 1867, la proclamation du 3 janvier 1868 établit un nouveau gouvernement au nom de l’empereur.",
+        "en": "Following the shogun’s return of political power in 1867, the proclamation of 3 January 1868 establishes a new government in the emperor’s name."
+      },
+      "consequence": {
+        "fr": "Les dirigeants Meiji renforcent progressivement l’autorité centrale. En 1871, les domaines des seigneurs sont abolis et remplacés par des préfectures.",
+        "en": "Meiji leaders gradually strengthen central authority. In 1871, the lords’ domains are abolished and replaced by prefectures."
+      },
+      "limits": {
+        "fr": "La proclamation ne signifie pas une prise de contrôle immédiate : des résistances armées persistent. Le repère éditorial à Kyoto ne représente pas les frontières du Japon.",
+        "en": "The proclamation does not mean immediate control: armed resistance persists. The editorial marker at Kyoto does not represent Japan’s borders."
+      },
+      "sources": [
+        {
+          "label": "National Diet Library · Modern Japan in Archives, Chronological Table",
+          "url": "https://www.ndl.go.jp/modern/e/utility/chronology.html"
+        },
+        {
+          "label": "Columbia University, Asia for Educators · The Meiji Restoration and Modernization",
+          "url": "https://afe.easia.columbia.edu/special/japan_1750_meiji.htm"
+        },
+        {
+          "label": "Cambridge University Press · Castles and the Transition to the Imperial State",
+          "url": "https://www.cambridge.org/core/books/japans-castles/castles-and-the-transition-to-the-imperial-state/9CC3C20906AA503DB3DE880D2D7E963B"
+        }
+      ]
+    },
+    {
+      "id": "germany-1871",
+      "year": 1871,
+      "coordinates": [
+        13.4,
+        52.52
+      ],
+      "title": {
+        "fr": "1871 · Proclamation de l’Empire allemand",
+        "en": "1871 · Proclamation of the German Empire"
+      },
+      "mechanism": {
+        "fr": "La victoire prussienne et de ses alliés dans la guerre franco-allemande favorise l’unification conduite par Bismarck.",
+        "en": "Victory by Prussia and its allies in the Franco-Prussian War advances the unification led by Bismarck."
+      },
+      "consequence": {
+        "fr": "Guillaume Ier est proclamé empereur à Versailles le 18 janvier 1871.",
+        "en": "Wilhelm I is proclaimed emperor at Versailles on 18 January 1871."
+      },
+      "limits": {
+        "fr": "La proclamation ne date pas à elle seule toutes les modifications frontalières de 1871. Le repère est un ancrage de lecture en Allemagne.",
+        "en": "The proclamation alone does not date every border change in 1871. The marker is a reading anchor in Germany."
+      },
+      "sources": [
+        {
+          "label": "Château de Versailles · Proclamation de l’Empire allemand",
+          "url": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/proclamation-empire-allemand"
+        }
+      ]
+    },
+    {
+      "id": "berlin-africa-1885",
+      "year": 1885,
+      "coordinates": [
+        23,
+        0
+      ],
+      "title": {
+        "fr": "1885 · Berlin et l’expansion coloniale en Afrique",
+        "en": "1885 · Berlin and colonial expansion in Africa"
+      },
+      "mechanism": {
+        "fr": "Du 15 novembre 1884 au 26 février 1885, les puissances réunies à Berlin négocient leur expansion africaine sans représentants africains.",
+        "en": "From 15 November 1884 to 26 February 1885, the powers meeting in Berlin negotiate their African expansion without African representatives."
+      },
+      "consequence": {
+        "fr": "La conférence fixe des conditions de reconnaissance des possessions coloniales et encourage la compétition pour le contrôle de territoires africains.",
+        "en": "The conference sets conditions for recognising colonial possessions and encourages competition for control of African territories."
+      },
+      "limits": {
+        "fr": "Elle ne trace pas toutes les frontières d’un seul geste : des accords bilatéraux et des conquêtes suivent. Le repère en Afrique centrale ne situe pas la conférence.",
+        "en": "It does not draw every boundary at once: bilateral agreements and conquests follow. The Central African marker does not locate the conference."
+      },
+      "sources": [
+        {
+          "label": "Deutsches Historisches Museum · Berliner Konferenz, 1884–1885",
+          "url": "https://www.dhm.de/archiv/ausstellungen/namibia/stadtspaziergang/reichskanzlerpalais.htm"
+        },
+        {
+          "label": "Deutsches Historisches Museum · Deutsch-Ostafrika and subsequent boundary treaties",
+          "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/aussenpolitik/ostafrika"
+        }
+      ]
+    },
+    {
+      "id": "adwa-1896",
+      "year": 1896,
+      "coordinates": [
+        38.9,
+        14.16
+      ],
+      "title": {
+        "fr": "1896 · Adwa : l’indépendance éthiopienne défendue",
+        "en": "1896 · Adwa: Ethiopian independence defended"
+      },
+      "mechanism": {
+        "fr": "Le 1er mars 1896, l’armée éthiopienne conduite par Menelik II et soutenue par l’impératrice Taytu défait les forces italiennes d’invasion à Adwa.",
+        "en": "On 1 March 1896, the Ethiopian army led by Menelik II and supported by Empress Taytu defeats the invading Italian forces at Adwa."
+      },
+      "consequence": {
+        "fr": "La victoire préserve l’indépendance de l’Éthiopie et fait échouer la tentative italienne d’imposer un protectorat.",
+        "en": "Victory preserves Ethiopian independence and defeats Italy’s attempt to impose a protectorate."
+      },
+      "limits": {
+        "fr": "Elle ne supprime pas la colonie italienne d’Érythrée. Le repère éditorial situe Adwa, sans tracer le champ de bataille ni les frontières de l’empire.",
+        "en": "It does not end Italy’s Eritrean colony. The editorial marker locates Adwa without delineating the battlefield or the empire’s borders."
+      },
+      "sources": [
+        {
+          "label": "South African History Online · Remembering the Battle of Adwa",
+          "url": "https://sahistory.org.za/article/remembering-battle-adwa"
+        },
+        {
+          "label": "Ohio State University, Origins · Robert Clemm, When Ethiopia Stunned the World",
+          "url": "https://origins.osu.edu/review/when-ethiopia-stunned-world"
+        }
+      ]
+    },
+    {
+      "id": "australia-federation-1901",
+      "year": 1901,
+      "title": {
+        "fr": "1901 · La fédération australienne",
+        "en": "1901 · Australian Federation"
+      },
+      "mechanism": {
+        "fr": "Le 1er janvier 1901, six colonies britanniques forment le Commonwealth d’Australie, après des référendums et l’adoption d’une loi par le Parlement britannique.",
+        "en": "On 1 January 1901, six British colonies form the Commonwealth of Australia following referendums and legislation passed by the British Parliament."
+      },
+      "consequence": {
+        "fr": "Devenues États, les colonies partagent les pouvoirs avec un gouvernement fédéral. Les liens institutionnels avec la Grande-Bretagne se maintiennent.",
+        "en": "The colonies become states sharing powers with a federal government. Institutional ties to Britain continue."
+      },
+      "limits": {
+        "fr": "Les peuples aborigènes et insulaires du détroit de Torres sont largement exclus du processus. Sydney est un repère éditorial approximatif de la proclamation ; il ne délimite ni fédération ni territoires autochtones.",
+        "en": "Aboriginal and Torres Strait Islander peoples are largely excluded from the process. Sydney is an approximate editorial marker for the proclamation; it delineates neither the federation nor Indigenous territories."
+      },
+      "coordinates": [
+        151.21,
+        -33.87
+      ],
+      "sources": [
+        {
+          "label": "National Museum of Australia · Federation",
+          "url": "https://www.nma.gov.au/defining-moments/resources/federation"
+        },
+        {
+          "label": "Parliamentary Education Office · The Federation of Australia",
+          "url": "https://peo.gov.au/understand-our-parliament/history-of-parliament/federation/the-federation-of-australia"
+        }
+      ]
+    },
+    {
+      "id": "partition-1947",
+      "year": 1947,
+      "coordinates": [
+        74.35,
+        31.55
+      ],
+      "title": {
+        "fr": "1947 · Indépendances et partition",
+        "en": "1947 · Independence and Partition"
+      },
+      "mechanism": {
+        "fr": "Le retrait britannique et la partition conduisent à l’indépendance de l’Inde et du Pakistan en août 1947.",
+        "en": "British withdrawal and Partition lead to the independence of India and Pakistan in August 1947."
+      },
+      "consequence": {
+        "fr": "La division territoriale s’accompagne de déplacements massifs et de violences. Le Pakistan comprend alors deux parties séparées géographiquement.",
+        "en": "Territorial division is accompanied by mass displacement and violence. Pakistan then comprises two geographically separated parts."
+      },
+      "limits": {
+        "fr": "Les choix d’adhésion des États princiers ouvrent d’autres conflits. La ligne politique ne décrit pas les migrations ni toutes les contestations.",
+        "en": "Accession choices by princely states lead to further conflicts. The political line describes neither migrations nor every dispute."
+      },
+      "sources": [
+        {
+          "label": "National Army Museum · Independence and Partition, 1947",
+          "url": "https://www.nam.ac.uk/explore/independence-and-partition-1947"
+        }
+      ]
+    },
+    {
+      "id": "indonesia-1949",
+      "year": 1949,
+      "coordinates": [
+        106.83,
+        -6.18
+      ],
+      "title": {
+        "fr": "1949 · Indonésie : transfert de souveraineté",
+        "en": "1949 · Indonesia: transfer of sovereignty"
+      },
+      "mechanism": {
+        "fr": "Sukarno et Hatta proclament l’indépendance le 17 août 1945. Le refus néerlandais débouche sur des négociations et une guerre coloniale.",
+        "en": "Sukarno and Hatta proclaim independence on 17 August 1945. Dutch refusal leads to negotiations and a colonial war."
+      },
+      "consequence": {
+        "fr": "Le 27 décembre 1949, les Pays-Bas transfèrent la souveraineté aux États-Unis d’Indonésie, une fédération remplacée par un État unitaire en 1950.",
+        "en": "On 27 December 1949, the Netherlands transfers sovereignty to the United States of Indonesia, a federation replaced by a unitary state in 1950."
+      },
+      "limits": {
+        "fr": "1949 date ce transfert, pas la proclamation de 1945. La Nouvelle-Guinée occidentale en est exclue et demeure alors sous administration néerlandaise.",
+        "en": "1949 dates this transfer, not the 1945 proclamation. Western New Guinea is excluded and remains under Dutch administration at that time."
+      },
+      "sources": [
+        {
+          "label": "Nationaal Archief · Soevereiniteitsoverdracht Indonesië (1949)",
+          "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/soevereiniteitsoverdracht-indonesie-1949"
+        },
+        {
+          "label": "Nationaal Archief · 70 jaar soevereiniteitsoverdracht aan Indonesië",
+          "url": "https://www.nationaalarchief.nl/beleven/nieuws/70-jaar-soevereiniteitsoverdracht-aan-indonesie"
+        }
+      ]
+    },
+    {
+      "id": "morocco-1956",
+      "year": 1956,
+      "coordinates": [
+        -6.84,
+        34.02
+      ],
+      "title": {
+        "fr": "1956 · Indépendance du Maroc",
+        "en": "1956 · Moroccan independence"
+      },
+      "mechanism": {
+        "fr": "Le 2 mars, la France reconnaît l’indépendance du Maroc : le protectorat français prend fin.",
+        "en": "On 2 March, France recognises Moroccan independence, ending the French protectorate."
+      },
+      "consequence": {
+        "fr": "L’Espagne renonce à son autorité sur le nord le 7 avril ; la zone de Tanger est réintégrée le 29 octobre.",
+        "en": "Spain relinquishes its authority over the north on 7 April; the Tangier zone is reintegrated on 29 October."
+      },
+      "limits": {
+        "fr": "Ces étapes sont distinctes. Une carte annuelle de 1956 ne permet pas de les ordonner et ne règle pas tous les processus territoriaux ultérieurs.",
+        "en": "These are separate stages. An annual map for 1956 cannot order them or resolve all subsequent territorial processes."
+      },
+      "sources": [
+        {
+          "label": "Archives diplomatiques · Ambassade de France à Rabat",
+          "url": "https://archivesdiplomatiques.diplomatie.gouv.fr/ark:/14366/w6b5zf1kmj38"
+        }
+      ]
+    },
+    {
+      "id": "ghana-1957",
+      "year": 1957,
+      "coordinates": [
+        -0.2,
+        5.56
+      ],
+      "title": {
+        "fr": "1957 · Indépendance du Ghana",
+        "en": "1957 · Ghanaian independence"
+      },
+      "mechanism": {
+        "fr": "Après les négociations menées par Kwame Nkrumah avec les Britanniques, l’indépendance prend effet le 6 mars 1957.",
+        "en": "Following Kwame Nkrumah’s negotiations with Britain, independence takes effect on 6 March 1957."
+      },
+      "consequence": {
+        "fr": "Les territoires de la Côte-de-l’Or deviennent le Ghana indépendant ; le territoire sous tutelle du Togoland britannique s’y unit à la même date.",
+        "en": "The Gold Coast territories become independent Ghana; the Trust Territory of British Togoland joins it on the same date."
+      },
+      "limits": {
+        "fr": "Le changement associe indépendance et union territoriale, deux opérations distinctes. Le repère d’Accra ne dessine pas l’étendue du nouvel État.",
+        "en": "The change combines independence and territorial union, two distinct operations. The Accra marker does not outline the new state’s extent."
+      },
+      "sources": [
+        {
+          "label": "Ghana Ministry of Foreign Affairs · About Ghana",
+          "url": "https://mfa.gov.gh/index.php/about-ghana/"
+        },
+        {
+          "label": "UK Parliament · Ghana Independence Act 1957, sections 1 and 5",
+          "url": "https://www.legislation.gov.uk/ukpga/Eliz2/5-6/6/pdfs/ukpga_19570006_en.pdf"
+        },
+        {
+          "label": "United Nations · T/1301, notification of 6 March 1957",
+          "url": "https://digitallibrary.un.org/record/3934658/files/T_1301-EN.pdf"
+        }
+      ]
+    },
+    {
+      "id": "singapore-1965",
+      "year": 1965,
+      "coordinates": [
+        103.85,
+        1.29
+      ],
+      "title": {
+        "fr": "1965 · Singapour devient un État indépendant",
+        "en": "1965 · Singapore becomes an independent state"
+      },
+      "mechanism": {
+        "fr": "L’accord signé le 7 août 1965 organise la séparation de Singapour et de la Malaisie. Il entre en vigueur le 9 août.",
+        "en": "The agreement signed on 7 August 1965 arranges Singapore’s separation from Malaysia. It takes effect on 9 August."
+      },
+      "consequence": {
+        "fr": "Singapour cesse d’être un État de la fédération et devient souverain. Les compétences fédérales qui le concernent passent à son gouvernement.",
+        "en": "Singapore ceases to be a state of the federation and becomes sovereign. Federal powers concerning Singapore pass to its government."
+      },
+      "limits": {
+        "fr": "La séparation maintient certains engagements, notamment les accords sur l’eau. Le repère éditorial situe Singapour ; il ne délimite pas ses eaux territoriales.",
+        "en": "Separation preserves some commitments, including water agreements. The editorial marker locates Singapore; it does not delimit its territorial waters."
+      },
+      "sources": [
+        {
+          "label": "United Nations Treaty Series · Singapore–Malaysia separation agreement, 7 August 1965, articles III–IV and Annex B",
+          "url": "https://treaties.un.org/doc/Publication/UNTS/Volume%20563/volume-563-I-8206-English.pdf"
+        },
+        {
+          "label": "National Archives of Singapore · Proclamation of Singapore, 1965",
+          "url": "https://corporate.nas.gov.sg/discover-archives/media/proclamationofsingapore/"
+        }
+      ]
+    },
+    {
+      "id": "bangladesh-1971",
+      "year": 1971,
+      "coordinates": [
+        90.41,
+        23.81
+      ],
+      "title": {
+        "fr": "1971 · Indépendance du Bangladesh",
+        "en": "1971 · Bangladeshi independence"
+      },
+      "mechanism": {
+        "fr": "L’indépendance est proclamée le 26 mars 1971. Une guerre de libération oppose les forces bangladaises au pouvoir pakistanais.",
+        "en": "Independence is proclaimed on 26 March 1971. A liberation war pits Bangladeshi forces against Pakistani rule."
+      },
+      "consequence": {
+        "fr": "Le 16 décembre, le commandement pakistanais capitule à Dhaka devant les forces alliées de l’Inde et du Bangladesh. L’ancien Pakistan oriental devient un État indépendant.",
+        "en": "On 16 December, Pakistan’s command surrenders in Dhaka to the allied forces of India and Bangladesh. Former East Pakistan becomes an independent state."
+      },
+      "limits": {
+        "fr": "Proclamation et victoire militaire sont deux étapes de 1971. Une carte annuelle ne décrit pas l’évolution du contrôle territorial pendant la guerre.",
+        "en": "Proclamation and military victory are two stages within 1971. An annual map does not describe changing territorial control during the war."
+      },
+      "sources": [
+        {
+          "label": "Bangladesh Ministry of Law · Constitution, preamble and article 2",
+          "url": "https://bdlaws.minlaw.gov.bd/act-print-367.html"
+        },
+        {
+          "label": "Liberation War Museum · 16 December 1971",
+          "url": "https://www.liberationwarmuseumbd.org/on-this-day/1971-12-16"
+        }
+      ]
+    },
+    {
+      "id": "ussr-dissolution-1991",
+      "year": 1991,
+      "title": {
+        "fr": "1991 · La dissolution de l’URSS",
+        "en": "1991 · The dissolution of the USSR"
+      },
+      "mechanism": {
+        "fr": "Le 8 décembre, les dirigeants russe, ukrainien et biélorusse créent la Communauté des États indépendants. La déclaration d’Alma-Ata du 21 décembre élargit cet ensemble.",
+        "en": "On 8 December, the Russian, Ukrainian and Belarusian leaders establish the Commonwealth of Independent States. The Alma-Ata declaration on 21 December broadens this grouping."
+      },
+      "consequence": {
+        "fr": "Gorbatchev démissionne le 25 décembre ; la dissolution formelle de l’Union soviétique intervient le 26.",
+        "en": "Gorbachev resigns on 25 December; the Soviet Union’s formal dissolution follows on 26 December."
+      },
+      "limits": {
+        "fr": "Les républiques ont des calendriers distincts d’indépendance et de reconnaissance. Moscou est un repère éditorial approximatif des institutions soviétiques, sans reconstitution des frontières ni résolution des conflits territoriaux.",
+        "en": "The republics have distinct timelines of independence and recognition. Moscow is an approximate editorial marker for Soviet institutions, without reconstructing borders or resolving territorial conflicts."
+      },
+      "coordinates": [
+        37.62,
+        55.75
+      ],
+      "sources": [
+        {
+          "label": "Wilson Center, Kennan Institute · Timeline: 50 Years, 1991",
+          "url": "https://www.wilsoncenter.org/article/timeline-50-years-kennan-institute"
+        },
+        {
+          "label": "Presidential Library · Alma-Ata Declaration, 21 December 1991",
+          "url": "https://www.prlib.ru/history/619829"
+        },
+        {
+          "label": "U.S. Department of State, Office of the Historian · The Collapse of the Soviet Union",
+          "url": "https://history.state.gov/milestones/1989-1992/collapse-soviet-union"
+        }
+      ]
+    }
+  ]
+}

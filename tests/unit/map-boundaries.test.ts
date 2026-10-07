@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import geography from '../../public/geo/manifest.json';
 import type { GeographyManifest } from '../../lib/geography';
-import { boundaryFrames, wrapLongitude } from '../../lib/map-boundaries';
+import { boundaryFrames, boundaryPresentation, wrapLongitude } from '../../lib/map-boundaries';
 import { createInitialAtlasState, parseAtlasUrl, serializeAtlasUrl } from '../../lib/store';
 
 const geo = geography as unknown as GeographyManifest;
@@ -37,6 +37,63 @@ describe('sourced boundary selection', () => {
       0.5, 0.5,
     ]);
     expect(boundaryFrames(geo, ordered.at(-1)!.year + 1, 'historical-basemaps')).toHaveLength(1);
+  });
+});
+
+describe('boundary reading matches the rendered frames', () => {
+  it('does not claim the future snapshot is visible at an exact observation', () => {
+    expect(boundaryPresentation(geo, 1800, 'historical-basemaps')).toMatchObject({
+      source: 'historical-basemaps',
+      status: 'snapshot',
+      years: [1800],
+      fallback: false,
+    });
+  });
+  it('identifies a blend as illustrative, retaining both actual observation dates', () => {
+    expect(boundaryPresentation(geo, 1807, 'historical-basemaps')).toMatchObject({
+      status: 'transition',
+      years: [1800, 1815],
+    });
+  });
+  it('labels a retained frame with its source year rather than the requested year', () => {
+    expect(boundaryPresentation(geo, 2026, 'cliopatria')).toMatchObject({
+      source: 'cliopatria',
+      status: 'latest',
+      years: [2024],
+    });
+    expect(boundaryPresentation(geo, 2026, 'historical-basemaps')).toMatchObject({
+      source: 'historical-basemaps',
+      status: 'latest',
+      years: [2010],
+    });
+  });
+  it('explains a fallback before Cliopatria coverage and preserves astronomical BCE dates', () => {
+    expect(boundaryPresentation(geo, -3500, 'cliopatria')).toMatchObject({
+      source: 'historical-basemaps',
+      status: 'transition',
+      years: [-3999, -2999],
+      fallback: true,
+    });
+    expect(boundaryPresentation(geo, -5000, 'cliopatria')).toMatchObject({
+      status: 'earliest',
+      years: [-3999],
+    });
+  });
+  it('uses the rendered source even when an expected temporal shard is missing', () => {
+    const missingShard = { ...geo, temporal: { ...geo.temporal!, shards: [] } };
+    expect(boundaryPresentation(missingShard, 1800, 'cliopatria')).toMatchObject({
+      source: 'historical-basemaps',
+      status: 'snapshot',
+      years: [1800],
+      fallback: true,
+    });
+    expect(
+      boundaryPresentation({ snapshots: [], basemap: geo.basemap }, 1800, 'cliopatria'),
+    ).toMatchObject({
+      source: null,
+      status: 'unavailable',
+      years: [],
+    });
   });
 });
 

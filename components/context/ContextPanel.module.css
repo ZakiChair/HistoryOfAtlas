@@ -1,0 +1,117 @@
+.panel {
+  position: absolute;
+  inset-inline-start: 0;
+  top: calc(100% + 8px);
+  width: min(450px, calc(100vw - 32px));
+  max-height: calc(100dvh - var(--timeline-height, 175px) - var(--map-layers-bottom, 150px) - 28px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--panel);
+  color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 70px #0004;
+  padding: 18px;
+  z-index: 18;
+  pointer-events: auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.header h2 {
+  font-family: 'Cormorant', serif;
+  font-size: 24px;
+  margin: 0;
+}
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin: 16px 0;
+}
+.tabs button {
+  min-height: 38px;
+  padding: 7px 9px;
+  border-radius: 7px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--paper);
+  font-size: 12px;
+}
+.tabs button[aria-pressed='true'] {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+.note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+.period {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.list > li {
+  border-top: 1px solid var(--line);
+}
+.item {
+  background: none;
+  border: 0;
+  width: 100%;
+  text-align: start;
+  padding: 14px 0;
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+.item small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.item[aria-expanded='true'] {
+  color: var(--gold);
+}
+.detail {
+  font-size: 13px;
+  line-height: 1.7;
+  padding-bottom: 14px;
+}
+.detail h3 {
+  font-size: 12px;
+  margin: 12px 0 5px;
+}
+.detail p {
+  margin: 0 0 10px;
+}
+.detail ul {
+  padding-inline-start: 18px;
+}
+.detail a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .panel {
+    position: fixed;
+    inset-inline: 12px;
+    top: max(125px, calc(var(--map-layers-bottom, 115px) + 8px));
+    width: auto;
+    max-height: calc(
+      100dvh - max(125px, calc(var(--map-layers-bottom, 115px) + 8px)) -
+        var(--timeline-height, 170px) - 12px
+    );
+    padding: 14px;
+  }
+}

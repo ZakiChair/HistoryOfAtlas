@@ -12,7 +12,7 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "text": "https://github.com/ZakiChair/HistoryOfAtlas/blob/main/DATA-LICENSE.md",
       "attribution": "HistoryOfAtlas contributors",
-      "scope": "Content written for the atlas: curated reviews and corrections, religion milestones, descriptions, generalized regions and diffusion links, map symbology"
+      "scope": "Content written for the atlas: curated reviews and corrections, religion milestones, descriptions, generalized regions and diffusion links, transformation notices and schematic network annotations, map symbology"
     },
     "note": "Third-party data keeps its original licence. 3D models whose origin is not documented in their own metadata are not covered until their provenance has been confirmed."
   },
@@ -23,7 +23,7 @@
       "url": "https://www.wikidata.org/",
       "license": "CC0-1.0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "scope": "Events, dates, coordinates, participants, people, offices, conflict links, historical capitals and population observations"
+      "scope": "Events, dates, coordinates, participants, people, offices, conflict links, historical capitals and population observations, city reference coordinates and city population observations"
     },
     {
       "id": "natural-earth-coastline-validation",
@@ -2711,7 +2711,7 @@
       "url": "https://github.com/aourednik/historical-basemaps",
       "license": "GPL-3.0-only",
       "licenseUrl": "/geo/HISTORICAL-BASEMAPS-LICENSE.txt",
-      "scope": "Historical boundary snapshots (secondary reference)",
+      "scope": "Historical boundary snapshots and derived coverage inventory (secondary reference)",
       "revision": "da7a4b735ecef70aebdc9c73e409d8a2500d50f3"
     },
     {
@@ -2729,7 +2729,7 @@
       "url": "https://github.com/Seshat-Global-History-Databank/cliopatria/tree/ad28a691b7c07c1fca89d0e0636d324667d2a258",
       "license": "CC-BY-4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "scope": "Dated polity boundaries",
+      "scope": "Dated polity boundaries and derived coverage inventory",
       "revision": "ad28a691b7c07c1fca89d0e0636d324667d2a258",
       "attribution": "https://doi.org/10.1038/s41597-025-04516-9"
     },
@@ -6526,6 +6526,789 @@
         "title": "World Health Organization — Zika virus fact sheet",
         "url": "https://www.who.int/news-room/fact-sheets/detail/zika-virus",
         "milestones": 3
+      }
+    ]
+  },
+  "context": {
+    "corpus": {
+      "scope": "Original historical transformation notices, trade and migration descriptions, reviewed capital chronologies, schematic editorial anchors and reading conventions",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Project-authored factual summaries, reviewed capital chronologies and schematic annotations. References are cited for verification; their text, maps and datasets are not redistributed in these editorial corpora. Source-derived coverage, capital and population records retain their original dataset licences."
+    },
+    "collections": [
+      {
+        "id": "changes",
+        "name": "Historical transformations",
+        "records": 30
+      },
+      {
+        "id": "networks",
+        "name": "Trade and migration networks",
+        "records": 14
+      },
+      {
+        "id": "capitals",
+        "name": "Reviewed capital chronologies",
+        "records": 7
+      }
+    ],
+    "references": [
+      {
+        "id": "context-reference-1",
+        "title": "Columbia University, Asia for Educators · Mongol Unity under Chinggis Khan",
+        "url": "https://afe.easia.columbia.edu/mongols/figures/figu_geng_unity.htm",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-2",
+        "title": "Columbia University, Asia for Educators · The Meiji Restoration and Modernization",
+        "url": "https://afe.easia.columbia.edu/special/japan_1750_meiji.htm",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-3",
+        "title": "Fundação Casa de Rui Barbosa · O prazer do percurso, cronologia 1821–1830",
+        "url": "https://antigo.casaruibarbosa.gov.br/oprazerdopercurso/cronologia20.htm",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-4",
+        "title": "Archives diplomatiques · Ambassade de France à Rabat",
+        "url": "https://archivesdiplomatiques.diplomatie.gouv.fr/ark:/14366/w6b5zf1kmj38",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-5",
+        "title": "Archaeological Survey of India · Agra Circle · Fatehpur Sikri",
+        "url": "https://asiagracircle.in/fateh-pur.html",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-6",
+        "title": "Arquivo Histórico do Itamaraty · Missão Charles Stuart (1825–1829)",
+        "url": "https://atom.itamaraty.gov.br/index.php/stt",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-7",
+        "title": "Bangladesh Ministry of Law · Constitution, preamble and article 2",
+        "url": "https://bdlaws.minlaw.gov.bd/act-print-367.html",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-8",
+        "title": "Bibliothèque nationale de France · Traité de Verdun (843)",
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb16734735c",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-9",
+        "title": "National Archives of Singapore · Proclamation of Singapore, 1965",
+        "url": "https://corporate.nas.gov.sg/discover-archives/media/proclamationofsingapore/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-10",
+        "title": "United Nations · T/1301, notification of 6 March 1957",
+        "url": "https://digitallibrary.un.org/record/3934658/files/T_1301-EN.pdf",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-11",
+        "title": "US Office of the Historian · The Haitian Revolution, 1791–1804",
+        "url": "https://history.state.gov/milestones/1784-1800/haitian-rev",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-12",
+        "title": "U.S. Department of State, Office of the Historian · The Collapse of the Soviet Union",
+        "url": "https://history.state.gov/milestones/1989-1992/collapse-soviet-union",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-13",
+        "title": "Ambassade de Chine en Inde · National Capital, histoire de Dadu",
+        "url": "https://in.china-embassy.gov.cn/eng/zggk/201010/t20101021_2234761.htm",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-14",
+        "title": "SlaveVoyages — Volume and direction of the trans-Atlantic slave trade",
+        "url": "https://legacy.slavevoyages.org/blog/volume-and-direction-trans-atlantic-slave-trade",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-15",
+        "title": "SlaveVoyages — Guidelines for Contributors, voyage coverage (p. 7)",
+        "url": "https://legacy.slavevoyages.org/documents/download/GuideContributors.pdf",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-16",
+        "title": "INAH · Centro histórico de la Ciudad de México",
+        "url": "https://lugares.inah.gob.mx/es/node/4833",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-17",
+        "title": "INAH · El impacto de la Conquista",
+        "url": "https://mexicograndezaydiversidad.inah.gob.mx/libro/fasciculos/09/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-18",
+        "title": "Ghana Ministry of Foreign Affairs · About Ghana",
+        "url": "https://mfa.gov.gh/index.php/about-ghana/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-19",
+        "title": "Manatū Taonga · The Treaty in brief",
+        "url": "https://nzhistory.govt.nz/politics/treaty/the-treaty-in-brief",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-20",
+        "title": "Ohio State University, Origins · Robert Clemm, When Ethiopia Stunned the World",
+        "url": "https://origins.osu.edu/review/when-ethiopia-stunned-world",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-21",
+        "title": "Panipat District Administration · First Battle of Panipat (1526)",
+        "url": "https://panipat.gov.in/first-battle/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-22",
+        "title": "Parliamentary Education Office · The Federation of Australia",
+        "url": "https://peo.gov.au/understand-our-parliament/history-of-parliament/federation/the-federation-of-australia",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-23",
+        "title": "South African History Online · Remembering the Battle of Adwa",
+        "url": "https://sahistory.org.za/article/remembering-battle-adwa",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-24",
+        "title": "Duke University · Haitian Declaration of Independence, 1 January 1804",
+        "url": "https://today.duke.edu/showcase/haitideclaration/declarationstext.html",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-25",
+        "title": "United Nations Treaty Series · Singapore–Malaysia separation agreement, 7 August 1965, articles III–IV and Annex B",
+        "url": "https://treaties.un.org/doc/Publication/UNTS/Volume%20563/volume-563-I-8206-English.pdf",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-26",
+        "title": "UNESCO · Incense Route — Desert Cities in the Negev",
+        "url": "https://whc.unesco.org/en/list/1107/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-27",
+        "title": "UNESCO · Aapravasi Ghat",
+        "url": "https://whc.unesco.org/en/list/1227/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-28",
+        "title": "UNESCO · Camino Real de Tierra Adentro",
+        "url": "https://whc.unesco.org/en/list/1351/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-29",
+        "title": "UNESCO — Ruins of Kilwa Kisiwani and Ruins of Songo Mnara",
+        "url": "https://whc.unesco.org/en/list/144/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-30",
+        "title": "UNESCO — Silk Roads: Chang'an–Tianshan Corridor",
+        "url": "https://whc.unesco.org/en/list/1442/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-31",
+        "title": "UNESCO · The Grand Canal",
+        "url": "https://whc.unesco.org/en/list/1443/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-32",
+        "title": "UNESCO — Qhapaq Ñan, Andean Road System",
+        "url": "https://whc.unesco.org/en/list/1459/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-33",
+        "title": "UNESCO World Heritage Centre · Fasil Ghebbi, Gondar Region",
+        "url": "https://whc.unesco.org/en/list/19/",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-34",
+        "title": "UNESCO World Heritage Centre · Fatehpur Sikri",
+        "url": "https://whc.unesco.org/en/list/255/",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-35",
+        "title": "UNESCO World Heritage Centre · Samarra Archaeological City",
+        "url": "https://whc.unesco.org/en/list/276/",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-36",
+        "title": "UNESCO World Heritage Centre · Historic City of Ayutthaya",
+        "url": "https://whc.unesco.org/en/list/576/",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-37",
+        "title": "UNESCO · Bryggen",
+        "url": "https://whc.unesco.org/en/list/59/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-38",
+        "title": "UNESCO World Heritage Centre · Complex of Hué Monuments",
+        "url": "https://whc.unesco.org/en/list/678/",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-39",
+        "title": "UNESCO World Heritage Centre · Historic City of Meknes",
+        "url": "https://whc.unesco.org/en/list/793/",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-40",
+        "title": "Patronato de la Alhambra y Generalife · De Garnata a Granada",
+        "url": "https://www.alhambra-patronato.es/de-garnata-granada",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-41",
+        "title": "Patronato de la Alhambra y Generalife · Gate of the Seven Floors",
+        "url": "https://www.alhambra-patronato.es/en/notas-prensa/the-alhambra-opens-the-enigmatic-gate-of-the-seven-floors-to-the-public",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-42",
+        "title": "US National Archives · Treaty of Paris",
+        "url": "https://www.archives.gov/milestone-documents/treaty-of-paris",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-43",
+        "title": "Archives New Zealand · Te Tiriti texts",
+        "url": "https://www.archives.govt.nz/discover-our-stories/the-treaty-of-waitangi/what-te-tiriti-o-waitangi-says-in-english-and-te-reo-maori",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-44",
+        "title": "Chancellerie fédérale autrichienne · 1815",
+        "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/besuchen-sie-uns/gang-der-geschichte/1815.html",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-45",
+        "title": "Cambridge University Press · Pamela Kyle Crossley, The Qing Unification, 1618–1683 (summary)",
+        "url": "https://www.cambridge.org/core/books/abs/east-asia-in-the-world/qing-unification-16181683/5E6EAF9BE95F583FFA77C925B3AD5E4C",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-46",
+        "title": "Cambridge University Press · Castles and the Transition to the Imperial State",
+        "url": "https://www.cambridge.org/core/books/japans-castles/castles-and-the-transition-to-the-imperial-state/9CC3C20906AA503DB3DE880D2D7E963B",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-47",
+        "title": "Gouvernement du Canada · Provinces and territories",
+        "url": "https://www.canada.ca/en/intergovernmental-affairs/services/provinces-territories.html",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-48",
+        "title": "Château de Versailles · Proclamation de l’Empire allemand",
+        "url": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/proclamation-empire-allemand",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-49",
+        "title": "Deutsches Historisches Museum · Berliner Konferenz, 1884–1885",
+        "url": "https://www.dhm.de/archiv/ausstellungen/namibia/stadtspaziergang/reichskanzlerpalais.htm",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-50",
+        "title": "Deutsches Historisches Museum · Deutsch-Ostafrika and subsequent boundary treaties",
+        "url": "https://www.dhm.de/lemo/kapitel/kaiserreich/aussenpolitik/ostafrika",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-51",
+        "title": "Getty · Mesopotamia: Civilization Begins",
+        "url": "https://www.getty.edu/art/exhibitions/mesopotamia/explore.html",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-52",
+        "title": "Arquivo Nacional · Apontamentos sobre a independência do Brasil na Bahia",
+        "url": "https://www.gov.br/arquivonacional/pt-br/sites_eventos/sites-tematicos-1/brasil-oitocentista/especial-bicentenario-da-independencia/apontamentos-sobre-a-independencia-do-brasil-na-bahia",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-53",
+        "title": "Europäisches Hansemuseum · The Hanse",
+        "url": "https://www.hansemuseum.eu/en/exhibition/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-54",
+        "title": "Canadian Museum of History · British North America Act, 1867",
+        "url": "https://www.historymuseum.ca/teachers-zone/think-like-a-historian-working-with-primary-source-evidence/documents/british-north-america-act-1867/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-55",
+        "title": "Historic Royal Palaces · William I (the Conqueror)",
+        "url": "https://www.hrp.org.uk/tower-of-london/history-and-stories/william-the-conqueror/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-56",
+        "title": "INAH · Tlatelolco, el último bastión mexica",
+        "url": "https://www.inah.gob.mx/index.php/foto-del-dia/1521-tlatelolco-el-ultimo-bastion-mexica",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-57",
+        "title": "Encyclopædia Iranica · C. E. Bosworth, ʿAbbasid Caliphate",
+        "url": "https://www.iranicaonline.org/articles/abbasid-caliphate/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-58",
+        "title": "UK Parliament · Ghana Independence Act 1957, sections 1 and 5",
+        "url": "https://www.legislation.gov.uk/ukpga/Eliz2/5-6/6/pdfs/ukpga_19570006_en.pdf",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-59",
+        "title": "Liberation War Museum · 16 December 1971",
+        "url": "https://www.liberationwarmuseumbd.org/on-this-day/1971-12-16",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-60",
+        "title": "The Metropolitan Museum of Art · Constantinople after 1261",
+        "url": "https://www.metmuseum.org/essays/constantinople-after-1261",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-61",
+        "title": "The Metropolitan Museum of Art · Roman Egypt",
+        "url": "https://www.metmuseum.org/essays/roman-egypt",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-62",
+        "title": "The Metropolitan Museum of Art · The Art of the Abbasid Period (750–1258)",
+        "url": "https://www.metmuseum.org/essays/the-art-of-the-abbasid-period-750-1258",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-63",
+        "title": "The Metropolitan Museum of Art · The Manila Galleon Trade (1565–1815)",
+        "url": "https://www.metmuseum.org/essays/the-manila-galleon-trade-1565-1815",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-64",
+        "title": "The Metropolitan Museum of Art — The Trans-Saharan Gold Trade (7th–14th Century)",
+        "url": "https://www.metmuseum.org/essays/the-trans-saharan-gold-trade-7th-14th-century",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-65",
+        "title": "The Metropolitan Museum of Art · The Art of Dissent in 17th-Century China",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2011/the-art-of-dissent",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-66",
+        "title": "The Metropolitan Museum of Art · Age of Empires: Exhibition Galleries",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2017/age-of-empires/exhibition-galleries",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-67",
+        "title": "Universidad de Almería / Modernalia · Los Reyes Católicos ante Granada",
+        "url": "https://www.modernalia.es/items/show/337",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-68",
+        "title": "National Army Museum · Independence and Partition, 1947",
+        "url": "https://www.nam.ac.uk/explore/independence-and-partition-1947",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-69",
+        "title": "Nationaal Archief · 70 jaar soevereiniteitsoverdracht aan Indonesië",
+        "url": "https://www.nationaalarchief.nl/beleven/nieuws/70-jaar-soevereiniteitsoverdracht-aan-indonesie",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-70",
+        "title": "Nationaal Archief · Soevereiniteitsoverdracht Indonesië (1949)",
+        "url": "https://www.nationaalarchief.nl/beleven/onderwijs/bronnenbox/soevereiniteitsoverdracht-indonesie-1949",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-71",
+        "title": "National Diet Library · Modern Japan in Archives, Chronological Table",
+        "url": "https://www.ndl.go.jp/modern/e/utility/chronology.html",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-72",
+        "title": "National Museum of Australia · Federation",
+        "url": "https://www.nma.gov.au/defining-moments/resources/federation",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-73",
+        "title": "NPS · El Camino Real, Frequently Asked Questions",
+        "url": "https://www.nps.gov/elca/faqs.htm",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-74",
+        "title": "NPS · El Camino Real, History & Culture",
+        "url": "https://www.nps.gov/elca/learn/historyculture/index.htm",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-75",
+        "title": "NPS · Trail of Tears, History & Culture",
+        "url": "https://www.nps.gov/trte/learn/historyculture/index.htm",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-76",
+        "title": "Presidential Library · Alma-Ata Declaration, 21 December 1991",
+        "url": "https://www.prlib.ru/history/619829",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-77",
+        "title": "Smithsonian NMAAHC — The Great Migration",
+        "url": "https://www.searchablemuseum.com/the-great-migration/",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-78",
+        "title": "Autorité du canal de Suez · Convention de Constantinople, 1888",
+        "url": "https://www.suezcanal.gov.eg/English/About/CanalTreatiesAndDecrees/Pages/ConstantinopleConvention.aspx",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-79",
+        "title": "Autorité du canal de Suez · Canal History",
+        "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+        "records": 1,
+        "collections": [
+          "networks"
+        ]
+      },
+      {
+        "id": "context-reference-80",
+        "title": "Tourism Authority of Thailand · Slow Lane in Ayutthaya",
+        "url": "https://www.tourismthailand.org/Articles/slow-lane-in-ayutthaya",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-81",
+        "title": "UNESCO Bangkok · Thailand’s forgotten palace",
+        "url": "https://www.unesco.org/en/articles/thailands-forgotten-palace",
+        "records": 1,
+        "collections": [
+          "capitals"
+        ]
+      },
+      {
+        "id": "context-reference-82",
+        "title": "Victoria and Albert Museum · The arts of the Mughal Empire",
+        "url": "https://www.vam.ac.uk/articles/the-arts-of-the-mughal-empire",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-83",
+        "title": "Archives municipales de Verdun · Le Traité de Verdun",
+        "url": "https://www.verdun.fr/connaitre-ma-ville-et-mon-agglo/ville/les-archives-municipales/terre-dhistoire/le-traite-de-verdun/",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
+      },
+      {
+        "id": "context-reference-84",
+        "title": "Wilson Center, Kennan Institute · Timeline: 50 Years, 1991",
+        "url": "https://www.wilsoncenter.org/article/timeline-50-years-kennan-institute",
+        "records": 1,
+        "collections": [
+          "changes"
+        ]
       }
     ]
   }

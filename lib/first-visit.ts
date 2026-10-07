@@ -74,6 +74,8 @@ export const ATLAS_VIEW_KEYS: ReadonlySet<string> = new Set([
   'theme',
   'projection',
   'borders',
+  'context',
+  'contextItem',
   'mode',
   'speed',
   'filters',

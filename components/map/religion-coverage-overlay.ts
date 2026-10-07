@@ -224,6 +224,7 @@ export function startReligionCoverageOverlay(map: MapInstance) {
       const id = feature.layer.id;
       return (
         id.startsWith('resource-') ||
+        id.startsWith('context-') ||
         id === 'event-points' ||
         id.startsWith('event-cluster') ||
         id === 'religion-milestones' ||

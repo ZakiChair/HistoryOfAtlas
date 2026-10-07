@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowUpRight, Play, Pause, SkipForward, SkipBack, X, Route } from 'lucide-react';
 import { useAtlasStore } from '@/lib/store';
 import { localizedLanguage, localizedName, useI18n } from '@/lib/i18n';
@@ -22,12 +22,18 @@ export default function CampaignPanel() {
   useEffect(() => {
     if (detailOpen) setPlaying(false);
   }, [detailOpen, setPlaying]);
-  useEffect(
-    () => () => {
-      useAtlasStore.getState().setCampaignPlaying(false);
-    },
-    [],
-  );
+  const mounted = useRef(false);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      // Strict Mode immediately reinstalls effects. Only a real departure pauses the
+      // shared clock; the playback effect below still clears its timer synchronously.
+      queueMicrotask(() => {
+        if (!mounted.current) useAtlasStore.getState().setCampaignPlaying(false);
+      });
+    };
+  }, []);
   const selected = campaigns?.find((item) => item.id === campaignId);
   const currentIndex = selected ? Math.max(0, Math.min(selected.steps.length - 1, step)) : 0;
   const current = selected?.steps[currentIndex];

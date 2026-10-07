@@ -169,6 +169,75 @@ describe('licence manifest', () => {
     expect(() => buildLicenseManifest(data)).toThrow(/requires terms, URL and attribution/);
   });
 
+  it('licenses original context annotations separately from their cited references', () => {
+    const data = inputs();
+    const reference = { label: 'Institutional reference', url: 'https://example.org/history' };
+    data.context = {
+      changes: [{ id: 'change-a', sources: [reference, reference] }],
+      networks: [{ id: 'network-a', sources: [reference] }],
+    };
+    expect(licenseIssues(data)).toEqual([]);
+    const context = buildLicenseManifest(data).context!;
+    expect(context.corpus).toMatchObject({
+      license: 'CC BY 4.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    });
+    expect(context.corpus.note).toContain('not redistributed');
+    expect(context.corpus.note).toContain('retain their original dataset licences');
+    expect(context.collections.map(({ id, records }) => [id, records])).toEqual([
+      ['changes', 1],
+      ['networks', 1],
+    ]);
+    expect(context.references).toEqual([
+      {
+        id: 'context-reference-1',
+        title: reference.label,
+        url: reference.url,
+        records: 2,
+        collections: ['changes', 'networks'],
+      },
+    ]);
+    expect(context.references[0]).not.toHaveProperty('license');
+  });
+
+  it('rejects context records without usable references', () => {
+    const data = inputs();
+    data.context = {
+      changes: [{ id: 'change-a', sources: [] }],
+      networks: [{ id: 'network-a', sources: [{ label: '', url: 'not a URL' }] }],
+    };
+    expect(licenseIssues(data)).toEqual([
+      'Context changes record change-a has no reference',
+      'Context networks record network-a has an unnamed reference',
+      'Context networks record network-a has an invalid reference URL',
+    ]);
+  });
+
+  it('includes reviewed capital references without relicensing their source pages', () => {
+    const data = inputs();
+    const reference = { label: 'Institutional chronology', url: 'https://example.org/capital' };
+    data.context = {
+      changes: [{ id: 'change-a', sources: [reference] }],
+      networks: [],
+      capitals: [{ id: 'capital-a', sources: [reference, reference] }],
+    };
+    const context = buildLicenseManifest(data).context!;
+    expect(context.collections.find(({ id }) => id === 'capitals')).toMatchObject({ records: 1 });
+    expect(context.corpus.scope).toContain('reviewed capital chronologies');
+    expect(context.references).toEqual([
+      {
+        id: 'context-reference-1',
+        title: reference.label,
+        url: reference.url,
+        records: 2,
+        collections: ['changes', 'capitals'],
+      },
+    ]);
+    expect(context.references[0]).not.toHaveProperty('license');
+    data.context.capitals![0].sources = [];
+    expect(licenseIssues(data)).toEqual(['Context capitals record capital-a has no reference']);
+  });
+
   it('reports every untraceable source', () => {
     const broken = inputs();
     broken.resources.sources[0]!.license = ' ';
