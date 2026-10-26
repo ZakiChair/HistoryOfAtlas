@@ -58,7 +58,7 @@
     "react-dom": "19.3.0",
     "three": "0.186.1",
     "zod": "^4.1.0",
-    "zustand": "^5.0.8"
+    "zustand": "^5.0.16"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.0",
