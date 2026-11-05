@@ -13,15 +13,18 @@ test('Try again after a failed geography manifest also restores the border attri
   const retry = page.getByTestId('map-retry');
   await expect(retry).toBeVisible({ timeout: 30_000 });
   const attribution = page.locator('.map-attribution a');
-  await expect(attribution).toContainText('Historical Basemaps');
+  // No boundary is drawn, so none is credited, and the caption no longer claims to be loading.
+  await expect(attribution).toHaveText('Natural Earth');
+  const status = page.getByTestId('boundary-status');
+  await expect(status).toHaveAttribute('data-status', 'unavailable');
+  await expect(status).toHaveText('Boundaries unavailable');
 
   await page.unroute('**/geo/manifest.json');
   await retry.click();
   await expect(page.locator('.world-map-wrap')).toHaveAttribute('data-ready', 'true', {
     timeout: 30_000,
   });
-  // Cliopatria borders are drawn for 1812, and the caption must name that source, not the
-  // fallback it showed while the manifest was missing.
+  // Cliopatria borders are drawn for 1812, and the caption must now credit that source.
   await expect(attribution).toContainText('Cliopatria / Seshat');
   await expect(page.locator('.map-attribution')).toContainText('Approximate boundaries');
 });

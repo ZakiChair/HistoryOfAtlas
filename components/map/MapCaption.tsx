@@ -16,7 +16,14 @@ import styles from './MapCaption.module.css';
 
 const MapReadingCard = dynamic(() => import('./MapReadingCard'), { ssr: false });
 
-export default function MapCaption({ geo }: { geo: GeographyManifest | null }) {
+export default function MapCaption({
+  geo,
+  failed,
+}: {
+  geo: GeographyManifest | null;
+  /** The manifest could not be read: no boundary is drawn and none is on its way. */
+  failed: boolean;
+}) {
   const year = useAtlasStore((s) => s.year);
   const projection = useAtlasStore((s) => s.projection);
   const camera = useAtlasStore((s) => s.camera);
@@ -27,7 +34,8 @@ export default function MapCaption({ geo }: { geo: GeographyManifest | null }) {
   const text = (key: Parameters<typeof mapReadingText>[1]) => mapReadingText(locale, key);
   const presentation = geo ? boundaryPresentation(geo, year, boundarySource) : null;
   const dates = presentation?.years.map((value) => formatYear(value, locale)).join(' / ');
-  const statusLabel = `${presentation ? text(presentation.status) : t('loading')}${dates ? ` · ${dates}` : ''}`;
+  const status = presentation?.status ?? (failed ? 'unavailable' : undefined);
+  const statusLabel = `${status ? text(status) : t('loading')}${dates ? ` · ${dates}` : ''}`;
   const source =
     presentation?.source === 'cliopatria'
       ? 'Cliopatria / Seshat'
@@ -69,7 +77,7 @@ export default function MapCaption({ geo }: { geo: GeographyManifest | null }) {
             data-testid="map-reading-toggle"
           >
             <Info size={13} aria-hidden="true" />
-            <span data-testid="boundary-status" data-status={presentation?.status}>
+            <span data-testid="boundary-status" data-status={status}>
               {statusLabel}
             </span>
           </summary>

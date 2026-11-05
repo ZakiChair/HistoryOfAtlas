@@ -221,7 +221,7 @@ export default function AtlasApp() {
   const campaignId = useAtlasStore((s) => s.campaignId),
     storyId = useAtlasStore((s) => s.storyId);
   const { data: manifest } = useJson<DataManifest>('/data/manifest.json'),
-    { data: geo } = useJson<GeographyManifest>('/geo/manifest.json');
+    { data: geo, error: geoError } = useJson<GeographyManifest>('/geo/manifest.json');
   const [hydrated, setHydrated] = useState(false),
     [searchOpen, setSearchOpen] = useState(false),
     [sidebarOpen, setSidebarOpen] = useState(true);
@@ -876,7 +876,7 @@ export default function AtlasApp() {
               ) : null}
             </SectionBoundary>
           )}
-          <MapCaption geo={geo} />
+          <MapCaption geo={geo} failed={Boolean(geoError)} />
           {mode === 'heatmap' && !battleMode && <DensityKey />}
           <Timeline density={manifest?.density} territorialDensity={geo?.temporal?.density} />
           {toast && (
