@@ -140,7 +140,7 @@ export default function ReligionDominantLayers({
   const familyUnion = useMemo(() => {
     const rows = new Map<string, { names: LocalizedName; color: string }>();
     for (const item of polityDataset?.families ?? [])
-      rows.set(item.id, { names: item.names, color: item.color });
+      rows.set(item.id, { names: religionTraditionNames(item.names), color: item.color });
     for (const item of dataset?.traditions ?? [])
       if (!rows.has(item.id))
         rows.set(item.id, { names: religionTraditionNames(item.names), color: item.color });
