@@ -35,6 +35,19 @@ test('map reading explains the blend and separates a range from the boundary yea
   );
 });
 
+test('the timeline note loads on demand and closes back onto its control', async ({ page }) => {
+  await page.goto('/?y=1500&lang=fr');
+  const reading = page.getByTestId('timeline-reading');
+  const summary = reading.locator('summary');
+  await summary.click();
+  const note = reading.locator('p').first();
+  await expect(note).toContainText('Une même distance');
+  await expect(note).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(note).not.toBeVisible();
+  await expect(summary).toBeFocused();
+});
+
 test('map reading distinguishes the retained source year and the historical fallback', async ({
   page,
 }) => {

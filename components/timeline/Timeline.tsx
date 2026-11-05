@@ -1,6 +1,7 @@
 'use client';
 
 import { memo, useEffect, useMemo, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import * as Slider from '@radix-ui/react-slider';
 import { ChevronLeft, ChevronRight, Info, Pause, Play, SlidersHorizontal, X } from 'lucide-react';
 import { CURRENT_YEAR, ERAS, MIN_YEAR, getEra, positionToYear, yearToPosition } from '@/lib/eras';
@@ -10,7 +11,10 @@ import { timelineReadingText } from '@/lib/i18n/timeline-reading';
 import { advancePlayback, buildDensityBins, type DensityYear } from '@/lib/playback';
 import { createPlaybackFrameClock, isPlaybackMapReady } from '@/lib/playback-readiness';
 import { useAtlasStore } from '@/lib/store';
+import SectionBoundary from '../ui/SectionBoundary';
 import styles from './Timeline.module.css';
+
+const TimelineReadingNotes = dynamic(() => import('./TimelineReadingNotes'), { ssr: false });
 
 const EMPTY_DENSITY: DensityYear[] = [];
 const SPEEDS = [1, 5, 25, 100] as const;
@@ -115,6 +119,7 @@ export default function Timeline({
   const [editing, setEditing] = useState(false);
   const [yearText, setYearText] = useState('');
   const [yearError, setYearError] = useState(false);
+  const [readingOpened, setReadingOpened] = useState(false);
   const rootRef = useRef<HTMLElement>(null);
   const era = getEra(year);
   const position = yearToPosition(year);
@@ -201,6 +206,9 @@ export default function Timeline({
           <details
             className={styles.reading}
             data-testid="timeline-reading"
+            onToggle={(event) => {
+              if (event.currentTarget.open) setReadingOpened(true);
+            }}
             onKeyDown={(event) => {
               if (event.key === 'Escape' && event.currentTarget.open) {
                 event.preventDefault();
@@ -214,11 +222,11 @@ export default function Timeline({
               <Info size={10} aria-hidden="true" />
               {timelineReadingText(locale, 'label')}
             </summary>
-            <div className={styles.explanation}>
-              <p>{timelineReadingText(locale, 'scale')}</p>
-              <p>{timelineReadingText(locale, 'bars')}</p>
-              <p>{timelineReadingText(locale, 'periods')}</p>
-            </div>
+            {readingOpened && (
+              <SectionBoundary area="detail">
+                <TimelineReadingNotes locale={locale} />
+              </SectionBoundary>
+            )}
           </details>
           {editing ? (
             <form

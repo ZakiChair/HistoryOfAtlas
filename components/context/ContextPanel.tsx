@@ -5,6 +5,7 @@ import { useAtlasStore } from '@/lib/store';
 import { ensureContext, retryContext, useContextStore } from '@/lib/context/store';
 import { CONTEXT_VIEWS, type ContextViewProps } from '@/lib/context/types';
 import { contextLabel } from '@/lib/context/i18n';
+import { contextTitle } from '@/lib/context/title';
 import ChangesView from './ChangesView';
 import CoverageView from './CoverageView';
 import NetworksView from './NetworksView';
@@ -70,7 +71,7 @@ export default function ContextPanel({ onClose }: { onClose: () => void }) {
     >
       <header className={styles.header}>
         <h2 id="context-heading" tabIndex={-1} ref={heading}>
-          {contextLabel(locale, 'title')}
+          {contextTitle[locale]}
         </h2>
         <button
           className="icon-button"
@@ -80,7 +81,7 @@ export default function ContextPanel({ onClose }: { onClose: () => void }) {
           <X size={18} />
         </button>
       </header>
-      <div className={styles.tabs} role="group" aria-label={contextLabel(locale, 'title')}>
+      <div className={styles.tabs} role="group" aria-label={contextTitle[locale]}>
         {CONTEXT_VIEWS.map((item) => (
           <button
             key={item}

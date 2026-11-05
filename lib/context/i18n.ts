@@ -1,7 +1,6 @@
 import type { Locale } from '@/lib/types';
 const labels = {
   fr: [
-    'Comprendre',
     'Transformations',
     'Incertitudes',
     'Réseaux',
@@ -23,7 +22,6 @@ const labels = {
     'Repères cartographiques',
   ],
   en: [
-    'Understand',
     'Transformations',
     'Uncertainty',
     'Networks',
@@ -45,7 +43,6 @@ const labels = {
     'Map markers',
   ],
   de: [
-    'Verstehen',
     'Wandel',
     'Unsicherheiten',
     'Netzwerke',
@@ -67,7 +64,6 @@ const labels = {
     'Kartenmarkierungen',
   ],
   es: [
-    'Comprender',
     'Transformaciones',
     'Incertidumbres',
     'Redes',
@@ -89,7 +85,6 @@ const labels = {
     'Marcadores del mapa',
   ],
   zh: [
-    '理解地图',
     '历史变迁',
     '不确定性',
     '交流网络',
@@ -111,7 +106,6 @@ const labels = {
     '地图标记',
   ],
   ru: [
-    'Понять',
     'Преобразования',
     'Неопределённость',
     'Связи',
@@ -133,7 +127,6 @@ const labels = {
     'Метки карты',
   ],
   ar: [
-    'فهم الخريطة',
     'التحولات',
     'حدود اليقين',
     'الشبكات',
@@ -156,7 +149,6 @@ const labels = {
   ],
 } satisfies Record<Locale, string[]>;
 const keys = [
-  'title',
   'changes',
   'coverage',
   'networks',

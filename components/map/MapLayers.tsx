@@ -24,7 +24,7 @@ import ResourceIcon from './ResourceIcon';
 import { useReligionStore } from '@/lib/religions/store';
 import { useEpidemicStore } from '@/lib/epidemics/store';
 import { epidemicText } from '@/lib/epidemics/i18n';
-import { contextLabel } from '@/lib/context/i18n';
+import { contextTitle } from '@/lib/context/title';
 const ContextPanel = dynamic(() => import('../context/ContextPanel'), { ssr: false });
 
 const ReligionLayers = dynamic(() => import('./ReligionLayers'), { ssr: false });
@@ -344,20 +344,18 @@ export default function MapLayers() {
               useResourceStore.getState().select(null);
               useReligionStore.getState().setPanelOpen(false);
               useEpidemicStore.getState().setPanelOpen(false);
-              useAtlasStore
-                .getState()
-                .patchState({
-                  contextView: 'changes',
-                  contextSelection: null,
-                  battleMode: false,
-                  playing: false,
-                  campaignPlaying: false,
-                });
+              useAtlasStore.getState().patchState({
+                contextView: 'changes',
+                contextSelection: null,
+                battleMode: false,
+                playing: false,
+                campaignPlaying: false,
+              });
             }
           }}
         >
           <BookOpen size={15} aria-hidden="true" />
-          <span>{contextLabel(locale, 'title')}</span>
+          <span>{contextTitle[locale]}</span>
         </button>
       </div>
       <div id="context-panel-container">
