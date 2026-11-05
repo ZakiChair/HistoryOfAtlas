@@ -53,6 +53,8 @@ When no population is documented in the selected period, the detail view may dis
 
 The builder accepts only finite Earth coordinates with valid latitude and longitude from non-deprecated P625 statements. It selects preferred rank first and then stable statement identifier; it does not average conflicting coordinates. Source links retain all accepted coordinate variants. A marker locates the **named source place**: this may be a city, archaeological site or administrative place. It does not reconstruct a historical urban footprint, palace, metropolitan area or population distribution. See the source definitions for [Wikidata coordinates (P625)](https://www.wikidata.org/wiki/Property:P625) and [population (P1082)](https://www.wikidata.org/wiki/Property:P1082).
 
+A territory's population record is shared as `contextItem=territory:<subject id>`, which no map feature matches.
+
 Political population navigation uses the corresponding mapped territory's reference centre. A date remains readable but has no navigation button if no matching source identity and reference centre exist for that year. The city and territory tabs keep their populations separate throughout navigation. Quantities preserve bounds, approximations, dates and sources. Geographic/statistical scope may differ between observations; these are not silently treated as comparable censuses.
 
 ## Reader and verification

@@ -134,7 +134,7 @@ export default function Timeline({
       if (
         target instanceof Element &&
         target.closest(
-          'input, textarea, select, button, summary, [contenteditable="true"], [role="slider"], [role="dialog"]',
+          'input, textarea, select, button, summary, [contenteditable="true"], [role="slider"], [role="dialog"], #context-panel-container',
         )
       )
         return;

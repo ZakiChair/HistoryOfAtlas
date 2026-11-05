@@ -40,7 +40,8 @@ test('context loads only its active corpus and restores a sourced selection from
   await expect.poll(() => new URL(page.url()).searchParams.get('contextItem')).toBe(change.id);
   await entry.getByRole('button', { name: /Afficher cette date/ }).click();
   await expect.poll(() => new URL(page.url()).searchParams.get('y')).toBe(String(change.year));
-  await expect.poll(() => new URL(page.url()).searchParams.has('from')).toBe(false);
+  // The date lies inside the chosen period, which only a conflicting date would clear.
+  await expect.poll(() => new URL(page.url()).searchParams.get('from')).toBe('1800');
   await expect.poll(() => new URL(page.url()).searchParams.has('play')).toBe(false);
   await expect
     .poll(() => Number(new URL(page.url()).searchParams.get('lon')))
@@ -85,10 +86,14 @@ test('coverage explains an unsourced snapshot year and navigates to the actual n
     '/?lang=fr&y=1807&context=coverage&contextItem=europe&borders=historical-basemaps',
   );
   const coverage = page.getByTestId('context-coverage');
+  const counts = coverage.locator('tbody td');
   await expect(coverage).toContainText('Aucun instantané n’est daté de cette année');
+  // An undated year is unknown to this source, which a zero would misread as an empty world.
+  await expect(counts.first()).toHaveText('—');
   await coverage.getByRole('button', { name: 'Instantané suivant · 1815', exact: true }).click();
   await expect.poll(() => new URL(page.url()).searchParams.get('y')).toBe('1815');
   await expect(coverage).not.toContainText('Aucun instantané n’est daté de cette année');
+  await expect(counts.first()).not.toHaveText('—');
   await expect(coverage.getByRole('button', { name: 'Europe', exact: true })).toHaveAttribute(
     'aria-pressed',
     'true',

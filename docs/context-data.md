@@ -34,7 +34,9 @@ All internal dates use astronomical years, as elsewhere in the atlas: year `0` i
   interval overlaps the selected range, or contains the chosen year. Endpoints are
   included. Selecting a notice does not change the atlas year. The separate locate
   action opens that network's reading period on the map.
-- **Coverage:** count distinct source entries and dated observations separately.
+- **Coverage:** count distinct source entries and dated observations separately. A
+  period the selected source does not date shows a dash, because its counts are unknown
+  rather than zero.
   Cliopatria intervals and Historical Basemaps snapshots remain different evidence
   models. Neighbouring snapshots do not create an observation for an intermediate
   year. `summarizeCoverage` requires ordered, inclusive bounds.

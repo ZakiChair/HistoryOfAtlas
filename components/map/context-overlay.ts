@@ -7,6 +7,7 @@ import type {
 import { useAtlasStore, type AtlasState } from '@/lib/store';
 import { ensureContext, useContextStore } from '@/lib/context/store';
 import { contextFeatures } from '@/lib/context/map';
+import { selectedTerritorySubject } from '@/lib/context/types';
 import {
   CONTEXT_LAYERS,
   CONTEXT_SOURCE,
@@ -97,13 +98,17 @@ export function startContextOverlay(map: MapInstance) {
       previousKey = key;
       previousData = loaded;
       (map.getSource(CONTEXT_SOURCE) as GeoJSONSource).setData(contextFeatures(loaded, state));
-      const selected: ExpressionSpecification = ['==', ['get', 'id'], state.contextSelection ?? ''];
+      // A territory's population record has no feature of its own to highlight.
+      const selection = selectedTerritorySubject(state.contextSelection)
+        ? null
+        : state.contextSelection;
+      const selected: ExpressionSpecification = ['==', ['get', 'id'], selection ?? ''];
       map.setFilter(CONTEXT_LABELS, selected);
       map.setPaintProperty(CONTEXT_LINES, 'line-width', ['case', selected, 5, 3]);
       map.setPaintProperty(
         CONTEXT_LINES,
         'line-opacity',
-        state.contextSelection ? ['case', selected, 1, 0.4] : 0.85,
+        selection ? ['case', selected, 1, 0.4] : 0.85,
       );
       const coverage = state.contextView === 'coverage';
       map.setPaintProperty(
@@ -139,13 +144,11 @@ export function startContextOverlay(map: MapInstance) {
     const feature = map.queryRenderedFeatures(event.point, { layers: CONTEXT_LAYERS })[0];
     if (!feature) return;
     event.preventDefault();
-    useAtlasStore
-      .getState()
-      .patchState({
-        contextSelection: String(feature.properties.id),
-        playing: false,
-        campaignPlaying: false,
-      });
+    useAtlasStore.getState().patchState({
+      contextSelection: String(feature.properties.id),
+      playing: false,
+      campaignPlaying: false,
+    });
   };
   const enter = () => {
     map.getCanvas().style.cursor = 'pointer';

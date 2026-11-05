@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { ChevronDown, LocateFixed } from 'lucide-react';
 import { formatYear } from '@/lib/histdate';
 import { networksInPeriod, type NetworkDataset } from '@/lib/context/networks';
@@ -19,6 +20,10 @@ export default function NetworksView({
 }: ContextViewProps & { dataset: NetworkDataset }) {
   const text = (key: NetworkCopyKey) => networkText(locale, key);
   const language = contextContentLanguage(locale);
+  const selectedButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    selectedButton.current?.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+  }, [selectedId]);
   const active = new Set(networksInPeriod(dataset.networks, year, range).map((item) => item.id));
   const displayedPeriod = range
     ? `${formatYear(range[0], locale)} – ${formatYear(range[1], locale)}`
@@ -57,6 +62,7 @@ export default function NetworksView({
             >
               <button
                 type="button"
+                ref={selected ? selectedButton : undefined}
                 className={styles.select}
                 aria-expanded={selected}
                 aria-controls={selected ? detailsId : undefined}

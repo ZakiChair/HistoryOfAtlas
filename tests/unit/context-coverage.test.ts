@@ -94,6 +94,35 @@ describe('territorial source inventory', () => {
     ).toMatchObject({ entities: 0, observations: 0, outsideSourceRange: true });
   });
 
+  it('reports a period its source does not date as unknown, not as empty', () => {
+    const parsed = coverage.CoverageDatasetSchema.parse(dataset);
+    const dated = (
+      sourceId: 'cliopatria' | 'historical-basemaps',
+      fromYear: number,
+      toYear: number,
+    ) => coverage.summarizeCoverage(parsed, { sourceId, fromYear, toYear }).dated;
+    expect(dated('cliopatria', 21, 30)).toBe(false);
+    expect(dated('cliopatria', 0, 0)).toBe(true);
+    expect(dated('historical-basemaps', 0, 0)).toBe(false);
+    expect(dated('historical-basemaps', -2, -2)).toBe(true);
+    expect(dated('historical-basemaps', 0, 10)).toBe(true);
+  });
+
+  it('ignores a selection that names no region instead of emptying the map', () => {
+    const parsed = coverage.CoverageDatasetSchema.parse(dataset);
+    const all = coverage.coverageFeatureCollection(parsed, 0, null, 'cliopatria', null);
+    const unknown = coverage.coverageFeatureCollection(
+      parsed,
+      0,
+      null,
+      'cliopatria',
+      'vienna-1815',
+    );
+    expect(all.features.length).toBeGreaterThan(0);
+    expect(unknown.features).toHaveLength(all.features.length);
+    expect(unknown.features.some((feature) => feature.properties.selected)).toBe(false);
+  });
+
   it('treats reference snapshots as dated observations, never continuous annual presence', () => {
     const parsed = coverage.CoverageDatasetSchema.parse(dataset);
     expect(

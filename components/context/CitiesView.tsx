@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, MapPin, Search } from 'lucide-react';
 import { CURRENT_YEAR, MIN_YEAR } from '@/lib/eras';
 import { formatHistDate, formatYear } from '@/lib/histdate';
@@ -18,7 +18,11 @@ import {
   type CitiesDataset,
   type TerritoryPopulation,
 } from '@/lib/context/cities';
-import type { ContextViewProps } from '@/lib/context/types';
+import {
+  selectedTerritorySubject,
+  territorySelection,
+  type ContextViewProps,
+} from '@/lib/context/types';
 import styles from './CitiesView.module.css';
 
 const PAGE_SIZE = 20;
@@ -230,16 +234,22 @@ export default function CitiesView({
   onSelect,
   onLocate,
 }: ContextViewProps & { dataset: CitiesDataset }) {
-  const [mode, setMode] = useState<'cities' | 'territories'>('cities');
+  const territoryId = selectedTerritorySubject(selectedId);
+  const [mode, setMode] = useState<'cities' | 'territories'>(
+    territoryId ? 'territories' : 'cities',
+  );
   const [search, setSearch] = useState('');
   const [onlyPeriod, setOnlyPeriod] = useState(true);
   const [page, setPage] = useState(0);
-  const [territoryId, setTerritoryId] = useState<string | null>(null);
+  const root = useRef<HTMLElement>(null);
+  const detailHeading = useRef<HTMLHeadingElement>(null);
+  const searchField = useRef<HTMLInputElement>(null);
+  const openedRow = useRef<string | null>(null);
   const text = (key: CitiesCopyKey) => citiesText(locale, key);
   const options = useMemo(() => ({ year, range, sourceId }), [year, range, sourceId]);
   useEffect(() => {
-    if (selectedId) setMode('cities');
-  }, [selectedId]);
+    if (selectedId) setMode(territoryId ? 'territories' : 'cities');
+  }, [selectedId, territoryId]);
   const selectedCity = dataset.cities.find((city) => city.id === selectedId);
   const selectedTerritory = dataset.territories.find(
     (territory) => territory.subjectId === territoryId,
@@ -265,9 +275,24 @@ export default function CitiesView({
   const pageCount = Math.max(1, Math.ceil(total / PAGE_SIZE));
   const currentPage = Math.min(page, pageCount - 1);
   const showDetail = mode === 'cities' ? Boolean(selectedCity) : Boolean(selectedTerritory);
+  const hadDetail = useRef(showDetail);
+  useEffect(() => {
+    if (hadDetail.current === showDetail) return;
+    hadDetail.current = showDetail;
+    // The pressed button has just unmounted. A marker clicked on the map keeps focus there.
+    const active = document.activeElement;
+    if (active && active !== document.body && !root.current?.contains(active)) return;
+    if (showDetail) detailHeading.current?.focus();
+    else
+      (
+        root.current?.querySelector<HTMLElement>(
+          `[data-row="${CSS.escape(openedRow.current ?? '')}"]`,
+        ) ?? searchField.current
+      )?.focus();
+  }, [showDetail]);
 
   return (
-    <section className={styles.view} data-testid="context-cities-view">
+    <section className={styles.view} ref={root} data-testid="context-cities-view">
       <h3>{text('title')}</h3>
       <p className={styles.note}>{text('intro')}</p>
       <p className={styles.separation}>{text('separation')}</p>
@@ -278,9 +303,10 @@ export default function CitiesView({
             key={value}
             aria-pressed={mode === value}
             onClick={() => {
+              if (value === mode) return;
               setMode(value);
               setPage(0);
-              if (value === 'territories') onSelect(null);
+              if (selectedId) onSelect(null);
             }}
           >
             {text(value)}
@@ -289,17 +315,15 @@ export default function CitiesView({
       </div>
       {showDetail ? (
         <>
-          <button
-            type="button"
-            className={styles.back}
-            onClick={() => (mode === 'cities' ? onSelect(null) : setTerritoryId(null))}
-          >
+          <button type="button" className={styles.back} onClick={() => onSelect(null)}>
             <ArrowLeft size={14} aria-hidden="true" />
             {text('back')}
           </button>
           {mode === 'cities' && selectedCity && (
             <article data-testid="context-city-detail">
               <h4
+                ref={detailHeading}
+                tabIndex={-1}
                 className={styles.subject}
                 lang={localizedLanguage(selectedCity.name, locale)}
                 dir="auto"
@@ -359,6 +383,8 @@ export default function CitiesView({
           {mode === 'territories' && selectedTerritory && (
             <article data-testid="context-territory-population-detail">
               <h4
+                ref={detailHeading}
+                tabIndex={-1}
                 className={styles.subject}
                 lang={localizedLanguage(selectedTerritory.name, locale)}
                 dir="auto"
@@ -386,6 +412,15 @@ export default function CitiesView({
             <Search size={14} aria-hidden="true" />
             <input
               type="search"
+              ref={searchField}
+              onKeyDown={(event) => {
+                // Clearing a search comes before closing the panel around it.
+                if (event.key === 'Escape' && search) {
+                  event.stopPropagation();
+                  setSearch('');
+                  setPage(0);
+                }
+              }}
               aria-label={text('search')}
               placeholder={text('search')}
               value={search}
@@ -421,10 +456,14 @@ export default function CitiesView({
                     <li key={city.id}>
                       <button
                         type="button"
+                        data-row={city.id}
                         onClick={() => {
+                          openedRow.current = city.id;
                           onSelect(city.id);
                           const date = cityObservationYear(city, options);
-                          if (navigable(date ?? undefined)) onLocate(date!, city.coordinates, 5);
+                          // Opening a record asks to read it, so the panel stays on a phone.
+                          if (navigable(date ?? undefined))
+                            onLocate(date!, city.coordinates, 5, { keepOpen: true });
                         }}
                       >
                         <span lang={localizedLanguage(city.name, locale)} dir="auto">
@@ -438,7 +477,14 @@ export default function CitiesView({
                   .slice(currentPage * PAGE_SIZE, (currentPage + 1) * PAGE_SIZE)
                   .map((territory) => (
                     <li key={territory.subjectId}>
-                      <button type="button" onClick={() => setTerritoryId(territory.subjectId)}>
+                      <button
+                        type="button"
+                        data-row={territory.subjectId}
+                        onClick={() => {
+                          openedRow.current = territory.subjectId;
+                          onSelect(territorySelection(territory.subjectId));
+                        }}
+                      >
                         <span lang={localizedLanguage(territory.name, locale)} dir="auto">
                           {localizedName(territory.name, locale)}
                         </span>

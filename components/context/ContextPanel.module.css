@@ -26,6 +26,20 @@
   font-size: 24px;
   margin: 0;
 }
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.header .collapse {
+  display: none;
+}
+.collapse svg {
+  transition: transform 0.15s ease;
+}
+.panel[data-collapsed] .collapse svg {
+  transform: rotate(180deg);
+}
 .tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -102,16 +116,38 @@
   color: var(--gold);
   overflow-wrap: anywhere;
 }
+/* A record opens under the map controls wherever the two would overlap, and it was asked for last. */
+@media (max-width: 913px) {
+  .panel[data-record-open] {
+    display: none;
+  }
+}
 @media (max-width: 760px) {
+  /* A sheet above the timeline, so the list and the map it annotates are visible together. */
   .panel {
     position: fixed;
     inset-inline: 12px;
-    top: max(125px, calc(var(--map-layers-bottom, 115px) + 8px));
+    top: auto;
+    bottom: calc(var(--timeline-height, 170px) + 8px);
     width: auto;
-    max-height: calc(
-      100dvh - max(125px, calc(var(--map-layers-bottom, 115px) + 8px)) -
-        var(--timeline-height, 170px) - 12px
+    max-height: min(
+      45svh,
+      calc(
+        100dvh - max(125px, calc(var(--map-layers-bottom, 115px) + 8px)) -
+          var(--timeline-height, 170px) - 12px
+      )
     );
     padding: 14px;
+  }
+  .header .collapse {
+    display: inline-flex;
+  }
+  /* Collapsed, it moves up beside the layer controls: the map tools and the source credit stay clear. */
+  .panel[data-collapsed] {
+    top: max(125px, calc(var(--map-layers-bottom, 115px) + 8px));
+    bottom: auto;
+  }
+  .panel[data-collapsed] .body {
+    display: none;
   }
 }

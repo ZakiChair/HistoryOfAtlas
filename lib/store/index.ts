@@ -268,6 +268,8 @@ export function parseAtlasUrl(input: string | URLSearchParams): AtlasState {
     state.selectedWar = null;
     state.campaignId = null;
     state.storyId = null;
+    state.contextView = null;
+    state.contextSelection = null;
     // Battle mode hides the period controls, so a period must not filter it unseen.
     state.range = null;
     state.playing = false;
@@ -383,6 +385,8 @@ export interface AtlasActions {
 
 /** Context playback never survives leaving its source, and only one clock runs at a time. */
 function playbackPatch(state: AtlasState, patch: Partial<AtlasState>): Partial<AtlasState> {
+  // A reconstruction takes over the map, so the reading panel cannot stay open beside it.
+  if (patch.battleMode === true) patch = { ...patch, contextView: null, contextSelection: null };
   if (!(patch.battlesVisible ?? state.battlesVisible))
     patch = {
       ...patch,

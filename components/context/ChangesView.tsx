@@ -19,7 +19,7 @@ export default function ChangesView({
   const selectedButton = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     selectedButton.current?.scrollIntoView({ block: 'nearest', behavior: 'instant' });
-  }, [selectedId, year, range]);
+  }, [selectedId]);
   const ordered = [...dataset.changes].sort(
     (a, b) => Number(active.has(b.id)) - Number(active.has(a.id)) || a.year - b.year,
   );

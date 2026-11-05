@@ -20,6 +20,8 @@ const labels = {
     'Exemples documentés : ce corpus est une sélection, pas une histoire exhaustive. Les repères situent une région de lecture, pas une emprise territoriale.',
     'Même à la date exacte, les frontières dépendent des observations disponibles dans la source choisie.',
     'Repères cartographiques',
+    'Réduire',
+    'Déplier',
   ],
   en: [
     'Transformations',
@@ -41,6 +43,8 @@ const labels = {
     'Documented examples: this corpus is a selection, not an exhaustive history. Markers locate a reading region, not territorial extent.',
     'Even at the exact date, borders depend on observations available in the selected source.',
     'Map markers',
+    'Collapse',
+    'Expand',
   ],
   de: [
     'Wandel',
@@ -62,6 +66,8 @@ const labels = {
     'Dokumentierte Beispiele: eine Auswahl, keine vollständige Geschichte. Markierungen zeigen Bezugsregionen, keine Gebietsflächen.',
     'Auch am genauen Datum hängen Grenzen von den verfügbaren Beobachtungen der gewählten Quelle ab.',
     'Kartenmarkierungen',
+    'Einklappen',
+    'Ausklappen',
   ],
   es: [
     'Transformaciones',
@@ -83,6 +89,8 @@ const labels = {
     'Ejemplos documentados: una selección, no una historia exhaustiva. Los marcadores sitúan regiones de referencia, no extensiones territoriales.',
     'Incluso en la fecha exacta, las fronteras dependen de las observaciones disponibles en la fuente elegida.',
     'Marcadores del mapa',
+    'Contraer',
+    'Desplegar',
   ],
   zh: [
     '历史变迁',
@@ -104,6 +112,8 @@ const labels = {
     '有文献依据的案例：这是选集，并非完整历史。标记表示参考地区，并非领土范围。',
     '即使日期一致，边界仍取决于所选来源中可用的观测资料。',
     '地图标记',
+    '收起',
+    '展开',
   ],
   ru: [
     'Преобразования',
@@ -125,6 +135,8 @@ const labels = {
     'Документированные примеры: выборка, а не полная история. Метки указывают области рассмотрения, а не территориальные границы.',
     'Даже на точную дату границы зависят от наблюдений, доступных в выбранном источнике.',
     'Метки карты',
+    'Свернуть',
+    'Развернуть',
   ],
   ar: [
     'التحولات',
@@ -146,6 +158,8 @@ const labels = {
     'أمثلة موثقة: هذه مجموعة مختارة وليست تاريخًا شاملاً. تشير العلامات إلى مناطق للقراءة وليس إلى امتداد الأراضي.',
     'حتى في التاريخ المحدد، تعتمد الحدود على المشاهدات المتاحة في المصدر المختار.',
     'علامات الخريطة',
+    'طي',
+    'توسيع',
   ],
 } satisfies Record<Locale, string[]>;
 const keys = [
@@ -168,6 +182,8 @@ const keys = [
   'selection',
   'boundaries',
   'markers',
+  'collapse',
+  'expand',
 ] as const;
 export const contextLabel = (locale: Locale, key: (typeof keys)[number]) =>
   labels[locale][keys.indexOf(key)];

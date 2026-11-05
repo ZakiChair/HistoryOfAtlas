@@ -70,6 +70,6 @@ test('network reading is accessible on Arabic mobile and declares English histor
     contentType: 'application/json',
   });
   expect(audit.violations).toEqual([]);
-  await entry.getByRole('button').first().scrollIntoViewIfNeeded();
+  await expect(entry.getByRole('button').first()).toBeInViewport();
   await page.screenshot({ path: testInfo.outputPath('networks-ar-mobile.png') });
 });

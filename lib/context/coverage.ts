@@ -145,13 +145,19 @@ export function summarizeCoverage(
     region.entities += 1;
     region.observations += count;
   }
+  const outsideSourceRange = toYear < source.range[0] || fromYear > source.range[1];
   return {
     source,
     entities,
     observations,
     inventory,
     regions,
-    outsideSourceRange: toYear < source.range[0] || fromYear > source.range[1],
+    outsideSourceRange,
+    // A source says nothing about a period it does not date: its counts are unknown, not zero.
+    dated:
+      !outsideSourceRange &&
+      (!source.snapshotYears ||
+        source.snapshotYears.some((value) => value >= fromYear && value <= toYear)),
   };
 }
 
@@ -187,12 +193,12 @@ export function coverageFeatureCollection(
   selectedId: string | null,
 ): FeatureCollection<Point, CoverageFeatureProperties> {
   const [from, to] = range ?? [year, year];
+  // A selection from another view or an old link names no region and must not empty the map.
+  const region = REGION_IDS.includes(selectedId as RegionId) ? selectedId : null;
   return {
     type: 'FeatureCollection',
     features: dataset.polities
-      .filter(
-        (polity) => polity.sourceId === sourceId && (!selectedId || polity.region === selectedId),
-      )
+      .filter((polity) => polity.sourceId === sourceId && (!region || polity.region === region))
       .map((polity) => {
         const observations = observationCount(polity, from, to);
         return {
@@ -205,7 +211,7 @@ export function coverageFeatureCollection(
             regionId: polity.region,
             documented: observations > 0,
             observations,
-            selected: polity.region === selectedId,
+            selected: polity.region === region,
             referenceAnchor: true,
           },
         };

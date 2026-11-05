@@ -22,7 +22,8 @@ export default function CoverageView({
   sourceId,
   selectedId,
   onSelect,
-  onLocate,
+  onCenter,
+  onYear,
 }: ContextViewProps & { dataset: CoverageDataset }) {
   const text = (key: Parameters<typeof coverageText>[1]) => coverageText(locale, key);
   const [fromYear, toYear] = range ?? [year, year];
@@ -30,16 +31,11 @@ export default function CoverageView({
   const neighbours = snapshotNeighbours(dataset, sourceId, year);
   const selectedRegion = summary.regions.find((region) => region.id === selectedId);
   const number = new Intl.NumberFormat(locale);
+  const count = (value: number) => (summary.dated ? number.format(value) : '—');
   const dates = (from: number, to: number) =>
     from === to
       ? formatYear(from, locale)
       : `${formatYear(from, locale)} — ${formatYear(to, locale)}`;
-  const locateYear = (targetYear: number) =>
-    onLocate(
-      targetYear,
-      selectedRegion ? COVERAGE_REGION_CENTERS[selectedRegion.id] : [10, 25],
-      selectedRegion ? 2 : 1,
-    );
 
   return (
     <section className={styles.view} lang={locale} data-testid="context-coverage">
@@ -50,11 +46,11 @@ export default function CoverageView({
       </p>
       <div className={styles.totals}>
         <div>
-          <strong>{number.format(summary.entities)}</strong>
+          <strong>{count(summary.entities)}</strong>
           <span>{text('entries')}</span>
         </div>
         <div>
-          <strong>{number.format(summary.observations)}</strong>
+          <strong>{count(summary.observations)}</strong>
           <span>{text('observations')}</span>
         </div>
       </div>
@@ -64,7 +60,7 @@ export default function CoverageView({
         <button
           type="button"
           className={styles.action}
-          onClick={() => locateYear(summary.source.range[1])}
+          onClick={() => onYear(summary.source.range[1])}
         >
           {text('latest')} · {formatYear(summary.source.range[1], locale)}
         </button>
@@ -85,7 +81,7 @@ export default function CoverageView({
                   type="button"
                   className={styles.action}
                   disabled={targetYear < MIN_YEAR || targetYear > MAX_YEAR}
-                  onClick={() => locateYear(targetYear)}
+                  onClick={() => onYear(targetYear)}
                 >
                   {text(key)} · {formatYear(targetYear, locale)}
                 </button>
@@ -122,8 +118,8 @@ export default function CoverageView({
                     : REGION_LABELS[region.id][locale]}
                 </button>
               </th>
-              <td>{number.format(region.entities)}</td>
-              <td>{number.format(region.observations)}</td>
+              <td>{count(region.entities)}</td>
+              <td>{count(region.observations)}</td>
             </tr>
           ))}
         </tbody>
@@ -136,7 +132,7 @@ export default function CoverageView({
           <button
             type="button"
             className={styles.action}
-            onClick={() => onLocate(year, COVERAGE_REGION_CENTERS[selectedRegion.id], 2)}
+            onClick={() => onCenter(COVERAGE_REGION_CENTERS[selectedRegion.id], 2)}
           >
             <LocateFixed size={14} aria-hidden="true" />
             {text('locate')}

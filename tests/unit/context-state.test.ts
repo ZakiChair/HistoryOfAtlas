@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { parseAtlasUrl, serializeAtlasUrl, useAtlasStore } from '@/lib/store';
 import { changesInPeriod, ChangesDatasetSchema } from '@/lib/context/changes';
+import { rangeForYear, selectedTerritorySubject, territorySelection } from '@/lib/context/types';
 
 describe('shareable historical context', () => {
   beforeEach(() => useAtlasStore.getState().reset());
@@ -36,6 +37,41 @@ describe('shareable historical context', () => {
       expect(useAtlasStore.getState().contextSelection).toBeNull();
     },
   );
+
+  it('roundtrips a territory population record through the selection field', () => {
+    const contextSelection = territorySelection('Q172579');
+    expect(selectedTerritorySubject(contextSelection)).toBe('Q172579');
+    expect(selectedTerritorySubject('Q85')).toBeNull();
+    expect(selectedTerritorySubject(null)).toBeNull();
+    const state = parseAtlasUrl(`?context=cities&contextItem=${contextSelection}`);
+    expect(state.contextSelection).toBe(contextSelection);
+    expect(new URLSearchParams(serializeAtlasUrl(state)).get('contextItem')).toBe(contextSelection);
+  });
+
+  it('keeps a period when navigating inside it and clears only a conflicting one', () => {
+    expect(rangeForYear([1800, 1820], 1815)).toEqual([1800, 1820]);
+    expect(rangeForYear([1800, 1820], 1800)).toEqual([1800, 1820]);
+    expect(rangeForYear([1800, 1820], 1820)).toEqual([1800, 1820]);
+    expect(rangeForYear([1800, 1820], 1821)).toBeNull();
+    expect(rangeForYear([-5, 5], 0)).toEqual([-5, 5]);
+    expect(rangeForYear(null, 1815)).toBeNull();
+  });
+
+  it('never lets a reconstruction and the reading panel share the map', () => {
+    expect(parseAtlasUrl('?battle=1&context=changes&contextItem=vienna-1815')).toMatchObject({
+      battleMode: true,
+      contextView: null,
+      contextSelection: null,
+    });
+    const store = useAtlasStore.getState();
+    store.patchState({ contextView: 'changes', contextSelection: 'vienna-1815' });
+    store.setBattleMode(true);
+    expect(useAtlasStore.getState()).toMatchObject({ contextView: null, contextSelection: null });
+    store.setBattleMode(false);
+    store.patchState({ contextView: 'cities' });
+    store.patchState({ battleMode: true });
+    expect(useAtlasStore.getState().contextView).toBeNull();
+  });
 
   it('drops a context selection when its view is unknown, changed, closed or reset', () => {
     expect(parseAtlasUrl('?context=unknown&contextItem=vienna-1815')).toMatchObject({

@@ -57,7 +57,7 @@ export default function MapCaption({ geo }: { geo: GeographyManifest | null }) {
             if (event.currentTarget.open) setOpened(true);
           }}
           onKeyDown={(event) => {
-            if (event.key === 'Escape') {
+            if (event.key === 'Escape' && event.currentTarget.open) {
               event.stopPropagation();
               close();
             }

@@ -37,6 +37,9 @@ test('city observations retain dates, navigate to evidence, and stay separate fr
   await expect(detail).not.toContainText('Aucun chiffre documenté pour cette période.');
   await expect(detail.locator('section').filter({ hasText: 'Référence datée' })).toHaveCount(0);
 
+  // On a phone the panel stepped aside to show that date on the map.
+  const collapse = page.getByTestId('context-collapse');
+  if (await collapse.isVisible()) await collapse.click();
   await view.getByRole('button', { name: 'Populations des États', exact: true }).click();
   await view.getByRole('checkbox').uncheck();
   await view.getByRole('searchbox').fill('royaume d’Italie'.replace('’', "'"));
@@ -52,7 +55,11 @@ test('city observations retain dates, navigate to evidence, and stay separate fr
   await expect
     .poll(() => Number(new URL(page.url()).searchParams.get('lon')))
     .toBeCloseTo(italy.referenceLocations![0].coordinates[0]);
-  await expect.poll(() => new URL(page.url()).searchParams.has('contextItem')).toBe(false);
+  await expect
+    .poll(() => new URL(page.url()).searchParams.get('contextItem'))
+    .toBe(`territory:${italy.subjectId}`);
+  await page.reload();
+  await expect(stateDetail).toContainText(number(italy1861.value!));
   await page.screenshot({ path: testInfo.outputPath('territory-population.png') });
 });
 

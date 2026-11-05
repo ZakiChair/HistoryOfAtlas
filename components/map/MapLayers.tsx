@@ -344,12 +344,17 @@ export default function MapLayers() {
               useResourceStore.getState().select(null);
               useReligionStore.getState().setPanelOpen(false);
               useEpidemicStore.getState().setPanelOpen(false);
-              useAtlasStore.getState().patchState({
+              const state = useAtlasStore.getState();
+              state.patchState({
                 contextView: 'changes',
                 contextSelection: null,
                 battleMode: false,
                 playing: false,
                 campaignPlaying: false,
+                // The same exit as leaving a reconstruction: no dossier, a readable view.
+                ...(state.battleMode
+                  ? { selectedEvent: null, camera: { ...state.camera, zoom: 4, pitch: 0 } }
+                  : {}),
               });
             }
           }}
