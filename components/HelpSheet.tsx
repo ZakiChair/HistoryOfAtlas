@@ -1,7 +1,8 @@
 'use client';
 
 import * as Dialog from '@radix-ui/react-dialog';
-import { Gem, Swords, Waypoints, X } from 'lucide-react';
+import { Gem, Swords, Virus, Waypoints, X } from 'lucide-react';
+import { epidemicText } from '@/lib/epidemics/i18n';
 import { useI18n } from '@/lib/i18n';
 import { onboardingText, type OnboardingCopyKey } from '@/lib/i18n/onboarding';
 import { resourceText } from '@/lib/resources/i18n';
@@ -28,6 +29,7 @@ export default function HelpSheet({
     { icon: Swords, name: resourceText(locale, 'battles'), role: text('layerBattles') },
     { icon: Gem, name: resourceText(locale, 'resources'), role: text('layerResources') },
     { icon: Waypoints, name: text('religions'), role: text('layerReligions') },
+    { icon: Virus, name: epidemicText(locale, 'layer'), role: text('layerEpidemics') },
   ];
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>

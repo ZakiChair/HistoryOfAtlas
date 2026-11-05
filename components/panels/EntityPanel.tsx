@@ -1,14 +1,17 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, Pause, Play, Shield, X } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play, Shield, X } from 'lucide-react';
 import { readJson } from '@/lib/data-client';
 import { formatYear } from '@/lib/histdate';
+import { CURRENT_YEAR, MIN_YEAR } from '@/lib/eras';
 import { localizedName, useI18n } from '@/lib/i18n';
+import { territoryObservationText } from '@/lib/i18n/territory-observations';
 import { useAtlasStore } from '@/lib/store';
 import { resolvePolityIdentity } from '@/lib/polity-identities';
 import EntityLeaders from './EntityLeaders';
 import EntityFacts from './EntityFacts';
+import styles from './EntityPanel.module.css';
 
 export type ObservationInput = {
   year?: number;
@@ -62,13 +65,53 @@ export function normalizeObservations(values: readonly ObservationInput[]): Obse
     .sort((a, b) => a.fromYear - b.fromYear || a.toYear - b.toYear);
 }
 
-export function areaPath(observations: readonly Observation[]) {
-  if (!observations.length) return { path: '', points: [], minimum: 0, maximum: 0, peak: 1 };
+function observationDestination(observation: Observation): number | null {
+  if (observation.toYear < MIN_YEAR || observation.fromYear > CURRENT_YEAR) return null;
+  return Math.max(MIN_YEAR, observation.fromYear);
+}
+
+export function observationNavigation(history: readonly Observation[], year: number) {
+  const observations = history.filter(
+    (observation) => observationDestination(observation) !== null,
+  );
+  const activeIndex = observations.findIndex(
+    (observation) => observation.fromYear <= year && observation.toYear >= year,
+  );
+  return {
+    active: activeIndex >= 0 ? observations[activeIndex] : undefined,
+    previous:
+      activeIndex >= 0
+        ? observations[activeIndex - 1]
+        : observations.filter((observation) => observation.toYear < year).at(-1),
+    next:
+      activeIndex >= 0
+        ? observations[activeIndex + 1]
+        : observations.find((observation) => observation.fromYear > year),
+  };
+}
+
+export function selectTerritorialObservation(observation: Observation) {
+  const year = observationDestination(observation);
+  if (year === null) return;
+  const state = useAtlasStore.getState();
+  state.patchState({
+    year,
+    playing: false,
+    entityFollowing: false,
+    campaignPlaying: false,
+    ...(state.range && (year < state.range[0] || year > state.range[1]) ? { range: null } : {}),
+  });
+}
+
+export function areaPath(observations: readonly Observation[], year?: number) {
+  if (!observations.length)
+    return { path: '', points: [], minimum: 0, maximum: 0, peak: 1, current: null };
   const minimum = Math.min(...observations.map((point) => point.fromYear));
   const maximum = Math.max(...observations.map((point) => point.toYear));
   const peak = Math.max(1, ...observations.map((point) => point.areaKm2));
   const x = (year: number) => 12 + ((year - minimum) / Math.max(1, maximum - minimum)) * 316;
   const y = (area: number) => 104 - (area / peak) * 88;
+  const active = year === undefined ? undefined : observationNavigation(observations, year).active;
   // Source intervals are steps. Separate subpaths preserve genuinely unobserved gaps.
   const path = observations
     .map((point, index) => {
@@ -88,6 +131,10 @@ export function areaPath(observations: readonly Observation[]) {
     minimum,
     maximum,
     peak,
+    current:
+      year !== undefined && year >= minimum && year <= maximum
+        ? { x: x(year), y: active ? y(active.areaKm2) : null }
+        : null,
   };
 }
 
@@ -99,8 +146,9 @@ export default function EntityPanel() {
   const selectedEntity = useAtlasStore((state) => state.selectedEntity);
   const selectEntity = useAtlasStore((state) => state.selectEntity);
   const year = useAtlasStore((state) => state.year);
-  const setYear = useAtlasStore((state) => state.setYear);
   const { locale, t } = useI18n();
+  const text = (key: Parameters<typeof territoryObservationText>[1]) =>
+    territoryObservationText(locale, key);
   const [entity, setEntity] = useState<EntityDetail | null>(null);
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
@@ -170,13 +218,8 @@ export default function EntityPanel() {
     };
   }, [entity]);
 
-  useEffect(
-    () => () => {
-      useAtlasStore.getState().setEntityFollowing(false);
-    },
-    [],
-  );
-
+  // Selection actions stop contextual playback in the store. Effect cleanup here
+  // would also stop URL-restored following during React's development remount.
   useEffect(() => {
     if (!following || !entity || entity.id !== selectedEntity) return;
     const values = normalizeObservations(entity.observations);
@@ -205,10 +248,12 @@ export default function EntityPanel() {
   const visible = entity?.id === selectedEntity ? entity : null;
   const reviewedIdentity = visible ? resolvePolityIdentity(visible) : null;
   const observations = normalizeObservations(visible?.observations ?? []);
-  const chart = observations.length ? areaPath(observations) : null;
-  const activeObservation = observations.find(
-    (observation) => observation.fromYear <= year && observation.toYear >= year,
-  );
+  const chart = observations.length ? areaPath(observations, year) : null;
+  const { active: activeObservation, previous, next } = observationNavigation(observations, year);
+  const observationPeriod = (observation: Observation) =>
+    observation.fromYear === observation.toYear
+      ? formatYear(observation.fromYear, locale)
+      : `${formatYear(observation.fromYear, locale)} — ${formatYear(observation.toYear, locale)}`;
   const first = observations[0]?.fromYear;
   const last = observations.length
     ? Math.max(...observations.map((observation) => observation.toYear))
@@ -304,6 +349,11 @@ export default function EntityPanel() {
                   ? `≈ ${number.format(activeObservation.areaKm2)} km²`
                   : t('Non documentée cette année', 'Not documented for this year')}
               </strong>
+              {activeObservation && (
+                <span data-testid="territory-active-observation">
+                  {text('documentedInterval')} : {observationPeriod(activeObservation)}
+                </span>
+              )}
             </div>
             {reviewedIdentity && (
               <EntityLeaders key={visible.id} identity={reviewedIdentity} year={year} />
@@ -313,6 +363,7 @@ export default function EntityPanel() {
                 <h3 id="area-title">{t('L’évolution du territoire', 'Territorial change')}</h3>
                 <svg
                   className="area-chart"
+                  style={{ direction: 'ltr' }}
                   viewBox="0 0 340 128"
                   role="img"
                   aria-label={t(
@@ -350,12 +401,41 @@ export default function EntityPanel() {
                       cy={point.y}
                       r="3.5"
                       fill={visible.color}
-                      onClick={() => setYear(point.year)}
-                      style={{ cursor: 'pointer' }}
+                      onClick={() => selectTerritorialObservation(observations[index])}
+                      style={{
+                        cursor:
+                          observationDestination(observations[index]) === null
+                            ? 'default'
+                            : 'pointer',
+                      }}
                     >
                       <title>{`${formatYear(point.year, locale)} · ${number.format(point.areaKm2)} km²`}</title>
                     </circle>
                   ))}
+                  {chart.current && (
+                    <g aria-hidden="true" pointerEvents="none">
+                      <line
+                        data-testid="territory-current-cursor"
+                        x1={chart.current.x}
+                        y1="12"
+                        x2={chart.current.x}
+                        y2="108"
+                        stroke="currentColor"
+                        strokeDasharray="3 3"
+                      />
+                      {chart.current.y !== null && (
+                        <circle
+                          data-testid="territory-current-area"
+                          cx={chart.current.x}
+                          cy={chart.current.y}
+                          r="5"
+                          fill={visible.color}
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                      )}
+                    </g>
+                  )}
                   <text x="12" y="123" fill="currentColor" fontSize="10">
                     {formatYear(chart.minimum, locale)}
                   </text>
@@ -363,20 +443,52 @@ export default function EntityPanel() {
                     {formatYear(chart.maximum, locale)}
                   </text>
                 </svg>
+                <p className={styles.currentYear}>
+                  {text('selectedYear')} : <strong>{formatYear(year, locale)}</strong>
+                </p>
+                <div className={styles.navigation} role="group" aria-label={text('navigation')}>
+                  <button
+                    type="button"
+                    className="secondary-button"
+                    disabled={!previous}
+                    onClick={() => previous && selectTerritorialObservation(previous)}
+                  >
+                    <ChevronLeft size={14} aria-hidden="true" />
+                    {text('previous')}
+                  </button>
+                  <button
+                    type="button"
+                    className="secondary-button"
+                    disabled={!next}
+                    onClick={() => next && selectTerritorialObservation(next)}
+                  >
+                    {text('next')}
+                    <ChevronRight size={14} aria-hidden="true" />
+                  </button>
+                </div>
                 <label className="observation-select">
                   {t('Aller à une observation', 'Go to an observation')}
                   <select
                     aria-label={t('Observation territoriale', 'Territorial observation')}
-                    value=""
+                    value={activeObservation ? String(activeObservation.fromYear) : ''}
                     onChange={(event) => {
-                      if (event.target.value) setYear(Number(event.target.value));
+                      const observation = observations.find(
+                        (item) => String(item.fromYear) === event.target.value,
+                      );
+                      if (observation) selectTerritorialObservation(observation);
                     }}
                   >
                     <option value="">{t('Choisir une date…', 'Choose a date…')}</option>
                     {observations.map((observation, index) => (
-                      <option key={`${observation.fromYear}-${index}`} value={observation.fromYear}>
-                        {formatYear(observation.fromYear, locale)} · ≈{' '}
-                        {number.format(observation.areaKm2)} km²
+                      <option
+                        key={`${observation.fromYear}-${index}`}
+                        value={observation.fromYear}
+                        disabled={observationDestination(observation) === null}
+                      >
+                        {observationPeriod(observation)} · ≈ {number.format(observation.areaKm2)}{' '}
+                        km²
+                        {observationDestination(observation) === null &&
+                          ` · ${text('outsideTimeline')}`}
                       </option>
                     ))}
                   </select>

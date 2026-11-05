@@ -5177,7 +5177,9 @@ ul {
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
-    row-gap: 2px;
+    /* Under the help control, the source link's 24px spacing circle (WCAG 2.5.8) needs 5px. A
+       taller link would meet it too, but would cover more of the map. */
+    row-gap: 5px;
   }
   .atlas-app:not(.sidebar-is-open):not(.detail-is-open):not(.battle-mode) .density-key {
     bottom: calc(

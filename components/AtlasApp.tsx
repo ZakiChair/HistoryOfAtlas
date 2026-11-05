@@ -36,14 +36,12 @@ import { createAtlasUrlSync } from '@/lib/store/url-sync';
 import { useI18n, translateCopy, localeDirection } from '@/lib/i18n';
 import { isLocale, LOCALES, LOCALE_LABELS } from '@/lib/types';
 import { getEra } from '@/lib/eras';
-import { formatYear } from '@/lib/histdate';
 import { useJson } from '@/lib/data-client/hooks';
 import { getManifest, readJson, type DataManifest } from '@/lib/data-client';
 import type { GeographyManifest } from '@/lib/geography';
 import type { HistoricalEvent } from '@/lib/schema';
 import { openEvent, withLocale } from '@/lib/navigation';
 import { useDocumentTitle } from '@/lib/use-document-title';
-import { surroundingSnapshots } from '@/lib/map-time';
 import { battleText } from '@/lib/battles/i18n';
 import {
   INTRO_YEARS,
@@ -61,6 +59,7 @@ import Timeline from './timeline/Timeline';
 import { IconButton } from './ui/IconButton';
 import SectionBoundary from './ui/SectionBoundary';
 import MapLayers from './map/MapLayers';
+import MapCaption from './map/MapCaption';
 
 const WorldMap = dynamic(() => import('./map/WorldMap'), { ssr: false });
 const EventList = dynamic(() => import('./panels/EventList'));
@@ -206,48 +205,6 @@ function Overview({
   );
 }
 
-function MapCaption({ geo }: { geo: GeographyManifest | null }) {
-  const year = useAtlasStore((s) => s.year),
-    projection = useAtlasStore((s) => s.projection),
-    camera = useAtlasStore((s) => s.camera);
-  const boundarySource = useAtlasStore((s) => s.boundarySource);
-  const { locale, t } = useI18n();
-  const cliopatria =
-    boundarySource === 'cliopatria' && geo?.temporal && year >= geo.temporal.range[0];
-  const sourceYear = Math.min(
-    year,
-    cliopatria ? geo!.temporal!.range[1] : (geo?.snapshots.at(-1)?.year ?? year),
-  );
-  const snapshots = !cliopatria && geo ? surroundingSnapshots(geo.snapshots, year) : null;
-  const sourceDates = snapshots
-    ? `${formatYear(snapshots.before.year, locale)}${snapshots.after.year !== snapshots.before.year ? ` / ${formatYear(snapshots.after.year, locale)}` : ''}`
-    : year > sourceYear
-      ? formatYear(sourceYear, locale)
-      : '';
-  const source = cliopatria ? 'Cliopatria / Seshat' : 'Historical Basemaps';
-  return (
-    <>
-      <div className="map-coordinate">
-        <span>
-          {Math.abs(camera.lat).toFixed(1)}° {camera.lat >= 0 ? 'N' : 'S'} &nbsp;{' '}
-          {Math.abs(camera.lon).toFixed(1)}° {camera.lon >= 0 ? 'E' : t('O', 'W')}
-        </span>
-        <span>{projection === 'globe' ? t('Vue globe', 'Globe view') : 'Mercator'}</span>
-      </div>
-      <div className="map-attribution">
-        <Info size={12} />
-        <span>
-          {t('Contours approximatifs', 'Approximate boundaries')}
-          {sourceDates && ` · ${t('sources', 'sources')} ${sourceDates}`}
-        </span>
-        <Link prefetch={false} href={withLocale('/about/', locale)}>
-          {source} · Natural Earth
-        </Link>
-      </div>
-    </>
-  );
-}
-
 export default function AtlasApp() {
   const { locale, t, setLocale, dir } = useI18n();
   useDocumentTitle();
@@ -256,6 +213,7 @@ export default function AtlasApp() {
     mode = useAtlasStore((s) => s.mode),
     trails = useAtlasStore((s) => s.trails);
   const boundarySource = useAtlasStore((s) => s.boundarySource);
+  const contextView = useAtlasStore((s) => s.contextView);
   const selectedEvent = useAtlasStore((s) => s.selectedEvent),
     selectedEntity = useAtlasStore((s) => s.selectedEntity),
     selectedPerson = useAtlasStore((s) => s.selectedPerson),
@@ -263,7 +221,7 @@ export default function AtlasApp() {
   const campaignId = useAtlasStore((s) => s.campaignId),
     storyId = useAtlasStore((s) => s.storyId);
   const { data: manifest } = useJson<DataManifest>('/data/manifest.json'),
-    { data: geo } = useJson<GeographyManifest>('/geo/manifest.json');
+    { data: geo, error: geoError } = useJson<GeographyManifest>('/geo/manifest.json');
   const [hydrated, setHydrated] = useState(false),
     [searchOpen, setSearchOpen] = useState(false),
     [sidebarOpen, setSidebarOpen] = useState(true);
@@ -477,7 +435,8 @@ export default function AtlasApp() {
   };
   const hasDetail = Boolean(selectedPerson || selectedEntity || (!battleMode && selectedEvent));
   // The start card waits while the reader is already inside a record, a campaign or a story.
-  const contextOpen = hasDetail || battleMode || Boolean(campaignId || storyId || selectedWar);
+  const contextOpen =
+    hasDetail || battleMode || Boolean(campaignId || storyId || selectedWar || contextView);
   const dismissStartCard = () => {
     rememberStartCardDismissed();
     setStartCard(false);
@@ -917,7 +876,7 @@ export default function AtlasApp() {
               ) : null}
             </SectionBoundary>
           )}
-          <MapCaption geo={geo} />
+          <MapCaption geo={geo} failed={Boolean(geoError)} />
           {mode === 'heatmap' && !battleMode && <DensityKey />}
           <Timeline density={manifest?.density} territorialDensity={geo?.temporal?.density} />
           {toast && (

@@ -1,0 +1,116 @@
+.attribution {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.attribution:has(details[open]) {
+  z-index: 16;
+}
+
+.reading {
+  pointer-events: auto;
+}
+
+.reading summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.reading summary::-webkit-details-marker {
+  display: none;
+}
+
+.reading summary:hover,
+.reading[open] summary {
+  color: var(--gold);
+}
+
+.reading summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.card {
+  position: absolute;
+  inset-inline-end: 0;
+  bottom: calc(100% + 8px);
+  width: min(360px, calc(100vw - 32px));
+  max-height: min(440px, 55svh);
+  overflow-y: auto;
+  padding: 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.card header,
+.card dl > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card h2 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 15px;
+}
+
+.card dl {
+  margin-block: 10px;
+  padding-block: 8px;
+  border-block: 1px solid var(--line);
+}
+
+.card dd {
+  margin: 0;
+  color: var(--paper);
+  text-align: end;
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+.card .notice {
+  color: var(--gold);
+}
+
+.attribution .card a {
+  display: inline-block;
+  margin: 0;
+  padding-block: 4px;
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+@media (max-width: 580px) {
+  :global(.detail-is-open) .attribution {
+    /* Keep the 24px help target between the map tools and the open drawer. */
+    transform: translateY(6px);
+  }
+
+  .attribution {
+    column-gap: 8px;
+  }
+
+  .reading summary {
+    font-size: 9px;
+    min-height: 24px;
+    max-width: 100%;
+  }
+
+  .card {
+    max-height: 40svh;
+  }
+}

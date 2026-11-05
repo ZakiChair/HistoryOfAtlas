@@ -1,0 +1,36 @@
+.currentYear {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.currentYear strong {
+  color: var(--paper);
+  font-weight: 500;
+}
+
+.navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.navigation button {
+  flex: 1;
+  min-width: 0;
+  gap: 5px;
+  padding: 9px 6px;
+  font-size: 10px;
+}
+
+.navigation button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.navigation svg {
+  flex-shrink: 0;
+}
+
+:global([dir='rtl']) .navigation svg {
+  transform: scaleX(-1);
+}

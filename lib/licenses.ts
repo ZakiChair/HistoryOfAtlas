@@ -40,6 +40,17 @@ export interface ReligionReference {
   milestones: number;
 }
 
+type ContextCollection = 'changes' | 'networks' | 'capitals';
+type ContextLicenseRecord = { id: string; sources: { label: string; url: string }[] };
+
+export interface ContextReference {
+  id: string;
+  title: string;
+  url: string;
+  records: number;
+  collections: ContextCollection[];
+}
+
 /** A licence the project itself grants, as declared by a file at the repository root. */
 export interface ProjectLicense {
   /** Short licence name, e.g. `MIT` or `CC BY 4.0`. */
@@ -69,6 +80,11 @@ export interface LicenseManifest {
   epidemics?: {
     corpus: { scope: string; license: string; licenseUrl: string; note: string };
     references: ReligionReference[];
+  };
+  context?: {
+    corpus: { scope: string; license: string; licenseUrl: string; note: string };
+    collections: { id: ContextCollection; name: string; records: number }[];
+    references: ContextReference[];
   };
 }
 
@@ -128,6 +144,12 @@ export interface LicenseInputs {
     sources: { id: string; title: string; url: string }[];
     milestones: { id: string; sourceIds: string[]; toll?: { sourceIds: string[] }[] }[];
   };
+  /** Authored notes cite works without redistributing their text, maps or data. */
+  context?: {
+    changes: ContextLicenseRecord[];
+    networks: ContextLicenseRecord[];
+    capitals?: ContextLicenseRecord[];
+  };
 }
 
 const KNOWN_LICENSE_URLS: Record<string, string> = {
@@ -141,7 +163,7 @@ const EVENT_SOURCES = [
     id: 'wikidata',
     name: 'Wikidata',
     scope:
-      'Events, dates, coordinates, participants, people, offices, conflict links, historical capitals and population observations',
+      'Events, dates, coordinates, participants, people, offices, conflict links, historical capitals and population observations, city reference coordinates and city population observations',
   },
   {
     match: /^https:\/\/www\.naturalearthdata\.com\//,
@@ -200,6 +222,20 @@ export function licenseIssues(inputs: LicenseInputs): string[] {
     ])
       if (!epidemicSources.has(sourceId))
         issues.push(`Epidemic milestone ${milestone.id} cites unknown source ${sourceId}`);
+  for (const [collection, records = []] of Object.entries(inputs.context ?? {})) {
+    if (new Set(records.map((record) => record.id)).size !== records.length)
+      issues.push(`Duplicate context ${collection} record identifier`);
+    for (const record of records) {
+      if (!record.sources.length)
+        issues.push(`Context ${collection} record ${record.id} has no reference`);
+      for (const source of record.sources) {
+        if (!source.label.trim())
+          issues.push(`Context ${collection} record ${record.id} has an unnamed reference`);
+        if (!isHttpUrl(source.url))
+          issues.push(`Context ${collection} record ${record.id} has an invalid reference URL`);
+      }
+    }
+  }
   for (const source of inputs.geography.sources) {
     if (!source.licence.trim()) issues.push(`Geography source ${source.label} has no licence`);
     if (!isHttpUrl(source.url)) issues.push(`Geography source ${source.label} has no URL`);
@@ -271,10 +307,10 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
     license: source.licence,
     licenseUrl: source.licenceUrl,
     scope: /cliopatria/i.test(source.label)
-      ? 'Dated polity boundaries'
+      ? 'Dated polity boundaries and derived coverage inventory'
       : /natural earth/i.test(source.label)
         ? 'Coastlines, rivers and physical basemap'
-        : 'Historical boundary snapshots (secondary reference)',
+        : 'Historical boundary snapshots and derived coverage inventory (secondary reference)',
     ...(source.commit ? { revision: source.commit } : {}),
     ...(source.citation ? { attribution: source.citation } : {}),
   }));
@@ -381,6 +417,23 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
     ]))
       epidemicCitations.set(sourceId, (epidemicCitations.get(sourceId) ?? 0) + 1);
 
+  const contextReferences = new Map<string, Omit<ContextReference, 'id'>>();
+  for (const collection of ['changes', 'networks', 'capitals'] as const) {
+    for (const record of inputs.context?.[collection] ?? []) {
+      for (const source of new Map(record.sources.map((item) => [item.url, item])).values()) {
+        const reference: Omit<ContextReference, 'id'> = contextReferences.get(source.url) ?? {
+          title: source.label,
+          url: source.url,
+          records: 0,
+          collections: [],
+        };
+        reference.records++;
+        if (!reference.collections.includes(collection)) reference.collections.push(collection);
+        contextReferences.set(source.url, reference);
+      }
+    }
+  }
+
   return {
     version: 1,
     notice:
@@ -390,7 +443,7 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
       content: {
         ...inputs.project.content,
         scope:
-          'Content written for the atlas: curated reviews and corrections, religion milestones, descriptions, generalized regions and diffusion links, map symbology',
+          'Content written for the atlas: curated reviews and corrections, religion milestones, descriptions, generalized regions and diffusion links, transformation notices and schematic network annotations, map symbology',
       },
       note: 'Third-party data keeps its original licence. 3D models whose origin is not documented in their own metadata are not covered until their provenance has been confirmed.',
     },
@@ -436,6 +489,43 @@ export function buildLicenseManifest(inputs: LicenseInputs): LicenseManifest {
                 milestones: epidemicCitations.get(source.id) ?? 0,
               }))
               .sort((a, b) => a.title.localeCompare(b.title, 'en')),
+          },
+        }
+      : {}),
+    ...(inputs.context
+      ? {
+          context: {
+            corpus: {
+              scope:
+                'Original historical transformation notices, trade and migration descriptions, reviewed capital chronologies, schematic editorial anchors and reading conventions',
+              license: inputs.project.content.license,
+              licenseUrl: inputs.project.content.licenseUrl,
+              note: 'Project-authored factual summaries, reviewed capital chronologies and schematic annotations. References are cited for verification; their text, maps and datasets are not redistributed in these editorial corpora. Source-derived coverage, capital and population records retain their original dataset licences.',
+            },
+            collections: [
+              {
+                id: 'changes' as const,
+                name: 'Historical transformations',
+                records: inputs.context.changes.length,
+              },
+              {
+                id: 'networks' as const,
+                name: 'Trade and migration networks',
+                records: inputs.context.networks.length,
+              },
+              ...(inputs.context.capitals
+                ? [
+                    {
+                      id: 'capitals' as const,
+                      name: 'Reviewed capital chronologies',
+                      records: inputs.context.capitals.length,
+                    },
+                  ]
+                : []),
+            ],
+            references: [...contextReferences.values()]
+              .sort((a, b) => a.url.localeCompare(b.url, 'en'))
+              .map((reference, index) => ({ id: `context-reference-${index + 1}`, ...reference })),
           },
         }
       : {}),

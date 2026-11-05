@@ -1,6 +1,6 @@
 /**
  * Writes public/data/licenses.json from the committed source manifests:
- * resource sources, religion references, the geography manifest, CDB90, Seshat and Wikidata,
+ * resource sources, religion and context references, the geography manifest, CDB90, Seshat and Wikidata,
  * plus the project's own licences declared in LICENSE and DATA-LICENSE.md.
  *
  *   pnpm data:licenses           regenerate the manifest
@@ -67,6 +67,17 @@ export function readLicenseInputs(): LicenseInputs {
   const polityFacts = readJson<NonNullable<LicenseInputs['polityFacts']>>(
     'data/curated/polity-facts-seshat-source.json',
   );
+  const changes = readJson<{ changes: NonNullable<LicenseInputs['context']>['changes'] }>(
+    'public/data/context/changes.json',
+  );
+  const networks = readJson<{ networks: NonNullable<LicenseInputs['context']>['networks'] }>(
+    'public/data/context/networks.json',
+  );
+  const capitals = existsSync(new URL('data/curated/context-capitals.json', root))
+    ? readJson<{ capitals: { fact: { id: string; sources: { label: string; url: string }[] } }[] }>(
+        'data/curated/context-capitals.json',
+      )
+    : undefined;
   return {
     project: readProjectLicenses(),
     resources: {
@@ -79,6 +90,13 @@ export function readLicenseInputs(): LicenseInputs {
         id: milestone.id,
         sourceIds: milestone.sourceIds,
       })),
+    },
+    context: {
+      changes: changes.changes.map(({ id, sources }) => ({ id, sources })),
+      networks: networks.networks.map(({ id, sources }) => ({ id, sources })),
+      ...(capitals
+        ? { capitals: capitals.capitals.map(({ fact: { id, sources } }) => ({ id, sources })) }
+        : {}),
     },
     ...(epidemics
       ? {
@@ -153,7 +171,11 @@ export function checkLicenseManifest(): string {
   }
   if (committed !== renderLicenseManifest(inputs))
     throw new Error('public/data/licenses.json is out of date: run `pnpm data:licenses`.');
-  return `Verified licences for ${inputs.resources.sources.length} resource sources, ${inputs.religions.sources.length} religion references, ${inputs.epidemics?.sources.length ?? 0} epidemic references and ${inputs.geography.sources.length} geography sources.`;
+  const contextRecords = Object.values(inputs.context ?? {}).reduce(
+    (sum, records) => sum + records.length,
+    0,
+  );
+  return `Verified licences for ${inputs.resources.sources.length} resource sources, ${inputs.religions.sources.length} religion references, ${inputs.epidemics?.sources.length ?? 0} epidemic references, ${contextRecords} editorial context records and ${inputs.geography.sources.length} geography sources.`;
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {

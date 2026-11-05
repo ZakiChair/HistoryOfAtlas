@@ -59,6 +59,8 @@ jobs:
         run: pnpm data:religions:check
       - name: Religious composition importer invariants
         run: python3 -m unittest discover -s pipeline/religions -p 'test_*.py'
+      - name: Context views, cities and their licences
+        run: pnpm data:context:check
       - name: First-load data per layer (warning only)
         run: node scripts/measure-data.mjs
       # Keep last: the ignore list lives in a runner-local pnpm-workspace.yaml, which must not
