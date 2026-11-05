@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "method": "Unique script and script-preload URLs in the exported index.html, excluding legacy noModule polyfills that module-capable browsers never download; gzip default level. This measures the HTML shell, not the total JavaScript required for an interactive map. Browser network audits measure the deferred map and worker separately.",
-  "codeCommit": "2dc7d1e6de77adb3cac691c43c74a865b5b39c12",
-  "initialGzipBytes": 265180,
+  "codeCommit": "711e8cfb3fcfc8f1bc68349493e34dc12f066b99",
+  "initialGzipBytes": 265216,
   "budgetBytes": 274000,
   "shellBudgetMet": true,
   "legacyPolyfillGzipBytes": 39473,
@@ -13,9 +13,9 @@
       "gzipBytes": 73328
     },
     {
-      "path": "/_next/static/chunks/0a84w8qvyynt0.js",
-      "bytes": 190500,
-      "gzipBytes": 63733
+      "path": "/_next/static/chunks/0qoiuqig3feg6.js",
+      "bytes": 190551,
+      "gzipBytes": 63769
     },
     {
       "path": "/_next/static/chunks/1x1bb6bbe_seg.js",
