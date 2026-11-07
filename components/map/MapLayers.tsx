@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import {
   ArrowUpRight,
   Biohazard,
+  BookOpen,
   Check,
   ChevronDown,
   Gem,
@@ -23,6 +24,8 @@ import ResourceIcon from './ResourceIcon';
 import { useReligionStore } from '@/lib/religions/store';
 import { useEpidemicStore } from '@/lib/epidemics/store';
 import { epidemicText } from '@/lib/epidemics/i18n';
+import { contextTitle } from '@/lib/context/title';
+const ContextPanel = dynamic(() => import('../context/ContextPanel'), { ssr: false });
 
 const ReligionLayers = dynamic(() => import('./ReligionLayers'), { ssr: false });
 const EventKey = dynamic(() => import('./EventKey'), { ssr: false });
@@ -40,6 +43,12 @@ const religionLabels = {
 export default function MapLayers() {
   const { locale, t } = useI18n();
   const text = (key: ResourceCopyKey) => resourceText(locale, key);
+  const contextView = useAtlasStore((state) => state.contextView);
+  const contextButton = useRef<HTMLButtonElement>(null);
+  const closeContext = () => {
+    useAtlasStore.getState().patchState({ contextView: null });
+    contextButton.current?.focus();
+  };
   const battlesVisible = useAtlasStore((state) => state.battlesVisible);
   const resourcesVisible = useAtlasStore((state) => state.resourcesVisible);
   const religionsVisible = useAtlasStore((state) => state.religionsVisible);
@@ -110,6 +119,7 @@ export default function MapLayers() {
   useEffect(() => {
     const unsubscribeReligions = useReligionStore.subscribe((state, previous) => {
       if (state.panelOpen && !previous.panelOpen) {
+        useAtlasStore.getState().patchState({ contextView: null });
         setLegendOpen(false);
         setEventKeyOpen(false);
         useResourceStore.getState().select(null);
@@ -118,6 +128,7 @@ export default function MapLayers() {
     });
     const unsubscribeEpidemics = useEpidemicStore.subscribe((state, previous) => {
       if (state.panelOpen && !previous.panelOpen) {
+        useAtlasStore.getState().patchState({ contextView: null });
         setLegendOpen(false);
         setEventKeyOpen(false);
         useResourceStore.getState().select(null);
@@ -126,6 +137,7 @@ export default function MapLayers() {
     });
     const unsubscribeResources = useResourceStore.subscribe((state, previous) => {
       if (state.selected && state.selected !== previous.selected) {
+        useAtlasStore.getState().patchState({ contextView: null });
         useReligionStore.getState().setPanelOpen(false);
         useEpidemicStore.getState().setPanelOpen(false);
         setEventKeyOpen(false);
@@ -189,6 +201,7 @@ export default function MapLayers() {
                 useResourceStore.getState().select(null);
                 useReligionStore.getState().setPanelOpen(false);
                 useEpidemicStore.getState().setPanelOpen(false);
+                useAtlasStore.getState().patchState({ contextView: null });
                 setEventKeyOpen(true);
               }
             }}
@@ -231,6 +244,7 @@ export default function MapLayers() {
                   useReligionStore.getState().setPanelOpen(false);
                   useEpidemicStore.getState().setPanelOpen(false);
                   setEventKeyOpen(false);
+                  useAtlasStore.getState().patchState({ contextView: null });
                   setLegendOpen(true);
                 }
               }}
@@ -315,6 +329,42 @@ export default function MapLayers() {
             </button>
           )}
         </div>
+        <button
+          type="button"
+          className="map-layer-toggle"
+          data-testid="context-toggle"
+          ref={contextButton}
+          aria-expanded={contextView !== null}
+          aria-controls="context-panel-container"
+          onClick={() => {
+            if (contextView) closeContext();
+            else {
+              setLegendOpen(false);
+              setEventKeyOpen(false);
+              useResourceStore.getState().select(null);
+              useReligionStore.getState().setPanelOpen(false);
+              useEpidemicStore.getState().setPanelOpen(false);
+              const state = useAtlasStore.getState();
+              state.patchState({
+                contextView: 'changes',
+                contextSelection: null,
+                battleMode: false,
+                playing: false,
+                campaignPlaying: false,
+                // The same exit as leaving a reconstruction: no dossier, a readable view.
+                ...(state.battleMode
+                  ? { selectedEvent: null, camera: { ...state.camera, zoom: 4, pitch: 0 } }
+                  : {}),
+              });
+            }
+          }}
+        >
+          <BookOpen size={15} aria-hidden="true" />
+          <span>{contextTitle[locale]}</span>
+        </button>
+      </div>
+      <div id="context-panel-container">
+        {contextView && <ContextPanel onClose={closeContext} />}
       </div>
       {resourcesVisible && (
         <div className="resource-layer-note" data-testid="resources-status">

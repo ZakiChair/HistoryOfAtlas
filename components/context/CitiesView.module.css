@@ -1,0 +1,184 @@
+.view {
+  color: var(--paper);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.view h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.view h4 {
+  margin: 20px 0 8px;
+  font-size: 12px;
+}
+.view .subject {
+  font-size: 20px;
+}
+.note,
+.coverage {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 8px 0 14px;
+}
+.separation {
+  border-inline-start: 2px solid var(--gold);
+  padding-inline-start: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin: 16px 0;
+}
+.tabs button,
+.pagination button {
+  padding: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  color: var(--muted);
+}
+.tabs button {
+  flex: 1;
+  font-size: 11px;
+}
+.tabs button[aria-pressed='true'] {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-wash);
+}
+.back,
+.dateButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--gold);
+  font-size: 11px;
+  text-align: start;
+}
+.back {
+  margin-bottom: 8px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 9px;
+}
+.search input {
+  min-width: 0;
+  width: 100%;
+  background: transparent;
+  font-size: 11px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 12px 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.filter input {
+  accent-color: var(--gold);
+}
+.count {
+  color: var(--muted);
+  font-size: 10px;
+}
+.catalogue,
+.observations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catalogue button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: start;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 11px 0;
+}
+.catalogue button:hover {
+  color: var(--gold);
+}
+.catalogue button > span:last-child:not(:first-child) {
+  color: var(--muted);
+  font-size: 10px;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 0;
+  font-size: 11px;
+}
+.view button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.observation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.observation > strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.observation strong span,
+.date {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+.observation p {
+  margin: 2px 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+.sources {
+  font-size: 10px;
+  color: var(--muted);
+}
+.sources summary,
+.history summary {
+  cursor: pointer;
+  color: var(--gold);
+}
+.sources ul {
+  padding-inline-start: 16px;
+  margin: 6px 0;
+}
+.sources a {
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sources svg {
+  display: inline;
+  margin-inline-start: 4px;
+}
+.history {
+  margin: 14px 0;
+}
+.reference {
+  border-inline-start: 2px solid var(--line-strong);
+  padding-inline-start: 10px;
+}
+.coverage {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 20px;
+}
+:global([dir='rtl']) .pagination svg,
+:global([dir='rtl']) .back svg {
+  transform: scaleX(-1);
+}

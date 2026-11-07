@@ -9,7 +9,16 @@ This covers, in particular:
 - curated reviews and corrections in `data/curated/` and `docs/`;
 - the religion milestones, descriptions, presence zones and diffusion links in
   `public/data/religions/history.json`;
+- the original transformation notices and schematic trade/migration annotations in
+  `public/data/context/changes.json` and `public/data/context/networks.json`;
+- the reviewed capital chronologies in `data/curated/context-capitals.json`, identified
+  separately by the `editorial` metadata in `public/data/context/cities.json`;
 - the map symbology, pictograms and emblems drawn by the project.
+
+The references cited by these editorial corpora are provided for factual verification.
+Their texts, maps and datasets are not republished under the project's content licence.
+The source-derived context coverage inventory, capital records and population observations
+retain the licences of Cliopatria, Historical Basemaps, Wikidata and Seshat as applicable.
 
 Attribute it as "HistoryOfAtlas contributors" with a link to
 https://github.com/ZakiChair/HistoryOfAtlas.

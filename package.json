@@ -31,6 +31,8 @@
     "data:religions": "python3 pipeline/religions/rcs.py && python3 pipeline/religions/seshat.py && python3 pipeline/religions/polities.py && tsx pipeline/religions/build.ts",
     "data:religions:check": "python3 pipeline/religions/rcs.py --check && python3 pipeline/religions/seshat.py --check && python3 pipeline/religions/polities.py --check && tsx pipeline/religions/build.ts --check",
     "data:licenses": "tsx scripts/build-licenses.ts",
+    "data:context": "tsx scripts/build-context-coverage.ts && tsx scripts/build-context-cities.ts && tsx scripts/check-context.ts",
+    "data:context:check": "tsx scripts/build-context-coverage.ts --check && tsx scripts/build-context-cities.ts --check && tsx scripts/check-context.ts && tsx scripts/build-licenses.ts --check",
     "data:geo": "tsx pipeline/geography/build.ts",
     "data:check": "tsx scripts/check-dossiers.ts",
     "check": "pnpm typecheck && pnpm test && pnpm lint",

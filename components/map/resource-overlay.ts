@@ -1,3 +1,4 @@
+import { hasContextAt } from './context-hit';
 import type {
   ExpressionSpecification,
   GeoJSONSource,
@@ -119,6 +120,7 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
       disposed ||
       sourceUpdating ||
       event.defaultPrevented ||
+      hasContextAt(map, event.point) ||
       hasReligionAt(map, event.point) ||
       hasEpidemicAt(map, event.point)
     )
@@ -137,6 +139,7 @@ export function startResourceOverlay(map: MapInstance, reducedMotion: boolean) {
       disposed ||
       sourceUpdating ||
       event.defaultPrevented ||
+      hasContextAt(map, event.point) ||
       (!countLayer && (hasReligionAt(map, event.point) || hasEpidemicAt(map, event.point)))
     )
       return;

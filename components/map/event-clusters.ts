@@ -1,3 +1,4 @@
+import { hasContextAt } from './context-hit';
 import type { GeoJSONSource, Map as MapInstance, MapLayerMouseEvent, PointLike } from 'maplibre-gl';
 import type { FeatureCollection, Point } from 'geojson';
 import { wrapLongitude } from '@/lib/map-boundaries';
@@ -268,6 +269,7 @@ export function attachEventClustering(map: MapInstance, options: Options): Event
 
   const click = (event: MapLayerMouseEvent) => {
     if (
+      hasContextAt(map, event.point) ||
       hasResourceAt(map, event.point) ||
       hasReligionAt(map, event.point) ||
       hasEpidemicAt(map, event.point)

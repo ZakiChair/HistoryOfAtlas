@@ -1,0 +1,1160 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-01",
+  "coverage": {
+    "fr": "Des réseaux choisis pour relier échanges, mobilités et transformations politiques. Les lignes relient des repères éditoriaux approximatifs : elles ne reconstituent aucun itinéraire et ne mesurent aucun flux. Les dates délimitent une période de lecture documentée, sans garantir une activité continue de chaque liaison. Une absence indique une limite de cette sélection, jamais l'absence de circulation.",
+    "en": "Selected networks connect exchange, mobility and political change. Lines join approximate editorial anchors: they reconstruct no itinerary and measure no flow. Dates delimit a documented reading period, without establishing continuous activity along each connection. An absence marks a limit of this selection, never an absence of movement."
+  },
+  "networks": [
+    {
+      "id": "silk-roads-changan-tianshan",
+      "title": {
+        "fr": "Routes de la soie : corridor Chang'an–Tian-shan",
+        "en": "Silk Roads: Chang'an–Tianshan corridor"
+      },
+      "kind": "trade",
+      "fromYear": -199,
+      "toYear": 1600,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "L'UNESCO situe la formation entre le IIe siècle av. J.-C. et le Ier siècle, puis l'usage jusqu'au XVIe. Les bornes arrondies englobent cette évolution.",
+        "en": "UNESCO dates formation between the second century BCE and first century CE, with use through the sixteenth century. Rounded bounds encompass that development."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          108.94,
+          34.26
+        ],
+        [
+          94.66,
+          40.14
+        ],
+        [
+          93.51,
+          42.83
+        ],
+        [
+          80.2,
+          43.9
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Chang'an / Xi'an",
+            "en": "Chang'an / Xi'an"
+          },
+          "coordinates": [
+            108.94,
+            34.26
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Dunhuang",
+            "en": "Dunhuang"
+          },
+          "coordinates": [
+            94.66,
+            40.14
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Hami",
+            "en": "Hami"
+          },
+          "coordinates": [
+            93.51,
+            42.83
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Vallée de l'Ili, repère régional",
+            "en": "Ili valley, regional anchor"
+          },
+          "coordinates": [
+            80.2,
+            43.9
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Un corridor relie les capitales chinoises aux vallées d'Asie centrale. Marchandises, savoirs et traditions religieuses circulent par des chaînes d'intermédiaires.",
+        "en": "A corridor connects Chinese capitals with Central Asian valleys. Goods, knowledge and religious traditions circulate through chains of intermediaries."
+      },
+      "mechanisms": {
+        "fr": "Relais, oasis, caravanes et protection politique soutiennent les échanges à longue distance.",
+        "en": "Way stations, oases, caravans and political protection support long-distance exchange."
+      },
+      "limits": {
+        "fr": "Ce trait résume un corridor ramifié, pas toute la route de la soie. Les points situent des lieux cités par la source ; leurs coordonnées et raccords sont éditoriaux. Les branches changent au fil des siècles.",
+        "en": "This line summarises one branching corridor, not all Silk Roads. Points locate places named by the source; their coordinates and connecting segments are editorial. Branches change over the centuries."
+      },
+      "sources": [
+        {
+          "label": "UNESCO — Silk Roads: Chang'an–Tianshan Corridor",
+          "url": "https://whc.unesco.org/en/list/1442/"
+        }
+      ],
+      "direction": "both",
+      "directionNote": {
+        "fr": "Convention de lecture : la liaison relie des pôles d’échange réciproques, sans supposer des marchandises, des volumes ou des trajets identiques dans les deux sens.",
+        "en": "Reading convention: the connection joins reciprocal exchange centres, without implying identical goods, quantities or itineraries in both directions."
+      }
+    },
+    {
+      "id": "trans-saharan-gold-salt",
+      "title": {
+        "fr": "Échanges transsahariens : or et sel",
+        "en": "Trans-Saharan exchange: gold and salt"
+      },
+      "kind": "trade",
+      "fromYear": 800,
+      "toYear": 1400,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "Fenêtre arrondie des IXe–XIVe siècles : le Met décrit Sijilmasa aux VIIIe–IXe siècles puis l'essor du commerce avec le Mali. Ce commerce précède et dépasse ces bornes.",
+        "en": "Rounded ninth–fourteenth-century window: the Met describes Sijilmasa in the eighth–ninth centuries and later trade with Mali. This commerce predates and outlasts these bounds."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          -4.26,
+          31.28
+        ],
+        [
+          -11.4,
+          13.8
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Sijilmasa",
+            "en": "Sijilmasa"
+          },
+          "coordinates": [
+            -4.26,
+            31.28
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Bambuk, région aurifère",
+            "en": "Bambuk gold-producing region"
+          },
+          "coordinates": [
+            -11.4,
+            13.8
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "L'or ouest-africain relie les économies du Sahel et du Maghreb. Sijilmasa participe au financement des caravanes ; Ghana puis Mali encadrent des échanges régionaux.",
+        "en": "West African gold links Sahelian and Maghrebi economies. Sijilmasa helps finance caravans; Ghana and later Mali shape regional exchange."
+      },
+      "mechanisms": {
+        "fr": "Caravanes chamelières, commerce du sel et demande monétaire d'or.",
+        "en": "Camel caravans, salt exchange and monetary demand for gold."
+      },
+      "limits": {
+        "fr": "Bambuk est un repère régional, pas une mine unique. Le raccord avec Sijilmasa représente une relation entre zones, sans identifier les étapes, les acteurs, les volumes ou une traversée directe.",
+        "en": "Bambuk is a regional anchor, not a single mine. Its connection with Sijilmasa represents a relationship between areas, without identifying stages, actors, volumes or a direct crossing."
+      },
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art — The Trans-Saharan Gold Trade (7th–14th Century)",
+          "url": "https://www.metmuseum.org/essays/the-trans-saharan-gold-trade-7th-14th-century"
+        }
+      ],
+      "direction": "both",
+      "directionNote": {
+        "fr": "Convention de lecture : la liaison relie des pôles d’échange réciproques, sans supposer des marchandises, des volumes ou des trajets identiques dans les deux sens.",
+        "en": "Reading convention: the connection joins reciprocal exchange centres, without implying identical goods, quantities or itineraries in both directions."
+      }
+    },
+    {
+      "id": "kilwa-indian-ocean",
+      "title": {
+        "fr": "Kilwa et les échanges de l'océan Indien",
+        "en": "Kilwa and Indian Ocean exchange"
+      },
+      "kind": "trade",
+      "fromYear": 1201,
+      "toYear": 1600,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "L'UNESCO souligne le commerce des XIIIe–XVIe siècles. Ces limites de siècles servent à afficher cette phase, sans dater l'ouverture ou la fermeture du réseau.",
+        "en": "UNESCO highlights thirteenth–sixteenth-century commerce. Century boundaries display this phase without dating the network's opening or closure."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          39.52,
+          -8.96
+        ],
+        [
+          73.3,
+          15.5
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Kilwa Kisiwani",
+            "en": "Kilwa Kisiwani"
+          },
+          "coordinates": [
+            39.52,
+            -8.96
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Côte occidentale de l'Inde, repère régional",
+            "en": "Western Indian coast, regional anchor"
+          },
+          "coordinates": [
+            73.3,
+            15.5
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Les ports swahilis de Kilwa et Songo Mnara participent à des échanges avec l'Arabie, l'Inde et la Chine. L'or et l'ivoire circulent contre des biens importés.",
+        "en": "The Swahili ports of Kilwa and Songo Mnara participate in exchange with Arabia, India and China. Gold and ivory circulate in return for imported goods."
+      },
+      "mechanisms": {
+        "fr": "Ports marchands, navigation maritime et liens avec les régions productrices de l'intérieur.",
+        "en": "Trading ports, maritime navigation and connections with inland producing regions."
+      },
+      "limits": {
+        "fr": "L'Inde est représentée par un repère côtier éditorial, pas un port identifié. La ligne condense un réseau d'intermédiaires et omet ses autres branches ; elle n'atteste aucun voyage direct ni corridor navigable.",
+        "en": "India is represented by an editorial coastal anchor, not an identified port. The line condenses an intermediary network and omits other branches; it establishes no direct voyage or navigable corridor."
+      },
+      "sources": [
+        {
+          "label": "UNESCO — Ruins of Kilwa Kisiwani and Ruins of Songo Mnara",
+          "url": "https://whc.unesco.org/en/list/144/"
+        }
+      ],
+      "direction": "both",
+      "directionNote": {
+        "fr": "Convention de lecture : la liaison relie des pôles d’échange réciproques, sans supposer des marchandises, des volumes ou des trajets identiques dans les deux sens.",
+        "en": "Reading convention: the connection joins reciprocal exchange centres, without implying identical goods, quantities or itineraries in both directions."
+      }
+    },
+    {
+      "id": "qhapaq-nan-inca",
+      "title": {
+        "fr": "Qhapaq Ñan : réseau andin au XVe siècle",
+        "en": "Qhapaq Ñan: the fifteenth-century Andean network"
+      },
+      "kind": "trade",
+      "fromYear": 1401,
+      "toYear": 1500,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "L'UNESCO situe l'extension maximale au XVe siècle. La fenêtre 1401–1500 illustre cette phase ; elle ne signifie ni création en 1401 ni disparition en 1500.",
+        "en": "UNESCO places maximum expansion in the fifteenth century. The 1401–1500 window illustrates this phase; it means neither creation in 1401 nor disappearance in 1500."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          -78.5,
+          -0.2
+        ],
+        [
+          -71.97,
+          -13.52
+        ],
+        [
+          -68,
+          -24
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Andes septentrionales, repère régional",
+            "en": "Northern Andes, regional anchor"
+          },
+          "coordinates": [
+            -78.5,
+            -0.2
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Cusco",
+            "en": "Cusco"
+          },
+          "coordinates": [
+            -71.97,
+            -13.52
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Andes méridionales, repère régional",
+            "en": "Southern Andes, regional anchor"
+          },
+          "coordinates": [
+            -68,
+            -24
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Organisé autour de Cusco, ce réseau relie des centres de production, de stockage, de pouvoir et de culte. Les Incas intègrent des infrastructures andines antérieures.",
+        "en": "Organised around Cusco, this network connects centres of production, storage, power and worship. The Incas incorporate earlier Andean infrastructure."
+      },
+      "mechanisms": {
+        "fr": "Redistribution d'État, messagers, circulation des biens et logistique militaire.",
+        "en": "State redistribution, messengers, movement of goods and military logistics."
+      },
+      "limits": {
+        "fr": "Le classement « échanges » inclut ici la redistribution et les communications d'État. Les trois points indiquent une organisation régionale, pas le tracé archéologique des routes ni l'étendue exacte à chaque année.",
+        "en": "The exchange category includes state redistribution and communications here. Three points indicate regional organisation, not the archaeological course of roads or exact extent in each year."
+      },
+      "sources": [
+        {
+          "label": "UNESCO — Qhapaq Ñan, Andean Road System",
+          "url": "https://whc.unesco.org/en/list/1459/"
+        }
+      ],
+      "direction": "both",
+      "directionNote": {
+        "fr": "Convention de lecture : la liaison relie des pôles d’échange réciproques, sans supposer des marchandises, des volumes ou des trajets identiques dans les deux sens.",
+        "en": "Reading convention: the connection joins reciprocal exchange centres, without implying identical goods, quantities or itineraries in both directions."
+      }
+    },
+    {
+      "id": "transatlantic-forced-migration",
+      "title": {
+        "fr": "Traite atlantique : déportations vers le Brésil",
+        "en": "Atlantic slave trade: forced displacement to Brazil"
+      },
+      "kind": "forced-migration",
+      "fromYear": 1514,
+      "toYear": 1866,
+      "approximate": false,
+      "uncertain": false,
+      "temporalBasis": {
+        "fr": "1514–1866 est la couverture chronologique des voyages dans le guide SlaveVoyages. Elle n'affirme pas que cette liaison régionale fonctionne chaque année, ni que la traite commence en 1514.",
+        "en": "1514–1866 is the voyage coverage in the SlaveVoyages guide. It does not assert annual activity along this regional link or imply that the slave trade began in 1514."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          12,
+          -8
+        ],
+        [
+          -38,
+          -13
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Afrique centre-occidentale, repère côtier",
+            "en": "West Central Africa, coastal anchor"
+          },
+          "coordinates": [
+            12,
+            -8
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Brésil, repère côtier",
+            "en": "Brazil, coastal anchor"
+          },
+          "coordinates": [
+            -38,
+            -13
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Des personnes africaines réduites en esclavage sont déportées vers les Amériques. Cette liaison régionale illustre une partie du système atlantique de déplacements forcés.",
+        "en": "Enslaved African people are forcibly transported to the Americas. This regional connection illustrates part of the Atlantic system of forced displacement."
+      },
+      "mechanisms": {
+        "fr": "Captivité, traite maritime et exploitation esclavagiste ; il ne s'agit pas d'une migration libre.",
+        "en": "Captivity, maritime slave trading and enslavement; this is not voluntary migration."
+      },
+      "limits": {
+        "fr": "Les repères ne sont ni des ports attribués à un voyage ni les origines personnelles des captifs. La ligne omet les déportations vers les Caraïbes et l'Amérique du Nord et ne porte aucune quantité estimée.",
+        "en": "Anchors are neither ports assigned to a voyage nor captives' personal origins. The line omits deportations to the Caribbean and North America and carries no estimated quantity."
+      },
+      "sources": [
+        {
+          "label": "SlaveVoyages — Guidelines for Contributors, voyage coverage (p. 7)",
+          "url": "https://legacy.slavevoyages.org/documents/download/GuideContributors.pdf"
+        },
+        {
+          "label": "SlaveVoyages — Volume and direction of the trans-Atlantic slave trade",
+          "url": "https://legacy.slavevoyages.org/blog/volume-and-direction-trans-atlantic-slave-trade"
+        }
+      ],
+      "direction": "forward",
+      "directionNote": {
+        "fr": "Convention de lecture : le premier repère représente une origine régionale, le dernier une destination. Ce sens résume le déplacement décrit dans la source ; il ne fixe aucun itinéraire individuel.",
+        "en": "Reading convention: the first anchor represents a regional origin and the last a destination. This direction summarises the movement described by the source; it fixes no individual itinerary."
+      }
+    },
+    {
+      "id": "great-migration-us",
+      "title": {
+        "fr": "Grande Migration afro-américaine : vers Chicago",
+        "en": "African American Great Migration: toward Chicago"
+      },
+      "kind": "migration",
+      "fromYear": 1910,
+      "toYear": 1970,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "Le Smithsonian présente la période 1910–1970 et souligne l'accélération à partir de 1916. Ces bornes décrivent une périodisation, pas les dates individuelles des déplacements.",
+        "en": "The Smithsonian presents 1910–1970 and highlights acceleration from 1916. These bounds describe periodisation, not individual migration dates."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          -90,
+          33
+        ],
+        [
+          -87.63,
+          41.88
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Sud des États-Unis, repère régional",
+            "en": "Southern United States, regional anchor"
+          },
+          "coordinates": [
+            -90,
+            33
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Chicago",
+            "en": "Chicago"
+          },
+          "coordinates": [
+            -87.63,
+            41.88
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Des Afro-Américains quittent le Sud pour les villes du Nord, du Midwest et de l'Ouest. Chicago figure parmi ces destinations, transformées par de nouvelles communautés.",
+        "en": "African Americans leave the South for northern, midwestern and western cities. Chicago is among these destinations, transformed by new communities."
+      },
+      "mechanisms": {
+        "fr": "Recherche d'emplois et d'éducation, fuite des violences racistes et des contraintes de Jim Crow.",
+        "en": "Seeking jobs and education, escaping racist violence and Jim Crow restrictions."
+      },
+      "limits": {
+        "fr": "Un seul couple origine–destination représente une migration multidirectionnelle. Le repère du Sud est éditorial ; la ligne ne décrit aucun parcours familial, ferroviaire ou routier et ne mesure aucune population.",
+        "en": "One origin–destination pair represents a multidirectional migration. The southern anchor is editorial; the line describes no family, railway or road itinerary and measures no population."
+      },
+      "sources": [
+        {
+          "label": "Smithsonian NMAAHC — The Great Migration",
+          "url": "https://www.searchablemuseum.com/the-great-migration/"
+        }
+      ],
+      "direction": "forward",
+      "directionNote": {
+        "fr": "Convention de lecture : le premier repère représente une origine régionale, le dernier une destination. Ce sens résume le déplacement décrit dans la source ; il ne fixe aucun itinéraire individuel.",
+        "en": "Reading convention: the first anchor represents a regional origin and the last a destination. This direction summarises the movement described by the source; it fixes no individual itinerary."
+      }
+    },
+    {
+      "id": "incense-negev",
+      "title": {
+        "fr": "Encens : Pétra, Néguev et Méditerranée",
+        "en": "Incense: Petra, Negev and the Mediterranean"
+      },
+      "kind": "trade",
+      "fromYear": -299,
+      "toYear": 200,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "L’UNESCO décrit une prospérité du IIIe siècle av. J.-C. au IIe siècle. Ces bornes de siècles ne datent pas chaque ville.",
+        "en": "UNESCO describes prosperity from the third century BCE to the second century CE. These century bounds do not date each town."
+      },
+      "direction": "both",
+      "directionNote": {
+        "fr": "Les deux sens indiquent des échanges, sans égalité de biens ni de volumes.",
+        "en": "Both directions indicate exchange, without equal goods or quantities."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          35.44,
+          30.33
+        ],
+        [
+          34.77,
+          30.79
+        ],
+        [
+          34.65,
+          31.1
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Pétra",
+            "en": "Petra"
+          },
+          "coordinates": [
+            35.44,
+            30.33
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Avdat",
+            "en": "Avdat"
+          },
+          "coordinates": [
+            34.77,
+            30.79
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Haluza",
+            "en": "Haluza"
+          },
+          "coordinates": [
+            34.65,
+            31.1
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Les villes nabatéennes relaient l’encens d’Arabie vers les ports méditerranéens.",
+        "en": "Nabataean towns relay Arabian incense toward Mediterranean ports."
+      },
+      "mechanisms": {
+        "fr": "Caravanes, relais et collecte de l’eau permettent les échanges dans le désert.",
+        "en": "Caravans, way stations and water collection support desert exchange."
+      },
+      "limits": {
+        "fr": "Trois repères résument une branche. Le dessin ne restitue ni les pistes fouillées ni les autres routes d’Arabie.",
+        "en": "Three anchors summarise one branch. The drawing reproduces neither excavated tracks nor other Arabian routes."
+      },
+      "sources": [
+        {
+          "label": "UNESCO · Incense Route — Desert Cities in the Negev",
+          "url": "https://whc.unesco.org/en/list/1107/"
+        }
+      ]
+    },
+    {
+      "id": "hanse-lubeck-bergen",
+      "title": {
+        "fr": "Hanse : Lübeck et le comptoir de Bergen",
+        "en": "Hanse: Lübeck and the Bergen trading post"
+      },
+      "kind": "trade",
+      "fromYear": 1350,
+      "toYear": 1550,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "1350 marque l’installation du comptoir hanséatique de Bergen. L’UNESCO souligne son rôle jusqu’au milieu du XVIe siècle ; les échanges continuent ensuite.",
+        "en": "1350 marks the Bergen Hanseatic office’s establishment. UNESCO highlights its role until the mid-sixteenth century; trade continues afterwards."
+      },
+      "direction": "both",
+      "directionNote": {
+        "fr": "Les deux sens indiquent des échanges, sans égalité de biens ni de volumes.",
+        "en": "Both directions indicate exchange, without equal goods or quantities."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          10.69,
+          53.87
+        ],
+        [
+          5.32,
+          60.4
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Lübeck",
+            "en": "Lübeck"
+          },
+          "coordinates": [
+            10.69,
+            53.87
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Bergen / Bryggen",
+            "en": "Bergen / Bryggen"
+          },
+          "coordinates": [
+            5.32,
+            60.4
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Le poisson séché relie Bergen aux marchands hanséatiques ; Lübeck appartient à ce réseau de villes et de comptoirs.",
+        "en": "Dried fish connects Bergen to Hanseatic merchants; Lübeck belongs to this network of towns and trading posts."
+      },
+      "mechanisms": {
+        "fr": "Comptoirs, entrepôts et privilèges marchands organisent les échanges.",
+        "en": "Trading posts, warehouses and merchant privileges organise exchange."
+      },
+      "limits": {
+        "fr": "La liaison schématique n’est pas un itinéraire maritime. La Hanse ne forme pas un État territorial uniforme.",
+        "en": "The schematic connection is not a sailing itinerary. The Hanse does not form a uniform territorial state."
+      },
+      "sources": [
+        {
+          "label": "UNESCO · Bryggen",
+          "url": "https://whc.unesco.org/en/list/59/"
+        },
+        {
+          "label": "Europäisches Hansemuseum · The Hanse",
+          "url": "https://www.hansemuseum.eu/en/exhibition/"
+        }
+      ]
+    },
+    {
+      "id": "manila-acapulco-galleons",
+      "title": {
+        "fr": "Galions : Manille et Acapulco",
+        "en": "Galleons: Manila and Acapulco"
+      },
+      "kind": "trade",
+      "fromYear": 1565,
+      "toYear": 1815,
+      "approximate": false,
+      "uncertain": false,
+      "temporalBasis": {
+        "fr": "1565–1815 est la période retenue par le Metropolitan Museum pour ce commerce. Le repère de Manille ne signifie pas que ce port fonctionne dès 1565.",
+        "en": "1565–1815 is the Metropolitan Museum’s period for this trade. The Manila anchor does not imply that this port operated from 1565."
+      },
+      "direction": "both",
+      "directionNote": {
+        "fr": "Les deux sens indiquent des échanges, sans égalité de biens ni de volumes.",
+        "en": "Both directions indicate exchange, without equal goods or quantities."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          120.97,
+          14.6
+        ],
+        [
+          -99.88,
+          16.86
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Manille, pôle de référence",
+            "en": "Manila, reference centre"
+          },
+          "coordinates": [
+            120.97,
+            14.6
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Acapulco",
+            "en": "Acapulco"
+          },
+          "coordinates": [
+            -99.88,
+            16.86
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Des biens asiatiques traversent le Pacifique vers le Mexique, en échange d’argent américain.",
+        "en": "Asian goods cross the Pacific toward Mexico in exchange for American silver."
+      },
+      "mechanisms": {
+        "fr": "Le commerce impérial espagnol relie marchés asiatiques et américains.",
+        "en": "Spanish imperial commerce connects Asian and American markets."
+      },
+      "limits": {
+        "fr": "Le trait n’est pas une route de navigation : les traversées aller et retour suivent des parcours différents.",
+        "en": "The line is not a sailing route: outward and return crossings follow different courses."
+      },
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · The Manila Galleon Trade (1565–1815)",
+          "url": "https://www.metmuseum.org/essays/the-manila-galleon-trade-1565-1815"
+        }
+      ]
+    },
+    {
+      "id": "india-mauritius-indenture",
+      "title": {
+        "fr": "Engagisme : de l’Inde à Maurice",
+        "en": "Indenture: India to Mauritius"
+      },
+      "kind": "migration",
+      "fromYear": 1834,
+      "toYear": 1920,
+      "approximate": false,
+      "uncertain": false,
+      "temporalBasis": {
+        "fr": "L’UNESCO documente les arrivées de travailleurs indiens entre 1834 et 1920. Le dépôt conservé date de 1849 : la période du système et celle du bâtiment diffèrent.",
+        "en": "UNESCO documents Indian workers’ arrivals between 1834 and 1920. The surviving depot dates to 1849: the system and building have different chronologies."
+      },
+      "direction": "forward",
+      "directionNote": {
+        "fr": "Le sens va de la région de recrutement au lieu d’arrivée ; les retours ne sont pas représentés.",
+        "en": "Direction runs from recruitment region to arrival place; returns are not represented."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          80,
+          22
+        ],
+        [
+          57.5,
+          -20.16
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Inde, repère régional",
+            "en": "India, regional anchor"
+          },
+          "coordinates": [
+            80,
+            22
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Port-Louis / Aapravasi Ghat",
+            "en": "Port Louis / Aapravasi Ghat"
+          },
+          "coordinates": [
+            57.5,
+            -20.16
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Des travailleurs sous contrat sont recrutés pour les plantations sucrières de Maurice.",
+        "en": "Contract workers are recruited for Mauritius’s sugar plantations."
+      },
+      "mechanisms": {
+        "fr": "Le recrutement colonial soutient l’économie sucrière après l’abolition de l’esclavage.",
+        "en": "Colonial recruitment sustains the sugar economy after slavery’s abolition."
+      },
+      "limits": {
+        "fr": "« Migration » ne signifie pas liberté sans contrainte. Le point en Inde n’identifie ni port de départ ni origine individuelle.",
+        "en": "“Migration” does not mean unconstrained freedom. The Indian point identifies neither a departure port nor individual origins."
+      },
+      "sources": [
+        {
+          "label": "UNESCO · Aapravasi Ghat",
+          "url": "https://whc.unesco.org/en/list/1227/"
+        }
+      ]
+    },
+    {
+      "id": "grand-canal-yuan",
+      "title": {
+        "fr": "Grand Canal : approvisionner Dadu sous les Yuan",
+        "en": "Grand Canal: supplying Dadu under the Yuan"
+      },
+      "kind": "trade",
+      "fromYear": 1293,
+      "toYear": 1368,
+      "approximate": false,
+      "uncertain": false,
+      "temporalBasis": {
+        "fr": "1293 : achèvement du Tonghui vers Dadu. 1368 clôt ici la séquence Yuan, sans marquer la fin de la navigation.",
+        "en": "1293: completion of the Tonghui connection to Dadu. 1368 closes the Yuan period here, without ending navigation."
+      },
+      "direction": "both",
+      "directionNote": {
+        "fr": "Les deux sens représentent les échanges, sans égalité des flux.",
+        "en": "Both directions represent exchange, without equal flows."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          116.4,
+          39.93
+        ],
+        [
+          120.16,
+          30.25
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Dadu / Pékin",
+            "en": "Dadu / Beijing"
+          },
+          "coordinates": [
+            116.4,
+            39.93
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Zhejiang, repère méridional",
+            "en": "Zhejiang, southern anchor"
+          },
+          "coordinates": [
+            120.16,
+            30.25
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Le réseau relie les régions productrices du Sud au centre politique du Nord. Le transport des grains contribue à l’approvisionnement impérial.",
+        "en": "The network connects southern producing regions with the northern political centre. Grain transport supports imperial provisioning."
+      },
+      "mechanisms": {
+        "fr": "Le système Caoyun associe transport, stockage, fiscalité et contrôle public.",
+        "en": "The Caoyun system combines transport, storage, taxation and state control."
+      },
+      "limits": {
+        "fr": "« Échanges » inclut la redistribution impériale. Deux repères résument un réseau antérieur aux Yuan et prolongé après eux, sans restituer ses chenaux.",
+        "en": "The exchange category includes imperial redistribution. Two anchors summarise a network predating and outlasting the Yuan, without reproducing its channels."
+      },
+      "sources": [
+        {
+          "label": "UNESCO · The Grand Canal",
+          "url": "https://whc.unesco.org/en/list/1443/"
+        },
+        {
+          "label": "Ambassade de Chine en Inde · National Capital, histoire de Dadu",
+          "url": "https://in.china-embassy.gov.cn/eng/zggk/201010/t20101021_2234761.htm"
+        }
+      ]
+    },
+    {
+      "id": "camino-real-tierra-adentro",
+      "title": {
+        "fr": "Camino Real : Mexico et le Nouveau-Mexique",
+        "en": "Camino Real: Mexico City and New Mexico"
+      },
+      "kind": "trade",
+      "fromYear": 1598,
+      "toYear": 1882,
+      "approximate": true,
+      "uncertain": true,
+      "temporalBasis": {
+        "fr": "1598–1882 reprend la périodisation du NPS. Elle ne garantit pas une circulation continue ; la révolte pueblo interrompt le trafic en 1680.",
+        "en": "1598–1882 follows NPS periodisation. It does not establish continuous traffic; the Pueblo Revolt interrupts traffic in 1680."
+      },
+      "direction": "both",
+      "directionNote": {
+        "fr": "Les deux sens représentent les échanges, sans égalité des flux.",
+        "en": "Both directions represent exchange, without equal flows."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          -99.13,
+          19.43
+        ],
+        [
+          -102.57,
+          22.77
+        ],
+        [
+          -106.48,
+          31.74
+        ],
+        [
+          -106.07,
+          36.05
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Mexico",
+            "en": "Mexico City"
+          },
+          "coordinates": [
+            -99.13,
+            19.43
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Zacatecas",
+            "en": "Zacatecas"
+          },
+          "coordinates": [
+            -102.57,
+            22.77
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "El Paso del Norte, repère régional",
+            "en": "El Paso del Norte, regional anchor"
+          },
+          "coordinates": [
+            -106.48,
+            31.74
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Ohkay Owingeh, pôle septentrional",
+            "en": "Ohkay Owingeh, northern anchor"
+          },
+          "coordinates": [
+            -106.07,
+            36.05
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Mines d’argent, villes et établissements coloniaux sont reliés par un corridor empruntant des réseaux autochtones antérieurs.",
+        "en": "Silver mines, towns and colonial settlements connect through a corridor incorporating earlier Indigenous networks."
+      },
+      "mechanisms": {
+        "fr": "Caravanes, ravitaillement, courrier et encadrement colonial organisent les circulations.",
+        "en": "Caravans, supplies, mail and colonial administration organise movement."
+      },
+      "limits": {
+        "fr": "Les pôles changent : Santa Fe devient capitale en 1610. Les repères ne figurent ni les pistes exactes ni une souveraineté constante.",
+        "en": "Centres change: Santa Fe becomes the capital in 1610. Anchors represent neither exact tracks nor unchanging sovereignty."
+      },
+      "sources": [
+        {
+          "label": "NPS · El Camino Real, Frequently Asked Questions",
+          "url": "https://www.nps.gov/elca/faqs.htm"
+        },
+        {
+          "label": "NPS · El Camino Real, History & Culture",
+          "url": "https://www.nps.gov/elca/learn/historyculture/index.htm"
+        },
+        {
+          "label": "UNESCO · Camino Real de Tierra Adentro",
+          "url": "https://whc.unesco.org/en/list/1351/"
+        }
+      ]
+    },
+    {
+      "id": "cherokee-trail-of-tears",
+      "title": {
+        "fr": "Piste des Larmes : déportation des Cherokees",
+        "en": "Trail of Tears: forced removal of the Cherokee"
+      },
+      "kind": "forced-migration",
+      "fromYear": 1838,
+      "toYear": 1839,
+      "approximate": false,
+      "uncertain": false,
+      "temporalBasis": {
+        "fr": "Le NPS date le début des expulsions de mai 1838 et l’achèvement des déplacements de mars 1839.",
+        "en": "NPS dates the start of expulsions to May 1838 and the completion of removal to March 1839."
+      },
+      "direction": "forward",
+      "directionNote": {
+        "fr": "Des terres d’origine vers le territoire imposé, sans itinéraire individuel.",
+        "en": "From homelands toward the imposed destination, without an individual itinerary."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          -84.7,
+          35.2
+        ],
+        [
+          -95,
+          36
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Sud-est du Tennessee, repère régional",
+            "en": "Southeastern Tennessee, regional anchor"
+          },
+          "coordinates": [
+            -84.7,
+            35.2
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Territoire indien, actuel Oklahoma oriental",
+            "en": "Indian Territory, present-day eastern Oklahoma"
+          },
+          "coordinates": [
+            -95,
+            36
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "L’armée et les milices américaines expulsent les Cherokees de leurs terres du Sud-Est vers le Territoire indien.",
+        "en": "The US Army and state militias expel Cherokee people from their southeastern homelands to Indian Territory."
+      },
+      "mechanisms": {
+        "fr": "Expulsions, camps et déplacements imposés provoquent des décès et désorganisent les communautés.",
+        "en": "Expulsion, camps and forced movement cause deaths and disrupt communities."
+      },
+      "limits": {
+        "fr": "Une liaison régionale condense plusieurs convois terrestres et fluviaux. Elle n’englobe pas tous les peuples déplacés ni tous les départs cherokees.",
+        "en": "One regional connection condenses multiple overland and river detachments. It covers neither every displaced people nor every Cherokee departure."
+      },
+      "sources": [
+        {
+          "label": "NPS · Trail of Tears, History & Culture",
+          "url": "https://www.nps.gov/trte/learn/historyculture/index.htm"
+        }
+      ]
+    },
+    {
+      "id": "suez-opening-convention",
+      "title": {
+        "fr": "Suez : ouvrir un passage entre deux mers",
+        "en": "Suez: opening a passage between two seas"
+      },
+      "kind": "trade",
+      "fromYear": 1869,
+      "toYear": 1888,
+      "approximate": false,
+      "uncertain": false,
+      "temporalBasis": {
+        "fr": "Fenêtre de l’inauguration du 17 novembre 1869 à la convention du 29 octobre 1888. Cette dernière ne met pas fin aux échanges.",
+        "en": "Window from the inauguration on 17 November 1869 to the convention of 29 October 1888. The latter does not end trade."
+      },
+      "direction": "both",
+      "directionNote": {
+        "fr": "Les deux sens représentent les échanges, sans égalité des flux.",
+        "en": "Both directions represent exchange, without equal flows."
+      },
+      "geometry": "schematic",
+      "coordinates": [
+        [
+          32.3,
+          31.26
+        ],
+        [
+          32.55,
+          29.97
+        ]
+      ],
+      "waypoints": [
+        {
+          "name": {
+            "fr": "Port-Saïd",
+            "en": "Port Said"
+          },
+          "coordinates": [
+            32.3,
+            31.26
+          ],
+          "basis": "editorial-anchor"
+        },
+        {
+          "name": {
+            "fr": "Suez",
+            "en": "Suez"
+          },
+          "coordinates": [
+            32.55,
+            29.97
+          ],
+          "basis": "editorial-anchor"
+        }
+      ],
+      "description": {
+        "fr": "Le canal relie Méditerranée et mer Rouge. Son accès devient un enjeu de réglementation internationale.",
+        "en": "The canal connects the Mediterranean and Red Sea. Access becomes an issue of international regulation."
+      },
+      "mechanisms": {
+        "fr": "Une voie navigable artificielle et des règles de passage structurent la liaison ; la convention proclame la liberté de navigation.",
+        "en": "An artificial waterway and passage rules structure the connection; the convention declares freedom of navigation."
+      },
+      "limits": {
+        "fr": "Le trait ne suit pas les chenaux. La règle juridique ne prouve ni une neutralité effective constante ni des flux identiques.",
+        "en": "The line does not follow the channels. The legal rule proves neither constant effective neutrality nor identical flows."
+      },
+      "sources": [
+        {
+          "label": "Autorité du canal de Suez · Canal History",
+          "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx"
+        },
+        {
+          "label": "Autorité du canal de Suez · Convention de Constantinople, 1888",
+          "url": "https://www.suezcanal.gov.eg/English/About/CanalTreatiesAndDecrees/Pages/ConstantinopleConvention.aspx"
+        }
+      ]
+    }
+  ]
+}

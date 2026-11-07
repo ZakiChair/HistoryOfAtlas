@@ -7,6 +7,8 @@ export type BoundaryFrame = {
   sourceLayer: string;
   labelLayer: string;
   weight: number;
+  /** Snapshot date uses astronomical years, like the atlas. Not a vector-tile filter. */
+  snapshotYear?: number;
   year?: number;
 };
 
@@ -49,9 +51,42 @@ export function boundaryFrames(
       sourceLayer: snapshot.sourceLayer ?? 'territories',
       labelLayer: snapshot.labelLayer ?? 'labels',
       weight,
+      snapshotYear: snapshot.year,
     });
   }
   return [...frames.values()];
+}
+
+/** The caption describes exactly the same positive-weight frames as the renderer. */
+export function boundaryPresentation(
+  geo: GeographyManifest,
+  year: number,
+  requestedSource: 'cliopatria' | 'historical-basemaps',
+): {
+  source: 'cliopatria' | 'historical-basemaps' | null;
+  status: 'unavailable' | 'transition' | 'latest' | 'earliest' | 'dated' | 'snapshot';
+  years: number[];
+  fallback: boolean;
+} {
+  const frames = boundaryFrames(geo, year, requestedSource);
+  const source = !frames.length
+    ? null
+    : frames[0].year !== undefined
+      ? 'cliopatria'
+      : 'historical-basemaps';
+  const years = frames.map((frame) => (frame.year ?? frame.snapshotYear)!);
+  const status = !frames.length
+    ? 'unavailable'
+    : years.length > 1
+      ? 'transition'
+      : year > years[0]
+        ? 'latest'
+        : year < years[0]
+          ? 'earliest'
+          : source === 'cliopatria'
+            ? 'dated'
+            : 'snapshot';
+  return { source, status, years, fallback: source !== null && requestedSource !== source };
 }
 
 /** Preserve precision within one world; wrap repeated Mercator worlds for shareable URLs. */

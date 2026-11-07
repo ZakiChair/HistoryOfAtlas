@@ -163,6 +163,16 @@ export default async function AboutPage() {
               },
             ]
           : []),
+        ...(licenses.context
+          ? [
+              {
+                name: 'Historical transformations, networks and capital chronologies',
+                description: `${licenses.context.collections.reduce((sum, collection) => sum + collection.records, 0)} original editorial records with ${licenses.context.references.length} cited references; schematic geographic anchors, not measured flows`,
+                url: `${origin}/about/#context-sources`,
+                license: licenses.context.corpus.licenseUrl,
+              },
+            ]
+          : []),
       ],
     }),
   );
@@ -369,7 +379,8 @@ export default async function AboutPage() {
           <p>
             The application code is released under the {licenses.project.code.license} licence.
             Content written for the atlas (curated reviews and corrections, religion milestones,
-            descriptions, generalized regions and diffusion links, map symbology) is released under{' '}
+            descriptions, generalized regions and diffusion links, transformation notices, schematic
+            network annotations, reviewed capital chronologies and map symbology) is released under{' '}
             {licenses.project.content.license}; credit it as “{licenses.project.content.attribution}
             ”. {licenses.project.note}
           </p>
@@ -470,6 +481,40 @@ export default async function AboutPage() {
                     <li key={reference.id}>
                       <a href={reference.url}>{reference.title}</a> · {reference.milestones}{' '}
                       milestone{reference.milestones === 1 ? '' : 's'}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </>
+          )}
+          {licenses.context && (
+            <>
+              <h3 id="context-sources">Historical context</h3>
+              <p>
+                {licenses.context.collections
+                  .map((collection) => `${collection.records} ${collection.name.toLowerCase()}`)
+                  .join(' and ')}{' '}
+                connect dated changes, exchange, migration and capital chronologies with the map.
+                Original descriptions and schematic annotations are published under{' '}
+                <a href={licenses.context.corpus.licenseUrl}>{licenses.context.corpus.license}</a>.{' '}
+                {licenses.context.corpus.note}
+              </p>
+              <p>
+                The coverage view counts entries and dated observations in the selected boundary
+                source; it does not measure historical completeness. The cities view keeps a
+                city&apos;s population separate from the population of the polity it served. Neither
+                view interpolates missing population figures or infers historical city coordinates
+                from a political outline.
+              </p>
+              <details className="document-details">
+                <summary>
+                  All {licenses.context.references.length} historical context references
+                </summary>
+                <ul>
+                  {licenses.context.references.map((reference) => (
+                    <li key={reference.id}>
+                      <a href={reference.url}>{reference.title}</a> · {reference.records} record
+                      {reference.records === 1 ? '' : 's'}
                     </li>
                   ))}
                 </ul>

@@ -36,6 +36,9 @@ export const THEMATIC_STACK = [
   'epidemic-selection-emblem',
   'epidemic-selection',
   'resource-cluster-counts',
+  'context-lines',
+  'context-points',
+  'context-labels',
 ] as const;
 
 /** `${frame.id}-label` of a territory frame (lib/map-boundaries.ts: `territory-…`, `snapshot-…`). */

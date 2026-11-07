@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-01",
+  "license": "CC-BY-4.0",
+  "capitals": [
+    {
+      "subjectId": "Q12536",
+      "polityIds": [
+        "clio-02afaa28a42820"
+      ],
+      "replacesFactId": "q12536$4ab5c472-411c-f75c-3630-8fdcbf6eccfc",
+      "fact": {
+        "id": "context-capital-samarra-836-892",
+        "city": {
+          "id": "Q170047",
+          "name": {
+            "fr": "Samarra",
+            "en": "Samarra"
+          }
+        },
+        "start": {
+          "date": {
+            "year": 836
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "end": {
+          "date": {
+            "year": 892
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "L’UNESCO situe la capitale abbasside à Samarra de 836 à 892, après Bagdad. Ce déplacement d’un centre de pouvoir ne signifie pas la création d’un nouvel empire ni le déplacement de toute sa population. Le point de repère ne restitue pas l’étendue du site archéologique.",
+          "en": "UNESCO dates Samarra’s role as Abbasid capital to 836–892, following Baghdad. Moving a seat of power does not mean founding a new empire or relocating its entire population. The reference point does not reconstruct the archaeological site’s extent."
+        },
+        "sources": [
+          {
+            "label": "UNESCO World Heritage Centre · Samarra Archaeological City",
+            "url": "https://whc.unesco.org/en/list/276/"
+          }
+        ]
+      }
+    },
+    {
+      "subjectId": "Q33296",
+      "polityIds": [
+        "clio-51ef0a90a52152"
+      ],
+      "replacesFactId": "Q33296$e58a76c1-49cc-1676-f285-92cccfbd178d",
+      "fact": {
+        "id": "context-capital-fatehpur-sikri-1572-1585",
+        "city": {
+          "id": "Q179046",
+          "name": {
+            "fr": "Fatehpur-Sikrī",
+            "en": "Fatehpur Sikri"
+          }
+        },
+        "start": {
+          "date": {
+            "year": 1572
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "end": {
+          "date": {
+            "year": 1585
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "La période retenue suit l’Archaeological Survey of India : Akbar installe sa résidence et sa cour à Sikri en 1572, puis part pour Lahore en 1585. L’UNESCO date la construction de 1571–1573. Ces repères distinguent le chantier de la présence de la cour ; ils ne datent pas la naissance ou la disparition de la ville.",
+          "en": "This interval follows the Archaeological Survey of India: Akbar’s residence and court moved to Sikri in 1572, then left for Lahore in 1585. UNESCO dates construction to 1571–1573. These milestones distinguish building activity from the court’s residence; they do not date the town’s beginning or disappearance."
+        },
+        "sources": [
+          {
+            "label": "Archaeological Survey of India · Agra Circle · Fatehpur Sikri",
+            "url": "https://asiagracircle.in/fateh-pur.html"
+          },
+          {
+            "label": "UNESCO World Heritage Centre · Fatehpur Sikri",
+            "url": "https://whc.unesco.org/en/list/255/"
+          }
+        ]
+      }
+    },
+    {
+      "subjectId": "Q841364",
+      "polityIds": [
+        "clio-cc4b52001d3c44"
+      ],
+      "fact": {
+        "id": "context-capital-ayutthaya-1350-1767",
+        "city": {
+          "id": "Q111905239",
+          "name": {
+            "fr": "Ville historique d’Ayutthaya",
+            "en": "Historic City of Ayutthaya"
+          }
+        },
+        "start": {
+          "date": {
+            "year": 1350
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "end": {
+          "date": {
+            "year": 1767
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "Les sources patrimoniales retiennent 1350–1767 pour Ayutthaya, capitale siamoise détruite en 1767. Il s’agit d’une période historique de référence, pas d’un relevé annuel de la résidence du souverain. La ville archéologique se distingue de la ville actuelle. Le lien territorial cartographié commence en 1352 : aucune frontière n’est prolongée jusqu’à 1350.",
+          "en": "The heritage sources use 1350–1767 for Ayutthaya, the Siamese capital destroyed in 1767. This is a historical reference period, not an annual record of the ruler’s residence. The archaeological city is distinct from today’s town. The mapped territorial identity begins in 1352; its boundaries are not extended back to 1350."
+        },
+        "sources": [
+          {
+            "label": "UNESCO World Heritage Centre · Historic City of Ayutthaya",
+            "url": "https://whc.unesco.org/en/list/576/"
+          },
+          {
+            "label": "Tourism Authority of Thailand · Slow Lane in Ayutthaya",
+            "url": "https://www.tourismthailand.org/Articles/slow-lane-in-ayutthaya"
+          }
+        ]
+      }
+    },
+    {
+      "subjectId": "Q1115291",
+      "polityIds": [
+        "clio-723e619dce3774"
+      ],
+      "fact": {
+        "id": "context-capital-thonburi-1767-1782",
+        "city": {
+          "id": "Q6580711",
+          "name": {
+            "fr": "Thonburi",
+            "en": "Thonburi Province"
+          }
+        },
+        "start": {
+          "date": {
+            "year": 1767
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "end": {
+          "date": {
+            "year": 1782
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "Après la destruction d’Ayutthaya, Taksin choisit Thonburi comme capitale en 1767 ; l’UNESCO situe cette période en 1767–1782. Le point Wikidata correspond à l’ancienne province de Thonburi : c’est un repère géographique, pas une reconstitution de la ville ou du palais. Le lien territorial disponible commence en 1769. Aucune population provinciale n’est ajoutée comme population urbaine.",
+          "en": "After Ayutthaya’s destruction, Taksin chose Thonburi as capital in 1767; UNESCO dates this period to 1767–1782. The Wikidata point represents the former Thonburi Province: it is a geographic reference, not a reconstruction of the city or palace. The available territorial identity begins in 1769. No provincial population is added as an urban population."
+        },
+        "sources": [
+          {
+            "label": "UNESCO Bangkok · Thailand’s forgotten palace",
+            "url": "https://www.unesco.org/en/articles/thailands-forgotten-palace"
+          }
+        ]
+      }
+    },
+    {
+      "subjectId": "Q1028",
+      "polityIds": [
+        "clio-52118e19d4efe8"
+      ],
+      "fact": {
+        "id": "context-capital-meknes-1672-1727",
+        "city": {
+          "id": "Q178663",
+          "name": {
+            "fr": "Meknès",
+            "en": "Meknes"
+          }
+        },
+        "start": {
+          "date": {
+            "year": 1672
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "end": {
+          "date": {
+            "year": 1727
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "Meknès devient capitale sous Moulay Ismaïl. La période retenue correspond à son règne, 1672–1727, cité par l’UNESCO. La ville impériale et ses fortifications expriment cette concentration du pouvoir ; ces dates ne marquent ni la fondation ni la disparition de la ville. Le point ne reconstitue pas son enceinte historique.",
+          "en": "Meknes becomes a capital under Moulay Ismail. The selected period follows his reign, 1672–1727, cited by UNESCO. The imperial city and its fortifications express this concentration of power; these dates mark neither the town’s foundation nor its disappearance. The point does not reconstruct its historic walls."
+        },
+        "sources": [
+          {
+            "label": "UNESCO World Heritage Centre · Historic City of Meknes",
+            "url": "https://whc.unesco.org/en/list/793/"
+          }
+        ]
+      }
+    },
+    {
+      "subjectId": "Q207521",
+      "polityIds": [
+        "clio-7771566865da8e"
+      ],
+      "fact": {
+        "id": "context-capital-gondar-1636",
+        "city": {
+          "id": "Q218861",
+          "name": {
+            "fr": "Gondar",
+            "en": "Gondar"
+          }
+        },
+        "at": {
+          "date": {
+            "year": 1636
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "En 1636, Fasilidès installe une capitale permanente à Gondar, après une tradition de camps royaux mobiles. Cette notice documente le choix du siège cette année-là. Elle ne date pas la fin de son rôle politique et ne signifie pas que la ville cesse d’être capitale dès 1637. Le point ne dessine pas l’enceinte de Fasil Ghebbi.",
+          "en": "In 1636, Fasilides establishes a permanent capital at Gondar after a tradition of mobile royal camps. This notice documents the choice of seat in that year. It does not date the end of its political role or imply that the city ceases to be a capital in 1637. The point does not outline Fasil Ghebbi."
+        },
+        "sources": [
+          {
+            "label": "UNESCO World Heritage Centre · Fasil Ghebbi, Gondar Region",
+            "url": "https://whc.unesco.org/en/list/19/"
+          }
+        ]
+      }
+    },
+    {
+      "subjectId": "Q6500483",
+      "polityIds": [
+        "clio-c2757110d6521d"
+      ],
+      "fact": {
+        "id": "context-capital-hue-1802-1945",
+        "city": {
+          "id": "Q36167",
+          "name": {
+            "fr": "Huế",
+            "en": "Huế"
+          }
+        },
+        "start": {
+          "date": {
+            "year": 1802
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "end": {
+          "date": {
+            "year": 1945
+          },
+          "precision": "year",
+          "calendar": "gregorian"
+        },
+        "note": {
+          "fr": "L’UNESCO situe le rôle de Huế comme capitale sous les Nguyễn entre 1802 et 1945. La cour, l’administration et les monuments structurent ce centre de pouvoir. Une capitale dynastique n’établit pas une souveraineté inchangée : le lien territorial disponible s’arrête en 1884, sans prolonger les frontières jusqu’à 1945. Le repère ne délimite pas la citadelle.",
+          "en": "UNESCO dates Hue’s role as a capital under the Nguyen to 1802–1945. The court, administration and monuments organise this seat of power. A dynastic capital does not establish unchanged sovereignty: the available territorial identity ends in 1884, without extending boundaries to 1945. The reference point does not delimit the citadel."
+        },
+        "sources": [
+          {
+            "label": "UNESCO World Heritage Centre · Complex of Hué Monuments",
+            "url": "https://whc.unesco.org/en/list/678/"
+          }
+        ]
+      }
+    }
+  ]
+}

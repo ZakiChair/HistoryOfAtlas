@@ -1,6 +1,7 @@
 import type { Map as MapInstance } from 'maplibre-gl';
 import type { AtlasState } from '@/lib/store';
 import { useReligionStore } from '@/lib/religions/store';
+import { useContextStore } from '@/lib/context/store';
 import { useEpidemicStore } from '@/lib/epidemics/store';
 
 export interface ThematicOverlay {
@@ -25,6 +26,12 @@ export interface ThematicLayer {
 
 /** Thematic overlays WorldMap imports on first activation; each keeps its own store, data and MapLibre layers. */
 export const THEMATIC_LAYERS: readonly ThematicLayer[] = [
+  {
+    id: 'context',
+    isActive: (state) => state.contextView !== null,
+    store: useContextStore,
+    load: () => import('./context-overlay').then((module) => module.startContextOverlay),
+  },
   {
     id: 'religions',
     isActive: (state) => state.religionsVisible,

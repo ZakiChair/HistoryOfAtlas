@@ -15,6 +15,7 @@ import {
   type MilestoneLayerIds,
 } from './milestone-ids';
 import { raiseThematicLayers } from './thematic-stack';
+import { hasContextAt } from './context-hit';
 
 export interface MilestoneTheme {
   id: string;
@@ -606,6 +607,7 @@ export function startMilestoneOverlay<D, M extends MilestoneLike>(
       !view?.active ||
       disposed ||
       !installed ||
+      hasContextAt(map, event.point) ||
       (options.hasForegroundAt?.(map, event.point) ?? false)
     )
       return;

@@ -1,5 +1,7 @@
 'use client';
 
+import { hasContextAt } from './context-hit';
+
 import { useEffect, useRef, useState } from 'react';
 import type {
   Map as MapInstance,
@@ -335,7 +337,15 @@ export default function WorldMap() {
           boundaryResources.delete(id);
           if (resource?.retirement) clearTimeout(resource.retirement);
           resource?.detach();
-          for (const suffix of ['ghost', 'fill', 'religion-pattern', 'border', 'label']) {
+          for (const suffix of [
+            'ghost',
+            'fill',
+            'religion-pattern',
+            'border',
+            'selection-casing',
+            'selection',
+            'label',
+          ]) {
             if (map.getLayer(`${id}-${suffix}`)) map.removeLayer(`${id}-${suffix}`);
           }
           if (map.getSource(id)) map.removeSource(id);
@@ -462,6 +472,26 @@ export default function WorldMap() {
             },
             eventsReady ? 'event-halo' : undefined,
           );
+          // Reuse the dated geometry. A contrasting casing keeps the chosen boundary
+          // legible across neighbouring political colours without changing their meaning.
+          for (const casing of [true, false])
+            map.addLayer(
+              {
+                id: `${id}-${casing ? 'selection-casing' : 'selection'}`,
+                type: 'line',
+                source: id,
+                'source-layer': sourceLayer,
+                filter: EMPTY_FEATURE_FILTER,
+                paint: {
+                  'line-color': casing ? '#142f39' : SELECTION_COLORS.event,
+                  'line-width': casing
+                    ? ['interpolate', ['linear'], ['zoom'], 1, 4, 6, 6]
+                    : ['interpolate', ['linear'], ['zoom'], 1, 2, 6, 3],
+                  'line-opacity': 0,
+                },
+              },
+              eventsReady ? 'event-halo' : undefined,
+            );
           map.addLayer({
             id: `${id}-label`,
             type: 'symbol',
@@ -515,6 +545,7 @@ export default function WorldMap() {
           });
           const click = (event: MapLayerMouseEvent) => {
             if (
+              hasContextAt(map, event.point) ||
               hasResourceAt(map, event.point) ||
               hasReligionAt(map, event.point) ||
               hasEpidemicAt(map, event.point)
@@ -608,6 +639,38 @@ export default function WorldMap() {
               (dominant ? 0.45 : temporal ? 0.8 : 0.65) * frame.weight,
             );
             map.setPaintProperty(`${id}-label`, 'text-opacity', 0.82 * frame.weight);
+            const filter: FilterSpecification | undefined = temporal
+              ? [
+                  'all',
+                  ['<=', ['get', 'fromYear'], frame.year!],
+                  ['>=', ['get', 'toYear'], frame.year!],
+                ]
+              : undefined;
+            const selection: FilterSpecification =
+              state.selectedEntity && !dominant && !state.battleMode
+                ? [
+                    'all',
+                    ['==', ['get', 'entityId'], state.selectedEntity],
+                    ...(filter ? [filter] : []),
+                  ]
+                : EMPTY_FEATURE_FILTER;
+            for (const casing of [true, false]) {
+              const layer = `${id}-${casing ? 'selection-casing' : 'selection'}`;
+              map.setLayoutProperty(layer, 'visibility', 'visible');
+              map.setFilter(layer, selection);
+              map.setPaintProperty(layer, 'line-opacity', frame.weight);
+              map.setPaintProperty(
+                layer,
+                'line-color',
+                casing
+                  ? state.theme === 'dark'
+                    ? '#142f39'
+                    : '#fff7dd'
+                  : state.theme === 'dark'
+                    ? SELECTION_COLORS.event
+                    : '#694b1d',
+              );
+            }
             const pattern = `${id}-religion-pattern`;
             map.setPaintProperty(
               pattern,
@@ -627,16 +690,11 @@ export default function WorldMap() {
               ]);
               continue;
             }
-            const filter: FilterSpecification = [
-              'all',
-              ['<=', ['get', 'fromYear'], frame.year!],
-              ['>=', ['get', 'toYear'], frame.year!],
-            ];
             for (const suffix of ['fill', 'border', 'label'])
-              map.setFilter(`${id}-${suffix}`, filter);
+              map.setFilter(`${id}-${suffix}`, filter!);
             map.setFilter(pattern, [
               'all',
-              filter,
+              filter!,
               ['in', ['get', 'entityId'], ['literal', dominant ? paint!.stateIds : []]],
             ]);
             if (lastYear !== state.year && !state.playing && !reduced)
@@ -654,6 +712,9 @@ export default function WorldMap() {
             map.setLayoutProperty(`${id}-label`, 'visibility', 'none');
             map.setPaintProperty(`${id}-label`, 'text-opacity', 0);
             map.setLayoutProperty(`${id}-religion-pattern`, 'visibility', 'none');
+            // An old shard may remain as loading context, but cannot mark the current choice.
+            for (const suffix of ['selection-casing', 'selection'])
+              map.setLayoutProperty(`${id}-${suffix}`, 'visibility', 'none');
           }
           retirePreviousTerritories();
           lastYear = state.year;
@@ -670,6 +731,8 @@ export default function WorldMap() {
             state.year !== previous.year ||
             state.theme !== previous.theme ||
             state.boundarySource !== previous.boundarySource ||
+            state.selectedEntity !== previous.selectedEntity ||
+            state.battleMode !== previous.battleMode ||
             state.religionsVisible !== previous.religionsVisible ||
             state.religionView !== previous.religionView ||
             state.religionFilter !== previous.religionFilter ||
@@ -1019,6 +1082,7 @@ export default function WorldMap() {
               renderQueue.submit(useAtlasStore.getState(), true);
               map.on('click', 'event-points', (event) => {
                 if (
+                  hasContextAt(map, event.point) ||
                   hasResourceAt(map, event.point) ||
                   hasReligionAt(map, event.point) ||
                   hasEpidemicAt(map, event.point)
